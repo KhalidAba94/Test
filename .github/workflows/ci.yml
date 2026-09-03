@@ -8,6 +8,9 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      VITE_SUPABASE_URL: https://jvxoclbgggfugmnbsosf.supabase.co
+      VITE_SUPABASE_PUBLISHABLE_KEY: sb_publishable_vUmiT7YMOd-O9afxzOn-2g_QPTiGzmg
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
