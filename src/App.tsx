@@ -19,8 +19,15 @@ import type { CoupleState, MemoryBody, MemoryRow, RoundState } from './lib/types
 type Screen = 'loading' | 'landing' | 'create' | 'join' | 'waiting_partner' | 'today' | 'memories'
 
 const friendlyError = (error: unknown) => {
-  const message = error instanceof Error ? error.message : String(error)
+  const message =
+    error instanceof Error
+      ? error.message
+      : typeof error === 'object' && error !== null && 'message' in error
+        ? String((error as { message?: unknown }).message ?? 'Something went wrong')
+        : String(error)
+
   return message
+    .replace('Anonymous sign-ins are disabled', 'Private sign-in is temporarily unavailable. Please try again shortly.')
     .replace('duplicate key value violates unique constraint', 'That action has already been completed.')
     .replace('Failed to fetch', 'Connection lost. Check your internet and try again.')
 }
