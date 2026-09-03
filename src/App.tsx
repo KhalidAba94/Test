@@ -13,6 +13,15 @@ import {
   Users,
   Vault,
 } from 'lucide-react'
+import {
+  assertVoidRpc,
+  parseCoupleState,
+  parseCreateRoomResult,
+  parseJoinRoomResult,
+  parseMemoryRows,
+  parseRoundState,
+  parseUuidRpc,
+} from './lib/contracts'
 import { ensureAnonymousSession, getRiyadhDate, supabase } from './lib/supabase'
 import type { CoupleState, MemoryBody, MemoryRow, RoundState } from './lib/types'
 
@@ -32,6 +41,17 @@ const friendlyError = (error: unknown) => {
     .replace('Failed to fetch', 'Connection lost. Check your internet and try again.')
 }
 
+function getJoinCodeFromUrl() {
+  const raw = new URLSearchParams(window.location.search).get('join') ?? ''
+  return raw.replace(/[^a-zA-Z0-9]/g, '').toUpperCase().slice(0, 6)
+}
+
+function clearJoinParam() {
+  const url = new URL(window.location.href)
+  url.searchParams.delete('join')
+  window.history.replaceState({}, '', `${url.pathname}${url.search}${url.hash}`)
+}
+
 function App() {
   const [screen, setScreen] = useState<Screen>('loading')
   const [couple, setCouple] = useState<CoupleState | null>(null)
@@ -39,12 +59,11 @@ function App() {
   const [memories, setMemories] = useState<MemoryRow[]>([])
   const [busy, setBusy] = useState(false)
   const [error, setError] = useState('')
-  const [saved, setSaved] = useState(false)
 
   const hydrateCouple = useCallback(async () => {
     const { data, error: rpcError } = await supabase.rpc('get_my_couple')
     if (rpcError) throw rpcError
-    const next = (data ?? null) as CoupleState | null
+    const next = parseCoupleState(data ?? null)
     setCouple(next)
     return next
   }, [])
@@ -55,7 +74,7 @@ function App() {
       p_round_date: getRiyadhDate(),
     })
     if (rpcError) throw rpcError
-    const next = data as RoundState
+    const next = parseRoundState(data, 'get_or_create_daily_round')
     setRound(next)
     return next
   }, [])
@@ -63,23 +82,37 @@ function App() {
   const loadRoundState = useCallback(async (roundId: string) => {
     const { data, error: rpcError } = await supabase.rpc('get_round_state', { p_round_id: roundId })
     if (rpcError) throw rpcError
-    const next = data as RoundState
+    const next = parseRoundState(data, 'get_round_state')
     setRound(next)
+    return next
+  }, [])
+
+  const refreshMemories = useCallback(async (coupleId: string) => {
+    const { data, error: queryError } = await supabase
+      .from('memories')
+      .select('id,couple_id,source_round_id,title,body,tags,created_at')
+      .eq('couple_id', coupleId)
+      .order('created_at', { ascending: false })
+    if (queryError) throw queryError
+    const next = parseMemoryRows(data ?? [])
+    setMemories(next)
     return next
   }, [])
 
   const routeFromCouple = useCallback(async (next: CoupleState | null) => {
     if (!next) {
-      setScreen('landing')
+      setRound(null)
+      setMemories([])
+      setScreen(getJoinCodeFromUrl() ? 'join' : 'landing')
       return
     }
     if (!next.partner_joined || next.status !== 'active') {
       setScreen('waiting_partner')
       return
     }
-    await hydrateRound(next.couple_id)
+    await Promise.all([hydrateRound(next.couple_id), refreshMemories(next.couple_id)])
     setScreen('today')
-  }, [hydrateRound])
+  }, [hydrateRound, refreshMemories])
 
   useEffect(() => {
     let mounted = true
@@ -93,13 +126,19 @@ function App() {
       } catch (e) {
         if (!mounted) return
         setError(friendlyError(e))
-        setScreen('landing')
+        setScreen(getJoinCodeFromUrl() ? 'join' : 'landing')
       }
     })()
     return () => {
       mounted = false
     }
   }, [hydrateCouple, routeFromCouple])
+
+  useEffect(() => {
+    if (!error) return
+    const timer = window.setTimeout(() => setError(''), 6000)
+    return () => window.clearTimeout(timer)
+  }, [error])
 
   useEffect(() => {
     if (screen !== 'waiting_partner' || !couple?.couple_id) return
@@ -167,13 +206,7 @@ function App() {
     setBusy(true)
     setError('')
     try {
-      const { data, error: queryError } = await supabase
-        .from('memories')
-        .select('id,couple_id,source_round_id,title,body,tags,created_at')
-        .eq('couple_id', couple.couple_id)
-        .order('created_at', { ascending: false })
-      if (queryError) throw queryError
-      setMemories((data ?? []) as MemoryRow[])
+      await refreshMemories(couple.couple_id)
       setScreen('memories')
     } catch (e) {
       setError(friendlyError(e))
@@ -187,7 +220,7 @@ function App() {
     setBusy(true)
     setError('')
     try {
-      await hydrateRound(couple.couple_id)
+      await Promise.all([hydrateRound(couple.couple_id), refreshMemories(couple.couple_id)])
       setScreen('today')
     } catch (e) {
       setError(friendlyError(e))
@@ -195,6 +228,32 @@ function App() {
       setBusy(false)
     }
   }
+
+  const cancelWaitingRoom = async () => {
+    setBusy(true)
+    setError('')
+    try {
+      const { data, error: rpcError } = await supabase.rpc('cancel_waiting_couple_room')
+      if (rpcError) throw rpcError
+      assertVoidRpc(data, 'cancel_waiting_couple_room')
+      setCouple(null)
+      setRound(null)
+      setMemories([])
+      setScreen('landing')
+    } catch (e) {
+      setError(friendlyError(e))
+    } finally {
+      setBusy(false)
+    }
+  }
+
+  const goLandingFromJoin = () => {
+    clearJoinParam()
+    setError('')
+    setScreen('landing')
+  }
+
+  const saved = Boolean(round && memories.some((memory) => memory.source_round_id === round.round_id))
 
   return (
     <div className="app-shell">
@@ -222,7 +281,7 @@ function App() {
         )}
         {screen === 'join' && (
           <JoinRoom
-            onBack={() => setScreen('landing')}
+            onBack={goLandingFromJoin}
             onJoined={async () => {
               const next = await hydrateCouple()
               await routeFromCouple(next)
@@ -232,7 +291,9 @@ function App() {
             setError={setError}
           />
         )}
-        {screen === 'waiting_partner' && couple && <WaitingPartner couple={couple} />}
+        {screen === 'waiting_partner' && couple && (
+          <WaitingPartner couple={couple} busy={busy} onCancel={cancelWaitingRoom} />
+        )}
         {screen === 'today' && round && couple && (
           <Today
             round={round}
@@ -240,10 +301,10 @@ function App() {
             busy={busy}
             saved={saved}
             setBusy={setBusy}
-            setSaved={setSaved}
             setError={setError}
             onRefresh={() => loadRoundState(round.round_id)}
             onOpenMemories={loadMemories}
+            onMemorySaved={async () => { await refreshMemories(couple.couple_id) }}
           />
         )}
         {screen === 'memories' && couple && (
@@ -252,7 +313,7 @@ function App() {
             memories={memories}
             busy={busy}
             onToday={goToday}
-            onRefresh={loadMemories}
+            onRefresh={async () => { await refreshMemories(couple.couple_id) }}
           />
         )}
 
@@ -336,8 +397,9 @@ function CreateRoom({
     setBusy(true)
     setError('')
     try {
-      const { error } = await supabase.rpc('create_couple_room', { p_display_name: name.trim() })
+      const { data, error } = await supabase.rpc('create_couple_room', { p_display_name: name.trim() })
       if (error) throw error
+      parseCreateRoomResult(data)
       await onCreated()
     } catch (e) {
       setError(friendlyError(e))
@@ -374,9 +436,8 @@ function JoinRoom({
   setBusy: (v: boolean) => void
   setError: (v: string) => void
 }) {
-  const initialCode = new URLSearchParams(window.location.search).get('join') ?? ''
   const [name, setName] = useState('')
-  const [code, setCode] = useState(initialCode.toUpperCase().slice(0, 6))
+  const [code, setCode] = useState(getJoinCodeFromUrl())
 
   const submit = async (event: FormEvent) => {
     event.preventDefault()
@@ -384,12 +445,14 @@ function JoinRoom({
     setBusy(true)
     setError('')
     try {
-      const { error } = await supabase.rpc('join_couple_room', {
+      const { data, error } = await supabase.rpc('join_couple_room', {
         p_display_name: name.trim(),
         p_invite_code: code,
       })
       if (error) throw error
-      window.history.replaceState({}, '', window.location.pathname)
+      const result = parseJoinRoomResult(data)
+      if (!result.ok) throw new Error(result.error)
+      clearJoinParam()
       await onJoined()
     } catch (e) {
       setError(friendlyError(e))
@@ -429,7 +492,7 @@ function FormScreen({ title, subtitle, onBack, children }: { title: string; subt
   )
 }
 
-function WaitingPartner({ couple }: { couple: CoupleState }) {
+function WaitingPartner({ couple, busy, onCancel }: { couple: CoupleState; busy: boolean; onCancel: () => Promise<void> }) {
   const [copied, setCopied] = useState(false)
   const inviteUrl = `${window.location.origin}${window.location.pathname}?join=${couple.invite_code}`
 
@@ -466,8 +529,9 @@ function WaitingPartner({ couple }: { couple: CoupleState }) {
         <span>{couple.invite_code}</span>
         {copied ? <Check size={19} /> : <Clipboard size={19} />}
       </button>
-      <button className="button primary" onClick={share}><Share2 size={18} /> Share invite</button>
+      <button className="button primary" onClick={share} disabled={busy}><Share2 size={18} /> Share invite</button>
       <div className="waiting-pulse"><span /> Waiting for your partner…</div>
+      <button className="text-button" onClick={onCancel} disabled={busy}>Cancel this space</button>
     </section>
   )
 }
@@ -478,20 +542,20 @@ function Today({
   busy,
   saved,
   setBusy,
-  setSaved,
   setError,
   onRefresh,
   onOpenMemories,
+  onMemorySaved,
 }: {
   round: RoundState
   couple: CoupleState
   busy: boolean
   saved: boolean
   setBusy: (v: boolean) => void
-  setSaved: (v: boolean) => void
   setError: (v: string) => void
   onRefresh: () => Promise<RoundState>
   onOpenMemories: () => Promise<void>
+  onMemorySaved: () => Promise<void>
 }) {
   const [answer, setAnswer] = useState(round.my_answer ?? '')
   const options = useMemo(() => Array.isArray(round.prompt.options_json) ? round.prompt.options_json.map(String) : [], [round.prompt.options_json])
@@ -505,11 +569,12 @@ function Today({
     setBusy(true)
     setError('')
     try {
-      const { error } = await supabase.rpc('submit_answer', {
+      const { data, error } = await supabase.rpc('submit_answer', {
         p_round_id: round.round_id,
         p_answer_value: answer.trim(),
       })
       if (error) throw error
+      assertVoidRpc(data, 'submit_answer')
       await onRefresh()
     } catch (e) {
       setError(friendlyError(e))
@@ -522,9 +587,10 @@ function Today({
     setBusy(true)
     setError('')
     try {
-      const { error } = await supabase.rpc('save_round_to_memory', { p_round_id: round.round_id })
+      const { data, error } = await supabase.rpc('save_round_to_memory', { p_round_id: round.round_id })
       if (error) throw error
-      setSaved(true)
+      parseUuidRpc(data, 'save_round_to_memory')
+      await onMemorySaved()
     } catch (e) {
       setError(friendlyError(e))
     } finally {
