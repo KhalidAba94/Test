@@ -1,0 +1,17 @@
+{
+  "name": "Two of Us",
+  "short_name": "Two of Us",
+  "description": "A private daily game for couples.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f7eee8",
+  "theme_color": "#f7eee8",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
