@@ -1,7 +1,11 @@
 import { createClient } from '@supabase/supabase-js'
 
-const supabaseUrl = (import.meta.env.VITE_SUPABASE_URL as string | undefined) ?? 'https://jvxoclbgggfugmnbsosf.supabase.co'
-const supabaseKey = (import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY as string | undefined) ?? 'sb_publishable_vUmiT7YMOd-O9afxzOn-2g_QPTiGzmg'
+const supabaseUrl = import.meta.env.VITE_SUPABASE_URL as string | undefined
+const supabaseKey = import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY as string | undefined
+
+if (!supabaseUrl || !supabaseKey) {
+  throw new Error('Missing Supabase configuration. Set VITE_SUPABASE_URL and VITE_SUPABASE_PUBLISHABLE_KEY.')
+}
 
 export const supabase = createClient(supabaseUrl, supabaseKey, {
   auth: {
@@ -16,7 +20,9 @@ export const supabase = createClient(supabaseUrl, supabaseKey, {
   },
 })
 
-export async function ensureAnonymousSession() {
+let sessionInitPromise: Promise<NonNullable<Awaited<ReturnType<typeof supabase.auth.getSession>>['data']['session']>> | null = null
+
+async function initializeAnonymousSession() {
   const { data: sessionData, error: sessionError } = await supabase.auth.getSession()
   if (sessionError) throw sessionError
   if (sessionData.session) return sessionData.session
@@ -25,6 +31,16 @@ export async function ensureAnonymousSession() {
   if (error) throw error
   if (!data.session) throw new Error('Could not start a private session')
   return data.session
+}
+
+export async function ensureAnonymousSession() {
+  if (!sessionInitPromise) {
+    sessionInitPromise = initializeAnonymousSession().catch((error) => {
+      sessionInitPromise = null
+      throw error
+    })
+  }
+  return sessionInitPromise
 }
 
 export function getRiyadhDate() {
