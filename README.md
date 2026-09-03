@@ -2,6 +2,8 @@
 
 A private, mobile-first daily game for couples. Both partners receive the same prompt, answer separately, wait for each other, reveal together, and can save the moment to a shared Memory Vault.
 
+Live beta: https://khalidaba94.github.io/Test/
+
 ## MVP flow
 
 1. Partner A creates a room and receives a 6-character invite code.
@@ -16,7 +18,7 @@ A private, mobile-first daily game for couples. Both partners receive the same p
 
 - React 18 + TypeScript + Vite
 - Supabase Anonymous Auth, Postgres, RLS/RPC, Realtime
-- Vercel-ready SPA configuration
+- GitHub Pages beta deployment
 - GitHub Actions build check
 
 ## Local setup
