@@ -70,17 +70,6 @@ export function parseJoinRoomResult(value: unknown) {
   return { ok: true as const, couple_id: value.couple_id, invite_code: value.invite_code }
 }
 
-export function assertVoidRpc(value: unknown, source: string) {
-  if (value !== null) throw contractError(source)
-}
-
-export function parseUuidRpc(value: unknown, source: string) {
-  if (!isString(value) || !/^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i.test(value)) {
-    throw contractError(source)
-  }
-  return value
-}
-
 export function parseMemoryRows(value: unknown): MemoryRow[] {
   if (!Array.isArray(value)) throw new Error('Unexpected response while loading memories. Please refresh and try again.')
 

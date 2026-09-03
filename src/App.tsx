@@ -14,13 +14,11 @@ import {
   Vault,
 } from 'lucide-react'
 import {
-  assertVoidRpc,
   parseCoupleState,
   parseCreateRoomResult,
   parseJoinRoomResult,
   parseMemoryRows,
   parseRoundState,
-  parseUuidRpc,
 } from './lib/contracts'
 import { ensureAnonymousSession, getRiyadhDate, supabase } from './lib/supabase'
 import type { CoupleState, MemoryBody, MemoryRow, RoundState } from './lib/types'
@@ -110,8 +108,11 @@ function App() {
       setScreen('waiting_partner')
       return
     }
-    await Promise.all([hydrateRound(next.couple_id), refreshMemories(next.couple_id)])
+    await hydrateRound(next.couple_id)
     setScreen('today')
+    void refreshMemories(next.couple_id).catch(() => {
+      // Memory Vault availability must never block today's round.
+    })
   }, [hydrateRound, refreshMemories])
 
   useEffect(() => {
@@ -220,8 +221,11 @@ function App() {
     setBusy(true)
     setError('')
     try {
-      await Promise.all([hydrateRound(couple.couple_id), refreshMemories(couple.couple_id)])
+      await hydrateRound(couple.couple_id)
       setScreen('today')
+      void refreshMemories(couple.couple_id).catch(() => {
+        // Keep Today usable even if saved-state refresh is temporarily unavailable.
+      })
     } catch (e) {
       setError(friendlyError(e))
     } finally {
@@ -233,9 +237,8 @@ function App() {
     setBusy(true)
     setError('')
     try {
-      const { data, error: rpcError } = await supabase.rpc('cancel_waiting_couple_room')
+      const { error: rpcError } = await supabase.rpc('cancel_waiting_couple_room')
       if (rpcError) throw rpcError
-      assertVoidRpc(data, 'cancel_waiting_couple_room')
       setCouple(null)
       setRound(null)
       setMemories([])
@@ -569,12 +572,11 @@ function Today({
     setBusy(true)
     setError('')
     try {
-      const { data, error } = await supabase.rpc('submit_answer', {
+      const { error } = await supabase.rpc('submit_answer', {
         p_round_id: round.round_id,
         p_answer_value: answer.trim(),
       })
       if (error) throw error
-      assertVoidRpc(data, 'submit_answer')
       await onRefresh()
     } catch (e) {
       setError(friendlyError(e))
@@ -587,10 +589,11 @@ function Today({
     setBusy(true)
     setError('')
     try {
-      const { data, error } = await supabase.rpc('save_round_to_memory', { p_round_id: round.round_id })
+      const { error } = await supabase.rpc('save_round_to_memory', { p_round_id: round.round_id })
       if (error) throw error
-      parseUuidRpc(data, 'save_round_to_memory')
-      await onMemorySaved()
+      await onMemorySaved().catch(() => {
+        // The save succeeded; a later Memory Vault refresh will reconcile the button state.
+      })
     } catch (e) {
       setError(friendlyError(e))
     } finally {

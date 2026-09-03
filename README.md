@@ -29,9 +29,9 @@ GitHub Pages is the single deployment target for the current beta:
 
 ## Supabase security model
 
-The Supabase project URL and publishable key are client-visible by design. They are not treated as secrets. Access control is enforced server-side with authenticated anonymous sessions, RLS, restricted RPC grants, answer privacy rules, and join-code rate limiting.
+The Supabase project URL and publishable key are client-visible by design. They are not treated as secrets. Access control is enforced server-side with authenticated anonymous sessions, RLS, restricted RPC grants, and answer privacy rules. The current join throttle is an abuse guard, not a complete brute-force boundary.
 
-`join_couple_room` limits each anonymous user to 5 invite-code attempts per 10-minute window. Supabase also applies its own anonymous-auth rate limiting.
+`join_couple_room` limits each anonymous session to 5 invite-code attempts per 10-minute window. A caller can create a fresh anonymous session (subject to Supabase Auth rate limits), so this does not substitute for IP/edge throttling or CAPTCHA if the beta becomes public. The 6-character hexadecimal code space contains 16,777,216 possibilities, which makes casual guessing impractical but does not remove the need for stronger public-launch controls.
 
 Never put a Supabase service-role/secret key in this frontend.
 
@@ -50,7 +50,7 @@ VITE_SUPABASE_URL=https://<project>.supabase.co
 VITE_SUPABASE_PUBLISHABLE_KEY=sb_publishable_...
 ```
 
-The application no longer contains fallback credentials; missing configuration fails explicitly instead of silently switching to another project.
+The application contains no fallback credentials. Vite validates the required Supabase variables while resolving the build config, so `npm run build` fails before producing an artifact when configuration is missing.
 
 ## Build
 
