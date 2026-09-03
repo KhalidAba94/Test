@@ -14,11 +14,16 @@ GitHub Pages is the single deployment target for the current beta:
 1. Partner A creates a room and receives a 6-character invite code.
 2. Partner A shares the invite link or code.
 3. Partner B opening the invite link is routed directly to the join screen with the code prefilled.
-4. Both receive the same Riyadh-date daily prompt.
+4. Both receive the same shared prompt.
 5. Answers are submitted privately through Supabase RPCs.
 6. The database reveals the round only after two distinct answers exist.
-7. Both clients update through Supabase Realtime with a 5-second polling fallback.
-8. Either partner can save the reveal to the shared Memory Vault.
+7. Either partner can save the reveal to the shared Memory Vault.
+8. Either partner can start the next question; the other phone follows automatically through Realtime with a 5-second polling fallback.
+9. Completed rounds and answers are retained, so multiple rounds can be played on the same Riyadh date without overwriting earlier tests.
+
+## Retained test history
+
+Completed rounds are not reset when a new question starts. `daily_rounds` stores sequential `round_number` values per couple/date and `answers` remains linked to each round. This gives us a durable history to use for repeat avoidance, future history views, resurfacing old answers, streaks, personalization, and content-quality analysis. Memory Vault is intentionally a curated subset of that broader round history.
 
 ## Stack
 
@@ -69,9 +74,10 @@ TypeScript/Vite build failures remain blocking in CI; the dependency audit is ad
 - Both see the same prompt.
 - A answers; A cannot see B's answer.
 - B answers; both reveal automatically.
-- Save to Memory Vault; verify it appears on both devices.
-- Navigate Memories → Today and confirm the current round remains correctly marked saved.
-- Close/reopen both browsers; both remain in the same couple room.
-- Repeat on another Riyadh-date round and confirm the new round is not incorrectly pre-marked saved.
+- Save to Memory Vault; verify it appears on both devices and the button becomes saved.
+- Start **Next question** on either device and confirm the other device follows to the same new round.
+- Complete at least three questions on the same date and confirm earlier answers are not overwritten.
+- Navigate Memories → Today and confirm saved state remains tied to the correct round.
+- Close/reopen both browsers; both remain in the same couple room and return to the latest round.
 - Test creator cancellation from a waiting room.
 - Repeat the core flow on iPhone Safari.
