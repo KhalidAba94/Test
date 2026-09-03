@@ -202,6 +202,38 @@ function App() {
     }
   }, [loadRoundState, round?.round_id, round?.status, screen])
 
+  useEffect(() => {
+    if (screen !== 'today' || !couple?.couple_id || !round?.round_id || round.status !== 'revealed') return
+
+    const refreshLatestRound = async () => {
+      try {
+        const next = await hydrateRound(couple.couple_id)
+        if (next.round_id !== round.round_id) {
+          void refreshMemories(couple.couple_id).catch(() => {
+            // Saved-state history is secondary to moving both partners into the next round.
+          })
+        }
+      } catch {
+        // Realtime/polling will retry. Do not interrupt the reveal screen for a missed sync.
+      }
+    }
+
+    const channel = supabase
+      .channel(`round-list-${couple.couple_id}`)
+      .on(
+        'postgres_changes',
+        { event: 'INSERT', schema: 'public', table: 'daily_rounds', filter: `couple_id=eq.${couple.couple_id}` },
+        refreshLatestRound,
+      )
+      .subscribe()
+
+    const poll = window.setInterval(refreshLatestRound, 5000)
+    return () => {
+      window.clearInterval(poll)
+      supabase.removeChannel(channel)
+    }
+  }, [couple?.couple_id, hydrateRound, refreshMemories, round?.round_id, round?.status, screen])
+
   const loadMemories = async () => {
     if (!couple) return
     setBusy(true)
@@ -225,6 +257,28 @@ function App() {
       setScreen('today')
       void refreshMemories(couple.couple_id).catch(() => {
         // Keep Today usable even if saved-state refresh is temporarily unavailable.
+      })
+    } catch (e) {
+      setError(friendlyError(e))
+    } finally {
+      setBusy(false)
+    }
+  }
+
+  const startNextQuestion = async () => {
+    if (!couple) return
+    setBusy(true)
+    setError('')
+    try {
+      const { data, error: rpcError } = await supabase.rpc('start_next_round', {
+        p_couple_id: couple.couple_id,
+        p_round_date: getRiyadhDate(),
+      })
+      if (rpcError) throw rpcError
+      const next = parseRoundState(data, 'start_next_round')
+      setRound(next)
+      void refreshMemories(couple.couple_id).catch(() => {
+        // History refresh is non-blocking; the new round is already authoritative.
       })
     } catch (e) {
       setError(friendlyError(e))
@@ -308,6 +362,7 @@ function App() {
             onRefresh={() => loadRoundState(round.round_id)}
             onOpenMemories={loadMemories}
             onMemorySaved={async () => { await refreshMemories(couple.couple_id) }}
+            onNextQuestion={startNextQuestion}
           />
         )}
         {screen === 'memories' && couple && (
@@ -549,6 +604,7 @@ function Today({
   onRefresh,
   onOpenMemories,
   onMemorySaved,
+  onNextQuestion,
 }: {
   round: RoundState
   couple: CoupleState
@@ -559,6 +615,7 @@ function Today({
   onRefresh: () => Promise<RoundState>
   onOpenMemories: () => Promise<void>
   onMemorySaved: () => Promise<void>
+  onNextQuestion: () => Promise<void>
 }) {
   const [answer, setAnswer] = useState(round.my_answer ?? '')
   const options = useMemo(() => Array.isArray(round.prompt.options_json) ? round.prompt.options_json.map(String) : [], [round.prompt.options_json])
@@ -666,6 +723,9 @@ function Today({
           </div>
           <button className={`button ${saved ? 'saved' : 'primary'}`} onClick={save} disabled={busy || saved}>
             {saved ? <><Check size={18} /> Saved to your Memory Vault</> : <><Vault size={18} /> Save this moment</>}
+          </button>
+          <button className="button secondary" onClick={onNextQuestion} disabled={busy}>
+            {busy ? <LoaderCircle className="spin" size={18} /> : <Sparkles size={18} />} Next question
           </button>
         </div>
       )}
