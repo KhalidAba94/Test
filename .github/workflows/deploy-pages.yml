@@ -20,6 +20,10 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
+    env:
+      # These values are client-visible by design. Authorization is enforced by Supabase Auth/RLS/RPCs.
+      VITE_SUPABASE_URL: https://jvxoclbgggfugmnbsosf.supabase.co
+      VITE_SUPABASE_PUBLISHABLE_KEY: sb_publishable_vUmiT7YMOd-O9afxzOn-2g_QPTiGzmg
     steps:
       - name: Checkout
         uses: actions/checkout@v4
