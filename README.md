@@ -59,6 +59,8 @@ npm install
 npm run build
 ```
 
+TypeScript/Vite build failures remain blocking in CI; the dependency audit is advisory so an upstream vulnerability notice cannot by itself prevent an otherwise valid beta build.
+
 ## Two-phone acceptance test
 
 - Phone A creates a room.
