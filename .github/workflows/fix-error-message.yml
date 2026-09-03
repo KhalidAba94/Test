@@ -1,0 +1,36 @@
+name: Patch error messages
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/fix-error-message.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  patch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Patch Supabase error formatting
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          p = Path('src/App.tsx')
+          s = p.read_text()
+          old = """const friendlyError = (error: unknown) => {\n  const message = error instanceof Error ? error.message : String(error)\n  return message\n    .replace('duplicate key value violates unique constraint', 'That action has already been completed.')\n    .replace('Failed to fetch', 'Connection lost. Check your internet and try again.')\n}\n"""
+          new = """const friendlyError = (error: unknown) => {\n  const message =\n    error instanceof Error\n      ? error.message\n      : typeof error === 'object' && error !== null && 'message' in error\n        ? String((error as { message?: unknown }).message ?? 'Something went wrong')\n        : String(error)\n\n  return message\n    .replace('Anonymous sign-ins are disabled', 'Private sign-in is temporarily unavailable. Please try again shortly.')\n    .replace('duplicate key value violates unique constraint', 'That action has already been completed.')\n    .replace('Failed to fetch', 'Connection lost. Check your internet and try again.')\n}\n"""
+          if old not in s:
+              raise SystemExit('Expected friendlyError block not found')
+          p.write_text(s.replace(old, new))
+          PY
+      - name: Remove one-time patch workflow and commit
+        run: |
+          git rm .github/workflows/fix-error-message.yml
+          git add src/App.tsx
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Improve Supabase error messages"
+          git push
