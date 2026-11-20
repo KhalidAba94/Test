@@ -87,3 +87,31 @@ This audit is limited to what each platform shows a logged-out visitor:
 - **TikTok:** only the latest 10 videos are exposed by the public embed.
 - **YouTube:** exact dates and likes are known only for the 15 most recent uploads (from the public RSS feed). Older dates are approximate (“3 years ago”), and comment counts weren't captured because YouTube rate-limited per-video pages.
 - **Snapchat:** no view counts are public.
+
+---
+
+## 8. Update, 20 Nov 2026: combined with the weekly tracker and the 6 Nov analysis
+
+This section adds three sources: the SEVEN / Scene weekly social tracker (27 account rows, 24 Sep – 19 Nov, follower counts re-verified on native profiles on 20 Nov), the 6 Nov social media analysis, and the 20 Nov evidence archive. The full presentation built from all four sources is the Slides deck (18 slides).
+
+**What the tracker changes in this assessment**
+
+- **TikTok is the growth story.** Followers went from 4,197 (24 Sep) to 8,937 (19 Nov), up 113%. The gain was +2,377 in the two weeks to 12 Nov and +1,096 in the week to 19 Nov. The 10K-by-31-Dec target now needs about 180 a week, so it should be reached in early December. The rise coincides with visible video posting (10 videos, 7–19 Nov) and the 25.1K-view breakout.
+- **Instagram is compounding.** It went from 79.8K (1 Oct) to 84.3K (19 Nov). Weekly gains rose from +300 to +900, and the last two weeks averaged about +800. That is the largest absolute gain of any tracked account.
+- **X is flat on followers** (46.5K → 46.7K), as it is for every tracked account. A typical post reaches 3.0–3.3% of followers, above the 3% target and above every cinema and mall. The 17 Nov “One destination. Endless possibilities.” post drew 16K views and 176 interactions (11 per 1,000), the best ratio captured on a large SEVEN post.
+- **Booking path: the first progress.** Between 13 Oct and 5 Nov, 0 of 24 captured posts carried a link. Now 3 of the 5 newest X posts (12–19 Nov) carry a seven.sa link or card. TikTok still says “link in bio”, Instagram’s bio led with the App Store, and nothing is tracked per post.
+- **Paid views on X too.** The 4 Oct X post had 735.3K views and 41 interactions (0.06 per 1,000), the same pattern as the YouTube ad films (831.8K views, 76 likes). X Ads data, agreed on 16 Oct, still hasn't been shared, and the tracker has no paid flag.
+- **Abha is returning to the calendar.** 5 of 16 X and Instagram creatives named Abha between 13 Oct and 5 Nov, and none did in the week to 5 Nov. 4 of 10 TikToks named Abha between 7 and 19 Nov, but only 2 of 16 Snaps did.
+- **Peers.** Six Flags QC has a similar Instagram audience (80.3K) but nearly 8× SEVEN’s TikTok (68.6K) and 8.7% X reach per post: that shows SEVEN's headroom. Scene is flat everywhere: X reach fell from 3.0% to 1.9%, and 0 of its 13 posts linked to booking, against VOX's 8 of 8.
+
+**Revised priorities:**
+1. Tracked booking links on every booking post, on every platform.
+2. Settle paid spend: get the ads data and add a paid flag.
+3. Scale the TikTok formats that worked.
+4. Run coded offers per site.
+5. Post at least 2 Abha creatives a week.
+6. Fix identity and hashtag hygiene.
+7. Revive YouTube Shorts.
+8. Link Scene's film posts to booking.
+
+Proposed targets and the open data asks are on the last three slides of the deck.
