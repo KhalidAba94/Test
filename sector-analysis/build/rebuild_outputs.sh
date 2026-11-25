@@ -3,6 +3,7 @@
 # Usage: build/rebuild_outputs.sh <work_dir>
 set -euo pipefail
 WORK="$1"; HERE="$(cd "$(dirname "$0")" && pwd)"; ROOT="$(dirname "$HERE")"
+python3 "$HERE/merge_parts.py" "$ROOT"
 for S in Energy Banks; do s=$(echo "$S" | tr '[:upper:]' '[:lower:]')
   python3 "$HERE/derive.py" "$S" "$WORK/parsed/${s}_facts_located.csv" "$ROOT/data/overrides.csv" "$ROOT/data/$s/facts.csv"; done
 (cd "$HERE" && python3 analyze.py "$ROOT/config/sectors.json" "$ROOT/data/dataset.json" "$ROOT/data/energy/facts.csv" "$ROOT/data/banks/facts.csv")

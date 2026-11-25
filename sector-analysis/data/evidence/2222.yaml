@@ -77,7 +77,7 @@ perimeter_changes:
     unit: "SAR m"
     source: "2222_SAUDI_ARAMCO/2025_Annual_filed2026-03-10.pdf"
     page: 73
-    quote: "A loss on fair value remeasurement of SAR 3,219 ... was recognized in 2023, followed by an additional fair value loss of SAR 304 in 2024."
+    quote: "was recognized in 2023, followed by an additional fair value loss of SAR 304 in 2024."
     note: "Metal products revenue line (FY2023 SAR 13,054m; FY2024 SAR 5,211m) disappears in FY2025."
   - event: "SABIC sale of Film & Sheet business"
     type: disposal
@@ -420,10 +420,10 @@ significant_events:
     quote: "The Company recognized the waiver of its shareholder loan receivable as an increase in the carrying amount of the investment in Petro Rabigh"
 
 audit_opinion:
-  - {period: "FY2022", opinion: "Unmodified (PwC); no emphasis of matter or material uncertainty paragraph found", emphasis_of_matter: none, source: "2222_SAUDI_ARAMCO/2022_Annual_filed2023-03-13.pdf", page: 3}
-  - {period: "FY2023", opinion: "Unmodified (PwC); KAMs incl. impairment; no EoM found", emphasis_of_matter: none, source: "2222_SAUDI_ARAMCO/2023_Annual_filed2024-03-11.pdf", page: 5}
-  - {period: "FY2024", opinion: "Unmodified (PwC); no EoM found", emphasis_of_matter: none, source: "2222_SAUDI_ARAMCO/2024_Annual_filed2025-03-04.pdf", page: 5}
-  - {period: "FY2025", opinion: "Unmodified (PwC, signed 9 Mar 2026); KAMs: recoverability of Downstream goodwill, valuation of PP&E, sale of NCI in Jafurah; no EoM found", emphasis_of_matter: none, source: "2222_SAUDI_ARAMCO/2025_Annual_filed2026-03-10.pdf", page: 7}
+  - {period: "FY2022", opinion: "Unmodified (PwC); no emphasis of matter or material uncertainty paragraph found", emphasis_of_matter: none, source: "2222_SAUDI_ARAMCO/2022_Annual_filed2023-03-13.pdf", page: 2}
+  - {period: "FY2023", opinion: "Unmodified (PwC); KAMs incl. impairment; no EoM found", emphasis_of_matter: none, source: "2222_SAUDI_ARAMCO/2023_Annual_filed2024-03-11.pdf", page: 4}
+  - {period: "FY2024", opinion: "Unmodified (PwC); no EoM found", emphasis_of_matter: none, source: "2222_SAUDI_ARAMCO/2024_Annual_filed2025-03-04.pdf", page: 4}
+  - {period: "FY2025", opinion: "Unmodified (PwC, signed 9 Mar 2026); KAMs: recoverability of Downstream goodwill, valuation of PP&E, sale of NCI in Jafurah; no EoM found", emphasis_of_matter: none, source: "2222_SAUDI_ARAMCO/2025_Annual_filed2026-03-10.pdf", page: 4}
   - {period: "9M2026", opinion: "Review conclusion (unmodified); no EoM found", emphasis_of_matter: none, source: "2222_SAUDI_ARAMCO/2026_Q3_filed2026-11-03.pdf", page: 26}
 
 kpis_in_filings:
@@ -465,5 +465,6 @@ special_extractions:
 open_questions:
   - "VGP pro-forma wording differs: FY2023 AFS p71 says consolidated revenue/net income 'would have been SAR 11,189 and SAR 802'; FY2024 AFS p70 says 'would have been higher by SAR 11,189 and SAR 802'. Higher-by reading is the later filing's wording."
   - "FY2024 reclassification: D&A fell by 11,530 while the new impairment/HFS line is 11,834; the 304 difference matches the Hadeed HFS fair-value loss and the SG&A change (89,235 -> 88,931), but the note does not itemise it."
+  - "FY2025 SAR 32,425m breakdown: disclosed components 14,569 (PP&E VIU impairment) + 4,452 (write-down, facility closure) + 8,640 (SABIC EP HFS) + 4,755 (ETP HFS) = 32,416; residual SAR 9m not itemised (segment note: Downstream 32,357, Corporate 68). Segment footnote also cites SAR 3,540m impairment relating to HFS assets - overlap with the 14,569 not stated."
   - "Operational KPIs (production, utilization) are only in the interim-report MD&A pages, not in the IFRS notes; annual PDFs in archive contain FS only."
   - "Note 4 (FY2025) states inter-segment pricing basis changed effective 1 Oct 2024; 2026 interim again cites 'certain changes in the pricing basis of inter-segment transactions' - segment EBIT comparability across periods may be affected; no quantification given."

@@ -1,0 +1,50 @@
+ticker: "1120"
+headline: >-
+  Al Rajhi grew attributable profit at a 13.1% annual rate from FY2022 to FY2025 by expanding its financing book about 10% a
+  year while cutting its cost-to-income ratio from 26.1% to 23.4%; after a 2023 squeeze on its margin when funding costs rose
+  faster than its largely fixed-rate assets repriced, its margin recovered in FY2024–FY2025 and widened again in 9M 2026.
+lfl_basis:
+  definition_used: >-
+    Standard bridge on total operating income. Banks have no discrete 'capacity' additions, so like-for-like equals organic growth.
+    Perimeter changes in the window (Ejada IT services, consolidated Feb 2022; Drahim fintech, June 2024) are below the 0.5%
+    materiality threshold and are not adjusted. Ejada has been held for sale since 2024 but is still consolidated, so there is no
+    discontinued-operations effect.
+  perimeter_changes:
+    - {event: "Ejada Systems acquired (100%)", date: "2022-02-01", effect: "IT services subsidiary; one extra month in FY2023; immaterial", source: "1120_ALRAJHI/2022_Annual_filed2023-02-07.pdf"}
+    - {event: "Drahim Holdings acquired (65%)", date: "2024-06", effect: "consideration SAR 83.4m; immaterial", source: "1120_ALRAJHI/2024_Annual_filed2025-02-09.pdf"}
+  capacity_changes: []
+  fx_exposure: "Foreign operations (Malaysia, Jordan, Kuwait branch) are small; FX translation is not material (translation OCI SAR 129m in FY2025)."
+  price_volume_support: >-
+    Net financing income can be split into volume (growth in average assets) and margin (income ÷ average assets) using the
+    filings' balance sheets. The bank's own net margin and yield disclosures are not used because definitions differ between banks.
+  confidence: "High"
+price_volume:
+  - {period: "FY2023 vs FY2022", text: "Net financing income fell SAR 0.9bn: average assets grew 13.3% (volume +SAR 3.0bn, +10.3 pp of prior TOI) but the margin on average assets fell from 3.20% to 2.71% (rate −SAR 3.9bn, −13.5 pp) as deposit costs rose.", basis: "calculated", confidence: "High", source: "facts NSCI, TA", refs: ["1120-FY2023-NSCI", "1120-FY2023-TA"]}
+  - {period: "FY2025 vs FY2024", text: "Net financing income rose SAR 5.0bn: volume +SAR 3.3bn (+10.2 pp of prior TOI) and margin +SAR 1.7bn (+5.4 pp; 2.79% → 2.96%).", basis: "calculated", confidence: "High", source: "facts NSCI, TA", refs: ["1120-FY2025-NSCI"]}
+  - {period: "9M 2026 vs 9M 2025", text: "Net financing income rose SAR 3.6bn: mostly margin (+SAR 2.7bn, +9.3 pp of prior TOI; annualised 2.85% → 3.19%) rather than volume (+SAR 1.0bn, +3.4 pp), as balance-sheet growth slowed to 1.8% year on year.", basis: "calculated", confidence: "High", source: "facts NSCI, TA", refs: ["1120-9M2026-NSCI", "1120-9M2026-TA"]}
+profit_and_margin:
+  drivers:
+    - {period: "FY2023", driver: "Total operating income −3.7% and attributable profit −3.1%: net financing income −4.1% on the margin squeeze; net fees −8.6%. Lower impairments (−24.8%) cushioned profit. Cost-to-income rose to 27.2%.", source: "facts", refs: ["1120-FY2023-TOI", "1120-FY2023-NI_ATTR"]}
+    - {period: "FY2024", driver: "TOI +16.4% and profit +18.7%: financing growth (loans +16.7%) plus a recovering margin; cost-to-income fell to 24.9%. Impairments rose 40.7% but cost of risk stayed low at 0.33%.", source: "facts", refs: ["1120-FY2024-TOI", "1120-FY2024-NI_ATTR"]}
+    - {period: "FY2025", driver: "TOI +22.0% and profit +25.7%: net financing income +20.1%, net fees +25.1%, other income +34.1%; operating costs +14.5% grew slower than income, so cost-to-income fell to 23.4%. Recoveries of written-off financing reached SAR 3.1bn (netted in the impairment charge).", source: "1120_ALRAJHI/2025_Annual_filed2026-02-04.pdf p.53", refs: ["1120-FY2025-TOI", "1120-FY2025-NI_ATTR"]}
+    - {period: "9M2026", driver: "TOI +13.4% and profit +13.3%: margin widening drove most of the gain; impairments rose 39.5% (cost of risk 0.41% annualised vs 0.31%). The bank states no material ECL impact from the regional conflict so far but warns of escalation after 30 Sep 2026.", source: "1120_ALRAJHI/2026_Q3_filed2026-10-29.pdf p.41", refs: ["1120-9M2026-NI_ATTR", "1120-9M2026-IMPAIR_TOTAL"]}
+  one_offs:
+    - {item: "No material non-recurring items identified; recoveries of written-off financing recur every year (FY2022 SAR 1.3bn → FY2025 SAR 3.1bn) and are netted in the impairment charge", period: "FY2022–9M2026", amount_sar_m: null, line: "Impairment charge, net", source: "annual AFS impairment notes"}
+developments:
+  - {date: "2022-01 / 2022-11", category: "financing", text: "First Tier 1 sukuk issues (SAR 6.5bn and SAR 10bn); Tier 1 sukuk rose to SAR 34.8bn by Sep 2026, with distributions of SAR 1.4bn in FY2025.", source: "2022 AFS p.11; 2026_Q3 interim p.4, p.7"}
+  - {date: "2022-02", category: "M&A", text: "Acquired Ejada Systems (IT services); classified as held for sale from 2024 with a plan to lose control via placements and an IPO.", source: "2022 and 2024 AFS"}
+  - {date: "2024-06", category: "M&A", text: "Acquired 65% of Drahim (open-banking fintech) for SAR 83.4m.", source: "2024 AFS"}
+  - {date: "2025", category: "mix", text: "Funding re-presented: part of 'due to banks' reclassified into customer deposits for 2024 and 2025 (31 Dec 2024 deposits SAR 628.2bn → 655.0bn), which breaks the loan-to-deposit series before 2024.", source: "1120_ALRAJHI/2025_Annual_filed2026-02-04.pdf"}
+  - {date: "2026-01 to 2026-09", category: "financing", text: "Issued further Tier 1 sukuk (USD 1bn at 6.15% in Jan 2026 and SAR tranches) and SAR 17.2bn of debt securities.", source: "2025 AFS p.109; 2026_Q3 interim p.29"}
+  - {date: "2026-04", category: "financing", text: "1-for-2 bonus issue capitalising SAR 20bn of retained earnings (no cash effect).", source: "2026_Q3 interim p.31"}
+what_it_means:
+  improved: "Profitability: ROE on ordinary equity recovered from 18.2% in FY2023 to 21.9% in FY2025 and 22.3% (annualised) in 9M 2026, with cost-to-income down to 22.2%."
+  weakened: "Funding: loans grew faster than customer deposits (FY2022–FY2025 CAGR 9.8% vs 5.7%, and the deposit figure is flattered by a 2024 reclassification), so the bank leaned more on debt securities and Tier 1 sukuk; credit costs rose in 9M 2026."
+  why: "Growth came from the existing franchise (no material acquisitions): balance-sheet volume added about 10 pp a year to income, and margin moved from a drag in 2023 to a tailwind in 2025–2026."
+  uncertain: "Whether credit quality holds through the regional escalation flagged after 30 Sep 2026; margin gains depend on the rate path."
+confidence_overall: "High"
+data_notes:
+  - "FY2022 net fees corrected from the PDF (SAR 4,624m): the FY2023 XBRL comparative tags FY2022 exchange income as a fee line (override, PDF p.57)."
+  - "Tier 1 (equity) sukuk distributions come from the statement of changes in equity (image pages, read visually) and are deducted in ROE on ordinary equity."
+  - "Customer deposits from FY2024 include balances previously shown as due to banks; the loan-to-deposit ratio is not comparable across that break."
+  - "Primary statements in Al Rajhi's PDFs are images; XBRL values were matched visually rather than by text search."

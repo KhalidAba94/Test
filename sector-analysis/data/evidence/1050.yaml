@@ -1,0 +1,235 @@
+ticker: "1050"
+company: "Banque Saudi Fransi (BSF)"
+# Units: SAR '000 unless stated. Pages are physical PDF pages (1-based).
+
+restatements:
+  - period_restated: "31 Dec 2024 and 1 Jan 2024 (also 30 Sep 2024)"
+    item: "Investments, net (FVOCI equity investments)"
+    from: 60288858
+    to: 60819754
+    unit: "SAR '000"
+    reason: "Correction under IAS 8 (presented as correction of error, not a change in accounting policy): FVOCI equity investments historically valued at cost revalued to fair value (+530,896 to investments and other reserves/FVOCI reserve). Applied at 1 Jan 2024 (total equity 41,403,998 -> 41,934,894). P&L and OCI effect for 2024 'insignificant', not restated."
+    source: "1050_BSF/2025_Q3_filed2025-10-27.pdf"
+    page: 34
+    quote: "the Bank corrected valuation of its interest in an equity investment that is classified as investment at Fair Value through Other Comprehensive Income which was historically valued at cost"
+  - period_restated: "31 Dec 2024"
+    item: "Other reserves"
+    from: -1132836
+    to: -601940
+    unit: "SAR '000"
+    reason: "Same IAS 8 correction (+530,896). Total equity 31 Dec 2024 restated to 47,137,898."
+    source: "1050_BSF/2025_Annual_filed2026-02-02.pdf"
+    page: 139
+    quote: "Investments, net 60,288,858 530,896 60,819,754 Other reserves (1,132,836) 530,896 (601,940)"
+  - period_restated: "1 Jan 2024 opening equity"
+    item: "FVOCI reserve / total equity attributable"
+    from: 36403998
+    to: 36934894
+    unit: "SAR '000"
+    reason: "'Impact on prior years adjustment' 530,896 in FY2025 AFS statement of changes in equity."
+    source: "1050_BSF/2025_Annual_filed2026-02-02.pdf"
+    page: 13
+    quote: "Impact on prior years adjustment 44 - - - - 530,896 ... 530,896 - 530,896"
+  - period_restated: "31 Dec 2024 (note 6 disclosure) / 30 Sep 2025"
+    item: "Reclassification within FVOCI from debt instruments to equity/other investments: SAR 931m (FY2025 AFS) / SAR 843m (9M2025)"
+    from: null
+    to: null
+    unit: "SAR '000"
+    reason: "IAS 8 correction of classification; disclosure note restated only; P&L/OCI effect insignificant."
+    source: "1050_BSF/2025_Annual_filed2026-02-02.pdf"
+    page: 139
+    quote: "the Bank corrected the classification of some of its investments from Investments at FVOCI - Debt instruments to Investments at FVOCI - Equity/other investments amounting 931 million"
+  - period_restated: "31 Dec 2023 (and 1 Jan 2023, 30 Sep 2024)"
+    item: "Investments and retained earnings (unrecorded equity investments)"
+    from: 48467289
+    to: 48750066
+    unit: "SAR '000"
+    reason: "Correction of prior-period error (FY2024 AFS note 45): equity investments held in prior years were not recorded; identified in 2024, classified FVTPL and sold in Q4 2024 with a gain of SAR 296m in FY2024 income. Retained earnings 31 Dec 2023 11,428,181 -> 11,710,958 (+282,777); 2023 P&L not restated."
+    source: "1050_BSF/2024_Annual_filed2025-02-05.pdf"
+    page: 137
+    quote: "management identified equity investments in which the Bank held interest, in prior years. These were not recorded in the prior year's consolidated financial statements."
+  - period_restated: "30 Sep 2024 (in 9M2025 interim)"
+    item: "Retained earnings / investments at 30 Sep 2024"
+    from: 13474271
+    to: 13757048
+    unit: "SAR '000"
+    reason: "Restatement (a) +282,777 (unrecorded equity investments) plus restatement (b) +530,896 to other reserves; investments 57,385,839 -> 58,199,512."
+    source: "1050_BSF/2025_Q3_filed2025-10-27.pdf"
+    page: 34
+    quote: "Retained earnings 13,474,271 282,777 - 13,757,048"
+  - period_restated: "31 Dec 2023 and 31 Dec 2024 capital ratios"
+    item: "Capital ratio comparatives differ from originally reported"
+    from: "2023: 16.68/18.92/19.54; 2024: 15.63/18.81/19.69"
+    to: "2023: 16.76/18.99/19.60 (FY2024 AFS); 2024: 15.75/18.92/19.79 (FY2025 AFS)"
+    unit: "%"
+    reason: "No reason stated in capital note; coincides with the two equity restatements."
+    source: "1050_BSF/2025_Annual_filed2026-02-02.pdf"
+    page: 137
+    quote: "Common Equity Tier I ratio 16.20% 15.75%"
+
+special_extractions:
+  tier1_sukuk:
+    equity_attributable_includes_tier1: false
+    equity_attributable_note: "SFP line 'Equity attributable to the shareholders of the Bank' excludes 'Tier I capital' (labelled Tier 1 Sukuk up to FY2023), which is shown separately before 'Total equity'."
+    equity_attributable_source: {source: "1050_BSF/2025_Annual_filed2026-02-02.pdf", page: 10, quote: "Equity attributable to the shareholders of the Bank 42,721,938 39,137,898 Tier I capital 20 7,937,500 8,000,000"}
+    carrying_amounts:
+      - {period: "31 Dec 2021", amount: 5000000, unit: "SAR '000", source: "1050_BSF/2022_Annual_filed2023-02-19.pdf", page: 12, quote: "Balance at the end of the year ... 34,685,670 5,000,000 39,685,670 [image]"}
+      - {period: "31 Dec 2022", amount: 5000000, unit: "SAR '000", source: "1050_BSF/2023_Annual_filed2024-02-13.pdf", page: 10, quote: "Tier 1 Sukuk 20 5,000,000 5,000,000"}
+      - {period: "31 Dec 2023", amount: 5000000, unit: "SAR '000", source: "1050_BSF/2023_Annual_filed2024-02-13.pdf", page: 10, quote: "Tier 1 Sukuk 20 5,000,000 5,000,000"}
+      - {period: "31 Dec 2024", amount: 8000000, unit: "SAR '000", source: "1050_BSF/2025_Annual_filed2026-02-02.pdf", page: 10, quote: "Tier I capital 20 7,937,500 8,000,000"}
+      - {period: "31 Dec 2025", amount: 7937500, unit: "SAR '000", source: "1050_BSF/2025_Annual_filed2026-02-02.pdf", page: 10, quote: "Tier I capital 20 7,937,500 8,000,000"}
+      - {period: "30 Sep 2025", amount: 10437500, unit: "SAR '000", source: "1050_BSF/2026_Q3_filed2026-10-26.pdf", page: 3, quote: "Tier I capital 16 7,937,500 7,937,500 10,437,500"}
+      - {period: "30 Sep 2026", amount: 7937500, unit: "SAR '000", source: "1050_BSF/2026_Q3_filed2026-10-26.pdf", page: 3, quote: "Tier I capital 16 7,937,500 7,937,500 10,437,500"}
+    distributions_charged_to_equity:
+      - {period: "FY2021", amount: 204352, unit: "SAR '000", line: "Tier 1 Sukuk related cost", source: "1050_BSF/2022_Annual_filed2023-02-19.pdf", page: 12, quote: "Tier 1 Sukuk related cost (204,352) [image]"}
+      - {period: "FY2022", amount: 224891, unit: "SAR '000", line: "Tier 1 Sukuk related cost", source: "1050_BSF/2022_Annual_filed2023-02-19.pdf", page: 12, quote: "Tier 1 Sukuk related cost (224,891) [image]"}
+      - {period: "FY2023", amount: 224606, unit: "SAR '000", line: "Tier 1 Sukuk related cost", source: "1050_BSF/2023_Annual_filed2024-02-13.pdf", page: 13, quote: "Tier 1 Sukuk related cost - - - (224,606)"}
+      - {period: "FY2024", amount: 282881, unit: "SAR '000", line: "Tier I capital related cost", source: "1050_BSF/2025_Annual_filed2026-02-02.pdf", page: 13, quote: "Tier I capital related cost - - - (282,881)"}
+      - {period: "FY2025", amount: 467774, unit: "SAR '000", line: "Tier I capital related cost", source: "1050_BSF/2025_Annual_filed2026-02-02.pdf", page: 13, quote: "Tier I capital related cost - - - (467,774)"}
+      - {period: "9M2025", amount: 303750, unit: "SAR '000", line: "Tier 1 capital related cost", source: "1050_BSF/2025_Q3_filed2025-10-27.pdf", page: 6, quote: "Tier 1 capital related cost - - - (303,750)"}
+      - {period: "9M2026", amount: 377695, unit: "SAR '000", line: "Tier I capital related cost", source: "1050_BSF/2026_Q3_filed2026-10-26.pdf", page: 6, quote: "Tier I capital related cost - - - (377,695)"}
+    issuances_redemptions:
+      - {date: "2020", event: "Issued SAR 5bn Tier 1 sukuk", amount: 5000000, unit: "SAR '000", source: "1050_BSF/2022_Annual_filed2023-02-19.pdf", page: 70, quote: "During 2020, the Bank through a Shariah compliant arrangement issued Tier 1 Sukuk (the Sukuk), amounting to SAR 5 billion."}
+      - {date: "Q3 2024", event: "Issued SAR 3bn Tier I sukuk at 6.0% (SAR 8bn programme est. Q1 2024)", amount: 3000000, unit: "SAR '000", source: "1050_BSF/2025_Annual_filed2026-02-02.pdf", page: 76, quote: "During Q3 2024, the Bank through a Shariah compliant arrangement issued Tier I Sukuk (the Sukuk), amounting to 3 billion"}
+      - {date: "Q2 2025", event: "Issued USD 650m Additional Tier I capital notes at 6.375%", amount: 2437500, unit: "SAR '000", source: "1050_BSF/2026_Q3_filed2026-10-26.pdf", page: 7, quote: "Issuance of Tier I capital - 2,437,500"}
+      - {date: "Q4 2025", event: "Called SAR 5bn Tier I sukuk issued 2020", amount: -5000000, unit: "SAR '000", source: "1050_BSF/2025_Annual_filed2026-02-02.pdf", page: 76, quote: "During Q4 2025 the Bank exercised the call option on its existing Tier I Sukuk (the Sukuk) which was issued in 2020, amounting to 5 billion."}
+      - {date: "Q4 2025", event: "Issued SAR 2.5bn Tier I sukuk at 6.4%", amount: 2500000, unit: "SAR '000", source: "1050_BSF/2025_Annual_filed2026-02-02.pdf", page: 76, quote: "During Q4 2025, the Bank through a Shariah compliant arrangement issued Tier I Sukuk (the Sukuk), amounting to 2.5 billion"}
+      - {date: "9M2026", event: "No Tier I issuance or redemption", amount: 0, unit: "SAR '000", source: "1050_BSF/2026_Q3_filed2026-10-26.pdf", page: 7, quote: "Issuance of Tier I capital - 2,437,500"}
+  net_fees:
+    - {period: "FY2022", gross_fee_income: 1423040, fee_expense: 526179, net_fees: 896861, unit: "SAR '000", source: "1050_BSF/2023_Annual_filed2024-02-13.pdf", page: 11, note: "FY2022 comparatives in FY2023 AFS; FY2022 AFS income statement is an image (p10)"}
+    - {period: "FY2023", gross_fee_income: 1491777, fee_expense: 577102, net_fees: 914675, unit: "SAR '000", source: "1050_BSF/2023_Annual_filed2024-02-13.pdf", page: 11}
+    - {period: "FY2024", gross_fee_income: 1650703, fee_expense: 678490, net_fees: 972213, unit: "SAR '000", source: "1050_BSF/2025_Annual_filed2026-02-02.pdf", page: 11}
+    - {period: "FY2025", gross_fee_income: 1667632, fee_expense: 711692, net_fees: 955940, unit: "SAR '000", source: "1050_BSF/2025_Annual_filed2026-02-02.pdf", page: 11}
+    - {period: "9M2025", gross_fee_income: 1269321, fee_expense: 514408, net_fees: 754913, unit: "SAR '000", source: "1050_BSF/2026_Q3_filed2026-10-26.pdf", page: 4}
+    - {period: "9M2026", gross_fee_income: 1292040, fee_expense: 550102, net_fees: 741938, unit: "SAR '000", source: "1050_BSF/2026_Q3_filed2026-10-26.pdf", page: 4}
+  impairments:
+    # Two P&L lines: 'Impairment charge for expected credit losses on loans and advances, net' (net of recoveries of written-off loans) and 'Impairment charge/(reversal) for investments, financial assets and others, net'
+    - {period: "FY2022", ecl_loans_net: 1363944, of_which_recoveries_written_off: -184377, other_impairments: -4147, unit: "SAR '000", source: "1050_BSF/2023_Annual_filed2024-02-13.pdf", page: 60}
+    - {period: "FY2023", ecl_loans_net: 1668817, of_which_recoveries_written_off: -129476, other_impairments: -74362, unit: "SAR '000", source: "1050_BSF/2023_Annual_filed2024-02-13.pdf", page: 60, note: "other = off-balance sheet reversal (81,533) etc. (p61)"}
+    - {period: "FY2024", ecl_loans_net: 1143899, of_which_recoveries_written_off: -144035, other_impairments: 35768, unit: "SAR '000", source: "1050_BSF/2025_Annual_filed2026-02-02.pdf", page: 62}
+    - {period: "FY2025", ecl_loans_net: 973997, of_which_recoveries_written_off: -407346, other_impairments: 14633, unit: "SAR '000", source: "1050_BSF/2025_Annual_filed2026-02-02.pdf", page: 62, note: "gross loan ECL charge 1,381,343"}
+    - {period: "9M2025", ecl_loans_net: 705912, of_which_recoveries_written_off: null, other_impairments: 46167, unit: "SAR '000", source: "1050_BSF/2026_Q3_filed2026-10-26.pdf", page: 4}
+    - {period: "9M2026", ecl_loans_net: 729108, of_which_recoveries_written_off: null, other_impairments: 54861, unit: "SAR '000", source: "1050_BSF/2026_Q3_filed2026-10-26.pdf", page: 4}
+
+perimeter_changes:
+  - event: "Subsidiaries Saudi Fransi Insurance Agency (SAFIA), Sofinco Saudi Fransi and Saudi Fransi Digital Ventures (SFDV) under liquidation; financial statements prepared on liquidation basis (no amounts disclosed)"
+    type: "deconsolidation"
+    date: "FY2024-FY2025 (in progress)"
+    consideration: null
+    period: "FY2025"
+    unit: "SAR '000"
+    source: "1050_BSF/2025_Annual_filed2026-02-02.pdf"
+    page: 15
+    quote: "Saudi Fransi Insurance Agency, Sofinco Saudi Fransi and Saudi Fransi Digital Ventures financial statements have been prepared on liquidation basis."
+  - event: "Sale in Q4 2024 of previously unrecorded equity investments (see restatement) with gain of SAR 296m"
+    type: "disposal"
+    date: "Q4 2024"
+    consideration: null
+    profit_contribution: 296000
+    period: "FY2024"
+    unit: "SAR '000"
+    source: "1050_BSF/2024_Annual_filed2025-02-05.pdf"
+    page: 137
+    quote: "On disposal of these investments, the Bank has recognized a gain of SAR 296 million in the current year's consolidated statement of income."
+  - event: "Associate Banque BEMO Saudi Fransi (Syria, 20%) carried at 9,695, remains impaired"
+    type: null
+    date: "FY2025"
+    consideration: null
+    period: "FY2025"
+    unit: "SAR '000"
+    source: "1050_BSF/2025_Annual_filed2026-02-02.pdf"
+    page: 63
+    quote: "The carrying amount of BEMO Syria remains impaired due to geopolitical restrictions in its operating region."
+  - event: "Acquisitions / discontinued operations FY2022-9M2026"
+    type: null
+    status: "not found"
+    source: "BSF focus PDFs"
+    page: null
+
+segments:
+  - {period: "FY2022", segment: "Retail banking", basis: operating, revenue: 2256868, profit: 803269, unit: "SAR '000", source: "1050_BSF/2022_Annual_filed2023-02-19.pdf", page: 82}
+  - {period: "FY2022", segment: "Corporate banking", basis: operating, revenue: 3543948, profit: 1500169, unit: "SAR '000", source: "1050_BSF/2022_Annual_filed2023-02-19.pdf", page: 82}
+  - {period: "FY2022", segment: "Treasury", basis: operating, revenue: 1765791, profit: 1464265, unit: "SAR '000", source: "1050_BSF/2022_Annual_filed2023-02-19.pdf", page: 82}
+  - {period: "FY2022", segment: "Investment banking and brokerage", basis: operating, revenue: 450668, profit: 236200, unit: "SAR '000", source: "1050_BSF/2022_Annual_filed2023-02-19.pdf", page: 82}
+  - {period: "FY2022", segment: "Total", basis: operating, revenue: 8017275, profit: 4003903, unit: "SAR '000", source: "1050_BSF/2022_Annual_filed2023-02-19.pdf", page: 82}
+  - {period: "FY2025", segment: "Retail banking", basis: operating, revenue: 3028939, profit: 856338, unit: "SAR '000", source: "1050_BSF/2025_Annual_filed2026-02-02.pdf", page: 91}
+  - {period: "FY2025", segment: "Corporate banking", basis: operating, revenue: 5465121, profit: 3832272, unit: "SAR '000", source: "1050_BSF/2025_Annual_filed2026-02-02.pdf", page: 91}
+  - {period: "FY2025", segment: "Treasury", basis: operating, revenue: 1332429, profit: 901394, unit: "SAR '000", source: "1050_BSF/2025_Annual_filed2026-02-02.pdf", page: 91}
+  - {period: "FY2025", segment: "Investment banking and brokerage", basis: operating, revenue: 710275, profit: 399009, unit: "SAR '000", source: "1050_BSF/2025_Annual_filed2026-02-02.pdf", page: 91}
+  - {period: "FY2025", segment: "Total", basis: operating, revenue: 10536764, profit: 5989013, unit: "SAR '000", source: "1050_BSF/2025_Annual_filed2026-02-02.pdf", page: 91}
+  - {period: "9M2025", segment: "Retail banking", basis: operating, revenue: 2258366, profit: 680599, unit: "SAR '000", source: "1050_BSF/2026_Q3_filed2026-10-26.pdf", page: 36, note: "same as original 9M2025 interim p30"}
+  - {period: "9M2025", segment: "Corporate banking", basis: operating, revenue: 4185987, profit: 2957011, unit: "SAR '000", source: "1050_BSF/2026_Q3_filed2026-10-26.pdf", page: 36}
+  - {period: "9M2025", segment: "Treasury", basis: operating, revenue: 977187, profit: 661554, unit: "SAR '000", source: "1050_BSF/2026_Q3_filed2026-10-26.pdf", page: 36}
+  - {period: "9M2025", segment: "Investment banking and brokerage", basis: operating, revenue: 494132, profit: 270398, unit: "SAR '000", source: "1050_BSF/2026_Q3_filed2026-10-26.pdf", page: 36}
+  - {period: "9M2025", segment: "Total", basis: operating, revenue: 7915672, profit: 4569562, unit: "SAR '000", source: "1050_BSF/2026_Q3_filed2026-10-26.pdf", page: 36}
+  - {period: "9M2026", segment: "Retail banking", basis: operating, revenue: 2717468, profit: 779112, unit: "SAR '000", source: "1050_BSF/2026_Q3_filed2026-10-26.pdf", page: 35}
+  - {period: "9M2026", segment: "Corporate banking", basis: operating, revenue: 3759826, profit: 2705550, unit: "SAR '000", source: "1050_BSF/2026_Q3_filed2026-10-26.pdf", page: 35}
+  - {period: "9M2026", segment: "Treasury", basis: operating, revenue: 1485431, profit: 1169585, unit: "SAR '000", source: "1050_BSF/2026_Q3_filed2026-10-26.pdf", page: 35}
+  - {period: "9M2026", segment: "Investment banking and brokerage", basis: operating, revenue: 456296, profit: 207674, unit: "SAR '000", source: "1050_BSF/2026_Q3_filed2026-10-26.pdf", page: 35}
+  - {period: "9M2026", segment: "Total", basis: operating, revenue: 8419021, profit: 4861921, unit: "SAR '000", source: "1050_BSF/2026_Q3_filed2026-10-26.pdf", page: 35}
+
+revenue_drivers: []
+
+one_offs:
+  - {period: "2018-2023 (historical)", item: "ZATCA settlement of zakat for years to 2017: SAR 1,510.67m, charged to retained earnings; fully settled by end-2023", amount: 1510670, unit: "SAR '000", pnl_line: "retained earnings (2018)", recurring: false, source: "1050_BSF/2023_Annual_filed2024-02-13.pdf", page: 77, quote: "the Bank reached a settlement agreement with ZATCA, to settle the Zakat Liability amounting to SAR 1,510.67 million for previous years"}
+  - {period: "FY2021", item: "Prior-year zakat (excess) provision", amount: -43272, unit: "SAR '000", pnl_line: "Zakat", recurring: false, source: "1050_BSF/2022_Annual_filed2023-02-19.pdf", page: 76, quote: "Shortage or (excess) provision for the prior years 16,076 (43,272)"}
+  - {period: "FY2022", item: "Prior-year zakat shortage provision", amount: 16076, unit: "SAR '000", pnl_line: "Zakat", recurring: false, source: "1050_BSF/2022_Annual_filed2023-02-19.pdf", page: 76, quote: "Shortage or (excess) provision for the prior years 16,076 (43,272)"}
+  - {period: "FY2023", item: "Prior-year zakat excess provision", amount: -1522, unit: "SAR '000", pnl_line: "Zakat", recurring: false, source: "1050_BSF/2023_Annual_filed2024-02-13.pdf", page: 77, quote: "(Excess) / shortage provision for the prior years (1,522) 16,076"}
+  - {period: "FY2024", item: "Prior-year zakat shortage provision", amount: 2608, unit: "SAR '000", pnl_line: "Zakat", recurring: false, source: "1050_BSF/2024_Annual_filed2025-02-05.pdf", page: 80, quote: "Shortage / (excess) / provision for the prior years 2,608 (1,522)"}
+  - {period: "FY2025", item: "Prior-year zakat shortage provision", amount: 18127, unit: "SAR '000", pnl_line: "Zakat", recurring: false, source: "1050_BSF/2025_Annual_filed2026-02-02.pdf", page: 82, quote: "Shortage provision for the prior years 18,127 2,608"}
+  - {period: "FY2024", item: "Gain on disposal of previously unrecorded equity investments (likely within trading income - securities, net 333,386; line not stated)", amount: 296000, unit: "SAR '000", pnl_line: "not specified (trading income, securities 333,386 in note 24)", recurring: false, source: "1050_BSF/2024_Annual_filed2025-02-05.pdf", page: 137, quote: "On disposal of these investments, the Bank has recognized a gain of SAR 296 million"}
+  - {period: "FY2023", item: "Losses on FVOCI / non-trading investments", amount: -16260, unit: "SAR '000", pnl_line: "(Losses) / gains on FVOCI / non-trading investments, net", recurring: false, source: "1050_BSF/2023_Annual_filed2024-02-13.pdf", page: 11, quote: "(Losses) / gains on FVOCI / non-trading investments, net (16,260) 3,524"}
+  - {period: "FY2025", item: "Gains on FVOCI / non-trading investments", amount: 117987, unit: "SAR '000", pnl_line: "Gains on FVOCI / non-trading investments, net", recurring: false, source: "1050_BSF/2025_Annual_filed2026-02-02.pdf", page: 11, quote: "Gains on FVOCI / non-trading investments, net 117,987 27,267"}
+  - {period: "FY2025", item: "Gain on disposal of property and equipment", amount: 36182, unit: "SAR '000", pnl_line: "Other operating income", recurring: false, source: "1050_BSF/2025_Annual_filed2026-02-02.pdf", page: 81, quote: "Gain on disposal of property and equipment 36,182 177"}
+  - {period: "FY2025", item: "Recoveries of written-off loans (vs 144,035 in FY2024)", amount: 407346, unit: "SAR '000", pnl_line: "Impairment charge for expected credit losses on loans and advances, net", recurring: false, source: "1050_BSF/2025_Annual_filed2026-02-02.pdf", page: 62, quote: "Recoveries of written off loans (407,346) (144,035)"}
+  - {period: "FY2023", item: "Reversal of ECL on off-balance-sheet exposures", amount: -81533, unit: "SAR '000", pnl_line: "Impairment reversal for investments, financial assets and others, net", recurring: false, source: "1050_BSF/2023_Annual_filed2024-02-13.pdf", page: 61, quote: "Impairment reversal on off statement of financial position, net 21 (81,533) (10,645)"}
+  - {period: "9M2026", item: "Gains on FVOCI / non-trading investments", amount: 105313, unit: "SAR '000", pnl_line: "Gains on FVOCI / non-trading investments, net", recurring: false, source: "1050_BSF/2026_Q3_filed2026-10-26.pdf", page: 4, quote: "Gains on FVOCI / non-trading investments, net 15,935 49,857 105,313 117,988"}
+  - {period: "FY2022-9M2026", item: "Hyperinflation adjustments / items labelled non-recurring", amount: null, status: "not found"}
+
+significant_events:
+  - {date: "28 Feb 2026 onward", event: "Regional geopolitical deterioration (Strait of Hormuz); stress tests on oil-price scenarios; expert credit judgement; ECL overlays recorded (amount not disclosed)", financial_effect: "overlays recorded, not quantified", source: "1050_BSF/2026_Q3_filed2026-10-26.pdf", page: 39, quote: "cannot be fully incorporated into the ECL model calculations, thereby necessitating overlays to be recorded"}
+  - {date: "After 30 Sep 2026", event: "Subsequent escalation of geopolitical situation in KSA; impact uncertain", financial_effect: null, source: "1050_BSF/2026_Q3_filed2026-10-26.pdf", page: 39, quote: "Subsequent to the period ended 30 September 2026, the volatility of the ongoing geopolitical situation in Kingdom of Saudi Arabia has escalated significantly"}
+  - {date: "9M2026", event: "Due to Saudi Central Bank rose 4,980,012 -> 17,223,104 and due to banks 7,904,600 -> 15,035,767 (balance sheet; no narrative)", financial_effect: null, source: "1050_BSF/2026_Q3_filed2026-10-26.pdf", page: 3, quote: "Due to Saudi Central Bank 9 17,223,104 4,980,012 17,841,436"}
+  - {date: "FY2025", event: "Debt securities and term loans 15,518,054 -> 38,876,945", financial_effect: null, source: "1050_BSF/2025_Annual_filed2026-02-02.pdf", page: 10, quote: "Debt securities and term loans 15 38,876,945 15,518,054"}
+  - {date: "FY2024", event: "Bonus shares: share capital 12,053,572 -> 25,000,000 (from statutory reserve 5,000,000 and retained earnings 7,946,428)", financial_effect: "no change in total equity", source: "1050_BSF/2025_Annual_filed2026-02-02.pdf", page: 13, quote: "Bonus shares issued 12,946,428 (5,000,000) - (7,946,428)"}
+
+audit_opinion:
+  - {period: "FY2022", opinion: "unmodified (EY, KPMG)", emphasis_of_matter: "none", source: "1050_BSF/2022_Annual_filed2023-02-19.pdf", page: 2}
+  - {period: "FY2023", opinion: "unmodified (EY, KPMG)", emphasis_of_matter: "none", source: "1050_BSF/2023_Annual_filed2024-02-13.pdf", page: 2, note: "text layer garbled; image read"}
+  - {period: "FY2024", opinion: "unmodified (EY, Deloitte)", emphasis_of_matter: "none; Other matter: FY2023 audited by other joint auditors (unmodified, 13 Feb 2024)", source: "1050_BSF/2024_Annual_filed2025-02-05.pdf", page: 2, note: "image page"}
+  - {period: "FY2025", opinion: "unmodified (EY, Deloitte)", emphasis_of_matter: "none", source: "1050_BSF/2025_Annual_filed2026-02-02.pdf", page: 2}
+  - {period: "9M2025", opinion: "unmodified review conclusion (EY, Deloitte)", emphasis_of_matter: "none", source: "1050_BSF/2025_Q3_filed2025-10-27.pdf", page: 2, note: "image page"}
+  - {period: "9M2026", opinion: "unmodified review conclusion (EY, Deloitte)", emphasis_of_matter: "none", source: "1050_BSF/2026_Q3_filed2026-10-26.pdf", page: 2, note: "image page"}
+
+kpis_in_filings:
+  - {period: "31 Dec 2021", kpi: "Tier 1 ratio", value: 19.94, unit: "%", source: "1050_BSF/2022_Annual_filed2023-02-19.pdf", page: 127}
+  - {period: "31 Dec 2021", kpi: "Total capital adequacy ratio", value: 21.09, unit: "%", source: "1050_BSF/2022_Annual_filed2023-02-19.pdf", page: 127}
+  - {period: "31 Dec 2022", kpi: "CET1 ratio", value: 16.57, unit: "%", source: "1050_BSF/2023_Annual_filed2024-02-13.pdf", page: 133}
+  - {period: "31 Dec 2022", kpi: "Tier 1 ratio", value: 18.90, unit: "%", source: "1050_BSF/2022_Annual_filed2023-02-19.pdf", page: 127}
+  - {period: "31 Dec 2022", kpi: "Total capital adequacy ratio", value: 19.92, unit: "%", source: "1050_BSF/2022_Annual_filed2023-02-19.pdf", page: 127}
+  - {period: "31 Dec 2023 (as reported)", kpi: "CET1 ratio", value: 16.68, unit: "%", source: "1050_BSF/2023_Annual_filed2024-02-13.pdf", page: 133}
+  - {period: "31 Dec 2023 (as reported)", kpi: "Tier 1 ratio", value: 18.92, unit: "%", source: "1050_BSF/2023_Annual_filed2024-02-13.pdf", page: 133}
+  - {period: "31 Dec 2023 (as reported)", kpi: "Total capital adequacy ratio", value: 19.54, unit: "%", source: "1050_BSF/2023_Annual_filed2024-02-13.pdf", page: 133}
+  - {period: "31 Dec 2024 (as reported)", kpi: "CET1 ratio", value: 15.63, unit: "%", source: "1050_BSF/2024_Annual_filed2025-02-05.pdf", page: 135}
+  - {period: "31 Dec 2024 (as reported)", kpi: "Tier 1 ratio", value: 18.81, unit: "%", source: "1050_BSF/2024_Annual_filed2025-02-05.pdf", page: 135}
+  - {period: "31 Dec 2024 (as reported)", kpi: "Total capital adequacy ratio", value: 19.69, unit: "%", source: "1050_BSF/2024_Annual_filed2025-02-05.pdf", page: 135}
+  - {period: "31 Dec 2024 (FY2025 AFS comparative)", kpi: "CET1 ratio", value: 15.75, unit: "%", source: "1050_BSF/2025_Annual_filed2026-02-02.pdf", page: 137}
+  - {period: "31 Dec 2024 (FY2025 AFS comparative)", kpi: "Tier 1 ratio", value: 18.92, unit: "%", source: "1050_BSF/2025_Annual_filed2026-02-02.pdf", page: 137}
+  - {period: "31 Dec 2024 (FY2025 AFS comparative)", kpi: "Total capital adequacy ratio", value: 19.79, unit: "%", source: "1050_BSF/2025_Annual_filed2026-02-02.pdf", page: 137}
+  - {period: "31 Dec 2025", kpi: "CET1 ratio", value: 16.20, unit: "%", source: "1050_BSF/2025_Annual_filed2026-02-02.pdf", page: 137}
+  - {period: "31 Dec 2025", kpi: "Tier 1 ratio", value: 19.21, unit: "%", source: "1050_BSF/2025_Annual_filed2026-02-02.pdf", page: 137}
+  - {period: "31 Dec 2025", kpi: "Total capital adequacy ratio", value: 21.38, unit: "%", source: "1050_BSF/2025_Annual_filed2026-02-02.pdf", page: 137}
+  - {period: "30 Sep 2025", kpi: "CET1 ratio", value: 15.69, unit: "%", source: "1050_BSF/2026_Q3_filed2026-10-26.pdf", page: 38}
+  - {period: "30 Sep 2025", kpi: "Tier 1 ratio", value: 19.61, unit: "%", source: "1050_BSF/2026_Q3_filed2026-10-26.pdf", page: 38}
+  - {period: "30 Sep 2025", kpi: "Total capital adequacy ratio", value: 21.86, unit: "%", source: "1050_BSF/2026_Q3_filed2026-10-26.pdf", page: 38}
+  - {period: "30 Sep 2026", kpi: "CET1 ratio", value: 15.25, unit: "%", source: "1050_BSF/2026_Q3_filed2026-10-26.pdf", page: 38}
+  - {period: "30 Sep 2026", kpi: "Tier 1 ratio", value: 18.09, unit: "%", source: "1050_BSF/2026_Q3_filed2026-10-26.pdf", page: 38}
+  - {period: "30 Sep 2026", kpi: "Total capital adequacy ratio", value: 20.19, unit: "%", source: "1050_BSF/2026_Q3_filed2026-10-26.pdf", page: 38}
+  - {period: "all", kpi: "LCR / NSFR", value: null, unit: "%", status: "not found", source: "all focus PDFs searched", page: null}
+  - {period: "all", kpi: "NPL ratio / coverage ratio", value: null, unit: "%", status: "not found", source: "all focus PDFs searched", page: null}
+
+open_questions:
+  - "FY2022 AFS primary statements (pp8-12) are images; FY2022 income statement figures taken from FY2023 AFS comparatives (not checked against the FY2022 image)."
+  - "FY2024 SAR 296m gain on sale of unrecorded equity investments: P&L line not stated; trading income (securities, net) was 333,386 in FY2024."
+  - "BSF has two IAS 8 corrections affecting FY2024 comparatives: (a) unrecorded equity investments (+282,777 retained earnings at 31 Dec 2023/30 Sep 2024; sold Q4 2024) and (b) FVOCI equity at cost -> fair value (+530,896). Only (b) affects 31 Dec 2024."
+  - "Tier I issuance in FY2025 (4,937,500) = USD 650m notes (2,437,500) + SAR 2.5bn sukuk; 30 Sep 2025 balance 10,437,500 preceded the Q4 2025 call of SAR 5bn."

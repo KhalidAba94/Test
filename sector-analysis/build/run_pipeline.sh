@@ -3,6 +3,7 @@
 # Usage: build/run_pipeline.sh <work_dir_with_archive>   (archive/<Sector>/<company_dir>/ files)
 set -euo pipefail
 WORK="$1"; HERE="$(cd "$(dirname "$0")" && pwd)"; ROOT="$(dirname "$HERE")"
+python3 "$HERE/merge_parts.py" "$ROOT"
 mkdir -p "$WORK/parsed" "$ROOT/data/energy" "$ROOT/data/banks"
 for S in Energy Banks; do
   s=$(echo "$S" | tr '[:upper:]' '[:lower:]')

@@ -15,7 +15,7 @@ perimeter_changes:
     unit: "SAR"
     source: "2382_ADES/2022_Annual_filed2024-10-09.pdf"
     page: 37
-    quote: "It is impracticable to disclose the revenue and profit, or loss of the rigs acquired for the year ended 31 December 2021 as if the combination"
+    quote: "It is impracticable to disclose the revenue and profit, or loss of the rigs acquired for the year ended 31 December 2021"
   - event: "Acquisition of Emerald Driller Company (3 offshore rigs, Qatar) by ADES Arabia Holding, then transferred into the Group under common control (pooling)"
     type: acquisition
     date: "2022-05-27"

@@ -1,0 +1,257 @@
+# Evidence extracted from The National Shipping Company of Saudi Arabia (Bahri) filings (archive: 4030_BAHRI). Facts only; page = physical PDF page (1-based).
+# Units: SAR '000 as presented. Primary statements are scanned images (annuals pp7-12; 2026_Q3 pp3-8); 2026_Q3 review report, balance sheet and P&L (pp3-5) viewed as images.
+ticker: "4030"
+company: "The National Shipping Company of Saudi Arabia (Bahri)"
+
+perimeter_changes:
+  - event: "New subsidiaries incorporated 2024: Bahri Logistics Company DWC-LLC (UAE) and Bahri Logistics Company (SILZ) LLC (KSA) - start-ups, no acquisition"
+    type: new_subsidiary
+    date: "2024"
+    consideration: null
+    revenue_contribution: null
+    profit_contribution: null
+    pro_forma_revenue: null
+    period: "FY2024"
+    unit: "SAR '000"
+    source: "4030_BAHRI/2025_Annual_filed2026-03-17.pdf"
+    page: 13
+    quote: "The Group holds an effective equity ownership interest of 100% in Bahri Logistics Company DWC-LLC and Bahri Logistics Company (SILZ) LLC"
+  - event: "New subsidiaries incorporated 2025: Bahri Shipping Pte. Ltd (Singapore), Bahri High Seas (KSA), Bahri Dry Ship Management FZCO and Bahri Chemical Ship Management FZCO (UAE)"
+    type: new_subsidiary
+    date: "2025"
+    consideration: null
+    revenue_contribution: null
+    profit_contribution: null
+    pro_forma_revenue: null
+    period: "FY2025"
+    unit: "SAR '000"
+    source: "4030_BAHRI/2025_Annual_filed2026-03-17.pdf"
+    page: 13
+    quote: "During this year, the Group has established a new subsidiary (Bahri Shipping Pte. Ltd) in Singapore"
+  - event: "New subsidiary Bahri Ship Management Company (KSA) incorporated"
+    type: new_subsidiary
+    date: "9M2026"
+    consideration: null
+    revenue_contribution: null
+    profit_contribution: null
+    pro_forma_revenue: null
+    period: "9M2026"
+    unit: "SAR '000"
+    source: "4030_BAHRI/2026_Q3_filed2026-11-03.pdf"
+    page: 10
+    quote: "During the period, the Group incorporated a new subsidiary, Bahri Ship Management Company, in the Kingdom of Saudi Arabia."
+  - event: "Disposal of entire 50% stake in National Grain Company (JV) to United Farmers Investment Company"
+    type: disposal
+    date: "9M2026"
+    consideration: "not disclosed"
+    revenue_contribution: null
+    profit_contribution: null
+    pro_forma_revenue: null
+    period: "9M2026"
+    unit: "SAR '000"
+    source: "4030_BAHRI/2026_Q3_filed2026-11-03.pdf"
+    page: 10
+    quote: "the Group has fully disposed of its ownership interest in NGC following the completion of all legal and regulatory formalities."
+    note: "Share of loss in NGC 9M2025: (23,400) (p20)."
+  - event: "Acquisitions of businesses / IFRS 3 contributions"
+    type: acquisition
+    status: "not found"
+    period: "FY2022-9M2026"
+    source: "4030_BAHRI/2025_Annual_filed2026-03-17.pdf"
+    page: null
+    quote: "No business combination note in FY2022-FY2025 AFS or 2026_Q3; fleet growth from newbuild deliveries (12 vessels in 2025)."
+
+segments:
+  # Operating segments; profit = profit before zakat and income tax by segment. No geographic segments ("vessels deployed throughout the world").
+  - {period: "FY2022", segment: "Transportation of oil", basis: operating, revenue: 5119215, profit: 771520, unit: "SAR '000", source: "4030_BAHRI/2023_Annual_filed2024-03-21.pdf", page: 27}
+  - {period: "FY2022", segment: "Transportation of chemicals", basis: operating, revenue: 2058097, profit: 385211, unit: "SAR '000", source: "4030_BAHRI/2023_Annual_filed2024-03-21.pdf", page: 27}
+  - {period: "FY2022", segment: "Logistics", basis: operating, revenue: 1099161, profit: 47668, unit: "SAR '000", source: "4030_BAHRI/2023_Annual_filed2024-03-21.pdf", page: 27}
+  - {period: "FY2022", segment: "Transportation of dry bulk", basis: operating, revenue: 296388, profit: 122059, unit: "SAR '000", source: "4030_BAHRI/2023_Annual_filed2024-03-21.pdf", page: 27}
+  - {period: "FY2022", segment: "Others", basis: operating, revenue: 9719, profit: -70934, unit: "SAR '000", source: "4030_BAHRI/2023_Annual_filed2024-03-21.pdf", page: 27}
+  - {period: "FY2022", segment: "Total", basis: operating, revenue: 8582580, profit: 1255524, net_profit_attributable: 1040909, unit: "SAR '000", source: "4030_BAHRI/2023_Annual_filed2024-03-21.pdf", page: 27}
+  - {period: "FY2023", segment: "Transportation of oil", basis: operating, revenue: 4795823, profit: 932002, unit: "SAR '000", source: "4030_BAHRI/2024_Annual_filed2025-03-26.pdf", page: 29}
+  - {period: "FY2023", segment: "Transportation of chemicals", basis: operating, revenue: 2723197, profit: 818079, unit: "SAR '000", source: "4030_BAHRI/2024_Annual_filed2025-03-26.pdf", page: 29}
+  - {period: "FY2023", segment: "Logistics", basis: operating, revenue: 963304, profit: 45904, unit: "SAR '000", source: "4030_BAHRI/2024_Annual_filed2025-03-26.pdf", page: 29}
+  - {period: "FY2023", segment: "Transportation of dry bulk", basis: operating, revenue: 280908, profit: 59272, unit: "SAR '000", source: "4030_BAHRI/2024_Annual_filed2025-03-26.pdf", page: 29}
+  - {period: "FY2023", segment: "Others", basis: operating, revenue: 14268, profit: 38591, unit: "SAR '000", source: "4030_BAHRI/2024_Annual_filed2025-03-26.pdf", page: 29}
+  - {period: "FY2023", segment: "Total", basis: operating, revenue: 8777500, profit: 1893848, net_profit_attributable: 1613428, unit: "SAR '000", source: "4030_BAHRI/2024_Annual_filed2025-03-26.pdf", page: 29}
+  - {period: "FY2024", segment: "Transportation of oil", basis: operating, revenue: 4603578, profit: 1248805, unit: "SAR '000", source: "4030_BAHRI/2025_Annual_filed2026-03-17.pdf", page: 29}
+  - {period: "FY2024", segment: "Transportation of chemicals", basis: operating, revenue: 3252244, profit: 1081106, unit: "SAR '000", source: "4030_BAHRI/2025_Annual_filed2026-03-17.pdf", page: 29}
+  - {period: "FY2024", segment: "Logistics", basis: operating, revenue: 1083833, profit: 89882, unit: "SAR '000", source: "4030_BAHRI/2025_Annual_filed2026-03-17.pdf", page: 29}
+  - {period: "FY2024", segment: "Transportation of dry bulk", basis: operating, revenue: 489345, profit: 27059, unit: "SAR '000", source: "4030_BAHRI/2025_Annual_filed2026-03-17.pdf", page: 29}
+  - {period: "FY2024", segment: "Others", basis: operating, revenue: 53387, profit: 54129, unit: "SAR '000", source: "4030_BAHRI/2025_Annual_filed2026-03-17.pdf", page: 29}
+  - {period: "FY2024", segment: "Total", basis: operating, revenue: 9482387, profit: 2500981, net_profit_attributable: 2169392, unit: "SAR '000", source: "4030_BAHRI/2025_Annual_filed2026-03-17.pdf", page: 29}
+  - {period: "FY2025", segment: "Transportation of oil", basis: operating, revenue: 5860009, profit: 1782282, unit: "SAR '000", source: "4030_BAHRI/2025_Annual_filed2026-03-17.pdf", page: 28}
+  - {period: "FY2025", segment: "Transportation of chemicals", basis: operating, revenue: 2856471, profit: 633605, unit: "SAR '000", source: "4030_BAHRI/2025_Annual_filed2026-03-17.pdf", page: 28}
+  - {period: "FY2025", segment: "Logistics", basis: operating, revenue: 1120486, profit: 70942, unit: "SAR '000", source: "4030_BAHRI/2025_Annual_filed2026-03-17.pdf", page: 28}
+  - {period: "FY2025", segment: "Transportation of dry bulk", basis: operating, revenue: 402689, profit: 19285, unit: "SAR '000", source: "4030_BAHRI/2025_Annual_filed2026-03-17.pdf", page: 28}
+  - {period: "FY2025", segment: "Others (incl. share of equity-accounted results 566,425)", basis: operating, revenue: 107066, profit: 145521, unit: "SAR '000", source: "4030_BAHRI/2025_Annual_filed2026-03-17.pdf", page: 28}
+  - {period: "FY2025", segment: "Total", basis: operating, revenue: 10346721, profit: 2651635, net_profit_attributable: 2431341, unit: "SAR '000", source: "4030_BAHRI/2025_Annual_filed2026-03-17.pdf", page: 28}
+  - {period: "9M2026", segment: "Transportation of oil", basis: operating, revenue: 21795134, profit: 8548206, unit: "SAR '000", source: "4030_BAHRI/2026_Q3_filed2026-11-03.pdf", page: 15}
+  - {period: "9M2026", segment: "Transportation of chemicals", basis: operating, revenue: 2488294, profit: 1135987, unit: "SAR '000", source: "4030_BAHRI/2026_Q3_filed2026-11-03.pdf", page: 15}
+  - {period: "9M2026", segment: "Logistics", basis: operating, revenue: 1218422, profit: 131174, unit: "SAR '000", source: "4030_BAHRI/2026_Q3_filed2026-11-03.pdf", page: 15}
+  - {period: "9M2026", segment: "Transportation of dry bulk", basis: operating, revenue: 440842, profit: 60762, unit: "SAR '000", source: "4030_BAHRI/2026_Q3_filed2026-11-03.pdf", page: 15}
+  - {period: "9M2026", segment: "Others (incl. share of equity-accounted results 792,493)", basis: operating, revenue: 153700, profit: 547495, unit: "SAR '000", source: "4030_BAHRI/2026_Q3_filed2026-11-03.pdf", page: 15}
+  - {period: "9M2026", segment: "Total", basis: operating, revenue: 26096392, profit: 10423624, net_profit_attributable: 9981653, unit: "SAR '000", source: "4030_BAHRI/2026_Q3_filed2026-11-03.pdf", page: 15}
+  - {period: "9M2025", segment: "Transportation of oil", basis: operating, revenue: 3703529, profit: 915456, unit: "SAR '000", source: "4030_BAHRI/2026_Q3_filed2026-11-03.pdf", page: 16}
+  - {period: "9M2025", segment: "Transportation of chemicals", basis: operating, revenue: 2218476, profit: 482630, unit: "SAR '000", source: "4030_BAHRI/2026_Q3_filed2026-11-03.pdf", page: 16}
+  - {period: "9M2025", segment: "Logistics", basis: operating, revenue: 789730, profit: 37069, unit: "SAR '000", source: "4030_BAHRI/2026_Q3_filed2026-11-03.pdf", page: 16}
+  - {period: "9M2025", segment: "Transportation of dry bulk", basis: operating, revenue: 302353, profit: 7327, unit: "SAR '000", source: "4030_BAHRI/2026_Q3_filed2026-11-03.pdf", page: 16}
+  - {period: "9M2025", segment: "Others", basis: operating, revenue: 69665, profit: 181246, unit: "SAR '000", source: "4030_BAHRI/2026_Q3_filed2026-11-03.pdf", page: 16}
+  - {period: "9M2025", segment: "Total", basis: operating, revenue: 7083753, profit: 1623728, net_profit_attributable: 1453630, unit: "SAR '000", source: "4030_BAHRI/2026_Q3_filed2026-11-03.pdf", page: 16}
+  - {period: "Q3 2026", segment: "Total (P&L)", basis: operating, revenue: 14826781, profit: 5307566, net_profit_attributable: 5085631, unit: "SAR '000", source: "4030_BAHRI/2026_Q3_filed2026-11-03.pdf", page: 5}
+  - {period: "Q3 2025", segment: "Total (P&L)", basis: operating, revenue: 2455797, profit: 589205, net_profit_attributable: 513362, unit: "SAR '000", source: "4030_BAHRI/2026_Q3_filed2026-11-03.pdf", page: 5}
+  - {period: "FY2022-9M2026", segment: "Geographic", basis: geographic, status: "not found", note: "Management does not consider geographic distribution relevant; no geographic segment disclosed", source: "4030_BAHRI/2025_Annual_filed2026-03-17.pdf", page: 28}
+
+revenue_drivers:
+  - {period: "FY2025", driver: "Spot revenue (FY2024: 6,581,626)", value: 7762572, unit: "SAR '000", source: "4030_BAHRI/2025_Annual_filed2026-03-17.pdf", page: 42, quote: "Spot 7,762,572 6,581,626"}
+  - {period: "FY2025", driver: "Charter hire revenue (FY2024: 2,013,004)", value: 1567061, unit: "SAR '000", source: "4030_BAHRI/2025_Annual_filed2026-03-17.pdf", page: 42, quote: "Charter hire 1,567,061 2,013,004"}
+  - {period: "FY2025", driver: "Freight forwarding (483,388), time charter (338,749), water desalination (42,188) FY2024 comparatives", value: 559585, unit: "SAR '000", source: "4030_BAHRI/2025_Annual_filed2026-03-17.pdf", page: 42, quote: "Freight forwarding 559,585 483,388"}
+  - {period: "FY2025", driver: "Bunker subsidy (government, unconditional; FY2024: 337,222)", value: 301115, unit: "SAR '000", source: "4030_BAHRI/2025_Annual_filed2026-03-17.pdf", page: 28, quote: "Bunker subsidy 250,630 32,516 17,118 851 301,115 - 301,115"}
+  - {period: "9M2026", driver: "Bunker subsidy (9M2025: 238,887)", value: 189879, unit: "SAR '000", source: "4030_BAHRI/2026_Q3_filed2026-11-03.pdf", page: 15, quote: "Bunker subsidy 147,349 27,874 13,363 1,293 189,879 - 189,879"}
+  - {period: "FY2025", driver: "Revenue from major customers (related parties) share of total (FY2024: 50.6%)", value: 46.8, unit: "%", source: "4030_BAHRI/2025_Annual_filed2026-03-17.pdf", page: 28, quote: "Revenue from the major customers (related parties) represented around 46.8% of the Group's total revenue (31 December 2024: 50.6%)."}
+  - {period: "9M2026", driver: "Geopolitical developments: improved freight rates and vessel utilization (positive impact)", value: null, unit: "SAR '000", source: "4030_BAHRI/2026_Q3_filed2026-11-03.pdf", page: 11, quote: "primarily driven by favorable market conditions in certain shipping activities, including improved freight rates and vessel utilization"}
+  - {period: "2025", driver: "Newbuild deliveries: 12 new vessels received; projects of SAR 5,354m transferred to PP&E", value: 12, unit: "count", source: "4030_BAHRI/2026_Q3_filed2026-11-03.pdf", page: 19, quote: "During 2025, 12 new vessels were received, and other projects were completed with a total carrying amount of SAR 5,354 million"}
+
+one_offs:
+  - {period: "FY2022", item: "Gains on disposal of property and equipment (vessels)", amount: 159840, unit: "SAR '000", pnl_line: "Other income", recurring: false, source: "4030_BAHRI/2022_Annual_filed2023-03-19.pdf", page: 38, quote: "Gains on disposal of property and equipment 159,840 58"}
+  - {period: "FY2023", item: "Gains on disposal of property and equipment", amount: 214084, unit: "SAR '000", pnl_line: "Other income", recurring: false, source: "4030_BAHRI/2024_Annual_filed2025-03-26.pdf", page: 42, quote: "Gains on disposal of property and equipment 215,924 214,084"}
+  - {period: "FY2024", item: "Gains on disposal of property and equipment", amount: 215924, unit: "SAR '000", pnl_line: "Other income", recurring: false, source: "4030_BAHRI/2025_Annual_filed2026-03-17.pdf", page: 42, quote: "Gains on disposal of property and equipment 5,814 215,924"}
+  - {period: "FY2025", item: "Recovered claims (FY2024: 15,283)", amount: 67436, unit: "SAR '000", pnl_line: "Other income", recurring: false, source: "4030_BAHRI/2025_Annual_filed2026-03-17.pdf", page: 42, quote: "Recovered claims 67,436 15,283"}
+  - {period: "9M2026", item: "Gain on disposal of assets (NBV SAR 153.7m)", amount: 115800, unit: "SAR '000", pnl_line: "Other (expense)/income, net", recurring: false, source: "4030_BAHRI/2026_Q3_filed2026-11-03.pdf", page: 18, quote: "the Group disposed of assets with net book value of SAR 153.7 million ... and this resulted in a gain of SAR 115.8 million"}
+  - {period: "9M2026", item: "Loss on derecognition of vessel components damaged by regional geopolitical developments (fully insured; claims being recovered)", amount: -119000, unit: "SAR '000", pnl_line: "Other (expense)/income, net (inferred; note 6 does not name the line)", recurring: false, source: "4030_BAHRI/2026_Q3_filed2026-11-03.pdf", page: 18, quote: "the Group recognized a loss of SAR 119 million arising from the derecognition of certain vessel components that were damaged"}
+
+restatements:
+  - period_restated: "9M2025"
+    item: "Operating costs (cost of sales)"
+    from: -5394224
+    to: -5281929
+    unit: "SAR '000"
+    reason: "Reclassification to conform with 9M2026 classification: 112,295 moved out of operating costs; G&A +41,750 (289,927 -> 331,677); new marketing expenses line 21,545; other income/(expenses) net reduced by 49,000 (59,321 -> 10,321). No impact on net profit or retained earnings."
+    source: "4030_BAHRI/2026_Q3_filed2026-11-03.pdf"
+    page: 26
+    quote: "Certain figures have been reclassified to conform with the classification used for the period ended 30 September 2026"
+  - period_restated: "FY2021 / FY2022 comparatives"
+    item: "Generic reclassification of comparatives"
+    from: null
+    to: null
+    unit: "SAR '000"
+    reason: "Generic statement only; no table."
+    source: "4030_BAHRI/2022_Annual_filed2023-03-19.pdf"
+    page: 14
+    quote: "Certain comparative figures have been reclassified to conform to the current year presentation."
+  - period_restated: "FY2022 comparatives (in FY2023 AFS)"
+    item: "Generic reclassification of comparatives; gross profit before bunker subsidy now shown (FY2022: 1,378,128)"
+    from: null
+    to: null
+    unit: "SAR '000"
+    reason: "Generic statement only."
+    source: "4030_BAHRI/2023_Annual_filed2024-03-21.pdf"
+    page: 15
+    quote: "Certain comparative figures have been reclassified to conform to the current year presentation."
+
+significant_events:
+  - date: "2026 (conflict from 28 Feb 2026)"
+    event: "Geopolitical developments had a positive impact on 9M2026 results through improved freight rates and vessel utilization; long-term impact to be assessed. VLCC fleet operates in spot market."
+    financial_effect: "9M2026 revenue SAR 26,096m vs 7,084m; oil segment revenue 21,795m vs 3,704m; 9M net profit attributable 9,982m vs 1,454m"
+    source: "4030_BAHRI/2026_Q3_filed2026-11-03.pdf"
+    page: 11
+    quote: "These developments have a positive impact on Group's interim condensed consolidated financial statements for the period ended 30 September 2026"
+  - date: "2026 9M"
+    event: "Certain vessel components damaged as a result of regional geopolitical developments; vessels fully insured; insurance claims in process"
+    financial_effect: "Loss SAR 119m on derecognition of components; insurance recovery pending"
+    source: "4030_BAHRI/2026_Q3_filed2026-11-03.pdf"
+    page: 18
+    quote: "The affected vessels are fully insured, and the Group is in the process of recovering the related insurance claims."
+  - date: "2026-09-30"
+    event: "Due from related parties rose to SAR 11,518,944k (31 Dec 2025: 992,683k); trade receivables and contract assets 13,825,209k; trade and other payables 7,749,990k"
+    financial_effect: "Working capital build: receivable from ARAMCO and subsidiaries SAR 11,489,238k (31 Dec 2025: 976,608k)"
+    source: "4030_BAHRI/2026_Q3_filed2026-11-03.pdf"
+    page: 20
+    quote: "Due from related parties* (note 17) 11,518,944 992,683"
+  - date: "9M2026"
+    event: "Revenue from ARAMCO and its subsidiaries (shareholder) SAR 20,925,016k in 9M2026 vs 3,416,377k in 9M2025 (80% of 9M2026 group revenue)"
+    financial_effect: "Customer concentration; drives oil segment revenue surge"
+    source: "4030_BAHRI/2026_Q3_filed2026-11-03.pdf"
+    page: 25
+    quote: "ARAMCO and its subsidiaries - shareholder Revenue 20,925,016 3,416,377"
+  - date: "2026 Q1"
+    event: "Q1 2026 interim: developments had a positive impact on Q1 results; no material impact on accounting judgements"
+    financial_effect: "Positive"
+    source: "4030_BAHRI/2026_Q1_filed2026-05-06.pdf"
+    page: 11
+    quote: "These developments have a positive impact on Group's financial statements for the period ended 31 March 2026"
+  - date: "2026-03-10"
+    event: "FY2025 AFS approved 10 Mar 2026: no disclosure of the regional conflict found in subsequent-events note (only dividend recommendation)"
+    financial_effect: "None disclosed"
+    source: "4030_BAHRI/2025_Annual_filed2026-03-17.pdf"
+    page: 51
+    quote: "Other than mentioned above, no events have occurred subsequent to the reporting date"
+  - date: "2025-06-29"
+    event: "Bonus shares 1 for 4: capital SAR 7,382.8m -> 9,228.5m (transfer from retained earnings); shares 738.2m -> 922.9m"
+    financial_effect: "No change in equity"
+    source: "4030_BAHRI/2025_Annual_filed2026-03-17.pdf"
+    page: 37
+    quote: "to increase the share capital from SAR 7,382,812 thousand to SAR 9,228,515 thousand by granting one bonus share for every four shares owned."
+  - date: "2024-07 / 2025-07 / 2026-06 / 2026-09"
+    event: "Dividends: FY2023 SAR 0.55/sh (406m, paid Jul 2024); FY2024 SAR 1/sh (738m, paid Jul 2025); FY2025 SAR 1/sh (923m, paid Jun 2026); H1 2026 interim special SAR 1.5/sh (1,384.28m, paid 27 Sep 2026)"
+    financial_effect: "Cash dividends"
+    source: "4030_BAHRI/2026_Q3_filed2026-11-03.pdf"
+    page: 24
+    quote: "decided to distribute interim special cash dividends of SAR 1,384.28 million to the shareholders for the first half of the fiscal year 2026"
+  - date: "2026-10-22"
+    event: "Contract with IMI (related party) for construction and delivery of three VLCCs, approx. SAR 1.7bn (non-adjusting subsequent event)"
+    financial_effect: "Capital commitment"
+    source: "4030_BAHRI/2026_Q3_filed2026-11-03.pdf"
+    page: 26
+    quote: "the Group signed a contract with International Maritime Industries Company (IMI), a related party, for the construction and delivery of three VLCCs"
+  - date: "2022-07-05"
+    event: "SAR 3,900m Sukuk issued (SIBOR + margin), maturing 5 Jul 2029"
+    financial_effect: "Borrowings"
+    source: "4030_BAHRI/2026_Q3_filed2026-11-03.pdf"
+    page: 22
+    quote: "issuance and offering of a local Sukuk denominated in Saudi Riyal for public offering with nominal value amounting to SAR 3,900 million"
+
+audit_opinion:
+  - {period: "FY2022", opinion: "Unmodified; no EoM found", emphasis_of_matter: none, source: "4030_BAHRI/2022_Annual_filed2023-03-19.pdf", page: 3}
+  - {period: "FY2023", opinion: "Unmodified; no EoM found", emphasis_of_matter: none, source: "4030_BAHRI/2023_Annual_filed2024-03-21.pdf", page: 3}
+  - {period: "FY2024", opinion: "Unmodified; Other Matter: FY2023 audited by another auditor", emphasis_of_matter: none, source: "4030_BAHRI/2024_Annual_filed2025-03-26.pdf", page: 3}
+  - {period: "FY2025", opinion: "Unmodified; no EoM found", emphasis_of_matter: none, source: "4030_BAHRI/2025_Annual_filed2026-03-17.pdf", page: 3}
+  - {period: "9M2026", opinion: "Review conclusion unmodified (EY, 3 Nov 2026); no EoM (viewed scanned page)", emphasis_of_matter: none, source: "4030_BAHRI/2026_Q3_filed2026-11-03.pdf", page: 3}
+
+kpis_in_filings:
+  - {period: "31 Dec 2022", kpi: "Owned vessels (plus 6 under lease)", value: 92, unit: "count", source: "4030_BAHRI/2022_Annual_filed2023-03-19.pdf", page: 13}
+  - {period: "31 Dec 2023", kpi: "Owned vessels (plus 10 under lease)", value: 88, unit: "count", source: "4030_BAHRI/2023_Annual_filed2024-03-21.pdf", page: 13}
+  - {period: "31 Dec 2024", kpi: "Owned vessels (plus 16 under lease); oil sector 41 VLCCs", value: 93, unit: "count", source: "4030_BAHRI/2024_Annual_filed2025-03-26.pdf", page: 14}
+  - {period: "31 Dec 2025", kpi: "Owned vessels (plus 9 under lease); oil 50 VLCCs, chemicals 33 owned + 9 leased, logistics 6 RoCon + 2 MPP, dry bulk 13", value: 104, unit: "count", source: "4030_BAHRI/2025_Annual_filed2026-03-17.pdf", page: 14}
+  - {period: "30 Sep 2026", kpi: "Owned vessels (plus 2 under lease); oil 49 VLCCs (all spot), chemicals 37 owned + 2 leased (32 spot, 7 chartered), logistics 6 RoCon + 2 MPP, dry bulk 13 (5 chartered to ARASCO, 8 spot)", value: 107, unit: "count", source: "4030_BAHRI/2026_Q3_filed2026-11-03.pdf", page: 10}
+
+special_extractions:
+  - name: "Bahri 2026_Q3 P&L (scanned page viewed)"
+    unit: "SAR '000"
+    source: "4030_BAHRI/2026_Q3_filed2026-11-03.pdf"
+    page: 5
+    columns: ["Q3 2026", "Q3 2025", "9M2026", "9M2025"]
+    revenue: [14826781, 2455797, 26096392, 7083753]
+    operating_costs: [-9659378, -1839816, -15966740, -5281929]
+    bunker_subsidy: [48829, 80981, 189879, 238887]
+    gross_profit: [5216232, 696962, 10319531, 2040711]
+    operating_profit: [5025532, 599952, 10000755, 1664789]
+    share_of_equity_accounted_investees: [396317, 156608, 792493, 440931]
+    profit_before_zakat_and_tax: [5307566, 589205, 10423624, 1623728]
+    profit_for_period: [5165633, 552906, 10228252, 1544531]
+    attributable_to_parent: [5085631, 513362, 9981653, 1453630]
+    eps_SAR: [5.51, 0.56, 10.82, 1.58]
+  - name: "Bahri 2026_Q3 balance sheet (scanned page viewed)"
+    unit: "SAR '000"
+    source: "4030_BAHRI/2026_Q3_filed2026-11-03.pdf"
+    page: 4
+    total_assets: {"30 Sep 2026": 43382482, "31 Dec 2025": 30983743}
+    total_equity: {"30 Sep 2026": 23796269, "31 Dec 2025": 16237795}
+    equity_attributable_to_parent: {"30 Sep 2026": 22704138, "31 Dec 2025": 15269259}
+
+open_questions:
+  - "Annual primary statements (scanned) were not transcribed; annual revenue/PBT/attributable profit are from segment and EPS notes."
+  - "National Grain Company disposal: consideration and gain/loss not disclosed in 2026_Q3 notes."
+  - "Line in which the SAR 119m vessel-component derecognition loss sits is not named; insurance recovery amount not yet recognised/quantified."
+  - "Related-party receivable of SAR 11.5bn (Aramco) at 30 Sep 2026: note 17 states balances are unsecured, interest-free and repayable on demand; no explanation of collection timing."
