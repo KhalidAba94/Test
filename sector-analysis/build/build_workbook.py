@@ -143,14 +143,16 @@ def build_data(wb, facts):
 def company_rows(sector):
     if sector == "Energy":
         rows = [("REV", "Revenue", "val"), ("REV", "  growth YoY", "growth"), ("OIRS", "Other income related to sales*", "val"),
-                ("REV_OIRS", "Revenue incl. other income related to sales*", "val"), ("GP", "Gross profit", "val"),
-                ("OPINC", "Operating income", "val"), ("EBITDA_C", "EBITDA (calculated)", "val"),
+                ("REV_M", "Revenue incl. other income related to sales (margin base)*", "val"), ("GP", "Gross profit", "val"),
+                ("OPINC", "Operating income (calculated, one definition)", "val"), ("EBITDA_C", "EBITDA (calculated)", "val"),
+                ("EBITDA_U", "EBITDA excl. identified one-offs", "val"),
                 ("NI_ATTR", "Net profit attributable to shareholders", "val"), ("NI_ATTR", "  growth YoY", "growth"),
                 ("CFO", "Operating cash flow", "val"), ("CAPEX", "Capex", "val"), ("FCF", "Free cash flow (C)", "val"),
                 ("TA", "Total assets (period-end)", "val"), ("EQ_ATTR", "Equity attributable (period-end)", "val")]
-        ratios = [("EBITDA margin", "EBITDA_C", "REV", False), ("Operating margin", "OPINC", "REV", False),
-                  ("Net margin", "NI_ATTR", "REV", False), ("ROE (YTD annualised)", "NI_ATTR", "EQ_ATTR", True),
-                  ("Capex / revenue", "CAPEX", "REV", False)]
+        ratios = [("EBITDA margin", "EBITDA_C", "REV_M", False), ("EBITDA margin excl. one-offs", "EBITDA_U", "REV_M", False),
+                  ("Operating margin", "OPINC", "REV_M", False),
+                  ("Net margin", "NI_ATTR", "REV_M", False), ("ROE (YTD annualised)", "NI_ATTR", "EQ_ATTR", True),
+                  ("Capex / revenue", "CAPEX", "REV_M", False)]
     else:
         rows = [("TOI", "Total operating income (TOI)", "val"), ("TOI", "  growth YoY", "growth"),
                 ("NSCI", "Net special commission / financing income", "val"), ("FEES_NET", "Net fee & commission income", "val"),
@@ -195,7 +197,7 @@ def build_company(wb, sector, t, cfg, ds, narr, adj_rows, facts_idx, sheetname, 
     rowmap = {}
     for code, label, kind in rows:
         has = any((t, p, code) in facts_idx for p in PCOL)
-        if not has and code in ("OIRS", "REV_OIRS", "GP", "T1_COST", "T1_SUKUK"):
+        if not has and code in ("OIRS", "REV_M", "GP", "T1_COST", "T1_SUKUK"):
             continue
         ws.cell(row=r, column=1, value=label).font = f(kind == "val" and not label.startswith("  "), size=9)
         if kind == "val":
@@ -277,7 +279,7 @@ def build_company(wb, sector, t, cfg, ds, narr, adj_rows, facts_idx, sheetname, 
             if p.startswith("9M"):
                 ws[f"{col}{r}"].fill = YTD_FILL
         r += 1
-    ws.cell(row=r, column=1, value="* Aramco only: other income related to sales is government compensation for regulated domestic prices; sector revenue uses IFRS revenue only.").font = f(italic=True, color=GREY, size=8)
+    ws.cell(row=r, column=1, value="* Other income related to sales (Aramco only) is government compensation for regulated domestic prices. It is inside operating income, EBITDA and profit, so margins use revenue plus this income; revenue growth and sector totals use IFRS revenue." if sector == "Energy" else "").font = f(italic=True, color=GREY, size=8)
     r += 2
 
     # ---------------- B. growth bridge
@@ -418,7 +420,7 @@ def build_sector(wb, sector, cfg, ds, narr, comp_sheets):
         for part in (spec[0], spec[1].replace("avg:", "")):
             for m in part.split("-"):
                 needed.add(m)
-    needed |= {"EBITDA_C", "OPINC", "CAPEX", "FCF"} if sector == "Energy" else {"NSCI", "FEES_NET", "OPEX_PRE", "IMPAIR_TOTAL", "PPOP"}
+    needed |= {"EBITDA_C", "EBITDA_U", "OPINC", "CAPEX", "FCF", "REV_M"} if sector == "Energy" else {"NSCI", "FEES_NET", "OPEX_PRE", "IMPAIR_TOTAL", "PPOP"}
     needed = [m for m in needed if m]
     base = 200
     mat = {}
@@ -521,6 +523,9 @@ def build_sector(wb, sector, cfg, ds, narr, comp_sheets):
                     den, ann = f"SUMPRODUCT({mk},{rng(dm, p)})", ""
                 ws[f"{col}{r}"] = f'=IFERROR(({num}){ann}/({den}),"")'
                 ws[f"{col}{r}"].number_format = PCT
+                rinfo = ds["sector"]["ratios_all" if not excl else "ratios_ex_largest"][rk][p]
+                if rinfo["excluded"]:
+                    ws[f"{col}{r}"].comment = Comment(f'{rinfo["n"]} companies; excluded for missing inputs: ' + ", ".join(ds["companies"][x]["name"] for x in rinfo["excluded"] if x in ds["companies"]), "analysis")
                 if p.startswith("9M"):
                     ws[f"{col}{r}"].fill = YTD_FILL
             r += 1

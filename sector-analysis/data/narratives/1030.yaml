@@ -1,0 +1,58 @@
+ticker: "1030"
+headline: >-
+  SAIB grew attributable profit at a 17.3% annual rate from FY2022 to FY2025 on fast balance-sheet growth (loans +17.6% a year) and
+  flat costs, but its margin on assets fell from 2.86% in FY2023 to 2.14% in FY2025 and 1.99% (annualised) in 9M 2026; FY2025 growth
+  also relied on SAR 536m of unexplained 'other income' that did not recur, and 9M 2026 profit rose only 1.5%.
+lfl_basis:
+  definition_used: >-
+    Standard bridge on total operating income. Banks have no discrete 'capacity' additions, so like-for-like equals organic growth.
+    No acquisitions, disposals of subsidiaries or discontinued operations affected TOI. The pending sale of the 50% associate American
+    Express Saudi Arabia (Sep 2026) is below TOI, and the newly consolidated ICAP fund 63 is a newly established fund, not an acquired
+    business. Organic growth equals reported growth, except that FY2025 includes a SAR 536.1m 'other income' item whose nature is not
+    disclosed, so organic growth for FY2025 vs FY2024 is not determinable.
+  perimeter_changes:
+    - {event: "Binding agreement to sell the 50% associate American Express Saudi Arabia for SAR 1,430.1m plus deferred consideration; held for sale (SAR 691.8m), equity accounting stopped", date: "2026-09-02", effect: "Associate below TOI; no TOI effect; share of associates SAR 75.2m in 9M 2026 vs SAR 94.3m", source: "1030_SAIB/2026_Q3_filed2026-11-01.pdf p.47"}
+    - {event: "ICAP fund 63 (100%) newly established and consolidated; ICAP fund RE 4 ownership reduced to 86.8% (still consolidated)", date: "2026", effect: "Newly established fund, not an acquisition; no amounts disclosed; not adjusted", source: "1030_SAIB/2026_Q3_filed2026-11-01.pdf p.12"}
+  capacity_changes: []
+  fx_exposure: "Domestic, riyal-based business; no FX translation effect is identified."
+  price_volume_support: >-
+    Net special commission income can be split into volume (growth in average total assets) and margin (income ÷ average total
+    assets) using the balance sheets. The bank's own margin disclosures are not used because definitions differ between banks.
+  confidence: "Medium"
+price_volume:
+  - {period: "FY2023 vs FY2022", text: "We calculate that net special commission income rose SAR 572m: volume +SAR 383m (+11.7 pp of prior TOI; average assets +13.5%) and margin +SAR 189m (+5.8 pp; 2.70% to 2.86%).", basis: "calculated", confidence: "High", source: "facts NSCI, TA", refs: ["1030-FY2023-NSCI", "1030-FY2023-TA", "1030-FY2022-TA"]}
+  - {period: "FY2025 vs FY2024", text: "We calculate that net special commission income fell SAR 9m: volume added SAR 528m (+12.6 pp of prior TOI; average assets +14.9%) but the margin fell from 2.46% to 2.14% (rate −SAR 537m, −12.8 pp).", basis: "calculated", confidence: "High", source: "facts NSCI, TA", refs: ["1030-FY2025-NSCI", "1030-FY2025-TA", "1030-FY2024-TA"]}
+  - {period: "9M 2026 vs 9M 2025", text: "We calculate that net special commission income rose SAR 52m: volume +SAR 245m (+7.7 pp of prior TOI; average assets +9.2%) largely offset by margin −SAR 193m (−6.1 pp; annualised 2.13% to 1.99%).", basis: "calculated", confidence: "High", source: "facts NSCI, TA", refs: ["1030-9M2026-NSCI", "1030-9M2026-TA", "1030-9M2025-NSCI"]}
+profit_and_margin:
+  drivers:
+    - {period: "FY2023", driver: "TOI +21.0% and attributable profit +16.8%: net special commission income +20.1% (margin 2.86%), other income +79.7%; costs +14.6% (cost-to-income 41.8%). Provisions for credit and other losses +87.2% (cost of risk 0.30% to 0.48%).", source: "facts", refs: ["1030-FY2023-TOI", "1030-FY2023-NI_ATTR", "1030-FY2023-IMPAIR_FIN"]}
+    - {period: "FY2024", driver: "TOI +5.3% and profit +11.1%: net special commission income +3.5% as the margin fell to 2.46%; net fees +13.4%; costs +4.7% (cost-to-income 41.5%); provisions −19.2% (cost of risk 0.32%).", source: "facts", refs: ["1030-FY2024-TOI", "1030-FY2024-NI_ATTR", "1030-FY2024-NSCI"]}
+    - {period: "FY2025", driver: "TOI +14.7% and profit +24.3%: net special commission income −0.3% (margin 2.14%), but the line 'Other income' was SAR 536.1m vs SAR 0.1m in FY2024 (12.8 pp of prior TOI), which the filing does not explain. Costs −0.6%, so cost-to-income fell to 35.9%. Provisions +22.4% (cost of risk 0.34%), after SAR 151m of recoveries of written-off loans.", source: "1030_SAIB/2025_Annual_filed2026-02-08.pdf p.10, p.64; 1030_SAIB/2026_Q3_filed2026-11-01.pdf p.21", refs: ["1030-FY2025-TOI", "1030-FY2025-OTHER_OI", "1030-FY2025-NI_ATTR"]}
+    - {period: "9M2026", driver: "TOI +1.4% and profit +1.5%: net special commission income +2.0% as the margin fell to 1.99% (annualised); net fees +6.2%; other income back to SAR 2.3m. Costs +0.2% (cost-to-income 40.3%). Impairment −2.3% (cost of risk 0.21% vs 0.24%, annualised), with recoveries of SAR 170m vs SAR 120m and undisclosed ECL overlays. Share of associates fell to SAR 75.2m from SAR 94.3m. ROE on ordinary equity 10.6% vs 11.2%.", source: "1030_SAIB/2026_Q3_filed2026-11-01.pdf p.4, p.21, p.45", refs: ["1030-9M2026-TOI", "1030-9M2026-NI_ATTR", "1030-9M2026-IMPAIR_FIN"]}
+  one_offs:
+    - {item: "Unexplained 'Other income' arising in Q4 2025 (9M 2025: SAR 0.9m; 9M 2026: SAR 2.3m). The filing neither explains it nor labels it non-recurring; listed here because of its size and non-recurrence, not as a confirmed one-off", period: "FY2025", amount_sar_m: 536.1, line: "Other income", source: "1030_SAIB/2025_Annual_filed2026-02-08.pdf p.10"}
+    - {item: "Provisions for real estate and other losses (within the provisions line)", period: "FY2022", amount_sar_m: 25.8, line: "Provisions for credit and other losses", source: "1030_SAIB/2022_Annual_filed2023-03-05.pdf p.107"}
+    - {item: "Recoveries of previously written-off loans, credited within the loan ECL charge (FY2025 SAR 151m; 9M 2025 SAR 120m)", period: "9M2026", amount_sar_m: 170.0, line: "Impairment charge for credit and other losses", source: "1030_SAIB/2026_Q3_filed2026-11-01.pdf p.21"}
+    - {item: "ZATCA settlement of zakat for 2006-2017 (SAR 775.5m, charged in 2018 and paid in instalments to Dec 2023): no P&L effect in FY2022-9M2026", period: "2018-2023", amount_sar_m: null, line: "Provisions for zakat (2018)", source: "1030_SAIB/2024_Annual_filed2025-02-04.pdf p.68"}
+    - {item: "No underlying profit is shown: the main candidate item (FY2025 other income) is not identified by the filing", period: "FY2022-9M2026", amount_sar_m: null, line: "n/a", source: "1030_SAIB/2025_Annual_filed2026-02-08.pdf p.10"}
+developments:
+  - {date: "2022-06 / 2023-02", category: "financing", text: "Issued Tier I sukuk of SAR 2bn (Jun 2022) and SAR 500m (Feb 2023) while redeeming older tranches (SAR 285m in 2022, SAR 1bn in 2023, SAR 215m in 2024).", source: "1030_SAIB/2023_Annual_filed2024-02-12.pdf p.13-14; 1030_SAIB/2025_Annual_filed2026-02-08.pdf p.13"}
+  - {date: "2024-11-28", category: "financing", text: "Issued a USD-denominated Additional Tier 1 sustainable sukuk (SAR 2.81bn); Tier I sukuk SAR 5.3bn at end-2024 and end-2025.", source: "1030_SAIB/2025_Annual_filed2026-02-08.pdf p.104"}
+  - {date: "2025", category: "financing", text: "First term loans on the balance sheet (SAR 2.79bn at end-2025; SAR 3.36bn at 30 Sep 2026).", source: "1030_SAIB/2026_Q3_filed2026-11-01.pdf p.3"}
+  - {date: "2026-05-03", category: "financing", text: "Issued SAR 1.85bn Tier I sukuk (total SAR 7.2bn); Tier 1 ratio 18.74% at 30 Sep 2026.", source: "1030_SAIB/2026_Q3_filed2026-11-01.pdf p.42, p.41"}
+  - {date: "2026-09-02", category: "M&A", text: "Signed a binding agreement to sell its 50% stake in American Express Saudi Arabia for SAR 1,430.1m plus deferred consideration, after a contractual put option was exercised; completion pending.", source: "1030_SAIB/2026_Q3_filed2026-11-01.pdf p.47"}
+  - {date: "2026-01 to 2026-09", category: "financing", text: "Customer deposits rose to SAR 120.8bn from SAR 109.6bn; loan-to-deposit 98.6% at 30 Sep 2026.", source: "1030_SAIB/2026_Q3_filed2026-11-01.pdf p.3"}
+  - {date: "2026-02-28 onward", category: "event", text: "The bank reports stress tests, granular exposure reviews and rating actions in response to the regional situation, and states that ECL overlays were recorded because the effects cannot be fully captured by the models (amount not disclosed). It states that after 30 Sep 2026 the situation in the Kingdom escalated significantly, with the financial impact uncertain.", source: "1030_SAIB/2026_Q3_filed2026-11-01.pdf p.45"}
+  - {date: "2026-10-01", category: "financing", text: "EGM approved a 1-for-5 bonus issue capitalising SAR 1.5bn of statutory reserve and SAR 1bn of retained earnings (subsequent event; no change in equity).", source: "1030_SAIB/2026_Q3_filed2026-11-01.pdf p.45"}
+what_it_means:
+  improved: "Scale and cost control: loans grew 17.6% a year in FY2022-FY2025 while pre-impairment costs grew 6.0% a year, so cost-to-income fell from 44.1% to 35.9% (40.3% in 9M 2026, a period without the large other-income item)."
+  weakened: "Margin: net special commission income ÷ average assets fell from 2.86% (FY2023) to 2.14% (FY2025) and 1.99% annualised in 9M 2026, so net special commission income fell 0.3% in FY2025 and rose only 2.0% in 9M 2026 while total assets grew 8.5% year on year."
+  why: "The lower margin offset balance-sheet growth almost one for one (FY2025: volume +12.6 pp, margin −12.8 pp of prior TOI). FY2025 profit growth of 24.3% depended on SAR 536m of other income that the filing does not explain and that did not recur in 9M 2026."
+  uncertain: "The nature of the FY2025 other income; the size of the ECL overlays recorded in 2026 (not disclosed) as the post-30 September escalation unfolds; and the outcome of the pending American Express Saudi Arabia sale."
+confidence_overall: "Medium"
+data_notes:
+  - "9M 2025 restatement of 31 Dec 2024 (+SAR 402.7m to investments and other reserves): an IAS 8 correction. An FVOCI equity investment historically valued at cost was remeasured to fair value; +361.7m relates to opening 1 Jan 2024 reserves and +41.0m to 2024 OCI. Profit was not affected. The note does not name the investee (SIMAH is listed among SAIB's strategic equity holdings). FY2023 equity is kept as reported, so FY2024 average equity mixes bases; restating the opening would lower FY2024 ROE by 0.14 pp. Source: 1030_SAIB/2025_Q3_filed2025-10-30.pdf p.38; 2025_Annual p.13, p.106."
+  - "Tier 1 overrides: T1_COST for FY2022-9M2026 from the statement of changes in equity (image pages read visually). Amounts are uneven between quarters (Q4 2025 = FY2025 334.7m less 9M 2025 184.7m = SAR 150.1m). Facts T1_SUKUK match the filings at every date, and EQ_ATTR ('equity attributable to bank's equity holders') includes the sukuk, so no T1_SUKUK or EQ_ATTR override was needed."
+  - "IMPAIR_FIN override: the XBRL-derived value was 0.0 in every period. Replaced with the P&L line 'Provisions for credit and other losses' (FY2025 SAR 354.9m; 9M 2026 SAR 182.0m), the caption config/mapping_banks.json maps to IMPAIR_FIN and the same basis as other banks. It includes non-loan items (loans-only FY2025 SAR 379.3m; FY2022 includes SAR 25.8m of real-estate provisions). Interim filings do not split the line."
+  - "FY2025 'Other income' of SAR 536.1m is unexplained in the AFS; the adjustments register marks FY2025 organic growth 'not determinable'."
+  - "Primary statements in all focus PDFs are image pages; figures were read visually and checked against the XBRL where available."

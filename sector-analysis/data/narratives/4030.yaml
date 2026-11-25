@@ -1,0 +1,87 @@
+ticker: "4030"
+headline: >-
+  Revenue grew every year from SAR 8,583m (FY2022) to SAR 10,347m (FY2025) and attributable profit more than doubled to SAR 2,431m
+  as the fleet was renewed and enlarged; in 9M 2026 revenue rose 268.4% to SAR 26,096m and attributable profit 586.7% to SAR 9,982m,
+  with crude oil transportation providing 95% of the revenue increase during the regional conflict.
+lfl_basis:
+  definition_used: >-
+    Standard bridge on IFRS revenue (the government bunker subsidy, shown below gross profit, is excluded). Bahri made no acquisitions
+    or disposals of consolidated businesses from FY2022 to 9M 2026: new subsidiaries were start-ups and the National Grain Company stake
+    sold in 2026 was equity-accounted, so perimeter effects are nil and organic growth equals reported growth. New capacity = revenue of
+    vessels and desalination stations added after the start of the prior period. Only the desalination stations' revenue is disclosed
+    (SAR 42.2m in FY2024, SAR 94.7m in FY2025); the revenue of newly received vessels (9, 5, 11 and 12 in 2022-2025) is not, so
+    like-for-like growth is not determinable and organic growth is the closest available measure.
+  perimeter_changes:
+    - {event: "No business combinations; start-up subsidiaries incorporated (Bahri Logistics DWC-LLC and SILZ in 2024; Singapore, KSA and UAE ship-management companies in 2025; Bahri Ship Management Company in 2026)", date: "2024 to 2026", effect: "no acquired revenue", source: "4030_BAHRI/2025_Annual_filed2026-03-17.pdf p.13; 4030_BAHRI/2026_Q3_filed2026-11-03.pdf p.10"}
+    - {event: "Disposal of the 50% stake in National Grain Company (joint venture) to United Farmers Investment Company", date: "2026 (within 9M)", effect: "equity-accounted, so no revenue effect; consideration and gain or loss not disclosed", source: "4030_BAHRI/2026_Q3_filed2026-11-03.pdf p.10"}
+  capacity_changes:
+    - {event: "9 new vessels received (chemical tankers under the 10-tanker Hyundai Mipo order)", date: "2022", effect: "revenue not disclosed; owned chemical tankers 28 to 35", source: "4030_BAHRI/2022_Annual_filed2023-03-19.pdf p.28, p.13"}
+    - {event: "5 new vessels received", date: "2023", effect: "revenue not disclosed; owned fleet fell from 92 to 88 after vessel sales", source: "4030_BAHRI/2023_Annual_filed2024-03-21.pdf p.29, p.13"}
+    - {event: "First two of three floating desalination stations commissioned (Q2 and Q4 2024; third due in 2025)", date: "2024", effect: "desalination revenue SAR 42.2m in FY2024 and SAR 94.7m in FY2025 (nil in FY2023), disclosed", source: "4030_BAHRI/2024_Annual_filed2025-03-26.pdf p.33, p.41; 4030_BAHRI/2025_Annual_filed2026-03-17.pdf p.42"}
+    - {event: "11 vessels received, including 2 of 9 second-hand VLCCs bought from Capital Maritime for about SAR 3.75bn (agreement 19 Aug 2024)", date: "2024", effect: "revenue not disclosed; VLCC fleet 38 to 41", source: "4030_BAHRI/2024_Annual_filed2025-03-26.pdf p.31, p.33, p.14"}
+    - {event: "12 vessels received, including the remaining 7 second-hand VLCCs", date: "2025", effect: "revenue not disclosed; VLCC fleet 41 to 50, owned fleet 93 to 104", source: "4030_BAHRI/2025_Annual_filed2026-03-17.pdf p.31, p.33, p.14"}
+    - {event: "No vessel deliveries reported; projects of SAR 506.8m completed; owned fleet 107 and VLCC fleet 49 at 30 Sep 2026", date: "2026 (9M)", effect: "not determinable", source: "4030_BAHRI/2026_Q3_filed2026-11-03.pdf p.18, p.10"}
+  fx_exposure: "Shipping revenue is USD-based and the riyal is pegged; no FX translation effect identified."
+  price_volume_support: >-
+    Not determinable. The filings give revenue by segment and by contract type (spot, charter hire, time charter, freight forwarding,
+    desalination) but no freight rates, voyage days or utilisation, so rate and volume cannot be separated. Management attributes the
+    9M 2026 increase to improved freight rates and vessel utilisation.
+  confidence: "Medium (perimeter effect nil with High confidence; the new-vessel effect is not determinable)"
+price_volume:
+  - period: "9M 2026 vs 9M 2025"
+    text: >-
+      Revenue rose SAR 19,013m. Crude oil transportation (an all-spot VLCC fleet) added SAR 18,092m (+488.5%), chemicals SAR 270m
+      (+12.2%), logistics SAR 429m (+54.3%) and dry bulk SAR 138m (+45.8%). The VLCC fleet was 50 at end-2025 and 49 at 30 Sep 2026,
+      and the seven remaining second-hand VLCCs were due by the end of Q1 2025, so we infer that fleet size changed little between the two
+      nine-month periods and the oil increase reflects earnings per vessel. Management attributes it to improved freight rates and vessel
+      utilisation; the filings do not split rate from utilisation.
+    basis: "disclosed (segment revenue); rate/volume split not determinable"
+    confidence: "High for the segment amounts; the split is not determinable"
+    source: "4030_BAHRI/2026_Q3_filed2026-11-03.pdf p.11 (management statement), p.15-16 (segments), p.10 (fleet); 4030_BAHRI/2024_Annual_filed2025-03-26.pdf p.33"
+    refs: ["4030-9M2026-REV", "4030-9M2025-REV"]
+  - period: "FY2025 vs FY2024"
+    text: >-
+      Spot revenue rose 17.9% (SAR 6,582m to SAR 7,763m) and charter hire fell 22.2% (SAR 2,013m to SAR 1,567m). Oil transportation revenue
+      rose 27.3% while the VLCC fleet grew from 41 to 50; chemicals revenue fell 12.2%. Rates and days are not disclosed.
+    basis: "disclosed (revenue by contract type and segment); split not determinable"
+    confidence: "High for the amounts; the split is not determinable"
+    source: "4030_BAHRI/2025_Annual_filed2026-03-17.pdf p.42 (revenue by type), p.28-29 (segments), p.14 (fleet)"
+    refs: ["4030-FY2025-REV", "4030-FY2024-REV"]
+profit_and_margin:
+  drivers:
+    - {period: "FY2023", driver: "Revenue +2.3% but attributable profit +55.0%: chemicals revenue rose 32.3% (SAR 2,058m to SAR 2,723m) after nine chemical tankers were received in 2022, and chemicals segment profit before zakat more than doubled (SAR 385m to SAR 818m); oil revenue fell 6.3%. Gross profit before bunker subsidy rose 39.0%; the share of equity-accounted investees' results rose from SAR 59.6m to SAR 266m and gains on vessel sales were SAR 214m.", source: "4030_BAHRI/2024_Annual_filed2025-03-26.pdf p.29 (segments), p.9 (P&L); 4030_BAHRI/2023_Annual_filed2024-03-21.pdf p.8", refs: ["4030-FY2023-REV", "4030-FY2023-NI_ATTR", "4030-FY2023-GP"]}
+    - {period: "FY2024", driver: "Revenue +8.0% and attributable profit +34.5%: chemicals +19.4%, dry bulk +74.2%, logistics +12.5% and oil -4.0%; oil segment profit before zakat rose 34.0% (SAR 932m to SAR 1,249m). Share of equity-accounted results SAR 433m; gains on vessel sales SAR 216m. Net margin 22.9%.", source: "4030_BAHRI/2025_Annual_filed2026-03-17.pdf p.29 (segments), p.9 (P&L), p.42", refs: ["4030-FY2024-REV", "4030-FY2024-NI_ATTR"]}
+    - {period: "FY2025", driver: "Revenue +9.1% and attributable profit +12.1%: oil revenue rose 27.3% (SAR 4,604m to SAR 5,860m) while the VLCC fleet grew from 41 to 50, and oil segment profit rose 42.7%; chemicals revenue fell 12.2% and chemicals profit 41.4%. Gains on vessel sales fell to SAR 5.8m (FY2024: SAR 216m), finance cost rose to SAR 708m (SAR 622m) and G&A to SAR 452m (SAR 321m). Net margin 23.5%.", source: "4030_BAHRI/2025_Annual_filed2026-03-17.pdf p.28-29 (segments), p.9 (P&L), p.42", refs: ["4030-FY2025-REV", "4030-FY2025-NI_ATTR"]}
+    - {period: "9M2026", driver: "Revenue +268.4% and attributable profit +586.7%: gross profit before bunker subsidy rose to SAR 10,130m (SAR 1,802m), a margin of 38.8% vs 25.4% (we calculate); oil segment profit before zakat was SAR 8,548m (SAR 915m) and the share of equity-accounted results SAR 792m (SAR 441m). Zakat and tax rose to SAR 195m (SAR 79.2m). Net margin 38.2% (20.5%); annualised ROE 70.1%.", source: "4030_BAHRI/2026_Q3_filed2026-11-03.pdf p.5 (P&L), p.15-16 (segments)", refs: ["4030-9M2026-REV", "4030-9M2026-NI_ATTR", "4030-9M2026-GP"]}
+    - {period: "9M2026", driver: "Cash lagged profit: operating cash flow rose 82.9% (SAR 2,226m to SAR 4,073m) against net profit of SAR 10,228m, as amounts due from related parties rose to SAR 11,519m (end-2025: SAR 993m), of which SAR 11,489m from the Aramco group. The Aramco group provided SAR 20,925m, or 80%, of 9M 2026 revenue (48% in 9M 2025, we calculate).", source: "4030_BAHRI/2026_Q3_filed2026-11-03.pdf p.20 (balance sheet note), p.25 (related parties)", refs: ["4030-9M2026-CFO", "4030-9M2025-CFO", "4030-9M2026-NI"]}
+    - {period: "FY2022-FY2025", driver: "Capex rose from SAR 1,310m (FY2022) to SAR 5,479m in FY2024, the year of the second-hand VLCC purchases, and SAR 4,251m in FY2025, so free cash flow turned negative (-SAR 2,073m in FY2024 and -SAR 1,036m in FY2025) after SAR 1,913m in FY2023. In 9M 2026 capex fell to SAR 1,082m and free cash flow was SAR 2,991m.", source: "cash-flow statements (XBRL section 300700); 4030_BAHRI/2024_Annual_filed2025-03-26.pdf p.33", refs: ["4030-FY2024-CAPEX", "4030-FY2024-FCF", "4030-FY2025-FCF", "4030-9M2026-FCF"]}
+  one_offs:
+    - {item: "Gains on disposal of vessels and equipment (recur most years as the fleet is renewed; listed for transparency, not removed from profit)", period: "FY2022", amount_sar_m: 159.8, line: "Other income (inside operating profit)", source: "4030_BAHRI/2022_Annual_filed2023-03-19.pdf p.38"}
+    - {item: "Gains on disposal of vessels and equipment", period: "FY2023", amount_sar_m: 214.1, line: "Other income (inside operating profit)", source: "4030_BAHRI/2024_Annual_filed2025-03-26.pdf p.31"}
+    - {item: "Gains on disposal of vessels and equipment", period: "FY2024", amount_sar_m: 215.9, line: "Other income (inside operating profit)", source: "4030_BAHRI/2025_Annual_filed2026-03-17.pdf p.42"}
+    - {item: "Recovered claims (FY2024: SAR 15.3m)", period: "FY2025", amount_sar_m: 67.4, line: "Other income (inside operating profit)", source: "4030_BAHRI/2025_Annual_filed2026-03-17.pdf p.42"}
+    - {item: "Gain on disposal of assets with a net book value of SAR 153.7m", period: "9M2026", amount_sar_m: 115.8, line: "Other (expense)/income, net", source: "4030_BAHRI/2026_Q3_filed2026-11-03.pdf p.18"}
+    - {item: "Loss on derecognition of vessel components damaged by the regional geopolitical developments; vessels fully insured and insurance claims in process (no recovery recognised yet)", period: "9M2026", amount_sar_m: -119.0, line: "not named in the note (we assume other (expense)/income, net)", source: "4030_BAHRI/2026_Q3_filed2026-11-03.pdf p.18"}
+developments:
+  - {date: "2022-07", category: "financing", text: "Issued a SAR 3,900m local sukuk maturing on 5 Jul 2029.", source: "4030_BAHRI/2026_Q3_filed2026-11-03.pdf p.22"}
+  - {date: "2022", category: "capacity", text: "Received 9 of 10 chemical tankers ordered from Hyundai Mipo (SAR 1,538m order); owned fleet 92 vessels plus 6 leased at end-2022.", source: "4030_BAHRI/2022_Annual_filed2023-03-19.pdf p.28, p.13"}
+  - {date: "2024-08-19", category: "capacity", text: "Agreed to buy nine second-hand VLCCs from Capital Maritime for about SAR 3.75bn; two were delivered in 2024 and the rest in 2025, taking the VLCC fleet from 41 to 50.", source: "4030_BAHRI/2024_Annual_filed2025-03-26.pdf p.33; 4030_BAHRI/2025_Annual_filed2026-03-17.pdf p.33, p.14"}
+  - {date: "2024", category: "capacity", text: "Two floating water-desalination stations (SAR 760m project for Saline Water Conversion Corporation) started operations in Q2 and Q4 2024; the company reports desalination revenue of SAR 42.2m in FY2024 and SAR 94.7m in FY2025.", source: "4030_BAHRI/2024_Annual_filed2025-03-26.pdf p.33, p.41; 4030_BAHRI/2025_Annual_filed2026-03-17.pdf p.42"}
+  - {date: "2025-06-29", category: "financing", text: "One bonus share for every four held; share capital raised from SAR 7,383m to SAR 9,229m out of retained earnings.", source: "4030_BAHRI/2025_Annual_filed2026-03-17.pdf p.37"}
+  - {date: "2026-03 onward", category: "event", text: "The company reports that regional geopolitical developments had a positive impact on its Q1 and 9M 2026 results through improved freight rates and vessel utilisation, while the long-term impact is still being assessed. After 30 Jun 2026 two vessels were involved in minor incidents in the Strait of Hormuz and the Red Sea; damaged vessel components led to a SAR 119m loss, with insurance claims in process.", source: "4030_BAHRI/2026_Q1_filed2026-05-06.pdf p.11; 4030_BAHRI/2026_Q2_filed2026-07-30.pdf p.26; 4030_BAHRI/2026_Q3_filed2026-11-03.pdf p.11, p.18"}
+  - {date: "2026 (9M)", category: "M&A", text: "Sold its 50% stake in National Grain Company to its joint-venture partner United Farmers Investment Company; consideration not disclosed.", source: "4030_BAHRI/2026_Q3_filed2026-11-03.pdf p.10"}
+  - {date: "2026-09-27", category: "financing", text: "Paid a special interim dividend of SAR 1,384.3m for H1 2026 (FY2025 dividend SAR 923m paid in June 2026).", source: "4030_BAHRI/2026_Q3_filed2026-11-03.pdf p.24"}
+  - {date: "2026-10-22", category: "capacity", text: "Signed with International Maritime Industries (a related party) for three new VLCCs at about SAR 1.7bn (after the period end).", source: "4030_BAHRI/2026_Q3_filed2026-11-03.pdf p.26"}
+what_it_means:
+  improved: "Revenue rose every year from FY2022 to FY2025 (6.4% a year) and attributable profit faster (32.7% a year), lifting the net margin from 12.1% to 23.5%; in 9M 2026 revenue rose 268.4% and attributable profit 586.7%."
+  weakened: "Free cash flow turned negative in FY2024 and FY2025 (-SAR 2,073m and -SAR 1,036m) as capex peaked at SAR 5,479m, and in 9M 2026 operating cash flow (+82.9%) lagged profit as amounts due from related parties rose to SAR 11,519m."
+  why: "Crude oil transportation produced SAR 18,092m of the SAR 19,013m rise in 9M 2026 revenue, which management attributes to higher freight rates and vessel utilisation during the regional conflict; earlier growth came alongside fleet additions (VLCCs rose from 38 to 50 between end-2023 and end-2025) and stronger chemical tanker earnings in FY2023-FY2024."
+  uncertain: "The filings do not show how much growth came from new vessels rather than rates, and 80% of 9M 2026 revenue came from the Aramco group at conflict-period spot rates, with SAR 11,489m still owed by that group at 30 Sep 2026."
+confidence_overall: "Medium"
+data_notes:
+  - "Operating income (OPINC) is calculated as PBT + finance cost - finance income - share of equity-accounted results, which equals the 'Operating profit' line in the audited and reviewed statements (e.g. FY2025 SAR 2,725.5m, p.9; 9M 2026 SAR 10,000.8m, p.5). The XBRL 'Operating profit' tag kept as OPINC_REP excludes 'Other income' (FY2025 SAR 107.4m; FY2023 SAR 340.3m) and should not be used as the reported figure."
+  - "Gross profit (GP) is 'gross profit before bunker subsidy'. The unconditional government bunker subsidy (FY2025 SAR 301.1m; 9M 2026 SAR 189.9m vs SAR 238.9m) is added below it and is not in revenue."
+  - "9M 2025 comparatives were reclassified in the 9M 2026 interim (SAR 112.3m moved out of operating costs; G&A, a new marketing line and other income changed); no effect on net profit. GP 9M 2025 is therefore SAR 1,801.8m (R) vs SAR 1,689.5m first reported."
+  - "FY2022 operating cash flow uses the FY2023 AFS comparative (SAR 1,989.5m, override 4030_fix.csv); FY2023 CFO is the FY2024 AFS comparative (SAR 3,560.6m vs SAR 3,642.9m first reported). Capex = additions to PP&E, projects under construction and intangibles."
+  - "The dataset shows FCF growth FY2024/FY2023 as -207.5%; the sign changes (positive to negative), so under METHODOLOGY s.1 it should read n.m. (calc.growth only treats a non-positive prior value as n.m.)."
+  - "Primary statements in the PDFs are scanned images; the P&L pages used here were checked visually. Non-controlling interests (NCC 80%, BDB 60%) explain the gap between net profit and attributable profit (9M 2026 SAR 246.6m)."

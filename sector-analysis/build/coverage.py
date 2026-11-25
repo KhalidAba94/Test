@@ -30,10 +30,11 @@ for sector in ("Energy", "Banks"):
             pdf, xls = d.get("pdf"), d.get("xls")
             have = []
             if pdf:
-                have.append("PDF" + ("(scanned)" if "scanned" in pdf.get("status_reason", "") else ""))
+                have.append("PDF" + ("(statements scanned)" if "where the primary statements" in pdf.get("status_reason", "") or pdf.get("status_reason", "").startswith("scanned") else ""))
             if xls:
                 have.append("XBRL" if xls.get("status") == "used" else "XBRL(unreadable)")
-            fx = fidx.get((t, per, top))
+            metric = "NI_ATTR" if t in ("2030",) else top   # investment holding: no revenue line
+            fx = fidx.get((t, per, metric))
             if fx:
                 used = fx["source_id"].split("/")[-1].split("_filed")[0].replace("_", " ")
                 prov = {"D": "", "R": " [restated]", "C": " [calc]"}.get(fx["provenance"], "")
@@ -42,7 +43,7 @@ for sector in ("Energy", "Banks"):
                     cell += " [from PDF]"
             else:
                 cell = ("MISSING: " + ("+".join(have) if have else "no filing in archive"))
-                flags.append(f"{per}: {top} not available")
+                flags.append(f"{per}: {metric} not available")
             if per.startswith("9M") and l == "Q3" and not d:
                 cell = "MISSING: no Q3 filing in archive"
             row[per] = cell
@@ -55,6 +56,10 @@ for sector in ("Energy", "Banks"):
         unread = [r["file"] for r in src if r["ticker"] == t and r["status"] == "unreadable"]
         if unread:
             flags.append("unreadable: " + ", ".join(unread))
+        if t == "2030":
+            flags.append("investment holding with no operating revenue: coverage judged on profit")
+        if t == "2382":
+            flags.append("FY2022 = predecessor group (special-purpose FS / note 30 of FY2023 AFS); FY2023 statutory period 28 Dec 2022 - 31 Dec 2023")
         row["flags"] = "; ".join(flags)
         out.append(row)
 with open(os.path.join(root, "data", "coverage.csv"), "w", newline="", encoding="utf-8") as fh:

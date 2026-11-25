@@ -28,3 +28,4 @@ Energy,2382,9M2025,CAPEX,1377.525,1377525,Thousands,D,2382_ADES/2026_Q3_filed202
 Energy,2382,9M2026,TA,33269.812,33269812,Thousands,D,2382_ADES/2026_Q3_filed2026-11-09.pdf,5,Total assets,No XBRL file for 9M 2026 in the archive; figure read from the interim PDF,Reviewed
 Energy,2382,9M2026,TE,6867.36,6867360,Thousands,D,2382_ADES/2026_Q3_filed2026-11-09.pdf,5,Total equity,No XBRL file for 9M 2026 in the archive; figure read from the interim PDF,Reviewed
 Energy,2382,9M2026,EQ_ATTR,6835.881,6835881,Thousands,D,2382_ADES/2026_Q3_filed2026-11-09.pdf,5,Equity attributable to shareholders,No XBRL file for 9M 2026 in the archive; figure read from the interim PDF,Reviewed
+Energy,2382,FY2021,EQ_ATTR,1893.55,1893550000,Actuals,D,2382_ADES/2022_Annual_filed2024-10-09.pdf,6,Equity attributable to owners of the parent (special-purpose FS),"Opening equity for FY2022 ROE; not in XBRL",Audited

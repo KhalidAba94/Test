@@ -50,9 +50,20 @@ def main(cand_csv, sector, out_csv, checks_csv):
             y, lab = r["file"].split("_")[:2]
             order = {"Q1": 1, "Q2": 2, "Q3": 3, "Q4": 4, "Annual": 4}[lab]
             return (int(y), order, 1 if lab == "Annual" else 0, r["filed"])
-        latest = max(cands, key=key)
-        cur = [c for c in cands if c["column_role"] == "current"]
-        original = min(cur, key=key) if cur else min(cands, key=key)
+        is_bs = cands[0]["period"].startswith("BS@")
+        doc = lambda r: r["file"].split("_")[1]
+        pool = cands
+        if not is_bs:
+            # flows: compare like documents only (annual with annual for FY; Q3 with Q3 for 9M)
+            want = "Annual" if p.startswith("FY") else "Q3"
+            same = [c for c in cands if doc(c) == want]
+            if same:
+                pool = same
+        latest = max(pool, key=key)
+        cur = [c for c in pool if c["column_role"] == "current"]
+        if is_bs and p.startswith("FY"):
+            cur = [c for c in cur if doc(c) == "Annual"] or cur
+        original = min(cur, key=key) if cur else min(pool, key=key)
         used = float(latest["value_sar_m"])
         orig = float(original["value_sar_m"])
         vals = sorted({round(float(c["value_sar_m"]), 3) for c in cands})
@@ -65,7 +76,7 @@ def main(cand_csv, sector, out_csv, checks_csv):
             rel = (hi - lo) / max(abs(lo), abs(hi), 1e-9)
             if rel > 0.005:
                 ratio = (abs(hi) / abs(lo)) if lo else None
-                kind = "possible unit error" if ratio and 900 < ratio < 1100 else "restated/reclassified"
+                kind = "possible unit error" if ratio and 900 < ratio < 1100 else ("restated (like documents)" if prov == "R" else "differs across document types (not a restatement)")
                 checks.append({"ticker": t, "period": p, "metric_code": m, "kind": kind,
                                "values": " | ".join(f'{c["file"]}={float(c["value_sar_m"]):.3f}' for c in sorted(cands, key=key)),
                                "used_file": latest["file"], "used": used, "original": orig})

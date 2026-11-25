@@ -162,7 +162,8 @@
   "labels": [
    "Purchase of property, plant and equipment",
    "Capital expenditures",
-   "Purchase of intangible assets"
+   "Purchase of intangible assets",
+   "Expenditure on other intangible assets"
   ],
   "sum": true,
   "abs": true

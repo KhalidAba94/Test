@@ -296,7 +296,7 @@ function waterfall(steps){
 }
 // ---------------------------------------------------------------- views
 const sectorRows = S => S==='Energy'
-  ? [['REV','Revenue'],['GP','Gross profit'],['OPINC','Operating income'],['EBITDA_C','EBITDA (calculated)'],['NI_ATTR','Net profit attributable'],['CFO','Operating cash flow'],['CAPEX','Capex'],['FCF','Free cash flow']]
+  ? [['REV','Revenue'],['REV_M','Revenue incl. other income related to sales (margin base)'],['GP','Gross profit'],['OPINC','Operating income'],['EBITDA_C','EBITDA (calculated)'],['EBITDA_U','EBITDA excl. identified one-offs'],['NI_ATTR','Net profit attributable'],['CFO','Operating cash flow'],['CAPEX','Capex'],['FCF','Free cash flow']]
   : [['TOI','Total operating income'],['NSCI','Net special commission income'],['FEES_NET','Net fees & commissions'],['OTHER_OI','Other operating income'],['OPEX_PRE','Operating expenses (pre-impairment)'],['PPOP','Pre-provision profit'],['IMPAIR_TOTAL','Impairment charges'],['NI_ATTR','Net profit attributable']];
 function periodHead(extra){ return `<tr><th>SAR m</th>${FY.map(p=>`<th>${PL[p]}</th>`).join('')}<th title="Compound annual growth FY2022–FY2025 (3 years)">CAGR 22–25</th><th class="gap"></th>${YTD.map(p=>`<th class="ytd">${PL[p]}</th>`).join('')}<th class="ytd">9M change</th>${extra||''}</tr>`; }
 function sectorTable(S, scope){
@@ -306,7 +306,8 @@ function sectorTable(S, scope){
     if (m===sc.config.top_line || m==='NI_ATTR') h+=`<tr class="sub"><td>growth (matched sample)</td>${FY.map((p,i)=>`<td>${i?fg(g[PAIRS[i-1]].growth):''}</td>`).join('')}<td></td><td class="gap"></td><td class="ytd"></td><td class="ytd"></td><td class="ytd"></td><td></td></tr>`; });
   const rk = sc.config.ratios, rat = sc.sector[scope==='all'?'ratios_all':'ratios_ex_largest'];
   h+=`<tr class="grp"><td colspan="10">Ratios from sector totals (not averages of company ratios)</td></tr>`;
-  Object.keys(rk).forEach(k=>{ h+=`<tr><td>${esc(rk[k][2])}</td>${FY.map(p=>`<td>${fp(rat[k][p].v)}</td>`).join('')}<td></td><td class="gap"></td>${YTD.map(p=>`<td class="ytd">${fp(rat[k][p].v)}</td>`).join('')}<td class="ytd"></td><td>${rat[k].FY2025.n}</td></tr>`; });
+  const rc = (k,p)=>{ const x=rat[k][p]; const ex=(x.excluded||[]).map(coName); return ex.length?`<span data-tip="${esc(x.n+' companies; excluded for missing inputs: '+ex.join(', '))}" tabindex="0">${fp(x.v)}<sup>${x.n}</sup></span>`:fp(x.v); };
+  Object.keys(rk).forEach(k=>{ h+=`<tr><td>${esc(rk[k][2])}</td>${FY.map(p=>`<td>${rc(k,p)}</td>`).join('')}<td></td><td class="gap"></td>${YTD.map(p=>`<td class="ytd">${rc(k,p)}</td>`).join('')}<td class="ytd"></td><td>${rat[k].FY2025.n}</td></tr>`; });
   return `<div class="scroller"><table>${h}</table></div>`;
 }
 let scopeState = {Energy:'all', Banks:'all'}, pairState = {Energy:'FY2025/FY2024', Banks:'FY2025/FY2024'};
@@ -352,13 +353,13 @@ function viewSector(key){
   const tk=N.takeaways||{};
   h+=`<h2>Takeaways</h2><dl class="kv">${['improved','weakened','why','concentration','ytd_2026','uncertain'].filter(k=>tk[k]).map(k=>`<dt>${({improved:'Improved',weakened:'Weakened',why:'Why',concentration:'Concentration',ytd_2026:'2026 so far (9M)',uncertain:'Uncertain'})[k]}</dt><dd>${esc(tk[k])}</dd>`).join('')}</dl>`;
   if ((N.data_notes||[]).length) h+=`<h3>Data notes</h3><ul class="clean">${N.data_notes.map(x=>`<li>${esc(x)}</li>`).join('')}</ul>`;
-  h+=`<p class="note">${esc(cfg.classification_note||'')}</p>`;
+  h+=`<p class="note">${esc(cfg.margin_base_note||'')} ${esc(cfg.classification_note||'')} A superscript number on a ratio means fewer companies had the inputs; hover or focus it to see which were excluded.</p>`;
   return h;
 }
 function companyTable(S,t){
   const c=D.sectors[S].companies[t], s=c.series, cfg=D.sectors[S].config;
   const rows = S==='Energy'
-   ? [['REV','Revenue'],['OIRS','Other income related to sales'],['REV_OIRS','Revenue incl. other income related to sales'],['GP','Gross profit'],['OPINC','Operating income'],['EBITDA_C','EBITDA (calculated)'],['NI_ATTR','Net profit attributable'],['CFO','Operating cash flow'],['CAPEX','Capex'],['FCF','Free cash flow'],['TA','Total assets (period-end)'],['EQ_ATTR','Equity attributable (period-end)']]
+   ? [['REV','Revenue'],['OIRS','Other income related to sales'],['REV_M','Revenue incl. other income related to sales (margin base)'],['GP','Gross profit'],['OPINC','Operating income'],['EBITDA_C','EBITDA (calculated)'],['EBITDA_U','EBITDA excl. identified one-offs'],['NI_ATTR','Net profit attributable'],['CFO','Operating cash flow'],['CAPEX','Capex'],['FCF','Free cash flow'],['TA','Total assets (period-end)'],['EQ_ATTR','Equity attributable (period-end)']]
    : [['TOI','Total operating income'],['NSCI','Net special commission income'],['FEES_NET','Net fees & commissions'],['OTHER_OI','Other operating income'],['OPEX_PRE','Operating expenses (pre-impairment)'],['PPOP','Pre-provision profit'],['IMPAIR_TOTAL','Impairment charges'],['IMPAIR_FIN','of which ECL on financing'],['NI_ATTR','Net profit attributable'],['TA','Total assets'],['LOANS','Net financing'],['DEPOSITS','Customer deposits'],['EQ_ATTR','Equity attributable (incl. Tier 1)'],['T1_SUKUK','Tier 1 sukuk'],['T1_COST','Tier 1 sukuk distributions']];
   let h=periodHead();
   rows.forEach(([m,lab])=>{ if(!s[m]) return; const g=c.growth[m]||{};

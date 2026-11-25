@@ -1,0 +1,65 @@
+ticker: "1180"
+headline: >-
+  SNB, the sector's largest bank by FY2025 total operating income (SAR 39,195m, about SAR 101m more than Al Rajhi), grew
+  attributable profit at a 10.4% annual rate from FY2022 to FY2025 on income growth of 5.9% a year, helped by a 10.4% fall in
+  FY2025 operating expenses and low impairments; in 9M 2026 total operating income rose 4.5%, but almost half of the increase came
+  from its inflation-accounted International segment (Türkiye and Pakistan), and a net impairment charge of only SAR 2.6m
+  supported a 4.6% rise in profit.
+lfl_basis:
+  definition_used: >-
+    Standard bridge on total operating income (TOI). Banks have no discrete 'capacity' additions, so like-for-like equals organic
+    growth. No acquisitions, disposals or discontinued operations were found FY2023-9M 2026 (Samba Bank Ltd, Pakistan, stopped being
+    held for sale in FY2022 and is consolidated in every period compared). The FX and IAS 29 steps are not determinable: Türkiye
+    Finans (TFKB) is restated for hyperinflation and translated at closing rates, and the filings give neither the International
+    segment's local-currency income nor the rates needed to remove FX. Organic growth is therefore not shown. As the closest
+    available measure we show growth excluding the International segment (calculated from the segment note): +3.4% (FY2023),
+    +9.2% (FY2024), +7.7% (FY2025) and +2.5% (9M 2026), against reported +4.8%, +4.2%, +8.8% and +4.5%.
+  perimeter_changes:
+    - {event: "Samba Bank Ltd (SBL, Pakistan, 84.51%) ceased to be held for sale and was consolidated again", date: "2022", effect: "Consolidated in FY2022 and all later periods; no effect on the comparisons shown", source: "1180_SNB/2022_Annual_filed2023-02-06.pdf p.108"}
+  capacity_changes: []
+  fx_exposure: >-
+    International segment (TFKB 67.03%, Turkish lira, under IAS 29 since Q2 2022; SBL 84.51%, Pakistani rupee) made up SAR 2,163m
+    or 5.5% of FY2025 TOI and SAR 2,098m or 6.9% of 9M 2026 TOI. Its TOI moved +SAR 537m (FY2023), -SAR 1,450m (FY2024),
+    +SAR 500m (FY2025) and +SAR 637m (9M 2026); these changes mix business growth, lira translation and inflation restatement.
+    The IAS 29 net monetary loss (below TOI) was SAR 309m (FY2022), 523m (FY2023), 266m (FY2024), 293m (FY2025) and 247m (9M 2026).
+  price_volume_support: >-
+    Net special commission income can be split into volume (growth in average total assets) and margin (income / average total
+    assets) from the balance sheets. The segment note also gives International net special commission income, so its share of the
+    change can be shown.
+  confidence: "Medium"
+price_volume:
+  - {period: "FY2023 vs FY2022", text: "Net special commission income rose SAR 722m (+2.7%): volume +SAR 1,738m (+5.3 pp of prior TOI) with average assets up 6.6%, offset by a lower margin on average assets (2.83% to 2.72%; rate -SAR 1,016m, -3.1 pp) as deposit costs rose.", basis: "calculated", confidence: "High", source: "facts NSCI, TA", refs: ["1180-FY2023-NSCI", "1180-FY2023-TA"]}
+  - {period: "FY2025 vs FY2024", text: "Net special commission income rose SAR 1,432m (+5.2%): volume +SAR 2,239m (+6.2 pp of prior TOI) with average assets up 8.1%, partly offset by margin (2.59% to 2.52%; rate -SAR 807m, -2.2 pp). The International segment contributed SAR 200m of the increase; the rest of the bank grew 4.6%.", basis: "calculated", confidence: "High", source: "facts NSCI, TA; 1180_SNB/2025_Annual_filed2026-02-04.pdf p.75", refs: ["1180-FY2025-NSCI", "1180-FY2025-TA"]}
+  - {period: "9M 2026 vs 9M 2025", text: "Net special commission income rose SAR 1,785m (+8.3%): volume +SAR 1,512m (+5.2 pp of prior TOI) with average assets up 7.0%, and margin +SAR 274m (+0.9 pp; annualised 2.50% to 2.53%) as special commission expense fell 4.0%. The International segment contributed SAR 539m of the increase; the rest of the bank grew 5.9%.", basis: "calculated", confidence: "High", source: "facts NSCI, TA, SCE; 1180_SNB/2026_Q3_filed2026-10-28.pdf p.39", refs: ["1180-9M2026-NSCI", "1180-9M2025-NSCI", "1180-9M2026-TA", "1180-9M2026-SCE"]}
+profit_and_margin:
+  drivers:
+    - {period: "FY2023", driver: "TOI +4.8% and attributable profit +7.7%: financing income +2.7% (margin squeeze) and other income +22.6%; impairments fell 45.3% to SAR 923m; operating expenses +5.8% (cost-to-income 29.9%). The IAS 29 monetary loss rose to SAR 523m. ROE on ordinary equity 12.4%.", source: "1180_SNB/2023_Annual_filed2024-02-13.pdf p.14, p.17", refs: ["1180-FY2023-TOI", "1180-FY2023-NI_ATTR", "1180-FY2023-IMPAIR_FIN"]}
+    - {period: "FY2024", driver: "TOI +4.2% (+9.2% excluding the International segment, whose TOI fell 46.6% to SAR 1,662m) and attributable profit +5.9%: financing income +2.6%, net fees +11.5% on the re-presented basis; operating expenses +6.4%; impairments +10.4% to SAR 1,019m after SAR 2,523m of recoveries (SAR 1,367m on purchased credit-impaired loans). The International segment made a SAR 112m loss before tax. ROE on ordinary equity 12.3%.", source: "1180_SNB/2025_Annual_filed2026-02-04.pdf p.10, p.53, p.75", refs: ["1180-FY2024-TOI", "1180-FY2024-NI_ATTR", "1180-FY2024-IMPAIR_FIN"]}
+    - {period: "FY2025", driver: "TOI +8.8% and attributable profit +18.0%: financing income +5.2%, net fees +12.7%, other income +29.9% (gains on non-FVIS instruments SAR 559m vs SAR 77m). Operating expenses fell 10.4% to SAR 9,872m as other G&A fell 32.2% to SAR 2,171m and depreciation 17.0%; cost-to-income fell to 25.2% from 30.6%. Impairments SAR 1,034m (+1.5%) after SAR 1,713m of recoveries. ROE on ordinary equity 13.4%.", source: "1180_SNB/2025_Annual_filed2026-02-04.pdf p.10, p.53", refs: ["1180-FY2025-TOI", "1180-FY2025-NI_ATTR", "1180-FY2025-OPEX_PRE", "1180-FY2025-IMPAIR_FIN"]}
+    - {period: "9M2026", driver: "TOI +4.5% (+2.5% excluding the International segment) and attributable profit +4.6%: financing income +8.3% and net fees +6.3%, but other income -17.8% (FVIS gains SAR 1,565m vs SAR 2,272m; other operating expenses, net SAR 1,516m vs SAR 1,236m); operating expenses +4.1%. The net impairment charge was SAR 2.6m vs SAR 92.6m: financing allowances took a SAR 2,193m charge, but credit-related commitments showed a SAR 1,114m net reversal/settlement (SAR 967m on purchased credit-impaired exposures) and Wholesale a net reversal of SAR 883m. The bank sees no significant ECL impact from the regional conflict. ROE on ordinary equity 13.3% annualised vs 13.5%.", source: "1180_SNB/2026_Q3_filed2026-10-28.pdf p.5, p.27, p.36, p.39, p.45", refs: ["1180-9M2026-TOI", "1180-9M2026-NI_ATTR", "1180-9M2026-IMPAIR_FIN", "1180-9M2026-OTHER_OI"]}
+  one_offs:
+    - {item: "IAS 29 net monetary loss at TFKB (Türkiye), below TOI in other non-operating expense; recurs while Türkiye is hyperinflationary (FY2022 309.0; FY2023 522.9; FY2024 266.1; FY2025 293.3; 9M 2025 247.9)", period: "9M2026", amount_sar_m: 247.3, line: "Other non-operating income/(expense), net", source: "1180_SNB/2026_Q3_filed2026-10-28.pdf p.8; 1180_SNB/2025_Annual_filed2026-02-04.pdf p.13"}
+    - {item: "Recoveries of written-off financing netted in the impairment charge (FY2024: SAR 2,523m incl. SAR 1,367m purchased credit-impaired; FY2025: SAR 1,713m incl. SAR 395m). Not disclosed for the 9M periods", period: "FY2025", amount_sar_m: 1713.0, line: "Impairment charge/(reversal) for expected credit losses, net", source: "1180_SNB/2025_Annual_filed2026-02-04.pdf p.53"}
+    - {item: "No zakat settlement or item labelled non-recurring found. Underlying profit is not shown: Q4 2025 other G&A was negative (FY2025 SAR 2,171m less 9M 2025 SAR 2,236m = -SAR 65m, our calculation) and the filing does not explain why.", period: "FY2025", amount_sar_m: null, line: "Other general and administrative expenses", source: "1180_SNB/2025_Annual_filed2026-02-04.pdf p.10; 1180_SNB/2025_Q3_filed2025-10-29.pdf p.5"}
+developments:
+  - {date: "2022-Q2", category: "regulation", text: "Türkiye classified as hyperinflationary; TFKB applies IAS 29 and its results are translated at the closing rate.", source: "1180_SNB/2022_Annual_filed2023-02-06.pdf p.23"}
+  - {date: "2022", category: "M&A", text: "The board dropped the planned sale of Samba Bank Ltd (Pakistan); SBL is consolidated again.", source: "1180_SNB/2022_Annual_filed2023-02-06.pdf p.108"}
+  - {date: "2023", category: "financing", text: "Bonus shares of SAR 15.2bn took share capital to SAR 60bn; SAR 1.3bn of Tier 1 sukuk called and SAR 1bn issued by a subsidiary.", source: "1180_SNB/2023_Annual_filed2024-02-13.pdf p.16, p.76"}
+  - {date: "2024", category: "financing", text: "Issued SAR 6bn of Tier 1 sukuk (Tier 1 sukuk SAR 21,188m at Dec 2024); term loans were reclassified from due to banks to debt securities and term loans (31 Dec 2023 re-presented).", source: "1180_SNB/2024_Annual_filed2025-02-06.pdf p.76, p.114"}
+  - {date: "2025", category: "financing", text: "Issued SAR 2.7bn of Tier 1 sukuk and called SAR 6.2bn (Tier 1 sukuk SAR 17,653m at Dec 2025).", source: "1180_SNB/2025_Annual_filed2026-02-04.pdf p.73, p.12"}
+  - {date: "2026-01 to 2026-09", category: "financing", text: "Issued USD 1bn of Additional Tier 1 notes and about SAR 4.875bn of Additional Tier 1 sukuk, and called the USD 1.25bn sukuk issued in January 2021; Additional Tier 1 capital SAR 21,581m at Sep 2026.", source: "1180_SNB/2026_Q3_filed2026-10-28.pdf p.37, p.7"}
+  - {date: "2026-02-28 onward", category: "event", text: "The bank reports the regional conflict (Strait of Hormuz) and says there is no significant ECL impact because of the sector mix of its portfolio; no overlay is quantified. It warns that the escalation after 30 Sep 2026 raises credit, liquidity and operational risk. Cash and central-bank balances rose to SAR 61,135m from SAR 44,923m at Dec 2025 and deposits by 5.3%.", source: "1180_SNB/2026_Q3_filed2026-10-28.pdf p.45, p.4"}
+what_it_means:
+  improved: "Profitability: ROE on ordinary equity rose from 12.0% (FY2022) to 13.4% (FY2025) and cost-to-income fell from 29.6% to 25.2%, mostly because FY2025 operating expenses fell 10.4% while TOI rose 8.8%."
+  weakened: "Margin and funding: the margin on average assets fell from 2.83% (FY2022) to 2.52% (FY2025), and loans grew faster than deposits (FY2022-FY2025 CAGR 10.2% vs 3.8%), taking loans to deposits from 96.0% to 114.7%."
+  why: "Growth came from balance-sheet volume and lower costs rather than margin, while the International segment swings the top line (-SAR 1,450m in FY2024, +SAR 637m in 9M 2026) for reasons the filings do not split between currency, inflation accounting and business growth."
+  uncertain: "Credit costs: the 9M 2026 net charge of SAR 2.6m rests on reversals and settlements that may not repeat, and the bank flags higher credit and liquidity risk after 30 Sep 2026; the cause of the FY2025 fall in other G&A is not disclosed."
+confidence_overall: "Medium"
+data_notes:
+  - "Impairment check: the 9M impairment charges in the facts (SAR 92.6m for 9M 2025, SAR 2.6m for 9M 2026) match the income statements (9M 2025 interim p.5; 9M 2026 interim p.5), as does FY2025 (SAR 1,034m, AFS p.10). No override was made. The low 9M figures come from net reversals (Wholesale -SAR 302m in 9M 2025 and -SAR 883m in 9M 2026) and settlements of purchased credit-impaired commitments (-SAR 397m and -SAR 967m); the interims do not disclose recoveries. Cost of risk is therefore 0.02% (9M 2025) and 0.00% (9M 2026) annualised against 0.15% for FY2025."
+  - "No restatement of 31 Dec 2024 equity in the 9M 2025 interim (opening equity attributable SAR 192,565m in both)."
+  - "Tier 1 costs ('Tier 1 Sukuk related costs', from 2026 'Additional Tier 1 Capital related costs') come from the statement of changes in equity: SAR 567.9m (FY2022), 772.5m (FY2023), 764.1m (FY2024), 1,037.3m (FY2025), 855.1m (9M 2025), 887.8m (9M 2026). Tier 1 carrying amounts and 'equity attributable to equity holders of the Bank' (which includes Tier 1) match the filings at every date, so no other equity override was needed."
+  - "FY2024 net fees were re-presented in the FY2025 AFS (SAR 4,377m vs 4,600m originally; TOI 36,033m vs 36,038m). FY2023 was not re-presented, so FY2024/FY2023 fee growth (+11.5%) straddles the change; on the FY2024 AFS basis it was +17.2%."
+  - "Other G&A expenses: 9M 2025 SAR 2,236m but FY2025 SAR 2,171m, so Q4 2025 was a net credit of about SAR 65m; the FY2025 AFS gives no explanation. This lifts FY2025 profit and cost-to-income comparisons."
+  - "FX and IAS 29 bridge steps are 'not determinable'; growth excluding the International segment is our calculation from the segment notes (FY2022 segment TOI as re-presented in the FY2023 AFS, SAR 2,575m)."
+  - "SNB is largest in the sector by both FY2025 TOI and attributable profit (SAR 25,013m vs Al Rajhi SAR 24,792m)."

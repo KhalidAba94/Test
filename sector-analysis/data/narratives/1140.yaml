@@ -1,0 +1,54 @@
+ticker: "1140"
+headline: >-
+  Bank Albilad grew attributable profit at a 13.6% annual rate from FY2022 to FY2025 although total operating income grew only
+  6.1% a year, because impairments fell from SAR 551m to SAR 181m (cost of risk 0.63% to 0.16%); in 9M 2026 profit rose just
+  1.6% as impairments rose 55.7% and net fees fell 6.0%, and the costs of its new Tier 1 sukuk cut ROE on ordinary equity to
+  15.0% (annualised) from 16.9%.
+lfl_basis:
+  definition_used: >-
+    Standard bridge on total operating income (TOI). Banks have no discrete 'capacity' additions, so like-for-like equals organic
+    growth. No acquisitions, disposals or discontinued operations were found FY2022-9M 2026; the payments subsidiary Enjaz (2022)
+    was set up by the bank, so its income is organic. The one adjustment is a material one-off revenue item: a SAR 148.6m gain on
+    disposal of property and equipment in Q4 2025, which takes FY2025 organic growth to 6.6% from 9.2% reported.
+  perimeter_changes:
+    - {event: "Enjaz Payment Services incorporated (100% subsidiary, start-up)", date: "2022-08-11", effect: "Organic; not adjusted", source: "1140_ALBILAD/2022_Annual_filed2023-02-12.pdf p.14"}
+  capacity_changes: []
+  fx_exposure: "Domestic bank; no foreign subsidiaries. FX translation is nil for the bridge."
+  price_volume_support: >-
+    Net income from financing and investments (Islamic equivalent of net special commission income) can be split into volume
+    (growth in average total assets) and margin (income / average total assets) from the filings' balance sheets.
+  confidence: "High"
+price_volume:
+  - {period: "FY2023 vs FY2022", text: "Net financing income rose SAR 223m (+5.7%): average assets grew 13.4% (volume +SAR 521m, +10.0 pp of prior TOI) but the margin on average assets fell from 3.23% to 3.01% (rate -SAR 298m, -5.7 pp) as the cost of deposits rose (return on deposits and financial liabilities +216.5%).", basis: "calculated", confidence: "High", source: "facts NSCI, TA, SCE", refs: ["1140-FY2023-NSCI", "1140-FY2023-TA", "1140-FY2023-SCE"]}
+  - {period: "FY2025 vs FY2024", text: "Net financing income rose SAR 318m (+7.2%): volume +SAR 444m (+7.8 pp of prior TOI) with average assets up 10.0%, partly offset by margin (2.97% to 2.90%; rate -SAR 126m, -2.2 pp).", basis: "calculated", confidence: "High", source: "facts NSCI, TA", refs: ["1140-FY2025-NSCI", "1140-FY2025-TA"]}
+  - {period: "9M 2026 vs 9M 2025", text: "Net financing income rose SAR 270m (+7.6%): volume +SAR 394m (+8.7 pp of prior TOI) with average assets up 11.1%, offset in part by margin (annualised 2.92% to 2.83%; rate -SAR 124m, -2.7 pp).", basis: "calculated", confidence: "High", source: "facts NSCI, TA", refs: ["1140-9M2026-NSCI", "1140-9M2025-NSCI", "1140-9M2026-TA"]}
+profit_and_margin:
+  drivers:
+    - {period: "FY2023", driver: "TOI +2.1% but attributable profit +13.8%: financing income +5.7% (margin squeeze), net fees -7.1% and other income -10.1%, while the impairment charge fell 41.2% to SAR 324m and operating expenses rose only 0.8%. ROE on ordinary equity 16.5%.", source: "1140_ALBILAD/2023_Annual_filed2024-02-13.pdf p.9", refs: ["1140-FY2023-TOI", "1140-FY2023-NI_ATTR", "1140-FY2023-IMPAIR_FIN"]}
+    - {period: "FY2024", driver: "TOI +7.0% and attributable profit +18.5%: impairments fell a further 60.0% to SAR 130m (cost of risk 0.12%), net fees rose 12.8%, and cost-to-income improved to 42.5%. ROE on ordinary equity 17.6%.", source: "1140_ALBILAD/2024_Annual_filed2025-02-12.pdf p.9", refs: ["1140-FY2024-TOI", "1140-FY2024-NI_ATTR", "1140-FY2024-IMPAIR_FIN"]}
+    - {period: "FY2025", driver: "TOI +9.2% (6.6% excluding a SAR 148.6m property disposal gain) and attributable profit +8.7%: financing income +7.2%, net fees +3.2%, the other operating income line SAR 300m vs SAR 104m; operating expenses +8.2%; impairments +39.8% to SAR 181m. First Tier 1 sukuk costs of SAR 85m; ROE on ordinary equity 16.6%.", source: "1140_ALBILAD/2025_Annual_filed2026-02-12.pdf p.9, p.11, p.13", refs: ["1140-FY2025-TOI", "1140-FY2025-NI_ATTR", "1140-FY2025-OTHER_OI", "1140-FY2025-T1_COST"]}
+    - {period: "9M2026", driver: "TOI +4.8% and attributable profit +1.6%: financing income +7.6%, but net fees -6.0% (gross fee income -5.4%) and impairments +55.7% to SAR 210m (cost of risk 0.22% annualised vs 0.16%). Non-performing financing rose to SAR 1,485m from SAR 1,215m at Dec 2025. Tier 1 sukuk costs of SAR 143m (SAR 6m in 9M 2025) mean profit for ordinary shareholders fell 4.6%; ROE on ordinary equity 15.0% annualised vs 16.9%.", source: "1140_ALBILAD/2026_Q3_filed2026-10-27.pdf p.5, p.7, p.20", refs: ["1140-9M2026-TOI", "1140-9M2026-NI_ATTR", "1140-9M2026-IMPAIR_FIN", "1140-9M2026-FEES_NET", "1140-9M2026-T1_COST"]}
+  one_offs:
+    - {item: "Gain on disposal of property and equipment, net (Q4 2025; proceeds SAR 233m). Shown only in the cash-flow statement; we assume it sits in other operating income", period: "FY2025", amount_sar_m: 148.6, line: "Other operating income (inferred)", source: "1140_ALBILAD/2025_Annual_filed2026-02-12.pdf p.13"}
+    - {item: "No zakat settlements, large recoveries or items labelled non-recurring found FY2022-9M 2026. Underlying profit is not shown because the zakat effect of the property gain is not disclosed.", period: "FY2022-9M2026", amount_sar_m: null, line: "n/a", source: "evidence 1140.yaml one_offs"}
+developments:
+  - {date: "2022-08-11", category: "strategy", text: "Set up Enjaz Payment Services as a wholly owned subsidiary.", source: "1140_ALBILAD/2022_Annual_filed2023-02-12.pdf p.14"}
+  - {date: "2025", category: "financing", text: "Bonus issue of SAR 2.5bn (from statutory reserve and retained earnings); share capital SAR 15bn.", source: "1140_ALBILAD/2025_Annual_filed2026-02-12.pdf p.11"}
+  - {date: "2025-05-22", category: "financing", text: "First Additional Tier 1 sukuk: USD 650m (SAR 2,438m) at 6.5%, perpetual.", source: "1140_ALBILAD/2025_Annual_filed2026-02-12.pdf p.49"}
+  - {date: "2025-12 / 2026-09", category: "regulation", text: "Tier 1 sukuk that the bank holds as investments (SAR 2,298m at Dec 2024; SAR 4,020m at Sep 2025) were reclassified from amortised cost to FVOCI as an IAS 8 error correction; the bank states the effect was immaterial and no balance-sheet totals were restated.", source: "1140_ALBILAD/2025_Annual_filed2026-02-12.pdf p.91; 1140_ALBILAD/2026_Q3_filed2026-10-27.pdf p.41"}
+  - {date: "2026-01-15", category: "financing", text: "Second Additional Tier 1 sukuk: USD 500m (SAR 1,875m) at 6.375%; Tier 1 sukuk SAR 4,313m at Sep 2026.", source: "1140_ALBILAD/2026_Q3_filed2026-10-27.pdf p.28, p.4"}
+  - {date: "2026-04-15", category: "financing", text: "Called the SAR 3bn Tier 2 sukuk (issued 2021); sukuk and term financing fell to nil, and the total capital ratio fell to 17.41% from 20.20% at Dec 2025 (CET1 13.53% vs 14.85%).", source: "1140_ALBILAD/2026_Q3_filed2026-10-27.pdf p.28, p.40; 1140_ALBILAD/2025_Annual_filed2026-02-12.pdf p.89"}
+  - {date: "2026-02-28 onward", category: "event", text: "The bank reports that the regional conflict has disrupted some business activity in Saudi Arabia; it reviewed exposures sector by sector and updated macroeconomic inputs to the ECL model but gives no overlay amount and no liquidity commentary. Customer deposits rose 9.4% from Dec 2025 to SAR 145,366m and amounts due to banks and SAMA to SAR 10,966m from SAR 6,983m.", source: "1140_ALBILAD/2026_Q3_filed2026-10-27.pdf p.41, p.4"}
+what_it_means:
+  improved: "Credit costs: impairments fell from SAR 551m (FY2022) to SAR 130m (FY2024) and SAR 181m (FY2025), which let attributable profit grow 13.6% a year while TOI grew 6.1% a year; ROE on ordinary equity rose from 16.4% to 17.6% in FY2024."
+  weakened: "Margin and 2026 momentum: the margin on average assets slipped from 3.23% (FY2022) to 2.90% (FY2025) and 2.83% (9M 2026 annualised), and in 9M 2026 impairments rose 55.7%, net fees fell 6.0% and ROE on ordinary equity fell to 15.0%."
+  why: "Income growth came from volume (average assets +10.0% in FY2025) rather than margin, and FY2025 TOI was lifted 2.6 pp by a one-off property gain; from 2025 Tier 1 sukuk costs are charged to equity, reducing the profit left for ordinary shareholders."
+  uncertain: "Credit quality: non-performing financing rose 22% between Dec 2025 and Sep 2026 and the bank gives no overlay amount for the regional conflict; the Tier 2 call lowered the total capital ratio to 17.41%."
+confidence_overall: "High"
+data_notes:
+  - "No restatement of 31 Dec 2024 equity or investments in the 9M 2025 interim (total equity SAR 16,693m in both). The only IAS 8 item (FY2025 AFS note 40; 9M 2026 note 19) reclassified Tier 1 sukuk held as investments from amortised cost to FVOCI, described as immaterial, with no restated totals."
+  - "Tier 1 sukuk: none before May 2025. The existing FY2022 value of 0 is correct; zeros were added for FY2021 and FY2023 (FY2023 was empty). Albilad's 'Total equity' (no non-controlling interest) includes the Tier 1 sukuk, so equity attributable includes it at every date and ordinary equity = total equity - Tier 1 sukuk."
+  - "Tier 1 costs come from the statement of changes in equity: SAR 85.2m (FY2025), 5.7m (9M 2025: only one distribution date fell before 30 Sep), 143.4m (9M 2026). FY2022-FY2024 are zero."
+  - "The impairment charge is a single income-statement line covering financing, investments, due from banks and commitments; the interims give no split, so the ECL charge on financing (IMPAIR_FIN) equals total impairments in every period. Financing alone was SAR 199m in FY2025 (AFS p.59)."
+  - "The FY2025 property gain is disclosed only in the cash-flow statement; its income-statement line is inferred (Medium confidence)."
+  - "The 9M 2026 review was by EY and KPMG (FY2025: EY and PwC)."

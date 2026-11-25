@@ -1,0 +1,59 @@
+ticker: "1150"
+headline: >-
+  Alinma grew attributable profit at a 21.1% annual rate from FY2022 to FY2025 as total assets grew 15.8% a year and
+  cost-to-income fell from 34.7% to 31.2%; in 9M 2026 growth slowed (total operating income +6.1%, profit +4.0%) as net fees
+  fell 9.6% and net impairments rose 25.1% even after SAR 630m of recoveries, and ROE on ordinary equity eased to 15.3%
+  (annualised) from 16.9%.
+lfl_basis:
+  definition_used: >-
+    Standard bridge on total operating income (TOI). Banks have no discrete 'capacity' additions, so like-for-like would equal
+    organic growth. Alinma consolidates several investment funds it controls. Two were deconsolidated in the comparison windows
+    (Dhahban Real Estate Fund during 9M 2025; Alinma IPO Fund during 2026) and the bank discloses neither the consideration nor the
+    funds' income, so organic growth is not determinable for FY2025 vs FY2024 and 9M 2026 vs 9M 2025. The private-equity fund holding
+    50% of Tawzea (Dec 2023 to Dec 2024) only held an equity-accounted stake, so it did not affect TOI. Funds the bank set up itself
+    (Dhahban 2023, Digital Fund 2025, 8th Opportunities Real Estate Fund 2026) are organic.
+  perimeter_changes:
+    - {event: "Alinma Fund for Private Equity Investments (holds 50% of Tawzea, received in a financing settlement) consolidated; control lost on 31 Dec 2024 (now a 20.25% associate)", date: "2023-12-18 / 2024-12-31", effect: "No TOI effect (Tawzea is equity-accounted below TOI)", source: "1150_ALINMA/2024_Annual_filed2025-02-06.pdf p.44"}
+    - {event: "Dhahban Real Estate Fund (fully owned, set up Sep 2023) deconsolidated", date: "2025 (by 30 Sep 2025)", effect: "Not determinable: consideration and fund income not disclosed", source: "1150_ALINMA/2025_Q3_filed2025-10-29.pdf p.12; 1150_ALINMA/2025_Annual_filed2026-02-05.pdf p.17"}
+    - {event: "Alinma IPO Fund (50.1% at Dec 2025) deconsolidated after a partial sale of units", date: "2026 (by 30 Jun 2026)", effect: "Not determinable: consideration and fund income not disclosed", source: "1150_ALINMA/2026_Q3_filed2026-10-28.pdf p.12"}
+  capacity_changes: []
+  fx_exposure: "Domestic bank (127 branches in Saudi Arabia at Dec 2025); one Cayman SPV for derivatives and repos. FX translation is nil for the bridge."
+  price_volume_support: >-
+    Net income from investments and financing (Islamic equivalent of net special commission income) can be split into volume
+    (growth in average total assets) and margin (income / average total assets) from the filings' balance sheets.
+  confidence: "Medium"
+price_volume:
+  - {period: "FY2023 vs FY2022", text: "Net financing income rose SAR 1,588m (+26.2%): volume +SAR 1,026m (+12.9 pp of prior TOI) with average assets up 16.9%, and margin +SAR 562m (+7.1 pp) as the margin on average assets rose from 3.24% to 3.50%.", basis: "calculated", confidence: "High", source: "facts NSCI, TA", refs: ["1150-FY2023-NSCI", "1150-FY2023-TA"]}
+  - {period: "FY2025 vs FY2024", text: "Net financing income rose SAR 728m (+8.4%): volume +SAR 1,252m (+11.4 pp of prior TOI) with average assets up 14.5%, partly offset by margin (3.37% to 3.19%; rate -SAR 524m, -4.8 pp).", basis: "calculated", confidence: "High", source: "facts NSCI, TA", refs: ["1150-FY2025-NSCI", "1150-FY2025-TA"]}
+  - {period: "9M 2026 vs 9M 2025", text: "Net financing income rose SAR 688m (+9.9%): volume +SAR 811m (+9.3 pp of prior TOI) with average assets up 11.7%, and a small margin drag (annualised 3.16% to 3.11%; rate -SAR 123m, -1.4 pp).", basis: "calculated", confidence: "High", source: "facts NSCI, TA", refs: ["1150-9M2026-NSCI", "1150-9M2025-NSCI", "1150-9M2026-TA"]}
+profit_and_margin:
+  drivers:
+    - {period: "FY2023", driver: "TOI +22.1% and attributable profit +34.5%: financing income +26.2% and net fees +20.7%; impairments rose 9.2% to SAR 1,299m; cost-to-income fell to 31.3% from 34.7%. ROE on ordinary equity 16.5%.", source: "1150_ALINMA/2023_Annual_filed2024-02-13.pdf", refs: ["1150-FY2023-TOI", "1150-FY2023-NI_ATTR", "1150-FY2023-IMPAIR_FIN"]}
+    - {period: "FY2024", driver: "TOI +12.5% and attributable profit +20.5%: volume-led financing income (+13.0%) with a lower margin; impairments fell 19.2% to SAR 1,049m (after SAR 197m of recoveries); cost-to-income 30.9%. ROE on ordinary equity 17.8%.", source: "1150_ALINMA/2025_Annual_filed2026-02-05.pdf p.10, p.58", refs: ["1150-FY2024-TOI", "1150-FY2024-NI_ATTR", "1150-FY2024-IMPAIR_FIN"]}
+    - {period: "FY2025", driver: "TOI +8.8% and attributable profit +9.7%: financing income +8.4%, net fees +7.7%, operating expenses +9.8%. Impairments were flat at SAR 1,060m (+1.0%), but inside them the charge on funded financing rose to SAR 2,134m from SAR 791m while non-funded exposures showed a SAR 875m net reversal (the provision for credit-related commitments fell to SAR 236m from SAR 1,112m); the bank does not explain the shift. ROE on ordinary equity 17.2%.", source: "1150_ALINMA/2025_Annual_filed2026-02-05.pdf p.58, p.62", refs: ["1150-FY2025-TOI", "1150-FY2025-NI_ATTR", "1150-FY2025-IMPAIR_FIN"]}
+    - {period: "9M2026", driver: "TOI +6.1% and attributable profit +4.0%: financing income +9.9%, but net fees -9.6% (gross fee income -12.5%). Operating expenses rose 4.7%, helped by a SAR 50m cut in depreciation from longer asset lives (+6.5% without it). Net impairments rose 25.1% to SAR 956m even though recoveries of written-off debts jumped to SAR 630m from SAR 178m; before recoveries the charge was SAR 1,586m vs SAR 942m (+68%). Tier 1 sukuk costs of SAR 622m (SAR 394m) left profit for ordinary shareholders 0.9% lower; ROE on ordinary equity 15.3% annualised vs 16.9%.", source: "1150_ALINMA/2026_Q3_filed2026-10-28.pdf p.5, p.7, p.14, p.38", refs: ["1150-9M2026-TOI", "1150-9M2026-NI_ATTR", "1150-9M2026-FEES_NET", "1150-9M2026-IMPAIR_FIN", "1150-9M2026-T1_COST"]}
+  one_offs:
+    - {item: "Recoveries of written-off debts netted in the impairment charge, unusually large (9M 2025: SAR 178m; FY2025: SAR 228m). The filing does not call them non-recurring", period: "9M2026", amount_sar_m: 630.3, line: "Impairment charge on financing, net of recoveries", source: "1150_ALINMA/2026_Q3_filed2026-10-28.pdf p.38"}
+    - {item: "Change in accounting estimate: longer useful lives for buildings (33 to 40 years) and software; lowers depreciation (SAR 76m expected for 2026)", period: "9M2026", amount_sar_m: -50.0, line: "Depreciation and amortization", source: "1150_ALINMA/2026_Q3_filed2026-10-28.pdf p.14"}
+    - {item: "No zakat settlements or items labelled non-recurring found FY2022-9M 2026. Underlying profit is not shown because the recoveries are a normal, if lumpy, part of the impairment line and their zakat effect is not disclosed.", period: "FY2022-9M2026", amount_sar_m: null, line: "n/a", source: "evidence 1150.yaml one_offs"}
+developments:
+  - {date: "2024-03-06", category: "financing", text: "Issued USD 1bn Additional Tier 1 sukuk at 6.5%; Tier 1 sukuk rose to SAR 8,751m at Dec 2024 from SAR 5,000m.", source: "1150_ALINMA/2025_Annual_filed2026-02-05.pdf p.67, p.13"}
+  - {date: "2024", category: "financing", text: "Bonus issue of SAR 5bn; share capital SAR 25bn.", source: "1150_ALINMA/2025_Annual_filed2026-02-05.pdf p.13"}
+  - {date: "2025-05-28 / 2025-09-03", category: "financing", text: "Two USD 500m sustainable Additional Tier 1 sukuk (6.5% and 6.25%); Tier 1 sukuk SAR 12,502m at Dec 2025.", source: "1150_ALINMA/2025_Annual_filed2026-02-05.pdf p.67, p.12"}
+  - {date: "2025", category: "operations", text: "Branch network grew to 127 from 115.", source: "1150_ALINMA/2025_Annual_filed2026-02-05.pdf p.16"}
+  - {date: "2026", category: "financing", text: "Bonus issue of SAR 5bn (share capital SAR 30bn). New Additional Tier 1 issues of SAR 3bn (21 May, 6.5%), USD 500m sustainable (3 Jun, 6.625%) and SAR 2bn (3 Sep, 6.5%); the SAR 5bn 2021 issue was redeemed at its first call on 1 Jul 2026. Tier 1 sukuk SAR 14,379m at Sep 2026.", source: "1150_ALINMA/2026_Q3_filed2026-10-28.pdf p.7, p.26-27"}
+  - {date: "2026", category: "M&A", text: "Lost control of the Alinma IPO Fund after selling part of its units; the retained stake is now a financial asset.", source: "1150_ALINMA/2026_Q3_filed2026-10-28.pdf p.12"}
+  - {date: "2026-02-28 onward", category: "event", text: "For the regional conflict the bank raised the Downturn scenario weight to 30% from 20% and cut Upturn to 20% from 30%, which it says caused a 'modest increase in ECL' (amount not given). It warns that the escalation after 30 Sep 2026 raises credit, liquidity and operational risk. Deposits rose 10.8% from Dec 2025 to SAR 251,916m; loans to deposits 100.3%; sukuk and certificates of deposit issued SAR 9,296m (SAR 7,625m at Dec 2025).", source: "1150_ALINMA/2026_Q3_filed2026-10-28.pdf p.39, p.4"}
+what_it_means:
+  improved: "Scale with efficiency: TOI grew 14.3% a year from FY2022 to FY2025 while cost-to-income fell from 34.7% to 31.2%, and ROE on ordinary equity rose from 13.1% (FY2022) to 17.8% (FY2024)."
+  weakened: "Margin and funding: the margin on average assets fell from 3.50% (FY2023) to 3.19% (FY2025) and 3.11% (9M 2026 annualised), and in FY2025 loans grew faster than deposits (+13.6% vs +8.0%), taking loans to deposits to 101.0%."
+  why: "Growth was volume-led (average assets +14.5% in FY2025), and a growing share of capital is Tier 1 sukuk whose costs (SAR 150m in FY2022, SAR 505m in FY2025, SAR 622m in 9M 2026) are charged to equity, so ROE on ordinary equity fell even in years when profit rose."
+  uncertain: "Credit costs: 9M 2026 net impairments of SAR 956m were held down by SAR 630m of recoveries, and the bank flags higher credit and liquidity risk after 30 Sep 2026; organic growth is not determinable because the income of deconsolidated funds is not disclosed."
+confidence_overall: "Medium"
+data_notes:
+  - "No restatement of 31 Dec 2024 equity or investments in the 9M 2025 interim (total equity SAR 41,442m in both); the bank only 'rearranged or reclassified' some comparatives for presentation."
+  - "Primary statements (balance sheet, income statement, changes in equity) are image pages in all Alinma PDFs; Tier 1 costs and other checks were read visually."
+  - "Tier 1 costs (statement of changes in equity) are distributions only: FY2022 SAR 150.0m, FY2023 200.0m, FY2024 321.9m, FY2025 504.5m, 9M 2025 393.5m, 9M 2026 621.6m. Issuance transaction costs also charged to retained earnings (FY2024 15.1m; 9M 2025 13.9m; FY2025 21.0m; 9M 2026 24.2m) are excluded because they are not distributions."
+  - "Tier 1 sukuk carrying amounts in the facts match the filings at every date (SAR 5,000m FY2021-FY2023 to SAR 14,379m at Sep 2026), and 'Total equity' includes them at every date (no non-controlling interest), so no Tier 1 or equity override was needed."
+  - "The ECL charge on financing (IMPAIR_FIN) is the sum of the two income-statement lines (financing net of recoveries, plus other financial assets), as for total impairments; financing alone was SAR 1,030m (FY2025), SAR 747m (9M 2025) and SAR 943m (9M 2026)."
+  - "Capital ratios are disclosed only as rounded whole percentages (CET1 14%, Tier 1 19%, total 21% at Sep 2026)."

@@ -41,17 +41,22 @@ def date_patterns(year, month, day):
 
 
 def pdf_check(path, ticker, year, label):
-    txt = subprocess.run(["pdftotext", "-l", "4", "-layout", path, "-"], capture_output=True, text=True).stdout
+    full = subprocess.run(["pdftotext", "-layout", path, "-"], capture_output=True, text=True).stdout.split("\f")
+    txt = "\n".join(full[:4])
     flat = re.sub(r"\s+", " ", txt)
     info = subprocess.run(["pdfinfo", path], capture_output=True, text=True).stdout
     pages = re.search(r"Pages:\s+(\d+)", info)
     n_pages = int(pages.group(1)) if pages else None
+    img = [i + 1 for i, pg in enumerate(full[: (n_pages or len(full))]) if len(pg.strip()) < 80]
+    early = [i for i in img if i <= 15]
+    scan_note = (f"{len(img)} of {n_pages} pages have no text layer" + (f" (incl. pages {','.join(map(str, early[:8]))} where the primary statements usually sit)" if early else "")
+                 + "; figures on those pages were taken from the XBRL file and checked visually where audited") if img else ""
     if len(flat.strip()) < 200:
-        return n_pages, "", "", "no extractable text on first 4 pages (scanned) - checked visually only if used"
+        return n_pages, "", "", "scanned: " + scan_note
     name_ok = any(k.lower() in flat.lower() for k in NAME_KEYS.get(ticker, []))
     mo, dd = PERIOD_END[label]
     date_ok = any(p.lower() in flat.lower() for p in date_patterns(int(year), mo, dd))
-    notes = []
+    notes = [("scanned pages: " + scan_note)] if scan_note else []
     if not name_ok:
         notes.append("company name not found on first pages")
     if not date_ok:
@@ -112,6 +117,13 @@ def main(src_dir, sector, meta_csv, out_sources, out_cov):
                           "status": "used" if not note else "used-with-flag", "status_reason": note,
                           "checks_done": "company name and period-end date searched in text of first 4 pages; page count"})
             rows.append(r)
+    snotes = {}
+    sn_path = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(out_sources))), "source_notes.csv")
+    if os.path.exists(sn_path):
+        snotes = {r["source_id"]: r["note"] for r in csv.DictReader(open(sn_path, encoding="utf-8"))}
+    for r in rows:
+        if r["source_id"] in snotes:
+            r["read_note"] = (r.get("read_note", "") + " " + snotes[r["source_id"]]).strip()
     fields = ["source_id", "sector", "ticker", "file", "file_type", "doc_type", "period_label_in_name", "filed",
               "company_named_in_file", "symbol_in_file", "period_start", "period_end", "assurance", "currency",
               "unit_scale", "pages", "name_found_in_text", "period_end_found_in_text", "status", "status_reason",

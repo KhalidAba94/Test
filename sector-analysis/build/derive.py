@@ -11,6 +11,7 @@ Order:
 from __future__ import annotations
 
 import csv
+import os
 import sys
 
 PERIODS = ["FY2021", "FY2022", "FY2023", "FY2024", "FY2025", "9M2025", "9M2026"]
@@ -23,7 +24,13 @@ def load(path):
     return list(csv.DictReader(open(path, encoding="utf-8")))
 
 
+HOLDING = {"2030"}   # investment-holding companies (no operating revenue)
+
+
 def main(sector, facts_csv, overrides_csv, out_csv):
+    root = os.path.dirname(os.path.dirname(os.path.abspath(overrides_csv)))
+    oneoffs = [o for o in load(os.path.join(root, "data", "one_offs.csv"))] if os.path.exists(os.path.join(root, "data", "one_offs.csv")) else []
+    reasons = {(r["ticker"], r["period"], r["metric_code"]): r for r in load(os.path.join(root, "data", "restatement_reasons.csv"))} if os.path.exists(os.path.join(root, "data", "restatement_reasons.csv")) else {}
     rows = load(facts_csv)
     facts = {(r["ticker"], r["period"], r["metric_code"]): r for r in rows}
     companies = {r["ticker"]: r["company"] for r in rows}
@@ -67,21 +74,32 @@ def main(sector, facts_csv, overrides_csv, out_csv):
             # attributable profit fallback: no NCI line and no attributable line -> NI
             if val(t, p, "NI_ATTR") is None and val(t, p, "NI") is not None and val(t, p, "NI_NCI") is None:
                 add(t, p, "NI_ATTR", val(t, p, "NI"), "NI (no non-controlling interest line in the filing)", [(p, "NI")])
+            if val(t, p, "EQ_ATTR") is None and val(t, p, "TE") is not None and val(t, p, "NI_NCI") is None:
+                add(t, p, "EQ_ATTR", val(t, p, "TE"), "Total equity (no non-controlling interests reported)", [(p, "TE")])
             if sector == "Energy":
-                op = val(t, p, "OPINC_REP")
-                if op is None and val(t, p, "PBT") is not None:
+                # One operating-income definition for every company (METHODOLOGY s.6):
+                # PBT + finance costs - finance income - share of results of JVs/associates.
+                # Investment-holding companies (no revenue) keep investment results inside operating income.
+                if val(t, p, "PBT") is not None:
                     pbt, fc, fi, jv = (val(t, p, m) or 0.0 for m in ("PBT", "FIN_COST", "FIN_INC", "SHARE_JV"))
-                    add(t, p, "OPINC", pbt + fc - fi - jv, "PBT + finance costs - finance income - share of JV/associates",
-                        [(p, "PBT"), (p, "FIN_COST"), (p, "FIN_INC"), (p, "SHARE_JV")])
-                elif op is not None:
-                    add(t, p, "OPINC", op, "operating profit as reported", [(p, "OPINC_REP")])
-                    facts[(t, p, "OPINC")]["provenance"] = facts[(t, p, "OPINC_REP")]["provenance"]
+                    if t in HOLDING:
+                        add(t, p, "OPINC", pbt + fc - fi, "PBT + finance costs - finance income (investment holding: investment results kept in operating income)",
+                            [(p, "PBT"), (p, "FIN_COST"), (p, "FIN_INC")])
+                    else:
+                        add(t, p, "OPINC", pbt + fc - fi - jv, "PBT + finance costs - finance income - share of results of JVs/associates",
+                            [(p, "PBT"), (p, "FIN_COST"), (p, "FIN_INC"), (p, "SHARE_JV")])
                 if val(t, p, "OPINC") is not None and val(t, p, "DA_CF") is not None:
-                    add(t, p, "EBITDA_C", val(t, p, "OPINC") + val(t, p, "DA_CF") + (val(t, p, "IMPAIR_CF") or 0.0),
-                        "OPINC + D&A (cash-flow) + impairment add-backs (cash-flow)",
+                    ebitda = val(t, p, "OPINC") + val(t, p, "DA_CF") + (val(t, p, "IMPAIR_CF") or 0.0)
+                    add(t, p, "EBITDA_C", ebitda, "OPINC + D&A (cash-flow) + impairment add-backs (cash-flow)",
                         [(p, "OPINC"), (p, "DA_CF"), (p, "IMPAIR_CF")])
-                if val(t, p, "REV") is not None and val(t, p, "OIRS") is not None:
-                    add(t, p, "REV_OIRS", val(t, p, "REV") + val(t, p, "OIRS"), "Revenue + other income related to sales",
+                    adj = sum(float(o["amount_sar_m"]) * (1 if o["direction"] == "gain" else -1)
+                              for o in oneoffs if o["ticker"] == t and o["period"] == p and o["in_metric"] == "OPINC")
+                    ids = ", ".join(o["oneoff_id"] for o in oneoffs if o["ticker"] == t and o["period"] == p)
+                    add(t, p, "EBITDA_U", ebitda - adj, "EBITDA_C less identified one-off gains / plus one-off losses in operating income" + (f" ({ids})" if ids else " (none identified)"),
+                        [(p, "EBITDA_C")])
+                if val(t, p, "REV") is not None:
+                    add(t, p, "REV_M", val(t, p, "REV") + (val(t, p, "OIRS") or 0.0),
+                        "Revenue + other income related to sales (margin base; equals revenue where there is no such income)",
                         [(p, "REV"), (p, "OIRS")])
                 if val(t, p, "CFO") is not None and val(t, p, "CAPEX") is not None:
                     add(t, p, "FCF", val(t, p, "CFO") - val(t, p, "CAPEX"), "CFO - capex", [(p, "CFO"), (p, "CAPEX")])
@@ -91,6 +109,12 @@ def main(sector, facts_csv, overrides_csv, out_csv):
                 if val(t, p, "EQ_ATTR") is not None:
                     s = val(t, p, "T1_SUKUK") or 0.0
                     add(t, p, "EQ_ORD", val(t, p, "EQ_ATTR") - s, "EQ_ATTR - T1_SUKUK (0 if none)", [(p, "EQ_ATTR"), (p, "T1_SUKUK")])
+    for k, r in facts.items():
+        rr = reasons.get(k)
+        if rr:
+            if rr["reason"].startswith("NOT A RESTATEMENT") and r.get("provenance") == "R":
+                r["provenance"] = "D"
+            r["note"] = (r.get("note", "") + " " if r.get("note") else "") + f'Restatement/reclassification note: {rr["reason"]} [{rr["source"]}]'
     out = sorted(facts.values(), key=lambda r: (r["ticker"], r["period"], r["metric_code"]))
     fields = ["fact_id", "sector", "ticker", "company", "period", "period_end", "period_months", "metric_code",
               "value_sar_m", "value_original", "unit_original", "currency_original", "provenance", "source_id",
