@@ -1,0 +1,81 @@
+ticker: "2381"
+headline: >-
+  Revenue peaked at SAR 3,619m in FY2024 and attributable profit fell from SAR 605m (FY2023) to a loss of SAR 75.3m in FY2025 after Saudi
+  Aramco suspended, ended or did not renew several rig contracts and two rig impairments were booked (SAR 105m in FY2024, SAR 114m in FY2025);
+  in 9M 2026 revenue fell a further 8.1% and attributable profit was SAR 6.9m (9M 2025: SAR 73.3m).
+lfl_basis:
+  definition_used: >-
+    Standard bridge on IFRS revenue. There were no acquisitions or disposals of businesses (the group is the company and its rig-transport
+    subsidiary Ofsat Arabia; only discarded rigs and equipment were sold), so perimeter effects are nil and organic growth equals reported
+    growth. New capacity (two offshore rigs leased in 2022, new rigs built or bought from 2022 to 2025, the UAE branch from 2026) cannot be
+    quantified because the filings give no rig count, rig days or day rates, so like-for-like growth is not determinable and organic growth is
+    the closest available measure. Contract suspensions and non-renewals are volume effects inside the existing business.
+  perimeter_changes:
+    - {event: "None: no acquisitions, disposals or discontinued operations; rig and equipment disposals through assets held for sale (FY2025 proceeds SAR 20.7m, gain SAR 7.6m)", date: "FY2022 to 9M2026", effect: "nil", source: "2381_ARABIAN_DRILLING/2025_Annual_filed2026-03-02.pdf p.12; 2381_ARABIAN_DRILLING/2026_Q3_filed2026-11-08.pdf p.11"}
+  capacity_changes:
+    - {event: "Lease of two offshore rigs deployed on three-year drilling contracts", date: "2022", effect: "revenue not disclosed; offshore segment revenue rose 83.0% in FY2023", source: "2381_ARABIAN_DRILLING/2023_Annual_filed2024-03-18.pdf p.14"}
+    - {event: "Rigs under construction at end-2022, end-2023 and end-2024, each expected to be capitalised the following year; SAR 61.8m of liquidated damages in 2024 for late mobilisation of certain new rigs", date: "2023 to 2025", effect: "revenue not disclosed", source: "2381_ARABIAN_DRILLING/2022_Annual_filed2023-03-19.pdf p.33; 2381_ARABIAN_DRILLING/2025_Annual_filed2026-03-02.pdf p.44"}
+    - {event: "Saudi Aramco suspended two offshore and two onshore rigs, did not renew three onshore rigs and terminated one offshore contract after the Ministry of Energy curtailed capacity expansion", date: "2024", effect: "volume loss inside like-for-like; not quantified", source: "2381_ARABIAN_DRILLING/2024_Annual_filed2025-03-12.pdf p.34"}
+    - {event: "Further suspensions of certain offshore and onshore rigs and one onshore non-renewal; resumption of certain suspended rigs confirmed after year-end", date: "2025", effect: "volume effect; not quantified", source: "2381_ARABIAN_DRILLING/2025_Annual_filed2026-03-02.pdf p.34, p.16"}
+    - {event: "UAE (Sharjah) drilling branch started commercial operations", date: "2026 (9M)", effect: "revenue not disclosed (no geographic split)", source: "2381_ARABIAN_DRILLING/2026_Q3_filed2026-11-08.pdf p.11"}
+  fx_exposure: "Operations in Saudi Arabia (UAE branch from 2026) in SAR or USD; no FX translation effect."
+  price_volume_support: >-
+    Not determinable. The filings give no rig count, utilisation, rig days or day rates. Revenue is split into land and offshore segments and
+    into drilling, rig-move, mobilisation and catering revenue. The impairment tests assume day-rate increases (10% every three years in 2024,
+    5% in 2025); these are management assumptions, not reported rates.
+  confidence: "Medium (perimeter effect nil with High confidence; the new-rig effect is not determinable)"
+price_volume:
+  - period: "9M 2026 vs 9M 2025"
+    text: >-
+      Revenue fell SAR 212m: drilling revenue -6.3% (SAR 1,966m to SAR 1,842m), rig-move revenue -13.9% and mobilisation revenue -21.7%;
+      land rigs -7.4% and offshore rigs -9.8%. The company reports suspensions of certain offshore rigs by the customer from Q1 2026 because
+      of the regional conflict. Day rates and rig days are not disclosed, so price and volume cannot be separated.
+    basis: "disclosed (revenue by type and segment); split not determinable"
+    confidence: "High for the amounts; the split is not determinable"
+    source: "2381_ARABIAN_DRILLING/2026_Q3_filed2026-11-08.pdf p.19 (revenue), p.21 (segments); 2381_ARABIAN_DRILLING/2026_Q1_filed2026-05-10.pdf p.15"
+    refs: ["2381-9M2026-REV", "2381-9M2025-REV"]
+  - period: "FY2025 vs FY2024"
+    text: >-
+      Offshore revenue fell 32.5% (SAR 1,478m to SAR 998m) after the 2024-2025 suspensions and the termination; land-rig revenue rose 13.7%
+      (SAR 2,141m to SAR 2,434m), with rig-move revenue +45.4%; drilling revenue overall fell 11.5%.
+    basis: "disclosed (revenue by type and segment); split not determinable"
+    confidence: "High for the amounts; the split is not determinable"
+    source: "2381_ARABIAN_DRILLING/2025_Annual_filed2026-03-02.pdf p.43 (revenue), p.50 (segments)"
+    refs: ["2381-FY2025-REV", "2381-FY2024-REV"]
+profit_and_margin:
+  drivers:
+    - {period: "FY2023", driver: "Revenue +28.6%, led by offshore rigs (+83.0%, SAR 802m to SAR 1,467m) after two offshore rigs were leased in 2022; attributable profit +8.4% to SAR 605m as depreciation rose to SAR 684m (SAR 525m) and finance costs to SAR 161m (SAR 94.3m). Operating margin 23.0%.", source: "2381_ARABIAN_DRILLING/2024_Annual_filed2025-03-12.pdf p.47 (segments); 2381_ARABIAN_DRILLING/2023_Annual_filed2024-03-18.pdf p.14", refs: ["2381-FY2023-REV", "2381-FY2023-NI_ATTR", "2381-FY2023-DA_CF"]}
+    - {period: "FY2024", driver: "Revenue +4.1% but gross profit -22.1% and attributable profit -46.8% to SAR 321m: a SAR 105m impairment of two rigs (in cost of revenue), SAR 61.8m of liquidated damages for late mobilisation of new rigs (netted against mobilisation revenue, recognised over the contract term), depreciation up to SAR 838m and finance costs to SAR 229m.", source: "2381_ARABIAN_DRILLING/2024_Annual_filed2025-03-12.pdf p.34; 2381_ARABIAN_DRILLING/2025_Annual_filed2026-03-02.pdf p.44, p.10", refs: ["2381-FY2024-REV", "2381-FY2024-GP", "2381-FY2024-NI_ATTR"]}
+    - {period: "FY2025", driver: "Revenue -5.1%, gross profit -50.8% and an attributable loss of SAR 75.3m: the offshore segment result fell to SAR 227m (SAR 563m) and a further SAR 114m impairment of three idle onshore rigs was booked; excluding that impairment, pre-tax profit would have been SAR 66.6m (we calculate, before any tax effect). EBITDA margin 36.1% (41.7%); operating margin 4.9%.", source: "2381_ARABIAN_DRILLING/2025_Annual_filed2026-03-02.pdf p.10 (P&L), p.34, p.50", refs: ["2381-FY2025-REV", "2381-FY2025-GP", "2381-FY2025-NI_ATTR", "2381-FY2025-PBT"]}
+    - {period: "9M2026", driver: "Revenue -8.1%, gross profit -24.7% and operating income -37.9%; the offshore segment result fell 34.9% (SAR 176m to SAR 115m) while land rigs improved 5.3%. 9M 2025 included SAR 15.5m of gains (land sale, insurance) and 9M 2026 a SAR 9.9m retained customer deposit. Attributable profit SAR 6.9m (SAR 73.3m); EBITDA margin 35.8%.", source: "2381_ARABIAN_DRILLING/2026_Q3_filed2026-11-08.pdf p.19, p.21", refs: ["2381-9M2026-REV", "2381-9M2026-GP", "2381-9M2026-NI_ATTR"]}
+    - {period: "FY2022-9M2026", driver: "Capex fell from SAR 1,910m (FY2024) to SAR 746m (FY2025) and free cash flow turned positive (SAR 353m; 9M 2026 SAR 140m). A SAR 2.0bn sukuk is due in a single payment on 3 Feb 2027; current liabilities exceeded current assets by SAR 1.6bn at 30 Sep 2026, and the lender waived a current-ratio covenant breach until 31 Mar 2027.", source: "2381_ARABIAN_DRILLING/2026_Q3_filed2026-11-08.pdf p.11; 2381_ARABIAN_DRILLING/2025_Annual_filed2026-03-02.pdf p.41", refs: ["2381-FY2024-CAPEX", "2381-FY2025-CAPEX", "2381-FY2025-FCF", "2381-9M2026-FCF"]}
+  one_offs:
+    - {item: "Impairment of two rigs after planned capex was cancelled (recoverable amounts SAR 2.9m and SAR 14.1m)", period: "FY2024", amount_sar_m: -105.0, line: "Cost of revenue", source: "2381_ARABIAN_DRILLING/2024_Annual_filed2025-03-12.pdf p.34"}
+    - {item: "Liquidated damages for delayed mobilisation of new rigs, netted against mobilisation revenue (deferred and recognised over the contract term, so the FY2024 profit effect is smaller)", period: "FY2024", amount_sar_m: -61.8, line: "Revenue (mobilisation)", source: "2381_ARABIAN_DRILLING/2025_Annual_filed2026-03-02.pdf p.44"}
+    - {item: "Impairment of three out-of-contract onshore rigs", period: "FY2025", amount_sar_m: -114.3, line: "Cost of revenue", source: "2381_ARABIAN_DRILLING/2025_Annual_filed2026-03-02.pdf p.34"}
+    - {item: "Gain on disposal of non-current assets held for sale (SAR 7.6m) and insurance claim income (SAR 7.1m)", period: "FY2025", amount_sar_m: 14.7, line: "Other gains - net", source: "2381_ARABIAN_DRILLING/2025_Annual_filed2026-03-02.pdf p.12"}
+    - {item: "Gain on disposal of a land parcel (SAR 8.4m) and insurance claim (SAR 7.1m)", period: "9M2025", amount_sar_m: 15.5, line: "Other operating income, net", source: "2381_ARABIAN_DRILLING/2026_Q3_filed2026-11-08.pdf p.19"}
+    - {item: "Non-refundable customer deposit retained after a cancelled sale of a land rig", period: "9M2026", amount_sar_m: 9.9, line: "Other operating income, net", source: "2381_ARABIAN_DRILLING/2026_Q3_filed2026-11-08.pdf p.19"}
+developments:
+  - {date: "2022", category: "capacity", text: "Leased two offshore rigs for three years, matched to three-year drilling contracts.", source: "2381_ARABIAN_DRILLING/2023_Annual_filed2024-03-18.pdf p.14"}
+  - {date: "2022", category: "financing", text: "Issued a SAR 2.0bn sukuk repayable in a single payment in 2027.", source: "2381_ARABIAN_DRILLING/2025_Annual_filed2026-03-02.pdf p.41"}
+  - {date: "2022-11-07", category: "financing", text: "Listed on the Saudi Exchange (9.0m new shares and 17.7m existing shares at SAR 100).", source: "2381_ARABIAN_DRILLING/2022_Annual_filed2023-03-19.pdf p.13"}
+  - {date: "2024", category: "operations", text: "After the Ministry of Energy curtailed capacity expansion, Saudi Aramco suspended four rigs, did not renew three and terminated one; SAR 105m impairment booked.", source: "2381_ARABIAN_DRILLING/2024_Annual_filed2025-03-12.pdf p.34"}
+  - {date: "2025", category: "operations", text: "Further suspensions and one non-renewal; SAR 114.3m impairment of three idle onshore rigs; the customer confirmed after year-end that certain suspended rigs would resume.", source: "2381_ARABIAN_DRILLING/2025_Annual_filed2026-03-02.pdf p.34, p.16"}
+  - {date: "2025-03-11", category: "financing", text: "Dividend cut to SAR 1.35 per share (SAR 120.2m) from SAR 3.87 per share the year before.", source: "2381_ARABIAN_DRILLING/2025_Annual_filed2026-03-02.pdf p.60"}
+  - {date: "2026-02", category: "financing", text: "Current-ratio covenant on a Murabaha facility breached from 3 Feb 2026; waiver obtained on 26 Feb 2026, valid to 31 Mar 2027; sukuk refinancing under discussion.", source: "2381_ARABIAN_DRILLING/2026_Q3_filed2026-11-08.pdf p.11"}
+  - {date: "2026-03 onward", category: "event", text: "The company reports that the customer suspended certain offshore rigs because of the regional conflict (Q1 2026), warned of risks from a continued closure of the Strait of Hormuz and threats to its drilling facilities, and found no impairment at 31 Mar or 30 Sep 2026.", source: "2381_ARABIAN_DRILLING/2026_Q1_filed2026-05-10.pdf p.11, p.15; 2381_ARABIAN_DRILLING/2026_Q3_filed2026-11-08.pdf p.11"}
+  - {date: "2026 (9M)", category: "strategy", text: "UAE (Sharjah) drilling branch started commercial operations.", source: "2381_ARABIAN_DRILLING/2026_Q3_filed2026-11-08.pdf p.11"}
+what_it_means:
+  improved: "Free cash flow turned positive in FY2025 (SAR 353m) and 9M 2026 (SAR 140m) as capex fell, and the land-rig segment result rose 5.3% in 9M 2026."
+  weakened: "Revenue fell 5.1% in FY2025 and 8.1% in 9M 2026, the operating margin dropped from 23.0% (FY2023) to 4.9% (FY2025), and attributable profit went from SAR 605m to a loss of SAR 75.3m."
+  why: "Saudi Aramco's 2024-2025 suspensions, terminations and non-renewals cut offshore revenue by 32.5% in FY2025, while higher depreciation (SAR 958m in FY2025), finance costs and impairments of SAR 105m and SAR 114m weighed on profit; 2026 brought further conflict-related offshore suspensions."
+  uncertain: "Rig counts and day rates are not disclosed, so the effect of new rigs cannot be separated from lost contracts, and refinancing of the SAR 2.0bn sukuk due in February 2027 was still under discussion at 30 Sep 2026."
+confidence_overall: "Medium"
+data_notes:
+  - "The dataset shows attributable profit growth FY2025/FY2024 of -123.4%; profit turned into a loss, so under METHODOLOGY s.1 it should read n.m. (absolute change -SAR 396.6m)."
+  - "Operating income equals the P&L subtotal before finance costs (FY2025 SAR 168.3m, p.10). EBITDA adds back the FY2024 and FY2025 impairments (SAR 105.0m, SAR 114.3m), so EBITDA excludes them while operating income includes them."
+  - "FY2024 capex is flagged R (SAR 1,910.3m vs 1,859.7m in the FY2024 XBRL); both annual reports show PP&E additions of SAR 1,859.7m plus intangible additions of SAR 50.6m, so the difference is the capex definition, not a restatement."
+  - "Total assets at 31 Dec 2025 are SAR 10,177.2m as re-presented in the 9M 2026 interim (SAR 10,089.4m in the FY2025 AFS) after mobilisation costs were grossed up (SAR 87.8m); no profit effect."
+  - "The impairment add-backs used for FY2022 and FY2023 EBITDA differ between filings (FY2022 SAR 20.6m vs 0.05m first reported; FY2023 nil vs SAR 15.0m) and were not verified; the effect on EBITDA is below 1.5%."
+  - "Primary statements are scanned; figures come from XBRL and the text notes, and the FY2025 P&L was checked visually."
