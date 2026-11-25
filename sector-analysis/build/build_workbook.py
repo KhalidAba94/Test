@@ -1,0 +1,738 @@
+"""Build the Excel workbook (live formulas tracing to the Data sheet).
+
+Usage: python build_workbook.py <root_dir> <out.xlsx>
+
+Conventions: blue = hard-coded inputs (Data, Adjustments), green = links to
+another sheet, black = formulas on the sheet. Missing values are blank,
+never zero. Partial-year (9M) columns are kept apart from full years.
+"""
+from __future__ import annotations
+
+import csv
+import json
+import os
+import sys
+
+import yaml
+from openpyxl import Workbook
+from openpyxl.chart import BarChart, LineChart, Reference
+from openpyxl.comments import Comment
+from openpyxl.styles import Alignment, Border, Font, PatternFill, Side
+from openpyxl.utils import get_column_letter
+from openpyxl.worksheet.datavalidation import DataValidation  # noqa: F401  (kept for template users)
+
+FONT = "Arial"
+BLUE, GREEN, BLACK, GREY, RED = "0000FF", "008000", "000000", "808080", "C00000"
+HDR_FILL = PatternFill("solid", fgColor="1F3864")
+SUB_FILL = PatternFill("solid", fgColor="D9E1F2")
+YTD_FILL = PatternFill("solid", fgColor="FFF2CC")
+OPEN_FILL = PatternFill("solid", fgColor="EDEDED")
+NOTE_FILL = PatternFill("solid", fgColor="F2F2F2")
+THIN = Side(style="thin", color="BFBFBF")
+BOX = Border(top=THIN, bottom=THIN, left=THIN, right=THIN)
+
+FY = ["FY2022", "FY2023", "FY2024", "FY2025"]
+YTD = ["9M2025", "9M2026"]
+PAIRS = [("FY2023", "FY2022"), ("FY2024", "FY2023"), ("FY2025", "FY2024"), ("9M2026", "9M2025")]
+NUM = '#,##0;(#,##0);"-"'
+NUM1 = '#,##0.0;(#,##0.0);"-"'
+PCT = '0.0%;(0.0%);"-"'
+PP = '+0.0" pp";-0.0" pp";"0.0 pp"'
+
+NAMES = {}
+
+
+def f(bold=False, color=BLACK, size=10, italic=False, underline=None):
+    return Font(name=FONT, bold=bold, color=color, size=size, italic=italic, underline=underline)
+
+
+def load_csv(path):
+    if not os.path.exists(path):
+        return []
+    return list(csv.DictReader(open(path, encoding="utf-8")))
+
+
+def load_yaml(path):
+    if not os.path.exists(path):
+        return {}
+    return yaml.safe_load(open(path, encoding="utf-8")) or {}
+
+
+def title(ws, text, sub=None):
+    ws["A1"] = text
+    ws["A1"].font = f(True, "1F3864", 14)
+    if sub:
+        ws["A2"] = sub
+        ws["A2"].font = f(False, GREY, 9, italic=True)
+    ws["A3"] = "◀ Contents"
+    ws["A3"].hyperlink = "#Contents!A1"
+    ws["A3"].font = f(color="0563C1", underline="single", size=9)
+
+
+def header_row(ws, row, values, start_col=1, fill=HDR_FILL, color="FFFFFF"):
+    for i, v in enumerate(values):
+        c = ws.cell(row=row, column=start_col + i, value=v)
+        c.font = f(True, color, 9)
+        c.fill = fill
+        c.alignment = Alignment(horizontal="center", vertical="center", wrap_text=True)
+        c.border = BOX
+
+
+def section(ws, row, text, ncols=12):
+    c = ws.cell(row=row, column=1, value=text)
+    c.font = f(True, "1F3864", 11)
+    for col in range(1, ncols + 1):
+        ws.cell(row=row, column=col).fill = SUB_FILL
+    return row + 1
+
+
+def para(ws, row, text, ncols=12, height=None, bold=False, color=BLACK, fill=None):
+    ws.merge_cells(start_row=row, start_column=1, end_row=row, end_column=ncols)
+    c = ws.cell(row=row, column=1, value=text)
+    c.alignment = Alignment(wrap_text=True, vertical="top")
+    c.font = f(bold, color, 9)
+    if fill:
+        c.fill = fill
+    if height is None:
+        height = max(15, 13 * (len(str(text)) // 150 + 1))
+    ws.row_dimensions[row].height = height
+    return row + 1
+
+
+def lookup(key):
+    return f'=IFERROR(INDEX(Data!$G:$G,MATCH("{key}",Data!$A:$A,0)),"")'
+
+
+def growth_formula(cur, pri):
+    return f'=IF(AND(ISNUMBER({cur}),ISNUMBER({pri})),IF({pri}>0,{cur}/{pri}-1,"n.m."),"")'
+
+
+# ---------------------------------------------------------------- sheets
+
+def build_data(wb, facts):
+    ws = wb.create_sheet("Data")
+    title(ws, "Data: every figure used, with its source", "One row per company x period x metric. Values in SAR million. "
+          "Provenance: D = disclosed, R = restated comparative used, C = calculated (formula in 'Location'). Blue = input.")
+    cols = ["fact_id", "sector", "ticker", "company", "period", "metric_code", "value_sar_m", "provenance",
+            "source_id (archive file)", "location (XBRL row / PDF page / formula)", "PDF checked", "PDF match status",
+            "PDF page(s)", "line item label", "originally reported (SAR m)", "original source", "assurance", "note"]
+    header_row(ws, 5, cols)
+    r = 6
+    for x in facts:
+        vals = [x["fact_id"], x["sector"], x["ticker"], x["company"], x["period"], x["metric_code"],
+                float(x["value_sar_m"]) if x["value_sar_m"] not in ("", None) else None, x["provenance"],
+                x["source_id"], x["location"], x.get("pdf_file", ""), x.get("pdf_status", ""), x.get("pdf_pages", ""),
+                x.get("line_item_label", ""), float(x["original_value"]) if x.get("original_value") not in ("", None) else None,
+                x.get("original_source", ""), x.get("assurance", ""), x.get("note", "")]
+        for i, v in enumerate(vals, start=1):
+            if isinstance(v, str) and v.startswith("="):
+                v = "formula: " + v[1:].strip()
+            c = ws.cell(row=r, column=i, value=v)
+            c.font = f(color=BLUE if i == 7 else BLACK, size=9)
+            if i in (7, 15):
+                c.number_format = NUM1
+        r += 1
+    widths = [22, 8, 7, 28, 9, 12, 13, 6, 44, 40, 34, 14, 10, 40, 13, 40, 9, 40]
+    for i, w in enumerate(widths, start=1):
+        ws.column_dimensions[get_column_letter(i)].width = w
+    ws.freeze_panes = "A6"
+    ws.auto_filter.ref = f"A5:{get_column_letter(len(cols))}{r - 1}"
+    return ws
+
+
+def company_rows(sector):
+    if sector == "Energy":
+        rows = [("REV", "Revenue", "val"), ("REV", "  growth YoY", "growth"), ("OIRS", "Other income related to sales*", "val"),
+                ("REV_OIRS", "Revenue incl. other income related to sales*", "val"), ("GP", "Gross profit", "val"),
+                ("OPINC", "Operating income", "val"), ("EBITDA_C", "EBITDA (calculated)", "val"),
+                ("NI_ATTR", "Net profit attributable to shareholders", "val"), ("NI_ATTR", "  growth YoY", "growth"),
+                ("CFO", "Operating cash flow", "val"), ("CAPEX", "Capex", "val"), ("FCF", "Free cash flow (C)", "val"),
+                ("TA", "Total assets (period-end)", "val"), ("EQ_ATTR", "Equity attributable (period-end)", "val")]
+        ratios = [("EBITDA margin", "EBITDA_C", "REV", False), ("Operating margin", "OPINC", "REV", False),
+                  ("Net margin", "NI_ATTR", "REV", False), ("ROE (YTD annualised)", "NI_ATTR", "EQ_ATTR", True),
+                  ("Capex / revenue", "CAPEX", "REV", False)]
+    else:
+        rows = [("TOI", "Total operating income (TOI)", "val"), ("TOI", "  growth YoY", "growth"),
+                ("NSCI", "Net special commission / financing income", "val"), ("FEES_NET", "Net fee & commission income", "val"),
+                ("OTHER_OI", "Other operating income (C)", "val"), ("OPEX_PRE", "Operating expenses before impairment", "val"),
+                ("PPOP", "Pre-provision operating profit (C)", "val"), ("IMPAIR_TOTAL", "Impairment charges (total)", "val"),
+                ("IMPAIR_FIN", "  of which on financing (ECL)", "val"), ("NI_ATTR", "Net profit attributable to shareholders", "val"),
+                ("NI_ATTR", "  growth YoY", "growth"), ("TA", "Total assets (period-end)", "val"),
+                ("LOANS", "Net financing (period-end)", "val"), ("DEPOSITS", "Customer deposits (period-end)", "val"),
+                ("EQ_ATTR", "Equity attributable incl. Tier 1 sukuk", "val"), ("T1_SUKUK", "Tier 1 sukuk (period-end)", "val"),
+                ("T1_COST", "Tier 1 sukuk distributions", "val"), ("EQ_ORD", "Ordinary equity (C)", "val")]
+        ratios = [("Cost-to-income", "OPEX_PRE", "TOI", False), ("ROE on ordinary equity (YTD annualised)", "NI_ATTR-T1_COST", "EQ_ORD", True),
+                  ("ROA (YTD annualised)", "NI_ATTR", "TA", True), ("Cost of risk (YTD annualised)", "IMPAIR_FIN", "LOANS", True),
+                  ("NSCI / avg assets (YTD annualised)", "NSCI", "TA", True), ("Net fees / TOI", "FEES_NET", "TOI", False),
+                  ("Loans / deposits", "LOANS", "DEPOSITS", False)]
+    return rows, ratios
+
+
+PCOL = {"FY2021": "B", "FY2022": "C", "FY2023": "D", "FY2024": "E", "FY2025": "F", "9M2025": "I", "9M2026": "J"}
+OPENING = {"FY2022": "FY2021", "FY2023": "FY2022", "FY2024": "FY2023", "FY2025": "FY2024", "9M2025": "FY2024", "9M2026": "FY2025"}
+
+
+def build_company(wb, sector, t, cfg, ds, narr, adj_rows, facts_idx, sheetname, sector_sheet):
+    ws = wb.create_sheet(sheetname)
+    cinfo = ds["companies"][t]
+    top = cfg["top_line"]
+    title(ws, f'{cinfo["name"]} ({t}) · {sector} · {cinfo["sub_industry"]}',
+          f'Legal name in filings: {cinfo["legal_name"]} · Year-end 31 Dec · SAR million unless stated · '
+          f'2026 YTD = 9M (1 Jan–30 Sep 2026) vs 9M 2025, never compared with full years.')
+    c = ws["C3"]; c.value = f"◀ {sector} sector"; c.hyperlink = f"#'{sector_sheet}'!A1"; c.font = f(color="0563C1", underline="single", size=9)
+    ws.column_dimensions["A"].width = 46
+    for col in "BCDEFGIJK":
+        ws.column_dimensions[col].width = 12
+    ws.column_dimensions["H"].width = 2
+    ws.column_dimensions["L"].width = 60
+    r = 5
+    r = section(ws, r, "A. Annual trends and comparable 2026 YTD (SAR m)")
+    header_row(ws, r, ["Metric", "FY2021 (opening)", "FY2022", "FY2023", "FY2024", "FY2025", "CAGR 2022–25", "",
+                       "9M 2025", "9M 2026", "YTD change", "Basis / provenance (FY2025 · 9M 2026)"])
+    ws.cell(row=r, column=8).fill = PatternFill(None)
+    r += 1
+    rows, ratios = company_rows(sector)
+    rowmap = {}
+    for code, label, kind in rows:
+        has = any((t, p, code) in facts_idx for p in PCOL)
+        if not has and code in ("OIRS", "REV_OIRS", "GP", "T1_COST", "T1_SUKUK"):
+            continue
+        ws.cell(row=r, column=1, value=label).font = f(kind == "val" and not label.startswith("  "), size=9)
+        if kind == "val":
+            rowmap[code] = r
+            for p, col in PCOL.items():
+                if p == "FY2021" and code not in ("TA", "EQ_ATTR", "LOANS", "EQ_ORD", "T1_SUKUK", "DEPOSITS"):
+                    ws[f"{col}{r}"].fill = OPEN_FILL
+                    continue
+                cell = ws[f"{col}{r}"]
+                cell.value = lookup(f"{t}-{p}-{code}")
+                cell.number_format = NUM
+                cell.font = f(color=GREEN, size=9)
+                if p.startswith("9M"):
+                    cell.fill = YTD_FILL
+                if p == "FY2021":
+                    cell.fill = OPEN_FILL
+                fx = facts_idx.get((t, p, code))
+                if fx and (fx["provenance"] in ("R", "C") or fx.get("note")):
+                    txt = {"R": "Restated comparative used", "C": "Calculated"}.get(fx["provenance"], "")
+                    if fx["provenance"] == "R" and fx.get("original_value") not in ("", None):
+                        txt += f' (originally {float(fx["original_value"]):,.1f} in {fx["original_source"]})'
+                    if fx["provenance"] == "C":
+                        txt += f': {fx["location"]}'
+                    if fx.get("note"):
+                        txt += " " + fx["note"]
+                    cell.comment = Comment(txt[:900], "analysis")
+            ws[f"G{r}"] = f'=IF(AND(ISNUMBER(F{r}),ISNUMBER(C{r})),IF(AND(C{r}>0,F{r}>0),(F{r}/C{r})^(1/3)-1,"n.m."),"")'
+            ws[f"G{r}"].number_format = PCT
+            ws[f"K{r}"] = growth_formula(f"J{r}", f"I{r}")
+            ws[f"K{r}"].number_format = PCT
+            ws[f"K{r}"].fill = YTD_FILL
+            prov = []
+            for p in ("FY2025", "9M2026"):
+                fx = facts_idx.get((t, p, code))
+                if fx:
+                    loc = fx.get("pdf_pages") and f'PDF p.{fx["pdf_pages"]}' or fx["location"]
+                    prov.append(f'{p}: {fx["provenance"]} · {fx["source_id"].split("/")[-1]} · {loc}')
+            ws[f"L{r}"] = " | ".join(prov)
+            ws[f"L{r}"].font = f(color=GREY, size=8)
+        else:
+            vr = rowmap[code]
+            for p in ("FY2023", "FY2024", "FY2025"):
+                prev = {"FY2023": "FY2022", "FY2024": "FY2023", "FY2025": "FY2024"}[p]
+                ws[f"{PCOL[p]}{r}"] = growth_formula(f"{PCOL[p]}{vr}", f"{PCOL[prev]}{vr}")
+                ws[f"{PCOL[p]}{r}"].number_format = PCT
+            for col in "CDEFGIJK":
+                ws[f"{col}{r}"].font = f(italic=True, size=9)
+        r += 1
+    r += 1
+    ws.cell(row=r, column=1, value="Ratios (calculated from the rows above; averages = (opening + closing) ÷ 2)").font = f(True, size=9)
+    r += 1
+    for label, num, den, avg in ratios:
+        if "-" in num:
+            a, b = num.split("-")
+            if a not in rowmap:
+                continue
+            numexpr = lambda col, a=a, b=b: (f"({col}{rowmap[a]}-N({col}{rowmap[b]}))" if b in rowmap else f"{col}{rowmap[a]}")
+        else:
+            if num not in rowmap:
+                continue
+            numexpr = lambda col, num=num: f"{col}{rowmap[num]}"
+        if den not in rowmap:
+            continue
+        ws.cell(row=r, column=1, value=label).font = f(size=9)
+        for p in ["FY2022", "FY2023", "FY2024", "FY2025", "9M2025", "9M2026"]:
+            col = PCOL[p]
+            n = numexpr(col)
+            ann = "*12/9" if p.startswith("9M") and avg else ""
+            if avg:
+                oc = PCOL[OPENING[p]]
+                d = f"AVERAGE({col}{rowmap[den]},{oc}{rowmap[den]})"
+                cond = f"AND(ISNUMBER({col}{rowmap[den]}),ISNUMBER({oc}{rowmap[den]}),ISNUMBER({col}{rowmap[num.split('-')[0]]}))"
+            else:
+                d = f"{col}{rowmap[den]}"
+                cond = f"AND(ISNUMBER({col}{rowmap[den]}),ISNUMBER({col}{rowmap[num.split('-')[0]]}))"
+            ws[f"{col}{r}"] = f'=IF({cond},IF({d}<>0,{n}{ann}/{d},""),"")'
+            ws[f"{col}{r}"].number_format = PCT
+            ws[f"{col}{r}"].font = f(size=9)
+            if p.startswith("9M"):
+                ws[f"{col}{r}"].fill = YTD_FILL
+        r += 1
+    ws.cell(row=r, column=1, value="* Aramco only: other income related to sales is government compensation for regulated domestic prices; sector revenue uses IFRS revenue only.").font = f(italic=True, color=GREY, size=8)
+    r += 2
+
+    # ---------------- B. growth bridge
+    r = section(ws, r, f"B. Reported vs like-for-like growth of {cfg['top_line_name'].lower()} (percentage points of prior-period {cfg['top_line_name'].lower()})")
+    comps = [f"{a}/{b}" for a, b in PAIRS]
+    header_row(ws, r, ["Bridge step", "FY23 vs FY22", "FY24 vs FY23", "FY25 vs FY24", "9M26 vs 9M25"], start_col=1)
+    ws.cell(row=r, column=6, value="Adjustment basis (see Adjustments sheet)").font = f(True, size=9)
+    r += 1
+    toprow = rowmap.get(top)
+    colpairs = [("D", "C"), ("E", "D"), ("F", "E"), ("J", "I")]
+    steps = [("perimeter", "Perimeter (acquisitions / disposals)"), ("fx", "FX translation"),
+             ("hyperinflation", "Hyperinflation (IAS 29)"), ("accounting_other", "Accounting / presentation / other"),
+             ("new_capacity", "New capacity (organic expansion)")]
+    rep_row = r
+    ws.cell(row=r, column=1, value="Reported growth").font = f(True, size=9)
+    for i, (cc, pc) in enumerate(colpairs):
+        ws.cell(row=r, column=2 + i, value=growth_formula(f"{cc}{toprow}", f"{pc}{toprow}")).number_format = PCT
+    r += 1
+    step_rows = {}
+    for key, label in steps:
+        ws.cell(row=r, column=1, value=f"  less: {label}").font = f(size=9)
+        step_rows[key] = r
+        for i, comp in enumerate(comps):
+            pc = colpairs[i][1]
+            amt = f'SUMIFS(Adjustments!$F:$F,Adjustments!$B:$B,"{t}",Adjustments!$C:$C,"{comp}",Adjustments!$D:$D,"{key}")'
+            nd = f'COUNTIFS(Adjustments!$B:$B,"{t}",Adjustments!$C:$C,"{comp}",Adjustments!$D:$D,"{key}",Adjustments!$G:$G,"not determinable")'
+            ws.cell(row=r, column=2 + i, value=f'=IF({nd}>0,"not determinable",IF(AND(ISNUMBER({pc}{toprow}),N({pc}{toprow})>0),{amt}/{pc}{toprow},""))').number_format = PCT
+        r += 1
+    org_row = r
+    ws.cell(row=r, column=1, value="Organic growth").font = f(True, size=9)
+    for i in range(4):
+        col = get_column_letter(2 + i)
+        pre = [f"{col}{step_rows[k]}" for k in ("perimeter", "fx", "hyperinflation", "accounting_other")]
+        ws.cell(row=r, column=2 + i, value=f'=IF(OR({",".join(f"ISTEXT({x})" for x in pre)}),"not determinable",IF(ISNUMBER({col}{rep_row}),{col}{rep_row}-{"-".join(pre)},""))').number_format = PCT
+    r += 1
+    ws.cell(row=r, column=1, value="Like-for-like growth (existing business)").font = f(True, size=9)
+    for i in range(4):
+        col = get_column_letter(2 + i)
+        ws.cell(row=r, column=2 + i, value=f'=IF(OR(ISTEXT({col}{org_row}),ISTEXT({col}{step_rows["new_capacity"]})),"not determinable",IF(ISNUMBER({col}{org_row}),{col}{org_row}-{col}{step_rows["new_capacity"]},""))').number_format = PCT
+        ws.cell(row=r, column=2 + i).fill = SUB_FILL
+    r += 1
+    lfl = narr.get("lfl_basis", {}) or {}
+    for lab, keyn in (("LFL definition used", "definition_used"), ("Price / volume split", "price_volume_support"),
+                      ("FX exposure", "fx_exposure"), ("Confidence", "confidence")):
+        ws.cell(row=r, column=1, value=lab).font = f(True, size=9)
+        ws.merge_cells(start_row=r, start_column=2, end_row=r, end_column=12)
+        ws.cell(row=r, column=2, value=str(lfl.get(keyn, "pending")))
+        ws.cell(row=r, column=2).alignment = Alignment(wrap_text=True, vertical="top")
+        ws.cell(row=r, column=2).font = f(size=9)
+        ws.row_dimensions[r].height = max(15, 13 * (len(str(lfl.get(keyn, ""))) // 140 + 1))
+        r += 1
+    pv = narr.get("price_volume", []) or []
+    if pv:
+        ws.cell(row=r, column=1, value="Price / volume / rate effects (where supported)").font = f(True, size=9)
+        r += 1
+        for item in pv:
+            r = para(ws, r, f'• {item.get("period", "")}: {item.get("text", "")} [{item.get("basis", "")}; confidence {item.get("confidence", "")}; {item.get("source", "")}]')
+    r += 1
+
+    # ---------------- C. profit & margin drivers
+    r = section(ws, r, "C. Profit and margin changes, including material one-offs")
+    pm = narr.get("profit_and_margin", {}) or {}
+    for d in pm.get("drivers", []) or []:
+        r = para(ws, r, f'• {d.get("period", "")}: {d.get("driver", "")}  [{d.get("source", "")}]')
+    ones = pm.get("one_offs", []) or []
+    if ones:
+        header_row(ws, r, ["One-off item", "Period", "Amount SAR m", "P&L line", "Source"], fill=SUB_FILL, color=BLACK)
+        r += 1
+        for o in ones:
+            ws.cell(row=r, column=1, value=o.get("item", "")).font = f(size=9)
+            ws.cell(row=r, column=1).alignment = Alignment(wrap_text=True)
+            ws.cell(row=r, column=2, value=o.get("period", "")).font = f(size=9)
+            amt = o.get("amount_sar_m")
+            c = ws.cell(row=r, column=3, value=amt if isinstance(amt, (int, float)) else None)
+            c.number_format = NUM1; c.font = f(color=BLUE, size=9)
+            ws.cell(row=r, column=4, value=o.get("line", "")).font = f(size=9)
+            ws.cell(row=r, column=5, value=o.get("source", "")).font = f(color=GREY, size=8)
+            ws.row_dimensions[r].height = 26
+            r += 1
+    if not pm:
+        r = para(ws, r, "Pending.")
+    r += 1
+    # ---------------- D. developments
+    r = section(ws, r, "D. Key developments: operations, capacity, acquisitions, strategy, business mix")
+    devs = narr.get("developments", []) or []
+    if devs:
+        header_row(ws, r, ["Development", "Date", "Category"], fill=SUB_FILL, color=BLACK)
+        ws.cell(row=r, column=4, value="Source").font = f(True, size=9)
+        r += 1
+        for d in devs:
+            ws.cell(row=r, column=1, value=d.get("text", "")).font = f(size=9)
+            ws.cell(row=r, column=1).alignment = Alignment(wrap_text=True, vertical="top")
+            ws.cell(row=r, column=2, value=str(d.get("date", ""))).font = f(size=9)
+            ws.cell(row=r, column=3, value=d.get("category", "")).font = f(size=9)
+            ws.merge_cells(start_row=r, start_column=4, end_row=r, end_column=12)
+            ws.cell(row=r, column=4, value=d.get("source", "")).font = f(color=GREY, size=8)
+            ws.row_dimensions[r].height = max(26, 13 * (len(d.get("text", "")) // 55 + 1))
+            r += 1
+    else:
+        r = para(ws, r, "Pending.")
+    r += 1
+    # ---------------- E. what it means
+    r = section(ws, r, "E. What it means")
+    wim = narr.get("what_it_means", {}) or {}
+    for lab in ("improved", "weakened", "why", "uncertain"):
+        if wim.get(lab):
+            r = para(ws, r, f"{lab.capitalize()}: {wim[lab]}")
+    if narr.get("confidence_overall"):
+        r = para(ws, r, f'Overall confidence: {narr["confidence_overall"]}', bold=True)
+    r += 1
+    # ---------------- F. data notes
+    r = section(ws, r, "F. Data quality notes for this company")
+    for n in narr.get("data_notes", []) or []:
+        r = para(ws, r, "• " + n)
+    ws.freeze_panes = "B7"
+    return ws
+
+
+def build_sector(wb, sector, cfg, ds, narr, comp_sheets):
+    sname = f"{sector}_Sector"
+    ws = wb.create_sheet(sname, 4 if sector == "Energy" else 5)
+    tickers = ds["tickers"]
+    top, prof = cfg["top_line"], cfg["profit"]
+    largest = ds["sector"]["largest_by_top_line_FY2025"]
+    title(ws, f"{sector} sector summary, FY2022–FY2025 and 9M 2026",
+          f"SAR million. Sector ratios are calculated from summed numerators and denominators, never averaged. "
+          f"Sector growth uses a matched sample (companies with data in both periods). 9M columns are partial-year and "
+          f"compared only with 9M 2025. Constituents: {len(tickers)} companies. {cfg.get('classification_note', '')}")
+    ws.column_dimensions["A"].width = 42
+    for col in "BCDEFGHIJKL":
+        ws.column_dimensions[col].width = 12
+    periods = ["FY2021", "FY2022", "FY2023", "FY2024", "FY2025", "9M2025", "9M2026"]
+    pc = {p: get_column_letter(2 + i) for i, p in enumerate(periods)}   # B..H
+
+    # calc block at the bottom: matrices for each needed metric
+    needed = {top, prof}
+    for rk, spec in cfg["ratios"].items():
+        for part in (spec[0], spec[1].replace("avg:", "")):
+            for m in part.split("-"):
+                needed.add(m)
+    needed |= {"EBITDA_C", "OPINC", "CAPEX", "FCF"} if sector == "Energy" else {"NSCI", "FEES_NET", "OPEX_PRE", "IMPAIR_TOTAL", "PPOP"}
+    needed = [m for m in needed if m]
+    base = 200
+    mat = {}
+    r = base
+    ws.cell(row=r - 1, column=1, value="Calculation block: company x period matrices pulled from Data (inputs to the tables above)").font = f(True, GREY, 9)
+    for m in sorted(needed):
+        header_row(ws, r, [m] + periods, fill=SUB_FILL, color=BLACK)
+        r += 1
+        first = r
+        for t in tickers:
+            ws.cell(row=r, column=1, value=f'{ds["companies"][t]["name"]} ({t})').font = f(size=9)
+            for p in periods:
+                c = ws[f"{pc[p]}{r}"]
+                c.value = lookup(f"{t}-{p}-{m}")
+                c.number_format = NUM
+                c.font = f(color=GREEN, size=9)
+            r += 1
+        mat[m] = (first, r - 1)
+        r += 1
+
+    def rng(m, p, exclude=None):
+        a, b = mat[m]
+        col = pc[p]
+        return f"{col}{a}:{col}{b}"
+
+    def row_of(m, t):
+        return mat[m][0] + tickers.index(t)
+
+    r = 5
+    sec_rows = {}
+
+    def totals_block(r, label, excl=None):
+        r = section(ws, r, label, 12)
+        header_row(ws, r, ["", "FY2022", "FY2023", "FY2024", "FY2025", "CAGR 2022–25", "", "9M 2025", "9M 2026", "YTD change", "Companies in total"])
+        r += 1
+        cols = {"FY2022": "B", "FY2023": "C", "FY2024": "D", "FY2025": "E", "9M2025": "H", "9M2026": "I"}
+        out = {}
+        for m, lab in ((top, cfg["top_line_name"]), (prof, "Net profit attributable to shareholders")):
+            ws.cell(row=r, column=1, value=lab).font = f(True, size=9)
+            for p, col in cols.items():
+                a, b = mat[m]
+                if excl:
+                    i = row_of(m, excl)
+                    formula = f"=SUM({pc[p]}{a}:{pc[p]}{b})-N({pc[p]}{i})"
+                else:
+                    formula = f"=SUM({pc[p]}{a}:{pc[p]}{b})"
+                ws[f"{col}{r}"] = formula
+                ws[f"{col}{r}"].number_format = NUM
+                if p.startswith("9M"):
+                    ws[f"{col}{r}"].fill = YTD_FILL
+            ws[f"K{r}"] = f'=SUMPRODUCT(--ISNUMBER({rng(m, "FY2025")}))' + (f"-ISNUMBER({pc['FY2025']}{row_of(m, excl)})" if excl else "")
+            vr = r
+            out[m] = vr
+            r += 1
+            ws.cell(row=r, column=1, value="  growth (matched sample)").font = f(italic=True, size=9)
+            for cur, pri in PAIRS:
+                col = cols[cur]
+                cr, prr = rng(m, cur), rng(m, pri)
+                a, b = mat[m]
+                if excl:
+                    i = row_of(m, excl)
+                    mask = f"--ISNUMBER({cr}),--ISNUMBER({prr}),--(ROW({cr})<>{i})"
+                else:
+                    mask = f"--ISNUMBER({cr}),--ISNUMBER({prr})"
+                ws[f"{col}{r}"] = f'=IFERROR(IF(SUMPRODUCT({mask},{prr})>0,SUMPRODUCT({mask},{cr})/SUMPRODUCT({mask},{prr})-1,"n.m."),"n.m.")'
+                ws[f"{col}{r}"].number_format = PCT
+                if cur.startswith("9M"):
+                    ws[f"{col}{r}"].fill = YTD_FILL
+            # CAGR on matched FY2022/FY2025 sample
+            c25, c22 = rng(m, "FY2025"), rng(m, "FY2022")
+            mask = f"--ISNUMBER({c25}),--ISNUMBER({c22})" + (f",--(ROW({c25})<>{row_of(m, excl)})" if excl else "")
+            ws[f"F{vr}"] = f'=IFERROR(IF(AND(SUMPRODUCT({mask},{c22})>0,SUMPRODUCT({mask},{c25})>0),(SUMPRODUCT({mask},{c25})/SUMPRODUCT({mask},{c22}))^(1/3)-1,"n.m."),"n.m.")'
+            ws[f"F{vr}"].number_format = PCT
+            ws[f"J{vr}"] = f'=IF(ISNUMBER(I{r}),I{r},"n.m.")'
+            ws[f"J{vr}"].number_format = PCT
+            ws[f"J{vr}"].fill = YTD_FILL
+            ws[f"I{r}"].fill = YTD_FILL
+            r += 1
+        # ratios from totals
+        for rk, spec in cfg["ratios"].items():
+            ws.cell(row=r, column=1, value=spec[2]).font = f(size=9)
+            for p, col in cols.items():
+                nparts = spec[0].split("-")
+                dm = spec[1].replace("avg:", "")
+                avg = spec[1].startswith("avg:")
+                masks = [f"--ISNUMBER({rng(nparts[0], p)})", f"--ISNUMBER({rng(dm, p)})"]
+                if avg:
+                    masks.append(f"--ISNUMBER({rng(dm, OPENING[p])})")
+                if excl:
+                    masks.append(f"--(ROW({rng(nparts[0], p)})<>{row_of(nparts[0], excl)})")
+                mk = ",".join(masks)
+                # ROW() offsets differ per matrix: build masks on aligned matrices only (same ticker order)
+                num = f"SUMPRODUCT({mk},{rng(nparts[0], p)})"
+                if len(nparts) > 1:
+                    num += f"-SUMPRODUCT({mk},{rng(nparts[1], p)})"
+                if avg:
+                    den = f"(SUMPRODUCT({mk},{rng(dm, p)})+SUMPRODUCT({mk},{rng(dm, OPENING[p])}))/2"
+                    ann = "*12/9" if p.startswith("9M") else ""
+                else:
+                    den, ann = f"SUMPRODUCT({mk},{rng(dm, p)})", ""
+                ws[f"{col}{r}"] = f'=IFERROR(({num}){ann}/({den}),"")'
+                ws[f"{col}{r}"].number_format = PCT
+                if p.startswith("9M"):
+                    ws[f"{col}{r}"].fill = YTD_FILL
+            r += 1
+        return r + 1, out
+
+    r, sec_rows = totals_block(r, f"1. Sector totals: all {len(tickers)} companies")
+    lname = ds["companies"][largest]["name"]
+    r, _ = totals_block(r, f"2. Excluding the largest company ({lname}, largest by FY2025 {cfg['top_line_name'].lower()})", excl=largest)
+
+    # 3. company contributions
+    r = section(ws, r, "3. Company contribution: share of sector and contribution to sector growth")
+    for m, lab in ((top, cfg["top_line_name"]), (prof, "Net profit attributable")):
+        header_row(ws, r, [f"{lab}: share of sector", "FY2022", "FY2023", "FY2024", "FY2025", "", "", "9M 2025", "9M 2026"])
+        r += 1
+        for t in tickers:
+            nm = ds["companies"][t]["name"]
+            c = ws.cell(row=r, column=1, value=nm)
+            c.hyperlink = f"#'{comp_sheets[t]}'!A1"
+            c.font = f(color="0563C1", underline="single", size=9)
+            for p, col in (("FY2022", "B"), ("FY2023", "C"), ("FY2024", "D"), ("FY2025", "E"), ("9M2025", "H"), ("9M2026", "I")):
+                i = row_of(m, t)
+                ws[f"{col}{r}"] = f'=IF(ISNUMBER({pc[p]}{i}),{pc[p]}{i}/SUM({rng(m, p)}),"")'
+                ws[f"{col}{r}"].number_format = PCT
+            r += 1
+        header_row(ws, r, [f"{lab}: contribution to sector growth (pp)", "FY23 vs FY22", "FY24 vs FY23", "FY25 vs FY24", "", "", "", "", "9M26 vs 9M25"])
+        r += 1
+        for t in tickers:
+            ws.cell(row=r, column=1, value=ds["companies"][t]["name"]).font = f(size=9)
+            for (cur, pri), col in zip(PAIRS, ("B", "C", "D", "I")):
+                i = row_of(m, t)
+                cr, prr = rng(m, cur), rng(m, pri)
+                ws[f"{col}{r}"] = (f'=IF(AND(ISNUMBER({pc[cur]}{i}),ISNUMBER({pc[pri]}{i})),'
+                                   f'({pc[cur]}{i}-{pc[pri]}{i})/SUMPRODUCT(--ISNUMBER({cr}),--ISNUMBER({prr}),{prr}),"")')
+                ws[f"{col}{r}"].number_format = PCT
+            r += 1
+        r += 1
+    # HHI
+    ws.cell(row=r, column=1, value=f"Concentration (HHI, 0–10,000) of {cfg['top_line_name'].lower()}").font = f(size=9)
+    for p, col in (("FY2022", "B"), ("FY2023", "C"), ("FY2024", "D"), ("FY2025", "E"), ("9M2025", "H"), ("9M2026", "I")):
+        rg = rng(top, p)
+        ws[f"{col}{r}"] = f'=IFERROR(SUMSQ({rg})/SUM({rg})^2*10000,"")'
+        ws[f"{col}{r}"].number_format = "#,##0"
+    hhi_row = r
+    r += 2
+
+    # 4. narrative
+    r = section(ws, r, "4. Main changes since 2022 and their drivers")
+    for d in narr.get("main_changes", []) or []:
+        r = para(ws, r, f'• {d.get("change", "")} Driver: {d.get("driver", "")}  [{d.get("evidence", "")}]')
+    r += 1
+    r = section(ws, r, "5. Takeaways")
+    tk = narr.get("takeaways", {}) or {}
+    for lab in ("improved", "weakened", "why", "concentration", "ytd_2026", "uncertain"):
+        if tk.get(lab):
+            r = para(ws, r, f'{lab.replace("_", " ").capitalize()}: {tk[lab]}')
+    r += 1
+    r = section(ws, r, "6. Charts (full years and 9M shown in separate charts)")
+    chart_row = r
+    # charts from calc block
+    a, b = mat[top]
+    ch = BarChart(); ch.type = "col"; ch.grouping = "stacked"; ch.overlap = 100
+    ch.title = f"{cfg['top_line_name']} by company, FY2022–FY2025 (SAR m)"
+    for t in tickers:
+        i = row_of(top, t)
+        ref = Reference(ws, min_col=3, max_col=6, min_row=i, max_row=i)
+        ch.add_data(ref, from_rows=True, titles_from_data=False)
+        ch.series[-1].tx = None
+    from openpyxl.chart.series import SeriesLabel
+    for s, t in zip(ch.series, tickers):
+        s.tx = SeriesLabel(v=ds["companies"][t]["name"])
+    ch.set_categories(Reference(ws, min_col=3, max_col=6, min_row=a - 1, max_row=a - 1))
+    _fix_chart(ch); ch.height, ch.width = 8, 16
+    ws.add_chart(ch, f"A{chart_row}")
+    a2, b2 = mat[prof]
+    ch2 = BarChart(); ch2.type = "col"; ch2.grouping = "clustered"
+    ch2.title = "Net profit attributable: 9M 2025 vs 9M 2026 (partial year, SAR m)"
+    for p, col in (("9M2025", 7), ("9M2026", 8)):
+        ref = Reference(ws, min_col=col, max_col=col, min_row=a2 - 1, max_row=b2)
+        ch2.add_data(ref, titles_from_data=True)
+    ch2.set_categories(Reference(ws, min_col=1, max_col=1, min_row=a2, max_row=b2))
+    _fix_chart(ch2); ch2.height, ch2.width = 8, 16
+    ws.add_chart(ch2, f"G{chart_row}")
+    ws.freeze_panes = "B5"
+    return ws, sname
+
+
+def _fix_chart(ch):
+    ch.roundedCorners = False
+    if ch.legend is not None:
+        ch.legend.overlay = False
+        ch.legend.position = "b"
+    try:
+        ch.x_axis.delete = False
+        ch.y_axis.delete = False
+        ch.y_axis.numFmt = "#,##0"
+        ch.y_axis.majorGridlines = None
+    except AttributeError:
+        pass
+
+
+def simple_table(wb, name, heading, sub, rows, cols, widths=None, index=None, blue_cols=()):
+    ws = wb.create_sheet(name) if index is None else wb.create_sheet(name, index)
+    title(ws, heading, sub)
+    header_row(ws, 5, [c for c in cols])
+    r = 6
+    for x in rows:
+        for i, c in enumerate(cols, start=1):
+            v = x.get(c, "")
+            try:
+                if c in blue_cols and v not in ("", None):
+                    v = float(v)
+            except ValueError:
+                pass
+            cell = ws.cell(row=r, column=i, value=v)
+            cell.font = f(color=BLUE if c in blue_cols else BLACK, size=9)
+            cell.alignment = Alignment(wrap_text=True, vertical="top")
+        r += 1
+    for i, w in enumerate(widths or [], start=1):
+        ws.column_dimensions[get_column_letter(i)].width = w
+    ws.freeze_panes = "A6"
+    if rows:
+        ws.auto_filter.ref = f"A5:{get_column_letter(len(cols))}{r - 1}"
+    return ws
+
+
+def main(root, out):
+    ds = json.load(open(os.path.join(root, "data", "dataset.json")))
+    cfg_all = json.load(open(os.path.join(root, "config", "sectors.json")))
+    facts = load_csv(os.path.join(root, "data", "energy", "facts.csv")) + load_csv(os.path.join(root, "data", "banks", "facts.csv"))
+    facts_idx = {(x["ticker"], x["period"], x["metric_code"]): x for x in facts}
+    adj = load_csv(os.path.join(root, "data", "adjustments.csv"))
+    wb = Workbook()
+    wb.remove(wb.active)
+    contents = wb.create_sheet("Contents")
+    build_data(wb, facts)
+    # Adjustments sheet: columns A..M fixed (B ticker, C comparison, D step, F amount, G basis)
+    adj_cols = ["adj_id", "ticker", "comparison", "bridge_step", "metric_affected", "amount_sar_m", "basis", "method",
+                "assumptions", "source", "page", "confidence", "notes"]
+    simple_table(wb, "Adjustments", "Adjustments register: like-for-like bridge inputs",
+                 "Each row moves reported growth towards like-for-like. amount_sar_m = contribution to the change in the top line "
+                 "(positive = added growth). basis: disclosed | calculated | estimated | not determinable. Blue = input.",
+                 adj, adj_cols, [9, 7, 14, 16, 10, 12, 14, 50, 40, 40, 8, 10, 40], blue_cols=("amount_sar_m",))
+    comp_sheets = {}
+    for sector in ("Energy", "Banks"):
+        for t in ds[sector]["tickers"]:
+            short = ds[sector]["companies"][t]["name"].split(" (")[0].replace(" ", "")[:14]
+            comp_sheets[t] = f"{sector[0]}_{t}_{short}"
+    for sector in ("Energy", "Banks"):
+        cfg = cfg_all[sector]
+        sec_narr = load_yaml(os.path.join(root, "data", "narratives", f"sector_{sector.lower()}.yaml"))
+        _, sname = build_sector(wb, sector, cfg, ds[sector], sec_narr, comp_sheets)
+        for t in ds[sector]["tickers"]:
+            narr = load_yaml(os.path.join(root, "data", "narratives", f"{t}.yaml"))
+            build_company(wb, sector, t, cfg, ds[sector], narr, adj, facts_idx, comp_sheets[t], sname)
+    # coverage, sources, policy, review, template changes, methodology, metrics
+    cov = load_csv(os.path.join(root, "data", "coverage.csv"))
+    if cov:
+        simple_table(wb, "Coverage", "Coverage: available filings and gaps by company and period",
+                     "Verified inside each file (company, period, units, assurance). See Sources for file-level checks.",
+                     cov, list(cov[0].keys()), [10, 8, 28] + [16] * (len(cov[0]) - 3), index=2)
+    src = load_csv(os.path.join(root, "data", "energy", "sources.csv")) + load_csv(os.path.join(root, "data", "banks", "sources.csv"))
+    if src:
+        simple_table(wb, "Sources", "Source register: every archive file reviewed",
+                     "Checks were done inside the files, never from filenames alone. Status: used | used-with-flag | unreadable | excluded.",
+                     src, list(src[0].keys()), [40, 8, 7, 30, 6, 30, 12, 11, 28, 16, 11, 11, 9, 14, 10, 6, 7, 7, 12, 40, 20, 40, 50, 6])
+    for fn, name, heading, sub in (
+        ("policy/items.csv", "Budget_Policy_Facts", "Budget and policy: verified facts and statements (forward-looking section, kept separate)",
+         "Final budget vs preliminary statement vs ministerial statement vs regulatory measure. Dated official sources."),
+        ("policy/impacts.csv", "Budget_Policy_Impact", "Budget and policy: impact assessment by sector and company (interpretation)",
+         "Direction, timing, significance and confidence are our interpretation and do not feed historical or like-for-like figures."),
+        ("review_log.csv", "Review_Log", "Independent review log", "Issues raised by independent reviewers, fixes and re-checks."),
+        ("template_changes.csv", "Template_Changes", "Template improvements identified in the pilots", "Applied before roll-out to other sectors."),
+    ):
+        rows = load_csv(os.path.join(root, "data", fn))
+        if rows:
+            simple_table(wb, name, heading, sub, rows, list(rows[0].keys()), [12] + [28] * (len(rows[0]) - 1))
+    met = load_csv(os.path.join(root, "config", "metrics.csv"))
+    simple_table(wb, "Definitions", "Metric definitions", "All sectors use these definitions; sector ratios are ratios of totals.",
+                 met, list(met[0].keys()), [14, 8, 40, 12, 9, 14, 80, 30], index=1)
+    guide = load_yaml(os.path.join(root, "data", "narratives", "guide.yaml"))
+    gs = wb.create_sheet("How_to_read", 1)
+    title(gs, "How to read this workbook, and the methodology in brief")
+    gs.column_dimensions["A"].width = 150
+    r = 5
+    for sec in guide.get("sections", []):
+        gs.cell(row=r, column=1, value=sec["heading"]).font = f(True, "1F3864", 11)
+        r += 1
+        for line in sec.get("lines", []):
+            c = gs.cell(row=r, column=1, value=line)
+            c.alignment = Alignment(wrap_text=True, vertical="top")
+            c.font = f(size=9)
+            gs.row_dimensions[r].height = max(14, 13 * (len(line) // 170 + 1))
+            r += 1
+        r += 1
+    # contents
+    title(contents, "Saudi sector & company financial analysis 2022–2026: pilot sectors Energy and Banks",
+          f"Built from the 'Tadawul Financials' archive. Figures in SAR million unless stated. As of {guide.get('as_of', '')}.")
+    contents["A3"].value = None
+    r = 5
+    for ws in wb.worksheets:
+        if ws.title == "Contents":
+            continue
+        c = contents.cell(row=r, column=1, value=ws.title)
+        c.hyperlink = f"#'{ws.title}'!A1"
+        c.font = f(color="0563C1", underline="single", size=10)
+        contents.cell(row=r, column=2, value=ws["A1"].value).font = f(size=9, color=GREY)
+        r += 1
+    contents.column_dimensions["A"].width = 30
+    contents.column_dimensions["B"].width = 110
+    wb.save(out)
+    print("workbook ->", out)
+
+
+if __name__ == "__main__":
+    main(*sys.argv[1:3])

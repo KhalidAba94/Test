@@ -44,3 +44,16 @@ KPI_BACKLOG,Energy,Contract backlog,KPI,SAR m,not aggregated,"As disclosed.",
 KPI_FLEET,Energy,Vessel fleet,KPI,count,not aggregated,"By segment where disclosed.",
 KPI_STATIONS,Energy,Fuel stations,KPI,count,not aggregated,"Period-end network, as disclosed.",
 KPI_VOLUME,Energy,Volumes sold,KPI,as disclosed,not aggregated,"Litres / barrels / tonnes as disclosed.",
+OIRS,Energy,Other income related to sales (Aramco),P&L,SAR m,not aggregated,"Government compensation for revenue forgone on regulated domestic prices (Aramco only); shown separately, not in sector revenue.",
+REV_OIRS,Energy,Revenue incl. other income related to sales (Aramco),P&L,SAR m,not aggregated,"Aramco's own top line: revenue + other income related to sales (C).",REV + OIRS
+OPINC_REP,Energy,Operating profit (as reported),P&L,SAR m,sum,"Operating profit line as printed (function-of-expense statements).",
+PBT,All,Profit before zakat and income tax,P&L,SAR m,sum,"As reported.",
+DA_CF,Energy,"Depreciation, amortisation (and impairment where combined), cash-flow",Cash flow,SAR m,sum,"Sum of depreciation/amortisation add-backs in the cash-flow reconciliation.",
+IMPAIR_CF,Energy,Impairment add-backs (cash-flow),Cash flow,SAR m,sum,"Impairment add-backs in the cash-flow reconciliation.",
+FEES_NET,Banks,Net fee & commission income,P&L,SAR m,sum,"Fee lines at the top fee level of the income statement summed (gross fee income + fee expense where both shown) (C where summed).",
+IMPAIR_TOTAL,Banks,Total impairment charges (net),P&L,SAR m,sum,"Impairment / provision / credit-loss lines inside total operating expenses.",
+EQ_ORD,Banks,Ordinary shareholders' equity,Balance sheet,SAR m,sum,"Equity attributable to equity holders less Tier 1 sukuk (C).",EQ_ATTR - T1_SUKUK
+ROE,All,Return on equity,Ratio,%,ratio of totals,"Banks: (NI_ATTR - T1_COST) / avg EQ_ORD; Energy: NI_ATTR / avg EQ_ATTR. YTD annualised x12/9.",
+ROA,Banks,Return on average assets,Ratio,%,ratio of totals,"NI_ATTR / average total assets; YTD annualised.",NI_ATTR / avg(TA)
+FEE_SHARE,Banks,Fee share of income,Ratio,%,ratio of totals,"Net fees / TOI.",FEES_NET / TOI
+CAPEX_INT,Energy,Capex intensity,Ratio,%,ratio of totals,"Capex / revenue.",CAPEX / REV

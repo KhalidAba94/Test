@@ -1,0 +1,328 @@
+# Evidence file: Arab National Bank (ANB). All amounts SAR '000 unless stated. Pages = physical PDF page (1-based).
+# Source paths are relative to archive/Banks/.
+ticker: "1080"
+company: "Arab National Bank"
+
+perimeter_changes:
+  - event: "Arabian Heavy Equipment Leasing Company (AHEL), 87.5% subsidiary, classified as held for sale and discontinued operation (Board-approved plan to lose control; active buyer)"
+    type: discontinued
+    date: "FY2025 (first presented in FY2025 annual; still held for sale at 30 Sep 2026)"
+    consideration: null
+    revenue_contribution: {FY2025_total_operating_income: 67534, FY2024_total_operating_income: 75033}
+    profit_contribution: {FY2025_net_income_discontinued: 5960, FY2024_net_income_discontinued: 10508, 9M2026: -11288, 9M2025_restated: 5368}
+    pro_forma_revenue: null
+    period: FY2025
+    unit: "SAR '000"
+    source: "1080_ANB/2025_Annual_filed2026-02-09.pdf"
+    page: 88
+    quote: "The Board of Directors has approved a plan to lose control over Arabian Heavy Equipment Leasing Company (AHEL), an 87.5% owned subsidiary."
+  - event: "AHEL disposal group balances at 31 Dec 2025: assets held for sale 250,085 (PP&E 186,624; other assets 63,461); liabilities 11,358"
+    type: discontinued
+    date: "2025-12-31"
+    consideration: null
+    revenue_contribution: null
+    profit_contribution: null
+    pro_forma_revenue: null
+    period: FY2025
+    unit: "SAR '000"
+    source: "1080_ANB/2025_Annual_filed2026-02-09.pdf"
+    page: 88
+    quote: "Total assets classified as held for sale 250,085"
+  - event: "AHEL still held for sale at 30 Sep 2026: assets held for sale 232,031; liabilities 9,725; loss from discontinued operations 9M2026 (11,288)"
+    type: discontinued
+    date: "2026-09-30"
+    consideration: null
+    revenue_contribution: null
+    profit_contribution: -11288
+    pro_forma_revenue: null
+    period: 9M2026
+    unit: "SAR '000"
+    source: "1080_ANB/2026_Q3_filed2026-10-26.pdf"
+    page: 9
+    quote: "AHEL is under the sale process and has been classified as non-current assets held for sale and discontinued operations."
+  - event: "Partial disposal of associate Saudi Home Loans (SHL): 30% of holding (12m shares) sold in SHL IPO in Q1 2022; gain 36.05m; 1.4m shares repurchased Q2 2022 for 28m; remaining 29.4% stake kept as associate"
+    type: disposal
+    date: "Q1 2022"
+    consideration: null
+    revenue_contribution: null
+    profit_contribution: 36050
+    pro_forma_revenue: null
+    period: FY2022
+    unit: "SAR '000"
+    source: "1080_ANB/2022_Annual_filed2023-02-23.pdf"
+    page: 52
+    quote: "During Q1 2022, the Group offered 30% of its shareholding (12 million shares) as part of the company's initial public offering (IPO) for a gain of SAR 36.05 million"
+
+segments:
+  # Total operating income by operating segment (basis: operating)
+  - {period: FY2022, segment: "Retail banking", basis: operating, revenue: 2294339, profit: 730624, unit: "SAR '000", source: "1080_ANB/2022_Annual_filed2023-02-23.pdf", page: 67, note: "profit = net income before zakat and income tax"}
+  - {period: FY2022, segment: "Corporate banking", basis: operating, revenue: 2633109, profit: 1090214, unit: "SAR '000", source: "1080_ANB/2022_Annual_filed2023-02-23.pdf", page: 67}
+  - {period: FY2022, segment: "Treasury", basis: operating, revenue: 1343237, profit: 1216368, unit: "SAR '000", source: "1080_ANB/2022_Annual_filed2023-02-23.pdf", page: 67}
+  - {period: FY2022, segment: "Investment and brokerage services", basis: operating, revenue: 324158, profit: 257242, unit: "SAR '000", source: "1080_ANB/2022_Annual_filed2023-02-23.pdf", page: 67}
+  - {period: FY2022, segment: "Other", basis: operating, revenue: 267397, profit: 338388, unit: "SAR '000", source: "1080_ANB/2022_Annual_filed2023-02-23.pdf", page: 67}
+  - {period: FY2022, segment: "Total", basis: operating, revenue: 6862240, profit: 3632836, unit: "SAR '000", source: "1080_ANB/2022_Annual_filed2023-02-23.pdf", page: 67}
+  - {period: FY2025, segment: "Retail banking", basis: operating, revenue: 3781983, profit: null, unit: "SAR '000", source: "1080_ANB/2025_Annual_filed2026-02-09.pdf", page: 61}
+  - {period: FY2025, segment: "Corporate banking", basis: operating, revenue: 4259405, profit: null, unit: "SAR '000", source: "1080_ANB/2025_Annual_filed2026-02-09.pdf", page: 61}
+  - {period: FY2025, segment: "Treasury", basis: operating, revenue: 1425434, profit: null, unit: "SAR '000", source: "1080_ANB/2025_Annual_filed2026-02-09.pdf", page: 61}
+  - {period: FY2025, segment: "Investment and brokerage services", basis: operating, revenue: 556336, profit: null, unit: "SAR '000", source: "1080_ANB/2025_Annual_filed2026-02-09.pdf", page: 61}
+  - {period: FY2025, segment: "Other", basis: operating, revenue: -140029, profit: null, unit: "SAR '000", source: "1080_ANB/2025_Annual_filed2026-02-09.pdf", page: 61}
+  - {period: FY2025, segment: "Total", basis: operating, revenue: 9883129, profit: 5980637, unit: "SAR '000", source: "1080_ANB/2025_Annual_filed2026-02-09.pdf", page: 61, note: "continuing operations (AHEL excluded)"}
+  - {period: 9M2026, segment: "Retail banking", basis: operating, revenue: 2658199, profit: 819772, unit: "SAR '000", source: "1080_ANB/2026_Q3_filed2026-10-26.pdf", page: 26}
+  - {period: 9M2026, segment: "Corporate banking", basis: operating, revenue: 3467928, profit: 2407504, unit: "SAR '000", source: "1080_ANB/2026_Q3_filed2026-10-26.pdf", page: 26}
+  - {period: 9M2026, segment: "Treasury", basis: operating, revenue: 1400138, profit: 1270738, unit: "SAR '000", source: "1080_ANB/2026_Q3_filed2026-10-26.pdf", page: 26}
+  - {period: 9M2026, segment: "Investment and brokerage services", basis: operating, revenue: 377147, profit: 240377, unit: "SAR '000", source: "1080_ANB/2026_Q3_filed2026-10-26.pdf", page: 26}
+  - {period: 9M2026, segment: "Other", basis: operating, revenue: -18454, profit: 123142, unit: "SAR '000", source: "1080_ANB/2026_Q3_filed2026-10-26.pdf", page: 26}
+  - {period: 9M2026, segment: "Total", basis: operating, revenue: 7884958, profit: 4861533, unit: "SAR '000", source: "1080_ANB/2026_Q3_filed2026-10-26.pdf", page: 26}
+  - {period: 9M2025, segment: "Retail banking", basis: operating, revenue: 2913878, profit: 1239859, unit: "SAR '000", source: "1080_ANB/2026_Q3_filed2026-10-26.pdf", page: 26, note: "restated comparative in 9M2026 interim"}
+  - {period: 9M2025, segment: "Corporate banking", basis: operating, revenue: 3170510, profit: 2037399, unit: "SAR '000", source: "1080_ANB/2026_Q3_filed2026-10-26.pdf", page: 26}
+  - {period: 9M2025, segment: "Treasury", basis: operating, revenue: 1016753, profit: 892184, unit: "SAR '000", source: "1080_ANB/2026_Q3_filed2026-10-26.pdf", page: 26}
+  - {period: 9M2025, segment: "Investment and brokerage services", basis: operating, revenue: 441429, profit: 305359, unit: "SAR '000", source: "1080_ANB/2026_Q3_filed2026-10-26.pdf", page: 26}
+  - {period: 9M2025, segment: "Other", basis: operating, revenue: -78384, profit: 156215, unit: "SAR '000", source: "1080_ANB/2026_Q3_filed2026-10-26.pdf", page: 26}
+  - {period: 9M2025, segment: "Total", basis: operating, revenue: 7464186, profit: 4631016, unit: "SAR '000", source: "1080_ANB/2026_Q3_filed2026-10-26.pdf", page: 26, note: "as originally reported in 9M2025 interim the group total operating income was 7,516,288 (2025_Q3 p4), before AHEL reclassification"}
+
+revenue_drivers:
+  # Net fee income: gross fee income, fee expense, net
+  - {period: FY2022, driver: "Fee and commission income (gross)", value: 1443582, unit: "SAR '000", source: "1080_ANB/2023_Annual_filed2024-02-14.pdf", page: 11, quote: "Fee and commission income 20 1,694,719 1,443,582"}
+  - {period: FY2022, driver: "Fee and commission expense", value: 897670, unit: "SAR '000", source: "1080_ANB/2023_Annual_filed2024-02-14.pdf", page: 11, quote: "Fee and commission expense 20 1,058,185 897,670"}
+  - {period: FY2022, driver: "Fee and commission income, net", value: 545912, unit: "SAR '000", source: "1080_ANB/2023_Annual_filed2024-02-14.pdf", page: 11, quote: "Fee and commission income, net 636,534 545,912"}
+  - {period: FY2023, driver: "Fee and commission income (gross) as originally reported", value: 1694719, unit: "SAR '000", source: "1080_ANB/2023_Annual_filed2024-02-14.pdf", page: 11, quote: "Fee and commission income 20 1,694,719 1,443,582"}
+  - {period: FY2023, driver: "Fee and commission expense as originally reported", value: 1058185, unit: "SAR '000", source: "1080_ANB/2023_Annual_filed2024-02-14.pdf", page: 11, quote: "Fee and commission expense 20 1,058,185 897,670"}
+  - {period: FY2023, driver: "Fee and commission income, net as originally reported", value: 636534, unit: "SAR '000", source: "1080_ANB/2023_Annual_filed2024-02-14.pdf", page: 11, quote: "Fee and commission income, net 636,534 545,912"}
+  - {period: FY2023, driver: "Fee and commission income, net as reclassified in FY2024 annual (gross 1,527,835; expense 1,013,200)", value: 514635, unit: "SAR '000", source: "1080_ANB/2024_Annual_filed2025-02-13.pdf", page: 10, quote: "Fee and commission income, net 708,733 514,635"}
+  - {period: FY2024, driver: "Fee and commission income (gross) as originally reported", value: 1866424, unit: "SAR '000", source: "1080_ANB/2024_Annual_filed2025-02-13.pdf", page: 10, quote: "Fee and commission income 21 1,866,424 1,527,835"}
+  - {period: FY2024, driver: "Fee and commission expense", value: 1157691, unit: "SAR '000", source: "1080_ANB/2024_Annual_filed2025-02-13.pdf", page: 10, quote: "Fee and commission expense 21 1,157,691 1,013,200"}
+  - {period: FY2024, driver: "Fee and commission income, net as originally reported", value: 708733, unit: "SAR '000", source: "1080_ANB/2024_Annual_filed2025-02-13.pdf", page: 10, quote: "Fee and commission income, net 708,733 514,635"}
+  - {period: FY2024, driver: "Fee and commission income, net as re-presented in FY2025 annual (gross 1,866,507; expense 1,157,691)", value: 708816, unit: "SAR '000", source: "1080_ANB/2025_Annual_filed2026-02-09.pdf", page: 55, quote: "Fee and commission income, net 878,412 708,816"}
+  - {period: FY2025, driver: "Fee and commission income (gross)", value: 2283365, unit: "SAR '000", source: "1080_ANB/2025_Annual_filed2026-02-09.pdf", page: 55, quote: "Total 2,283,365 1,866,507"}
+  - {period: FY2025, driver: "Fee and commission expense", value: 1404953, unit: "SAR '000", source: "1080_ANB/2025_Annual_filed2026-02-09.pdf", page: 55, quote: "Total 1,404,953 1,157,691"}
+  - {period: FY2025, driver: "Fee and commission income, net", value: 878412, unit: "SAR '000", source: "1080_ANB/2025_Annual_filed2026-02-09.pdf", page: 55, quote: "Fee and commission income, net 878,412 708,816"}
+  - {period: 9M2025, driver: "Fee and commission income (gross) as originally reported", value: 1749613, unit: "SAR '000", source: "1080_ANB/2025_Q3_filed2025-10-29.pdf", page: 4, quote: "Fee and commission income 564,635 471,159 1,749,613 1,419,644"}
+  - {period: 9M2025, driver: "Fee and commission expense", value: 994658, unit: "SAR '000", source: "1080_ANB/2025_Q3_filed2025-10-29.pdf", page: 4, quote: "Fee and commission expense 339,813 286,824 994,658 815,621"}
+  - {period: 9M2025, driver: "Fee and commission income, net as originally reported", value: 754955, unit: "SAR '000", source: "1080_ANB/2025_Q3_filed2025-10-29.pdf", page: 4, quote: "Fee and commission income, net 224,822 184,335 754,955 604,023"}
+  - {period: 9M2025, driver: "Fee and commission income, net as restated in 9M2026 interim (gross 1,749,714; expense 994,658)", value: 755056, unit: "SAR '000", source: "1080_ANB/2026_Q3_filed2026-10-26.pdf", page: 4, quote: "Fee and commission income, net 194,744 224,852 681,687 755,056"}
+  - {period: 9M2026, driver: "Fee and commission income (gross)", value: 1834739, unit: "SAR '000", source: "1080_ANB/2026_Q3_filed2026-10-26.pdf", page: 4, quote: "Fee and commission income 594,365 564,665 1,834,739 1,749,714"}
+  - {period: 9M2026, driver: "Fee and commission expense", value: 1153052, unit: "SAR '000", source: "1080_ANB/2026_Q3_filed2026-10-26.pdf", page: 4, quote: "Fee and commission expense 399,621 339,813 1,153,052 994,658"}
+  - {period: 9M2026, driver: "Fee and commission income, net", value: 681687, unit: "SAR '000", source: "1080_ANB/2026_Q3_filed2026-10-26.pdf", page: 4, quote: "Fee and commission income, net 194,744 224,852 681,687 755,056"}
+  # Impairment split
+  - {period: FY2022, driver: "ECL allowance for loans and advances, net", value: 896672, unit: "SAR '000", source: "1080_ANB/2023_Annual_filed2024-02-14.pdf", page: 61, quote: "ECL allowance for loans and advances, net (note 7) 721,405 896,672"}
+  - {period: FY2022, driver: "ECL other financial assets 10,335; reversal for credit-related commitments (27,170); total ECL and other impairment 879,837; OREO impairment nil", value: 879837, unit: "SAR '000", source: "1080_ANB/2023_Annual_filed2024-02-14.pdf", page: 61, quote: "Total 670,165 879,837"}
+  - {period: FY2023, driver: "ECL allowance for loans and advances, net", value: 721405, unit: "SAR '000", source: "1080_ANB/2023_Annual_filed2024-02-14.pdf", page: 61, quote: "ECL allowance for loans and advances, net (note 7) 721,405 896,672"}
+  - {period: FY2023, driver: "ECL other financial assets 1,576; reversal for commitments (52,816); total 670,165; plus OREO impairment 322,000", value: 670165, unit: "SAR '000", source: "1080_ANB/2023_Annual_filed2024-02-14.pdf", page: 61, quote: "an impairment loss was recognised amounting to SAR 322 million (2022: Nil) to reflect the fair value as at December 31, 2023."}
+  - {period: FY2024, driver: "ECL allowance for loans and advances, net", value: 494297, unit: "SAR '000", source: "1080_ANB/2024_Annual_filed2025-02-13.pdf", page: 56, quote: "ECL allowance for loans and advances, net (note 7) 494,297 721,405"}
+  - {period: FY2024, driver: "ECL other financial assets 15,203; commitments charge 135,313; total 644,813; plus OREO impairment 119,156", value: 644813, unit: "SAR '000", source: "1080_ANB/2024_Annual_filed2025-02-13.pdf", page: 56, quote: "Charge/ (reversal) of ECL allowance for credit-related commitments and contingencies (note 14.1) 135,313 (52,816)"}
+  - {period: FY2025, driver: "ECL allowance for loans and advances, net", value: 715230, unit: "SAR '000", source: "1080_ANB/2025_Annual_filed2026-02-09.pdf", page: 56, quote: "ECL allowance for loans and advances, net (note 7) 715,230 494,298"}
+  - {period: FY2025, driver: "ECL other financial assets 4,380; commitments reversal (26,950); total 692,660; plus OREO impairment reversal (100,000)", value: 692660, unit: "SAR '000", source: "1080_ANB/2025_Annual_filed2026-02-09.pdf", page: 56, quote: "(Reversals)/ charges of ECL allowance for credit-related commitments and contingencies (note 14.1) (26,950) 135,313"}
+  - {period: 9M2025, driver: "ECL charges for loans and advances, net", value: 511664, unit: "SAR '000", source: "1080_ANB/2025_Q3_filed2025-10-29.pdf", page: 15, quote: "ECL allowance charges for loans and advances, net 141,847 157,190 511,664 389,849"}
+  - {period: 9M2025, driver: "Other ECL 9,295; commitments 19,870; total 540,829; plus OREO reversal (100,000)", value: 540829, unit: "SAR '000", source: "1080_ANB/2025_Q3_filed2025-10-29.pdf", page: 15, quote: "Total 119,320 164,544 540,829 492,761"}
+  - {period: 9M2026, driver: "ECL charges for loans and advances, net", value: 541453, unit: "SAR '000", source: "1080_ANB/2026_Q3_filed2026-10-26.pdf", page: 23, quote: "ECL allowance charges for loans and advances, net 147,314 141,847 541,453 511,664"}
+  - {period: 9M2026, driver: "Other ECL reversal (20,769); commitments reversal (65,380); total 455,304", value: 455304, unit: "SAR '000", source: "1080_ANB/2026_Q3_filed2026-10-26.pdf", page: 23, quote: "Total 140,379 119,320 455,304 540,829"}
+
+one_offs:
+  - {period: FY2022, item: "Gain on partial disposal of associate (Saudi Home Loans IPO)", amount: 36050, unit: "SAR '000", pnl_line: "Gain on disposal of investment in an associate", recurring: false, source: "1080_ANB/2023_Annual_filed2024-02-14.pdf", page: 11, quote: "Gain on disposal of investment in an associate 8 - 36,050"}
+  - {period: FY2023, item: "Impairment charge on other real estate owned (OREO)", amount: 322000, unit: "SAR '000", pnl_line: "Impairment charge on other real estate owned", recurring: false, source: "1080_ANB/2023_Annual_filed2024-02-14.pdf", page: 61, quote: "an impairment loss was recognised amounting to SAR 322 million (2022: Nil)"}
+  - {period: FY2023, item: "Gain on sale of non-trading instruments, net", amount: 156313, unit: "SAR '000", pnl_line: "Gain on sale of non-trading instruments, net", recurring: false, source: "1080_ANB/2023_Annual_filed2024-02-14.pdf", page: 11, quote: "Gain on sale of non-trading instruments, net 23 156,313 -"}
+  - {period: FY2024, item: "Impairment charge on OREO", amount: 119156, unit: "SAR '000", pnl_line: "Impairment charge on other real estate owned", recurring: false, source: "1080_ANB/2024_Annual_filed2025-02-13.pdf", page: 10, quote: "Impairment charge on other real estate owned 119,156 322,000"}
+  - {period: FY2025, item: "Reversal of OREO impairment (recognised Q3 2025)", amount: -100000, unit: "SAR '000", pnl_line: "Impairment (reversals)/ charges on other real estate owned", recurring: false, source: "1080_ANB/2025_Annual_filed2026-02-09.pdf", page: 10, quote: "Impairment (reversals)/ charges on other real estate owned (100,000) 119,156"}
+  - {period: FY2025, item: "Losses on sale of non-trading instruments, net", amount: -18703, unit: "SAR '000", pnl_line: "(Losses)/ gains on sale of non-trading instruments, net", recurring: false, source: "1080_ANB/2025_Annual_filed2026-02-09.pdf", page: 10, quote: "(Losses)/ gains on sale of non-trading instruments, net 23 (18,703) 6,140"}
+  - {period: FY2024, item: "Tax reversals recognised in income statement", amount: 29800, unit: "SAR '000", pnl_line: "Tax", recurring: false, source: "1080_ANB/2025_Annual_filed2026-02-09.pdf", page: 57, quote: "including reversals recognized in the statement of income during the year amounted to SAR 6.4 million (2024: SAR 29.8 million) respectively."}
+  - {period: FY2025, item: "Tax reversals recognised in income statement", amount: 6400, unit: "SAR '000", pnl_line: "Tax", recurring: false, source: "1080_ANB/2025_Annual_filed2026-02-09.pdf", page: 57, quote: "including reversals recognized in the statement of income during the year amounted to SAR 6.4 million (2024: SAR 29.8 million) respectively."}
+  - {period: "FY2022-9M2026", item: "Zakat settlements / prior-year zakat adjustments", amount: null, unit: "SAR '000", pnl_line: "Zakat", recurring: false, status: "not found", source: "1080_ANB/2026_Q3_filed2026-10-26.pdf", page: null, quote: "No zakat settlement in the period found; 2018 ZATCA settlement of SAR 649m for prior years only referenced historically in FY2022 annual."}
+  - {period: "FY2022-9M2026", item: "Hyperinflation adjustments", amount: null, unit: "SAR '000", pnl_line: null, recurring: false, status: "not found", source: null, page: null, quote: null}
+
+restatements:
+  - period_restated: "31 Dec 2024 (first shown in 9M2025 interim; also 30 Sep 2024 comparatives)"
+    item: "Investments, net and Other reserves (FVOCI unlisted equity revalued from cost to fair value)"
+    from: {investments_net: 52345094, other_reserves: 110945}
+    to: {investments_net: 52949576, other_reserves: 715427}
+    unit: "SAR '000"
+    reason: "IAS 8 correction of a prior-period error (not a change in accounting policy): equity investments classified at FVOCI had historically been carried at cost. Effect +604,482 to investments and to equity (other reserves); no income statement effect. OCI for 9M2024 FVOCI equity changed by +45,557."
+    source: "1080_ANB/2025_Q3_filed2025-10-29.pdf"
+    page: 25
+    quote: "the Group corrected its valuation of its equity interest in equity instruments that are classified as investment at FVOCI which was historically valued at cost."
+  - period_restated: "1 Jan 2024 opening equity (restatement line in 9M2025 interim SoCE)"
+    item: "Opening equity at 31 Dec 2023: other reserves +543,739; retained earnings +708,862; total equity attributable +1,252,601"
+    from: 35069477
+    to: 36322078
+    unit: "SAR '000"
+    reason: "Combination of FY2024 correction (unrecorded historic equity holdings, +708,862 retained earnings) and FVOCI-at-cost revaluation (+543,739 other reserves)."
+    source: "1080_ANB/2025_Q3_filed2025-10-29.pdf"
+    page: 7
+    quote: "Restatement 21 - - - 543,739 708,862 1,252,601 - 1,252,601"
+  - period_restated: "31 Dec 2024 (FY2025 annual) and 30 Sep 2025 (9M2026 interim)"
+    item: "Deferred tax correction: Other assets (71,825) and retained earnings (71,825) at 31 Dec 2024; at 30 Sep 2025 other liabilities +71,825 and retained earnings (71,825)"
+    from: {retained_earnings_31Dec2024: 6216685, equity_attributable_31Dec2024: 38119301, retained_earnings_30Sep2025: 7729177}
+    to: {retained_earnings_31Dec2024: 6144860, equity_attributable_31Dec2024: 38651958, retained_earnings_30Sep2025: 7657352}
+    unit: "SAR '000"
+    reason: "IAS 8 correction of the deferred tax calculation. Net effect on 31 Dec 2024 equity attributable vs originally reported: +604,482 - 71,825 = +532,657."
+    source: "1080_ANB/2025_Annual_filed2026-02-09.pdf"
+    page: 89
+    quote: "During the year ended December 31, 2025, the Group corrected its calculation of deferred tax. These adjustments are considered as correction as per IAS 8"
+  - period_restated: "FY2024 income statement (FY2025 annual) and 9M2025 (9M2026 interim)"
+    item: "Reclassification special commission income -> dividend income (FY2024: 47,753; 9M2025: 52,711); FVOCI debt -> FVOCI equity classification"
+    from: {FY2024_special_commission_income: 14454214, FY2024_dividend_income: 157628, 9M2025_special_commission_income: 11375183, 9M2025_dividend_income: 178278}
+    to: {FY2024_special_commission_income: 14406461, FY2024_dividend_income: 205381, 9M2025_special_commission_income: 11322472, 9M2025_dividend_income: 230989}
+    unit: "SAR '000"
+    reason: "IAS 8 correction: some investments reclassified from Debt investments at FVOCI / amortised cost to Equity investments at FVOCI. No net profit effect."
+    source: "1080_ANB/2025_Annual_filed2026-02-09.pdf"
+    page: 89
+    quote: "the Group corrected the classification of some of its investments from \"Debt investments at FVOCI\" and \"Investments at amortised cost\" to \"Equity investments at FVOCI\"."
+  - period_restated: "31 Dec 2022 and 31 Dec 2023 (FY2024 annual)"
+    item: "Unrecorded historic equity holdings recognised as FVSI: investments +738,862; other liabilities +30,000; retained earnings +708,862"
+    from: {investments_31Dec2023: 46675830, retained_earnings_31Dec2023: 8984821}
+    to: {investments_31Dec2023: 47414692, retained_earnings_31Dec2023: 9693683}
+    unit: "SAR '000"
+    reason: "Management identified historic holdings in equity investments not previously recorded; FY2023 income statement not restated (immaterial)."
+    source: "1080_ANB/2024_Annual_filed2025-02-13.pdf"
+    page: 89
+    quote: "management identified certain historic holdings in equity investments by the Group which had not previously been recorded."
+  - period_restated: "FY2024 income statement re-presented in FY2025 annual for discontinued operations (AHEL)"
+    item: "Total operating income 9,500,029 -> 9,424,995 (continuing operations); other operating income 95,705 -> 18,544"
+    from: 9500029
+    to: 9424995
+    unit: "SAR '000"
+    reason: "IFRS 5 re-presentation of AHEL as discontinued operation; net income unchanged at 4,967,347."
+    source: "1080_ANB/2025_Annual_filed2026-02-09.pdf"
+    page: 10
+    quote: "Income for the year from discontinued operations, net of Zakat and tax 39 5,960 10,508"
+  - period_restated: "FY2023 fee income (FY2024 annual)"
+    item: "Fee and commission income, net 636,534 -> 514,635 (reclassification)"
+    from: 636534
+    to: 514635
+    unit: "SAR '000"
+    reason: "Reclassification to conform to current-year presentation (stated as not material); total operating income FY2023 unchanged at 8,567,109."
+    source: "1080_ANB/2024_Annual_filed2025-02-13.pdf"
+    page: 10
+    quote: "Fee and commission income, net 708,733 514,635"
+  - period_restated: "30 Sep 2025 and 31 Dec 2025 capital adequacy (9M2026 interim)"
+    item: "Operational risk RWA re-presented: 31 Dec 2025 total RWA 253,671,240 (FY2025 annual) vs 249,188,765 (9M2026 interim); 30 Sep 2025 RWA 249,957,187 vs 245,474,712"
+    from: {CET1_31Dec2025: 16.44, T1_31Dec2025: 19.51, CAR_31Dec2025: 20.02}
+    to: {CET1_31Dec2025: 16.74, T1_31Dec2025: 19.86, CAR_31Dec2025: 20.38}
+    unit: "%"
+    reason: "Not explained in the filing (operational risk RWA 12,256,651 vs 7,774,176)."
+    source: "1080_ANB/2026_Q3_filed2026-10-26.pdf"
+    page: 32
+    quote: "Operational Risk RWA 8,883,908 7,774,176 7,774,176"
+
+significant_events:
+  - {date: "2025-02-04", event: "Completed SAR 3,350m AT1 sukuk private placement under SAR 11,250m AT1 programme (subsequent event in FY2024 annual)", financial_effect: 3350000, source: "1080_ANB/2024_Annual_filed2025-02-13.pdf", page: 88, quote: "On February 4, 2025, the bank announced the completion of the offer of the Sukuk, the value of the offer is SAR 3,350 million."}
+  - {date: "2025-10", event: "USD 750m (SAR 2,812m) Tier 2 sukuk issued Oct 2020 called and fully redeemed in October 2025", financial_effect: -2812000, source: "1080_ANB/2025_Annual_filed2026-02-09.pdf", page: 52, quote: "The Group exercised the call option and fully redeemed the Sukuk in October 2025."}
+  - {date: "2025", event: "Certificate of deposit programme established; 452m outstanding at 31 Dec 2025, 466m at 30 Sep 2026", financial_effect: 451962, source: "1080_ANB/2025_Annual_filed2026-02-09.pdf", page: 52, quote: "the Group established a Certificate of Deposits programme, and the balance of SAR 452 million as of December 31, 2025"}
+  - {date: "9M2026", event: "Additional AT1 issuance of 4,312,500 in 9M2026; SAR AT1 outstanding 6,455m and USD AT1 1,500m (SAR 5,625m) at 30 Sep 2026", financial_effect: 4312500, source: "1080_ANB/2026_Q3_filed2026-10-26.pdf", page: 27, quote: "As at September 30, 2026, the value of the issued Sukuk is US Dollar 1,500 million (equivalent to SAR 5,625 million)."}
+  - {date: "9M2026", event: "USD 3,000m (SAR 11,250m) Tier II subordinated sukuk programme established; nothing issued at 30 Sep 2026", financial_effect: 0, source: "1080_ANB/2026_Q3_filed2026-10-26.pdf", page: 27, quote: "the Group established a program for issuing Tier II subordinated sukuk amounting to USD 3,000 million"}
+  - {date: "2026-02-28 onward", event: "Geopolitical deterioration in Middle East (Strait of Hormuz, shipping disruption); management overlays recorded in ECL via expert credit judgement; amount not disclosed", financial_effect: null, source: "1080_ANB/2026_Q3_filed2026-10-26.pdf", page: 34, quote: "The geopolitical situation in the MiddleEast has deteriorated significantly since 28 February 2026 and remained elevated during the third quarter of 2026"}
+  - {date: "9M2026", event: "Repo with SAMA of 1,998,731 appears in due to banks at 30 Sep 2026 (nil at 31 Dec 2025)", financial_effect: 1998731, source: "1080_ANB/2026_Q3_filed2026-10-26.pdf", page: 23, quote: "Repo SAMA 1,998,731 - -"}
+  - {date: "9M2026", event: "FVOCI debt fair-value loss in OCI (1,180,863) for 9M2026", financial_effect: -1180863, source: "1080_ANB/2026_Q3_filed2026-10-26.pdf", page: 6, quote: "Net changes in fair values of FVOCI debt instruments - - - (1,180,863)"}
+  - {date: "9M2026", event: "Subsequent events note in 9M2026 interim", financial_effect: null, status: "not found", source: "1080_ANB/2026_Q3_filed2026-10-26.pdf", page: null, quote: null}
+
+audit_opinion:
+  - {period: FY2022, opinion: "unmodified (KPMG, Deloitte)", emphasis_of_matter: "none observed (Basis for opinion followed directly by Key audit matters)", source: "1080_ANB/2022_Annual_filed2023-02-23.pdf", page: 2}
+  - {period: FY2023, opinion: "unmodified (KPMG, Deloitte)", emphasis_of_matter: "none found in text search", source: "1080_ANB/2023_Annual_filed2024-02-14.pdf", page: 3}
+  - {period: FY2024, opinion: "unmodified", emphasis_of_matter: "none found in text search", source: "1080_ANB/2024_Annual_filed2025-02-13.pdf", page: 3}
+  - {period: FY2025, opinion: "unmodified (EY, Deloitte)", emphasis_of_matter: "none; Other Matter paragraph: FY2024 statements jointly audited by another joint auditor (unmodified opinion 13 Feb 2025)", source: "1080_ANB/2025_Annual_filed2026-02-09.pdf", page: 6}
+  - {period: 9M2025, opinion: "unmodified review conclusion (EY, Deloitte)", emphasis_of_matter: "none; Other Matter on prior joint auditor for FY2024 and 9M2024", source: "1080_ANB/2025_Q3_filed2025-10-29.pdf", page: 2}
+  - {period: 9M2026, opinion: "unmodified review conclusion (EY, Deloitte)", emphasis_of_matter: "none", source: "1080_ANB/2026_Q3_filed2026-10-26.pdf", page: 2}
+
+kpis_in_filings:
+  - {period: "31 Dec 2021", kpi: "Tier I ratio", value: 18.90, unit: "%", source: "1080_ANB/2022_Annual_filed2023-02-23.pdf", page: 95}
+  - {period: "31 Dec 2021", kpi: "Tier I + Tier II ratio", value: 21.35, unit: "%", source: "1080_ANB/2022_Annual_filed2023-02-23.pdf", page: 95}
+  - {period: "31 Dec 2022", kpi: "Tier I ratio", value: 17.60, unit: "%", source: "1080_ANB/2022_Annual_filed2023-02-23.pdf", page: 95}
+  - {period: "31 Dec 2022", kpi: "Tier I + Tier II ratio", value: 19.78, unit: "%", source: "1080_ANB/2022_Annual_filed2023-02-23.pdf", page: 95}
+  - {period: "31 Dec 2023", kpi: "CET1 = Tier I ratio (as originally reported)", value: 18.82, unit: "%", source: "1080_ANB/2023_Annual_filed2024-02-14.pdf", page: 94}
+  - {period: "31 Dec 2023", kpi: "Tier I + Tier II ratio (as originally reported)", value: 20.86, unit: "%", source: "1080_ANB/2023_Annual_filed2024-02-14.pdf", page: 94}
+  - {period: "31 Dec 2023", kpi: "CET1 = Tier I ratio (restated, FY2024 annual)", value: 19.02, unit: "%", source: "1080_ANB/2024_Annual_filed2025-02-13.pdf", page: 88}
+  - {period: "31 Dec 2023", kpi: "Tier I + Tier II ratio (restated)", value: 21.03, unit: "%", source: "1080_ANB/2024_Annual_filed2025-02-13.pdf", page: 88}
+  - {period: "31 Dec 2024", kpi: "CET1 = Tier I ratio (as originally reported)", value: 17.18, unit: "%", source: "1080_ANB/2024_Annual_filed2025-02-13.pdf", page: 88}
+  - {period: "31 Dec 2024", kpi: "Tier I + Tier II ratio (as originally reported)", value: 18.94, unit: "%", source: "1080_ANB/2024_Annual_filed2025-02-13.pdf", page: 88}
+  - {period: "31 Dec 2024", kpi: "CET1 / Tier I / total CAR (restated, FY2025 annual)", value: "17.30 / 17.34 / 19.08", unit: "%", source: "1080_ANB/2025_Annual_filed2026-02-09.pdf", page: 87}
+  - {period: "31 Dec 2025", kpi: "CET1 ratio (FY2025 annual)", value: 16.44, unit: "%", source: "1080_ANB/2025_Annual_filed2026-02-09.pdf", page: 87}
+  - {period: "31 Dec 2025", kpi: "Tier I ratio (FY2025 annual)", value: 19.51, unit: "%", source: "1080_ANB/2025_Annual_filed2026-02-09.pdf", page: 87}
+  - {period: "31 Dec 2025", kpi: "Tier I + Tier II ratio (FY2025 annual)", value: 20.02, unit: "%", source: "1080_ANB/2025_Annual_filed2026-02-09.pdf", page: 87}
+  - {period: "31 Dec 2025", kpi: "CET1 / Tier I / total CAR (as comparative in 9M2026 interim)", value: "16.74 / 19.86 / 20.38", unit: "%", source: "1080_ANB/2026_Q3_filed2026-10-26.pdf", page: 32}
+  - {period: "30 Sep 2025", kpi: "CET1 / Tier I / total CAR (9M2025 interim)", value: "16.24 / 18.86 / 20.56", unit: "%", source: "1080_ANB/2025_Q3_filed2025-10-29.pdf", page: 24}
+  - {period: "30 Sep 2025", kpi: "CET1 / Tier I / total CAR (restated in 9M2026 interim)", value: "16.51 / 19.18 / 20.90", unit: "%", source: "1080_ANB/2026_Q3_filed2026-10-26.pdf", page: 32}
+  - {period: "30 Sep 2026", kpi: "CET1 ratio", value: 15.74, unit: "%", source: "1080_ANB/2026_Q3_filed2026-10-26.pdf", page: 32}
+  - {period: "30 Sep 2026", kpi: "Tier I ratio", value: 20.26, unit: "%", source: "1080_ANB/2026_Q3_filed2026-10-26.pdf", page: 32}
+  - {period: "30 Sep 2026", kpi: "Tier I + Tier II ratio", value: 20.68, unit: "%", source: "1080_ANB/2026_Q3_filed2026-10-26.pdf", page: 32}
+  - {period: "31 Dec 2022", kpi: "Non-performing loans (gross) / total gross loans / ECL allowance", value: "2,646,955 / 147,748,627 / 3,919,808", unit: "SAR '000", source: "1080_ANB/2023_Annual_filed2024-02-14.pdf", page: 39}
+  - {period: "31 Dec 2023", kpi: "Non-performing loans (gross) / total gross loans / ECL allowance", value: "2,301,838 / 155,564,270 / 3,329,161", unit: "SAR '000", source: "1080_ANB/2023_Annual_filed2024-02-14.pdf", page: 39}
+  - {period: "31 Dec 2024", kpi: "Non-performing loans (gross) / total gross loans / ECL allowance", value: "2,066,917 / 172,563,558 / 3,068,897", unit: "SAR '000", source: "1080_ANB/2024_Annual_filed2025-02-13.pdf", page: 36}
+  - {period: "31 Dec 2025", kpi: "Non-performing loans (gross) / total gross loans / ECL allowance", value: "1,863,645 / 198,442,800 / 3,143,495", unit: "SAR '000", source: "1080_ANB/2025_Annual_filed2026-02-09.pdf", page: 37}
+  - {period: "31 Dec 2025", kpi: "Stage 3 gross loans (closing)", value: 1937886, unit: "SAR '000", source: "1080_ANB/2025_Annual_filed2026-02-09.pdf", page: 38}
+  - {period: "30 Sep 2025", kpi: "Non-performing loans (gross) / ECL allowance", value: "1,807,461 / 2,962,140", unit: "SAR '000", source: "1080_ANB/2025_Q3_filed2025-10-29.pdf", page: 12}
+  - {period: "30 Sep 2026", kpi: "Non-performing loans (gross) / total gross loans / ECL allowance", value: "2,127,024 / 212,671,553 / 3,501,160", unit: "SAR '000", source: "1080_ANB/2026_Q3_filed2026-10-26.pdf", page: 15}
+  - {period: "all", kpi: "NPL ratio, coverage ratio, LCR, NSFR stated as ratios", value: null, unit: "%", status: "not found", source: null, page: null}
+
+special_extractions:
+  - name: "ANB FY2024 income statement and balance sheet totals (as originally reported, FY2024 annual PDF)"
+    source: "1080_ANB/2024_Annual_filed2025-02-13.pdf"
+    unit: "SAR '000"
+    items:
+      - {item: "Total operating income", value: 9500029, page: 10, quote: "Total operating income 9,500,029 8,567,109"}
+      - {item: "Special commission income, net", value: 7972344, page: 10, quote: "Special commission income, net 7,972,344 7,258,893"}
+      - {item: "Fee and commission income, net", value: 708733, page: 10, quote: "Fee and commission income, net 708,733 514,635"}
+      - {item: "Total operating expenses before impairment charges", value: 3128010, page: 10, quote: "Total operating expenses before impairment charges 3,128,010 2,847,702"}
+      - {item: "Expected credit losses (ECL) and other impairment charges, net", value: 644813, page: 10, quote: "Expected credit losses (ECL) and other impairment charges, net 25 644,813 670,165"}
+      - {item: "Impairment charge on other real estate owned", value: 119156, page: 10, quote: "Impairment charge on other real estate owned 119,156 322,000"}
+      - {item: "Total operating expenses (incl. impairments)", value: 3891979, page: 10, quote: "Total operating expenses 3,891,979 3,839,867"}
+      - {item: "Net income before zakat and income tax", value: 5752851, page: 10, quote: "Net income before Zakat and income tax 5,752,851 4,746,750"}
+      - {item: "Zakat / income tax", value: "336,059 / 449,445", page: 10}
+      - {item: "Net income attributable to equity holders of the Bank", value: 4966022, page: 10, quote: "Equity holders of the Bank 4,966,022 4,070,510"}
+      - {item: "Net income (total)", value: 4967347, page: 10}
+      - {item: "Total assets", value: 248307314, page: 9, quote: "Total assets 248,307,314 221,422,172"}
+      - {item: "Loans and advances, net", value: 169494661, page: 9, quote: "Loans and advances, net 7 169,494,661 152,235,109"}
+      - {item: "Customers' deposits", value: 182198157, page: 9, quote: "Customers' deposits 13 182,198,157 165,861,338"}
+      - {item: "Total equity attributable to equity holders of the Bank", value: 38119301, page: 9, quote: "Total equity attributable to equity holders of the Bank 38,119,301 35,778,339"}
+      - {item: "Total equity", value: 38149048, page: 9}
+  - name: "ANB FY2024 as restated in FY2025 annual (continuing operations; IAS 8 corrections)"
+    source: "1080_ANB/2025_Annual_filed2026-02-09.pdf"
+    unit: "SAR '000"
+    items:
+      - {item: "Total operating income", value: 9424995, page: 10}
+      - {item: "Special commission income, net", value: 7926635, page: 10}
+      - {item: "Fee and commission income, net", value: 708816, page: 10}
+      - {item: "Total operating expenses", value: 3831045, page: 10}
+      - {item: "ECL and other impairment charges, net", value: 644813, page: 10}
+      - {item: "Net income attributable to shareholders", value: 4966022, page: 10}
+      - {item: "Total assets", value: 248839971, page: 9}
+      - {item: "Customers' deposits", value: 182223718, page: 9}
+      - {item: "Total equity attributable to equity holders", value: 38651958, page: 9}
+  - name: "Tier 1 sukuk (equity) carrying amount"
+    unit: "SAR '000"
+    items:
+      - {date: "31 Dec 2021", value: 0, source: "1080_ANB/2022_Annual_filed2023-02-23.pdf", page: 95, note: "no Tier 1 sukuk; Tier I capital equals CET1 in capital notes; none on balance sheet"}
+      - {date: "31 Dec 2022", value: 0, source: "1080_ANB/2023_Annual_filed2024-02-14.pdf", page: 10}
+      - {date: "31 Dec 2023", value: 0, source: "1080_ANB/2023_Annual_filed2024-02-14.pdf", page: 10}
+      - {date: "31 Dec 2024", value: 0, source: "1080_ANB/2024_Annual_filed2025-02-13.pdf", page: 9}
+      - {date: "30 Sep 2025", value: 6562500, source: "1080_ANB/2025_Q3_filed2025-10-29.pdf", page: 3, quote: "Tier I Sukuk 16 6,562,500 - -"}
+      - {date: "31 Dec 2025", value: 7767500, source: "1080_ANB/2025_Annual_filed2026-02-09.pdf", page: 9, quote: "Tier I Sukuk 15.2 7,767,500 -"}
+      - {date: "30 Sep 2026", value: 12080000, source: "1080_ANB/2026_Q3_filed2026-10-26.pdf", page: 3, quote: "Tier I Sukuk 16 12,080,000 7,767,500 6,562,500"}
+  - name: "Tier 1 sukuk issuances, redemptions and costs charged to retained earnings (SoCE)"
+    unit: "SAR '000"
+    items:
+      - {period: "FY2022-FY2024", issuance: 0, cost: 0, note: "no Tier 1 sukuk outstanding"}
+      - {period: 9M2025, issuance: 6562500, cost: 117340, source: "1080_ANB/2026_Q3_filed2026-10-26.pdf", page: 7, quote: "Tier I Sukuk cost 16 - - - - (117,340)"}
+      - {period: FY2025, issuance: 7767500, cost: 187411, source: "1080_ANB/2025_Annual_filed2026-02-09.pdf", page: 12, quote: "Tier I Sukuk cost 15.2 - - - - (187,411)"}
+      - {period: 9M2026, issuance: 4312500, cost: 450770, source: "1080_ANB/2026_Q3_filed2026-10-26.pdf", page: 6, quote: "Tier I Sukuk cost 16 - - - - (450,770)"}
+      - {period: "FY2025 composition", note: "SAR AT1 4,955m (private placement under SAR 11,250m programme) + USD 750m sustainable AT1 (SAR 2,812.5m); perpetual, non-cumulative, discretionary distributions", source: "1080_ANB/2025_Annual_filed2026-02-09.pdf", page: 52}
+      - {period: "redemptions", value: 0, note: "no AT1 redemptions found FY2022-9M2026"}
+  - name: "Is Tier 1 sukuk inside 'Total equity attributable to equity holders of the Bank'?"
+    answer: "Yes. ANB presents 'Equity attributable to shareholders of the Bank' (41,715,010 at 31 Dec 2025) then adds Tier I Sukuk to give 'Total equity attributable to equity holders of the Bank' (49,482,510)."
+    source: "1080_ANB/2025_Annual_filed2026-02-09.pdf"
+    page: 9
+    quote: "Equity attributable to shareholders of the Bank 41,715,010 ... Tier I Sukuk 15.2 7,767,500 ... Total equity attributable to equity holders of the Bank 49,482,510"
+  - name: "ANB 9M2025 / 9M2026 key totals"
+    unit: "SAR '000"
+    items:
+      - {period: 9M2025, item: "Total operating income (original)", value: 7516288, source: "1080_ANB/2025_Q3_filed2025-10-29.pdf", page: 4}
+      - {period: 9M2025, item: "Total operating income (restated, continuing ops)", value: 7464186, source: "1080_ANB/2026_Q3_filed2026-10-26.pdf", page: 4}
+      - {period: 9M2026, item: "Total operating income", value: 7884958, source: "1080_ANB/2026_Q3_filed2026-10-26.pdf", page: 4}
+      - {period: 9M2026, item: "Net income attributable to shareholders", value: 4133234, source: "1080_ANB/2026_Q3_filed2026-10-26.pdf", page: 4}
+      - {period: 9M2025, item: "Net income attributable to shareholders", value: 3969617, source: "1080_ANB/2026_Q3_filed2026-10-26.pdf", page: 4}
+
+open_questions:
+  - "9M2025 restatement is an IAS 8 error correction (FVOCI unlisted equity valued at cost), not a change in accounting policy. The 604,482 uplift hits investments and other reserves (OCI) only; no P&L effect."
+  - "31 Dec 2025 capital ratios differ between the FY2025 annual (CET1 16.44%, T1 19.51%, CAR 20.02%; op-risk RWA 12,256,651) and the 9M2026 interim comparatives (16.74%, 19.86%, 20.38%; op-risk RWA 7,774,176). The interim gives no explanation."
+  - "FY2022 annual PDF primary statements (pp.2-13) are image-only; FY2022 figures were taken from FY2023 annual comparatives (text layer). FY2022 segment and capital notes were readable."
+  - "The FY2025 annual restates retained earnings at 1 Jan 2024 by (71,825) for deferred tax, and the 9M2025 interim restated it by +708,862. These are different restatement layers; the FY2025 annual SoCE restatement line shows other reserves +543,739 and retained earnings (71,825) against the FY2024 annual's 'previously presented' balances, which already included the 708,862."
+  - "LCR and NSFR are not disclosed in the financial statements PDFs (Pillar 3 disclosures are not in the archive)."
+  - "No ECL overlay amount for the 2026 geopolitical situation is quantified in the 9M2026 interim."

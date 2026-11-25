@@ -1,0 +1,52 @@
+{
+  "Energy": {
+    "top_line": "REV",
+    "top_line_name": "Revenue",
+    "profit": "NI_ATTR",
+    "constituents": {
+      "2222": {"name": "Saudi Aramco", "sub_industry": "Integrated oil & gas"},
+      "4030": {"name": "Bahri (National Shipping Co.)", "sub_industry": "Energy shipping & logistics"},
+      "2380": {"name": "Petro Rabigh", "sub_industry": "Refining & petrochemicals"},
+      "2382": {"name": "ADES Holding", "sub_industry": "Offshore & onshore drilling"},
+      "2381": {"name": "Arabian Drilling", "sub_industry": "Onshore & offshore drilling"},
+      "2030": {"name": "SARCO (Saudi Arabia Refineries)", "sub_industry": "Investment holding (refining-related)"}
+    },
+    "table_metrics": ["REV", "OIRS", "REV_OIRS", "GP", "OPINC", "EBITDA_C", "NI_ATTR", "CFO", "CAPEX", "FCF", "TA", "EQ_ATTR"],
+    "ratios": {
+      "EBITDA_M": ["EBITDA_C", "REV", "EBITDA margin (calculated)"],
+      "OP_M": ["OPINC", "REV", "Operating margin"],
+      "NET_M": ["NI_ATTR", "REV", "Net margin (attributable)"],
+      "ROE": ["NI_ATTR", "avg:EQ_ATTR", "Return on equity (attributable; YTD annualised)"],
+      "CAPEX_INT": ["CAPEX", "REV", "Capex / revenue"]
+    },
+    "classification_note": "Constituents = the archive's Energy folder (6 companies). The archive files Aldrees (4200) under Consumer Discretionary Distribution & Retail and Luberef (2223) under Materials; the Saudi Exchange's own sector classification for these two should be confirmed before the sector total is used externally."
+  },
+  "Banks": {
+    "top_line": "TOI",
+    "top_line_name": "Total operating income",
+    "profit": "NI_ATTR",
+    "constituents": {
+      "1120": {"name": "Al Rajhi Bank", "sub_industry": "Islamic bank"},
+      "1180": {"name": "Saudi National Bank (SNB)", "sub_industry": "Conventional bank"},
+      "1010": {"name": "Riyad Bank", "sub_industry": "Conventional bank"},
+      "1060": {"name": "Saudi Awwal Bank (SAB)", "sub_industry": "Conventional bank"},
+      "1150": {"name": "Alinma Bank", "sub_industry": "Islamic bank"},
+      "1050": {"name": "Banque Saudi Fransi (BSF)", "sub_industry": "Conventional bank"},
+      "1080": {"name": "Arab National Bank (ANB)", "sub_industry": "Conventional bank"},
+      "1140": {"name": "Bank Albilad", "sub_industry": "Islamic bank"},
+      "1030": {"name": "Saudi Investment Bank (SAIB)", "sub_industry": "Conventional bank"},
+      "1020": {"name": "Bank Aljazira (BJAZ)", "sub_industry": "Islamic bank"}
+    },
+    "table_metrics": ["TOI", "NSCI", "FEES_NET", "OTHER_OI", "OPEX_PRE", "PPOP", "IMPAIR_TOTAL", "IMPAIR_FIN", "NI_ATTR", "TA", "LOANS", "DEPOSITS", "EQ_ATTR", "T1_SUKUK"],
+    "ratios": {
+      "CI": ["OPEX_PRE", "TOI", "Cost-to-income (pre-impairment)"],
+      "ROE": ["NI_ATTR-T1_COST", "avg:EQ_ORD", "ROE on ordinary equity (YTD annualised)"],
+      "ROA": ["NI_ATTR", "avg:TA", "Return on average assets (YTD annualised)"],
+      "COR": ["IMPAIR_FIN", "avg:LOANS", "Cost of risk (YTD annualised)"],
+      "NSCI_YLD": ["NSCI", "avg:TA", "NSCI / average assets (margin proxy; YTD annualised)"],
+      "FEE_SHARE": ["FEES_NET", "TOI", "Net fees / TOI"],
+      "LDR": ["LOANS", "DEPOSITS", "Loans / customer deposits (period-end)"]
+    },
+    "classification_note": "All 10 Saudi-listed banks are in the archive's Banks folder."
+  }
+}
