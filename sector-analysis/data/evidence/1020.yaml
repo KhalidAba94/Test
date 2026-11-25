@@ -1,0 +1,232 @@
+ticker: "1020"
+company: "Bank AlJazira (aljazira bank)"
+# Units: SAR '000 unless stated. Pages are physical PDF pages (1-based).
+# Primary statements (SFP, income, equity, cash flow) are image-only pages in all focus PDFs; values marked [image] were read visually.
+
+restatements:
+  - period_restated: "31 Dec 2024 and 1 Jan 2024 (also 30 Sep 2024)"
+    item: "Investments, net (FVOCI equity investment)"
+    from: 36193723
+    to: 36406356
+    unit: "SAR '000"
+    reason: "Correction of prior-period error under IAS 8 (not a change in accounting policy): an FVOCI equity investment had been valued at cost (31 Dec 2023) and net asset value (31 Dec 2024) instead of fair value; fair value higher by SAR 212.63m. Other reserves, equity attributable and total equity +212,633; no P&L effect. Opening 1 Jan 2024 investments 34,442,290 -> 34,654,923."
+    source: "1020_BJAZ/2025_Q3_filed2025-10-29.pdf"
+    page: 45
+    quote: "the Bank corrected the valuation of its interest in an equity investment ... historically valued at cost and net assets value as at 31 December 2023 and 31 December 2024"
+  - period_restated: "31 Dec 2024"
+    item: "Total equity"
+    from: 17201697
+    to: 17414330
+    unit: "SAR '000"
+    reason: "Same IAS 8 correction (+212,633 other reserves). Equity attributable to shareholders 13,326,697 -> 13,539,330."
+    source: "1020_BJAZ/2025_Annual_filed2026-02-05.pdf"
+    page: 139
+    quote: "This adjustment is considered as correction of errors as per IAS 8"
+  - period_restated: "31 Dec 2024"
+    item: "Reclassification of SAR 460m investment from FVOCI to FVIS/FVTPL"
+    from: null
+    to: null
+    unit: "SAR '000"
+    reason: "IAS 8 retrospective reclassification: embedded downside-protection in a Share Purchase Agreement meant instrument was not equity; held at FVIS 1,794,618 -> 2,254,618, FVOCI 13,315,238 -> 13,067,871 (incl. +212,633). No effect on total assets, profit or equity."
+    source: "1020_BJAZ/2025_Annual_filed2026-02-05.pdf"
+    page: 139
+    quote: "the Group has retrospectively reclassified the carrying amount of SAR 460 million from FVOCI to FVIS"
+  - period_restated: "31 Dec 2024, 1 Jan 2024, 30 Sep 2025"
+    item: "Cash management company balances reclassified from Other assets to Cash and balances with SAMA"
+    from: null
+    to: null
+    unit: "SAR '000"
+    reason: "IAS 7 reclassification: 31 Dec 2024 +465,421 (cash 6,118,369 -> 6,583,790); 1 Jan 2024 +280,436; 30 Sep 2025 +496,290. No P&L or equity effect."
+    source: "1020_BJAZ/2026_Q3_filed2026-10-29.pdf"
+    page: 53
+    quote: "the Group reclassified certain balances held with cash management companies from Other assets to Cash and balances with SAMA"
+  - period_restated: "1 Jan 2022 opening retained earnings"
+    item: "Retained earnings / financing, net"
+    from: 1017350
+    to: 956277
+    unit: "SAR '000"
+    reason: "Change in accounting treatment: reassessment of timing of recognition of financing-related fees (integral to effective profit rate); prior-period impact deemed insignificant, so SR 61.07m debited to retained earnings at 1 Jan 2022 against financing, net."
+    source: "1020_BJAZ/2022_Annual_filed2023-02-12.pdf"
+    page: 22
+    quote: "the identified fees has been adjusted from the carrying value of financing, net with a corresponding debit to retained earnings as at 1 January 2022, amounting to SR 61.07 million"
+  - period_restated: "FY2021 (comparatives in FY2022 AFS)"
+    item: "Fees from banking services, net reclassified to income from investments and financings"
+    from: 638473
+    to: 546376
+    unit: "SAR '000"
+    reason: "Financing-related fees and directly attributable expenses moved from fees to 'Income from investments and financings' (+92,097). Fee income 1,134,868 -> 1,008,960; fee expense (496,395) -> (462,584). No net income effect."
+    source: "1020_BJAZ/2022_Annual_filed2023-02-12.pdf"
+    page: 140
+    quote: "the financing related fee and directly attributable expenses which were previously booked as fees have been reclassified from Fees from banking services to Income from investments and financings"
+  - period_restated: "FY2023 segment comparatives (in FY2024 AFS)"
+    item: "Segment results restated for new Funds Transfer Pricing policy (Q2 2024)"
+    from: null
+    to: null
+    unit: "SAR '000"
+    reason: "Updated FTP policy; prior-year segment comparatives restated. Pool income allocation methodology for investment account holders also changed."
+    source: "1020_BJAZ/2024_Annual_filed2025-02-10.pdf"
+    page: 91
+    quote: "the Bank updated its Funds Transfer Pricing (FTP) policy, resulting in modifications to segment performance reporting"
+
+special_extractions:
+  tier1_sukuk:
+    equity_attributable_includes_tier1: false
+    equity_attributable_note: "Balance sheet line 'Equity attributable to ordinary shareholders of the Bank' excludes Tier 1 Sukuk, which is shown separately before 'Total equity'."
+    equity_attributable_source: {source: "1020_BJAZ/2026_Q3_filed2026-10-29.pdf", page: 3, quote: "Equity attributable to ordinary shareholders of the Bank 15,229,347 ... Tier 1 Sukuk 8,214,000 ... Total equity 23,443,347 [image]"}
+    carrying_amounts:
+      - {period: "31 Dec 2021", amount: 1875000, unit: "SAR '000", source: "1020_BJAZ/2022_Annual_filed2023-02-12.pdf", page: 11, quote: "Balance at December 31, 2021 ... Tier 1 Sukuk 1,875,000 [image]"}
+      - {period: "31 Dec 2022", amount: 1875000, unit: "SAR '000", source: "1020_BJAZ/2022_Annual_filed2023-02-12.pdf", page: 11, quote: "Balance at December 31, 2022 ... 1,875,000 [image]"}
+      - {period: "31 Dec 2023", amount: 3875000, unit: "SAR '000", source: "1020_BJAZ/2023_Annual_filed2024-02-13.pdf", page: 11, quote: "Balance at December 31, 2023 ... 3,875,000 [image]"}
+      - {period: "31 Dec 2024", amount: 3875000, unit: "SAR '000", source: "1020_BJAZ/2025_Annual_filed2026-02-05.pdf", page: 10, quote: "Balance at December 31, 2024 ... 3,875,000 [image]"}
+      - {period: "31 Dec 2025", amount: 6750000, unit: "SAR '000", source: "1020_BJAZ/2025_Annual_filed2026-02-05.pdf", page: 10, quote: "Balance at December 31, 2025 ... 6,750,000 [image]"}
+      - {period: "30 Sep 2025", amount: 6750000, unit: "SAR '000", source: "1020_BJAZ/2026_Q3_filed2026-10-29.pdf", page: 3, quote: "Tier 1 Sukuk 13 8,214,000 6,750,000 6,750,000 [image]"}
+      - {period: "30 Sep 2026", amount: 8214000, unit: "SAR '000", source: "1020_BJAZ/2026_Q3_filed2026-10-29.pdf", page: 3, quote: "Tier 1 Sukuk 13 8,214,000 6,750,000 6,750,000 [image]"}
+    distributions_charged_to_equity:
+      - {period: "FY2021", amount: 39315, unit: "SAR '000", line: "Tier 1 Sukuk related costs (plus issuance cost 9,213)", source: "1020_BJAZ/2022_Annual_filed2023-02-12.pdf", page: 11, quote: "Tier 1 Sukuk related costs (39,315) [image]"}
+      - {period: "FY2022", amount: 77354, unit: "SAR '000", line: "Tier 1 Sukuk related costs (plus issuance cost 946)", source: "1020_BJAZ/2022_Annual_filed2023-02-12.pdf", page: 11, quote: "Tier 1 Sukuk issuance cost (946) Tier 1 Sukuk related costs (77,354) [image]"}
+      - {period: "FY2023", amount: 137766, unit: "SAR '000", line: "Tier 1 Sukuk related costs (plus issuance cost 2,812)", source: "1020_BJAZ/2023_Annual_filed2024-02-13.pdf", page: 11, quote: "Tier 1 Sukuk issuance cost (2,812) Tier 1 Sukuk related costs (137,766) [image]"}
+      - {period: "FY2024", amount: 195827, unit: "SAR '000", line: "Tier 1 Sukuk related costs", source: "1020_BJAZ/2025_Annual_filed2026-02-05.pdf", page: 10, quote: "Tier 1 Sukuk related costs (195,827) [image]"}
+      - {period: "FY2025", amount: 229266, unit: "SAR '000", line: "Tier 1 Sukuk related costs (plus issuance cost 10,866)", source: "1020_BJAZ/2025_Annual_filed2026-02-05.pdf", page: 10, quote: "Tier 1 Sukuk issuance cost (10,866) Tier 1 Sukuk related costs (229,266) [image]"}
+      - {period: "9M2025", amount: 130383, unit: "SAR '000", line: "Tier 1 Sukuk related costs (plus issuance cost 11,056)", source: "1020_BJAZ/2026_Q3_filed2026-10-29.pdf", page: 34, quote: "Less: Tier 1 sukuk related costs (141,967) (31,500) (336,334) (130,383)"}
+      - {period: "9M2026", amount: 336334, unit: "SAR '000", line: "Tier 1 Sukuk related costs (plus issuance cost 8,307)", source: "1020_BJAZ/2026_Q3_filed2026-10-29.pdf", page: 34, quote: "Less: Tier 1 sukuk related costs (141,967) (31,500) (336,334) (130,383)"}
+    issuances_redemptions:
+      - {date: "2021", event: "Issued USD-denominated cross-border AT1 sukuk SAR 1.875bn at 3.95% (reset June 2026)", amount: 1875000, unit: "SAR '000", source: "1020_BJAZ/2025_Annual_filed2026-02-05.pdf", page: 75, quote: "during the year 2021, the Bank issued cross border Tier 1 Sukuk ... amounting to SAR 1.875 billion (denominated in US Dollars)"}
+      - {date: "2023 (reset June 2028)", event: "Issued SAR 2bn AT1 sukuk at 6% by private placement (SAR 5bn programme)", amount: 2000000, unit: "SAR '000", source: "1020_BJAZ/2024_Annual_filed2025-02-10.pdf", page: 78, quote: "during year 2023, the Bank completed the issuance of an SAR-denominated additional Tier 1 sukuk of SR 2 billion"}
+      - {date: "Q1 2025 (subsequent event to FY2024)", event: "Issued SAR 1bn AT1 sukuk at 6.3% (reset Jan 2030)", amount: 1000000, unit: "SAR '000", source: "1020_BJAZ/2025_Annual_filed2026-02-05.pdf", page: 75, quote: "During the first quarter of the current year, the Bank also completed the issuance of an SAR-denominated additional Tier 1 sukuk of SAR 1 billion"}
+      - {date: "Q3 2025", event: "Issued USD-denominated AT1 sukuk SAR 1.875bn at 6.5% (reset Sep 2030)", amount: 1875000, unit: "SAR '000", source: "1020_BJAZ/2026_Q3_filed2026-10-29.pdf", page: 37, quote: "During 3rd quarter of 2025, the Bank issued cross border Tier 1 Sukuk ... amounting to SAR 1.875 billion"}
+      - {date: "9M2026 (reset June 2031)", event: "Issued USD-denominated AT1 sukuk SAR 1.875bn at 6.5%", amount: 1875000, unit: "SAR '000", source: "1020_BJAZ/2026_Q3_filed2026-10-29.pdf", page: 37, quote: "The applicable profit rate is 6.5% per annum from date of issue up to June 2031"}
+      - {date: "9M2026 (reset March 2031)", event: "Issued SAR 1.46bn AT1 sukuk at 6.35%; equity statement shows total 9M2026 issuance 3,339,000", amount: 1464000, unit: "SAR '000", source: "1020_BJAZ/2026_Q3_filed2026-10-29.pdf", page: 6, quote: "Tier 1 sukuk issued 3,339,000 [image]"}
+      - {date: "June 2026 (first call date)", event: "Redeemed 2021 USD AT1 sukuk SAR 1.875bn (3.95%)", amount: -1875000, unit: "SAR '000", source: "1020_BJAZ/2026_Q3_filed2026-10-29.pdf", page: 37, quote: "The Bank exercised its option to recall and redeem, on the first call date in June 2026, its cross-border Tier 1 Sukuk"}
+  net_fees:
+    # Income statement captions: 'Fees from banking services - income', '- expense', 'Fees from banking services, net'
+    - {period: "FY2021 (restated in FY2022 AFS)", gross_fee_income: 1008960, fee_expense: 462584, net_fees: 546376, unit: "SAR '000", source: "1020_BJAZ/2022_Annual_filed2023-02-12.pdf", page: 140}
+    - {period: "FY2022", gross_fee_income: 960184, fee_expense: 472102, net_fees: 488082, unit: "SAR '000", source: "1020_BJAZ/2022_Annual_filed2023-02-12.pdf", page: 84}
+    - {period: "FY2023", gross_fee_income: 968521, fee_expense: 420477, net_fees: 548044, unit: "SAR '000", source: "1020_BJAZ/2023_Annual_filed2024-02-13.pdf", page: 82}
+    - {period: "FY2024", gross_fee_income: 1085666, fee_expense: 481605, net_fees: 604061, unit: "SAR '000", source: "1020_BJAZ/2025_Annual_filed2026-02-05.pdf", page: 81}
+    - {period: "FY2025", gross_fee_income: 1135823, fee_expense: 401834, net_fees: 733989, unit: "SAR '000", source: "1020_BJAZ/2025_Annual_filed2026-02-05.pdf", page: 81}
+    - {period: "9M2025", gross_fee_income: 916854, fee_expense: 310132, net_fees: 606722, unit: "SAR '000", source: "1020_BJAZ/2026_Q3_filed2026-10-29.pdf", page: 4, note: "[image]"}
+    - {period: "9M2026", gross_fee_income: 824802, fee_expense: 275726, net_fees: 549076, unit: "SAR '000", source: "1020_BJAZ/2026_Q3_filed2026-10-29.pdf", page: 4, note: "[image]"}
+  impairments:
+    # Single P&L line 'Impairment charge for financing and other financial assets, net'. ecl_financing = gross charge - reversals - recoveries of written-off debts; other = due from banks + investments + non-funded/commitments
+    - {period: "FY2022", ecl_financing_net: 272000, of_which_recoveries_written_off: -115883, other_financial_assets: 14315, total_line: 286315, unit: "SAR '000", source: "1020_BJAZ/2022_Annual_filed2023-02-12.pdf", page: 64, note: "components: charge 572,113; reversals (184,230); recoveries (115,883); banks 2,931; investments 12,866; non-funded (1,482)"}
+    - {period: "FY2023", ecl_financing_net: 233292, of_which_recoveries_written_off: -32702, other_financial_assets: -4229, total_line: 229063, unit: "SAR '000", source: "1020_BJAZ/2023_Annual_filed2024-02-13.pdf", page: 62, note: "charge 379,084; reversals (113,090); recoveries (32,702); banks 3,149; investments (7,783); non-funded 405"}
+    - {period: "FY2024", ecl_financing_net: 295150, of_which_recoveries_written_off: -26830, other_financial_assets: 22310, total_line: 317460, unit: "SAR '000", source: "1020_BJAZ/2025_Annual_filed2026-02-05.pdf", page: 60, note: "charge 526,381; reversals (204,401); recoveries (26,830); banks 611; investments 258; non-funded 21,441"}
+    - {period: "FY2025", ecl_financing_net: 379467, of_which_recoveries_written_off: -154324, other_financial_assets: -25723, total_line: 353744, unit: "SAR '000", source: "1020_BJAZ/2025_Annual_filed2026-02-05.pdf", page: 60, note: "charge 671,783; reversals (137,992); recoveries (154,324); banks 917; investments 1,254; non-funded (27,894)"}
+    - {period: "9M2025", ecl_financing_net: 229328, of_which_recoveries_written_off: -150883, other_financial_assets: 24571, total_line: 253899, unit: "SAR '000", source: "1020_BJAZ/2026_Q3_filed2026-10-29.pdf", page: 28, note: "charge 496,708; reversals (116,497); recoveries (150,883); banks 533; investments (435); non-funded 24,473"}
+    - {period: "9M2026", ecl_financing_net: 250908, of_which_recoveries_written_off: -186669, other_financial_assets: -13631, total_line: 237277, unit: "SAR '000", source: "1020_BJAZ/2026_Q3_filed2026-10-29.pdf", page: 28, note: "charge 552,358; reversals (114,781); recoveries (186,669); banks 3,268; investments 7,629; non-funded (24,528)"}
+    - {period: "FY2024", other_impairment: "Reversal of impairment on other real estate", amount: -42571, unit: "SAR '000", source: "1020_BJAZ/2025_Annual_filed2026-02-05.pdf", page: 11, note: "cash flow statement [image]; note in FY2024 AFS p66 says SR 42.8m reversed"}
+
+perimeter_changes:
+  - event: "Additional 7.05% stake in associate AlJazira Takaful Ta'awuni (ATT) acquired off-market; holding 26.03% -> 33.08%"
+    type: "acquisition"
+    date: "Q2 2024"
+    consideration: 76220
+    revenue_contribution: null
+    profit_contribution: null
+    pro_forma_revenue: null
+    period: "FY2024"
+    unit: "SAR '000"
+    source: "1020_BJAZ/2024_Annual_filed2025-02-10.pdf"
+    page: 67
+    quote: "During the second quarter of 2024, the Group made an additional investment of SR 76.22 million in ATT, representing 7.05% of ATT's capital."
+  - event: "Disposals of subsidiaries/associates, discontinued operations FY2022-9M2026"
+    type: null
+    status: "not found"
+    source: "1020_BJAZ/2025_Annual_filed2026-02-05.pdf; 1020_BJAZ/2026_Q3_filed2026-10-29.pdf"
+    page: null
+
+segments:
+  - {period: "FY2022", segment: "Personal banking", basis: operating, revenue: 1816030, profit: 462388, unit: "SAR '000", source: "1020_BJAZ/2022_Annual_filed2023-02-12.pdf", page: 90}
+  - {period: "FY2022", segment: "Corporate banking", basis: operating, revenue: 807534, profit: 333746, unit: "SAR '000", source: "1020_BJAZ/2022_Annual_filed2023-02-12.pdf", page: 90}
+  - {period: "FY2022", segment: "Treasury", basis: operating, revenue: 814893, profit: 625318, unit: "SAR '000", source: "1020_BJAZ/2022_Annual_filed2023-02-12.pdf", page: 90}
+  - {period: "FY2022", segment: "Brokerage and asset management", basis: operating, revenue: 340530, profit: 150760, unit: "SAR '000", source: "1020_BJAZ/2022_Annual_filed2023-02-12.pdf", page: 90}
+  - {period: "FY2022", segment: "Others", basis: operating, revenue: -283677, profit: -275557, unit: "SAR '000", source: "1020_BJAZ/2022_Annual_filed2023-02-12.pdf", page: 90}
+  - {period: "FY2022", segment: "Total", basis: operating, revenue: 3495310, profit: 1296655, unit: "SAR '000", source: "1020_BJAZ/2022_Annual_filed2023-02-12.pdf", page: 90}
+  - {period: "FY2025", segment: "Personal banking", basis: operating, revenue: 2328650, profit: 711332, unit: "SAR '000", source: "1020_BJAZ/2025_Annual_filed2026-02-05.pdf", page: 87}
+  - {period: "FY2025", segment: "Corporate banking", basis: operating, revenue: 1343154, profit: 697680, unit: "SAR '000", source: "1020_BJAZ/2025_Annual_filed2026-02-05.pdf", page: 87}
+  - {period: "FY2025", segment: "Treasury", basis: operating, revenue: 511747, profit: 333809, unit: "SAR '000", source: "1020_BJAZ/2025_Annual_filed2026-02-05.pdf", page: 87}
+  - {period: "FY2025", segment: "Brokerage and asset management", basis: operating, revenue: 629301, profit: 379415, unit: "SAR '000", source: "1020_BJAZ/2025_Annual_filed2026-02-05.pdf", page: 87}
+  - {period: "FY2025", segment: "Others", basis: operating, revenue: -348518, profit: -336403, unit: "SAR '000", source: "1020_BJAZ/2025_Annual_filed2026-02-05.pdf", page: 87}
+  - {period: "FY2025", segment: "Total", basis: operating, revenue: 4464334, profit: 1785833, unit: "SAR '000", source: "1020_BJAZ/2025_Annual_filed2026-02-05.pdf", page: 87}
+  - {period: "9M2025", segment: "Personal banking", basis: operating, revenue: 1711289, profit: 510446, unit: "SAR '000", source: "1020_BJAZ/2026_Q3_filed2026-10-29.pdf", page: 44}
+  - {period: "9M2025", segment: "Corporate banking", basis: operating, revenue: 1035133, profit: 575541, unit: "SAR '000", source: "1020_BJAZ/2026_Q3_filed2026-10-29.pdf", page: 44}
+  - {period: "9M2025", segment: "Treasury", basis: operating, revenue: 327333, profit: 199088, unit: "SAR '000", source: "1020_BJAZ/2026_Q3_filed2026-10-29.pdf", page: 44}
+  - {period: "9M2025", segment: "Brokerage and asset management", basis: operating, revenue: 465211, profit: 273229, unit: "SAR '000", source: "1020_BJAZ/2026_Q3_filed2026-10-29.pdf", page: 44}
+  - {period: "9M2025", segment: "Others", basis: operating, revenue: -259514, profit: -251836, unit: "SAR '000", source: "1020_BJAZ/2026_Q3_filed2026-10-29.pdf", page: 44}
+  - {period: "9M2025", segment: "Total", basis: operating, revenue: 3279452, profit: 1306468, unit: "SAR '000", source: "1020_BJAZ/2026_Q3_filed2026-10-29.pdf", page: 44, note: "same figures in original 9M2025 interim p36"}
+  - {period: "9M2026", segment: "Personal banking", basis: operating, revenue: 1795755, profit: 503108, unit: "SAR '000", source: "1020_BJAZ/2026_Q3_filed2026-10-29.pdf", page: 43}
+  - {period: "9M2026", segment: "Corporate banking", basis: operating, revenue: 1094392, profit: 640913, unit: "SAR '000", source: "1020_BJAZ/2026_Q3_filed2026-10-29.pdf", page: 43}
+  - {period: "9M2026", segment: "Treasury", basis: operating, revenue: 496920, profit: 343326, unit: "SAR '000", source: "1020_BJAZ/2026_Q3_filed2026-10-29.pdf", page: 43}
+  - {period: "9M2026", segment: "Brokerage and asset management", basis: operating, revenue: 390670, profit: 198173, unit: "SAR '000", source: "1020_BJAZ/2026_Q3_filed2026-10-29.pdf", page: 43}
+  - {period: "9M2026", segment: "Others", basis: operating, revenue: -196432, profit: -194134, unit: "SAR '000", source: "1020_BJAZ/2026_Q3_filed2026-10-29.pdf", page: 43}
+  - {period: "9M2026", segment: "Total", basis: operating, revenue: 3581305, profit: 1491386, unit: "SAR '000", source: "1020_BJAZ/2026_Q3_filed2026-10-29.pdf", page: 43}
+
+revenue_drivers: []
+
+one_offs:
+  - {period: "2018-2023", item: "ZATCA settlement agreement for zakat years 2006-2017: SR 551m full and final, 6 instalments over 5 years ending 1 Dec 2023", amount: 551000, unit: "SAR '000", pnl_line: "zakat (historical)", recurring: false, source: "1020_BJAZ/2023_Annual_filed2024-02-13.pdf", page: 84, quote: "in order to settle outstanding zakat liabilities for the years from 2006 to 2017 against a full and final payment of SR 551 million"}
+  - {period: "FY2022", item: "Prior-year zakat charge (income tax prior year 778 separately)", amount: 11048, unit: "SAR '000", pnl_line: "Zakat", recurring: false, source: "1020_BJAZ/2022_Annual_filed2023-02-12.pdf", page: 85, quote: "Prior year 11,048 17"}
+  - {period: "FY2023", item: "Prior-year zakat credit", amount: -1360, unit: "SAR '000", pnl_line: "Zakat", recurring: false, source: "1020_BJAZ/2023_Annual_filed2024-02-13.pdf", page: 84, quote: "Prior year (1,360) 11,048"}
+  - {period: "FY2024", item: "Prior-year zakat credit; ZATCA 2019 assessment of additional SAR 79.7m received and objected", amount: -2529, unit: "SAR '000", pnl_line: "Zakat", recurring: false, source: "1020_BJAZ/2024_Annual_filed2025-02-10.pdf", page: 87, quote: "the Bank received a Zakat assessment for the year 2019 with an additional Zakat amount of SAR 79.7 million"}
+  - {period: "FY2025", item: "Prior-year zakat charge (2019 and 2021 assessments of SAR 77.57m and 65.5m under objection at GSTC)", amount: 77578, unit: "SAR '000", pnl_line: "Zakat", recurring: false, source: "1020_BJAZ/2025_Annual_filed2026-02-05.pdf", page: 83, quote: "Prior year 77,578 (2,529)"}
+  - {period: "FY2022", item: "Gain on sale of property and equipment", amount: 52801, unit: "SAR '000", pnl_line: "Other operating income", recurring: false, source: "1020_BJAZ/2022_Annual_filed2023-02-12.pdf", page: 85, quote: "Gain on sale of property and equipment 52,801 168"}
+  - {period: "FY2023", item: "Gain on sale of property and equipment", amount: 19355, unit: "SAR '000", pnl_line: "Other operating income", recurring: false, source: "1020_BJAZ/2023_Annual_filed2024-02-13.pdf", page: 83, quote: "Gain on sale of property and equipment 19,355 52,801"}
+  - {period: "FY2024", item: "Gain on sale of other real estate (ORE disposals 403,025 gross)", amount: 68077, unit: "SAR '000", pnl_line: "Other operating income", recurring: false, source: "1020_BJAZ/2024_Annual_filed2025-02-10.pdf", page: 86, quote: "Gain on sale of other real estate 68,077 2,346"}
+  - {period: "FY2024", item: "Reversal of prior-year impairment on other real estate (SR 42.8m)", amount: 42571, unit: "SAR '000", pnl_line: "Reversal of impairment charge for other real estate", recurring: false, source: "1020_BJAZ/2024_Annual_filed2025-02-10.pdf", page: 66, quote: "an impairment loss of SR 42.8 million which was booked in prior years has been reversed"}
+  - {period: "FY2025", item: "Recoveries from debts previously written off (vs 26,830 in FY2024)", amount: 154324, unit: "SAR '000", pnl_line: "Impairment charge for financing and other financial assets, net", recurring: false, source: "1020_BJAZ/2025_Annual_filed2026-02-05.pdf", page: 60, quote: "Recoveries from debts previously written off (154,324) (26,830)"}
+  - {period: "9M2026", item: "Recoveries from debts previously written off", amount: 186669, unit: "SAR '000", pnl_line: "Impairment charge for financing and other financial assets, net", recurring: false, source: "1020_BJAZ/2026_Q3_filed2026-10-29.pdf", page: 28, quote: "Recoveries from debts previously written off (186,669) (150,883)"}
+  - {period: "9M2026", item: "Net loss on de-recognition of financial assets at amortised cost", amount: -8538, unit: "SAR '000", pnl_line: "Net loss on de-recognition of financial assets at amortised cost", recurring: false, source: "1020_BJAZ/2026_Q3_filed2026-10-29.pdf", page: 4, quote: "Net loss on de-recognition of financial assets at amortised cost (8,538) (10,301) [image]"}
+  - {period: "FY2022-9M2026", item: "Hyperinflation adjustments / items labelled non-recurring", amount: null, status: "not found"}
+
+significant_events:
+  - {date: "2020 (open in FY2023 AFS)", event: "VAT assessment 2018-2019: additional VAT SR 39.3m and delay fines SR 63.9m, objected", financial_effect: null, source: "1020_BJAZ/2023_Annual_filed2024-02-13.pdf", page: 84, quote: "the Bank received VAT assessment for the years 2018 and 2019 with an additional VAT of SR 39.3 million and associated delay fines amounting to SR 63.9 million"}
+  - {date: "9M2026", event: "AT1 refinancing: issued SAR 1.875bn USD AT1 (6.5%) and SAR 1.46bn AT1 (6.35%), redeemed 2021 SAR 1.875bn AT1 at first call June 2026", financial_effect: "Tier 1 sukuk 6,750,000 -> 8,214,000", source: "1020_BJAZ/2026_Q3_filed2026-10-29.pdf", page: 37, quote: "During the current period ended 30 September 2026, the Bank completed the issuance and redemption of following Tier 1 instruments"}
+  - {date: "28 Feb 2026 onward", event: "Regional geopolitical deterioration (Strait of Hormuz); ECL scenario weightings shifted to downside; impact on ECL assessed as not material", financial_effect: "not material (not quantified)", source: "1020_BJAZ/2026_Q3_filed2026-10-29.pdf", page: 54, quote: "the Group has adjusted the scenario weightings to reflect a more cautious outlook, with relatively higher weight assigned to the downside scenario"}
+  - {date: "After 30 Sep 2026", event: "Subsequent escalation of geopolitical situation in KSA; heightened credit, liquidity and operational risk; impact uncertain", financial_effect: null, source: "1020_BJAZ/2026_Q3_filed2026-10-29.pdf", page: 54, quote: "Subsequent to the period ended 30 September 2026, the volatility of the ongoing geopolitical situation in Kingdom of Saudi Arabia has escalated significantly"}
+  - {date: "9M2026", event: "Customers' deposits +14.45bn in 9M2026 cash flow; no specific liquidity/funding action note", financial_effect: null, source: "1020_BJAZ/2026_Q3_filed2026-10-29.pdf", page: 7, quote: "Customers' deposits 14,450,234 7,096,681 [image]"}
+  - {date: "28 Jan 2026", event: "Dividend SAR 638.11m (SAR 0.5/share) for H2 2025 approved (subsequent event)", financial_effect: null, source: "1020_BJAZ/2025_Annual_filed2026-02-05.pdf", page: 140, quote: "approved a dividend payment of SAR 638.11 million equal to SAR 0.5 per share for the second half of 2025"}
+
+audit_opinion:
+  - {period: "FY2022", opinion: "unmodified (PwC, EY)", emphasis_of_matter: "none", source: "1020_BJAZ/2022_Annual_filed2023-02-12.pdf", page: 2}
+  - {period: "FY2023", opinion: "unmodified (PwC, EY)", emphasis_of_matter: "none", source: "1020_BJAZ/2023_Annual_filed2024-02-13.pdf", page: 2}
+  - {period: "FY2024", opinion: "unmodified (PwC, EY)", emphasis_of_matter: "none", source: "1020_BJAZ/2024_Annual_filed2025-02-10.pdf", page: 2, note: "image page"}
+  - {period: "FY2025", opinion: "unmodified (PwC, KPMG)", emphasis_of_matter: "none (restatement not referenced in opinion section)", source: "1020_BJAZ/2025_Annual_filed2026-02-05.pdf", page: 2}
+  - {period: "9M2025", opinion: "unmodified review conclusion (PwC, KPMG)", emphasis_of_matter: "none", source: "1020_BJAZ/2025_Q3_filed2025-10-29.pdf", page: 2}
+  - {period: "9M2026", opinion: "unmodified review conclusion (PwC, KPMG)", emphasis_of_matter: "none", source: "1020_BJAZ/2026_Q3_filed2026-10-29.pdf", page: 2}
+
+kpis_in_filings:
+  - {period: "31 Dec 2021", kpi: "CET1 ratio", value: 18.30, unit: "%", source: "1020_BJAZ/2022_Annual_filed2023-02-12.pdf", page: 137}
+  - {period: "31 Dec 2021", kpi: "Tier 1 ratio", value: 20.99, unit: "%", source: "1020_BJAZ/2022_Annual_filed2023-02-12.pdf", page: 137}
+  - {period: "31 Dec 2021", kpi: "Total capital adequacy ratio", value: 24.41, unit: "%", source: "1020_BJAZ/2022_Annual_filed2023-02-12.pdf", page: 137}
+  - {period: "31 Dec 2022", kpi: "CET1 ratio", value: 14.43, unit: "%", source: "1020_BJAZ/2022_Annual_filed2023-02-12.pdf", page: 137}
+  - {period: "31 Dec 2022", kpi: "Tier 1 ratio", value: 16.67, unit: "%", source: "1020_BJAZ/2022_Annual_filed2023-02-12.pdf", page: 137}
+  - {period: "31 Dec 2022", kpi: "Total capital adequacy ratio", value: 19.71, unit: "%", source: "1020_BJAZ/2022_Annual_filed2023-02-12.pdf", page: 137}
+  - {period: "31 Dec 2023", kpi: "CET1 ratio", value: 13.27, unit: "%", source: "1020_BJAZ/2023_Annual_filed2024-02-13.pdf", page: 137}
+  - {period: "31 Dec 2023", kpi: "Tier 1 ratio", value: 17.31, unit: "%", source: "1020_BJAZ/2023_Annual_filed2024-02-13.pdf", page: 137}
+  - {period: "31 Dec 2023", kpi: "Total capital adequacy ratio", value: 19.92, unit: "%", source: "1020_BJAZ/2023_Annual_filed2024-02-13.pdf", page: 137}
+  - {period: "31 Dec 2024", kpi: "CET1 ratio", value: 12.11, unit: "%", source: "1020_BJAZ/2025_Annual_filed2026-02-05.pdf", page: 134}
+  - {period: "31 Dec 2024", kpi: "Tier 1 ratio", value: 15.64, unit: "%", source: "1020_BJAZ/2025_Annual_filed2026-02-05.pdf", page: 134}
+  - {period: "31 Dec 2024", kpi: "Total capital adequacy ratio", value: 18.02, unit: "%", source: "1020_BJAZ/2025_Annual_filed2026-02-05.pdf", page: 134}
+  - {period: "31 Dec 2025", kpi: "CET1 ratio", value: 12.28, unit: "%", source: "1020_BJAZ/2025_Annual_filed2026-02-05.pdf", page: 134}
+  - {period: "31 Dec 2025", kpi: "Tier 1 ratio", value: 17.78, unit: "%", source: "1020_BJAZ/2025_Annual_filed2026-02-05.pdf", page: 134}
+  - {period: "31 Dec 2025", kpi: "Total capital adequacy ratio", value: 19.94, unit: "%", source: "1020_BJAZ/2025_Annual_filed2026-02-05.pdf", page: 134}
+  - {period: "30 Sep 2025", kpi: "CET1 ratio", value: 11.67, unit: "%", source: "1020_BJAZ/2026_Q3_filed2026-10-29.pdf", page: 50}
+  - {period: "30 Sep 2025", kpi: "Tier 1 ratio", value: 16.96, unit: "%", source: "1020_BJAZ/2026_Q3_filed2026-10-29.pdf", page: 50}
+  - {period: "30 Sep 2025", kpi: "Total capital adequacy ratio", value: 19.07, unit: "%", source: "1020_BJAZ/2026_Q3_filed2026-10-29.pdf", page: 50}
+  - {period: "30 Sep 2026", kpi: "CET1 ratio", value: 11.20, unit: "%", source: "1020_BJAZ/2026_Q3_filed2026-10-29.pdf", page: 50}
+  - {period: "30 Sep 2026", kpi: "Tier 1 ratio", value: 17.23, unit: "%", source: "1020_BJAZ/2026_Q3_filed2026-10-29.pdf", page: 50}
+  - {period: "30 Sep 2026", kpi: "Total capital adequacy ratio", value: 19.30, unit: "%", source: "1020_BJAZ/2026_Q3_filed2026-10-29.pdf", page: 50}
+  - {period: "31 Dec 2024", kpi: "Non-performing financing, gross (amount; ratio not disclosed)", value: 1202077, unit: "SAR '000", source: "1020_BJAZ/2025_Annual_filed2026-02-05.pdf", page: 55}
+  - {period: "31 Dec 2024", kpi: "Allowance for impairment on financing", value: 2529007, unit: "SAR '000", source: "1020_BJAZ/2025_Annual_filed2026-02-05.pdf", page: 55}
+  - {period: "31 Dec 2025", kpi: "Non-performing financing, gross (amount; ratio not disclosed)", value: 1164659, unit: "SAR '000", source: "1020_BJAZ/2025_Annual_filed2026-02-05.pdf", page: 55}
+  - {period: "31 Dec 2025", kpi: "Allowance for impairment on financing", value: 2167441, unit: "SAR '000", source: "1020_BJAZ/2025_Annual_filed2026-02-05.pdf", page: 55}
+  - {period: "30 Sep 2026", kpi: "Non-performing financing, gross (amount; ratio not disclosed)", value: 1199549, unit: "SAR '000", source: "1020_BJAZ/2026_Q3_filed2026-10-29.pdf", page: 22}
+  - {period: "30 Sep 2026", kpi: "Allowance for impairment on financing", value: 2027912, unit: "SAR '000", source: "1020_BJAZ/2026_Q3_filed2026-10-29.pdf", page: 22}
+  - {period: "all", kpi: "LCR / NSFR", value: null, unit: "%", status: "not found", source: "all focus PDFs searched", page: null}
+  - {period: "all", kpi: "NPL ratio / coverage ratio (as ratios)", value: null, unit: "%", status: "not found", source: "all focus PDFs searched", page: null}
+
+open_questions:
+  - "All primary statements are image-only; Tier 1 sukuk balances, sukuk costs, 9M fee lines and balance-sheet captions were read from page images."
+  - "9M2026 equity statement shows Tier 1 sukuk issued 3,339,000 while note 13 describes SAR 1.875bn + SAR 1.46bn (=3,335,000); AT1 capital and balance 8,214,000 imply the SAR 1.46bn tranche is ~1,464,000."
+  - "FY2025 Tier 1 sukuk issuance cost 10,866 (annual) vs 11,056 in 9M2025 statement of changes in equity."
+  - "FY2024 fee expense in note 22 includes brokerage and international share trading lines (total 481,605); FY2024 AFS fee note page is p85 (FY2024 AFS) and p81 (FY2025 AFS comparatives)."

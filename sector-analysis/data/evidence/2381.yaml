@@ -1,0 +1,194 @@
+# Evidence extracted from Arabian Drilling Company filings (archive: 2381_ARABIAN_DRILLING). Facts only; page = physical PDF page (1-based).
+# Units: full Saudi Riyals ("SAR") as presented. Primary statements are scanned images (FY2025 AFS pp8-13; FY2024 AFS pp8-13; 2026_Q3 pp5-10); cash-flow pages were viewed as images.
+ticker: "2381"
+company: "Arabian Drilling Company"
+
+perimeter_changes:
+  - event: "No acquisitions, disposals or discontinued operations; Group = Company + wholly owned Ofsat Arabia LLC (rig transport). New branches only: KSA training branch (2024); UAE (Sharjah) drilling branch established 2025, commercial operations started in 2026"
+    type: new_subsidiary
+    status: "no acquisition/disposal found"
+    date: "2025 (branch established); 9M2026 (operations started)"
+    consideration: null
+    revenue_contribution: null
+    profit_contribution: null
+    pro_forma_revenue: null
+    period: "FY2022-9M2026"
+    unit: "SAR"
+    source: "2381_ARABIAN_DRILLING/2026_Q3_filed2026-11-08.pdf"
+    page: 11
+    quote: "The branch started its commercial operations during the period ended 30 September 2026."
+  - event: "Assets held for sale: transfers of rigs/equipment to held for sale and disposals (no business disposal)"
+    type: disposal
+    date: "FY2024-FY2025"
+    consideration: "Proceeds from disposal of AHFS SAR 20,692,904 (FY2025) and 22,783,584 (FY2024); FY2025 gain SAR 7,622,737"
+    revenue_contribution: null
+    profit_contribution: 7622737
+    pro_forma_revenue: null
+    period: "FY2025"
+    unit: "SAR"
+    source: "2381_ARABIAN_DRILLING/2025_Annual_filed2026-03-02.pdf"
+    page: 12
+    quote: "Gain on disposal of non-current assets held for sale 19 (7,622,737)"
+
+segments:
+  # Operating segments: land rigs, off-shore rigs, other (Ofsat transport). revenue = external; profit = segment results (revenue - cost of revenue).
+  - {period: "FY2021", segment: "Land rigs", basis: operating, revenue: 1643421712, profit: 288866021, unit: "SAR", source: "2381_ARABIAN_DRILLING/2022_Annual_filed2023-03-19.pdf", page: 54}
+  - {period: "FY2021", segment: "Off-shore rigs", basis: operating, revenue: 552534887, profit: 152558443, unit: "SAR", source: "2381_ARABIAN_DRILLING/2022_Annual_filed2023-03-19.pdf", page: 54}
+  - {period: "FY2021", segment: "Total", basis: operating, revenue: 2198968512, profit: 475618867, unit: "SAR", source: "2381_ARABIAN_DRILLING/2022_Annual_filed2023-03-19.pdf", page: 54}
+  - {period: "FY2022", segment: "Land rigs", basis: operating, revenue: 1894763670, profit: 394855312, unit: "SAR", source: "2381_ARABIAN_DRILLING/2023_Annual_filed2024-03-18.pdf", page: 50}
+  - {period: "FY2022", segment: "Off-shore rigs", basis: operating, revenue: 801862775, profit: 377829696, unit: "SAR", source: "2381_ARABIAN_DRILLING/2023_Annual_filed2024-03-18.pdf", page: 50}
+  - {period: "FY2022", segment: "Other", basis: operating, revenue: 6909030, profit: 28758084, unit: "SAR", source: "2381_ARABIAN_DRILLING/2023_Annual_filed2024-03-18.pdf", page: 50}
+  - {period: "FY2022", segment: "Total", basis: operating, revenue: 2703535475, profit: 801443092, pbt: 552300180, net_profit_attributable: 557719959, unit: "SAR", source: "2381_ARABIAN_DRILLING/2023_Annual_filed2024-03-18.pdf", page: 50}
+  - {period: "FY2023", segment: "Land rigs", basis: operating, revenue: 2007644278, profit: 278057615, unit: "SAR", source: "2381_ARABIAN_DRILLING/2024_Annual_filed2025-03-12.pdf", page: 47}
+  - {period: "FY2023", segment: "Off-shore rigs", basis: operating, revenue: 1467487066, profit: 649731606, unit: "SAR", source: "2381_ARABIAN_DRILLING/2024_Annual_filed2025-03-12.pdf", page: 47}
+  - {period: "FY2023", segment: "Other", basis: operating, revenue: 1392520, profit: 48114727, unit: "SAR", source: "2381_ARABIAN_DRILLING/2024_Annual_filed2025-03-12.pdf", page: 47}
+  - {period: "FY2023", segment: "Total", basis: operating, revenue: 3476523864, profit: 975903948, pbt: 687946934, net_profit_attributable: 604613933, unit: "SAR", source: "2381_ARABIAN_DRILLING/2024_Annual_filed2025-03-12.pdf", page: 47}
+  - {period: "FY2024", segment: "Land rigs", basis: operating, revenue: 2140822296, profit: 161449262, unit: "SAR", source: "2381_ARABIAN_DRILLING/2025_Annual_filed2026-03-02.pdf", page: 50}
+  - {period: "FY2024", segment: "Off-shore rigs", basis: operating, revenue: 1477995207, profit: 563449026, unit: "SAR", source: "2381_ARABIAN_DRILLING/2025_Annual_filed2026-03-02.pdf", page: 50}
+  - {period: "FY2024", segment: "Other", basis: operating, revenue: 0, profit: 35001398, unit: "SAR", source: "2381_ARABIAN_DRILLING/2025_Annual_filed2026-03-02.pdf", page: 50}
+  - {period: "FY2024", segment: "Total", basis: operating, revenue: 3618817503, profit: 759899686, pbt: 358019636, net_profit_attributable: 321364737, unit: "SAR", source: "2381_ARABIAN_DRILLING/2025_Annual_filed2026-03-02.pdf", page: 50}
+  - {period: "FY2025", segment: "Land rigs", basis: operating, revenue: 2434480976, profit: 82592065, unit: "SAR", source: "2381_ARABIAN_DRILLING/2025_Annual_filed2026-03-02.pdf", page: 50}
+  - {period: "FY2025", segment: "Off-shore rigs", basis: operating, revenue: 997806908, profit: 226613292, unit: "SAR", source: "2381_ARABIAN_DRILLING/2025_Annual_filed2026-03-02.pdf", page: 50}
+  - {period: "FY2025", segment: "Other", basis: operating, revenue: 1039479, profit: 64866902, unit: "SAR", source: "2381_ARABIAN_DRILLING/2025_Annual_filed2026-03-02.pdf", page: 50}
+  - {period: "FY2025", segment: "Total", basis: operating, revenue: 3433327363, profit: 374072259, pbt: -47787686, net_profit_attributable: -75250331, unit: "SAR", source: "2381_ARABIAN_DRILLING/2025_Annual_filed2026-03-02.pdf", page: 50}
+  - {period: "9M2026", segment: "Land rigs", basis: operating, revenue: 1724615891, profit: 178512457, unit: "SAR", source: "2381_ARABIAN_DRILLING/2026_Q3_filed2026-11-08.pdf", page: 21}
+  - {period: "9M2026", segment: "Offshore rigs", basis: operating, revenue: 672403101, profit: 114819511, unit: "SAR", source: "2381_ARABIAN_DRILLING/2026_Q3_filed2026-11-08.pdf", page: 21}
+  - {period: "9M2026", segment: "Other", basis: operating, revenue: 0, profit: 10700560, unit: "SAR", source: "2381_ARABIAN_DRILLING/2026_Q3_filed2026-11-08.pdf", page: 21}
+  - {period: "9M2026", segment: "Total", basis: operating, revenue: 2397018992, profit: 304032528, pbt: 24803562, net_profit_attributable: 6902208, unit: "SAR", source: "2381_ARABIAN_DRILLING/2026_Q3_filed2026-11-08.pdf", page: 21}
+  - {period: "9M2025", segment: "Land rigs", basis: operating, revenue: 1863238834, profit: 169506327, unit: "SAR", source: "2381_ARABIAN_DRILLING/2026_Q3_filed2026-11-08.pdf", page: 21}
+  - {period: "9M2025", segment: "Offshore rigs", basis: operating, revenue: 745746091, profit: 176469606, unit: "SAR", source: "2381_ARABIAN_DRILLING/2026_Q3_filed2026-11-08.pdf", page: 21}
+  - {period: "9M2025", segment: "Other", basis: operating, revenue: 0, profit: 57948710, unit: "SAR", source: "2381_ARABIAN_DRILLING/2026_Q3_filed2026-11-08.pdf", page: 21}
+  - {period: "9M2025", segment: "Total", basis: operating, revenue: 2608984925, profit: 403924643, pbt: 97051142, net_profit_attributable: 73267756, unit: "SAR", source: "2381_ARABIAN_DRILLING/2026_Q3_filed2026-11-08.pdf", page: 21}
+  - {period: "Q3 2026", segment: "Total", basis: operating, revenue: 810717628, profit: 133181115, pbt: 37560776, net_profit_attributable: 31356919, unit: "SAR", source: "2381_ARABIAN_DRILLING/2026_Q3_filed2026-11-08.pdf", page: 21}
+  - {period: "Q3 2025", segment: "Total", basis: operating, revenue: 835433361, profit: 100922258, pbt: 1719335, net_profit_attributable: -9406797, unit: "SAR", source: "2381_ARABIAN_DRILLING/2026_Q3_filed2026-11-08.pdf", page: 21}
+  - {period: "FY2022-9M2026", segment: "Geographic split", basis: geographic, status: "not found", note: "No geographic disclosure; operations in KSA (UAE branch operational from 2026)", source: "2381_ARABIAN_DRILLING/2025_Annual_filed2026-03-02.pdf", page: 49}
+
+revenue_drivers:
+  - {period: "FY2025", driver: "Drilling revenue (FY2024: 2,911,354,427)", value: 2575912982, unit: "SAR", source: "2381_ARABIAN_DRILLING/2025_Annual_filed2026-03-02.pdf", page: 43, quote: "Drilling revenue (Note 16.1) 2,575,912,982 2,911,354,427"}
+  - {period: "FY2025", driver: "Rig move revenue (FY2024: 374,872,730)", value: 545029947, unit: "SAR", source: "2381_ARABIAN_DRILLING/2025_Annual_filed2026-03-02.pdf", page: 43, quote: "Rig move revenue 545,029,947 374,872,730"}
+  - {period: "FY2025", driver: "Mobilization revenue (FY2024: 146,714,147)", value: 104648549, unit: "SAR", source: "2381_ARABIAN_DRILLING/2025_Annual_filed2026-03-02.pdf", page: 43, quote: "Mobilization revenue (Note 16.2) 104,648,549 146,714,147"}
+  - {period: "FY2025", driver: "Catering and other revenue (FY2024: 185,876,199)", value: 207735885, unit: "SAR", source: "2381_ARABIAN_DRILLING/2025_Annual_filed2026-03-02.pdf", page: 43, quote: "Catering and other revenue 207,735,885 185,876,199"}
+  - {period: "FY2025", driver: "Contracted future lease component of drilling revenue (backlog proxy; FY2024: 5,133,521,928)", value: 6207782870, unit: "SAR", source: "2381_ARABIAN_DRILLING/2025_Annual_filed2026-03-02.pdf", page: 43, quote: "The expected revenue is based on signed agreements with the customers and expected utilization rates of the underlying rigs."}
+  - {period: "9M2026", driver: "Drilling revenue (9M2025: 1,966,455,253)", value: 1841985396, unit: "SAR", source: "2381_ARABIAN_DRILLING/2026_Q3_filed2026-11-08.pdf", page: 19, quote: "Drilling revenue 622,070,203 637,908,363 1,841,985,396 1,966,455,253"}
+  - {period: "9M2026", driver: "Rig move revenue (9M2025: 405,915,732)", value: 349677719, unit: "SAR", source: "2381_ARABIAN_DRILLING/2026_Q3_filed2026-11-08.pdf", page: 19, quote: "Rig move revenue 110,502,470 116,282,682 349,677,719 405,915,732"}
+  - {period: "9M2026", driver: "Mobilization revenue (9M2025: 79,349,980)", value: 62145706, unit: "SAR", source: "2381_ARABIAN_DRILLING/2026_Q3_filed2026-11-08.pdf", page: 19, quote: "Mobilization revenue 20,715,235 28,066,344 62,145,706 79,349,980"}
+  - {period: "FY2024", driver: "Saudi Aramco rig reductions after MoE capacity curtailment: 2 offshore + 2 onshore suspended, 3 onshore not renewed, 1 offshore terminated", value: 8, unit: "count", source: "2381_ARABIAN_DRILLING/2024_Annual_filed2025-03-12.pdf", page: 34, quote: "Saudi Aramco decided to suspend the drilling contract for two of its offshore rigs and two of its onshore rigs"}
+  - {period: "FY2025", driver: "Further suspensions of certain offshore and onshore rigs; one onshore contract not renewed; customer confirmed resumption of certain suspended rigs after year-end", value: null, unit: "count", source: "2381_ARABIAN_DRILLING/2025_Annual_filed2026-03-02.pdf", page: 34, quote: "drilling contracts for certain offshore and onshore rigs were suspended by the customer while the drilling contract related to an onshore rig will not be renewed."}
+  - {period: "FY2022-9M2026", driver: "Total rig count / utilisation", value: null, unit: "count", status: "not found", source: "2381_ARABIAN_DRILLING/2025_Annual_filed2026-03-02.pdf", page: null, quote: "Not disclosed in FS"}
+
+one_offs:
+  - {period: "FY2024", item: "Impairment of property, plant and equipment (two rigs after cancelled capex)", amount: -105000000, unit: "SAR", pnl_line: "Cost of revenue", recurring: false, source: "2381_ARABIAN_DRILLING/2024_Annual_filed2025-03-12.pdf", page: 12, quote: "Impairment of property, plant and equipment 4.2 105,000,000 -"}
+  - {period: "FY2025", item: "Impairment of three out-of-contract onshore rigs (FVLCD, Level 2)", amount: -114349224, unit: "SAR", pnl_line: "Cost of revenue", recurring: false, source: "2381_ARABIAN_DRILLING/2025_Annual_filed2026-03-02.pdf", page: 34, quote: "an impairment loss of Saudi Riyals 114.3 million was recorded in cost of revenue during the year ended 31 December 2025."}
+  - {period: "FY2025", item: "Amortization of new intangible asset (first year)", amount: -11534979, unit: "SAR", pnl_line: "Operating costs", recurring: true, source: "2381_ARABIAN_DRILLING/2025_Annual_filed2026-03-02.pdf", page: 12, quote: "Amortization of intangible asset 5 11,534,979 -"}
+  - {period: "FY2025", item: "Income from insurance claim", amount: 7121089, unit: "SAR", pnl_line: "Other gains - net", recurring: false, source: "2381_ARABIAN_DRILLING/2025_Annual_filed2026-03-02.pdf", page: 12, quote: "Income from insurance claim 19 (7,121,089) -"}
+  - {period: "FY2025", item: "Gain on disposal of non-current assets held for sale", amount: 7622737, unit: "SAR", pnl_line: "Other gains - net", recurring: false, source: "2381_ARABIAN_DRILLING/2025_Annual_filed2026-03-02.pdf", page: 12, quote: "Gain on disposal of non-current assets held for sale 19 (7,622,737) -"}
+  - {period: "FY2024", item: "Liquidated damages for delayed mobilization of new rigs netted against mobilization revenue (variable consideration)", amount: -61813125, unit: "SAR", pnl_line: "Revenue (mobilization, amortised over contract term)", recurring: false, source: "2381_ARABIAN_DRILLING/2025_Annual_filed2026-03-02.pdf", page: 44, quote: "Additions to mobilization revenue for the year ended 31 December 2024 includes adjustment of Saudi Riyals 61.8 million related to liquidated damages."}
+  - {period: "9M2026", item: "Retained non-refundable customer deposit after cancelled sale of a land rig", amount: 9900000, unit: "SAR", pnl_line: "Other operating income, net", recurring: false, source: "2381_ARABIAN_DRILLING/2026_Q3_filed2026-11-08.pdf", page: 19, quote: "a non-refundable customer's deposit amounting to Saudi Riyals 9.9 million"}
+  - {period: "9M2025", item: "Gain on land parcel disposal 8.4m and insurance claim 7.1m", amount: 15500000, unit: "SAR", pnl_line: "Other operating income, net", recurring: false, source: "2381_ARABIAN_DRILLING/2026_Q3_filed2026-11-08.pdf", page: 19, quote: "Gain from disposal of a land parcel amounting to Saudi Riyals 8.4 million and insurance claim receivable"}
+  - {period: "9M2026", item: "Impairment", amount: 0, unit: "SAR", pnl_line: "n/a", recurring: false, status: "none recognised", source: "2381_ARABIAN_DRILLING/2026_Q3_filed2026-11-08.pdf", page: 16, quote: "no impairment loss was recognised during the nine-month period ended 30 September 2026"}
+
+restatements:
+  - period_restated: "FY2024"
+    item: "Capex (XBRL value 1,859.7m -> 1,910.3m)"
+    from: 1859694479
+    to: 1910305806
+    unit: "SAR"
+    reason: "Not a PDF restatement. Both FY2024 AFS (p12) and FY2025 AFS comparative (p12) show 'Additions to property, plant and equipment' 1,859,694,479 and a separate 'Additions to intangible asset' 50,611,327. 1,910.3m = PP&E + intangible additions; the difference is a capex-definition/tagging choice, no reason stated."
+    source: "2381_ARABIAN_DRILLING/2025_Annual_filed2026-03-02.pdf"
+    page: 12
+    quote: "Additions to property, plant and equipment 4 (719,957,682) (1,859,694,479) Additions to intangible asset 5 (25,959,770) (50,611,327)"
+    original_source: "2381_ARABIAN_DRILLING/2024_Annual_filed2025-03-12.pdf p12 (scanned cash flow): same two lines"
+  - period_restated: "31 Dec 2025 balance sheet"
+    item: "Mobilization cost / mobilization revenue presentation (grossed up by 87,796,000)"
+    from: -132216966
+    to: -220012966
+    unit: "SAR"
+    reason: "Mobilization cost previously netted against mobilization revenue now shown gross as assets (consistency with current period); no significant P&L or cash-flow impact."
+    source: "2381_ARABIAN_DRILLING/2026_Q3_filed2026-11-08.pdf"
+    page: 23
+    quote: "To ensure consistency with the current period's presentation, certain amounts in consolidated statement of financial position as at ended 31 December 2025 have been reclassified."
+  - period_restated: "9M2025"
+    item: "Revenue / segment results (check)"
+    from: 2608984925
+    to: 2608984925
+    unit: "SAR"
+    reason: "No change between 2025_Q3 and 2026_Q3 presentations."
+    source: "2381_ARABIAN_DRILLING/2026_Q3_filed2026-11-08.pdf"
+    page: 21
+    quote: "Revenue from external customers 1,863,238,834 745,746,091 - 2,608,984,925"
+
+significant_events:
+  - date: "2022-11-07"
+    event: "IPO and listing on Tadawul: 26.7m shares (17.7m sold by existing shareholders + 9.0m new shares) at SAR 100; 30% free float"
+    financial_effect: "Primary proceeds from 9.0m new shares (gross SAR 900m implied by offer price x shares; net not extracted)"
+    source: "2381_ARABIAN_DRILLING/2022_Annual_filed2023-03-19.pdf"
+    page: 13
+    quote: "issuance of 9,000,000 new shares."
+  - date: "2022"
+    event: "Issued SAR 2.0bn Sukuk, single balloon repayment 3 Feb 2027"
+    financial_effect: "Current liabilities exceed current assets from 3 Feb 2026 (SAR 1.6bn at 30 Sep 2026)"
+    source: "2381_ARABIAN_DRILLING/2026_Q3_filed2026-11-08.pdf"
+    page: 11
+    quote: "the Group's current liabilities exceed its current assets by Saudi Riyals 1.6 billion as of 30 September 2026."
+  - date: "2026-02-03 / 2026-02-26"
+    event: "Breach of 1:1 current-ratio covenant on Murabaha facility from 3 Feb 2026; waiver obtained 26 Feb 2026 valid until 31 Mar 2027; Sukuk refinancing under discussion"
+    financial_effect: "Going-concern disclosure; no material uncertainty paragraph"
+    source: "2381_ARABIAN_DRILLING/2026_Q3_filed2026-11-08.pdf"
+    page: 11
+    quote: "the Group has obtained the waiver from the lender for the breach of loan covenant related to the current ratio which is valid until 31 March 2027"
+  - date: "2026 (Middle East conflict)"
+    event: "Sustained geopolitical conflict; temporary suspensions of rigs by customers; business plan updated for impairment testing"
+    financial_effect: "Not material to assumptions as of 30 Sep 2026; potential impact cannot be reliably estimated"
+    source: "2381_ARABIAN_DRILLING/2026_Q3_filed2026-11-08.pdf"
+    page: 11
+    quote: "The Group is actively monitoring risks and uncertainties related to its operations including temporary suspensions of rigs by the customers."
+  - date: "2026 Q1"
+    event: "Q1 2026 interim: due to the geopolitical conflict, drilling contracts for certain offshore rigs were suspended by the customer; treated as impairment indicator"
+    financial_effect: "Impairment test at 31 Mar 2026 (pre-tax WACC 11.40%): no impairment loss identified"
+    source: "2381_ARABIAN_DRILLING/2026_Q1_filed2026-05-10.pdf"
+    page: 15
+    quote: "drilling contracts for certain offshore rigs were suspended by the customer. This event was identified as an impairment indicator"
+  - date: "2024"
+    event: "MoE curtailed production-capacity expansion; Saudi Aramco reduced contracted rigs (suspensions/non-renewals/termination)"
+    financial_effect: "Impairment indicators; SAR 105m impairment; lower FY2024-FY2025 offshore revenue"
+    source: "2381_ARABIAN_DRILLING/2024_Annual_filed2025-03-12.pdf"
+    page: 34
+    quote: "Saudi Arabian Oil Company (Saudi Aramco) adjusting the number of its required offshore and onshore contracted rigs downwards."
+  - date: "2025-03-11"
+    event: "Dividend SAR 1.35/share (SAR 119.96m) approved (2024: SAR 3.87/share, SAR 344.8m); no 2026 dividend disclosed in 9M2026"
+    financial_effect: "Dividends paid FY2025 SAR 119,955,514; FY2024 SAR 344,825,105"
+    source: "2381_ARABIAN_DRILLING/2025_Annual_filed2026-03-02.pdf"
+    page: 60
+    quote: "On 11 March 2025, the Company's shareholders approved cash dividends of Saudi Riyals 1.35 per share totaling to Saudi Riyals 120.2 million"
+  - date: "2025"
+    event: "Statutory reserve SAR 267,000,000 transferred to retained earnings (Companies Law change)"
+    financial_effect: "Equity reclass, non-cash"
+    source: "2381_ARABIAN_DRILLING/2025_Annual_filed2026-03-02.pdf"
+    page: 13
+    quote: "Transfer of statutory reserve to retained earnings 12 267,000,000 -"
+
+audit_opinion:
+  - {period: "FY2022", opinion: "Unmodified; Other Matter: FY2021 audited by another auditor", emphasis_of_matter: none, source: "2381_ARABIAN_DRILLING/2022_Annual_filed2023-03-19.pdf", page: 3}
+  - {period: "FY2023", opinion: "Unmodified; no EoM found", emphasis_of_matter: none, source: "2381_ARABIAN_DRILLING/2023_Annual_filed2024-03-18.pdf", page: 3}
+  - {period: "FY2024", opinion: "Unmodified; KAM incl. impairment for suspended/terminated contracts; no EoM found", emphasis_of_matter: none, source: "2381_ARABIAN_DRILLING/2024_Annual_filed2025-03-12.pdf", page: 3}
+  - {period: "FY2025", opinion: "Unmodified (PwC); KAM: impairment of PP&E and ROU assets; no EoM or material uncertainty paragraph despite Note 1 going-concern disclosure (Sukuk maturity, covenant breach)", emphasis_of_matter: none, source: "2381_ARABIAN_DRILLING/2025_Annual_filed2026-03-02.pdf", page: 3}
+  - {period: "9M2026", opinion: "Review conclusion unmodified; Other Matter: 9M2025 reviewed and FY2025 audited by another auditor", emphasis_of_matter: none, source: "2381_ARABIAN_DRILLING/2026_Q3_filed2026-11-08.pdf", page: 4}
+
+kpis_in_filings:
+  - {period: "FY2025", kpi: "Capital expenditure contracted not incurred (FY2024: 187.0m)", value: 180.9, unit: "SAR m", source: "2381_ARABIAN_DRILLING/2025_Annual_filed2026-03-02.pdf", page: 49}
+  - {period: "FY2025", kpi: "Leverage ratio (borrowing limit 2.5x equity)", value: 0.76, unit: "count", source: "2381_ARABIAN_DRILLING/2025_Annual_filed2026-03-02.pdf", page: 14}
+  - {period: "30 Sep 2026", kpi: "Leverage ratio", value: 0.48, unit: "count", source: "2381_ARABIAN_DRILLING/2026_Q3_filed2026-11-08.pdf", page: 11}
+  - {period: "FY2022-9M2026", kpi: "Rig fleet count / utilisation", value: null, unit: "count", status: "not found", source: "2381_ARABIAN_DRILLING/2025_Annual_filed2026-03-02.pdf", page: null}
+
+special_extractions:
+  - name: "Cash flow capex lines (viewed from scanned pages)"
+    unit: "SAR"
+    FY2025: {additions_PPE: -719957682, additions_intangible: -25959770, net_cash_operating: 1099310461, source: "2381_ARABIAN_DRILLING/2025_Annual_filed2026-03-02.pdf", page: 12}
+    FY2024: {additions_PPE: -1859694479, additions_intangible: -50611327, net_cash_operating: 1749599957, depreciation_PPE: 770875896, source: "2381_ARABIAN_DRILLING/2025_Annual_filed2026-03-02.pdf", page: 12}
+    FY2023: {additions_PPE: -1846746772, additions_intangible: 0, net_cash_operating: 1360086682, source: "2381_ARABIAN_DRILLING/2024_Annual_filed2025-03-12.pdf", page: 12}
+
+open_questions:
+  - "Capex XBRL difference (1,859.7m vs 1,910.3m) is definitional (PP&E only vs PP&E + intangible additions); intangible asset (note 5) first appears in FY2024 - nature not extracted."
+  - "Income statement pages are scanned; revenue/segment/PBT/net profit taken from text notes (segment reconciliation, EPS note). Gross profit and G&A totals not separately transcribed from the scanned P&L."
+  - "Number of offshore rigs suspended in Q1 2026 due to the conflict is not quantified ('certain offshore rigs')."
+  - "FY2022 IPO primary proceeds: only share counts and offer price extracted; net proceeds figure not located."

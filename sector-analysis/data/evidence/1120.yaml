@@ -1,0 +1,260 @@
+# Evidence file: Al Rajhi Banking and Investment Corporation. Amounts SAR '000 unless stated.
+# Note: in the 2025-2026 PDFs the text layer renders the new Saudi riyal symbol as "$" (e.g. "($'000)"); the image pages show the riyal symbol. Treated as SAR.
+# Primary statements (BS, IS, SoCE) in every Al Rajhi PDF are image-only pages; values below from those pages were read visually.
+ticker: "1120"
+company: "Al Rajhi Banking and Investment Corporation"
+
+perimeter_changes:
+  - event: "Acquisition of 100% of Ejada Systems Limited (IT services) completed 1 Feb 2022; acquisition method, PPA completed"
+    type: acquisition
+    date: "2022-02-01"
+    consideration: 657815
+    revenue_contribution: {FY2022_Ejada_revenue: 426445, FY2023_Ejada_revenue: 533646}
+    profit_contribution: {FY2022_Ejada_gross_profit: 140567, FY2023_Ejada_gross_profit: 116555}
+    pro_forma_revenue: null
+    period: FY2022
+    unit: "SAR '000"
+    source: "1120_ALRAJHI/2022_Annual_filed2023-02-07.pdf"
+    page: 100
+    quote: "On 1 February 2022, the Group completed the process and legal formalities of the acquisition of the entire shares of Ejada Systems Limited"
+  - event: "Ejada classified as disposal group held for sale (IFRS 5; not a discontinued operation). Board plan to lose control via private placements and IPO. 10% stake sold by private placement in 2024 (NCI recognised). Still held for sale at 30 Sep 2026."
+    type: disposal
+    date: "FY2024 (classification); 10% sale during 2024"
+    consideration: null
+    revenue_contribution: null
+    profit_contribution: null
+    pro_forma_revenue: null
+    period: FY2024
+    unit: "SAR '000"
+    source: "1120_ALRAJHI/2024_Annual_filed2025-02-09.pdf"
+    page: 62
+    quote: "During the year, the Group has disposed off 10% stake in Ejada through private placement. This has resulted in sale of minority stake in a subsidiary."
+  - event: "Disposal group held for sale balances: 31 Dec 2024 assets 1,002,450 / liabilities 846,376; 30 Sep 2025 assets 1,371,539 / liabilities 706,795; 31 Dec 2025 assets 1,553,329 / liabilities 1,013,250; 30 Sep 2026 assets 1,545,212 / liabilities 1,204,623"
+    type: disposal
+    date: "2024-12-31 to 2026-09-30"
+    consideration: null
+    revenue_contribution: null
+    profit_contribution: null
+    pro_forma_revenue: null
+    period: "FY2024-9M2026"
+    unit: "SAR '000"
+    source: "1120_ALRAJHI/2026_Q3_filed2026-10-29.pdf"
+    page: 4
+    quote: "Disposal group classified as held for sale 13 1,545,212 1,553,329 1,371,539"
+  - event: "Acquisition of 65% of Drahim Holdings (Cayman; open banking / fintech) in June 2024; consolidated; received Drahim treasury shares representing 3.1%"
+    type: acquisition
+    date: "2024-06"
+    consideration: 83400
+    revenue_contribution: null
+    profit_contribution: null
+    pro_forma_revenue: null
+    period: FY2024
+    unit: "SAR '000"
+    source: "1120_ALRAJHI/2024_Annual_filed2025-02-09.pdf"
+    page: 18
+    quote: "During June 2024, the Group acquired 65% shareholding in \"Drahim Holdings\"."
+
+segments:
+  - {period: FY2022, segment: "Retail", basis: operating, revenue: 15528348, profit: 7692137, unit: "SAR '000", source: "1120_ALRAJHI/2022_Annual_filed2023-02-07.pdf", page: 69, note: "revenue = total operating income; profit = income before zakat"}
+  - {period: FY2022, segment: "Corporate", basis: operating, revenue: 4506686, profit: 3357125, unit: "SAR '000", source: "1120_ALRAJHI/2022_Annual_filed2023-02-07.pdf", page: 69}
+  - {period: FY2022, segment: "Treasury", basis: operating, revenue: 7516117, profit: 7274694, unit: "SAR '000", source: "1120_ALRAJHI/2022_Annual_filed2023-02-07.pdf", page: 69}
+  - {period: FY2022, segment: "Investment services and brokerage", basis: operating, revenue: 1023868, profit: 798734, unit: "SAR '000", source: "1120_ALRAJHI/2022_Annual_filed2023-02-07.pdf", page: 69}
+  - {period: FY2022, segment: "Total", basis: operating, revenue: 28575019, profit: 19122690, unit: "SAR '000", source: "1120_ALRAJHI/2022_Annual_filed2023-02-07.pdf", page: 69}
+  - {period: FY2025, segment: "Retail", basis: operating, revenue: 19258950, profit: 10181161, unit: "SAR '000", source: "1120_ALRAJHI/2025_Annual_filed2026-02-04.pdf", page: 75}
+  - {period: FY2025, segment: "Corporate", basis: operating, revenue: 9854591, profit: 7977543, unit: "SAR '000", source: "1120_ALRAJHI/2025_Annual_filed2026-02-04.pdf", page: 75}
+  - {period: FY2025, segment: "Treasury", basis: operating, revenue: 7960223, profit: 7622462, unit: "SAR '000", source: "1120_ALRAJHI/2025_Annual_filed2026-02-04.pdf", page: 75}
+  - {period: FY2025, segment: "Investment services, brokerage and other", basis: operating, revenue: 2020201, profit: 1865330, unit: "SAR '000", source: "1120_ALRAJHI/2025_Annual_filed2026-02-04.pdf", page: 75}
+  - {period: FY2025, segment: "Total", basis: operating, revenue: 39093965, profit: 27646496, unit: "SAR '000", source: "1120_ALRAJHI/2025_Annual_filed2026-02-04.pdf", page: 75}
+  - {period: 9M2026, segment: "Retail", basis: operating, revenue: 15625061, profit: null, unit: "SAR '000", source: "1120_ALRAJHI/2026_Q3_filed2026-10-29.pdf", page: 35}
+  - {period: 9M2026, segment: "Corporate", basis: operating, revenue: 9318618, profit: null, unit: "SAR '000", source: "1120_ALRAJHI/2026_Q3_filed2026-10-29.pdf", page: 35}
+  - {period: 9M2026, segment: "Treasury", basis: operating, revenue: 5991395, profit: null, unit: "SAR '000", source: "1120_ALRAJHI/2026_Q3_filed2026-10-29.pdf", page: 35}
+  - {period: 9M2026, segment: "Investment services, brokerage and other", basis: operating, revenue: 1592837, profit: null, unit: "SAR '000", source: "1120_ALRAJHI/2026_Q3_filed2026-10-29.pdf", page: 35}
+  - {period: 9M2026, segment: "Total", basis: operating, revenue: 32527911, profit: 22955129, unit: "SAR '000", source: "1120_ALRAJHI/2026_Q3_filed2026-10-29.pdf", page: 35}
+  - {period: 9M2025, segment: "Retail", basis: operating, revenue: 14290936, profit: null, unit: "SAR '000", source: "1120_ALRAJHI/2026_Q3_filed2026-10-29.pdf", page: 36}
+  - {period: 9M2025, segment: "Corporate", basis: operating, revenue: 7024918, profit: null, unit: "SAR '000", source: "1120_ALRAJHI/2026_Q3_filed2026-10-29.pdf", page: 36}
+  - {period: 9M2025, segment: "Treasury", basis: operating, revenue: 5933428, profit: null, unit: "SAR '000", source: "1120_ALRAJHI/2026_Q3_filed2026-10-29.pdf", page: 36}
+  - {period: 9M2025, segment: "Investment services, brokerage and other", basis: operating, revenue: 1435467, profit: null, unit: "SAR '000", source: "1120_ALRAJHI/2026_Q3_filed2026-10-29.pdf", page: 36}
+  - {period: 9M2025, segment: "Total", basis: operating, revenue: 28684749, profit: 20542789, unit: "SAR '000", source: "1120_ALRAJHI/2026_Q3_filed2026-10-29.pdf", page: 36}
+
+revenue_drivers:
+  # Fee from banking services: gross income, expenses, net
+  - {period: FY2021, driver: "Fee income gross / fee expenses / net", value: "6,648,336 / (2,715,229) / 3,933,107", unit: "SAR '000", source: "1120_ALRAJHI/2022_Annual_filed2023-02-07.pdf", page: 64, quote: "Fee from banking services, net 4,624,140 3,933,107"}
+  - {period: FY2022, driver: "Total fee income (gross)", value: 8767272, unit: "SAR '000", source: "1120_ALRAJHI/2022_Annual_filed2023-02-07.pdf", page: 64, quote: "Total fee income 8,767,272 6,648,336"}
+  - {period: FY2022, driver: "Total fee expenses", value: -4143132, unit: "SAR '000", source: "1120_ALRAJHI/2022_Annual_filed2023-02-07.pdf", page: 64, quote: "Total fee expenses (4,143,132) (2,715,229)"}
+  - {period: FY2022, driver: "Fee from banking services, net", value: 4624140, unit: "SAR '000", source: "1120_ALRAJHI/2022_Annual_filed2023-02-07.pdf", page: 64, quote: "Fee from banking services, net 4,624,140 3,933,107"}
+  - {period: FY2022, driver: "Exchange income, net", value: 1162162, unit: "SAR '000", source: "1120_ALRAJHI/2022_Annual_filed2023-02-07.pdf", page: 69, quote: "Exchange income, net 576,402 218,186 367,574 - 1,162,162"}
+  - {period: FY2023, driver: "Total fee income (gross)", value: 9394600, unit: "SAR '000", source: "1120_ALRAJHI/2023_Annual_filed2024-02-08.pdf", page: 57, quote: "Total fee income 9,394,600 8,767,272"}
+  - {period: FY2023, driver: "Total fee expenses", value: -5168950, unit: "SAR '000", source: "1120_ALRAJHI/2023_Annual_filed2024-02-08.pdf", page: 57, quote: "Total fee expenses (5,168,950) (4,143,132)"}
+  - {period: FY2023, driver: "Fee from banking services, net", value: 4225650, unit: "SAR '000", source: "1120_ALRAJHI/2023_Annual_filed2024-02-08.pdf", page: 57, quote: "Fee from banking services, net 4,225,650 4,624,140"}
+  - {period: FY2023, driver: "Exchange income, net", value: 1246450, unit: "SAR '000", source: "1120_ALRAJHI/2023_Annual_filed2024-02-08.pdf", page: 63, quote: "Exchange income, net 566,701 281,124 398,625 - 1,246,450"}
+  - {period: FY2024, driver: "Fee from banking services, income (gross)", value: 10768382, unit: "SAR '000", source: "1120_ALRAJHI/2025_Annual_filed2026-02-04.pdf", page: 69, quote: "Total fee income 12,686,142 10,768,382"}
+  - {period: FY2024, driver: "Fee from banking services, expenses", value: -6075655, unit: "SAR '000", source: "1120_ALRAJHI/2025_Annual_filed2026-02-04.pdf", page: 69, quote: "Total fee expenses (6,816,935) (6,075,655)"}
+  - {period: FY2024, driver: "Fee from banking services, net", value: 4692727, unit: "SAR '000", source: "1120_ALRAJHI/2025_Annual_filed2026-02-04.pdf", page: 69, quote: "Fee from banking services, net 5,869,207 4,692,727"}
+  - {period: FY2024, driver: "Exchange income, net", value: 1292866, unit: "SAR '000", source: "1120_ALRAJHI/2025_Annual_filed2026-02-04.pdf", page: 75, quote: "Exchange income, net 651,532 252,214 389,120 - 1,292,866"}
+  - {period: FY2025, driver: "Total fee income (gross)", value: 12686142, unit: "SAR '000", source: "1120_ALRAJHI/2025_Annual_filed2026-02-04.pdf", page: 69, quote: "Total fee income 12,686,142 10,768,382"}
+  - {period: FY2025, driver: "Total fee expenses", value: -6816935, unit: "SAR '000", source: "1120_ALRAJHI/2025_Annual_filed2026-02-04.pdf", page: 69, quote: "Total fee expenses (6,816,935) (6,075,655)"}
+  - {period: FY2025, driver: "Fee from banking services, net", value: 5869207, unit: "SAR '000", source: "1120_ALRAJHI/2025_Annual_filed2026-02-04.pdf", page: 69, quote: "Fee from banking services, net 5,869,207 4,692,727"}
+  - {period: FY2025, driver: "Exchange income, net", value: 1558950, unit: "SAR '000", source: "1120_ALRAJHI/2025_Annual_filed2026-02-04.pdf", page: 75, quote: "Exchange income, net 731,986 348,215 477,520 1,229 1,558,950"}
+  - {period: 9M2025, driver: "Fee from banking services, income (gross) (image page)", value: 9234432, unit: "SAR '000", source: "1120_ALRAJHI/2025_Q3_filed2025-10-28.pdf", page: 5, quote: "Fee from banking services, income 3,225,387 2,781,772 9,234,432 7,669,427"}
+  - {period: 9M2025, driver: "Fee from banking services, expenses (image page)", value: -4919685, unit: "SAR '000", source: "1120_ALRAJHI/2025_Q3_filed2025-10-28.pdf", page: 5, quote: "Fee from banking services, expenses (1,678,541) (1,539,309) (4,919,685) (4,264,947)"}
+  - {period: 9M2025, driver: "Fee from banking services, net", value: 4314747, unit: "SAR '000", source: "1120_ALRAJHI/2025_Q3_filed2025-10-28.pdf", page: 5, quote: "Fee from banking services, net 1,546,846 1,242,463 4,314,747 3,404,480"}
+  - {period: 9M2025, driver: "Exchange income, net", value: 1102163, unit: "SAR '000", source: "1120_ALRAJHI/2025_Q3_filed2025-10-28.pdf", page: 5, quote: "Exchange income, net 428,881 342,054 1,102,163 955,619"}
+  - {period: 9M2026, driver: "Fee from banking services, income (gross) (image page)", value: 9747731, unit: "SAR '000", source: "1120_ALRAJHI/2026_Q3_filed2026-10-29.pdf", page: 5, quote: "Fee from banking services, income 3,395,592 3,225,387 9,747,731 9,234,432"}
+  - {period: 9M2026, driver: "Fee from banking services, expenses (image page)", value: -4789230, unit: "SAR '000", source: "1120_ALRAJHI/2026_Q3_filed2026-10-29.pdf", page: 5, quote: "Fee from banking services, expenses (1,678,299) (1,678,541) (4,789,230) (4,919,685)"}
+  - {period: 9M2026, driver: "Fee from banking services, net", value: 4958501, unit: "SAR '000", source: "1120_ALRAJHI/2026_Q3_filed2026-10-29.pdf", page: 35, quote: "Fee from banking services, net 2,116,296 1,644,956 217,371 979,878 4,958,501"}
+  - {period: 9M2026, driver: "Exchange income, net", value: 1237015, unit: "SAR '000", source: "1120_ALRAJHI/2026_Q3_filed2026-10-29.pdf", page: 35, quote: "Exchange income, net 607,716 284,969 340,602 3,728 1,237,015"}
+  # Impairment split
+  - {period: FY2022, driver: "Impairment: provided for financing 3,312,164; other financial assets & off-balance sheet 36,112; recovery of written-off financing (1,347,017); net 2,001,259", value: 2001259, unit: "SAR '000", source: "1120_ALRAJHI/2022_Annual_filed2023-02-07.pdf", page: 50, quote: "Allowance for financing impairment, net 2,001,259 2,345,086"}
+  - {period: FY2023, driver: "Impairment: financing 3,281,707; other (151,963); recoveries (1,625,566); net 1,504,178", value: 1504178, unit: "SAR '000", source: "1120_ALRAJHI/2023_Annual_filed2024-02-08.pdf", page: 44, quote: "Allowance for financing impairment, net 1,504,178 2,001,259"}
+  - {period: FY2024, driver: "Impairment: financing 4,305,831; other (20,455); recoveries (2,168,632); net 2,116,744", value: 2116744, unit: "SAR '000", source: "1120_ALRAJHI/2024_Annual_filed2025-02-09.pdf", page: 54, quote: "Impairment charge for financing and other financial assets, net 2,116,744 1,504,178"}
+  - {period: FY2025, driver: "Impairment: financing 5,433,280; other (45,527); recoveries (3,067,272); net 2,320,481", value: 2320481, unit: "SAR '000", source: "1120_ALRAJHI/2025_Annual_filed2026-02-04.pdf", page: 53, quote: "Recovery of written off financing, net (3,067,272) (2,168,632)"}
+  - {period: 9M2025, driver: "Impairment: financing 3,910,680; other (12,688); recoveries (2,203,381); net 1,694,611", value: 1694611, unit: "SAR '000", source: "1120_ALRAJHI/2025_Q3_filed2025-10-28.pdf", page: 20, quote: "Allowance for financing impairment, net 1,694,611 1,564,128"}
+  - {period: 9M2026, driver: "Impairment: financing 4,805,710; other (92,293); recoveries (2,349,065); net 2,364,352", value: 2364352, unit: "SAR '000", source: "1120_ALRAJHI/2026_Q3_filed2026-10-29.pdf", page: 22, quote: "Allowance for financing impairment, net 2,364,352 1,694,611"}
+
+one_offs:
+  - {period: FY2022, item: "Recovery of written-off financing (netted in impairment charge; recurs every year)", amount: 1347017, unit: "SAR '000", pnl_line: "Impairment charge for financing and other financial assets, net", recurring: false, source: "1120_ALRAJHI/2022_Annual_filed2023-02-07.pdf", page: 50, quote: "Recovery of written off financing, net (1,347,017) (1,326,609)"}
+  - {period: FY2023, item: "Recovery of written-off financing", amount: 1625566, unit: "SAR '000", pnl_line: "Impairment charge, net", recurring: false, source: "1120_ALRAJHI/2023_Annual_filed2024-02-08.pdf", page: 44, quote: "Recovery of written off financing, net (1,625,566) (1,347,017)"}
+  - {period: FY2024, item: "Recovery of written-off financing", amount: 2168632, unit: "SAR '000", pnl_line: "Impairment charge, net", recurring: false, source: "1120_ALRAJHI/2024_Annual_filed2025-02-09.pdf", page: 54, quote: "Recovery of written off financing, net (2,168,632) (1,625,566)"}
+  - {period: FY2025, item: "Recovery of written-off financing", amount: 3067272, unit: "SAR '000", pnl_line: "Impairment charge, net", recurring: false, source: "1120_ALRAJHI/2025_Annual_filed2026-02-04.pdf", page: 53, quote: "Recovery of written off financing, net (3,067,272) (2,168,632)"}
+  - {period: 9M2025, item: "Recovery of written-off financing", amount: 2203381, unit: "SAR '000", pnl_line: "Impairment charge, net", recurring: false, source: "1120_ALRAJHI/2025_Q3_filed2025-10-28.pdf", page: 20, quote: "Recovery of written off financing for the period (2,203,381) (1,151,491)"}
+  - {period: 9M2026, item: "Recovery of written-off financing", amount: 2349065, unit: "SAR '000", pnl_line: "Impairment charge, net", recurring: false, source: "1120_ALRAJHI/2026_Q3_filed2026-10-29.pdf", page: 22, quote: "Recovery of written off financing for the period (2,349,065) (2,203,381)"}
+  - {period: FY2025, item: "Other income, net within other operating income (FY2024: 615,595); breakdown of the increase not given", amount: 1479020, unit: "SAR '000", pnl_line: "Other operating income, net", recurring: null, source: "1120_ALRAJHI/2025_Annual_filed2026-02-04.pdf", page: 71, quote: "Other income, net 1,479,020 615,595"}
+  - {period: FY2025, item: "(Loss)/gain on FVIS investments (FY2024: gain 66,803)", amount: -118723, unit: "SAR '000", pnl_line: "Other operating income, net", recurring: null, source: "1120_ALRAJHI/2025_Annual_filed2026-02-04.pdf", page: 71, quote: "(Loss) / Gain on investments held at fair value through statement of income (FVIS) (118,723) 66,803"}
+  - {period: FY2022, item: "Gain on sale of property and equipment, net (FY2021: 47,511)", amount: 1275, unit: "SAR '000", pnl_line: "Other operating income, net", recurring: false, source: "1120_ALRAJHI/2022_Annual_filed2023-02-07.pdf", page: 64, quote: "Gain on sale of property and equipment, net 1,275 47,511"}
+  - {period: "FY2022-9M2026", item: "Zakat settlements / prior-year zakat adjustments", amount: null, unit: "SAR '000", pnl_line: "Zakat", recurring: false, status: "not found", source: null, page: null, quote: null}
+  - {period: "FY2022-9M2026", item: "Hyperinflation adjustments", amount: null, unit: "SAR '000", pnl_line: null, recurring: false, status: "not found", source: null, page: null, quote: null}
+
+restatements:
+  - period_restated: "9M2025 interim"
+    item: "No restatement in 9M2025 interim; only reclassification of certain prior-period figures"
+    from: null
+    to: null
+    unit: "SAR '000"
+    reason: "Reclassification to conform to current presentation (no IAS 8 restatement found)"
+    source: "1120_ALRAJHI/2025_Q3_filed2025-10-28.pdf"
+    page: 34
+    quote: "Certain prior period figures have been reclassified to conform to the current period's presentation."
+  - period_restated: "31 Dec 2024 balance sheet (FY2025 annual)"
+    item: "Funding reclassification: due to banks 173,434,597 -> 117,677,378; customers' deposits 628,238,501 -> 654,988,501; debt securities and term financing 8,450,753 -> 37,457,972; PP&E 13,894,302 -> 15,274,749; total assets 974,386,656 -> 972,444,354"
+    from: {due_to_banks: 173434597, customers_deposits: 628238501, debt_securities_and_term_financing: 8450753, total_assets: 974386656}
+    to: {due_to_banks: 117677378, customers_deposits: 654988501, debt_securities_and_term_financing: 37457972, total_assets: 972444354}
+    unit: "SAR '000"
+    reason: "Reclassification of term financing and certificates of deposit out of due to banks, to reflect funding profile. No equity or P&L effect."
+    source: "1120_ALRAJHI/2025_Annual_filed2026-02-04.pdf"
+    page: 109
+    quote: "term financing and certificate of deposits have been reclassified from \"Due to banks, Saudi Central Bank and other financial institutions\" to \"Debt securities issued and term financing\""
+  - period_restated: "30 Sep 2025 balance sheet (9M2026 interim)"
+    item: "Same reclassification: due to banks 189,322,742 -> 112,774,736; customers' deposits 670,180,249 -> 693,905,249; debt securities and term financing 19,589,751 -> 72,412,757; goodwill (2,169,282) folded into PP&E/software; total assets 1,059,239,845 -> 1,056,156,857"
+    from: {total_assets: 1059239845}
+    to: {total_assets: 1056156857}
+    unit: "SAR '000"
+    reason: "Reclassification; stated no impact on income, comprehensive income or changes in equity"
+    source: "1120_ALRAJHI/2026_Q3_filed2026-10-29.pdf"
+    page: 44
+    quote: "there was no impact on comparatives as appearing in the interim condensed consolidated statements of income, comprehensive income and changes in equity."
+  - period_restated: "31 Dec 2022 financing table (FY2023 annual)"
+    item: "Non-performing financing 3,084,717 -> 3,585,935; impairment allowance (8,027,658) -> (8,528,876); net financing unchanged 568,338,114"
+    from: 3084717
+    to: 3585935
+    unit: "SAR '000"
+    reason: "Not explained (re-presentation of comparatives)"
+    source: "1120_ALRAJHI/2023_Annual_filed2024-02-08.pdf"
+    page: 42
+    quote: "Total 573,281,055 3,585,935 (8,528,876) 568,338,114"
+  - period_restated: "9M2025 EPS re-presented in 9M2026 interim for 1-for-2 bonus issue"
+    item: "9M2025 basic and diluted EPS 4.34 -> 2.90"
+    from: 4.34
+    to: 2.90
+    unit: "SAR"
+    reason: "Bonus shares (SAR 20bn capitalisation approved 20 Apr 2026)"
+    source: "1120_ALRAJHI/2026_Q3_filed2026-10-29.pdf"
+    page: 5
+    quote: "Basic and diluted earnings per share 15 1.10 0.99 3.27 2.90"
+
+significant_events:
+  - {date: "2026-01-07", event: "Subsequent event (FY2025 annual): issued USD 1,000m perpetual sukuk (5,000 certificates), expected profit rate 6.15%", financial_effect: 3750000, source: "1120_ALRAJHI/2025_Annual_filed2026-02-04.pdf", page: 109, quote: "On 07 Jan 2026, the Group issued 5000 Perpetual Sukuk Certificates (Sukuk) of USD 1000 million"}
+  - {date: "2026-04-20", event: "EGM approved 1-for-2 bonus issue capitalising SAR 20,000m of retained earnings; share capital 60,000,000 at 30 Sep 2026", financial_effect: 20000000, source: "1120_ALRAJHI/2026_Q3_filed2026-10-29.pdf", page: 31, quote: "approved the recommendation to increase the bank's capital by granting bonus shares to the bank's shareholders through capitalization of $ 20,000 Million"}
+  - {date: "9M2026", event: "Equity sukuk issued/called, net 6,935,621 in 9M2026; new AT1 tranches Jan 2026 (USD, 3,750m), Feb 2026 (USD, 188m), Mar 2026 (SAR, 1,931m), Sep 2026 (SAR, 3,100m); total 34,844m", financial_effect: 6935621, source: "1120_ALRAJHI/2026_Q3_filed2026-10-29.pdf", page: 31, quote: "September 2026 3,100 $ Yes"}
+  - {date: "9M2026", event: "Debt securities issued 17,247,003 and repaid 28,808,049 in 9M2026; debt securities 42,498,941 and term financing 20,505,267 at 30 Sep 2026", financial_effect: null, source: "1120_ALRAJHI/2026_Q3_filed2026-10-29.pdf", page: 29, quote: "Debt securities issued payment (28,808,049) (12,131,776) (8,341,834)"}
+  - {date: "2026-02-28 onward", event: "Geopolitical deterioration (Strait of Hormuz). Bank states no material ECL impact at present due to portfolio mix; no overlay amount disclosed", financial_effect: null, source: "1120_ALRAJHI/2026_Q3_filed2026-10-29.pdf", page: 41, quote: "Based on management's analysis and assessment, at present there is no material impact because of ongoing war due to underlying mix of the bank's portfolio."}
+  - {date: "after 2026-09-30", event: "Subsequent to 30 Sep 2026 the geopolitical situation in KSA escalated significantly, creating heightened credit, liquidity and operational risk; impact uncertain", financial_effect: null, source: "1120_ALRAJHI/2026_Q3_filed2026-10-29.pdf", page: 41, quote: "Subsequent to the period ended 30 September 2026, the volatility of the ongoing geopolitical situation in Kingdom of Saudi Arabia has escalated significantly"}
+  - {date: "9M2026", event: "Equity sukuk cash flows now presented gross (previously net) in cash flow statement", financial_effect: null, source: "1120_ALRAJHI/2026_Q3_filed2026-10-29.pdf", page: 31, quote: "'equity sukuk' that were presented previously on a net basis in the interim condensed consolidated statement of cash flows have been presented on a gross basis."}
+
+audit_opinion:
+  - {period: FY2022, opinion: "unmodified (EY, KPMG)", emphasis_of_matter: "none observed (Basis for Opinion followed directly by Key Audit Matters)", source: "1120_ALRAJHI/2022_Annual_filed2023-02-07.pdf", page: 2}
+  - {period: FY2023, opinion: "unmodified (EY, KPMG)", emphasis_of_matter: "none observed (Basis for Opinion followed directly by Key Audit Matters)", source: "1120_ALRAJHI/2023_Annual_filed2024-02-08.pdf", page: 3}
+  - {period: FY2024, opinion: "unmodified per FY2025 Other Matter paragraph (opinion dated 6 Feb 2025)", emphasis_of_matter: "none found in text search", source: "1120_ALRAJHI/2025_Annual_filed2026-02-04.pdf", page: 6}
+  - {period: FY2025, opinion: "unmodified (Deloitte, EY)", emphasis_of_matter: "none; Other Matter: FY2024 audited by other joint auditor (unmodified, 6 Feb 2025)", source: "1120_ALRAJHI/2025_Annual_filed2026-02-04.pdf", page: 3}
+  - {period: 9M2025, opinion: "unmodified review conclusion (Deloitte, EY)", emphasis_of_matter: "none; Other Matter on prior joint auditors", source: "1120_ALRAJHI/2025_Q3_filed2025-10-28.pdf", page: 3}
+  - {period: 9M2026, opinion: "unmodified review conclusion (Deloitte, PwC)", emphasis_of_matter: "none", source: "1120_ALRAJHI/2026_Q3_filed2026-10-29.pdf", page: 3}
+
+kpis_in_filings:
+  - {period: "31 Dec 2021", kpi: "Tier I ratio / Tier I & II ratio", value: "16.36 / 17.50", unit: "%", source: "1120_ALRAJHI/2022_Annual_filed2023-02-07.pdf", page: 97}
+  - {period: "31 Dec 2022", kpi: "Tier I ratio / Tier I & II ratio", value: "20.27 / 21.41", unit: "%", source: "1120_ALRAJHI/2022_Annual_filed2023-02-07.pdf", page: 97}
+  - {period: "31 Dec 2023", kpi: "Tier I ratio / Tier I & II ratio", value: "20.40 / 21.52", unit: "%", source: "1120_ALRAJHI/2023_Annual_filed2024-02-08.pdf", page: 93}
+  - {period: "31 Dec 2024", kpi: "Tier I ratio / Tier I & II ratio", value: "19.29 / 20.21", unit: "%", source: "1120_ALRAJHI/2024_Annual_filed2025-02-09.pdf", page: 108}
+  - {period: "30 Sep 2025", kpi: "Tier I ratio / Tier I & II ratio", value: "19.73 / 21.11", unit: "%", source: "1120_ALRAJHI/2026_Q3_filed2026-10-29.pdf", page: 43}
+  - {period: "31 Dec 2025", kpi: "Tier I ratio / Tier I & II ratio", value: "20.49 / 21.85", unit: "%", source: "1120_ALRAJHI/2025_Annual_filed2026-02-04.pdf", page: 107}
+  - {period: "30 Sep 2026", kpi: "Tier I ratio / Tier I & II ratio", value: "21.53 / 23.64", unit: "%", source: "1120_ALRAJHI/2026_Q3_filed2026-10-29.pdf", page: 43}
+  - {period: "all", kpi: "CET1 ratio", value: null, unit: "%", status: "not found", source: null, page: null}
+  - {period: "31 Dec 2022", kpi: "Non-performing financing (as originally reported) / impairment allowance", value: "3,084,717 / 8,027,658", unit: "SAR '000", source: "1120_ALRAJHI/2022_Annual_filed2023-02-07.pdf", page: 48}
+  - {period: "31 Dec 2023", kpi: "Non-performing financing / impairment allowance", value: "4,297,939 / 8,725,937", unit: "SAR '000", source: "1120_ALRAJHI/2023_Annual_filed2024-02-08.pdf", page: 42}
+  - {period: "31 Dec 2024", kpi: "Non-performing financing / impairment allowance", value: "5,334,435 / 8,505,316", unit: "SAR '000", source: "1120_ALRAJHI/2024_Annual_filed2025-02-09.pdf", page: 52}
+  - {period: "31 Dec 2025", kpi: "Non-performing / gross financing / ECL allowance", value: "5,694,220 / 761,442,739 / 8,682,888", unit: "SAR '000", source: "1120_ALRAJHI/2025_Annual_filed2026-02-04.pdf", page: 52}
+  - {period: "30 Sep 2026", kpi: "Non-performing / gross financing / ECL allowance", value: "5,988,570 / 783,967,072 / 9,108,501", unit: "SAR '000", source: "1120_ALRAJHI/2026_Q3_filed2026-10-29.pdf", page: 20}
+  - {period: "all", kpi: "NPL ratio, coverage ratio, LCR, NSFR stated as ratios", value: null, unit: "%", status: "not found", source: null, page: null}
+
+special_extractions:
+  - name: "Al Rajhi FY2022 fee / FX resolution (XBRL mis-tag check)"
+    finding: "The FY2023 annual XBRL comparative 'fee and commission income 4,624,140' equals the FY2022 NET fee from banking services (gross 8,767,272 less expenses 4,143,132). 'Fee income from banking services 1,162,162' equals FY2022 Exchange income, net, so it is FX income mis-tagged as fee income."
+    items:
+      - {item: "FY2022 Fee from banking services, net", value: 4624140, unit: "SAR '000", source: "1120_ALRAJHI/2023_Annual_filed2024-02-08.pdf", page: 57, quote: "Fee from banking services, net 4,225,650 4,624,140"}
+      - {item: "FY2022 Exchange income, net (segment note, FY2023 annual)", value: 1162162, unit: "SAR '000", source: "1120_ALRAJHI/2023_Annual_filed2024-02-08.pdf", page: 63, quote: "Exchange income, net 576,402 218,186 367,574 - 1,162,162"}
+      - {item: "FY2022 Total fee income (gross)", value: 8767272, unit: "SAR '000", source: "1120_ALRAJHI/2022_Annual_filed2023-02-07.pdf", page: 64}
+      - {item: "FY2022 Total fee expenses", value: -4143132, unit: "SAR '000", source: "1120_ALRAJHI/2022_Annual_filed2023-02-07.pdf", page: 64}
+  - name: "Equity Sukuk (Al Rajhi's label for Tier 1 / perpetual sukuk; FY2022 statements called it 'Tier I Sukuk') carrying amount"
+    unit: "SAR '000"
+    items:
+      - {date: "31 Dec 2021", value: 0, source: "1120_ALRAJHI/2022_Annual_filed2023-02-07.pdf", page: 11, quote: "Balance at 31 December 2021 ... 67,281,564 - 67,281,564"}
+      - {date: "31 Dec 2022", value: 16500000, source: "1120_ALRAJHI/2022_Annual_filed2023-02-07.pdf", page: 11, quote: "Balance at 31 December 2022 ... 83,725,035 16,500,000 100,225,035"}
+      - {date: "31 Dec 2023", value: 16500000, source: "1120_ALRAJHI/2024_Annual_filed2025-02-09.pdf", page: 9}
+      - {date: "31 Dec 2024", value: 23553815, source: "1120_ALRAJHI/2024_Annual_filed2025-02-09.pdf", page: 9, quote: "Equity sukuk 21 23,553,815 16,500,000"}
+      - {date: "30 Sep 2025", value: 28613303, source: "1120_ALRAJHI/2025_Q3_filed2025-10-28.pdf", page: 4, quote: "Equity sukuk 12 28,613,303 23,553,815 22,848,391"}
+      - {date: "31 Dec 2025", value: 27907879, source: "1120_ALRAJHI/2025_Annual_filed2026-02-04.pdf", page: 9, quote: "Equity sukuk 20 27,907,879 23,553,815"}
+      - {date: "30 Sep 2026", value: 34843500, source: "1120_ALRAJHI/2026_Q3_filed2026-10-29.pdf", page: 4, quote: "Equity sukuk 12 34,843,500 27,907,879 28,613,303"}
+  - name: "Equity sukuk costs charged to retained earnings and issuances (SoCE)"
+    unit: "SAR '000"
+    items:
+      - {period: FY2022, issued: 16500000, costs: 196564, source: "1120_ALRAJHI/2022_Annual_filed2023-02-07.pdf", page: 11, note: "Jan 2022 SAR 6.5bn private arrangement (call from 23 Jan 2027) + Nov 2022 SAR 10bn public offering (call from 26 Nov 2027) (p66-67)"}
+      - {period: FY2023, issued: 0, costs: 820678, source: "1120_ALRAJHI/2024_Annual_filed2025-02-09.pdf", page: 13}
+      - {period: FY2024, issued: 7053815, costs: 1035867, source: "1120_ALRAJHI/2024_Annual_filed2025-02-09.pdf", page: 12, note: "May 2024 USD 1bn sustainable AT1 (call 16 May 2029) + Emkan Finance (100% subsidiary) perpetual sukuk Feb 2024 SAR 2.27bn, Aug 2024 SAR 330m, Oct 2024 SAR 705.4m (p66)"}
+      - {period: 9M2025, issued_called_net: 5059488, costs: 1046203, source: "1120_ALRAJHI/2025_Q3_filed2025-10-28.pdf", page: 7}
+      - {period: FY2025, issued_net: 4354064, costs: 1376946, source: "1120_ALRAJHI/2025_Annual_filed2026-02-04.pdf", page: 12}
+      - {period: 9M2026, issued_called_net: 6935621, costs: 1276461, source: "1120_ALRAJHI/2026_Q3_filed2026-10-29.pdf", page: 7}
+  - name: "Equity sukuk tranche tables (SAR m)"
+    items:
+      - {date: "30 Sep 2025", tranches: "Mar 2025 2,033 (SAR); Jan 2025 5,625 (USD); Oct 2024 705 (SAR); May 2024 3,750 (USD); Nov 2022 10,000 (SAR); Jan 2022 6,500 (SAR); total 28,613", source: "1120_ALRAJHI/2025_Q3_filed2025-10-28.pdf", page: 23}
+      - {date: "31 Dec 2025", tranches: "Mar 2025 2,033; Jan 2025 5,625 (USD); May 2024 3,750 (USD); Nov 2022 10,000; Jan 2022 6,500; total 27,908", source: "1120_ALRAJHI/2025_Annual_filed2026-02-04.pdf", page: 66}
+      - {date: "30 Sep 2026", tranches: "Sep 2026 3,100; Mar 2026 1,931; Feb 2026 188 (USD); Jan 2026 3,750 (USD); Jan 2025 5,625 (USD); May 2024 3,750 (USD); Nov 2022 10,000; Jan 2022 6,500; total 34,844", source: "1120_ALRAJHI/2026_Q3_filed2026-10-29.pdf", page: 31}
+  - name: "Is equity sukuk inside 'total equity attributable to equity holders of the Bank'?"
+    answer: "Yes from FY2024 presentation: 'Equity attributable to the Bank's shareholders' (excludes sukuk) + 'Equity sukuk' = 'Equity attributable to the Bank's equity holders'. In FY2022 SoCE, 'Total equity attributable to shareholders of the Bank' (83,725,035) excluded Tier I Sukuk; sukuk was added only in total equity (100,225,035)."
+    source: "1120_ALRAJHI/2025_Annual_filed2026-02-04.pdf"
+    page: 9
+    quote: "Equity attributable to the Bank's shareholders 114,854,169 ... Equity sukuk 27,907,879 ... Equity attributable to the Bank's equity holders 142,762,048"
+  - name: "Al Rajhi headline totals"
+    unit: "SAR '000"
+    items:
+      - {period: FY2022, total_operating_income: 28575019, net_income: 17150825, source: "1120_ALRAJHI/2022_Annual_filed2023-02-07.pdf", page: 69, note: "net income from SoCE p11"}
+      - {period: FY2023, total_operating_income: 27531409, impairment: 1504178, net_income: 16621159, source: "1120_ALRAJHI/2024_Annual_filed2025-02-09.pdf", page: 10}
+      - {period: FY2024, total_operating_income: 32055303, impairment: 2116744, net_income_attributable: 19722206, total_assets: 974386656, source: "1120_ALRAJHI/2024_Annual_filed2025-02-09.pdf", page: 10}
+      - {period: FY2025, total_operating_income: 39093965, impairment: 2320481, net_income_attributable: 24791754, total_assets: 1043268297, source: "1120_ALRAJHI/2025_Annual_filed2026-02-04.pdf", page: 10}
+      - {period: 9M2025, total_operating_income: 28684749, impairment: 1694611, net_income_attributable: 18417254, source: "1120_ALRAJHI/2025_Q3_filed2025-10-28.pdf", page: 5}
+      - {period: 9M2026, total_operating_income: 32527911, impairment: 2364352, net_income_attributable: 20869958, source: "1120_ALRAJHI/2026_Q3_filed2026-10-29.pdf", page: 5}
+
+open_questions:
+  - "Emkan Finance (100% subsidiary) perpetual sukuk (Feb 2024 SAR 2.27bn, Aug 2024 SAR 330m, Oct 2024 SAR 705.4m) are included in group 'Equity sukuk' at 31 Dec 2024. The Feb and Aug 2024 tranches are absent from the 30 Sep 2025 table and the Oct 2024 tranche from the 31 Dec 2025 table. The SoCE shows only net 'issued/called' amounts, so gross issuance and call amounts are not separately disclosed."
+  - "Mar 2025 SAR 2,033m tranche is in the 31 Dec 2025 table but not the 30 Sep 2026 table; redemption not explicitly described."
+  - "Equity sukuk cost FY2025 (1,376,946) appears in the SoCE and EPS note; regulatory CET1 ratio not disclosed, only Tier I and Tier I & II."
+  - "FY2025 'Other income, net' rose to 1,479,020 from 615,595 with no breakdown in the note."
+  - "Primary statements are image-only in all Al Rajhi PDFs; values were read visually from page images."
+  - "LCR and NSFR are not in the financial statements."

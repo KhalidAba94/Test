@@ -1,0 +1,206 @@
+# Evidence extracted from Rabigh Refining and Petrochemical Company (Petro Rabigh) filings (archive: 2380_PETRO_RABIGH).
+# Facts only. Page = physical PDF page (1-based). PR reports in SAR '000; converted to SAR m (one decimal) where noted.
+# Primary statements pages in annual PDFs are scanned images (FY2025: pp8-12; FY2022-FY2024: pp7-11); figures below are taken from text notes (segment note reconciles to operating and net loss).
+ticker: "2380"
+company: "Rabigh Refining and Petrochemical Company (Petro Rabigh)"
+
+perimeter_changes:
+  - event: "No acquisitions, disposals, discontinued operations or subsidiaries; single-entity company"
+    type: acquisition
+    status: "not found"
+    period: "FY2022-9M2026"
+    source: "2380_PETRO_RABIGH/2025_Annual_filed2026-03-12.pdf"
+    page: 13
+    quote: "The Company is engaged in the development, construction and operation of an integrated refining and petrochemical complex"
+  - event: "Shareholder change: Saudi Aramco acquired 22.5% of Class A shares from Sumitomo Chemical (Aramco 60%, Sumitomo 15%, public 25%) - ownership change only, no perimeter effect"
+    type: acquisition
+    date: "2025-10-08"
+    consideration: "SPA between shareholders (Aramco paid SAR 2,632m per Aramco FY2025 AFS)"
+    revenue_contribution: null
+    profit_contribution: null
+    pro_forma_revenue: null
+    period: "FY2025"
+    unit: "SAR m"
+    source: "2380_PETRO_RABIGH/2025_Annual_filed2026-03-12.pdf"
+    page: 14
+    quote: "Saudi Aramco now holds 60%, Sumitomo owns 15%, and the public owns 25% of the Company's Class A ordinary shares."
+
+segments:
+  # Operating segments: Refined products, Petrochemicals. Segment profit = operating profit (loss). SAR '000.
+  - {period: "FY2022", segment: "Refined products", basis: operating, revenue: 40576066, profit: 1466407, unit: "SAR '000", source: "2380_PETRO_RABIGH/2023_Annual_filed2024-03-25.pdf", page: 27}
+  - {period: "FY2022", segment: "Petrochemicals", basis: operating, revenue: 15376415, profit: -1454179, unit: "SAR '000", source: "2380_PETRO_RABIGH/2023_Annual_filed2024-03-25.pdf", page: 27}
+  - {period: "FY2022", segment: "Total", basis: operating, revenue: 55952481, profit: 12228, unit: "SAR '000", source: "2380_PETRO_RABIGH/2023_Annual_filed2024-03-25.pdf", page: 27}
+  - {period: "FY2023", segment: "Refined products", basis: operating, revenue: 32253586, profit: -1806517, unit: "SAR '000", source: "2380_PETRO_RABIGH/2024_Annual_filed2025-03-19.pdf", page: 26}
+  - {period: "FY2023", segment: "Petrochemicals", basis: operating, revenue: 12350407, profit: -796436, unit: "SAR '000", source: "2380_PETRO_RABIGH/2024_Annual_filed2025-03-19.pdf", page: 26}
+  - {period: "FY2023", segment: "Total", basis: operating, revenue: 44603993, profit: -2602953, unit: "SAR '000", source: "2380_PETRO_RABIGH/2024_Annual_filed2025-03-19.pdf", page: 26}
+  - {period: "FY2024 (as originally reported)", segment: "Refined products", basis: operating, revenue: 27844378, profit: -1782180, unit: "SAR '000", source: "2380_PETRO_RABIGH/2024_Annual_filed2025-03-19.pdf", page: 26}
+  - {period: "FY2024 (as originally reported)", segment: "Petrochemicals", basis: operating, revenue: 11504690, profit: -789010, unit: "SAR '000", source: "2380_PETRO_RABIGH/2024_Annual_filed2025-03-19.pdf", page: 26}
+  - {period: "FY2024 (as originally reported)", segment: "Total", basis: operating, revenue: 39349068, profit: -2571190, unit: "SAR '000", source: "2380_PETRO_RABIGH/2024_Annual_filed2025-03-19.pdf", page: 26}
+  - {period: "FY2024 (restated in FY2025 AFS)", segment: "Refined products", basis: operating, revenue: 27844378, profit: -1782180, gross_profit: -1473419, unit: "SAR '000", source: "2380_PETRO_RABIGH/2025_Annual_filed2026-03-12.pdf", page: 23}
+  - {period: "FY2024 (restated in FY2025 AFS)", segment: "Petrochemicals", basis: operating, revenue: 10817757, profit: -789010, gross_profit: -198536, unit: "SAR '000", source: "2380_PETRO_RABIGH/2025_Annual_filed2026-03-12.pdf", page: 23}
+  - {period: "FY2024 (restated in FY2025 AFS)", segment: "Total", basis: operating, revenue: 38662135, profit: -2571190, gross_profit: -1671955, unit: "SAR '000", source: "2380_PETRO_RABIGH/2025_Annual_filed2026-03-12.pdf", page: 23}
+  - {period: "FY2025", segment: "Refined products", basis: operating, revenue: 27072641, profit: -576969, gross_profit: -322324, unit: "SAR '000", source: "2380_PETRO_RABIGH/2025_Annual_filed2026-03-12.pdf", page: 23}
+  - {period: "FY2025", segment: "Petrochemicals", basis: operating, revenue: 7935852, profit: -1881762, gross_profit: -1433020, unit: "SAR '000", source: "2380_PETRO_RABIGH/2025_Annual_filed2026-03-12.pdf", page: 23}
+  - {period: "FY2025", segment: "Total", basis: operating, revenue: 35008493, profit: -2458731, gross_profit: -1755344, net_profit: -3898704, unit: "SAR '000", source: "2380_PETRO_RABIGH/2025_Annual_filed2026-03-12.pdf", page: 23}
+  - {period: "9M2026", segment: "Refined products", basis: operating, revenue: 42223925, profit: 8770238, gross_profit: 8999552, unit: "SAR '000", source: "2380_PETRO_RABIGH/2026_Q3_filed2026-11-01.pdf", page: 13}
+  - {period: "9M2026", segment: "Petrochemicals", basis: operating, revenue: 9808184, profit: -1039138, gross_profit: -674448, unit: "SAR '000", source: "2380_PETRO_RABIGH/2026_Q3_filed2026-11-01.pdf", page: 13}
+  - {period: "9M2026", segment: "Total", basis: operating, revenue: 52032109, profit: 7731100, gross_profit: 8325104, net_profit: 6702410, unit: "SAR '000", source: "2380_PETRO_RABIGH/2026_Q3_filed2026-11-01.pdf", page: 13}
+  - {period: "9M2025", segment: "Refined products", basis: operating, revenue: 19050035, profit: -810757, gross_profit: -623631, unit: "SAR '000", source: "2380_PETRO_RABIGH/2026_Q3_filed2026-11-01.pdf", page: 13}
+  - {period: "9M2025", segment: "Petrochemicals", basis: operating, revenue: 5305921, profit: -1516764, gross_profit: -1189278, unit: "SAR '000", source: "2380_PETRO_RABIGH/2026_Q3_filed2026-11-01.pdf", page: 13}
+  - {period: "9M2025", segment: "Total", basis: operating, revenue: 24355956, profit: -2327521, gross_profit: -1812909, net_profit: -3292321, unit: "SAR '000", source: "2380_PETRO_RABIGH/2026_Q3_filed2026-11-01.pdf", page: 13}
+  - {period: "Q3 2026", segment: "Total", basis: operating, revenue: 16815200, profit: 2914969, net_profit: 2575557, unit: "SAR '000", source: "2380_PETRO_RABIGH/2026_Q3_filed2026-11-01.pdf", page: 13}
+  - {period: "Q3 2025", segment: "Total", basis: operating, revenue: 9194998, profit: -909076, net_profit: -1235555, unit: "SAR '000", source: "2380_PETRO_RABIGH/2026_Q3_filed2026-11-01.pdf", page: 13}
+  # Geographic. Note: regional definitions change: FY2022-FY2024 AFS used Middle East (primarily KSA) / Asia Pacific / Others; FY2025 AFS and 2026 interims split KSA / Middle East (others) / Asia Pacific / Others.
+  - {period: "FY2022", segment: "Middle East (primarily KSA)", basis: geographic, revenue: 39483949, profit: null, unit: "SAR '000", source: "2380_PETRO_RABIGH/2023_Annual_filed2024-03-25.pdf", page: 27}
+  - {period: "FY2022", segment: "Asia Pacific", basis: geographic, revenue: 16027067, profit: null, unit: "SAR '000", source: "2380_PETRO_RABIGH/2023_Annual_filed2024-03-25.pdf", page: 27}
+  - {period: "FY2022", segment: "Others", basis: geographic, revenue: 441465, profit: null, unit: "SAR '000", source: "2380_PETRO_RABIGH/2023_Annual_filed2024-03-25.pdf", page: 27}
+  - {period: "FY2023", segment: "Middle East (primarily KSA)", basis: geographic, revenue: 30869650, profit: null, unit: "SAR '000", source: "2380_PETRO_RABIGH/2024_Annual_filed2025-03-19.pdf", page: 26}
+  - {period: "FY2023", segment: "Asia Pacific", basis: geographic, revenue: 13532427, profit: null, unit: "SAR '000", source: "2380_PETRO_RABIGH/2024_Annual_filed2025-03-19.pdf", page: 26}
+  - {period: "FY2023", segment: "Others", basis: geographic, revenue: 201916, profit: null, unit: "SAR '000", source: "2380_PETRO_RABIGH/2024_Annual_filed2025-03-19.pdf", page: 26}
+  - {period: "FY2024 (original)", segment: "Middle East (primarily KSA)", basis: geographic, revenue: 27007541, profit: null, unit: "SAR '000", source: "2380_PETRO_RABIGH/2024_Annual_filed2025-03-19.pdf", page: 26}
+  - {period: "FY2024 (original)", segment: "Asia Pacific", basis: geographic, revenue: 10858068, profit: null, unit: "SAR '000", source: "2380_PETRO_RABIGH/2024_Annual_filed2025-03-19.pdf", page: 26}
+  - {period: "FY2024 (original)", segment: "Others", basis: geographic, revenue: 1483459, profit: null, unit: "SAR '000", source: "2380_PETRO_RABIGH/2024_Annual_filed2025-03-19.pdf", page: 26}
+  - {period: "FY2024 (restated)", segment: "Kingdom of Saudi Arabia", basis: geographic, revenue: 24280080, profit: null, unit: "SAR '000", source: "2380_PETRO_RABIGH/2025_Annual_filed2026-03-12.pdf", page: 24}
+  - {period: "FY2024 (restated)", segment: "Middle East (others)", basis: geographic, revenue: 686415, profit: null, unit: "SAR '000", source: "2380_PETRO_RABIGH/2025_Annual_filed2026-03-12.pdf", page: 24}
+  - {period: "FY2024 (restated)", segment: "Asia Pacific", basis: geographic, revenue: 10268517, profit: null, unit: "SAR '000", source: "2380_PETRO_RABIGH/2025_Annual_filed2026-03-12.pdf", page: 24}
+  - {period: "FY2024 (restated)", segment: "Others", basis: geographic, revenue: 3427123, profit: null, unit: "SAR '000", source: "2380_PETRO_RABIGH/2025_Annual_filed2026-03-12.pdf", page: 24}
+  - {period: "FY2025", segment: "Kingdom of Saudi Arabia", basis: geographic, revenue: 11114718, profit: null, unit: "SAR '000", source: "2380_PETRO_RABIGH/2025_Annual_filed2026-03-12.pdf", page: 24}
+  - {period: "FY2025", segment: "Middle East (others)", basis: geographic, revenue: 6343357, profit: null, unit: "SAR '000", source: "2380_PETRO_RABIGH/2025_Annual_filed2026-03-12.pdf", page: 24}
+  - {period: "FY2025", segment: "Asia Pacific", basis: geographic, revenue: 6990300, profit: null, unit: "SAR '000", source: "2380_PETRO_RABIGH/2025_Annual_filed2026-03-12.pdf", page: 24}
+  - {period: "FY2025", segment: "Others", basis: geographic, revenue: 10560118, profit: null, unit: "SAR '000", source: "2380_PETRO_RABIGH/2025_Annual_filed2026-03-12.pdf", page: 24}
+  - {period: "9M2026", segment: "Kingdom of Saudi Arabia", basis: geographic, revenue: 18851534, profit: null, unit: "SAR '000", source: "2380_PETRO_RABIGH/2026_Q3_filed2026-11-01.pdf", page: 14}
+  - {period: "9M2026", segment: "Middle East (others, primarily Egypt)", basis: geographic, revenue: 12173073, profit: null, unit: "SAR '000", source: "2380_PETRO_RABIGH/2026_Q3_filed2026-11-01.pdf", page: 14}
+  - {period: "9M2026", segment: "Asia Pacific", basis: geographic, revenue: 9393859, profit: null, unit: "SAR '000", source: "2380_PETRO_RABIGH/2026_Q3_filed2026-11-01.pdf", page: 14}
+  - {period: "9M2026", segment: "Others", basis: geographic, revenue: 11613643, profit: null, unit: "SAR '000", source: "2380_PETRO_RABIGH/2026_Q3_filed2026-11-01.pdf", page: 14}
+  - {period: "9M2025", segment: "Kingdom of Saudi Arabia", basis: geographic, revenue: 8119188, profit: null, unit: "SAR '000", source: "2380_PETRO_RABIGH/2026_Q3_filed2026-11-01.pdf", page: 14}
+  - {period: "9M2025", segment: "Middle East (others)", basis: geographic, revenue: 3158789, profit: null, unit: "SAR '000", source: "2380_PETRO_RABIGH/2026_Q3_filed2026-11-01.pdf", page: 14}
+  - {period: "9M2025", segment: "Asia Pacific", basis: geographic, revenue: 4312806, profit: null, unit: "SAR '000", source: "2380_PETRO_RABIGH/2026_Q3_filed2026-11-01.pdf", page: 14}
+  - {period: "9M2025", segment: "Others", basis: geographic, revenue: 8765173, profit: null, unit: "SAR '000", source: "2380_PETRO_RABIGH/2026_Q3_filed2026-11-01.pdf", page: 14}
+
+revenue_drivers:
+  - {period: "FY2025", driver: "Movement between provisional and final prices (reduced revenue)", value: -259, unit: "SAR m", source: "2380_PETRO_RABIGH/2025_Annual_filed2026-03-12.pdf", page: 24, quote: "includes an adjustment of Saudi Riyals 259 million which has reduced the Company's revenue and relates to movement between provisional and final prices"}
+  - {period: "9M2026", driver: "Movement between provisional and final prices (increased revenue; 9M2025 decreased SAR 124m)", value: 124, unit: "SAR m", source: "2380_PETRO_RABIGH/2026_Q3_filed2026-11-01.pdf", page: 13, quote: "includes an adjustment of Saudi Riyals 124 million which has increased the Company's revenue"}
+  - {period: "FY2025", driver: "Number of customers generating external revenue (marketers)", value: 5, unit: "count", source: "2380_PETRO_RABIGH/2025_Annual_filed2026-03-12.pdf", page: 24, quote: "has been generated from 5 customers in the year ended December 31, 2025 (2024: 5 customers)."}
+  - {period: "9M2026", driver: "Geopolitical developments: higher crude oil prices improved market conditions", value: null, unit: "SAR m", source: "2380_PETRO_RABIGH/2026_Q3_filed2026-11-01.pdf", page: 10, quote: "the increase in crude oil price due to these geopolitical developments has resulted in the improved market conditions"}
+  - {period: "FY2022-9M2026", driver: "Production / throughput volumes", value: null, unit: "count", status: "not found", source: "2380_PETRO_RABIGH/2025_Annual_filed2026-03-12.pdf", page: null, quote: "No volumes disclosed in FS"}
+
+one_offs:
+  - {period: "FY2024", item: "Waiver of revolving shareholder loans by founding shareholders (incl. accrued commission) - booked directly to equity (accumulated losses), not P&L", amount: 3750, unit: "SAR m", pnl_line: "Equity (statement of changes in equity)", recurring: false, source: "2380_PETRO_RABIGH/2024_Annual_filed2025-03-19.pdf", page: 12, quote: "each of the founding shareholders waived a portion of the RSLs amounting to Saudi Riyals 1,875 million (USD 500 million) each"}
+  - {period: "FY2025", item: "Waiver of remaining revolving shareholder loans (booked against accumulated losses)", amount: 1875, unit: "SAR m", pnl_line: "Equity (statement of changes in equity)", recurring: false, source: "2380_PETRO_RABIGH/2025_Annual_filed2026-03-12.pdf", page: 13, quote: "the remaining Saudi Riyals 1,875 million (USD 500 million) was waived in 2025."}
+  - {period: "FY2024", item: "Deferred tax credit (tax line positive)", amount: 203.3, unit: "SAR m", pnl_line: "Tax", recurring: false, source: "2380_PETRO_RABIGH/2025_Annual_filed2026-03-12.pdf", page: 24, quote: "Tax 22 (5,307) 203,282"}
+  - {period: "FY2025", item: "Gain on derecognition of right-of-use assets and lease liabilities", amount: 40.1, unit: "SAR m", pnl_line: "Other income, net", recurring: false, source: "2380_PETRO_RABIGH/2025_Annual_filed2026-03-12.pdf", page: 25, quote: "Gain on derecognition of right-of-use assets and lease liabilities 40,096 566"}
+  - {period: "FY2025", item: "SEC power supply claim provision maintained (paid under enforcement 2023, refunded Feb 2025, re-enforced Aug 2025)", amount: 365.7, unit: "SAR m", pnl_line: "Accrued expenses and other liabilities (provision)", recurring: false, source: "2380_PETRO_RABIGH/2025_Annual_filed2026-03-12.pdf", page: 44, quote: "the Company continues to maintain a provision of Saudi Riyals 365.7 million within accrued expenses and other liabilities."}
+  - {period: "FY2022-FY2025", item: "PP&E impairment", amount: 0, unit: "SAR m", pnl_line: "n/a", recurring: false, status: "none recognised", source: "2380_PETRO_RABIGH/2025_Annual_filed2026-03-12.pdf", page: 5, quote: "there was no impairment loss incurred for the year"}
+
+restatements:
+  - period_restated: "FY2024"
+    item: "Revenue"
+    from: 39349068
+    to: 38662135
+    unit: "SAR '000"
+    reason: "Shipping, handling, insurance, customs and storage charges charged back by marketers (customers), previously in selling and marketing expenses, now netted against revenue under IFRS 15. No impact on net loss. Entire SAR 686.9m adjustment falls in Petrochemicals segment (11,504,690 -> 10,817,757)."
+    source: "2380_PETRO_RABIGH/2025_Annual_filed2026-03-12.pdf"
+    page: 44
+    quote: "have now been presented net against revenue to comply with the requirements of IFRS 15 - Revenue from contracts with customers."
+  - period_restated: "FY2024"
+    item: "Gross profit (loss)"
+    from: -985022
+    to: -1671955
+    unit: "SAR '000"
+    reason: "Same IFRS 15 netting (686,933); selling and marketing expenses reduced from 855,681 to 168,748."
+    source: "2380_PETRO_RABIGH/2025_Annual_filed2026-03-12.pdf"
+    page: 44
+    quote: "Gross loss (985,022) (686,933) (1,671,955)"
+  - period_restated: "9M2024"
+    item: "Revenue"
+    from: 27952018
+    to: 27469599
+    unit: "SAR '000"
+    reason: "Same IFRS 15 netting first applied in 2025 Q3 interim (482,419 for 9M2024; 185,014 for Q3 2024)."
+    source: "2380_PETRO_RABIGH/2025_Q3_filed2025-11-11.pdf"
+    page: 23
+    quote: "These expenses were previously being presented within selling and marketing expenses and have now been presented net against revenue"
+  - period_restated: "9M2025"
+    item: "Revenue (check of comparative in 2026_Q3)"
+    from: 24355956
+    to: 24355956
+    unit: "SAR '000"
+    reason: "No change between 2025_Q3 and 2026_Q3 presentation of 9M2025 revenue."
+    source: "2380_PETRO_RABIGH/2026_Q3_filed2026-11-01.pdf"
+    page: 13
+    quote: "customers 7,637,408 1,557,590 9,194,998 19,050,035 5,305,921 24,355,956"
+
+significant_events:
+  - date: "2022-06-08"
+    event: "Rights issue SAR 7,950m approved; capital raised from SAR 8,760m to SAR 16,710m; proceeds used to capitalise founding shareholder loans and partially repay equity bridge loans (SAR 1,940.5m)"
+    financial_effect: "Share capital +SAR 7,950m; rights issue cost SAR 47.01m in equity"
+    source: "2380_PETRO_RABIGH/2022_Annual_filed2023-03-19.pdf"
+    page: 39
+    quote: "the Company increased its share capital from Saudi Riyals 8,760 million to Saudi Riyals 16,710 million."
+  - date: "2022-12-31"
+    event: "Current liabilities exceeded current assets by SAR 14,670m, mainly SAR 9,309.5m equity bridge loan due 20 Mar 2023 guaranteed by founding shareholders"
+    financial_effect: "Liquidity / going concern consideration"
+    source: "2380_PETRO_RABIGH/2022_Annual_filed2023-03-19.pdf"
+    page: 12
+    quote: "the Company's current liabilities exceed the current assets by Saudi Riyals 14,670 million, primarily due to the equity bridge loan"
+  - date: "2023"
+    event: "Equity bridge loans restructured: repayable in unequal annual instalments Dec 2024 to Dec 2027, still guaranteed by founding shareholders; extension fee SAR 135m"
+    financial_effect: "Debt restructuring"
+    source: "2380_PETRO_RABIGH/2023_Annual_filed2024-03-25.pdf"
+    page: 35
+    quote: "have been restructured (the restructured EBLs) and are now repayable in unequal annual instalments commencing from December 2024 to December 2027"
+  - date: "2024-08-07"
+    event: "Founding shareholders' turnaround package: waiver of SAR 5,625m revolving shareholder loans (3,750m in 2024, 1,875m in Jan 2025) and SAR 5,263.6m equity injection"
+    financial_effect: "Shareholder support"
+    source: "2380_PETRO_RABIGH/2025_Annual_filed2026-03-12.pdf"
+    page: 13
+    quote: "Waiver of the revolving shareholder loans (RSL) provided to the Company, totaling to Saudi Riyals 5,625 million (USD 1,500 million)."
+  - date: "2025-10-15"
+    event: "Capital increase SAR 5,263.6m via 526.36m unlisted Class B shares to Aramco and Sumitomo (SAR 2,631.8m each); proceeds used to prepay debt"
+    financial_effect: "Share capital SAR 16,710m -> SAR 21,973.6m; debt prepayment"
+    source: "2380_PETRO_RABIGH/2025_Annual_filed2026-03-12.pdf"
+    page: 14
+    quote: "On October 15, 2025, the Company received the proceeds of Saudi Riyals 5,263.6 million and utilized these funds to prepay a portion of its debts"
+  - date: "2026-03-29"
+    event: "Capital reduction approved by EGM (CMA approval 12 Feb 2026): Class A nominal value SAR 10 -> SAR 6.85; SAR 5,263.65m written off against accumulated losses"
+    financial_effect: "Accumulated losses reduced by SAR 5,263.65m; capital back to SAR 16,710m"
+    source: "2380_PETRO_RABIGH/2026_Q3_filed2026-11-01.pdf"
+    page: 10
+    quote: "convened the shareholders' Extraordinary General Assembly meeting on March 29, 2026 that approved this share capital decrease."
+  - date: "2026 (from 28 Feb 2026 conflict)"
+    event: "Geopolitical developments disrupted regional/global energy markets; marine logistics pressure, shipping disruptions and vessel constraints; no direct material impact on operations; higher crude prices improved market conditions"
+    financial_effect: "Contributed significantly to improved 9M2026 performance (net profit SAR 6,702m vs loss SAR 3,292m)"
+    source: "2380_PETRO_RABIGH/2026_Q3_filed2026-11-01.pdf"
+    page: 10
+    quote: "these developments have not had a direct material impact on the Company's operations, financial position or financial performance."
+  - date: "2026-09-30"
+    event: "Accumulated losses turned to retained earnings SAR 2,768m; current liabilities exceed current assets by SAR 6,321m (31 Dec 2025: SAR 13,731m)"
+    financial_effect: "Balance sheet repair"
+    source: "2380_PETRO_RABIGH/2026_Q3_filed2026-11-01.pdf"
+    page: 9
+    quote: "the Company has retained earnings amounting to Saudi Riyals 2,768 million (December 31, 2025: accumulated losses of Saudi Riyals 9,191 million)."
+  - date: "2025-12-31"
+    event: "Comprehensive loss SAR 3,902m; accumulated losses SAR 9,191m (41.83% of capital); net current liabilities SAR 13,731m"
+    financial_effect: "Going concern basis relied on business plan and founding shareholder support"
+    source: "2380_PETRO_RABIGH/2025_Annual_filed2026-03-12.pdf"
+    page: 13
+    quote: "the accumulated losses reached Saudi Riyals 9,191 million (December 31, 2024: Saudi Riyals 7,154 million) representing 41.83%"
+
+audit_opinion:
+  - {period: "FY2022", opinion: "Unmodified; KAM on revenue; no emphasis of matter or material uncertainty paragraph found in text", emphasis_of_matter: none, source: "2380_PETRO_RABIGH/2022_Annual_filed2023-03-19.pdf", page: 3}
+  - {period: "FY2023", opinion: "Unmodified; KAM on PP&E impairment assessment; no EoM/MUGC found", emphasis_of_matter: none, source: "2380_PETRO_RABIGH/2023_Annual_filed2024-03-25.pdf", page: 3}
+  - {period: "FY2024", opinion: "Unmodified; KAM on PP&E impairment assessment; no EoM/MUGC found", emphasis_of_matter: none, source: "2380_PETRO_RABIGH/2024_Annual_filed2025-03-19.pdf", page: 3}
+  - {period: "FY2025", opinion: "Unmodified; KAM on impairment of non-financial assets (no impairment); no EoM/MUGC found despite going-concern disclosures in Note 2", emphasis_of_matter: none, source: "2380_PETRO_RABIGH/2025_Annual_filed2026-03-12.pdf", page: 3}
+  - {period: "9M2026", opinion: "Review conclusion unmodified; no EoM found", emphasis_of_matter: none, source: "2380_PETRO_RABIGH/2026_Q3_filed2026-11-01.pdf", page: 3}
+
+kpis_in_filings:
+  - {period: "FY2022-9M2026", kpi: "Throughput / production / utilisation", value: null, unit: "count", status: "not found", source: "2380_PETRO_RABIGH/2025_Annual_filed2026-03-12.pdf", page: null}
+  - {period: "FY2025", kpi: "Capital expenditure (additions to PP&E and intangibles)", value: 3787.5, unit: "SAR m", source: "2380_PETRO_RABIGH/2025_Annual_filed2026-03-12.pdf", page: 23}
+  - {period: "FY2024", kpi: "Capital expenditure (additions to PP&E and intangibles)", value: 889.0, unit: "SAR m", source: "2380_PETRO_RABIGH/2025_Annual_filed2026-03-12.pdf", page: 23}
+
+special_extractions: []
+
+open_questions:
+  - "Primary statement pages are scanned images (not read); all P&L figures here come from the segment note reconciliation (operating loss -> net loss)."
+  - "Geographic basis changed in FY2025 AFS: FY2024 comparative now shows KSA 24,280m vs 'Middle East (primarily KSA)' 27,008m originally; part of the difference is the IFRS 15 netting and part is regional re-mapping - not explained in notes."
+  - "Note 4 FY2025 states 'revenue from external customers SAR 34,871m (2024: SAR 39,087m)', where 39,087m appears to be the pre-restatement basis while the segment table shows 38,662m restated; not reconciled in the note."

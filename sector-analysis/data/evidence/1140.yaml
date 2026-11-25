@@ -1,0 +1,187 @@
+# Evidence file: Bank Albilad. Amounts SAR '000 unless stated. Pages = physical PDF page (1-based).
+ticker: "1140"
+company: "Bank Albilad"
+
+perimeter_changes:
+  - event: "Incorporated 100% subsidiary Enjaz Payment Services (11 Aug 2022). No acquisitions, disposals or discontinued operations found FY2022-9M2026."
+    type: new_subsidiary
+    date: "2022-08-11"
+    consideration: null
+    revenue_contribution: null
+    profit_contribution: null
+    pro_forma_revenue: null
+    period: FY2022
+    unit: "SAR '000"
+    source: "1140_ALBILAD/2022_Annual_filed2023-02-12.pdf"
+    page: 14
+    quote: "On Muharram 13, 1444H (corresponding to August 11, 2022) the bank incorporated its subsidiary Enjaz Payment"
+  - event: "Acquisitions / disposals / discontinued operations / subsidiary sales"
+    type: disposal
+    status: "not found"
+    date: null
+    consideration: null
+    revenue_contribution: null
+    profit_contribution: null
+    pro_forma_revenue: null
+    period: "FY2022-9M2026"
+    unit: "SAR '000"
+    source: null
+    page: null
+    quote: null
+
+segments:
+  - {period: FY2022, segment: "Retail", basis: operating, revenue: 2768003, profit: 734151, unit: "SAR '000", source: "1140_ALBILAD/2022_Annual_filed2023-02-12.pdf", page: 62, note: "revenue = total operating income; profit = net income before zakat"}
+  - {period: FY2022, segment: "Corporate", basis: operating, revenue: 1414276, profit: 830761, unit: "SAR '000", source: "1140_ALBILAD/2022_Annual_filed2023-02-12.pdf", page: 62}
+  - {period: FY2022, segment: "Treasury", basis: operating, revenue: 741826, profit: 624379, unit: "SAR '000", source: "1140_ALBILAD/2022_Annual_filed2023-02-12.pdf", page: 62}
+  - {period: FY2022, segment: "Investment banking and brokerage", basis: operating, revenue: 267327, profit: 131432, unit: "SAR '000", source: "1140_ALBILAD/2022_Annual_filed2023-02-12.pdf", page: 62}
+  - {period: FY2022, segment: "Total", basis: operating, revenue: 5191432, profit: 2320723, unit: "SAR '000", source: "1140_ALBILAD/2022_Annual_filed2023-02-12.pdf", page: 62}
+  - {period: FY2025, segment: "Retail", basis: operating, revenue: 2410047, profit: 322901, unit: "SAR '000", source: "1140_ALBILAD/2025_Annual_filed2026-02-12.pdf", page: 63}
+  - {period: FY2025, segment: "Corporate", basis: operating, revenue: 1912239, profit: 1548637, unit: "SAR '000", source: "1140_ALBILAD/2025_Annual_filed2026-02-12.pdf", page: 63}
+  - {period: FY2025, segment: "Treasury", basis: operating, revenue: 1436635, profit: 1289106, unit: "SAR '000", source: "1140_ALBILAD/2025_Annual_filed2026-02-12.pdf", page: 63}
+  - {period: FY2025, segment: "Investment banking and brokerage", basis: operating, revenue: 432976, profit: 238858, unit: "SAR '000", source: "1140_ALBILAD/2025_Annual_filed2026-02-12.pdf", page: 63}
+  - {period: FY2025, segment: "Total", basis: operating, revenue: 6191897, profit: 3399502, unit: "SAR '000", source: "1140_ALBILAD/2025_Annual_filed2026-02-12.pdf", page: 63}
+  - {period: 9M2026, segment: "Retail", basis: operating, revenue: 1771254, profit: 198667, unit: "SAR '000", source: "1140_ALBILAD/2026_Q3_filed2026-10-27.pdf", page: 36}
+  - {period: 9M2026, segment: "Corporate", basis: operating, revenue: 1524467, profit: 1133950, unit: "SAR '000", source: "1140_ALBILAD/2026_Q3_filed2026-10-27.pdf", page: 36}
+  - {period: 9M2026, segment: "Treasury", basis: operating, revenue: 1156615, profit: 1047918, unit: "SAR '000", source: "1140_ALBILAD/2026_Q3_filed2026-10-27.pdf", page: 36}
+  - {period: 9M2026, segment: "Investment banking and brokerage", basis: operating, revenue: 306485, profit: 147367, unit: "SAR '000", source: "1140_ALBILAD/2026_Q3_filed2026-10-27.pdf", page: 36}
+  - {period: 9M2026, segment: "Total", basis: operating, revenue: 4758821, profit: 2527902, unit: "SAR '000", source: "1140_ALBILAD/2026_Q3_filed2026-10-27.pdf", page: 36}
+  - {period: 9M2025, segment: "Retail", basis: operating, revenue: 1751093, profit: 221729, unit: "SAR '000", source: "1140_ALBILAD/2026_Q3_filed2026-10-27.pdf", page: 37}
+  - {period: 9M2025, segment: "Corporate", basis: operating, revenue: 1383123, profit: 1124234, unit: "SAR '000", source: "1140_ALBILAD/2026_Q3_filed2026-10-27.pdf", page: 37}
+  - {period: 9M2025, segment: "Treasury", basis: operating, revenue: 1063558, profit: 951512, unit: "SAR '000", source: "1140_ALBILAD/2026_Q3_filed2026-10-27.pdf", page: 37}
+  - {period: 9M2025, segment: "Investment banking and brokerage", basis: operating, revenue: 341646, profit: 191540, unit: "SAR '000", source: "1140_ALBILAD/2026_Q3_filed2026-10-27.pdf", page: 37}
+  - {period: 9M2025, segment: "Total", basis: operating, revenue: 4539420, profit: 2489015, unit: "SAR '000", source: "1140_ALBILAD/2026_Q3_filed2026-10-27.pdf", page: 37}
+
+revenue_drivers:
+  # Fee and commission: gross, expense, net
+  - {period: FY2022, driver: "Fee and commission income (gross)", value: 1092758, unit: "SAR '000", source: "1140_ALBILAD/2022_Annual_filed2023-02-12.pdf", page: 9, quote: "Fee and commission income 22 1,092,758 1,097,155"}
+  - {period: FY2022, driver: "Fees and commission expenses", value: -423961, unit: "SAR '000", source: "1140_ALBILAD/2022_Annual_filed2023-02-12.pdf", page: 9, quote: "Fees and commission expenses 22 (423,961) (365,844)"}
+  - {period: FY2022, driver: "Fee and commission income, net", value: 668797, unit: "SAR '000", source: "1140_ALBILAD/2022_Annual_filed2023-02-12.pdf", page: 9, quote: "Fee and commission income, net 22 668,797 731,311"}
+  - {period: FY2023, driver: "Fee and commission income (gross)", value: 1099051, unit: "SAR '000", source: "1140_ALBILAD/2023_Annual_filed2024-02-13.pdf", page: 9, quote: "Fee and commission income 22 1,099,051 1,092,758"}
+  - {period: FY2023, driver: "Fees and commission expenses", value: -478029, unit: "SAR '000", source: "1140_ALBILAD/2023_Annual_filed2024-02-13.pdf", page: 9, quote: "Fees and commission expenses 22 (478,029) (423,961)"}
+  - {period: FY2023, driver: "Fee and commission income, net", value: 621022, unit: "SAR '000", source: "1140_ALBILAD/2023_Annual_filed2024-02-13.pdf", page: 9, quote: "Fee and commission income, net 22 621,022 668,797"}
+  - {period: FY2024, driver: "Fee and commission income (gross)", value: 1212340, unit: "SAR '000", source: "1140_ALBILAD/2024_Annual_filed2025-02-12.pdf", page: 9, quote: "Fee and commission income 22 1,212,340 1,099,051"}
+  - {period: FY2024, driver: "Fee and commission expenses", value: -511825, unit: "SAR '000", source: "1140_ALBILAD/2024_Annual_filed2025-02-12.pdf", page: 9, quote: "Fee and commission expenses 22 (511,825) (478,029)"}
+  - {period: FY2024, driver: "Fee and commission income, net", value: 700515, unit: "SAR '000", source: "1140_ALBILAD/2024_Annual_filed2025-02-12.pdf", page: 9, quote: "Fee and commission income, net 22 700,515 621,022"}
+  - {period: FY2025, driver: "Fee and commission income (gross)", value: 1291769, unit: "SAR '000", source: "1140_ALBILAD/2025_Annual_filed2026-02-12.pdf", page: 9, quote: "Fee and commission income 22 1,291,769 1,212,340"}
+  - {period: FY2025, driver: "Fee and commission expenses", value: -568796, unit: "SAR '000", source: "1140_ALBILAD/2025_Annual_filed2026-02-12.pdf", page: 9, quote: "Fee and commission expenses 22 (568,796) (511,825)"}
+  - {period: FY2025, driver: "Fee and commission income, net", value: 722973, unit: "SAR '000", source: "1140_ALBILAD/2025_Annual_filed2026-02-12.pdf", page: 9, quote: "Fee and commission income, net 22 722,973 700,515"}
+  - {period: 9M2025, driver: "Fee and commission income (gross)", value: 973687, unit: "SAR '000", source: "1140_ALBILAD/2025_Q3_filed2025-11-02.pdf", page: 4, quote: "Fee and commission income 357,433 310,132 973,687 867,756"}
+  - {period: 9M2025, driver: "Fee and commission expenses", value: -410910, unit: "SAR '000", source: "1140_ALBILAD/2025_Q3_filed2025-11-02.pdf", page: 4, quote: "Fee and commission expenses (157,102) (128,319) (410,910) (373,595)"}
+  - {period: 9M2025, driver: "Fee and commission income, net", value: 562777, unit: "SAR '000", source: "1140_ALBILAD/2025_Q3_filed2025-11-02.pdf", page: 4, quote: "Fee and commission income, net 200,331 181,813 562,777 494,161"}
+  - {period: 9M2026, driver: "Fee and commission income (gross)", value: 920651, unit: "SAR '000", source: "1140_ALBILAD/2026_Q3_filed2026-10-27.pdf", page: 5, quote: "Fee and commission income 346,608 357,433 920,651 973,687"}
+  - {period: 9M2026, driver: "Fee and commission expenses", value: -391692, unit: "SAR '000", source: "1140_ALBILAD/2026_Q3_filed2026-10-27.pdf", page: 5, quote: "Fee and commission expenses (130,040) (157,102) (391,692) (410,910)"}
+  - {period: 9M2026, driver: "Fee and commission income, net", value: 528959, unit: "SAR '000", source: "1140_ALBILAD/2026_Q3_filed2026-10-27.pdf", page: 5, quote: "Fee and commission income, net 216,568 200,331 528,959 562,777"}
+  # ECL split
+  - {period: FY2022, driver: "ECL charge: financing 530,451; investments 17,307; other financial assets 1,016; commitments 1,878; total 550,652", value: 550652, unit: "SAR '000", source: "1140_ALBILAD/2022_Annual_filed2023-02-12.pdf", page: 58, quote: "Financing, net 530,451 555,194"}
+  - {period: FY2023, driver: "ECL charge: financing 340,111; investments (316); other 1,648; commitments (17,613); total 323,830", value: 323830, unit: "SAR '000", source: "1140_ALBILAD/2023_Annual_filed2024-02-13.pdf", page: 62, quote: "Financing, net 340,111 530,451"}
+  - {period: FY2024, driver: "ECL charge: financing 119,944; investments 17,871; due from banks (868); commitments (7,259); total 129,688", value: 129688, unit: "SAR '000", source: "1140_ALBILAD/2024_Annual_filed2025-02-12.pdf", page: 59, quote: "Financing, net 8 119,944 340,111"}
+  - {period: FY2025, driver: "ECL charge: financing 198,784; investments 5,819; due from banks 70; commitments (23,310); total 181,363", value: 181363, unit: "SAR '000", source: "1140_ALBILAD/2025_Annual_filed2026-02-12.pdf", page: 59, quote: "Financing, net 8 198,784 119,944"}
+  - {period: 9M2025, driver: "Impairment charge for ECL, net (total only; no asset split in interim)", value: 134707, unit: "SAR '000", source: "1140_ALBILAD/2025_Q3_filed2025-11-02.pdf", page: 4, quote: "Impairment charge for expected credit losses, net 32,985 53,667 134,707 187,395"}
+  - {period: 9M2026, driver: "Impairment charge for ECL, net (total only; no asset split in interim)", value: 209712, unit: "SAR '000", source: "1140_ALBILAD/2026_Q3_filed2026-10-27.pdf", page: 5, quote: "Impairment charge for expected credit losses, net 82,401 32,985 209,712 134,707"}
+
+one_offs:
+  - {period: FY2025, item: "Gain on disposal of property and equipment, net (cash-flow adjustment; within other operating income 300,441 vs 103,890 in FY2024)", amount: 148618, unit: "SAR '000", pnl_line: "Other operating income", recurring: false, source: "1140_ALBILAD/2025_Annual_filed2026-02-12.pdf", page: 13, quote: "Gain on disposal of property and equipment, net (148,618) (167)"}
+  - {period: "FY2022-9M2026", item: "Zakat settlements / prior-year zakat adjustments", amount: null, unit: "SAR '000", pnl_line: "Zakat", recurring: false, status: "not found", source: null, page: null, quote: null}
+  - {period: "FY2022-9M2026", item: "Hyperinflation adjustments; large recoveries; items labelled non-recurring", amount: null, unit: "SAR '000", pnl_line: null, recurring: false, status: "not found", source: null, page: null, quote: null}
+
+restatements:
+  - period_restated: "31 Dec 2024 (FY2025 annual, note 40)"
+    item: "Investments in Tier 1 sukuk held as assets (SAR 2,297.8m) reclassified from amortised cost to FVOCI (equity instruments); FY2024 cash-flow purchases of 601m re-classified within investing activities"
+    from: "Amortised cost 2,297,800"
+    to: "FVOCI 2,297,800"
+    unit: "SAR '000"
+    reason: "IAS 8 correction of error: AT1 sukuk are equity instruments of the issuer and fail amortised-cost criteria. Bank states impact on financial position, income, OCI and equity was immaterial."
+    source: "1140_ALBILAD/2025_Annual_filed2026-02-12.pdf"
+    page: 91
+    quote: "These adjustments are considered as correction of error in accordance with the requirements of International Accounting Standard 8"
+  - period_restated: "30 Sep 2025 (9M2026 interim, note 19)"
+    item: "Investments in Tier 1 sukuk SAR 4,020m reclassified from amortised cost to FVOCI at 30 Sep 2025; 9M2025 purchases of 1,723m re-classified in cash flow"
+    from: "Amortised cost 4,020,000"
+    to: "FVOCI 4,020,000"
+    unit: "SAR '000"
+    reason: "IAS 8 correction of error (same as FY2025); impact immaterial per the bank"
+    source: "1140_ALBILAD/2026_Q3_filed2026-10-27.pdf"
+    page: 41
+    quote: "reclassified these investments amounting to SAR 4,020 million as at September 30, 2025 from \"Amortized cost\" to \"Fair value through other comprehensive income\""
+  - period_restated: "9M2025 interim"
+    item: "No balance-sheet restatement in 9M2025 interim (only EPS restated for bonus shares)"
+    from: null
+    to: null
+    unit: "SAR '000"
+    reason: "Bonus shares (2,500,000 capitalised in 2025): weighted shares 1,491m restated"
+    source: "1140_ALBILAD/2025_Q3_filed2025-11-02.pdf"
+    page: 33
+    quote: "shares as of September 30, 2025: 1,491 million shares (September 30, 2024: 1,491 million shares - restated)"
+
+significant_events:
+  - {date: "2025-05-22", event: "Issued USD 650m (SAR 2,438m) AT1 sukuk under USD 2bn AT1 programme; 6.5% p.a.; perpetual", financial_effect: 2437858, source: "1140_ALBILAD/2025_Annual_filed2026-02-12.pdf", page: 49, quote: "On May 22, 2025, the Bank successfully completed the issuance of a USD 650 million (SAR 2,438 million) USD-denominated Additional Tier 1 Sukuk."}
+  - {date: "2026-01-15", event: "Issued USD 500m (SAR 1,875m) AT1 sukuk; 6.375% p.a.; perpetual (SoCE: 1,875,275)", financial_effect: 1875275, source: "1140_ALBILAD/2026_Q3_filed2026-10-27.pdf", page: 28, quote: "On January 15, 2026, the Bank successfully completed the issuance of a USD 500 million (SAR 1,875 million) USD-denominated Additional Tier 1 Sukuk"}
+  - {date: "2026-04-15", event: "Called SAR 3,000m Tier 2 sukuk (issued Apr 2021); Tier 2 sukuk and term financing nil at 30 Sep 2026 (31 Dec 2025: 3,044,407 and 100,000)", financial_effect: -3144407, source: "1140_ALBILAD/2026_Q3_filed2026-10-27.pdf", page: 28, quote: "The Bank exercised the call option on its sukuk on April 15, 2026. Regulatory approval has been obtained in this regard."}
+  - {date: "2026-02-28 onward", event: "Geopolitical deterioration in Middle East affecting KSA; ECL inputs revised; granular review; macro factors updated at 30 Sep 2026. No overlay amount disclosed.", financial_effect: null, source: "1140_ALBILAD/2026_Q3_filed2026-10-27.pdf", page: 41, quote: "The situation has remained highly volatile and has impacted several countries in the Middle East including the Kingdom of Saudi Arabia"}
+  - {date: "9M2026", event: "Subsequent events note in 9M2026 interim", financial_effect: null, status: "not found", source: "1140_ALBILAD/2026_Q3_filed2026-10-27.pdf", page: null, quote: null}
+  - {date: "2025", event: "Bonus issue 2,500,000 (from statutory reserve 1,000,000 and retained earnings 1,500,000); share capital 15,000,000", financial_effect: 2500000, source: "1140_ALBILAD/2025_Annual_filed2026-02-12.pdf", page: 11, quote: "Issuance of bonus shares 15 2,500,000 (1,000,000) (1,500,000)"}
+
+audit_opinion:
+  - {period: FY2022, opinion: "unmodified (EY, PwC)", emphasis_of_matter: "none found in text", source: "1140_ALBILAD/2022_Annual_filed2023-02-12.pdf", page: 2}
+  - {period: FY2023, opinion: "unmodified (EY, PwC)", emphasis_of_matter: "none observed (Basis for Opinion followed directly by Key Audit Matters)", source: "1140_ALBILAD/2023_Annual_filed2024-02-13.pdf", page: 2}
+  - {period: FY2024, opinion: "unmodified (EY, PwC)", emphasis_of_matter: "none found in text", source: "1140_ALBILAD/2024_Annual_filed2025-02-12.pdf", page: 2}
+  - {period: FY2025, opinion: "unmodified (EY, PwC)", emphasis_of_matter: "none observed (Basis for opinion followed directly by Key audit matters)", source: "1140_ALBILAD/2025_Annual_filed2026-02-12.pdf", page: 2}
+  - {period: 9M2025, opinion: "unmodified review conclusion (EY, PwC)", emphasis_of_matter: "none", source: "1140_ALBILAD/2025_Q3_filed2025-11-02.pdf", page: 2}
+  - {period: 9M2026, opinion: "unmodified review conclusion (EY, KPMG)", emphasis_of_matter: "none; Other matter: FY2025 and 9M2025 audited/reviewed by other joint auditors", source: "1140_ALBILAD/2026_Q3_filed2026-10-27.pdf", page: 3}
+
+kpis_in_filings:
+  - {period: "31 Dec 2021", kpi: "Tier I ratio / Tier I + Tier II ratio", value: "14.10 / 18.74", unit: "%", source: "1140_ALBILAD/2022_Annual_filed2023-02-12.pdf", page: 89}
+  - {period: "31 Dec 2022", kpi: "Tier I ratio / Tier I + Tier II ratio", value: "13.57 / 17.70", unit: "%", source: "1140_ALBILAD/2022_Annual_filed2023-02-12.pdf", page: 89}
+  - {period: "31 Dec 2023", kpi: "CET1 / Tier I / Tier I + Tier II", value: "13.88 / 13.88 / 17.76", unit: "%", source: "1140_ALBILAD/2023_Annual_filed2024-02-13.pdf", page: 91}
+  - {period: "31 Dec 2024", kpi: "CET1 / Tier I / Tier I + Tier II", value: "14.55 / 14.55 / 18.32", unit: "%", source: "1140_ALBILAD/2024_Annual_filed2025-02-12.pdf", page: 88}
+  - {period: "30 Sep 2025", kpi: "CET1 / Tier I / Tier I + Tier II", value: "14.80 / 16.75 / 20.32", unit: "%", source: "1140_ALBILAD/2026_Q3_filed2026-10-27.pdf", page: 40}
+  - {period: "31 Dec 2025", kpi: "CET1 / Tier I / Tier I + Tier II", value: "14.85 / 16.76 / 20.20", unit: "%", source: "1140_ALBILAD/2025_Annual_filed2026-02-12.pdf", page: 89}
+  - {period: "30 Sep 2026", kpi: "CET1 / Tier I / Tier I + Tier II", value: "13.53 / 16.64 / 17.41", unit: "%", source: "1140_ALBILAD/2026_Q3_filed2026-10-27.pdf", page: 40}
+  - {period: "31 Dec 2022", kpi: "Non-performing financing / allowance", value: "1,246,435 / 2,845,631", unit: "SAR '000", source: "1140_ALBILAD/2022_Annual_filed2023-02-12.pdf", page: 77}
+  - {period: "31 Dec 2023", kpi: "Non-performing financing / allowance", value: "1,432,961 / 2,895,861", unit: "SAR '000", source: "1140_ALBILAD/2023_Annual_filed2024-02-13.pdf", page: 80}
+  - {period: "31 Dec 2024", kpi: "Non-performing financing / gross / allowance", value: "1,329,832 / 111,942,286 / 2,638,200", unit: "SAR '000", source: "1140_ALBILAD/2025_Annual_filed2026-02-12.pdf", page: 41}
+  - {period: "31 Dec 2025", kpi: "Non-performing financing / gross / allowance", value: "1,215,222 / 124,593,215 / 2,404,716", unit: "SAR '000", source: "1140_ALBILAD/2025_Annual_filed2026-02-12.pdf", page: 41}
+  - {period: "30 Sep 2025", kpi: "Non-performing financing / gross / allowance", value: "1,159,737 / 121,508,382 / 2,373,480", unit: "SAR '000", source: "1140_ALBILAD/2026_Q3_filed2026-10-27.pdf", page: 20}
+  - {period: "30 Sep 2026", kpi: "Non-performing financing / gross / allowance", value: "1,485,333 / 134,894,279 / 2,133,090", unit: "SAR '000", source: "1140_ALBILAD/2026_Q3_filed2026-10-27.pdf", page: 20}
+  - {period: "30 Sep 2026", kpi: "Stage 3 gross financing (31 Dec 2025: 1,363,666)", value: 1709397, unit: "SAR '000", source: "1140_ALBILAD/2026_Q3_filed2026-10-27.pdf", page: 23}
+  - {period: "all", kpi: "NPL ratio, coverage ratio, LCR, NSFR stated as ratios", value: null, unit: "%", status: "not found", source: null, page: null}
+
+special_extractions:
+  - name: "Tier 1 sukuk carrying amount (equity)"
+    unit: "SAR '000"
+    items:
+      - {date: "31 Dec 2021", value: 0, source: "1140_ALBILAD/2022_Annual_filed2023-02-12.pdf", page: 8, note: "no Tier 1 sukuk line; total equity 11,980,090"}
+      - {date: "31 Dec 2022", value: 0, source: "1140_ALBILAD/2022_Annual_filed2023-02-12.pdf", page: 8}
+      - {date: "31 Dec 2023", value: 0, source: "1140_ALBILAD/2023_Annual_filed2024-02-13.pdf", page: 8}
+      - {date: "31 Dec 2024", value: 0, source: "1140_ALBILAD/2025_Annual_filed2026-02-12.pdf", page: 8, quote: "Tier 1 Sukuk 13 2,437,858 -"}
+      - {date: "30 Sep 2025", value: 2437858, source: "1140_ALBILAD/2025_Q3_filed2025-11-02.pdf", page: 3, quote: "Tier 1 Sukuk 8 2,437,858 - -"}
+      - {date: "31 Dec 2025", value: 2437858, source: "1140_ALBILAD/2025_Annual_filed2026-02-12.pdf", page: 8}
+      - {date: "30 Sep 2026", value: 4313133, source: "1140_ALBILAD/2026_Q3_filed2026-10-27.pdf", page: 4, quote: "Tier 1 Sukuk 8 4,313,133 2,437,858 2,437,858"}
+  - name: "Tier 1 sukuk costs charged to retained earnings (SoCE) and issuances"
+    unit: "SAR '000"
+    items:
+      - {period: "FY2022-FY2024", issued: 0, costs: 0}
+      - {period: 9M2025, issued: 2437858, costs: 5670, source: "1140_ALBILAD/2025_Q3_filed2025-11-02.pdf", page: 6, quote: "Tier 1 Sukuk costs (5,670) (5,670) (5,670)"}
+      - {period: FY2025, issued: 2437858, costs: 85194, source: "1140_ALBILAD/2025_Annual_filed2026-02-12.pdf", page: 11, quote: "Tier 1 Sukuk costs 13 (85,194) (85,194) (85,194)"}
+      - {period: 9M2026, issued: 1875275, costs: 143398, source: "1140_ALBILAD/2026_Q3_filed2026-10-27.pdf", page: 7, quote: "Tier 1 Sukuk costs (143,398) (143,398) (143,398)"}
+      - {period: "redemptions", value: 0, note: "no AT1 redemptions; Tier 2 (debt) called 15 Apr 2026"}
+  - name: "Is Tier 1 sukuk inside 'equity attributable to shareholders'?"
+    answer: "No. Albilad shows 'Equity attributable to the shareholders of the Bank' (18,918,062 at 31 Dec 2025) excluding Tier 1 sukuk; Tier 1 sukuk (2,437,858) is added to reach 'Total equity' (21,355,920). There is no separate 'total equity attributable to equity holders' subtotal."
+    source: "1140_ALBILAD/2025_Annual_filed2026-02-12.pdf"
+    page: 8
+    quote: "Equity attributable to the shareholders of the Bank 18,918,062 16,693,230 Tier 1 Sukuk 13 2,437,858 - Total equity 21,355,920"
+  - name: "Albilad headline totals"
+    unit: "SAR '000"
+    items:
+      - {period: FY2022, total_operating_income: 5191432, ecl: 550652, net_income_after_zakat: 2081688, total_assets: 129542856, source: "1140_ALBILAD/2022_Annual_filed2023-02-12.pdf", page: 9}
+      - {period: FY2023, total_operating_income: 5302788, ecl: 323830, net_income_after_zakat: 2368938, source: "1140_ALBILAD/2023_Annual_filed2024-02-13.pdf", page: 9}
+      - {period: FY2024, total_operating_income: 5671879, ecl: 129688, net_income_after_zakat: 2806531, total_assets: 154964687, source: "1140_ALBILAD/2024_Annual_filed2025-02-12.pdf", page: 9}
+      - {period: FY2025, total_operating_income: 6191897, ecl: 181363, net_income_after_zakat: 3049353, total_assets: 172972071, source: "1140_ALBILAD/2025_Annual_filed2026-02-12.pdf", page: 9}
+      - {period: 9M2025, total_operating_income: 4539420, ecl: 134707, net_income_after_zakat: 2232646, source: "1140_ALBILAD/2025_Q3_filed2025-11-02.pdf", page: 4}
+      - {period: 9M2026, total_operating_income: 4758821, ecl: 209712, net_income_after_zakat: 2267528, source: "1140_ALBILAD/2026_Q3_filed2026-10-27.pdf", page: 5}
+
+open_questions:
+  - "Albilad's 2025/2026 IAS 8 item concerns Tier 1 sukuk it HOLDS as investments (reclassified amortised cost -> FVOCI); the bank calls the impact immaterial and shows no restated balance-sheet totals. This differs from ANB's FVOCI-at-cost revaluation."
+  - "Interim ECL charge is not split by asset class in the 9M2025/9M2026 interims (total only)."
+  - "30 Sep 2026 CET1 (18,738,474) is below equity attributable to shareholders (18,944,377); total CAR fell to 17.41% after the Tier 2 call."
+  - "LCR/NSFR are not disclosed in the financial statements."
