@@ -146,7 +146,7 @@ perimeter_changes:
     period: "9M2026"
     unit: "SAR '000"
     source: "1030_SAIB/2026_Q3_filed2026-11-01.pdf"
-    page: 12
+    page: 11
     quote: "ICAP fund RE 4 86.8% 100% ... ICAP fund 63 100% -"
   - event: "Acquisitions/discontinued operations FY2022-FY2025"
     type: null
