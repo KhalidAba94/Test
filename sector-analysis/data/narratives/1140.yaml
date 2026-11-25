@@ -48,7 +48,7 @@ confidence_overall: "High"
 data_notes:
   - "No restatement of 31 Dec 2024 equity or investments in the 9M 2025 interim (total equity SAR 16,693m in both). The only IAS 8 item (FY2025 AFS note 40; 9M 2026 note 19) reclassified Tier 1 sukuk held as investments from amortised cost to FVOCI, described as immaterial, with no restated totals."
   - "Tier 1 sukuk: none before May 2025. The existing FY2022 value of 0 is correct; zeros were added for FY2021 and FY2023 (FY2023 was empty). Albilad's 'Total equity' (no non-controlling interest) includes the Tier 1 sukuk, so equity attributable includes it at every date and ordinary equity = total equity - Tier 1 sukuk."
-  - "Tier 1 costs come from the statement of changes in equity: SAR 85.2m (FY2025), 5.7m (9M 2025: only one distribution date fell before 30 Sep), 143.4m (9M 2026). FY2022-FY2024 are zero."
+  - "Tier 1 costs come from the statement of changes in equity ('Tier 1 Sukuk costs'): SAR 85.2m (FY2025), 5.7m (9M 2025), 143.4m (9M 2026); FY2022-FY2024 are zero. The line is not split between distributions and issuance costs; the 9M 2025 amount is far below one coupon on SAR 2,438m at 6.5%, so it probably reflects issuance costs (our inference)."
   - "The impairment charge is a single income-statement line covering financing, investments, due from banks and commitments; the interims give no split, so the ECL charge on financing (IMPAIR_FIN) equals total impairments in every period. Financing alone was SAR 199m in FY2025 (AFS p.59)."
   - "The FY2025 property gain is disclosed only in the cash-flow statement; its income-statement line is inferred (Medium confidence)."
   - "The 9M 2026 review was by EY and KPMG (FY2025: EY and PwC)."
