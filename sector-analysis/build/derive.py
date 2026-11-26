@@ -130,6 +130,10 @@ def main(sector, facts_csv, overrides_csv, out_csv):
                     add(t, p, "FCF", val(t, p, "CFO") - val(t, p, "CAPEX") - (ipc or 0.0),
                         "CFO - capex" + (" - investment-property spend" if ipc is not None else ""),
                         [(p, "CFO"), (p, "CAPEX"), (p, "IP_CAPEX")])
+                    if ipc is not None:
+                        # owners of let property (malls): capex including investment-property spend, for capex intensity
+                        add(t, p, "CAPEX_TOT", val(t, p, "CAPEX") + ipc, "CAPEX + IP_CAPEX (capex including investment-property spend)",
+                            [(p, "CAPEX"), (p, "IP_CAPEX")])
                 if val(t, p, "DEBT") is not None and val(t, p, "CASH") is not None:
                     lease = val(t, p, "LEASE_LIAB")
                     add(t, p, "NET_DEBT", val(t, p, "DEBT") + (lease or 0.0) - val(t, p, "CASH"),

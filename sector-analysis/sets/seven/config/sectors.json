@@ -435,9 +435,9 @@
     "Return on equity (attributable; YTD annualised)"
    ],
    "CAPEX_INT": [
-    "CAPEX",
+    "CAPEX_TOT",
     "REV_M",
-    "Capex / revenue"
+    "Capex incl. investment property / revenue"
    ],
    "ND_EBITDA": [
     "NET_DEBT",
