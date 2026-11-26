@@ -111,9 +111,11 @@ def main(sector, facts_csv, overrides_csv, out_csv):
                         add(t, p, "OPINC", pbt + fc - fi - jv, "PBT + finance costs - finance income - share of results of JVs/associates",
                             [(p, "PBT"), (p, "FIN_COST"), (p, "FIN_INC"), (p, "SHARE_JV")])
                 if val(t, p, "OPINC") is not None and val(t, p, "DA_CF") is not None:
-                    ebitda = val(t, p, "OPINC") + val(t, p, "DA_CF") + (val(t, p, "IMPAIR_CF") or 0.0)
-                    add(t, p, "EBITDA_C", ebitda, "OPINC + D&A (cash-flow) + impairment add-backs (cash-flow)",
-                        [(p, "OPINC"), (p, "DA_CF"), (p, "IMPAIR_CF")])
+                    fvip = val(t, p, "FV_IP")
+                    ebitda = val(t, p, "OPINC") + val(t, p, "DA_CF") + (val(t, p, "IMPAIR_CF") or 0.0) - (fvip or 0.0)
+                    add(t, p, "EBITDA_C", ebitda, "OPINC + D&A (cash-flow) + impairment add-backs (cash-flow)"
+                        + (" - fair-value gains on investment properties" if fvip is not None else ""),
+                        [(p, "OPINC"), (p, "DA_CF"), (p, "IMPAIR_CF"), (p, "FV_IP")])
                     adj = sum(float(o["amount_sar_m"]) * (1 if o["direction"] == "gain" else -1)
                               for o in oneoffs if o["ticker"] == t and o["period"] == p and o["in_metric"] == "OPINC")
                     ids = ", ".join(o["oneoff_id"] for o in oneoffs if o["ticker"] == t and o["period"] == p)
@@ -124,7 +126,10 @@ def main(sector, facts_csv, overrides_csv, out_csv):
                         "Revenue + other income related to sales (margin base; equals revenue where there is no such income)",
                         [(p, "REV"), (p, "OIRS")])
                 if val(t, p, "CFO") is not None and val(t, p, "CAPEX") is not None:
-                    add(t, p, "FCF", val(t, p, "CFO") - val(t, p, "CAPEX"), "CFO - capex", [(p, "CFO"), (p, "CAPEX")])
+                    ipc = val(t, p, "IP_CAPEX")
+                    add(t, p, "FCF", val(t, p, "CFO") - val(t, p, "CAPEX") - (ipc or 0.0),
+                        "CFO - capex" + (" - investment-property spend" if ipc is not None else ""),
+                        [(p, "CFO"), (p, "CAPEX"), (p, "IP_CAPEX")])
                 if val(t, p, "DEBT") is not None and val(t, p, "CASH") is not None:
                     lease = val(t, p, "LEASE_LIAB")
                     add(t, p, "NET_DEBT", val(t, p, "DEBT") + (lease or 0.0) - val(t, p, "CASH"),
@@ -195,6 +200,20 @@ def main(sector, facts_csv, overrides_csv, out_csv):
             if rr["reason"].startswith("NOT A RESTATEMENT") and r.get("provenance") == "R":
                 r["provenance"] = "D"
             r["note"] = (r.get("note", "") + " " if r.get("note") else "") + f'Restatement/reclassification note: {rr["reason"]} [{rr["source"]}]'
+    # Short financial years (config constituents[t]["short_periods"] = {period: months}): e.g. a transition period
+    # after a year-end change or a first period after incorporation. Every fact of that company-period carries the
+    # true length, so analyze.py keeps it out of sector totals and makes growth across it n.m.
+    for t, c in (sectors.raw(root).get(sector, {}).get("constituents", {}) or {}).items():
+        for per, mo in (c.get("short_periods") or {}).items():
+            for k, r in facts.items():
+                if k[0] == t and k[1] == per:
+                    r["period_months"] = mo
+    # Sets that use FY2021 as opening balances only (config "fy2021_balance_only") drop FY2021 flows, which are not
+    # part of any published comparison and were not checked against the PDFs
+    cfgs = sectors.raw(root).get(sector, {})
+    if cfgs.get("fy2021_balance_only"):
+        BAL = {"TA", "TE", "EQ_ATTR", "CASH", "DEBT", "LEASE_LIAB", "NET_DEBT", "NAV_FV", "LOANS", "DEPOSITS", "T1_SUKUK", "EQ_ORD"}
+        facts = {k: r for k, r in facts.items() if not (k[1] == "FY2021" and k[2] not in BAL)}
     out = sorted(facts.values(), key=lambda r: (r["ticker"], r["period"], r["metric_code"]))
     fields = ["fact_id", "sector", "ticker", "company", "period", "period_end", "period_months", "metric_code",
               "value_sar_m", "value_original", "unit_original", "currency_original", "provenance", "source_id",

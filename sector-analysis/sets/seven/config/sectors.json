@@ -94,7 +94,8 @@
     "Net debt / EBITDA (x; 9M EBITDA annualised)"
    ]
   },
-  "classification_note": "Direct entertainment and leisure operators on the SEVEN priority list (benchmark document of 15 Nov 2026), matched to the Main Market archive. MAF Entertainment and TIME Entertainment are in the benchmark but not listed on the Main Market, so they are not covered."
+  "classification_note": "Direct entertainment and leisure operators on the SEVEN priority list (benchmark document of 15 Nov 2026), matched to the Main Market archive. MAF Entertainment and TIME Entertainment are in the benchmark but not listed on the Main Market, so they are not covered.",
+  "fy2021_balance_only": true
  },
  "Media": {
   "name": "Media-adjacent (not an attraction operator)",
@@ -109,7 +110,11 @@
    "4072": {
     "name": "MBC Group",
     "sub_industry": "Media and advertising",
-    "short": "MBC"
+    "short": "MBC",
+    "short_periods": {
+     "FY2023": 8
+    },
+    "period_note": "Incorporated 20 April 2023; subsidiaries consolidated from 30 June 2023, so FY2023 is a short first period (about six months of operations). No FY2021-FY2022 figures."
    }
   },
   "table_metrics": [
@@ -171,7 +176,8 @@
     "Net debt / EBITDA (x; 9M EBITDA annualised)"
    ]
   },
-  "classification_note": "MBC Group sits in the benchmark's entertainment table but is a media and advertising company, not an attraction operator; it is kept as its own group so it does not distort the operators' totals."
+  "classification_note": "MBC Group sits in the benchmark's entertainment table but is a media and advertising company, not an attraction operator; it is kept as its own group so it does not distort the operators' totals.",
+  "fy2021_balance_only": true
  },
  "FnB": {
   "name": "F&B operators",
@@ -268,7 +274,8 @@
     "Net debt / EBITDA (x; 9M EBITDA annualised)"
    ]
   },
-  "classification_note": "Restaurant operators on the SEVEN list. Americana reports in US dollars; its figures are converted to SAR at the fixed peg of 3.75."
+  "classification_note": "Restaurant operators on the SEVEN list. Americana reports in US dollars; its figures are converted to SAR at the fixed peg of 3.75.",
+  "fy2021_balance_only": true
  },
  "Platform": {
   "name": "Adjacent platform (delivery)",
@@ -345,7 +352,8 @@
     "Net debt / EBITDA (x; 9M EBITDA annualised)"
    ]
   },
-  "classification_note": "Jahez is a delivery platform, not a restaurant operator; kept separate from the F&B operators."
+  "classification_note": "Jahez is a delivery platform, not a restaurant operator; kept separate from the F&B operators.",
+  "fy2021_balance_only": true
  },
  "Malls": {
   "name": "Mall operators and landlords",
@@ -360,7 +368,11 @@
    "4321": {
     "name": "Cenomi Centers",
     "sub_industry": "Malls",
-    "short": "Cenomi Centers"
+    "short": "Cenomi Centers",
+    "short_periods": {
+     "FY2022": 9
+    },
+    "period_note": "Year-end changed from 31 March to 31 December (approved 29 Dec 2022): FY2022 is the nine-month transition period 1 Apr-31 Dec 2022; FY2021 opening balances are at 31 Mar 2022."
    },
    "4320": {
     "name": "Alandalus Property",
@@ -382,6 +394,7 @@
    "NI_ATTR",
    "CFO",
    "CAPEX",
+   "IP_CAPEX",
    "FCF",
    "DEBT",
    "LEASE_LIAB",
@@ -432,7 +445,8 @@
     "Net debt / EBITDA (x; 9M EBITDA annualised)"
    ]
   },
-  "classification_note": "Mall operators and landlords on the SEVEN list."
+  "classification_note": "Mall operators and landlords on the SEVEN list.",
+  "fy2021_balance_only": true
  },
  "REITs": {
   "name": "Retail REITs (selected by the benchmark; not pure-play retail)",
@@ -524,7 +538,8 @@
     "Distributions / FFO"
    ]
   },
-  "classification_note": "REITs selected by the benchmark; their portfolios are not pure-play retail. The archive holds fund reports (half-yearly) and no XBRL, so every figure is read from the PDFs."
+  "classification_note": "REITs selected by the benchmark; their portfolios are not pure-play retail. The archive holds fund reports (half-yearly) and no XBRL, so every figure is read from the PDFs.",
+  "fy2021_balance_only": true
  },
  "Retailers": {
   "name": "Retailers",
@@ -651,7 +666,8 @@
     "Net debt / EBITDA (x; 9M EBITDA annualised)"
    ]
   },
-  "classification_note": "Retailers on the SEVEN list. Panda Retail, Lulu Retail and RATIO are in the benchmark but not listed on the Main Market, so they are not covered."
+  "classification_note": "Retailers on the SEVEN list. Panda Retail, Lulu Retail and RATIO are in the benchmark but not listed on the Main Market, so they are not covered.",
+  "fy2021_balance_only": true
  },
  "Supporting": {
   "name": "Supporting consumer goods (second tier, not in the benchmark)",
@@ -676,7 +692,11 @@
    "2270": {
     "name": "SADAFCO",
     "sub_industry": "Dairy and food",
-    "short": "SADAFCO"
+    "short": "SADAFCO",
+    "short_periods": {
+     "FY2023": 9
+    },
+    "period_note": "Year-end changed from 31 March to 31 December: FY2022 = April 2022-March 2023; FY2023 = the nine-month period April-December 2023."
    },
    "6010": {
     "name": "NADEC",
@@ -788,6 +808,7 @@
     "Net debt / EBITDA (x; 9M EBITDA annualised)"
    ]
   },
-  "classification_note": "Second-tier consumer-goods companies added to the SEVEN list for context; not in the benchmark."
+  "classification_note": "Second-tier consumer-goods companies added to the SEVEN list for context; not in the benchmark.",
+  "fy2021_balance_only": true
  }
 }

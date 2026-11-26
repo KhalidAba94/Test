@@ -29,6 +29,11 @@ def load(root: str) -> list[dict]:
     return out
 
 
+def raw(root: str) -> dict:
+    """The sector config blocks as written in config/sectors.json."""
+    return json.load(open(os.path.join(root, "config", "sectors.json"), encoding="utf-8"))
+
+
 def by_key(root: str) -> dict:
     return {s["key"]: s for s in load(root)}
 

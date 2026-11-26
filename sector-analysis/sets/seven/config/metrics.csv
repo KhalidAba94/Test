@@ -9,7 +9,7 @@ NI_ATTR,All,Net profit attributable to shareholders,P&L,SAR m,sum,"Net income at
 NI_UNDERLYING,All,Underlying net profit attributable,P&L,SAR m,sum,NI_ATTR less material one-offs identified in the Adjustments register (C).,NI_ATTR - one-offs
 CFO,Energy,Operating cash flow,Cash flow,SAR m,sum,Net cash from operating activities.,
 CAPEX,Energy,Capital expenditure,Cash flow,SAR m,sum,"Purchases of property, plant & equipment and intangibles (cash-flow statement).",
-FCF,Energy,Free cash flow,Cash flow,SAR m,sum,Operating cash flow less capex (C).,CFO - CAPEX
+FCF,Energy,Free cash flow,Cash flow,SAR m,sum,"Operating cash flow less capex (C). For owners of let property (malls), investment-property spend is also deducted.",CFO - CAPEX
 NET_DEBT,Energy,Net debt,Balance sheet,SAR m,sum,"Borrowings incl. lease liabilities less cash and short-term deposits, as reported or calculated (C).",
 GM,Energy,Gross margin,Ratio,%,ratio of totals,Gross profit / revenue.,GP / REV
 EBITDA_M,Energy,EBITDA margin (calculated),Ratio,%,ratio of totals,EBITDA (calculated) / revenue.,EBITDA_C / REV
@@ -80,3 +80,5 @@ FFO_M,REIT,FFO margin,Ratio,%,ratio of totals,Funds from operations ÷ revenue.,
 LTV,REIT,Loan to value (book),Ratio,%,ratio of totals,Borrowings ÷ total assets at period end (book values).,DEBT / TA
 PAYOUT,REIT,Distributions / FFO,Ratio,%,ratio of totals,Distributions declared ÷ funds from operations.,DIST / FFO
 GAIN_DISP,REIT,Gain on disposal of properties,P&L,SAR m,sum,Gain (loss) on sale of investment properties included in net income; excluded from revenue and deducted in FFO.,
+IP_CAPEX,Corporate,Investment-property spend,Cash flow,SAR m,sum,"Cash spent on investment properties (acquisitions, development and additions), from the investing cash flow. Shown separately from capex for owners of malls and other let property; free cash flow deducts it.",
+FV_IP,Corporate,Fair-value gains on investment properties,P&L,SAR m,sum,Unrealised fair-value gains (losses negative) on investment properties recognised in profit by companies using the fair-value model. Excluded from EBITDA because they are non-cash remeasurements; they stay in operating income and net profit.,
