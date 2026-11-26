@@ -139,6 +139,7 @@ def main(root, out, body_out=None):
         "as_of": guide.get("as_of", ""), "guide": guide,
         "sectors": compact(ds), "metrics": metrics, "sources": srcs, "extra": compact(extra), "calc_inputs": CALC_INPUTS,
         "trace": st, "narr": narr, "sector_narr": sector_narr,
+        "rollout": json.load(open(os.path.join(root, "config", "rollout.json"))) if os.path.exists(os.path.join(root, "config", "rollout.json")) else {},
         "adjustments": load_csv(os.path.join(root, "data", "adjustments.csv")),
         "coverage": load_csv(os.path.join(root, "data", "coverage.csv")),
         "policy_items": load_csv(os.path.join(root, "data", "policy", "items.csv")),

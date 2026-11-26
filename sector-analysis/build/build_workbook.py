@@ -39,6 +39,7 @@ NUM1 = '#,##0.0;(#,##0.0);"-"'
 PCT = '0.0%;(0.0%);"-"'
 PCT2 = '0.00%;(0.00%);"-"'   # ROA and margin on assets need two decimals
 BP = '0" bp";(0" bp");"0 bp"'   # cost of risk in basis points (value x 10,000), as on the HTML page
+XF = '0.0"x";(0.0"x");"-"'          # multiples (net debt / EBITDA)
 PP = '+0.0" pp";-0.0" pp";"0.0 pp"'
 
 NAMES = {}
@@ -161,6 +162,13 @@ def company_rows(sector):
                   ("Operating margin", "OPINC", "REV_M", False),
                   ("Net margin", "NI_ATTR", "REV_M", False), ("ROE (YTD annualised)", "NI_ATTR", "EQ_ATTR", True),
                   ("Capex / revenue", "CAPEX", "REV_M", False)]
+        if sector != "Energy":
+            # other corporate sectors: no Aramco-style other income related to sales; add the balance-sheet funding lines
+            rows = [x for x in rows if x[0] not in ("OIRS", "REV_M")]
+            i = rows.index(("TA", "Total assets (period-end)", "val"))
+            rows[i:i] = [("DEBT", "Borrowings (period-end)", "val"), ("LEASE_LIAB", "Lease liabilities (period-end)", "val"),
+                         ("CASH", "Cash and cash equivalents (period-end)", "val"), ("NET_DEBT", "Net debt (C; negative = net cash)", "val")]
+            ratios = ratios + [("Net debt / EBITDA (x; 9M EBITDA annualised)", "NET_DEBT", "EBITDA_C", "ann")]
     else:
         rows = [("TOI", "Total operating income (TOI)", "val"), ("TOI", "  growth YoY", "growth"),
                 ("NSCI", "Net special commission / financing income", "val"), ("FEES_NET", "Net fee & commission income", "val"),
@@ -186,9 +194,15 @@ def build_company(wb, sector, t, cfg, ds, narr, adj_rows, facts_idx, sheetname, 
     ws = wb.create_sheet(sheetname)
     cinfo = ds["companies"][t]
     top = cfg["top_line"]
-    title(ws, f'{cinfo["name"]} ({t}) · {sector} · {cinfo["sub_industry"]}',
-          f'Legal name in filings: {cinfo["legal_name"]} · Year-end 31 Dec · SAR million unless stated · '
-          f'2026 YTD = 9M (1 Jan–30 Sep 2026) vs 9M 2025, never compared with full years.')
+    fy_end = (facts_idx.get((t, "FY2025", top)) or {}).get("period_end", "") or "2025-12-31"
+    ytd_m = {p: int(float((facts_idx.get((t, p, top)) or {}).get("period_months") or 9)) for p in ("9M2025", "9M2026")}
+    MON = {"03": "31 Mar", "06": "30 Jun", "07": "31 Jul", "09": "30 Sep", "12": "31 Dec"}
+    fye_txt = MON.get(fy_end[5:7], fy_end[5:])
+    ytd_txt = ("2026 YTD = 9M (1 Jan–30 Sep 2026) vs 9M 2025" if ytd_m["9M2026"] == 9 else
+               f"2026 YTD column = the {ytd_m['9M2026']} months to 30 Sep 2026 (fiscal year ends {fye_txt}; FY columns = fiscal years shown under the calendar year holding most of their months); left out of sector 9M totals")
+    title(ws, f'{cinfo["name"]} ({t}) · {cfg.get("name", sector)} · {cinfo["sub_industry"]}',
+          f'Legal name in filings: {cinfo["legal_name"]} · Year-end {fye_txt} · SAR million unless stated · '
+          f'{ytd_txt}, never compared with full years.')
     c = ws["C3"]; c.value = f"◀ {sector} sector"; c.hyperlink = f"#'{sector_sheet}'!A1"; c.font = f(color="0563C1", underline="single", size=9)
     ws.column_dimensions["A"].width = 46
     for col in "BCDEFGIJK":
@@ -205,7 +219,7 @@ def build_company(wb, sector, t, cfg, ds, narr, adj_rows, facts_idx, sheetname, 
     rowmap = {}
     for code, label, kind in rows:
         has = any((t, p, code) in facts_idx for p in PCOL)
-        if not has and code in ("OIRS", "REV_M", "GP", "T1_COST", "T1_SUKUK"):
+        if not has and code in ("OIRS", "REV_M", "GP", "T1_COST", "T1_SUKUK", "DEBT", "LEASE_LIAB", "CASH", "NET_DEBT"):
             continue
         ws.cell(row=r, column=1, value=label).font = f(kind == "val" and not label.startswith("  "), size=9)
         if kind == "val":
@@ -273,7 +287,16 @@ def build_company(wb, sector, t, cfg, ds, narr, adj_rows, facts_idx, sheetname, 
         for p in ["FY2022", "FY2023", "FY2024", "FY2025", "9M2025", "9M2026"]:
             col = PCOL[p]
             n = numexpr(col)
-            ann = "*12/9" if p.startswith("9M") and avg else ""
+            ann = f"*12/{ytd_m[p]}" if p.startswith("9M") and avg is True else ""
+            if avg == "ann":
+                d = f"({col}{rowmap[den]}" + (f"*12/{ytd_m[p]})" if p.startswith("9M") else ")")
+                cond = f"AND(ISNUMBER({col}{rowmap[den]}),ISNUMBER({col}{rowmap[num]}))"
+                ws[f"{col}{r}"] = f'=IF({cond},IF({col}{rowmap[den]}>0,{n}/{d},"n.m."),"")'
+                ws[f"{col}{r}"].number_format = XF
+                ws[f"{col}{r}"].font = f(size=9)
+                if p.startswith("9M"):
+                    ws[f"{col}{r}"].fill = YTD_FILL
+                continue
             if avg:
                 oc = PCOL[OPENING[p]]
                 d = f"AVERAGE({col}{rowmap[den]},{oc}{rowmap[den]})"
@@ -428,7 +451,7 @@ def build_sector(wb, sector, cfg, ds, narr, comp_sheets):
     tickers = ds["tickers"]
     top, prof = cfg["top_line"], cfg["profit"]
     largest = ds["sector"]["largest_by_top_line_FY2025"]
-    title(ws, f"{sector} sector summary, FY2022–FY2025 and 9M 2026",
+    title(ws, f"{cfg.get('name', sector)} sector summary, FY2022–FY2025 and 9M 2026",
           f"SAR million. Sector ratios are calculated from summed numerators and denominators, never averaged. "
           f"Sector growth uses a matched sample (companies with data in both periods). 9M columns are partial-year and "
           f"compared only with 9M 2025. Constituents: {len(tickers)} companies. {cfg.get('classification_note', '')}")
@@ -441,7 +464,7 @@ def build_sector(wb, sector, cfg, ds, narr, comp_sheets):
     # calc block at the bottom: matrices for each needed metric
     needed = {top, prof}
     for rk, spec in cfg["ratios"].items():
-        for part in (spec[0], spec[1].replace("avg:", "")):
+        for part in (spec[0], spec[1].replace("avg:", "").replace("ann:", "")):
             for m in part.split("-"):
                 needed.add(m)
     needed |= {"EBITDA_C", "EBITDA_U", "OPINC", "CAPEX", "FCF", "REV_M"} if TPL.get(sector) == "corporate" else {"NSCI", "FEES_NET", "OPEX_PRE", "IMPAIR_TOTAL", "PPOP"}
@@ -458,6 +481,9 @@ def build_sector(wb, sector, cfg, ds, narr, comp_sheets):
             ws.cell(row=r, column=1, value=f'{ds["companies"][t]["name"]} ({t})').font = f(size=9)
             for p in periods:
                 c = ws[f"{pc[p]}{r}"]
+                if f"{t}|{p}" in ds["sector"].get("ytd_not_9m", {}):
+                    c.value = None   # YTD shorter than nine months: excluded from sector 9M totals
+                    continue
                 c.value = lookup(f"{t}-{p}-{m}")
                 c.number_format = NUM
                 c.font = f(color=GREEN, size=9)
@@ -531,8 +557,9 @@ def build_sector(wb, sector, cfg, ds, narr, comp_sheets):
             ws.cell(row=r, column=1, value=spec[2]).font = f(size=9)
             for p, col in cols.items():
                 nparts = spec[0].split("-")
-                dm = spec[1].replace("avg:", "")
+                dm = spec[1].replace("avg:", "").replace("ann:", "")
                 avg = spec[1].startswith("avg:")
+                annd = spec[1].startswith("ann:")
                 masks = [f"--ISNUMBER({rng(nparts[0], p)})", f"--ISNUMBER({rng(dm, p)})"]
                 if avg:
                     masks.append(f"--ISNUMBER({rng(dm, OPENING[p])})")
@@ -546,6 +573,8 @@ def build_sector(wb, sector, cfg, ds, narr, comp_sheets):
                 if avg:
                     den = f"(SUMPRODUCT({mk},{rng(dm, p)})+SUMPRODUCT({mk},{rng(dm, OPENING[p])}))/2"
                     ann = "*12/9" if p.startswith("9M") else ""
+                elif annd:
+                    den, ann = f"SUMPRODUCT({mk},{rng(dm, p)})" + ("*12/9" if p.startswith("9M") else ""), ""
                 else:
                     den, ann = f"SUMPRODUCT({mk},{rng(dm, p)})", ""
                 if rk == "COR":
@@ -553,7 +582,7 @@ def build_sector(wb, sector, cfg, ds, narr, comp_sheets):
                     ws[f"{col}{r}"].number_format = BP
                 else:
                     ws[f"{col}{r}"] = f'=IFERROR(({num}){ann}/({den}),"")'
-                    ws[f"{col}{r}"].number_format = PCT2 if rk in ("ROA", "NSCI_YLD") else PCT
+                    ws[f"{col}{r}"].number_format = XF if rk == "ND_EBITDA" else (PCT2 if rk in ("ROA", "NSCI_YLD") else PCT)
                 rinfo = ds["sector"]["ratios_all" if not excl else "ratios_ex_largest"][rk][p]
                 if rinfo["excluded"]:
                     ws[f"{col}{r}"].comment = Comment(f'{rinfo["n"]} companies; excluded for missing inputs: ' + ", ".join(ds["companies"][x]["name"] for x in rinfo["excluded"] if x in ds["companies"]), "analysis")

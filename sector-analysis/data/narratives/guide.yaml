@@ -1,10 +1,11 @@
 as_of: "25 November 2026 (filings to 30 September 2026; FY2027 budget approved 24 November 2026)"
 intro: >-
-  Financial analysis of the Saudi-listed Energy (6 companies) and Banks (10 banks) sectors for FY2022–FY2025 and the first
-  nine months of 2026. It is built from the 'Tadawul Financials' archive of Saudi Exchange filings: audited annual and
-  reviewed interim financial statements as PDFs, plus the exchange's XBRL renderings. Every figure is traced to its archive
-  file and XBRL row; the PDF page is shown where text search could locate it (about three in four disclosed figures) and a
-  saudiexchange.sa link where the archive's manifest provides one (about half). This is the pilot for a template that will then be applied to the other sectors.
+  Financial analysis of Saudi Main Market companies by sector for FY2022–FY2025 and the first nine months of 2026, built
+  sector by sector from the 'Tadawul Financials' archive of Saudi Exchange filings: audited annual and reviewed interim
+  financial statements as PDFs, plus the exchange's XBRL renderings. Energy and Banks were the pilots and are fully
+  reviewed; further sectors are added in waves under the same method. Every figure is traced to its archive file and
+  XBRL row and, where the full trace has been run, to the PDF page where it is printed. A saudiexchange.sa link is given
+  where the archive's manifest provides one.
 sections:
   - heading: "Start here: the five rules behind every number"
     lines:

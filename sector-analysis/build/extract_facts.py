@@ -30,7 +30,13 @@ def d(s):
         return None
 
 
-def period_label(start, end, is_balance):
+def fiscal_year(e, fye_month):
+    """Calendar-year label of a fiscal year ending on date e: the year holding most of its months
+    (a June year-end goes by its end year, as the archive labels it). December year-ends -> e.year."""
+    return e.year if fye_month >= 6 else e.year - 1
+
+
+def period_label(start, end, is_balance, fye_month=12):
     e = d(end)
     if e is None:
         return None, None
@@ -42,6 +48,14 @@ def period_label(start, end, is_balance):
     months = (e.year - s.year) * 12 + (e.month - s.month) + 1
     if months == 12 and e.month == 12 and e.day == 31:
         return f"FY{e.year}", 12
+    if fye_month != 12:
+        # non-December fiscal years (file names carry FYEdd-mm): the fiscal year -> FY<calendar year with most
+        # of its months>; the year-to-date to 30 Sep -> the 9M slot, with its true length in period_months
+        fy_start_month = fye_month % 12 + 1
+        if months == 12 and e.month == fye_month:
+            return f"FY{fiscal_year(e, fye_month)}", 12
+        if s.month == fy_start_month and s.day == 1 and e.month == 9 and e.day == 30 and months < 12:
+            return f"9M{e.year}", months
     if s.month == 1 and s.day == 1:
         return {3: f"Q1{e.year}", 6: f"H1{e.year}", 9: f"9M{e.year}"}.get(months, f"{months}M{e.year}"), months
     if months == 3:
@@ -84,6 +98,8 @@ def main(long_csv, meta_csv, mapping_json, out_csv):
         m = meta.get((comp, f), {})
         scale = SCALE.get(m.get("rounding", ""), None)
         ticker = comp.split("_", 1)[0]
+        fm = re.search(r"FYE\d{2}-(\d{2})", f)
+        fye_month = int(fm.group(1)) if fm else 12
         filed = re.search(r"filed(\d{4}-\d{2}-\d{2})", f)
         filed = filed.group(1) if filed else ""
         for metric, spec in mapping.items():
@@ -92,7 +108,7 @@ def main(long_csv, meta_csv, mapping_json, out_csv):
                 for col in cols:
                     st, en = ctx.get((comp, f, sec, col), ("", ""))
                     is_bal = sec in balance_sections
-                    plabel, months = period_label(st, en, is_bal)
+                    plabel, months = period_label(st, en, is_bal, fye_month)
                     if plabel is None:
                         continue
                     found, labels_used, rows_used = [], [], []
@@ -115,7 +131,7 @@ def main(long_csv, meta_csv, mapping_json, out_csv):
                         "value_sar_m": (val * scale) if scale is not None else "",
                         "file": f, "filed": filed, "column_role": role, "section_code": sec,
                         "labels": " + ".join(labels_used), "xls_rows": ",".join(str(int(x) + 1) for x in rows_used),
-                        "status": m.get("status", ""), "entity_name": m.get("entity_name", ""),
+                        "status": m.get("status", ""), "entity_name": m.get("entity_name", ""), "fye_month": fye_month,
                     })
                 if out and out[-1]["file"] == f and out[-1]["metric_code"] == metric and out[-1]["company_dir"] == comp:
                     break  # metric found in an earlier-listed section; don't double count

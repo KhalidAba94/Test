@@ -185,16 +185,15 @@ summary{cursor:pointer;font:600 14px var(--f-head);color:var(--accent);min-heigh
 
 <a class="skip" href="#main" data-jump="main">Skip to content</a>
 <div class="top"><div class="top-in">
-  <a class="brand" href="#overview">Saudi Sector Financials<small>Pilot: Energy &amp; Banks · FY2022–FY2025 · 9M 2026</small></a>
+  <a class="brand" href="#overview">Saudi Sector Financials<small id="brandsub">FY2022–FY2025 · 9M 2026</small></a>
   <nav class="main" aria-label="Main">
     <a href="#overview" data-v="overview">Overview</a>
-    <a href="#energy" data-v="energy">Energy</a>
-    <a href="#banks" data-v="banks">Banks</a>
+    <a href="#sectors" data-v="sectors">Sectors</a>
     <a href="#budget" data-v="budget">Budget &amp; policy</a>
     <a href="#method" data-v="method">How to read</a>
     <a href="#data" data-v="data">Sources &amp; review</a>
   </nav>
-  <div class="jump"><select id="jumpco" aria-label="Go to a company"></select></div>
+  <div class="jump"><select id="jumpco" aria-label="Go to a sector or company"></select></div>
 </div></div>
 <main id="main" tabindex="-1"></main>
 <aside class="drawer" id="drawer" role="dialog" aria-modal="true" aria-labelledby="dtitle" aria-hidden="true" inert><button class="close" id="dclose">Close</button><div id="dbody"></div></aside>
@@ -212,7 +211,12 @@ function boot(D){
 const $ = s => document.querySelector(s);
 const esc = s => String(s==null?'':s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const MINUS='−';
-const SECT = {energy:'Energy', banks:'Banks'};
+// sectors come from the data: key (e.g. 'Energy'), slug used in links (#energy), display name and template
+const SKEYS = Object.keys(D.sectors);
+const slugOf = S => D.sectors[S].config.slug || S.toLowerCase();
+const nameOf = S => D.sectors[S].config.name || S;
+const tplOf = S => D.sectors[S].config.template || (S==='Banks'?'bank':'corporate');
+const SECT = Object.fromEntries(SKEYS.map(S=>[slugOf(S),S]));
 const FY = ['FY2022','FY2023','FY2024','FY2025'], YTD=['9M2025','9M2026'], ALLP=[...FY,...YTD];
 const PAIRS = ['FY2023/FY2022','FY2024/FY2023','FY2025/FY2024','9M2026/9M2025'];
 const PL = {FY2021:'FY2021',FY2022:'FY2022',FY2023:'FY2023',FY2024:'FY2024',FY2025:'FY2025','9M2025':'9M 2025','9M2026':'9M 2026'};
@@ -229,12 +233,13 @@ const fp = x => fpd(x,1);
 const fg = x => { if(!isNum(x)) return NMV(x); const r=+(x*100).toFixed(1); return (r===0?'':sgn(r,true))+Math.abs(r).toFixed(1)+'%'; };
 const fpp = x => { if(!isNum(x)) return '–'; const v=x*100; const d=Math.abs(v)<0.995&&v!==0?2:1; const r=+v.toFixed(d); if(r===0) return (v===0?'0.0':'<0.01')+' pp'; return sgn(r,true)+Math.abs(r).toFixed(d)+' pp'; };
 const fbp = x => { if(!isNum(x)) return NMV(x); const r=Math.round(x*10000); return (r<0?MINUS:'')+Math.abs(r)+' bp'; };
-const RFMT = {COR:fbp, ROA:x=>fpd(x,2), NSCI_YLD:x=>fpd(x,2)};
+const fx1 = x => { if(!isNum(x)) return NMV(x); const r=+x.toFixed(1); return (r<0?MINUS:'')+Math.abs(r).toFixed(1)+'x'; };
+const RFMT = {COR:fbp, ROA:x=>fpd(x,2), NSCI_YLD:x=>fpd(x,2), ND_EBITDA:fx1};
 const fr = k => RFMT[k] || fp;
-const coInfo = t => { for (const S of ['Energy','Banks']) if (D.sectors[S].companies[t]) return {S, c:D.sectors[S].companies[t], cfg:D.sectors[S].config.constituents[t]||{}}; return null; };
+const coInfo = t => { for (const S of SKEYS) if (D.sectors[S].companies[t]) return {S, c:D.sectors[S].companies[t], cfg:D.sectors[S].config.constituents[t]||{}}; return null; };
 const coName = t => { const i=coInfo(t); return i?i.c.name:t; };
 const coShort = t => { const i=coInfo(t); return i?(i.cfg.short||i.c.name):t; };
-const coSector = t => D.sectors.Energy.companies[t] ? 'Energy' : 'Banks';
+const coSector = t => (coInfo(t)||{}).S;
 const mname = m => (D.metrics[m]&&D.metrics[m].name) || m;
 const PLAIN = {REV:'revenue',OIRS:'other income related to sales',REV_M:'margin base',GP:'gross profit',OPINC:'operating income',EBITDA_C:'EBITDA',EBITDA_U:'EBITDA excl. one-offs',NI_ATTR:'net profit',NI:'net profit incl. minorities',CFO:'operating cash flow',CAPEX:'capex',FCF:'free cash flow',TA:'total assets',EQ_ATTR:'equity',EQ_ORD:'ordinary equity',TE:'total equity',TOI:'operating income',NSCI:'net financing income',FEES_NET:'net fees',OTHER_OI:'other income',OPEX_PRE:'operating costs',PPOP:'pre-provision profit',IMPAIR_TOTAL:'impairments',IMPAIR_FIN:'credit-loss line',ECL_LOANS:'ECL on loans',LOANS:'net financing',DEPOSITS:'customer deposits',T1_SUKUK:'Tier 1 sukuk',T1_COST:'Tier 1 distributions',PBT:'pre-tax profit',SCE:'commission expense',SCI_GROSS:'gross commission income',ZAKAT_TAX:'zakat and tax',SHARE_JV:'share of JVs',DA_CF:'depreciation & amortisation',IMPAIR_CF:'impairment add-back',FIN_COST:'finance costs',FIN_INC:'finance income'};
 const plain = m => PLAIN[m] || mname(m).toLowerCase();
@@ -258,7 +263,7 @@ function figBtn(t, p, m, v, label, fmt){
 }
 function sumFig(S, scope, m, p, v, label){
   const id = 'f'+(figN++); FIGS[id] = {S, scope, m, p, label, sum:true};
-  return `<button class="fig" data-fig="${id}" aria-label="${esc(label||mname(m))}, ${S} sector, ${PL[p]}: SAR ${esc(fm(v))} m. Show companies">${fm(v)}</button>`;
+  return `<button class="fig" data-fig="${id}" aria-label="${esc(label||mname(m))}, ${esc(nameOf(S))} sector, ${PL[p]}: SAR ${esc(fm(v))} m. Show companies">${fm(v)}</button>`;
 }
 function supN(blk, S){ // superscript company count where a total or ratio leaves companies out
   const miss = blk.missing || blk.excluded || []; if (!miss.length) return '';
@@ -463,8 +468,8 @@ const emptyCells = (extra) => `${FY.map(p=>`<td class="${fyc(p)}"></td>`).join('
 const CHIP_LEGEND = `<p class="note">Select an underlined figure for its source file and page. Chips: <span class="chip R">R</span> restated comparative used · <span class="chip C">C</span> calculated (formula in the drawer) · <span class="chip O">PDF</span> taken from the PDF because the XBRL file was missing or mis-tagged. A small number after a figure (e.g. <sup>5</sup>) means only that many companies had the inputs; hover over it or tap it to see which were left out. <abbr title="${NM_TITLE}">n.m.</abbr> = not meaningful.</p>`;
 // ---------------------------------------------------------------- sector view
 function sectorRows(S, sc, blk){
-  const L=sc.sector.largest_by_top_line_FY2025, rows = S==='Energy'
-  ? [['REV','Revenue'],['REV_M','Revenue incl. other income related to sales (margin base)'],['GP','Gross profit'],['OPINC','Operating income'],['EBITDA_C','EBITDA (calculated)'],['EBITDA_U','EBITDA excl. identified one-offs'],['NI_ATTR','Net profit attributable'],['CFO','Operating cash flow'],['CAPEX','Capex'],['FCF','Free cash flow'],['TA','Total assets (period-end)'],['EQ_ATTR','Equity attributable (period-end)']]
+  const L=sc.sector.largest_by_top_line_FY2025, rows = tplOf(S)==='corporate'
+  ? [['REV','Revenue'],['REV_M','Revenue incl. other income related to sales (margin base)'],['GP','Gross profit'],['OPINC','Operating income'],['EBITDA_C','EBITDA (calculated)'],['EBITDA_U','EBITDA excl. identified one-offs'],['NI_ATTR','Net profit attributable'],['CFO','Operating cash flow'],['CAPEX','Capex'],['FCF','Free cash flow'],['DEBT','Borrowings (period-end)'],['LEASE_LIAB','Lease liabilities (period-end)'],['CASH','Cash (period-end)'],['NET_DEBT','Net debt (period-end; negative = net cash)'],['TA','Total assets (period-end)'],['EQ_ATTR','Equity attributable (period-end)']]
   : [['TOI','Total operating income'],['NSCI','Net special commission (financing) income'],['FEES_NET','Net fees & commissions'],['OTHER_OI','Other operating income'],['OPEX_PRE','Operating expenses (pre-impairment)'],['PPOP','Pre-provision profit'],['IMPAIR_TOTAL','Impairment charges'],['NI_ATTR','Net profit attributable'],['TA','Total assets (period-end)'],['LOANS','Net financing (period-end)'],['DEPOSITS','Customer deposits (period-end)'],['EQ_ATTR','Equity attributable incl. Tier 1 (period-end)']];
   return rows.filter(([m])=>blk[m]).filter(([m])=> m!=='REV_M' || ALLP.some(p=>Math.abs((blk.REV_M.totals[p].v||0)-(blk.REV.totals[p].v||0))>0.5))
     .map(([m,lab])=>{ const miss=blk[m].totals.FY2025.missing; return [m, lab + (m==='GP'&&miss.includes(L)?` (${coShort(L)} does not report it)`:'')]; });
@@ -480,7 +485,7 @@ function sectorTable(S, scope){
   Object.keys(rk).forEach(k=>{ const rc=p=>`${fr(k)(rat[k][p].v)}${supN(rat[k][p])}`; h+=`<tr><td>${esc(rk[k][2])}</td>${FY.map(p=>`<td class="${fyc(p)}">${rc(p)}</td>`).join('')}<td class="fy fb"></td><td class="gap"></td>${YTD.map(p=>`<td class="ytd">${rc(p)}</td>`).join('')}<td class="ytd"></td><td class="xc">${rat[k].FY2025.n}</td></tr>`; });
   return `<div class="scroller"><table class="ptable">${h}</tbody></table></div>`;
 }
-let scopeState = {Energy:'all', Banks:'all'}, pairState = {Energy:'FY2025/FY2024', Banks:'FY2025/FY2024'};
+let scopeState = Object.fromEntries(SKEYS.map(S=>[S,'all'])), pairState = Object.fromEntries(SKEYS.map(S=>[S,'FY2025/FY2024']));
 function viewSector(key, scope){
   const S=SECT[key], sc=D.sectors[S], cfg=sc.config, top=cfg.top_line, sec=sc.sector, N=D.sector_narr[S]||{};
   const L=sec.largest_by_top_line_FY2025, Ln=coName(L); scopeState[S]=scope; const blk=sec[scope]; const isAll=scope==='all';
@@ -490,7 +495,7 @@ function viewSector(key, scope){
   const niAll=sec.all.NI_ATTR.totals.FY2025.v, niL=(sc.companies[L].series.NI_ATTR||{}).FY2025; const others=isNum(niAll)&&niL?niAll-niL.v:null;
   const pm=sec.profit_makers_total.FY2025;
   const tk=N.takeaways||{}; const TKL={improved:'Improved',weakened:'Weakened',why:'Why',concentration:'Concentration',ytd_2026:'2026 so far (9M)',uncertain:'Uncertain'};
-  let h=`<div class="crumbs"><a href="#overview">Overview</a> › <span>${S}</span></div><h1>${S} sector</h1>
+  let h=`<div class="crumbs"><a href="#overview">Overview</a> › <a href="#sectors">Sectors</a> › <span>${esc(nameOf(S))}</span></div><h1>${esc(nameOf(S))}${/sector|services|utilities|banks/i.test(nameOf(S))?'':' sector'}</h1>
   <p class="lede">${esc(N.headline||'')}</p>
   <p class="note">Figures behind this summary: ${[[top,'FY2022',cfg.top_line_name+' FY2022'],[top,'FY2025',cfg.top_line_name+' FY2025'],['NI_ATTR','FY2022','Net profit FY2022'],['NI_ATTR','FY2025','Net profit FY2025'],[top,'9M2026',cfg.top_line_name+' 9M 2026'],['NI_ATTR','9M2026','Net profit 9M 2026']].map(([m,p,l])=>`<span class="refs"><button data-fig="${(()=>{const id='f'+(figN++); FIGS[id]={S,scope:'all',m,p,label:l,sum:true}; return id;})()}" class="k-fact">${esc(l)}: SAR ${fm(sec.all[m].totals[p].v)} m</button></span>`).join(' ')}</p>
   <nav class="toc" aria-label="On this page"><a href="#s-take" data-jump="s-take">Takeaways</a><a href="#s-tot" data-jump="s-tot">Sector totals</a><a href="#s-trend" data-jump="s-trend">Trends</a><a href="#s-contrib" data-jump="s-contrib">Company contributions</a><a href="#s-changes" data-jump="s-changes">What changed and why</a><a href="#s-notes" data-jump="s-notes">Data notes</a></nav>
@@ -513,7 +518,7 @@ function viewSector(key, scope){
   h+=`<h2 id="s-trend">Trends</h2><div class="grid2">
    <div class="card"><h3>${esc(cfg.top_line_name)} (${esc(scopeLab)})</h3>${cols({cats,unit:secU,vals:ALLP.map(p=>blk[top].totals[p].v),ytdFrom:4,figs:figsFor(top),title:cfg.top_line_name})}</div>
    <div class="card"><h3>Net profit attributable (${esc(scopeLab)})</h3>${cols({cats,unit:secU,vals:ALLP.map(p=>blk.NI_ATTR.totals[p].v),ytdFrom:4,figs:figsFor('NI_ATTR'),title:'Net profit attributable'})}</div>`;
-  const rkeys = S==='Banks'?['CI','ROE','COR']:['EBITDA_M','NET_M','ROE'];
+  const rkeys = tplOf(S)==='bank'?['CI','ROE','COR']:['EBITDA_M','NET_M','ROE'];
   rkeys.forEach(k=>{ h+=`<div class="card"><h3>${esc(cfg.ratios[k][2])}</h3>${lines({key:k,cats,series:[{name:'All companies',color:'var(--series-1)',vals:ALLP.map(p=>sec.ratios_all[k][p].v)},{name:'Excl. '+coShort(L),color:'var(--series-2)',dash:true,vals:ALLP.map(p=>sec.ratios_ex_largest[k][p].v)}],title:cfg.ratios[k][2]})}<p class="note">9M points are annualised where the ratio divides by a balance-sheet amount.</p></div>`; });
   h+=`</div>`;
   const pair=pairState[S];
@@ -521,7 +526,7 @@ function viewSector(key, scope){
   <p class="note">Contribution = the company's change ÷ the prior-period total of the companies in the sample, in percentage points (pp). The contributions add up to the sector growth shown in each heading.</p><div class="grid2">`;
   [top,'NI_ATTR'].forEach(m=>{ const g=blk[m].growth[pair]; const tks=sc.tickers.filter(t=>isAll||t!==L); const ts=tks.slice().sort((a,b)=>(g.contrib[b]??-1e9)-(g.contrib[a]??-1e9));
     h+=`<div class="card"><h3>${m==='NI_ATTR'?'Net profit':esc(cfg.top_line_name)}: ${PAIRL[pair]} growth ${fg(g.growth)}</h3>${isNum(g.growth)?cbars(ts.map(t=>({t,name:coName(t),v:g.contrib[t]})),fpp):`<p class="note">Growth is not meaningful for this comparison (${nmReason(g.cur,g.prior)}), so contributions are not shown.</p>`}${g.excluded.length?`<p class="note">Not in the matched sample: ${g.excluded.map(coName).join(', ')}</p>`:''}</div>`; });
-  const r1k = S==='Banks'?'CI':'EBITDA_M';
+  const r1k = tplOf(S)==='bank'?'CI':'EBITDA_M';
   h+=`</div><h3>Company table (all companies)</h3><div class="scroller"><table class="stack"><thead><tr><th>Company</th><th>${esc(cfg.top_line_name)} FY2025</th><th>Share FY2025</th><th>CAGR 22–25</th><th>Profit FY2025</th><th>Profit share</th><th class="ytd">${esc(cfg.top_line_name)} 9M change</th><th class="ytd">Profit 9M change</th><th>${S==='Banks'?'Cost-to-income':'EBITDA margin'} FY2025</th><th>ROE FY2025</th></tr></thead><tbody>`;
   sc.tickers.forEach(t=>{ const c=sc.companies[t], s=c.series;
     h+=`<tr><td data-l="Company"><a href="#co-${t}">${esc(c.name)}</a> <span class="src">${t}</span></td><td data-l="${esc(cfg.top_line_name)} FY2025, SAR m">${figBtn(t,'FY2025',top,(s[top]||{}).FY2025&&s[top].FY2025.v,cfg.top_line_name)}</td><td data-l="Share FY2025">${fp(sec.shares[top].FY2025[t])}</td><td data-l="CAGR 22–25">${fg(c.growth[top].CAGR_2022_2025)}</td><td data-l="Profit FY2025, SAR m">${figBtn(t,'FY2025','NI_ATTR',(s.NI_ATTR||{}).FY2025&&s.NI_ATTR.FY2025.v,'Net profit attributable')}</td><td data-l="Profit share">${fp(sec.shares.NI_ATTR.FY2025[t])}</td><td class="ytd" data-l="${esc(cfg.top_line_name)} 9M change">${fg(c.growth[top]['9M2026/9M2025'])}</td><td class="ytd" data-l="Profit 9M change">${fg(c.growth.NI_ATTR['9M2026/9M2025'])}</td><td data-l="${S==='Banks'?'Cost-to-income':'EBITDA margin'} FY2025">${fp(c.ratios[r1k].FY2025)}</td><td data-l="ROE FY2025">${fp(c.ratios.ROE.FY2025)}</td></tr>`; });
@@ -534,8 +539,8 @@ function viewSector(key, scope){
 }
 // ---------------------------------------------------------------- company view
 function companyRows(S, c){
-  const s=c.series; const rows = S==='Energy'
-   ? [['REV','Revenue'],['OIRS','Other income related to sales'],['REV_M','Revenue incl. other income related to sales (margin base)'],['GP','Gross profit'],['OPINC','Operating income'],['EBITDA_C','EBITDA (calculated)'],['EBITDA_U','EBITDA excl. identified one-offs'],['NI_ATTR','Net profit attributable'],['CFO','Operating cash flow'],['CAPEX','Capex'],['FCF','Free cash flow'],['TA','Total assets (period-end)'],['EQ_ATTR','Equity attributable (period-end)']]
+  const s=c.series; const rows = tplOf(S)==='corporate'
+   ? [['REV','Revenue'],['OIRS','Other income related to sales'],['REV_M','Revenue incl. other income related to sales (margin base)'],['GP','Gross profit'],['OPINC','Operating income'],['EBITDA_C','EBITDA (calculated)'],['EBITDA_U','EBITDA excl. identified one-offs'],['NI_ATTR','Net profit attributable'],['CFO','Operating cash flow'],['CAPEX','Capex'],['FCF','Free cash flow'],['DEBT','Borrowings (period-end)'],['LEASE_LIAB','Lease liabilities (period-end)'],['CASH','Cash (period-end)'],['NET_DEBT','Net debt (period-end; negative = net cash)'],['TA','Total assets (period-end)'],['EQ_ATTR','Equity attributable (period-end)']]
    : [['TOI','Total operating income'],['NSCI','Net special commission (financing) income'],['FEES_NET','Net fees & commissions'],['OTHER_OI','Other operating income'],['OPEX_PRE','Operating expenses (pre-impairment)'],['PPOP','Pre-provision profit'],['IMPAIR_TOTAL','Impairment charges'],['IMPAIR_FIN','Credit-loss line on the income statement'],['ECL_LOANS','ECL on loans and financing (note basis)'],['NI_ATTR','Net profit attributable'],['TA','Total assets (period-end)'],['LOANS','Net financing (period-end)'],['DEPOSITS','Customer deposits (period-end)'],['EQ_ATTR','Equity attributable incl. Tier 1 (period-end)'],['T1_SUKUK','Tier 1 sukuk (period-end)'],['T1_COST','Tier 1 sukuk distributions']];
   const same = s.REV && s.REV_M && ALLP.every(p=>!s.REV_M[p] || !s.REV[p] || Math.abs(s.REV_M[p].v-s.REV[p].v)<0.5);
   return rows.filter(([m])=>s[m]).filter(([m])=>!(same && (m==='REV_M'||m==='OIRS')));
@@ -566,10 +571,10 @@ function viewCompany(t){
   const S=coSector(t), sc=D.sectors[S], c=sc.companies[t], N=D.narr[t]||{}, cfg=sc.config, top=cfg.top_line;
   const s=c.series; const v=(m,p)=>(s[m]||{})[p]&&s[m][p].v;
   const g9=(m)=>{ const x=c.growth[m]['9M2026/9M2025']; return isNum(x)?`${fg(x)} vs 9M 2025`:`change n.m. (${nmReason(v(m,'9M2026'),v(m,'9M2025'))})`; };
-  let h=`<div class="crumbs"><a href="#overview">Overview</a> › <a href="#${S.toLowerCase()}">${S}</a> › <span>${esc(c.name)}</span></div>
+  let h=`<div class="crumbs"><a href="#overview">Overview</a> › <a href="#sectors">Sectors</a> › <a href="#${slugOf(S)}">${esc(nameOf(S))}</a> › <span>${esc(c.name)}</span></div>
   <h1>${esc(c.name)} <span class="src" style="font-size:16px">${t}</span></h1>
   <p class="lede">${esc((sc.config.constituents[t]||{}).sub_industry||c.sub_industry)} · Legal name in filings: ${esc(c.legal_name)} · Year-end 31 Dec · SAR m. ${esc(N.headline||'')}</p>
-  <nav class="toc" aria-label="On this page"><a href="#c-wim" data-jump="c-wim">What it means</a><a href="#c-fig" data-jump="c-fig">Figures</a><a href="#c-lfl" data-jump="c-lfl">Reported vs like-for-like</a><a href="#c-pm" data-jump="c-pm">Profit and margin</a><a href="#c-dev" data-jump="c-dev">Developments</a>${(N.data_notes||[]).length?'<a href="#c-notes" data-jump="c-notes">Data notes</a>':''}${(D.policy_impacts||[]).some(x=>x.ticker===t)?'<a href="#c-pol" data-jump="c-pol">Budget exposure</a>':''}<a href="#${S.toLowerCase()}">Back to ${S}</a></nav>
+  <nav class="toc" aria-label="On this page"><a href="#c-wim" data-jump="c-wim">What it means</a><a href="#c-fig" data-jump="c-fig">Figures</a><a href="#c-lfl" data-jump="c-lfl">Reported vs like-for-like</a><a href="#c-pm" data-jump="c-pm">Profit and margin</a><a href="#c-dev" data-jump="c-dev">Developments</a>${(N.data_notes||[]).length?'<a href="#c-notes" data-jump="c-notes">Data notes</a>':''}${(D.policy_impacts||[]).some(x=>x.ticker===t)?'<a href="#c-pol" data-jump="c-pol">Budget exposure</a>':''}<a href="#${slugOf(S)}">Back to ${esc(nameOf(S))}</a></nav>
   <div class="tiles">
    <div class="tile"><div class="k">${esc(cfg.top_line_name)} FY2025</div><div class="v">${v(top,'FY2025')!=null?figBtn(t,'FY2025',top,v(top,'FY2025'),cfg.top_line_name):'–'}</div><div class="s">SAR m · vs FY2024 ${fg(c.growth[top]['FY2025/FY2024'])} · CAGR 22–25 ${fg(c.growth[top].CAGR_2022_2025)}</div></div>
    <div class="tile"><div class="k">Net profit FY2025</div><div class="v">${v('NI_ATTR','FY2025')!=null?figBtn(t,'FY2025','NI_ATTR',v('NI_ATTR','FY2025'),'Net profit attributable'):'–'}</div><div class="s">SAR m · vs FY2024 ${fg(c.growth.NI_ATTR['FY2025/FY2024'])} · CAGR 22–25 ${fg(c.growth.NI_ATTR.CAGR_2022_2025)}</div></div>
@@ -597,7 +602,7 @@ function viewCompany(t){
    <tr><td>Reported growth</td><td>${fg(b.rep)}</td></tr>
    ${STEPS.filter(([k])=>k!=='new_capacity').map(([k,n])=>`<tr><td>Effect of ${n.replace(/^([A-Z])([a-z])/,(m,x,y)=>x.toLowerCase()+y)}</td><td>${b.nd[k]?'not determinable':(b.basis[k].length?fpp(b.val[k]):'none identified')}</td></tr>`).join('')}
    <tr><td><b>Organic growth</b> = reported − effects above</td><td><b>${b.preND?'not determinable':fg(b.org)}</b></td></tr>
-   <tr><td>Effect of new capacity</td><td>${S==='Banks'?'not applicable (banks: like-for-like = organic)':b.nd.new_capacity?'not determinable':(b.basis.new_capacity.length?fpp(b.val.new_capacity):'none identified')}</td></tr>
+   <tr><td>Effect of new capacity</td><td>${tplOf(S)==='bank'?'not applicable (banks: like-for-like = organic)':b.nd.new_capacity?'not determinable':(b.basis.new_capacity.length?fpp(b.val.new_capacity):'none identified')}</td></tr>
    <tr><td><b>Like-for-like growth</b> = organic − new capacity</td><td><b>${b.lfl==null?'not determinable':fg(b.lfl)}</b></td></tr></tbody></table></div>
    ${b.adj.length?`<details><summary>Adjustment basis (${b.adj.length})</summary><ul class="clean">${b.adj.map(a=>`<li><b>${esc(a.bridge_step.replace('_',' / '))}</b>: ${esc(a.method)} <span class="conf ${esc((a.confidence||'').split(' ')[0])}">${esc(a.confidence)}</span> <span class="src">${esc(a.basis)} · ${esc(a.source)}${a.page?' p.'+esc(a.page):''}</span></li>`).join('')}</ul></details>`:''}</div></div>`;
   const lb=N.lfl_basis||{};
@@ -612,7 +617,7 @@ function viewCompany(t){
   if((N.data_notes||[]).length) h+=`<h2 id="c-notes">Data quality notes</h2><ul class="clean">${N.data_notes.map(x=>`<li>${esc(x)}</li>`).join('')}</ul>`;
   const pol=(D.policy_impacts||[]).filter(x=>x.ticker===t);
   if (pol.length) h+=`<h2 id="c-pol">Budget and policy exposure</h2><p class="note">Forward-looking interpretation, kept separate from the historical figures above. <a href="#budget">Full budget and policy section</a></p>${impactTable(pol)}`;
-  h+=`<p style="margin-top:28px"><a href="#${S.toLowerCase()}">◀ Back to ${S} sector</a> · <a href="#overview">Overview</a></p>`;
+  h+=`<p style="margin-top:28px"><a href="#${slugOf(S)}">◀ Back to ${esc(nameOf(S))} sector</a> · <a href="#overview">Overview</a></p>`;
   return {html:h, title:c.name};
 }
 function dirClass(d){ const s=(d||'').toLowerCase(); const p=/positive|benefit|support/.test(s), n=/negative|hurt|pressure/.test(s);
@@ -626,11 +631,11 @@ function viewBudget(){
   let h=`<div class="crumbs"><a href="#overview">Overview</a> › <span>Budget &amp; policy</span></div><h1>Budget and policy implications</h1>
   <p class="lede">${esc(P.intro||'Forward-looking assessment, kept separate from the historical results and like-for-like calculations.')}</p>
   ${P.headline?`<div class="callout">${esc(P.headline)}</div>`:''}
-  <nav class="toc" aria-label="On this page"><a href="#b-docs" data-jump="b-docs">Documents</a>${secs.map((s,i)=>`<a href="#b-s${i}" data-jump="b-s${i}">${esc(s.heading.replace(/^(\d+)\.\s*/,'$1. ').split('(')[0].trim())}</a>`).join('')}${['Energy','Banks','All'].filter(has).map(S=>`<a href="#b-i-${S}" data-jump="b-i-${S}">${S==='All'?'Cross-sector':S} impacts</a>`).join('')}<a href="#b-facts" data-jump="b-facts">Fact base</a></nav>
+  <nav class="toc" aria-label="On this page"><a href="#b-docs" data-jump="b-docs">Documents</a>${secs.map((s,i)=>`<a href="#b-s${i}" data-jump="b-s${i}">${esc(s.heading.replace(/^(\d+)\.\s*/,'$1. ').split('(')[0].trim())}</a>`).join('')}${[...SKEYS,'All'].filter(has).map(S=>`<a href="#b-i-${S}" data-jump="b-i-${S}">${S==='All'?'Cross-sector':S} impacts</a>`).join('')}<a href="#b-facts" data-jump="b-facts">Fact base</a></nav>
   <p class="note">Reference chips show the status of each source: <span class="refs"><button class="k-conf" tabindex="-1">Final / Regulation</button><button class="k-prel" tabindex="-1">Prelim / Quarterly</button><button class="k-stmt" tabindex="-1">Statement / OPEC+ / Company</button><button class="k-data" tabindex="-1">Market / Event / Analyst</button></span></p>`;
   if ((P.documents||[]).length) h+=`<h2 id="b-docs">Which documents this rests on</h2><div class="scroller"><table class="stack"><thead><tr><th>Document</th><th class="t">Status</th><th class="t">Date</th><th class="t">Source</th></tr></thead><tbody>${P.documents.map(d=>`<tr><td data-l="Document">${esc(d.name)}</td><td class="t" data-l="Status"><span class="pill">${esc(d.status)}</span></td><td class="t" data-l="Date">${esc(d.date)}</td><td class="t" data-l="Source"><a href="${esc(d.url)}" target="_blank" rel="noopener">${esc((d.url||'').replace(/^https?:\/\//,'').split('/')[0])}</a></td></tr>`).join('')}</tbody></table></div>`;
   secs.forEach((sct,i)=>{ h+=`<h2 id="b-s${i}">${esc(sct.heading)}</h2>`; (sct.paras||[]).forEach(p=>{ h+=`<p style="max-width:80ch">${esc(p.text||p)} ${refsHtml(p.refs)}</p>`; }); });
-  ['Energy','Banks','All'].forEach(S=>{ const rows=(D.policy_impacts||[]).filter(x=>x.sector===S); if(!rows.length) return;
+  [...SKEYS,'All'].forEach(S=>{ const rows=(D.policy_impacts||[]).filter(x=>x.sector===S); if(!rows.length) return;
     h+=`<h2 id="b-i-${S}">${S==='All'?'Cross-sector':S}: impact by company</h2>${impactTable(rows)}`;
     const sn=(P.sector_notes||{})[S]; if(sn) h+=`<div class="grid2" style="margin-top:12px">${['opportunities','risks','indicators'].filter(k=>sn[k]).map(k=>`<div class="card"><h3>${k[0].toUpperCase()+k.slice(1)}${k==='indicators'?' to watch':''}</h3><ul class="clean">${sn[k].map(x=>`<li>${esc(x)}</li>`).join('')}</ul></div>`).join('')}</div>`; });
   const items=D.policy_items||[];
@@ -642,17 +647,28 @@ function viewBudget(){
   return {html:h, title:'Budget and policy'};
 }
 // ---------------------------------------------------------------- overview, method, data
+function allSectorsTable(){
+  let h=`<div class="scroller"><table class="stack"><thead><tr><th>Sector</th><th>Companies</th><th>Top line FY2025, SAR m</th><th>CAGR 22–25</th><th>Net profit FY2025, SAR m</th><th>CAGR 22–25</th><th class="ytd">Top line 9M 2026 vs 9M 2025</th><th class="ytd">Profit 9M 2026 vs 9M 2025</th></tr></thead><tbody>`;
+  SKEYS.forEach(S=>{ const sc=D.sectors[S], top=sc.config.top_line, a=sc.sector.all;
+    h+=`<tr><td data-l="Sector"><a href="#${slugOf(S)}">${esc(nameOf(S))}</a> <span class="src">${esc(sc.config.top_line_name)}</span></td><td data-l="Companies">${sc.tickers.length}</td>
+    <td data-l="Top line FY2025, SAR m">${sumFig(S,'all',top,'FY2025',a[top].totals.FY2025.v,sc.config.top_line_name)}</td><td data-l="CAGR 22–25">${fg(a[top].growth.CAGR_2022_2025.cagr)}</td>
+    <td data-l="Net profit FY2025, SAR m">${sumFig(S,'all','NI_ATTR','FY2025',a.NI_ATTR.totals.FY2025.v,'Net profit attributable')}</td><td data-l="CAGR 22–25">${fg(a.NI_ATTR.growth.CAGR_2022_2025.cagr)}</td>
+    <td class="ytd" data-l="Top line 9M change">${fg(a[top].growth['9M2026/9M2025'].growth)}</td><td class="ytd" data-l="Profit 9M change">${fg(a.NI_ATTR.growth['9M2026/9M2025'].growth)}</td></tr>`; });
+  return h+`</tbody></table></div><p class="note">Top line = revenue, or total operating income for banks. Sector totals are sums of the companies with the figure; growth uses a matched sample. 9M columns compare 9M 2026 with 9M 2025 only.</p>`;
+}
+function rolloutStatus(){
+  const R=D.rollout||{}; if(!(R.sectors||[]).length) return '';
+  const built=new Set(SKEYS.map(nameOf)); const done=R.sectors.filter(s=>built.has(s.name)), todo=R.sectors.filter(s=>!built.has(s.name));
+  const nd=done.reduce((x,s)=>x+s.companies,0);
+  return `<h2>Coverage of the market</h2><p>${done.length} of ${R.sectors.length} sectors and ${nd} of ${R.universe} Main Market companies are analysed so far (archive coverage index, ${esc(R.as_of)}). The rest follow in waves, each held to the same method and checks.</p>
+   <details><summary>Sectors still to come (${todo.length})</summary><ul class="clean">${todo.map(s=>`<li>${esc(s.name)} · ${s.companies} companies · wave ${s.wave}</li>`).join('')}</ul></details>`;
+}
 function viewOverview(){
-  const G=D.guide||{}; let h=`<h1>Energy and Banks: financial analysis 2022–2026</h1><p class="lede">${esc(G.intro||'')}</p><div class="grid2">`;
-  ['Energy','Banks'].forEach(S=>{ const sc=D.sectors[S], top=sc.config.top_line, a=sc.sector.all; const N=D.sector_narr[S]||{};
-    h+=`<div class="card"><h2 style="margin-top:0"><a href="#${S.toLowerCase()}">${S}</a> <span class="src">${sc.tickers.length} companies</span></h2><p>${esc(N.headline||'')}</p>
-    <dl class="kv"><dt>${esc(sc.config.top_line_name)} FY2025</dt><dd>SAR ${sumFig(S,'all',top,'FY2025',a[top].totals.FY2025.v,sc.config.top_line_name)} m · CAGR 22–25 ${fg(a[top].growth.CAGR_2022_2025.cagr)}</dd>
-    <dt>Net profit FY2025</dt><dd>SAR ${sumFig(S,'all','NI_ATTR','FY2025',a.NI_ATTR.totals.FY2025.v,'Net profit attributable')} m · CAGR 22–25 ${fg(a.NI_ATTR.growth.CAGR_2022_2025.cagr)}</dd>
-    <dt>9M 2026 vs 9M 2025</dt><dd>${esc(sc.config.top_line_name)} ${fg(a[top].growth['9M2026/9M2025'].growth)} · profit ${fg(a.NI_ATTR.growth['9M2026/9M2025'].growth)}</dd></dl>
-    <p><a href="#${S.toLowerCase()}">Open ${S} ›</a></p><p class="note">Companies: ${sc.tickers.map(t=>`<a href="#co-${t}">${esc(coName(t))}</a>`).join(' · ')}</p></div>`; });
-  h+=`</div>`;
+  const G=D.guide||{}; let h=`<h1>Saudi-listed sectors: financial analysis 2022–2026</h1><p class="lede">${esc(G.intro||'')}</p>`;
+  h+=`<h2>Sectors at a glance</h2>${allSectorsTable()}`;
+  h+=rolloutStatus();
   const RS=D.review_summary||{};
-  h+=`<h2>Review status</h2><div class="callout">${RS.summary?esc(RS.summary):'The independent review summary has not been embedded in this build.'} <a href="#data">Details</a></div>`;
+  h+=`<h2>Review status (Energy and Banks pilots)</h2><div class="callout">${RS.summary?esc(RS.summary):'The independent review summary has not been embedded in this build.'} <a href="#data">Details</a></div>`;
   h+=`<h2>Budget and policy</h2><p>${esc((D.policy_narr||{}).headline||'')} <a href="#budget">Open the assessment ›</a></p>`;
   (G.sections||[]).slice(0,1).forEach(sct=>{ h+=`<h2>${esc(sct.heading)}</h2><ul class="clean">${sct.lines.map(l=>`<li>${esc(l)}</li>`).join('')}</ul>`; });
   h+=`<p class="note">As of ${esc(D.as_of)}. <a href="#method">How to read this analysis</a></p>`;
@@ -683,7 +699,7 @@ function viewData(){
      ['Too small to search (under 100 in the reporting unit)',nb('too_small')]].filter(x=>x[1]>0).map(x=>`<tr><td>${x[0]}</td><td>${x[1]}</td></tr>`).join('')}
   </tbody></table></div>
   <p>Independent checks beyond the XBRL file: each automatic match was tested for whether the matched line names the item, and ${T.reviewed} figures (everything not located or not clearly matched, all loan-ECL figures and a random sample of automatic matches) were checked by hand by independent reviewers on the PDF page (${Object.entries(RO).map(([k,v])=>`${v} ${esc((REVIEW_TXT[k]||k).split(';')[0])}`).join('; ')}). A saudiexchange.sa link is available for ${T.with_link} (${pc(T.with_link,T.disclosed)}): the archive's manifests list the exchange address only for recent filings, and the exchange website refuses automated look-ups, so the archive file and page are the locator.</p>`;
-  h+=`<h2 id="d-cov">Coverage by company and period</h2><div class="controls"><label for="covf">Sector</label><select id="covf"><option value="">Both</option><option>Energy</option><option>Banks</option></select></div><div class="scroller"><table class="stack" id="covt"><thead><tr><th>Company</th>${['FY2022','FY2023','FY2024','FY2025','9M2025','9M2026'].map(p=>`<th class="t">${PL[p]}</th>`).join('')}<th class="t">Flags</th></tr></thead><tbody>${D.coverage.map(r=>`<tr data-sec="${esc(r.sector)}"><td data-l="Company"><a href="#co-${esc(r.ticker)}">${esc(r.company)}</a></td>${['FY2022','FY2023','FY2024','FY2025','9M2025','9M2026'].map(p=>`<td class="t ${/^MISSING/.test(r[p])?'neg':''}" data-l="${PL[p]}" style="min-width:150px">${esc(r[p])}</td>`).join('')}<td class="t" data-l="Flags" style="min-width:240px">${esc(r.flags)}</td></tr>`).join('')}</tbody></table></div>`;
+  h+=`<h2 id="d-cov">Coverage by company and period</h2><div class="controls"><label for="covf">Sector</label><select id="covf"><option value="">All sectors</option>${SKEYS.map(S=>`<option value="${esc(S)}">${esc(nameOf(S))}</option>`).join('')}</select></div><div class="scroller"><table class="stack" id="covt"><thead><tr><th>Company</th>${['FY2022','FY2023','FY2024','FY2025','9M2025','9M2026'].map(p=>`<th class="t">${PL[p]}</th>`).join('')}<th class="t">Flags</th></tr></thead><tbody>${D.coverage.map(r=>`<tr data-sec="${esc(r.sector)}"><td data-l="Company"><a href="#co-${esc(r.ticker)}">${esc(r.company)}</a></td>${['FY2022','FY2023','FY2024','FY2025','9M2025','9M2026'].map(p=>`<td class="t ${/^MISSING/.test(r[p])?'neg':''}" data-l="${PL[p]}" style="min-width:150px">${esc(r[p])}</td>`).join('')}<td class="t" data-l="Flags" style="min-width:240px">${esc(r.flags)}</td></tr>`).join('')}</tbody></table></div>`;
   const R=D.review||[];
   h+=`<h2 id="d-log">Review log (${R.length} issues)</h2>`;
   if (R.length){ const groups=[...new Set(R.map(r=>r.review))];
@@ -705,22 +721,34 @@ function postRender(root){
     parts.forEach((p,i)=>{ if(p) frag.appendChild(document.createTextNode(p)); if(i<parts.length-1){ const a=document.createElement('abbr'); a.title=NM_TITLE; a.textContent='n.m.'; frag.appendChild(a); } });
     n.parentNode.replaceChild(frag,n); });
 }
+function viewSectors(){
+  let h=`<h1>Sectors</h1><p class="lede">Each sector page has the sector totals, the company table, what changed and why, and links to every company.</p>${allSectorsTable()}<div class="grid2">`;
+  SKEYS.forEach(S=>{ const sc=D.sectors[S], top=sc.config.top_line, a=sc.sector.all; const N=D.sector_narr[S]||{};
+    h+=`<div class="card"><h2 style="margin-top:0"><a href="#${slugOf(S)}">${esc(nameOf(S))}</a> <span class="src">${sc.tickers.length} companies</span></h2><p>${esc(N.headline||'')}</p>
+    <dl class="kv"><dt>${esc(sc.config.top_line_name)} FY2025</dt><dd>SAR ${sumFig(S,'all',top,'FY2025',a[top].totals.FY2025.v,sc.config.top_line_name)} m · CAGR 22–25 ${fg(a[top].growth.CAGR_2022_2025.cagr)}</dd>
+    <dt>Net profit FY2025</dt><dd>SAR ${sumFig(S,'all','NI_ATTR','FY2025',a.NI_ATTR.totals.FY2025.v,'Net profit attributable')} m · CAGR 22–25 ${fg(a.NI_ATTR.growth.CAGR_2022_2025.cagr)}</dd>
+    <dt>9M 2026 vs 9M 2025</dt><dd>${esc(sc.config.top_line_name)} ${fg(a[top].growth['9M2026/9M2025'].growth)} · profit ${fg(a.NI_ATTR.growth['9M2026/9M2025'].growth)}</dd></dl>
+    <p><a href="#${slugOf(S)}">Open ${esc(nameOf(S))} ›</a></p><p class="note">Companies: ${sc.tickers.map(t=>`<a href="#co-${t}">${esc(coName(t))}</a>`).join(' · ')}</p></div>`; });
+  h+=`</div>`+rolloutStatus();
+  return {html:h, title:'Sectors'};
+}
 // ---------------------------------------------------------------- router
 const jump = $('#jumpco');
-jump.innerHTML = `<option value="">Go to a company…</option>` + ['Energy','Banks'].map(S=>`<optgroup label="${S}">${D.sectors[S].tickers.map(t=>`<option value="${t}">${esc(coName(t))}</option>`).join('')}</optgroup>`).join('');
-jump.addEventListener('change', ()=>{ if (jump.value) location.hash='co-'+jump.value; });
+jump.innerHTML = `<option value="">Go to a sector or company…</option>` + SKEYS.map(S=>`<optgroup label="${esc(nameOf(S))}"><option value="s:${slugOf(S)}">${esc(nameOf(S))}: sector page</option>${D.sectors[S].tickers.map(t=>`<option value="${t}">${esc(coName(t))}</option>`).join('')}</optgroup>`).join('');
+jump.addEventListener('change', ()=>{ const v=jump.value; if (!v) return; location.hash = v.startsWith('s:') ? v.slice(2) : 'co-'+v; });
+$('#brandsub').textContent = `${SKEYS.length} sector${SKEYS.length>1?'s':''} · FY2022–FY2025 · 9M 2026`;
 function route(){
-  const v=(location.hash||'#overview').slice(1)||'overview'; const m=v.match(/^(energy|banks)(?:[-\/](ex))?$/);
-  if (m) return {kind:'sector', key:m[1], scope:m[2]?'ex_largest':'all', nav:m[1]};
-  if (/^co-\d{4}$/.test(v) && coInfo(v.slice(3))) return {kind:'company', t:v.slice(3), nav:coSector(v.slice(3)).toLowerCase()};
-  if (['budget','method','data'].includes(v)) return {kind:v, nav:v};
+  const v=(location.hash||'#overview').slice(1)||'overview'; const m=v.match(/^([a-z0-9]+)(?:[-\/](ex))?$/);
+  if (m && SECT[m[1]]) return {kind:'sector', key:m[1], scope:m[2]?'ex_largest':'all', nav:'sectors'};
+  if (/^co-\d{4}$/.test(v) && coInfo(v.slice(3))) return {kind:'company', t:v.slice(3), nav:'sectors'};
+  if (['budget','method','data','sectors'].includes(v)) return {kind:v, nav:v};
   return {kind:'overview', nav:'overview'};
 }
 function render(keepPV){
   FIGS={}; figN=0; hideDrawer(); drawerPushed=false; CW=colW(); if(!keepPV) setPV('fb');
   const r=route(); let out;
   if (r.kind==='sector') out=viewSector(r.key, r.scope); else if (r.kind==='company') out=viewCompany(r.t);
-  else if (r.kind==='budget') out=viewBudget(); else if (r.kind==='method') out=viewMethod(); else if (r.kind==='data') out=viewData(); else out=viewOverview();
+  else if (r.kind==='budget') out=viewBudget(); else if (r.kind==='method') out=viewMethod(); else if (r.kind==='data') out=viewData(); else if (r.kind==='sectors') out=viewSectors(); else out=viewOverview();
   $('#main').innerHTML=out.html; postRender($('#main'));
   document.querySelectorAll('nav.main a').forEach(a=>{ if(a.dataset.v===r.nav) a.setAttribute('aria-current','page'); else a.removeAttribute('aria-current'); });
   jump.value = r.kind==='company' ? r.t : '';

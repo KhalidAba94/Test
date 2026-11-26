@@ -125,6 +125,11 @@ def main(sector, facts_csv, overrides_csv, out_csv):
                         [(p, "REV"), (p, "OIRS")])
                 if val(t, p, "CFO") is not None and val(t, p, "CAPEX") is not None:
                     add(t, p, "FCF", val(t, p, "CFO") - val(t, p, "CAPEX"), "CFO - capex", [(p, "CFO"), (p, "CAPEX")])
+                if val(t, p, "DEBT") is not None and val(t, p, "CASH") is not None:
+                    lease = val(t, p, "LEASE_LIAB")
+                    add(t, p, "NET_DEBT", val(t, p, "DEBT") + (lease or 0.0) - val(t, p, "CASH"),
+                        "DEBT + LEASE_LIAB - CASH" + ("" if lease is not None else " (no lease liabilities tagged: borrowings only)"),
+                        [(p, "DEBT"), (p, "LEASE_LIAB"), (p, "CASH")])
             if tpl == "bank":
                 if val(t, p, "TOI") is not None and val(t, p, "OPEX_PRE") is not None:
                     add(t, p, "PPOP", val(t, p, "TOI") - val(t, p, "OPEX_PRE"), "TOI - OPEX_PRE", [(p, "TOI"), (p, "OPEX_PRE")])

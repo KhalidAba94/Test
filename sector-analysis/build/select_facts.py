@@ -22,22 +22,32 @@ from collections import defaultdict
 PERIODS = {"FY2021", "FY2022", "FY2023", "FY2024", "FY2025", "9M2025", "9M2026"}
 
 
-def norm_period(p):
+def norm_period(p, fye_month=12):
+    """Balance-sheet dates -> analysis periods. The fiscal-year-end balance goes to the FY slot (non-December
+    year-ends: the calendar year holding most of the fiscal year's months, as in extract_facts.fiscal_year);
+    the 30 September balance goes to the 9M slot."""
     if p.startswith("BS@"):
         y, m, d = p[3:].split("-")
-        if m == "12" and d == "31":
-            return f"FY{y}"
-        if m == "09" and d == "30":
+        y, m = int(y), int(m)
+        if m == fye_month and m in (12, 3, 6, 7, 9) and d in ("31", "30"):
+            return f"FY{y if fye_month >= 6 else y - 1}"
+        if m == 9 and d == "30":
             return f"9M{y}"
         return None
     return p
+
+
+def ytd_doc(fye_month):
+    """Interim document type whose period ends on 30 September (Q3 for December year-ends)."""
+    q = ((9 - fye_month) % 12) // 3
+    return {1: "Q1", 2: "Q2", 3: "Q3"}.get(q)
 
 
 def main(cand_csv, sector, out_csv, checks_csv):
     rows = list(csv.DictReader(open(cand_csv, encoding="utf-8")))
     groups = defaultdict(list)
     for r in rows:
-        p = norm_period(r["period"])
+        p = norm_period(r["period"], int(r.get("fye_month") or 12))
         if p not in PERIODS or r["value_sar_m"] == "":
             continue
         r["_p"] = p
@@ -55,7 +65,7 @@ def main(cand_csv, sector, out_csv, checks_csv):
         pool = cands
         if not is_bs:
             # flows: compare like documents only (annual with annual for FY; Q3 with Q3 for 9M)
-            want = "Annual" if p.startswith("FY") else "Q3"
+            want = "Annual" if p.startswith("FY") else ytd_doc(int(cands[0].get("fye_month") or 12))
             same = [c for c in cands if doc(c) == want]
             if same:
                 pool = same
