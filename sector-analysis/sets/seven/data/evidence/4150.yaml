@@ -104,7 +104,7 @@ segments:
 
 revenue_drivers:
   - {period: "FY2025", driver: "Revenue by type (FY2024): rental 168,230,828 (203,784,592); operating 114,547,716 (112,062,876); sale of lands 96,548,715 (nil); real estate development 4,830,000 (5,670,000)", value: 384157259, unit: "SAR", source: "4150_ARDCO/2025_Annual_filed2026-03-08.pdf", page: 43, quote: "Sale of lands revenue 96,548,715 -"}
-  - {period: "FY2023", driver: "Sale of lands revenue in FY2023 (FY2024: nil); rental income 220,941,681 and operating income 76,884,329", value: 41359395, unit: "SAR", source: "4150_ARDCO/2024_Annual_filed2025-03-02.pdf", page: 39, quote: "Sale of lands revenue - 41,359,395"}
+  - {period: "FY2023", driver: "Sale of lands revenue in FY2023 (FY2024: nil); rental income 220,941,681 and operating income 76,884,329", value: 41359395, unit: "SAR", source: "4150_ARDCO/2024_Annual_filed2025-03-02.pdf", page: 41, quote: "Sale of lands revenue - 41,359,395"}
   - {period: "9M2026", driver: "Revenue by type (9M2025): rental 128,607,608 (126,002,492); operating 93,399,444 (85,217,550); land sales 33,350,625 (96,548,715); real estate development nil (2,520,000)", value: 255357677, unit: "SAR", source: "4150_ARDCO/2026_Q3_filed2026-11-01.pdf", page: 24, quote: "Land Sales (note 11) 33,350,625 96,548,715"}
   - {period: "31 Dec 2025", driver: "Murabaha investment deposits held outside cash and cash equivalents (31 Dec 2024: SAR 930m incl. SAR 630m long term); income SAR 56.9m in FY2025", value: 1025000000, unit: "SAR", source: "4150_ARDCO/2025_Annual_filed2026-03-08.pdf", page: 40, quote: "As of 31 December 2025, total Murabaha investment deposits amounted to SAR 1.025 billion"}
 

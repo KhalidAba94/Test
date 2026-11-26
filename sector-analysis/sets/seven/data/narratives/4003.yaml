@@ -1,0 +1,153 @@
+ticker: '4003'
+headline: Revenue grew from SAR 6,031m (FY2022) to SAR 7,446m (FY2025) and 5.4% in 9M 2026, with the Tas'heel consumer-finance arm growing fastest; attributable profit peaked at SAR 528m in FY2024 and fell
+  to SAR 497m in FY2025 and SAR 302m in 9M 2026 (-9.9%) as minorities took a 31% share of Tas'heel after its 2024 IPO and credit losses rose.
+lfl_basis:
+  definition_used: 'Standard bridge on IFRS total revenue, which includes income from Islamic financing contracts (Tas''heel) and, from 2025, payroll-advance income. eXtra made no acquisitions or disposals
+    of consolidated businesses: the 2024 IPO of 30% of UIHC (Tas''heel''s parent) kept control, and the 2023 decision to stop the Egypt expansion was immaterial. Oman and Bahrain currencies are pegged,
+    so FX is nil, and no presentation change affects revenue; organic growth therefore equals reported growth. New branches are counted (54 at end-2022, 57 at end-2025) but their revenue and same-store
+    sales are not disclosed, so like-for-like growth is not determinable.'
+  perimeter_changes:
+  - event: 30% of UIHC (Tas'heel) floated on Tadawul for SAR 990.0m; control retained
+    date: '2024'
+    effect: no revenue effect; creates non-controlling interests
+    source: 4003_EXTRA/2024_Annual_filed2025-02-19.pdf p.14
+  - event: Egypt expansion stopped; small Egypt assets held for sale
+    date: '2023-04-30'
+    effect: immaterial
+    source: 4003_EXTRA/2023_Annual_filed2024-02-19.pdf p.50
+  - event: NowAccess (payroll advances) incorporated by UIHC
+    date: '2025'
+    effect: start-up; income SAR 1.1m in FY2025
+    source: 4003_EXTRA/2025_Annual_filed2026-02-18.pdf p.15
+  capacity_changes:
+  - event: Branches 54 to 53
+    date: '2023'
+    effect: revenue not disclosed
+    source: 4003_EXTRA/2023_Annual_filed2024-02-19.pdf p.14; 4003_EXTRA/2024_Annual_filed2025-02-19.pdf p.14
+  - event: Branches 53 to 55
+    date: '2024'
+    effect: revenue not disclosed
+    source: 4003_EXTRA/2024_Annual_filed2025-02-19.pdf p.14
+  - event: Branches 55 to 57
+    date: '2025'
+    effect: revenue not disclosed
+    source: 4003_EXTRA/2025_Annual_filed2026-02-18.pdf p.14
+  - event: Branches unchanged at 57
+    date: 2026 (9M)
+    effect: 2025 openings fully in 9M 2026; revenue not disclosed
+    source: 4003_EXTRA/2026_Q3_filed2026-11-05.pdf p.11
+  fx_exposure: Revenue outside Saudi Arabia (Oman and Bahrain, 6.5% of FY2025 revenue before eliminations) is in currencies pegged to the US dollar; FX effects are nil.
+  price_volume_support: 'Not determinable: revenue is split into sales and services and consumer finance, and by region, but prices, units and financing balances by product yield are not disclosed.'
+  confidence: Medium (perimeter, FX and accounting steps nil with High/Medium confidence; new branches not determinable)
+price_volume:
+- period: FY2025 vs FY2024
+  text: Revenue rose SAR 665m. Sales and services rose 8.4% (SAR 6,162m to SAR 6,681m) and consumer finance 23.2% (SAR 624m to SAR 768m); income from Islamic financing contracts was SAR 769m (SAR 625m).
+    Prices and units are not disclosed.
+  basis: disclosed (segment revenue); split not determinable
+  confidence: High for the amounts
+  source: 4003_EXTRA/2025_Annual_filed2026-02-18.pdf p.8 (P&L), p.56-57 (segments)
+  refs:
+  - 4003-FY2025-REV
+  - 4003-FY2024-REV
+profit_and_margin:
+  drivers:
+  - period: FY2023
+    driver: 'Revenue rose 2.8%: sales and services +1.1% and consumer finance +25.6% (SAR 417m to SAR 524m). The gross margin rose to 22.0% (21.0%), but general and administrative costs rose to SAR 254m
+      (SAR 184m), credit losses on financing to SAR 70.2m (SAR 40.8m), and other income fell to SAR 6.2m from SAR 42.5m, which had included a SAR 13.6m finance-lease gain and a SAR 10.6m VAT refund. Attributable
+      profit fell 11.3% to SAR 390m; operating margin 7.8% (8.7%).'
+    source: 4003_EXTRA/2024_Annual_filed2025-02-19.pdf p.8 (P&L), p.59 (segments); 4003_EXTRA/2023_Annual_filed2024-02-19.pdf p.8, p.33 (note 7)
+    refs:
+    - 4003-FY2023-REV
+    - 4003-FY2023-GP
+    - 4003-FY2023-OPINC
+    - 4003-FY2023-NI_ATTR
+  - period: FY2024
+    driver: 'Revenue rose 9.4%: sales and services +8.5% and consumer finance +19.1%. The gross margin rose to 23.0% and other income included a SAR 16.3m VAT refund; credit losses rose to SAR 93.2m. Attributable
+      profit rose 35.2% to SAR 528m (minorities SAR 6.5m after the UIHC IPO). Net margin 7.8%; ROE 35.3%.'
+    source: 4003_EXTRA/2025_Annual_filed2026-02-18.pdf p.8 (P&L), p.57 (segments); 4003_EXTRA/2024_Annual_filed2025-02-19.pdf p.32 (note 7)
+    refs:
+    - 4003-FY2024-REV
+    - 4003-FY2024-NI_ATTR
+    - 4003-FY2024-NI_NCI
+    - 4003-FY2024-GP
+  - period: FY2025
+    driver: 'Revenue rose 9.8% to SAR 7,446m: sales and services +8.4% and consumer finance +23.2%. The gross margin rose to 24.0%, after SAR 96.8m of consumer-finance funding cost inside cost of revenue
+      (SAR 79.9m). Selling costs rose 14.4%, general and administrative costs 21.7% and credit losses to SAR 124.8m. Net profit rose 7.8% to SAR 576m, but minorities took SAR 79.0m for a full year after
+      the IPO, so attributable profit fell 5.9% to SAR 497m. Operating cash flow was SAR 92.2m because financing receivables grew SAR 764m. EBITDA margin 10.7%; net margin 6.7%; ROE 29.7%.'
+    source: 4003_EXTRA/2025_Annual_filed2026-02-18.pdf p.8 (P&L), p.12 (cash flow), p.33 (note 8), p.56 (segments)
+    refs:
+    - 4003-FY2025-REV
+    - 4003-FY2025-NI
+    - 4003-FY2025-NI_NCI
+    - 4003-FY2025-NI_ATTR
+    - 4003-FY2025-CFO
+  - period: 9M2026
+    driver: 'Revenue rose 5.4% to SAR 5,966m: sales and services +5.1% and consumer finance +8.4%; gross margin 23.5% (23.1%). Credit losses on financing almost doubled to SAR 167.2m (SAR 84.6m), mainly
+      Tawarruq and credit-card financing, so consumer-finance segment profit fell to SAR 134m (SAR 205m); selling costs rose 12.5%. Attributable profit fell 9.9% to SAR 302m; operating margin 6.9% (8.2%).
+      Operating cash flow rose to SAR 522m (SAR 282m) as the financing book grew less (SAR 181m vs SAR 570m).'
+    source: 4003_EXTRA/2026_Q3_filed2026-11-05.pdf p.4-5 (P&L), p.9 (cash flow), p.19 (ECL), p.31-32 (segments)
+    refs:
+    - 4003-9M2026-REV
+    - 4003-9M2026-NI_ATTR
+    - 4003-9M2026-OPINC
+    - 4003-9M2026-CFO
+  one_offs:
+  - item: Gain on recognition of net investment in finance lease (sub-lease of a leased land parcel)
+    period: FY2022
+    amount_sar_m: 13.6
+    line: Other income (inside our operating income)
+    source: 4003_EXTRA/2023_Annual_filed2024-02-19.pdf p.33 (note 7.1)
+    tax_nci: 'Under 5% of attributable profit; zakat effect not disclosed and the item arose before minorities existed: profit kept as reported'
+  - item: VAT claim refunded after a successful appeal against 2018-2019 assessments
+    period: FY2022
+    amount_sar_m: 10.6
+    line: Other income (inside our operating income)
+    source: 4003_EXTRA/2023_Annual_filed2024-02-19.pdf p.33 (note 7.2)
+    tax_nci: 'Under 5% of attributable profit; zakat effect not disclosed and the item arose before minorities existed: profit kept as reported'
+  - item: Value added tax (VAT) refund
+    period: FY2024
+    amount_sar_m: 16.3
+    line: Other income (inside our operating income)
+    source: 4003_EXTRA/2024_Annual_filed2025-02-19.pdf p.32 (note 7)
+    tax_nci: 'Under 5% of attributable profit; zakat effect and minority share not disclosed: profit kept as reported'
+developments:
+- date: '2023-04-30'
+  category: strategy
+  text: The board stopped the plan to expand in Egypt; Egypt assets of SAR 7.1m were held for sale.
+  source: 4003_EXTRA/2023_Annual_filed2024-02-19.pdf p.50
+- date: '2024'
+  category: financing
+  text: Sold 30% of UIHC, the holding company of the Tas'heel consumer-finance business, in an IPO on Tadawul for SAR 990.0m while keeping control.
+  source: 4003_EXTRA/2024_Annual_filed2025-02-19.pdf p.14, p.12
+- date: '2025'
+  category: mix
+  text: UIHC set up NowAccess (75%) to offer payroll advances; it produced SAR 1.1m of income in 2025.
+  source: 4003_EXTRA/2025_Annual_filed2026-02-18.pdf p.15, p.8
+- date: 2025-2026
+  category: financing
+  text: Bought back own shares for SAR 237.9m in FY2025 and SAR 30.2m in 9M 2026.
+  source: 4003_EXTRA/2025_Annual_filed2026-02-18.pdf p.12; 4003_EXTRA/2026_Q3_filed2026-11-05.pdf p.11
+- date: 2026 (9M)
+  category: event
+  text: Management states the Middle East conflict since 28 Feb 2026 has not had a significant impact, while it monitors supply chains and customers' credit.
+  source: 4003_EXTRA/2026_Q3_filed2026-11-05.pdf p.12
+what_it_means:
+  improved: Revenue grew 7.3% a year from FY2022 to FY2025 and the gross margin rose from 21.0% to 24.0%, with consumer finance revenue up from SAR 417m to SAR 768m.
+  weakened: Attributable profit fell 5.9% in FY2025 and 9.9% in 9M 2026, and the net margin fell from 7.8% (FY2024) to 5.1% (9M 2026).
+  why: Since the 2024 IPO about 31% of Tas'heel's profit goes to minorities (SAR 79.0m in FY2025), and credit losses on consumer financing rose from SAR 40.8m (FY2022) to SAR 124.8m (FY2025) and SAR 167.2m
+    in 9M 2026; operating cash flow swings with the growth of the financing book.
+  uncertain: Same-store sales and the revenue of new branches are not disclosed, and whether the 2026 rise in credit losses persists is not determinable from the filings.
+confidence_overall: Medium
+data_notes:
+- Revenue includes income from Islamic financing contracts (FY2025 SAR 769.0m) and the funding cost of that business sits in cost of revenue (SAR 27.8m FY2022, SAR 63.2m FY2023, SAR 79.9m FY2024, SAR 96.8m
+  FY2025; about SAR 70.4m in 9M 2025 and SAR 73.6m in 9M 2026, which we derive from the cash-flow add-back). The finance cost line on the face covers leases and other borrowings only, so our operating income
+  and EBITDA are after the consumer-finance funding cost.
+- 'Finance income (income from net investment in finance leases, and from 2025 a separate finance income) is inside other income, not a separate line: SAR 2.5m FY2022, SAR 2.9m FY2023, SAR 2.8m FY2024,
+  SAR 4.1m FY2025.'
+- Net impairment losses on financial assets (credit losses on financing) are an operating cost on the face; they are not added back in EBITDA. Stage A set the impairment add-back to nil where our data had
+  used them.
+- 'Stage A corrections: depreciation of right-of-use assets added to D&A for FY2024 and FY2025; payments for intangible assets added to FY2022 and FY2023 capex; borrowings and lease liabilities added where
+  missing; 9M 2026 cash-flow items read from the PDF because the XBRL had none.'
+- Borrowings largely fund the consumer-finance receivables, so net debt (SAR 2,075m at end-2025) is not comparable with a pure retailer's.
+- The FY2024 NI_ATTR and CAPEX values first reported in our data were XBRL line picks (net profit before minorities; PP&E only), not restatements.
+- The FY2022 annual is a fully scanned document and the FY2024 annual has an unreliable embedded text layer; figures were read by OCR and checked against totals.

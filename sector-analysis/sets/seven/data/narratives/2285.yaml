@@ -1,0 +1,197 @@
+ticker: '2285'
+headline: Revenue rose from SAR 903m (FY2022) to SAR 998m (FY2025) with a high EBITDA margin of 39.1% in FY2025, but attributable profit fell
+  from SAR 255m to SAR 200m in FY2023 under the merger debt before recovering to SAR 237m as borrowings were cut from SAR 1,748m to SAR 690m;
+  in 9M 2026 revenue rose 4.2% and profit 15.8%.
+lfl_basis:
+  definition_used: Standard bridge on IFRS revenue. Arabian Mills is a stand-alone company with no subsidiaries; the November 2022 merger with
+    its former holding parent added goodwill and loans but no revenue, so perimeter effects are nil and organic growth equals reported growth.
+    Revenue presentation is consistent across the comparisons used (later re-presentations moved costs, not revenue). No volumes, capacity or
+    same-store measure are disclosed, so new-capacity effects are not determinable.
+  perimeter_changes:
+  - event: Statutory merger with former parent Food Security Holding Company
+    date: '2022-11-30'
+    effect: no revenue; goodwill SAR 822.4m and loans of SAR 1,747.9m at end-2022
+    source: 2285_ARABIAN_MILLS/2023_Annual_filed2024-10-07.pdf p.37, p.6
+  - event: No subsidiaries, acquisitions or disposals FY2023-9M2026
+    date: 2023 to 2026
+    effect: none
+    source: 2285_ARABIAN_MILLS/2025_Annual_filed2026-03-26.pdf p.3
+  capacity_changes:
+  - event: A and B mill automation upgrade and other Riyadh projects capitalised
+    date: '2025'
+    effect: not determinable
+    source: 2285_ARABIAN_MILLS/2025_Annual_filed2026-03-26.pdf p.31
+  - event: New flour mill being installed at Riyadh
+    date: 2026 (9M)
+    effect: not yet in use at 30 Sep 2026
+    source: 2285_ARABIAN_MILLS/2026_Q3_filed2026-11-08.pdf p.18
+  fx_exposure: 'None: all revenue is from sales in Saudi Arabia in riyals.'
+  price_volume_support: Not determinable. Revenue is split by product (annuals and the 2025 Q3 interim) and region, but no tonnes or prices are
+    given. GFSA sets prices only for flour in 45kg bags and above, and subsidised wheat costs SAR 180 a tonne, unchanged since 2017.
+  confidence: Medium (perimeter nil with High confidence; new-capacity effect not determinable)
+price_volume:
+- period: 9M 2026 vs 9M 2025
+  text: Revenue rose SAR 30.3m. Jizan grew 16.5% and Riyadh 4.1%, while Hail fell 7.2%. The interim gives no product split, volumes or prices,
+    so price and volume cannot be separated.
+  basis: disclosed (segment revenue); split not determinable
+  confidence: High for the amounts; the split is not determinable
+  source: 2285_ARABIAN_MILLS/2026_Q3_filed2026-11-08.pdf p.15
+  refs:
+  - 2285-9M2026-REV
+  - 2285-9M2025-REV
+- period: FY2025 vs FY2024
+  text: On the FY2025 annual's net basis, flour revenue rose 7.9%, feed 3.6% and bran fell 9.8%. Jizan grew 16.9% and Riyadh 3.2%; Hail fell 10.6%.
+    No volumes or prices are disclosed.
+  basis: disclosed; split not determinable
+  confidence: High for the amounts; the split is not determinable
+  source: 2285_ARABIAN_MILLS/2025_Annual_filed2026-03-26.pdf p.42 (products), p.24 (segments)
+  refs:
+  - 2285-FY2025-REV
+  - 2285-FY2024-REV
+- period: FY2024 vs FY2023
+  text: Feed revenue recovered 45.0% and bran rose 15.9%, while flour rose 4.9%; rebates deducted from revenue rose to SAR 22.0m (SAR 13.3m).
+    Hail grew 45.4% and Jizan 15.4%.
+  basis: disclosed; split not determinable
+  confidence: High for the amounts; the split is not determinable
+  source: 2285_ARABIAN_MILLS/2024_Annual_filed2025-03-24.pdf p.47 (products), p.32 (segments)
+  refs:
+  - 2285-FY2024-REV
+  - 2285-FY2023-REV
+profit_and_margin:
+  drivers:
+  - period: FY2023
+    driver: 'Revenue fell 4.5%: feed fell 33.5% and discounts rose to SAR 13.3m (SAR 1.1m), while flour rose 6.2%. Gross margin rose to 49.3%
+      (45.7%), in a year with a SAR 13.2m reversal of the slow-moving inventory provision. Attributable profit fell 21.5% to SAR 200m because
+      finance costs rose to SAR 121.7m (SAR 20.7m) on the loans inherited in the merger, and G&A included SAR 10.0m paid to NADEC to end its distribution
+      agreements; zakat and tax fell to SAR 5.2m (SAR 18.5m). EBITDA margin 44.5% (we calculate).'
+    source: 2285_ARABIAN_MILLS/2024_Annual_filed2025-03-24.pdf p.11 (P&L); 2285_ARABIAN_MILLS/2023_Annual_filed2024-10-07.pdf p.43-45, p.9
+    refs:
+    - 2285-FY2023-REV
+    - 2285-FY2023-GP
+    - 2285-FY2023-NI_ATTR
+    - 2285-FY2023-FIN_COST
+    - 2285-FY2023-ZAKAT_TAX
+  - period: FY2024
+    driver: Revenue +13.0% to SAR 974m as feed and bran recovered. Gross margin fell to 46.3%; on the FY2024 annual basis selling costs rose to
+      SAR 59.6m (SAR 31.4m) and G&A to SAR 100.2m (SAR 87.4m), including SAR 7.8m of new point-of-sale bank charges and a SAR 5.6m GFSA fine provision.
+      Finance costs fell to SAR 83.6m as SAR 226.5m of loans was repaid. Attributable profit +6.7% to SAR 214m; net margin 21.9%.
+    source: 2285_ARABIAN_MILLS/2024_Annual_filed2025-03-24.pdf p.11 (P&L), p.48 (expenses), p.13 (cash flow); 2285_ARABIAN_MILLS/2025_Annual_filed2026-03-26.pdf
+      p.9
+    refs:
+    - 2285-FY2024-REV
+    - 2285-FY2024-GP
+    - 2285-FY2024-NI_ATTR
+    - 2285-FY2024-FIN_COST
+  - period: FY2025
+    driver: Revenue +2.4% to SAR 998m, led by flour; gross margin 47.2% (46.3%). Selling costs rose to SAR 79.2m (SAR 64.1m) with marketing at
+      SAR 15.6m (SAR 7.0m). Finance cost fell to SAR 70.4m (SAR 83.6m) even though it included SAR 12.4m of loan-cost amortisation as SAR 174.5m
+      of principal was repaid. Attributable profit +11.0% to SAR 237m; EBITDA margin 39.1% (we calculate).
+    source: 2285_ARABIAN_MILLS/2025_Annual_filed2026-03-26.pdf p.9 (P&L), p.11 (cash flow), p.43 (expenses)
+    refs:
+    - 2285-FY2025-REV
+    - 2285-FY2025-GP
+    - 2285-FY2025-FIN_COST
+    - 2285-FY2025-NI_ATTR
+    - 2285-FY2025-EBITDA_C
+  - period: 9M2026
+    driver: Revenue +4.2% to SAR 755m and gross profit +8.5% (gross margin 48.3% vs 46.4%). Finance costs fell to SAR 39.4m (SAR 47.4m) and finance
+      income rose to SAR 8.5m (SAR 4.4m), so attributable profit rose 15.8% to SAR 209m. Net margin 27.6% (24.9%); EBITDA margin 40.7% (39.3%).
+    source: 2285_ARABIAN_MILLS/2026_Q3_filed2026-11-08.pdf p.5 (P&L), p.15 (segments)
+    refs:
+    - 2285-9M2026-REV
+    - 2285-9M2026-GP
+    - 2285-9M2026-NI_ATTR
+    - 2285-9M2026-FIN_COST
+    - 2285-9M2026-FIN_INC
+  - period: FY2022-9M2026
+    driver: 'Cash went to debt reduction: operating cash flow (before interest paid) reached SAR 430m in FY2025 and borrowings fell from SAR 1,748m
+      (end-2022) to SAR 630m (30 Sep 2026). Net debt to EBITDA fell from 4.13x to 1.85x (FY2025) and 1.36x (9M 2026, annualised). ROE 20.8% in
+      FY2025 (we calculate).'
+    source: cash-flow statements and balance sheets (FY2023-FY2025 annuals; 2026 Q3 p.4, p.7)
+    refs:
+    - 2285-FY2025-CFO
+    - 2285-FY2022-DEBT
+    - 2285-9M2026-DEBT
+    - 2285-FY2025-NET_DEBT
+  one_offs:
+  - item: Compensation to shareholder NADEC for ending its distribution and marketing-service agreements
+    period: FY2023
+    amount_sar_m: -10.0
+    line: General and administration expenses
+    source: 2285_ARABIAN_MILLS/2023_Annual_filed2024-10-07.pdf p.44
+    tax_nci: 'Zakat effect not disclosed; no minority interests: after-tax effect not determinable, profit kept as reported'
+  - item: Provision for a GFSA fine (inspection of 16 Oct 2024)
+    period: FY2024
+    amount_sar_m: -5.61
+    line: General and administration expenses
+    source: 2285_ARABIAN_MILLS/2024_Annual_filed2025-03-24.pdf p.48
+    tax_nci: 'Under 5% of attributable profit; zakat effect not disclosed, no minority interests: profit kept as reported'
+  - item: Net release of fines and penalties after GFSA cut its claim to SAR 3.10m
+    period: FY2025
+    amount_sar_m: 1.47
+    line: General and administrative expenses
+    source: 2285_ARABIAN_MILLS/2025_Annual_filed2026-03-26.pdf p.41, p.43
+    tax_nci: 'Under 5% of attributable profit; zakat effect not disclosed, no minority interests: profit kept as reported'
+developments:
+- date: '2022-11-30'
+  category: M&A
+  text: Merged with its former parent (a holding company); the merger brought SAR 822.4m of goodwill and the acquisition loans onto the balance
+    sheet.
+  source: 2285_ARABIAN_MILLS/2023_Annual_filed2024-10-07.pdf p.37, p.6
+- date: '2022-12-21'
+  category: strategy
+  text: Olam International left the shareholder group; NADEC raised its stake to 14.87% and in 2023 received SAR 10m to end its exclusive distribution
+    and marketing agreements with the company.
+  source: 2285_ARABIAN_MILLS/2023_Annual_filed2024-10-07.pdf p.37; 2285_ARABIAN_MILLS/2022_Annual_filed2024-10-07.pdf p.42
+- date: 2023 to 2026
+  category: financing
+  text: Repaid SAR 673.0m of loans in FY2023, SAR 226.5m in FY2024 and SAR 174.5m in FY2025; borrowings were SAR 630.3m at 30 Sep 2026.
+  source: 2285_ARABIAN_MILLS/2023_Annual_filed2024-10-07.pdf p.9; 2285_ARABIAN_MILLS/2025_Annual_filed2026-03-26.pdf p.11; 2285_ARABIAN_MILLS/2026_Q3_filed2026-11-08.pdf
+    p.4
+- date: '2024-10-08'
+  category: event
+  text: Listed on the Saudi Exchange; NADEC's stake fell to 10.41%.
+  source: 2285_ARABIAN_MILLS/2025_Annual_filed2026-03-26.pdf p.13; 2285_ARABIAN_MILLS/2024_Annual_filed2025-03-24.pdf p.42
+- date: '2024-12-12'
+  category: regulation
+  text: GFSA claimed a fine after an October 2024 inspection; the company provided SAR 5.6m, GFSA cut the claim to SAR 3.10m in October 2025 and
+    the company appealed.
+  source: 2285_ARABIAN_MILLS/2025_Annual_filed2026-03-26.pdf p.41
+- date: '2026'
+  category: capacity
+  text: Installing a new flour mill at the Riyadh branch (in progress at 30 Sep 2026).
+  source: 2285_ARABIAN_MILLS/2026_Q3_filed2026-11-08.pdf p.18
+- date: 2025 to 2026
+  category: financing
+  text: 'First dividends as a listed company: SAR 30.3m paid in 2025 and SAR 51.3m in 2026.'
+  source: 2285_ARABIAN_MILLS/2025_Annual_filed2026-03-26.pdf p.11; 2285_ARABIAN_MILLS/2026_Q3_filed2026-11-08.pdf p.7
+what_it_means:
+  improved: Debt fell sharply after the merger, from SAR 1,748m to SAR 630m, so finance costs fell and attributable profit rose in each year from
+    FY2023; the EBITDA margin was between 38.8% and 44.5% in FY2022-FY2025 and 40.7% in 9M 2026.
+  weakened: Revenue growth slowed to 2.4% in FY2025 and 4.2% in 9M 2026, with Hail and bran sales falling, and attributable profit in FY2025 (SAR
+    237m) was still below FY2022 (SAR 255m).
+  why: Profit moved mainly with finance costs on the merger loans and with one-off items (the NADEC settlement, GFSA fines), while operating income
+    was broadly flat from FY2023 to FY2025.
+  uncertain: No volumes, prices or capacity are disclosed, so price and volume effects and the contribution of the new Riyadh mill are not determinable;
+    the VAT basis of reported sales to NADEC differs between filings.
+confidence_overall: Medium
+data_notes:
+- XBRL lacked the balance sheet, cost of revenue and gross profit and all of FY2022; these were read from the PDFs (stage A overrides).
+- The XBRL impairment add-back was the expected credit loss on receivables; it was set to 0 for FY2024, FY2025, 9M2025 and 9M2026. FY2023 IMPAIR_CF
+  is the write-off of intangible assets (SAR 0.2m).
+- 'FY2022 and 1 Jan 2022 were restated in the FY2023 annual (note 32): lease liabilities and right-of-use assets +SAR 107.1m, PP&E and equity
+  -SAR 16.5m; total assets FY2022 SAR 2,779.7m (R).'
+- 'FY2023 direct costs were re-presented in the FY2024 annual (note 31: cost-centre allocation): gross profit SAR 415.5m to SAR 425.0m (R).'
+- 'FY2024 was reclassified in the FY2025 annual (note 34; auditor emphasis of matter): cost of revenue +SAR 4.2m, cash and operating cash flow
+  +SAR 0.18m (R).'
+- '9M 2025 was reclassified in the 2026 Q3 interim (note 26): cost of revenue +SAR 2.6m, bank charges of SAR 1.11m moved into finance costs, operating
+  cash flow +SAR 1.11m (R).'
+- Operating cash flow is before interest paid (interest on loans and leases is in financing; interest received in investing), unlike First Milling
+  and Modern Mills.
+- 'Borrowings exclude accrued interest shown as a separate line: SAR 16.2m (FY2022), 12.0m (FY2023), 15.0m (9M2025), 10.4m (9M2026).'
+- Cash excludes short-term murabaha deposits of SAR 50m at 30 Sep 2025.
+- Product revenue in the FY2025 annual is net of rebates (FY2024 flour SAR 534.6m) while earlier annuals show products gross with rebates deducted
+  in total (FY2024 flour SAR 547.0m); product growth is quoted on matching bases only.
+- Related-party sales to NADEC are shown on different VAT bases in different filings (FY2023 SAR 22.8m vs 26.2m; FY2024 SAR 24.0m vs 20.9m); revenue
+  itself is not affected. Relevant for cross-checks with NADEC (6010).
+- Formerly The Second Milling Company; listed on 8 Oct 2024; the archive holds statements from FY2022 (with FY2021 comparatives).

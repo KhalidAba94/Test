@@ -77,8 +77,8 @@ restatements:
     unit: "SAR"
     reason: "Gold calibration expenses (41,544,821) treated as variable consideration and deducted from gold revenue (IAS 8, IFRS 15); customer cash discount (2.9m, from finance costs) and promotional discount (8.4m, from selling and marketing) deducted from operations revenue. No effect on profit. FY2022 is not re-presented."
     source: "4011_LAZURDE/2024_Annual_filed2025-03-17.pdf"
-    page: 48
-    quote: "Accordingly, the Group has restated the \"Gold calibration expenses\" from separate line item within the operating expenses to \"Net revenue from Gold\""
+    page: 49
+    quote: "the Group has restated the \"Gold calibration expenses\" from separate line item within the operating expenses to \"Net revenue from Gold\""
   - period_restated: "FY2023"
     item: "Operating cash flow 60,354,067 -> 57,485,715: 2,868,352 of finance costs paid moved from financing (cash facilities) to operating (accounts payable - gold)"
     from: 60354067
@@ -119,7 +119,7 @@ significant_events:
     financial_effect: "Accounts payable - Gold SAR 1,931.6m and murabaha SAR 39.0m at 31 Dec 2025; in grams the gold liability fell from 4,185,079 g to 3,719,063 g while its value rose 46.6% with the gold price"
     source: "4011_LAZURDE/2025_Annual_filed2026-03-26.pdf"
     page: 46
-    quote: "As the majority of the Group's debt is made of gold borrowing, any increase in the international prices of the gold metal would increase the Group's debt value"
+    quote: "As the majority of the Group's debt is made of gold borrowing, any increase in the international prices of the gold metal"
   - date: "2024"
     event: "Forward contract with a bank to buy 1,833 ounces of gold in four quarterly tranches, to hedge the rise in expected credit losses on gold receivables"
     financial_effect: "Realized gain SAR 10.6m in FY2024; no contract in 2025"
