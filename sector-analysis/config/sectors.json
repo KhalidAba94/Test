@@ -150,6 +150,7 @@
    "PPOP",
    "IMPAIR_TOTAL",
    "IMPAIR_FIN",
+   "ECL_LOANS",
    "NI_ATTR",
    "TA",
    "LOANS",
@@ -174,9 +175,9 @@
     "Return on average assets (YTD annualised)"
    ],
    "COR": [
-    "IMPAIR_FIN",
+    "ECL_LOANS",
     "avg:LOANS",
-    "Cost of risk, bp (YTD annualised)"
+    "Cost of risk, bp (ECL on loans; YTD annualised)"
    ],
    "NSCI_YLD": [
     "NSCI",

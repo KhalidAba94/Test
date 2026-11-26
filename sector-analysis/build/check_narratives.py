@@ -8,7 +8,8 @@ Usage: python check_narratives.py <root_dir>
    policy item. Unresolved references fail the build (exit code 1).
 2. Ratio levels quoted in company narratives ("EBITDA margin ... 54.5%",
    "cost-to-income 29.0%", "ROE 15.1%", "net margin ...") must match the
-   company's calculated ratio for some period within 0.15 pp. Mismatches are
+   company's calculated ratio for some period within 0.15 pp (cost of risk:
+   "N bp" within rounding; a cost-of-risk quote in % is checked to 0.006 pp). Mismatches are
    listed as warnings so the text can be corrected or the basis stated.
 """
 from __future__ import annotations
@@ -30,6 +31,9 @@ RATIO_WORDS = [
     (re.compile(r"operating margin[^.;%]{0,60}?(-?\d{1,3}\.\d)%(?:[^.;%]{0,12}?to (-?\d{1,3}\.\d)%)?", re.I), ["OP_M"]),
     (re.compile(r"cost-to-income[^.;%]{0,60}?(\d{1,3}\.\d)%(?:[^.;%]{0,12}?to (\d{1,3}\.\d)%)?", re.I), ["CI"]),
     (re.compile(r"\bROE\b[^.;%]{0,40}?(-?\d{1,3}\.\d)%(?:[^.;%]{0,12}?to (-?\d{1,3}\.\d)%)?"), ["ROE"]),
+    # cost of risk is quoted in basis points; a percentage quote is flagged too
+    (re.compile(r"cost of risk(?:(?!bp)[^.;%]){0,40}?(\d\.\d\d?)%(?:(?:(?!bp)[^.;%]){0,24}?(?:to|vs) (\d\.\d\d?)%)?", re.I), ["COR"]),
+    (re.compile(r"cost of risk[^.;%]{0,60}?(\d{1,3}) ?bp(?:[^.;%]{0,40}?(?:to|vs|from) (\d{1,3}) ?bp)?", re.I), ["COR_BP"]),
 ]
 
 
@@ -110,7 +114,7 @@ def main(root):
         if not comp:
             continue
         vals = {k: [v for v in comp["ratios"].get(k, {}).values() if isinstance(v, (int, float))] for k in
-                ("EBITDA_M", "EBITDA_M_U", "NET_M", "OP_M", "CI", "ROE")}
+                ("EBITDA_M", "EBITDA_M_U", "NET_M", "OP_M", "CI", "ROE", "COR")}
         for path, text in walk(y):
             if not isinstance(text, str) or ".data_notes" in path or "lfl_basis" in path:
                 continue
@@ -119,12 +123,15 @@ def main(root):
                     for g in (mt.group(1), mt.group(2)):
                         if g is None:
                             continue
-                        x = float(g) / 100
-                        cands = [v for k in keys for v in vals.get(k, [])]
-                        if cands and not any(abs(x - v) <= 0.0015 for v in cands):
+                        bp = keys == ["COR_BP"]
+                        x = float(g) / (10000 if bp else 100)
+                        cands = [v for k in (["COR"] if bp else keys) for v in vals.get(k, [])]
+                        # bp quotes are whole numbers: allow rounding (0.5 bp)
+                        tol = 0.0000501 if bp else (0.00006 if keys == ["COR"] else 0.0015)
+                        if cands and not any(abs(x - v) <= tol for v in cands):
                             warns += 1
                             near = min(cands, key=lambda v: abs(v - x))
-                            print(f"  WARN {name}{path}: '{mt.group(0)[:70]}' {g}% not in calculated {'/'.join(keys)} (nearest {near*100:.1f}%)")
+                            print(f"  WARN {name}{path}: '{mt.group(0)[:70]}' {g}{' bp' if bp else '%'} not in calculated {'/'.join(keys)} (nearest {near*(10000 if bp else 100):.1f}{' bp' if bp else '%'})")
     print(f"ratio quotes: {warns} warning(s)")
     return 1 if unresolved else 0
 

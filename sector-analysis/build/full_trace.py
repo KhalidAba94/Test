@@ -16,6 +16,8 @@ Every row of data/<sector>/facts.csv is classified:
                                 (e.g. a figure computed from printed lines)
   calculated_ok / calculated_diff  calculated fact recomputed from its inputs
   too_small                     under 100 in the reporting unit (not searchable)
+  reconciliation_check          internal check value (label "check: ..."), not a
+                                published figure; nonzero differences are listed
   not_found                     needs manual review
 Writes data/trace/full_trace.csv and prints a summary.
 """
@@ -33,6 +35,7 @@ from functools import lru_cache
 
 STATEMENT_WORDS = re.compile(r"statement of (profit|income|financial position|cash flows|comprehensive)|balance sheet|income statement", re.I)
 SECTOR_DIR = {"Energy": "Energy", "Banks": "Banks"}
+HOLDING = {"2030"}   # investment holding: investment results kept in operating income (derive.py)
 
 
 @lru_cache(maxsize=None)
@@ -105,6 +108,15 @@ def find_ocr(cache, rel, ns, tol=1):
     return sorted(set(st)), sorted(set(other))
 
 
+def page_has(arch, cache, rel, page, n):
+    """True if the number n is printed on the given page (text layer or OCR, OCR +-1)."""
+    pages = text_pages(os.path.join(arch, rel))
+    if 1 <= page <= len(pages) and re.search(r"(?<![\d,.])" + re.escape(f"{n:,}") + r"(?![\d,]|\.\d)", pages[page - 1]):
+        return True
+    dg = ocr_digit_sets(cache, rel).get(page)
+    return bool(dg) and any(str(n + k) in dg[0] for k in (-1, 0, 1))
+
+
 def locate(arch, cache, rel, ns):
     pdf = os.path.join(arch, rel)
     st, ot = find_text(pdf, ns)
@@ -142,6 +154,12 @@ def main(root, arch, parsed, cache):
             r["_sector"] = sector
             facts.append(r)
     idx = {(r["ticker"], r["period"], r["metric_code"]): r for r in facts}
+    ecl_notes = {}
+    ep = os.path.join(root, "data", "banks", "ecl_loans.csv")
+    if os.path.exists(ep):
+        for e in csv.DictReader(open(ep, encoding="utf-8")):
+            ecl_notes[(e["ticker"], e["period"])] = e
+    oneoffs = list(csv.DictReader(open(os.path.join(root, "data", "one_offs.csv"), encoding="utf-8")))
     company_pdfs = defaultdict(list)
     for sector in SECTOR_DIR.values():
         for pdf in glob.glob(os.path.join(arch, sector, "*", "*.pdf")):
@@ -163,6 +181,37 @@ def main(root, arch, parsed, cache):
             v = None
         unit = r.get("unit_original", "")
         ns = variants(v, unit) if v is not None else []
+        if r.get("line_item_label", "").startswith("check:"):
+            x = float(r["value_sar_m"])
+            res["trace_status"] = "reconciliation_check"
+            res["detail"] = r["line_item_label"] + ("; reconciles (0)" if abs(x) < 0.0005 else f"; difference {x:,.3f}")
+            out.append(res)
+            continue
+        if r["metric_code"] == "ECL_LOANS" and (r["ticker"], r["period"]) in ecl_notes:
+            en = ecl_notes[(r["ticker"], r["period"])]
+            rel = f"Banks/{en['source_pdf']}"
+            res["pdf_used"] = rel
+            comps = [int(x.replace(",", "")) for x in re.findall(r"(?<![\d.])\d{1,3}(?:,\d{3})+(?![\d])", en["basis_note"])]
+            pg = int(en["page"]) if en["page"].isdigit() else None
+            on_page = lambda n: pg is not None and any(page_has(arch, cache, rel, q, n) for q in (pg, pg - 1, pg + 1))
+            vals = [n for n in variants(float(r["value_sar_m"]) * 1000, "") + ns if n >= 1000]
+            if vals and any(on_page(n) for n in vals):
+                res["trace_status"], res["pages"], res["detail"] = "text_other", str(pg), "value printed in the credit-risk note"
+                out.append(res)
+                continue
+            # value not printed as such: the main computation (first two figures of the basis note) must be on the page
+            comps = [c for c in comps if c >= 1000][:2]
+            found = [c for c in comps if on_page(c)]
+            miss = [c for c in comps if c not in found]
+            if comps and not miss:
+                res["trace_status"], res["pages"] = "components_found", str(pg or "")
+                res["detail"] = f"computed from note figures {', '.join(f'{c:,}' for c in comps)}, both found on p.{pg}" + ("" if r["provenance"] != "C" else "; derived figure")
+            elif r["provenance"] == "C":
+                res["trace_status"], res["pages"], res["detail"] = "calculated_rule", str(pg or ""), "derived in data/banks/ecl_loans.csv: " + en["basis_note"][:200]
+            else:
+                res["trace_status"], res["pages"], res["detail"] = "not_found", str(pg or ""), "note components not all re-found on the stated page: " + ", ".join(f"{c:,}" for c in miss)
+            out.append(res)
+            continue
         if (prov == "C" or r.get("line_item_label", "").startswith("calc:")) and not note.startswith("OVERRIDE"):
             res["trace_status"] = "calculated"
             res["detail"] = loc
@@ -245,6 +294,11 @@ def main(root, arch, parsed, cache):
         "FCF": lambda g: g("CFO") - g("CAPEX"),
         "REV_M": lambda g: g("REV") + g("OIRS", 0.0),
         "EBITDA_C": lambda g: g("OPINC") + g("DA_CF", 0.0) + g("IMPAIR_CF", 0.0),
+        "OPINC": lambda g: g("PBT") + g("FIN_COST", 0.0) - g("FIN_INC", 0.0) - (0.0 if g.t in HOLDING else g("SHARE_JV", 0.0)),
+        "EBITDA_U": lambda g: g("EBITDA_C") - sum(float(o["amount_sar_m"]) * (1 if o["direction"] == "gain" else -1)
+                                                  for o in oneoffs if o["ticker"] == g.t and o["period"] == g.p and o["in_metric"] == "OPINC"),
+        "EQ_ATTR": lambda g: g("TE"),
+        "NI_ATTR": lambda g: g("NI"),
     }
     for res in out:
         if res["trace_status"] != "calculated":
@@ -253,13 +307,18 @@ def main(root, arch, parsed, cache):
         if not fn:
             res["trace_status"] = "calculated_rule"
             continue
-        def g(m, default=None, t=res["ticker"], p=res["period"]):
-            x = idx.get((t, p, m))
-            if x is None or x["value_sar_m"] in ("", None):
-                if default is None:
-                    raise KeyError(m)
-                return default
-            return float(x["value_sar_m"])
+        class G:
+            def __init__(s, t, p):
+                s.t, s.p = t, p
+
+            def __call__(s, m, default=None):
+                x = idx.get((s.t, s.p, m))
+                if x is None or x["value_sar_m"] in ("", None):
+                    if default is None:
+                        raise KeyError(m)
+                    return default
+                return float(x["value_sar_m"])
+        g = G(res["ticker"], res["period"])
         try:
             calc = fn(g)
             ok = abs(calc - float(res["value_sar_m"])) <= max(0.01, abs(calc) * 1e-6)

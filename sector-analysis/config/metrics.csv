@@ -21,7 +21,7 @@ FEES,Banks,Net fee & commission income,P&L,SAR m,sum,As reported.,
 OTH_OI,Banks,Other operating income,P&L,SAR m,sum,"TOI less NSCI less fees (FX, trading, investment, dividend, other) (C).",TOI - NSCI - FEES
 OPEX_PRE,Banks,Operating expenses before impairment,P&L,SAR m,sum,Total operating expenses excluding ECL and other impairment charges (C where filing includes impairments).,
 IMPAIR,Banks,Impairment charges (net),P&L,SAR m,sum,"Net ECL and other impairment charges, total.",
-IMPAIR_FIN,Banks,Impairment charge on financing,P&L,SAR m,sum,"Net expected-credit-loss charge on loans/financing (net of recoveries). The income-statement basis differs by bank (some include other financial assets or real-estate items), so cross-bank comparison is approximate; each bank's basis is listed in the Banks sector data notes.",
+IMPAIR_FIN,Banks,Credit-loss line on the income statement,P&L,SAR m,sum,"The income-statement impairment line(s) for credit losses as tagged in XBRL. Its scope differs by bank (some include investments, other financial assets, off-balance-sheet items or real-estate losses), so it is NOT used for cost of risk; see ECL_LOANS.",
 PPOP,Banks,Pre-provision operating profit,P&L,SAR m,sum,TOI less pre-impairment operating expenses (C).,TOI - OPEX_PRE
 CI,Banks,Cost-to-income ratio,Ratio,%,ratio of totals,Pre-impairment operating expenses / TOI.,OPEX_PRE / TOI
 TA,Banks,Total assets,Balance sheet,SAR m,sum,Period-end.,
@@ -32,7 +32,7 @@ T1_SUKUK,Banks,Tier 1 sukuk,Balance sheet,SAR m,sum,Period-end carrying amount o
 T1_COST,Banks,Tier 1 sukuk distributions,Equity,SAR m,sum,Distributions on Tier 1 sukuk charged to equity in the period.,
 ROE_C,Banks,Return on ordinary equity (calculated),Ratio,%,ratio of totals,(NI_ATTR - T1_COST) / average (EQ_ATTR - T1_SUKUK); YTD annualised x12/months.,(NI_ATTR - T1_COST) / avg(EQ_ATTR - T1_SUKUK)
 ROE_REP,Banks,ROE (company definition),Ratio,%,not aggregated,As disclosed by the bank; definitions differ; reference only.,
-COR,Banks,Cost of risk,Ratio,%,ratio of totals,IMPAIR_FIN / average LOANS; YTD annualised. Shown in basis points (1 bp = 0.01%). Approximately comparable across banks: see the IMPAIR_FIN basis note.,IMPAIR_FIN / avg(LOANS)
+COR,Banks,Cost of risk,Ratio,%,ratio of totals,"ECL charge on loans and financing (ECL_LOANS, note basis) ÷ average net loans and financing; YTD annualised; shown in basis points (1 bp = 0.01%). Comparable across banks except where labelled (Riyad incl. off-balance-sheet; Albilad gross of recoveries; SNB 9M derived).",ECL_LOANS / avg(LOANS)
 NSCI_YLD,Banks,NSCI margin on average assets (proxy),Ratio,%,ratio of totals,NSCI / average total assets; YTD annualised.,NSCI / avg(TA)
 LDR,Banks,Loan-to-deposit ratio,Ratio,%,ratio of totals,Net financing / customer deposits (period-end).,LOANS / DEPOSITS
 KPI_PROD,Energy,Hydrocarbon production,KPI,mboe/d,not aggregated,Company-disclosed total hydrocarbon production.,
@@ -67,3 +67,4 @@ SCE,Banks,Special commission expense / return on deposits,P&L,SAR m,sum,Gross sp
 SCI_GROSS,Banks,Gross special commission / financing income,P&L,SAR m,sum,Gross special commission (or financing and investment) income before the expense on deposits; supporting line for the margin analysis.,
 ZAKAT_TAX,All,Zakat and income tax,P&L,SAR m,sum,Zakat plus income tax charged in the income statement (continuing operations).,
 SHARE_JV,All,Share of results of joint ventures and associates,P&L,SAR m,sum,Equity-accounted share of profit or loss of joint ventures and associates.,
+ECL_LOANS,Banks,ECL charge on loans and financing (note basis),P&L,SAR m,sum,"Expected-credit-loss charge for the period on loans, advances and financing to customers only, net of recoveries of amounts written off, read from each bank's credit-risk note; excludes investments, due from banks and (where separable) off-balance-sheet commitments. The comparable cost-of-risk numerator. Residual differences are labelled per bank: Riyad includes off-balance-sheet commitments (not separable); SNB 9M figures are derived and include them; Albilad is gross of recoveries (not disclosed); SAIB 9M 2026 is approximate.",

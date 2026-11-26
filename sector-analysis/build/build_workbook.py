@@ -160,13 +160,13 @@ def company_rows(sector):
                 ("NSCI", "Net special commission / financing income", "val"), ("FEES_NET", "Net fee & commission income", "val"),
                 ("OTHER_OI", "Other operating income (C)", "val"), ("OPEX_PRE", "Operating expenses before impairment", "val"),
                 ("PPOP", "Pre-provision operating profit (C)", "val"), ("IMPAIR_TOTAL", "Impairment charges (total)", "val"),
-                ("IMPAIR_FIN", "  of which on financing (ECL)", "val"), ("NI_ATTR", "Net profit attributable to shareholders", "val"),
+                ("IMPAIR_FIN", "  credit-loss line on the income statement", "val"), ("ECL_LOANS", "  ECL on loans and financing (note basis)", "val"), ("NI_ATTR", "Net profit attributable to shareholders", "val"),
                 ("NI_ATTR", "  growth YoY", "growth"), ("TA", "Total assets (period-end)", "val"),
                 ("LOANS", "Net financing (period-end)", "val"), ("DEPOSITS", "Customer deposits (period-end)", "val"),
                 ("EQ_ATTR", "Equity attributable incl. Tier 1 sukuk", "val"), ("T1_SUKUK", "Tier 1 sukuk (period-end)", "val"),
                 ("T1_COST", "Tier 1 sukuk distributions", "val"), ("EQ_ORD", "Ordinary equity (C)", "val")]
         ratios = [("Cost-to-income", "OPEX_PRE", "TOI", False), ("ROE on ordinary equity (YTD annualised)", "NI_ATTR-T1_COST", "EQ_ORD", True),
-                  ("ROA (YTD annualised)", "NI_ATTR", "TA", True), ("Cost of risk, bp (YTD annualised)", "IMPAIR_FIN", "LOANS", True),
+                  ("ROA (YTD annualised)", "NI_ATTR", "TA", True), ("Cost of risk, bp (ECL on loans; YTD annualised)", "ECL_LOANS", "LOANS", True),
                   ("NSCI / avg assets (YTD annualised)", "NSCI", "TA", True), ("Net fees / TOI", "FEES_NET", "TOI", False),
                   ("Loans / deposits", "LOANS", "DEPOSITS", False)]
     return rows, ratios
@@ -275,7 +275,7 @@ def build_company(wb, sector, t, cfg, ds, narr, adj_rows, facts_idx, sheetname, 
             else:
                 d = f"{col}{rowmap[den]}"
                 cond = f"AND(ISNUMBER({col}{rowmap[den]}),ISNUMBER({col}{rowmap[num.split('-')[0]]}))"
-            if den == "LOANS" and num == "IMPAIR_FIN":
+            if den == "LOANS" and num == "ECL_LOANS":
                 ws[f"{col}{r}"] = f'=IF({cond},IF({d}<>0,{n}{ann}/{d}*10000,""),"")'
                 ws[f"{col}{r}"].number_format = BP
                 ws[f"{col}{r}"].font = f(size=9)
@@ -360,7 +360,8 @@ def build_company(wb, sector, t, cfg, ds, narr, adj_rows, facts_idx, sheetname, 
         r = para(ws, r, f'• {d.get("period", "")}: {d.get("driver", "")}  [{d.get("source", "")}]')
     ones = pm.get("one_offs", []) or []
     if ones:
-        header_row(ws, r, ["One-off item", "Period", "Amount SAR m", "P&L line", "Source"], fill=SUB_FILL, color=BLACK)
+        r = para(ws, r, "Amounts are pre-tax as disclosed. Reported profit is kept: an item is taken out of net profit only where the filing gives its tax or zakat effect and the minority share (column F).")
+        header_row(ws, r, ["One-off item", "Period", "Amount SAR m", "P&L line", "Source", "Tax and minority share"], fill=SUB_FILL, color=BLACK)
         r += 1
         for o in ones:
             ws.cell(row=r, column=1, value=o.get("item", "")).font = f(size=9)
@@ -371,7 +372,10 @@ def build_company(wb, sector, t, cfg, ds, narr, adj_rows, facts_idx, sheetname, 
             c.number_format = NUM1; c.font = f(color=BLUE, size=9)
             ws.cell(row=r, column=4, value=o.get("line", "")).font = f(size=9)
             ws.cell(row=r, column=5, value=o.get("source", "")).font = f(color=GREY, size=8)
-            ws.row_dimensions[r].height = 26
+            ws.cell(row=r, column=6, value=o.get("tax_nci", "")).font = f(size=8)
+            ws.merge_cells(start_row=r, start_column=6, end_row=r, end_column=12)
+            ws.cell(row=r, column=6).alignment = Alignment(wrap_text=True, vertical="top")
+            ws.row_dimensions[r].height = 26 if len(o.get("tax_nci", "") or "") < 90 else 38
             r += 1
     if not pm:
         r = para(ws, r, "Pending.")

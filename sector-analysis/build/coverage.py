@@ -10,6 +10,13 @@ root = sys.argv[1]
 ds = json.load(open(os.path.join(root, "data", "dataset.json")))
 PER = [("FY2022", "2022", "Annual"), ("FY2023", "2023", "Annual"), ("FY2024", "2024", "Annual"), ("FY2025", "2025", "Annual"),
        ("9M2025", "2025", "Q3"), ("9M2026", "2026", "Q3")]
+# PDFs whose primary-statement pages are image-only (read by OCR): data/trace/scanned_pages.csv
+scanned = {}
+sp = os.path.join(root, "data", "trace", "scanned_pages.csv")
+if os.path.exists(sp):
+    for r in csv.DictReader(open(sp, encoding="utf-8")):
+        if r["statement_pages"]:
+            scanned[r["pdf"]] = r["statement_pages"]
 out = []
 for sector in ("Energy", "Banks"):
     s = sector.lower()
@@ -30,7 +37,8 @@ for sector in ("Energy", "Banks"):
             pdf, xls = d.get("pdf"), d.get("xls")
             have = []
             if pdf:
-                have.append("PDF" + ("(statements scanned)" if "where the primary statements" in pdf.get("status_reason", "") or pdf.get("status_reason", "").startswith("scanned") else ""))
+                stm = scanned.get(f"{sector}/{pdf['source_id']}")
+                have.append("PDF" + (f"(statements scanned, read by OCR: p.{stm})" if stm else ""))
             if xls:
                 have.append("XBRL" if xls.get("status") == "used" else "XBRL(unreadable)")
             metric = "NI_ATTR" if t in ("2030",) else top   # investment holding: no revenue line

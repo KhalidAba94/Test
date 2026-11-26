@@ -55,6 +55,24 @@ def main(sector, facts_csv, overrides_csv, out_csv):
             "assurance": o.get("assurance", ""), "n_documents": "",
             "note": f'OVERRIDE: {o["reason"]}' + (f' (XBRL value was {prev["value_sar_m"]})' if prev else ""),
         }
+    # 2b. bank ECL on loans and financing from the credit-risk notes (comparable cost-of-risk numerator)
+    ecl_path = os.path.join(os.path.dirname(os.path.abspath(out_csv)), "ecl_loans.csv")
+    if sector == "Banks" and os.path.exists(ecl_path):
+        for e in load(ecl_path):
+            if e["value_sar_m"] in ("", None):
+                continue
+            key = (e["ticker"], e["period"], "ECL_LOANS")
+            ref = facts.get((e["ticker"], e["period"], "IMPAIR_FIN")) or {}
+            facts[key] = {
+                "fact_id": "-".join(key), "sector": sector, "ticker": e["ticker"], "company": companies.get(e["ticker"], ""),
+                "period": e["period"], "period_end": ref.get("period_end", ""), "period_months": MONTHS.get(e["period"], ""),
+                "metric_code": "ECL_LOANS", "value_sar_m": float(e["value_sar_m"]), "value_original": "", "unit_original": "",
+                "currency_original": "SAR", "provenance": e["provenance"], "source_id": e["source_pdf"],
+                "location": f'PDF p.{e["page"]}', "line_item_label": e["basis_note"][:200], "reported_in_filing": e["source_pdf"],
+                "original_value": "", "original_source": "", "assurance": ref.get("assurance", ""), "n_documents": "",
+                "pdf_file": e["source_pdf"], "pdf_status": "manual_confirmed", "pdf_pages": e["page"],
+                "note": f'Basis: {e["basis"].replace("_", " ")}' + (f'; {e["flags"]}' if e["flags"] else "") + ". Read from the credit-risk note by an independent analyst.",
+            }
     val = lambda t, p, m: (float(facts[(t, p, m)]["value_sar_m"]) if (t, p, m) in facts and facts[(t, p, m)]["value_sar_m"] not in ("", None) else None)
 
     def add(t, p, m, v, formula, inputs):
