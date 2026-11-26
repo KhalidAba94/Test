@@ -136,9 +136,10 @@ def main(sector, facts_csv, overrides_csv, out_csv):
                             [(p, "CAPEX"), (p, "IP_CAPEX")])
                 if val(t, p, "DEBT") is not None and val(t, p, "CASH") is not None:
                     lease = val(t, p, "LEASE_LIAB")
-                    add(t, p, "NET_DEBT", val(t, p, "DEBT") + (lease or 0.0) - val(t, p, "CASH"),
-                        "DEBT + LEASE_LIAB - CASH" + ("" if lease is not None else " (no lease liabilities tagged: borrowings only)"),
-                        [(p, "DEBT"), (p, "LEASE_LIAB"), (p, "CASH")])
+                    dep = val(t, p, "ST_DEP")   # short-term bank deposits outside cash equivalents (where the company holds them)
+                    add(t, p, "NET_DEBT", val(t, p, "DEBT") + (lease or 0.0) - val(t, p, "CASH") - (dep or 0.0),
+                        "DEBT + LEASE_LIAB - CASH" + (" - short-term deposits" if dep else "") + ("" if lease is not None else " (no lease liabilities tagged: borrowings only)"),
+                        [(p, "DEBT"), (p, "LEASE_LIAB"), (p, "CASH"), (p, "ST_DEP")])
             if tpl == "reit":
                 # REITs: rental revenue is the margin base; FFO = net income + depreciation + impairment of investment
                 # properties (non-cash), unless the fund reports FFO itself (then the reported figure is an override)
@@ -149,7 +150,9 @@ def main(sector, facts_csv, overrides_csv, out_csv):
                         "NI + depreciation + impairment of investment properties - gains on property disposals (funds from operations, calculated)",
                         [(p, "NI"), (p, "DA_CF"), (p, "IMPAIR_CF"), (p, "GAIN_DISP")])
                 if val(t, p, "DEBT") is not None and val(t, p, "CASH") is not None:
-                    add(t, p, "NET_DEBT", val(t, p, "DEBT") - val(t, p, "CASH"), "DEBT - CASH", [(p, "DEBT"), (p, "CASH")])
+                    dep = val(t, p, "ST_DEP")
+                    add(t, p, "NET_DEBT", val(t, p, "DEBT") - val(t, p, "CASH") - (dep or 0.0), "DEBT - CASH" + (" - short-term deposits" if dep else ""),
+                        [(p, "DEBT"), (p, "CASH"), (p, "ST_DEP")])
             if tpl == "bank":
                 if val(t, p, "TOI") is not None and val(t, p, "OPEX_PRE") is not None:
                     add(t, p, "PPOP", val(t, p, "TOI") - val(t, p, "OPEX_PRE"), "TOI - OPEX_PRE", [(p, "TOI"), (p, "OPEX_PRE")])
@@ -216,7 +219,7 @@ def main(sector, facts_csv, overrides_csv, out_csv):
     # part of any published comparison and were not checked against the PDFs
     cfgs = sectors.raw(root).get(sector, {})
     if cfgs.get("fy2021_balance_only"):
-        BAL = {"TA", "TE", "EQ_ATTR", "CASH", "DEBT", "LEASE_LIAB", "NET_DEBT", "NAV_FV", "LOANS", "DEPOSITS", "T1_SUKUK", "EQ_ORD"}
+        BAL = {"TA", "TE", "EQ_ATTR", "CASH", "ST_DEP", "DEBT", "LEASE_LIAB", "NET_DEBT", "NAV_FV", "LOANS", "DEPOSITS", "T1_SUKUK", "EQ_ORD"}
         facts = {k: r for k, r in facts.items() if not (k[1] == "FY2021" and k[2] not in BAL)}
     out = sorted(facts.values(), key=lambda r: (r["ticker"], r["period"], r["metric_code"]))
     fields = ["fact_id", "sector", "ticker", "company", "period", "period_end", "period_months", "metric_code",

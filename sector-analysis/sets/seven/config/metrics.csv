@@ -1,85 +1,51 @@
-metric_code,sector,name,category,unit,aggregation,definition,formula
-REV,Energy,Revenue,P&L,SAR m,sum,Revenue as reported (IFRS 15). Company-specific top-line definitions are documented on the company sheet.,
-GP,Energy,Gross profit,P&L,SAR m,sum,"Revenue less cost of sales, as reported.",
-OPINC,All,Operating income,P&L,SAR m,sum,"Operating profit as reported (before finance costs, zakat and tax).",
-DA,Energy,"Depreciation, amortisation & impairment",P&L,SAR m,sum,From the cash-flow statement reconciliation.,
-EBITDA_REP,Energy,EBITDA (company-reported),P&L,SAR m,not aggregated,As disclosed by the company with its own definition; shown for reference only.,
-EBITDA_C,Energy,EBITDA (calculated),P&L,SAR m,sum,"Operating income + depreciation, amortisation & impairment (C).",OPINC + DA
-NI_ATTR,All,Net profit attributable to shareholders,P&L,SAR m,sum,"Net income attributable to equity holders of the parent, after zakat and tax.",
-NI_UNDERLYING,All,Underlying net profit attributable,P&L,SAR m,sum,NI_ATTR less material one-offs identified in the Adjustments register (C).,NI_ATTR - one-offs
-CFO,Energy,Operating cash flow,Cash flow,SAR m,sum,Net cash from operating activities.,
-CAPEX,Energy,Capital expenditure,Cash flow,SAR m,sum,"Purchases of property, plant & equipment and intangibles (cash-flow statement).",
-FCF,Energy,Free cash flow,Cash flow,SAR m,sum,"Operating cash flow less capex (C). For owners of let property (malls), investment-property spend is also deducted.",CFO - CAPEX
-NET_DEBT,Energy,Net debt,Balance sheet,SAR m,sum,"Borrowings incl. lease liabilities less cash and short-term deposits, as reported or calculated (C).",
-GM,Energy,Gross margin,Ratio,%,ratio of totals,Gross profit / revenue.,GP / REV
-EBITDA_M,Energy,EBITDA margin (calculated),Ratio,%,ratio of totals,EBITDA (calculated) / revenue.,EBITDA_C / REV
-OP_M,All,Operating margin,Ratio,%,ratio of totals,Operating income / revenue (Banks: / TOI).,OPINC / REV
-NET_M,All,Net margin,Ratio,%,ratio of totals,Attributable net profit / revenue (Banks: / TOI).,NI_ATTR / REV
-TOI,Banks,Total operating income,P&L,SAR m,sum,As reported; components checked to sum.,
-NSCI,Banks,Net special commission / financing income,P&L,SAR m,sum,Special commission income less expense; Islamic banks' 'net income from financing and investments' mapped here and flagged.,
-FEES,Banks,Net fee & commission income,P&L,SAR m,sum,As reported.,
-OTH_OI,Banks,Other operating income,P&L,SAR m,sum,"TOI less NSCI less fees (FX, trading, investment, dividend, other) (C).",TOI - NSCI - FEES
-OPEX_PRE,Banks,Operating expenses before impairment,P&L,SAR m,sum,Total operating expenses excluding ECL and other impairment charges (C where filing includes impairments).,
-IMPAIR,Banks,Impairment charges (net),P&L,SAR m,sum,"Net ECL and other impairment charges, total.",
-IMPAIR_FIN,Banks,Credit-loss line on the income statement,P&L,SAR m,sum,"The income-statement impairment line(s) for credit losses as tagged in XBRL. Its scope differs by bank (some include investments, other financial assets, off-balance-sheet items or real-estate losses), so it is NOT used for cost of risk; see ECL_LOANS.",
-PPOP,Banks,Pre-provision operating profit,P&L,SAR m,sum,TOI less pre-impairment operating expenses (C).,TOI - OPEX_PRE
-CI,Banks,Cost-to-income ratio,Ratio,%,ratio of totals,Pre-impairment operating expenses / TOI.,OPEX_PRE / TOI
-TA,Banks,Total assets,Balance sheet,SAR m,sum,Period-end.,
-LOANS,Banks,Net financing (loans & advances),Balance sheet,SAR m,sum,"Period-end, net of ECL allowance.",
-DEPOSITS,Banks,Customer deposits,Balance sheet,SAR m,sum,Period-end.,
-EQ_ATTR,Banks,Equity attributable to equity holders,Balance sheet,SAR m,sum,"Period-end, including Tier 1 sukuk.",
-T1_SUKUK,Banks,Tier 1 sukuk,Balance sheet,SAR m,sum,Period-end carrying amount of Additional Tier 1 sukuk classified in equity.,
-T1_COST,Banks,Tier 1 sukuk distributions,Equity,SAR m,sum,Distributions on Tier 1 sukuk charged to equity in the period.,
-ROE_C,Banks,Return on ordinary equity (calculated),Ratio,%,ratio of totals,(NI_ATTR - T1_COST) / average (EQ_ATTR - T1_SUKUK); YTD annualised x12/months.,(NI_ATTR - T1_COST) / avg(EQ_ATTR - T1_SUKUK)
-ROE_REP,Banks,ROE (company definition),Ratio,%,not aggregated,As disclosed by the bank; definitions differ; reference only.,
-COR,Banks,Cost of risk,Ratio,%,ratio of totals,"ECL charge on loans and financing (ECL_LOANS, note basis) ÷ average net loans and financing; YTD annualised; shown in basis points (1 bp = 0.01%). Comparable across banks except where labelled (Riyad incl. off-balance-sheet; Albilad gross of recoveries; SNB 9M derived).",ECL_LOANS / avg(LOANS)
-NSCI_YLD,Banks,NSCI margin on average assets (proxy),Ratio,%,ratio of totals,NSCI / average total assets; YTD annualised.,NSCI / avg(TA)
-LDR,Banks,Loan-to-deposit ratio,Ratio,%,ratio of totals,Net financing / customer deposits (period-end).,LOANS / DEPOSITS
-KPI_PROD,Energy,Hydrocarbon production,KPI,mboe/d,not aggregated,Company-disclosed total hydrocarbon production.,
-KPI_CRUDE,Energy,Crude oil production,KPI,mb/d,not aggregated,Company-disclosed.,
-KPI_PRICE,Energy,Average realised crude price,KPI,USD/bbl,not aggregated,Company-disclosed.,
-KPI_RIGS,Energy,Rig fleet,KPI,count,not aggregated,"Owned/operated rigs at period end, as disclosed.",
-KPI_UTIL,Energy,Fleet utilisation,KPI,%,not aggregated,As disclosed; definition noted per company.,
-KPI_BACKLOG,Energy,Contract backlog,KPI,SAR m,not aggregated,As disclosed.,
-KPI_FLEET,Energy,Vessel fleet,KPI,count,not aggregated,By segment where disclosed.,
-KPI_STATIONS,Energy,Fuel stations,KPI,count,not aggregated,"Period-end network, as disclosed.",
-KPI_VOLUME,Energy,Volumes sold,KPI,as disclosed,not aggregated,Litres / barrels / tonnes as disclosed.,
-OIRS,Energy,Other income related to sales (Aramco),P&L,SAR m,not aggregated,"Government compensation for revenue forgone on regulated domestic prices (Aramco only); shown separately, not in sector revenue.",
-REV_OIRS,Energy,Revenue incl. other income related to sales (Aramco),P&L,SAR m,not aggregated,Aramco's own top line: revenue + other income related to sales (C).,REV + OIRS
-OPINC_REP,Energy,Operating profit (as reported),P&L,SAR m,sum,Operating profit line as printed (function-of-expense statements).,
-PBT,All,Profit before zakat and income tax,P&L,SAR m,sum,As reported.,
-DA_CF,Energy,"Depreciation, amortisation (and impairment where combined), cash-flow",Cash flow,SAR m,sum,Sum of depreciation/amortisation add-backs in the cash-flow reconciliation.,
-IMPAIR_CF,Energy,Impairment add-backs (cash-flow),Cash flow,SAR m,sum,Impairment add-backs in the cash-flow reconciliation.,
-FEES_NET,Banks,Net fee & commission income,P&L,SAR m,sum,Fee lines at the top fee level of the income statement summed (gross fee income + fee expense where both shown) (C where summed).,
-IMPAIR_TOTAL,Banks,Total impairment charges (net),P&L,SAR m,sum,Impairment / provision / credit-loss lines inside total operating expenses.,
-EQ_ORD,Banks,Ordinary shareholders' equity,Balance sheet,SAR m,sum,Equity attributable to equity holders less Tier 1 sukuk (C).,EQ_ATTR - T1_SUKUK
-ROE,All,Return on equity,Ratio,%,ratio of totals,Banks: (NI_ATTR - T1_COST) / avg EQ_ORD; Energy: NI_ATTR / avg EQ_ATTR. YTD annualised x12/9.,
-ROA,Banks,Return on average assets,Ratio,%,ratio of totals,NI_ATTR / average total assets; YTD annualised.,NI_ATTR / avg(TA)
-FEE_SHARE,Banks,Fee share of income,Ratio,%,ratio of totals,Net fees / TOI.,FEES_NET / TOI
-CAPEX_INT,Energy,Capex intensity,Ratio,%,ratio of totals,Capex / revenue.,CAPEX / REV
-REV_M,Energy,Revenue incl. other income related to sales (margin base),P&L,SAR m,sum,"Revenue plus other income related to sales (Aramco's government compensation for regulated domestic prices). Equal to revenue for every company except Aramco. Used as the denominator of Energy margins because that income sits inside operating income, EBITDA and profit (C).",REV + OIRS
-EBITDA_U,Energy,EBITDA excl. identified one-offs,P&L,SAR m,sum,Calculated EBITDA less material one-off gains (or plus one-off losses) listed in the one-offs register with their source page (C).,EBITDA_C - one-offs
-EBITDA_M_U,Energy,EBITDA margin excl. identified one-offs,Ratio,%,ratio of totals,EBITDA excl. identified one-offs / margin base (REV_M).,EBITDA_U / REV_M
-OTHER_OI,Banks,Other operating income,P&L,SAR m,sum,"Total operating income less net special commission (financing) income and net fee and commission income: FX, trading, investment, dividend and other income (C).",TOI - NSCI - FEES_NET
-NI,All,Net profit for the period (incl. non-controlling interests),P&L,SAR m,sum,"Profit for the period after zakat and tax, before allocation to non-controlling interests.",
-TE,All,Total equity (incl. non-controlling interests),Balance sheet,SAR m,sum,"Total equity as reported, including non-controlling interests and (banks) Tier 1 sukuk.",
-SCE,Banks,Special commission expense / return on deposits,P&L,SAR m,sum,Gross special commission (or financing) expense paid on deposits and borrowings; supporting line for the margin analysis.,
-SCI_GROSS,Banks,Gross special commission / financing income,P&L,SAR m,sum,Gross special commission (or financing and investment) income before the expense on deposits; supporting line for the margin analysis.,
-ZAKAT_TAX,All,Zakat and income tax,P&L,SAR m,sum,Zakat plus income tax charged in the income statement (continuing operations).,
-SHARE_JV,All,Share of results of joint ventures and associates,P&L,SAR m,sum,Equity-accounted share of profit or loss of joint ventures and associates.,
-ECL_LOANS,Banks,ECL charge on loans and financing (note basis),P&L,SAR m,sum,"Expected-credit-loss charge for the period on loans, advances and financing to customers only, net of recoveries of amounts written off, read from each bank's credit-risk note; excludes investments, due from banks and (where separable) off-balance-sheet commitments. The comparable cost-of-risk numerator. Residual differences are labelled per bank: Riyad includes off-balance-sheet commitments (not separable); SNB 9M figures are derived and include them; Albilad is gross of recoveries (not disclosed); SAIB 9M 2026 is approximate.",
-DEBT,Corporate,Borrowings,Balance sheet,SAR m,sum,"Interest-bearing borrowings at period end: term loans, sukuk, debt securities and short-term borrowings (current and non-current). Excludes lease liabilities.",
-LEASE_LIAB,Corporate,Lease liabilities,Balance sheet,SAR m,sum,IFRS 16 lease liabilities at period end (current and non-current).,
-CASH,All,Cash and cash equivalents,Balance sheet,SAR m,sum,Cash and cash equivalents (bank balances and cash) at period end.,
-ND_EBITDA,Corporate,Net debt / EBITDA,Ratio,x,ratio of totals,Net debt at period end divided by EBITDA (calculated); 9M EBITDA annualised. Sector ratio = summed net debt / summed EBITDA.,NET_DEBT / EBITDA_C
-GP_M,Corporate,Gross margin,Ratio,%,ratio of totals,Gross profit ÷ revenue. Shown only where the income statement presents gross profit (function-of-expense layout).,GP / REV_M
-FFO,REIT,Funds from operations,P&L,SAR m,sum,"Net income plus depreciation and impairment of investment properties (non-cash) less gains on property disposals, as calculated; where the fund reports its own FFO, the reported figure and its definition are used and labelled.",NI + DA_CF + IMPAIR_CF - GAIN_DISP
-DIST,REIT,Distributions declared,Equity,SAR m,sum,Cash distributions to unitholders declared for the period (statement of changes in net assets or fund report).,
-NAV_FV,REIT,Net assets at fair value,Balance sheet,SAR m,sum,Net asset value with investment properties at fair value (the fund reports properties at cost less depreciation and impairment in its statements and discloses the fair-value NAV in a note).,
-FFO_M,REIT,FFO margin,Ratio,%,ratio of totals,Funds from operations ÷ revenue.,FFO / REV
-LTV,REIT,Loan to value (book),Ratio,%,ratio of totals,Borrowings ÷ total assets at period end (book values).,DEBT / TA
-PAYOUT,REIT,Distributions / FFO,Ratio,%,ratio of totals,Distributions declared ÷ funds from operations.,DIST / FFO
-GAIN_DISP,REIT,Gain on disposal of properties,P&L,SAR m,sum,Gain (loss) on sale of investment properties included in net income; excluded from revenue and deducted in FFO.,
-IP_CAPEX,Corporate,Investment-property spend,Cash flow,SAR m,sum,"Cash spent on investment properties (acquisitions, development and additions), from the investing cash flow. Shown separately from capex for owners of malls and other let property; free cash flow deducts it.",
-CAPEX_TOT,Corporate,Capex incl. investment property,Cash flow,SAR m,sum,"Capex plus investment-property spend (C). Used for the capex intensity of mall operators, whose investment goes mainly into let property.",CAPEX + IP_CAPEX
-FV_IP,Corporate,Fair-value gains on investment properties,P&L,SAR m,sum,Unrealised fair-value gains (losses negative) on investment properties recognised in profit by companies using the fair-value model. Excluded from EBITDA because they are non-cash remeasurements; they stay in operating income and net profit.,
+metric_code,applies_to,name,category,unit,aggregation,definition,formula
+REV,All,Revenue,Income statement,SAR m,sum,"IFRS revenue, the total revenue line. REITs: rental income plus other property operating income (hotel revenue, service charges, finance-lease income on leased property); finance income, fair-value and disposal gains, dividends and other income are excluded.",
+GP,Operating companies,Gross profit,Income statement,SAR m,sum,"Revenue less cost of revenue, where the income statement presents gross profit; blank for nature-of-expense layouts.",
+PBT,All,Profit before zakat and income tax,Income statement,SAR m,sum,As reported (continuing operations).,
+FIN_COST,Operating companies,Finance costs,Income statement,SAR m,sum,"Finance costs as shown on the face of the income statement (including interest on lease liabilities). Where a company shows only a net finance line, it is used as reported (noted on the company sheet).",
+FIN_INC,Operating companies,Finance income,Income statement,SAR m,sum,Finance income as shown on the face of the income statement.,
+SHARE_JV,Operating companies,Share of results of associates and joint ventures,Income statement,SAR m,sum,Equity-accounted share of profit or loss of associates and joint ventures.,
+OPINC,Operating companies,Operating income (calculated),Income statement,SAR m,sum,"One definition for every company (C): profit before zakat and tax + finance costs − finance income − share of associates and joint ventures. Other gains and losses printed below the company's own operating profit (FX, fair-value results, disposal gains) are therefore inside it; material ones are listed in the One_offs register.",PBT + FIN_COST − FIN_INC − SHARE_JV
+DA_CF,Operating companies,Depreciation and amortisation (cash flow),Cash flow,SAR m,sum,"All depreciation and amortisation add-backs in the cash-flow reconciliation, including right-of-use assets and, where present, biological assets.",
+IMPAIR_CF,Operating companies,Impairment of non-financial assets (cash flow),Cash flow,SAR m,sum,"Impairments and reversals of property, plant and equipment, intangibles, goodwill, investment property and equity-accounted investments, from the cash-flow reconciliation. Expected credit losses on receivables and other provisions are excluded.",
+FV_IP,Operating companies,Fair-value gains on investment property,Income statement,SAR m,sum,"Unrealised fair-value gains (losses negative) on investment property, for companies using the fair-value model (Cenomi Centers). Inside operating income, excluded from EBITDA.",
+EBITDA_C,Operating companies,EBITDA (calculated),Income statement,SAR m,sum,Operating income (calculated) + depreciation and amortisation + impairments of non-financial assets − fair-value gains on investment property (C). Before rent under IFRS 16.,OPINC + DA_CF + IMPAIR_CF − FV_IP
+EBITDA_U,Operating companies,EBITDA excl. identified one-offs,Income statement,SAR m,sum,"EBITDA (calculated) less one-off gains, plus one-off losses, listed in the One_offs register with their source page (C).",EBITDA_C − one-offs
+ZAKAT_TAX,All,Zakat and income tax,Income statement,SAR m,sum,Zakat plus income tax charged in the income statement (continuing operations).,
+NI,All,Net profit for the period,Income statement,SAR m,sum,"Profit for the period after zakat and tax, including non-controlling interests and discontinued operations.",
+NI_ATTR,All,Net profit attributable to shareholders,Income statement,SAR m,sum,Profit attributable to owners of the parent (funds: unitholders). Kept as reported; never adjusted for one-offs unless the filing gives both the tax/zakat effect and the minority share.,
+NI_NCI,Operating companies,Net profit attributable to non-controlling interests,Income statement,SAR m,sum,As reported.,
+CFO,All,Operating cash flow,Cash flow,SAR m,sum,Net cash from operating activities as reported. Companies differ on whether interest paid is inside operating or financing cash flow (noted on each company sheet).,
+CAPEX,Operating companies,Capital expenditure,Cash flow,SAR m,sum,"Cash purchases of property, plant and equipment and intangible assets. Excludes right-of-use additions, key money, biological assets, investment property, investments and business acquisitions.",
+IP_CAPEX,Operating companies,Investment-property spend,Cash flow,SAR m,sum,"Cash spent on investment property (acquisitions, development and additions), from investing cash flow. Shown for owners of let property; non-cash additions and disposal proceeds are not netted.",
+CAPEX_TOT,Operating companies,Capex incl. investment property,Cash flow,SAR m,sum,Capex plus investment-property spend (C). Used for the capex intensity of the mall operators.,CAPEX + IP_CAPEX
+FCF,Operating companies,Free cash flow,Cash flow,SAR m,sum,Operating cash flow less capex less investment-property spend (C). Lease payments are not deducted (they are financing cash flows under IFRS 16).,CFO − CAPEX − IP_CAPEX
+TA,All,Total assets,Balance sheet,SAR m,sum,Period-end.,
+TE,All,Total equity,Balance sheet,SAR m,sum,"Period-end, including non-controlling interests.",
+EQ_ATTR,All,Equity attributable to shareholders,Balance sheet,SAR m,sum,"Period-end equity attributable to owners of the parent (funds: net assets attributable to unitholders, book value).",
+CASH,All,Cash and cash equivalents,Balance sheet,SAR m,sum,Cash and cash equivalents on the statement of financial position at period end.,
+ST_DEP,All,Short-term bank deposits,Balance sheet,SAR m,sum,"Term, time and murabaha deposits with banks shown in current assets outside cash and cash equivalents. Excludes restricted or pledged deposits, money-market funds and other investments.",
+DEBT,All,Borrowings,Balance sheet,SAR m,sum,"Interest-bearing borrowings at period end, current plus non-current: term loans, murabaha and tawarruq facilities, sukuk, overdrafts and shareholder loans. Excludes lease liabilities.",
+LEASE_LIAB,Operating companies,Lease liabilities,Balance sheet,SAR m,sum,"IFRS 16 lease liabilities, current plus non-current.",
+NET_DEBT,All,Net debt,Balance sheet,SAR m,sum,Operating companies: borrowings + lease liabilities − cash and cash equivalents − short-term bank deposits (C). REITs: borrowings − cash − short-term deposits. Negative = net cash.,DEBT + LEASE_LIAB − CASH − ST_DEP
+FFO,REITs,Funds from operations,Income statement,SAR m,sum,"Net income + depreciation and impairment of real estate (investment property, hotel and other property assets, right-of-use assets) − gains on property disposals (C).",NI + DA_CF + IMPAIR_CF − GAIN_DISP
+GAIN_DISP,REITs,Gain on disposal of properties,Income statement,SAR m,sum,Gain (loss) on sale of investment property included in net income; deducted in FFO.,
+DIST,REITs,Distributions declared,Equity,SAR m,sum,Cash distributions to unitholders declared for the period.,
+NAV_FV,REITs,Net asset value at fair value,Balance sheet,SAR m,sum,"Net assets with investment property at fair value, as the fund reports it (the statements carry property at cost less depreciation and impairment).",
+GP_M,Operating companies,Gross margin,Ratio,%,ratio of totals,Gross profit ÷ revenue.,GP / REV
+EBITDA_M,Operating companies,EBITDA margin,Ratio,%,ratio of totals,EBITDA (calculated) ÷ revenue.,EBITDA_C / REV
+EBITDA_M_U,Operating companies,EBITDA margin excl. identified one-offs,Ratio,%,ratio of totals,EBITDA excl. identified one-offs ÷ revenue.,EBITDA_U / REV
+OP_M,Operating companies,Operating margin,Ratio,%,ratio of totals,Operating income (calculated) ÷ revenue. Can exceed the EBITDA margin where fair-value gains on investment property are inside operating income (Cenomi Centers).,OPINC / REV
+NET_M,All,Net margin,Ratio,%,ratio of totals,Net profit attributable ÷ revenue.,NI_ATTR / REV
+ROE,All,Return on equity (funds: return on net assets),Ratio,%,ratio of totals,Net profit attributable ÷ average of opening and closing attributable equity; 9M and short years annualised (× 12 ÷ months). n.m. on zero or negative average equity; such companies are left out of group ROE.,NI_ATTR / avg(EQ_ATTR)
+CAPEX_INT,Operating companies,Capex intensity,Ratio,%,ratio of totals,Capex ÷ revenue (malls: capex incl. investment-property spend ÷ revenue).,CAPEX / REV
+ND_EBITDA,Operating companies,Net debt / EBITDA,Ratio,x,ratio of totals,Net debt at period end ÷ EBITDA (calculated); 9M and short-year EBITDA annualised. n.m. when annualised EBITDA is below SAR 10m or negative.,NET_DEBT / EBITDA_C
+FFO_M,REITs,FFO margin,Ratio,%,ratio of totals,FFO ÷ revenue.,FFO / REV
+LTV,REITs,Loan to value (book),Ratio,%,ratio of totals,Borrowings ÷ total assets at period end (book values).,DEBT / TA
+PAYOUT,REITs,Payout,Ratio,%,ratio of totals,Distributions declared ÷ FFO.,DIST / FFO
+GROWTH,All,Growth (matched sample),Analysis,%,—,"Group growth uses only companies with figures in both periods. n.m. when the base is below SAR 10m, zero or negative, or a profit turns into a loss.",
+CAGR,All,Compound annual growth 2022–25,Analysis,%,—,(FY2025 ÷ FY2022)^(1/3) − 1. Group CAGR uses companies with figures in every year 2022–2025; n.m. for a company whose span includes a short year.,
+ORGANIC,All,Organic and like-for-like growth,Analysis,%,—,Organic = reported growth − perimeter (acquisitions/disposals) − FX − hyperinflation − accounting changes; like-for-like = organic − revenue from new capacity. 'Not determinable' where the filings do not allow a step to be measured; 'none identified' where they show there was nothing.,
+CONTRIB,All,Contribution to group growth,Analysis,pp,—,"A company's change in the metric ÷ the group's prior-period total (matched sample), in percentage points; contributions add up to group growth.",
+SHARE,All,Share of group,Analysis,%,—,A company's figure ÷ the group total for the same period.,
+HHI,All,Concentration index (HHI),Analysis,"0–10,000",—,"Sum of squared revenue shares × 10,000. Above 2,500 is highly concentrated; 10,000 = one company.",

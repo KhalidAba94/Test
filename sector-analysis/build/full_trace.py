@@ -298,7 +298,7 @@ def main(root, arch, parsed, cache):
         "FCF": lambda g: g("CFO") - g("CAPEX") - g("IP_CAPEX", 0.0),   # owners of let property also deduct investment-property spend
         "CAPEX_TOT": lambda g: g("CAPEX") + g("IP_CAPEX", 0.0),
         "FFO": lambda g: g("NI") + g("DA_CF", 0.0) + g("IMPAIR_CF", 0.0) - g("GAIN_DISP", 0.0),   # REITs
-        "NET_DEBT": lambda g: g("DEBT") + g("LEASE_LIAB", 0.0) - g("CASH"),
+        "NET_DEBT": lambda g: g("DEBT") + g("LEASE_LIAB", 0.0) - g("CASH") - g("ST_DEP", 0.0),
         "REV_M": lambda g: g("REV") + g("OIRS", 0.0),
         "EBITDA_C": lambda g: g("OPINC") + g("DA_CF", 0.0) + g("IMPAIR_CF", 0.0) - g("FV_IP", 0.0),   # fair-value gains on investment property out
         "OPINC": lambda g: g("PBT") + g("FIN_COST", 0.0) - g("FIN_INC", 0.0) - (0.0 if g.t in HOLDING else g("SHARE_JV", 0.0)),

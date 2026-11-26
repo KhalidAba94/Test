@@ -23,6 +23,8 @@ def close(a, b, tol):
     n_checked += 1
     if a in (None, "", "n.m.") and b in (None, "", "n.m."):
         return True
+    if a == "n.a." and b == "n.a.":
+        return True
     try:
         ok = abs(float(a) - float(b)) <= tol * max(1.0, abs(float(b)))
     except (TypeError, ValueError):
@@ -39,7 +41,7 @@ for sector in list(ds.keys()):
     # locate block rows by label
     labels = {}
     block = None
-    for r in range(1, 120):
+    for r in range(1, 400):
         v = ws.cell(row=r, column=1).value
         if isinstance(v, str) and v.startswith("1. Sector totals"):
             block = "all"

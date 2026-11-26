@@ -57,7 +57,7 @@ def main(sectors_json, out_json, *facts_csvs):
                     if r["period"].startswith("FY") and str(r.get("period_months") or "").strip() not in ("", "0", "0.0", "12", "12.0")}
         # balance-sheet amounts at the end of a short year are ordinary point-in-time balances: they stay in sector totals
         # (and serve as opening balances); only the short year's flows are left out
-        STOCK = {"TA", "TE", "EQ_ATTR", "EQ_ORD", "CASH", "DEBT", "LEASE_LIAB", "NET_DEBT", "NAV_FV", "LOANS", "DEPOSITS", "T1_SUKUK"}
+        STOCK = {"TA", "TE", "EQ_ATTR", "EQ_ORD", "CASH", "ST_DEP", "DEBT", "LEASE_LIAB", "NET_DEBT", "NAV_FV", "LOANS", "DEPOSITS", "T1_SUKUK"}
         sfacts = calc.Facts.from_rows([r for r in srows if (r["ticker"], r["period"]) not in ytd_months
                                        and not ((r["ticker"], r["period"]) in short_fy and r["metric_code"] not in STOCK)])
         tickers = list(sc["constituents"].keys())
@@ -167,6 +167,8 @@ def main(sectors_json, out_json, *facts_csvs):
                             dm = d_m[4:]
                             d = calc.avg2(v(t, p, dm), v(t, OPENING[p], dm))
                             n = calc.annualise(n, ytd_true.get((t, p)) or short_fy.get((t, p)) or MONTHS[p]) if n is not None else None
+                            if d is not None and d <= 0:
+                                continue   # zero or negative average equity: the company's own ROE is n.m. and it is left out of the group's
                         elif d_m.startswith("ann:"):
                             d = v(t, p, d_m[4:])
                             d = calc.annualise(d, ytd_true.get((t, p)) or short_fy.get((t, p)) or MONTHS[p]) if d is not None else None
@@ -182,6 +184,8 @@ def main(sectors_json, out_json, *facts_csvs):
                         val = calc.NM   # multiple of negative or immaterial group EBITDA
                     if val is not None and spec[1].startswith("avg:") and dsum <= 0:
                         val = calc.NM   # return on zero or negative group equity
+                    if used and len(used) < -(-len(tk) // 2):
+                        val = "n.a."   # fewer than half the companies have the inputs: no group ratio
                     res[rk][p] = {"v": val, "n": len(used),
                                   "excluded": [t for t in tk if t not in used]}
             return res

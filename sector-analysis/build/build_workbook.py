@@ -155,7 +155,8 @@ def company_rows(sector):
                 ("NI_ATTR", "Net income", "val"), ("NI_ATTR", "  growth YoY", "growth"),
                 ("FFO", "Funds from operations (FFO)", "val"), ("DIST", "Distributions declared", "val"),
                 ("TA", "Total assets (period-end)", "val"), ("DEBT", "Borrowings (period-end)", "val"),
-                ("CASH", "Cash and cash equivalents (period-end)", "val"), ("NET_DEBT", "Net debt (C)", "val"),
+                ("CASH", "Cash and cash equivalents (period-end)", "val"), ("ST_DEP", "Short-term bank deposits (period-end)", "val"),
+                ("NET_DEBT", "Net debt (C; negative = net cash)", "val"),
                 ("EQ_ATTR", "Net assets attributable to unitholders (book, period-end)", "val"),
                 ("NAV_FV", "Net assets at fair value (period-end)", "val")]
         ratios = [("Net margin", "NI_ATTR", "REV_M", False), ("FFO margin", "FFO", "REV_M", False),
@@ -179,7 +180,10 @@ def company_rows(sector):
             rows = [x for x in rows if x[0] not in ("OIRS", "REV_M")]
             i = rows.index(("TA", "Total assets (period-end)", "val"))
             rows[i:i] = [("DEBT", "Borrowings (period-end)", "val"), ("LEASE_LIAB", "Lease liabilities (period-end)", "val"),
-                         ("CASH", "Cash and cash equivalents (period-end)", "val"), ("NET_DEBT", "Net debt (C; negative = net cash)", "val")]
+                         ("CASH", "Cash and cash equivalents (period-end)", "val"),
+                         ("ST_DEP", "Short-term bank deposits (period-end)", "val"), ("NET_DEBT", "Net debt (C; negative = net cash)", "val")]
+            j = rows.index(("CAPEX", "Capex", "val"))
+            rows[j + 1:j + 1] = [("IP_CAPEX", "Investment-property spend", "val"), ("CAPEX_TOT", "Capex incl. investment property (C)", "val")]
             ratios = ratios + [("Net debt / EBITDA (x; 9M EBITDA annualised)", "NET_DEBT", "EBITDA_C", "ann")]
     else:
         rows = [("TOI", "Total operating income (TOI)", "val"), ("TOI", "  growth YoY", "growth"),
@@ -232,16 +236,23 @@ def build_company(wb, sector, t, cfg, ds, narr, adj_rows, facts_idx, sheetname, 
     ws.cell(row=r, column=8).fill = PatternFill(None)
     r += 1
     rows, ratios = company_rows(sector)
+    if sector != "Energy" and TPL.get(sector) in ("corporate", "reit"):
+        # the company ratios mirror the group sheet's ratio list (config), on revenue (REV_M = REV outside Energy)
+        ratios = []
+        for spec in cfg["ratios"].values():
+            den = spec[1].replace("avg:", "").replace("ann:", "").replace("REV_M", "REV")
+            ratios.append((spec[2], spec[0], den, True if spec[1].startswith("avg:") else ("ann" if spec[1].startswith("ann:") else False)))
     rowmap = {}
     for code, label, kind in rows:
         has = any((t, p, code) in facts_idx for p in PCOL)
-        if not has and code in ("OIRS", "REV_M", "GP", "T1_COST", "T1_SUKUK", "DEBT", "LEASE_LIAB", "CASH", "NET_DEBT", "FFO", "DIST", "NAV_FV"):
+        if not has and code in ("OIRS", "REV_M", "GP", "T1_COST", "T1_SUKUK", "DEBT", "LEASE_LIAB", "CASH", "NET_DEBT", "FFO", "DIST", "NAV_FV",
+                                "ST_DEP", "IP_CAPEX", "CAPEX_TOT"):
             continue
         ws.cell(row=r, column=1, value=label).font = f(kind == "val" and not label.startswith("  "), size=9)
         if kind == "val":
             rowmap[code] = r
             for p, col in PCOL.items():
-                if p == "FY2021" and code not in ("TA", "EQ_ATTR", "LOANS", "EQ_ORD", "T1_SUKUK", "DEPOSITS"):
+                if p == "FY2021" and code not in ("TA", "EQ_ATTR", "LOANS", "EQ_ORD", "T1_SUKUK", "DEPOSITS", "TE", "CASH", "ST_DEP", "DEBT", "LEASE_LIAB", "NET_DEBT", "NAV_FV"):
                     ws[f"{col}{r}"].fill = OPEN_FILL
                     continue
                 cell = ws[f"{col}{r}"]
@@ -362,33 +373,59 @@ def build_company(wb, sector, t, cfg, ds, narr, adj_rows, facts_idx, sheetname, 
              ("hyperinflation", "Hyperinflation (IAS 29)"), ("accounting_other", "Accounting / presentation / other"),
              ("new_capacity", "New capacity (organic expansion)")]
     rep_row = r
+    sfy = ds["sector"].get("short_fy", {})
+    short_col = [f"{t}|{a}" in sfy or f"{t}|{b}" in sfy for a, b in PAIRS]   # a comparison across a short year: not meaningful
     ws.cell(row=r, column=1, value="Reported growth").font = f(True, size=9)
     for i, (cc, pc) in enumerate(colpairs):
+        if short_col[i]:
+            c = ws.cell(row=r, column=2 + i, value="n.m.")
+            c.comment = Comment("Not meaningful: one of the two years is a short financial year, so the periods are not comparable (see the data notes).", "analysis")
+            continue
         ws.cell(row=r, column=2 + i, value=growth_formula(f"{cc}{toprow}", f"{pc}{toprow}")).number_format = PCT
     r += 1
+    BAS = {"none identified": "none", "not determinable": "n.d.", "disclosed": "disclosed", "calculated": "calculated", "estimated": "estimated"}
+    SHORTC = {"FY2023/FY2022": "FY23", "FY2024/FY2023": "FY24", "FY2025/FY2024": "FY25", "9M2026/9M2025": "9M26"}
     step_rows = {}
     for key, label in steps:
         if key == "new_capacity" and TPL.get(sector) == "bank":
             label = "New capacity: not applicable to banks (like-for-like = organic)"
         ws.cell(row=r, column=1, value=f"  less: {label}").font = f(size=9)
         step_rows[key] = r
+        bases = []
         for i, comp in enumerate(comps):
             pc = colpairs[i][1]
+            if short_col[i]:
+                ws.cell(row=r, column=2 + i, value="n.m.")
+                continue
+            mine = [a for a in adj_rows if a.get("ticker") == t and a.get("comparison") == comp and a.get("bridge_step") == key]
+            if not mine:
+                ws.cell(row=r, column=2 + i, value="not assessed")   # no register entry: never shown as a zero
+                bases.append(f"{SHORTC[comp]}: not assessed")
+                continue
+            bases.append(f"{SHORTC[comp]}: " + "/".join(sorted({BAS.get(a.get('basis', ''), a.get('basis', '')) for a in mine})))
             amt = f'SUMIFS(Adjustments!$F:$F,Adjustments!$B:$B,"{t}",Adjustments!$C:$C,"{comp}",Adjustments!$D:$D,"{key}")'
             nd = f'COUNTIFS(Adjustments!$B:$B,"{t}",Adjustments!$C:$C,"{comp}",Adjustments!$D:$D,"{key}",Adjustments!$G:$G,"not determinable")'
             ws.cell(row=r, column=2 + i, value=f'=IF({nd}>0,"not determinable",IF(AND(ISNUMBER({pc}{toprow}),N({pc}{toprow})>0),{amt}/{pc}{toprow},""))').number_format = PCT
+        c = ws.cell(row=r, column=6, value=" · ".join(bases))
+        c.font = f(size=8, color=GREY)
         r += 1
     org_row = r
     ws.cell(row=r, column=1, value="Organic growth").font = f(True, size=9)
     for i in range(4):
         col = get_column_letter(2 + i)
         pre = [f"{col}{step_rows[k]}" for k in ("perimeter", "fx", "hyperinflation", "accounting_other")]
-        ws.cell(row=r, column=2 + i, value=f'=IF(OR({",".join(f"ISTEXT({x})" for x in pre)}),"not determinable",IF(ISNUMBER({col}{rep_row}),{col}{rep_row}-{"-".join(pre)},""))').number_format = PCT
+        if short_col[i]:
+            ws.cell(row=r, column=2 + i, value="n.m.")
+            continue
+        ws.cell(row=r, column=2 + i, value=f'=IF(NOT(ISNUMBER({col}{rep_row})),IF(ISTEXT({col}{rep_row}),{col}{rep_row},""),IF(OR({",".join(f"ISTEXT({x})" for x in pre)}),"not determinable",{col}{rep_row}-{"-".join(pre)}))').number_format = PCT
     r += 1
     ws.cell(row=r, column=1, value="Like-for-like growth (existing business)").font = f(True, size=9)
     for i in range(4):
         col = get_column_letter(2 + i)
-        ws.cell(row=r, column=2 + i, value=f'=IF(OR(ISTEXT({col}{org_row}),ISTEXT({col}{step_rows["new_capacity"]})),"not determinable",IF(ISNUMBER({col}{org_row}),{col}{org_row}-{col}{step_rows["new_capacity"]},""))').number_format = PCT
+        if short_col[i]:
+            ws.cell(row=r, column=2 + i, value="n.m.").fill = SUB_FILL
+            continue
+        ws.cell(row=r, column=2 + i, value=f'=IF(NOT(ISNUMBER({col}{org_row})),IF({col}{org_row}="n.m.","n.m.",IF(ISTEXT({col}{org_row}),"not determinable","")),IF(ISTEXT({col}{step_rows["new_capacity"]}),"not determinable",{col}{org_row}-{col}{step_rows["new_capacity"]}))').number_format = PCT
         ws.cell(row=r, column=2 + i).fill = SUB_FILL
     r += 1
     lfl = narr.get("lfl_basis", {}) or {}
@@ -495,10 +532,12 @@ def build_sector(wb, sector, cfg, ds, narr, comp_sheets):
         for part in (spec[0], spec[1].replace("avg:", "").replace("ann:", "")):
             for m in part.split("-"):
                 needed.add(m)
-    needed |= ({"EBITDA_C", "EBITDA_U", "OPINC", "CAPEX", "FCF", "REV_M"} if TPL.get(sector) == "corporate" else
-               {"FFO", "DIST", "REV_M", "NET_DEBT"} if TPL.get(sector) == "reit" else {"NSCI", "FEES_NET", "OPEX_PRE", "IMPAIR_TOTAL", "PPOP"})
+    needed |= ({"EBITDA_C", "EBITDA_U", "OPINC", "CAPEX", "FCF", "REV_M", "CFO", "NET_DEBT"} if TPL.get(sector) == "corporate" else
+               {"FFO", "DIST", "REV_M", "NET_DEBT", "DEBT", "NAV_FV"} if TPL.get(sector) == "reit" else {"NSCI", "FEES_NET", "OPEX_PRE", "IMPAIR_TOTAL", "PPOP"})
+    if TPL.get(sector) == "corporate" and "IP_CAPEX" in cfg.get("table_metrics", []):
+        needed |= {"IP_CAPEX"}
     needed = [m for m in needed if m]
-    base = 200
+    base = 400
     mat = {}
     r = base
     ws.cell(row=r - 1, column=1, value="Calculation block: company x period matrices pulled from Data (inputs to the tables above)").font = f(True, GREY, 9)
@@ -510,7 +549,7 @@ def build_sector(wb, sector, cfg, ds, narr, comp_sheets):
             ws.cell(row=r, column=1, value=f'{ds["companies"][t]["name"]} ({t})').font = f(size=9)
             for p in periods:
                 c = ws[f"{pc[p]}{r}"]
-                STOCK = {"TA", "TE", "EQ_ATTR", "EQ_ORD", "CASH", "DEBT", "LEASE_LIAB", "NET_DEBT", "NAV_FV", "LOANS", "DEPOSITS", "T1_SUKUK"}
+                STOCK = {"TA", "TE", "EQ_ATTR", "EQ_ORD", "CASH", "ST_DEP", "DEBT", "LEASE_LIAB", "NET_DEBT", "NAV_FV", "LOANS", "DEPOSITS", "T1_SUKUK"}
                 if f"{t}|{p}" in ds["sector"].get("ytd_not_9m", {}) or (f"{t}|{p}" in ds["sector"].get("short_fy", {}) and m not in STOCK):
                     c.value = None   # YTD shorter than nine months, or a short year's flows: excluded from sector totals
                     continue
@@ -519,6 +558,30 @@ def build_sector(wb, sector, cfg, ds, narr, comp_sheets):
                 c.font = f(color=GREEN, size=9)
             r += 1
         mat[m] = (first, r - 1)
+    # helper flags: 1 where a company's average (opening + closing) denominator is positive. Group returns on equity
+    # leave out companies with zero or negative average equity (their own ROE is n.m.)
+    for rk, spec in cfg["ratios"].items():
+        if not spec[1].startswith("avg:"):
+            continue
+        dm = spec[1][4:]
+        key = f"POS_{dm}"
+        if key in mat or dm not in mat:
+            continue
+        r += 1
+        header_row(ws, r, [f"{key} (1 = average {dm} positive)"] + periods, fill=SUB_FILL, color=BLACK)
+        r += 1
+        first = r
+        a0, _ = mat[dm]
+        for i, t in enumerate(tickers):
+            ws.cell(row=r, column=1, value=f'{ds["companies"][t]["name"]} ({t})').font = f(size=9)
+            for p in periods:
+                if p == "FY2021":
+                    continue
+                cur, opn = f"{pc[p]}{a0 + i}", f"{pc[OPENING[p]]}{a0 + i}"
+                ws[f"{pc[p]}{r}"] = f'=IF(AND(ISNUMBER({cur}),ISNUMBER({opn})),IF({cur}+{opn}>0,1,0),0)'
+                ws[f"{pc[p]}{r}"].font = f(color=GREY, size=9)
+            r += 1
+        mat[key] = (first, r - 1)
         r += 1
 
     def rng(m, p, exclude=None):
@@ -532,13 +595,29 @@ def build_sector(wb, sector, cfg, ds, narr, comp_sheets):
     r = 5
     sec_rows = {}
 
+    # rows of the totals blocks: the top line and profit (checked against analyze.py) plus the other table metrics the
+    # commentary quotes, so every group figure in the text can be read off the sheet
+    if TPL.get(sector) == "corporate":
+        TOT = [(top, cfg["top_line_name"]), ("EBITDA_C", "EBITDA (calculated)"), ("EBITDA_U", "EBITDA excl. identified one-offs"),
+               (prof, "Net profit attributable to shareholders"), ("CFO", "Operating cash flow"), ("CAPEX", "Capex")]
+        if "IP_CAPEX" in mat:
+            TOT.append(("IP_CAPEX", "Investment-property spend"))
+        TOT += [("FCF", "Free cash flow"), ("NET_DEBT", "Net debt (period-end; negative = net cash)")]
+    elif TPL.get(sector) == "reit":
+        TOT = [(top, cfg["top_line_name"]), (prof, "Net profit attributable to shareholders"), ("FFO", "Funds from operations (FFO)"),
+               ("DIST", "Distributions declared"), ("DEBT", "Borrowings (period-end)"), ("NAV_FV", "Net assets at fair value (period-end)")]
+    else:
+        TOT = [(top, cfg["top_line_name"]), (prof, "Net profit attributable to shareholders")]
+    TOT = [(m, lab) for m, lab in TOT if m in mat]
+
     def totals_block(r, label, excl=None):
         r = section(ws, r, label, 12)
         header_row(ws, r, ["", "FY2022", "FY2023", "FY2024", "FY2025", "CAGR 2022–25", "", f"{yl} 2025", f"{yl} 2026", "YTD change", "Companies (FY2025)"])
         r += 1
         cols = {"FY2022": "B", "FY2023": "C", "FY2024": "D", "FY2025": "E", "9M2025": "H", "9M2026": "I"}
         out = {}
-        for m, lab in ((top, cfg["top_line_name"]), (prof, "Net profit attributable to shareholders")):
+        nblock = len(tickers) - (1 if excl else 0)
+        for m, lab in TOT:
             ws.cell(row=r, column=1, value=lab).font = f(True, size=9)
             for p, col in cols.items():
                 a, b = mat[m]
@@ -580,11 +659,27 @@ def build_sector(wb, sector, cfg, ds, narr, comp_sheets):
             mask = f"--ISNUMBER({c25}),--ISNUMBER({c22}),--ISNUMBER({rng(m, 'FY2023')}),--ISNUMBER({rng(m, 'FY2024')})" + (f",--(ROW({c25})<>{row_of(m, excl)})" if excl else "")
             ws[f"F{vr}"] = f'=IFERROR(IF(AND(SUMPRODUCT({mask},{c22})>=10,SUMPRODUCT({mask},{c25})>0),(SUMPRODUCT({mask},{c25})/SUMPRODUCT({mask},{c22}))^(1/3)-1,"n.m."),"n.m.")'
             ws[f"F{vr}"].number_format = PCT
+            ginfo = ds["sector"]["ex_largest" if excl else "all"].get(m, {}).get("growth", {}).get("CAGR_2022_2025", {})
+            samp = ginfo.get("sample", [])
+            pool = [x for x in tickers if x != excl]
+            if samp is not None and len(samp) < len(pool):
+                left = [ds["companies"][x]["name"] for x in pool if x not in samp]
+                ws[f"F{vr}"].comment = Comment(f"CAGR on the {len(samp)} of {len(pool)} companies with figures in every year 2022–2025; left out: " + ", ".join(left) + " (short year or missing year).", "analysis")
             ws[f"J{vr}"] = f'=IF(ISNUMBER(I{r}),I{r},"n.m.")'
             ws[f"J{vr}"].number_format = PCT
             ws[f"J{vr}"].fill = YTD_FILL
             ws[f"I{r}"].fill = YTD_FILL
             r += 1
+        # how many companies each top-line total covers (a short year or a missing filing leaves a company out)
+        ws.cell(row=r, column=1, value=f"  companies in the {cfg['top_line_name'].lower()} total (of {nblock})").font = f(italic=True, size=9, color=GREY)
+        for p, col in cols.items():
+            cnt = f'SUMPRODUCT(--ISNUMBER({rng(top, p)}))' + (f"-ISNUMBER({pc[p]}{row_of(top, excl)})" if excl else "")
+            ws[f"{col}{r}"] = "=" + cnt
+            ws[f"{col}{r}"].font = f(italic=True, size=9, color=GREY)
+            tinfo = ds["sector"]["ex_largest" if excl else "all"][top]["totals"][p]
+            if tinfo["missing"]:
+                ws[f"{col}{r}"].comment = Comment("Not in this total: " + ", ".join(ds["companies"][x]["name"] for x in tinfo["missing"] if x in ds["companies"]) + ". A short financial year, a period before listing, or a figure the filings do not give.", "analysis")
+        r += 1
         # ratios from totals
         for rk, spec in cfg["ratios"].items():
             ws.cell(row=r, column=1, value=spec[2]).font = f(size=9)
@@ -596,9 +691,13 @@ def build_sector(wb, sector, cfg, ds, narr, comp_sheets):
                 masks = [f"--ISNUMBER({rng(nparts[0], p)})", f"--ISNUMBER({rng(dm, p)})"]
                 if avg:
                     masks.append(f"--ISNUMBER({rng(dm, OPENING[p])})")
+                if avg and f"POS_{dm}" in mat:
+                    masks.append(f"--({rng(f'POS_{dm}', p)}=1)")   # companies with zero or negative average equity are left out
                 if excl:
                     masks.append(f"--(ROW({rng(nparts[0], p)})<>{row_of(nparts[0], excl)})")
                 mk = ",".join(masks)
+                need = -(-nblock // 2)   # a group ratio needs at least half the companies; otherwise "n.a."
+                used_n = f"SUMPRODUCT({mk})"
                 # ROW() offsets differ per matrix: build masks on aligned matrices only (same ticker order)
                 num = f"SUMPRODUCT({mk},{rng(nparts[0], p)})"
                 if len(nparts) > 1:
@@ -614,17 +713,20 @@ def build_sector(wb, sector, cfg, ds, narr, comp_sheets):
                     ws[f"{col}{r}"] = f'=IFERROR(({num}){ann}/({den})*10000,"")'
                     ws[f"{col}{r}"].number_format = BP
                 elif annd:
-                    ws[f"{col}{r}"] = f'=IFERROR(IF(({den})<10,"n.m.",({num})/({den})),"")'
+                    ws[f"{col}{r}"] = f'=IFERROR(IF({used_n}=0,"",IF({used_n}<{need},"n.a.",IF(({den})<10,"n.m.",({num})/({den})))),"")'
                     ws[f"{col}{r}"].number_format = XF
                 elif avg:
-                    ws[f"{col}{r}"] = f'=IFERROR(IF(({den})<=0,"n.m.",({num}){ann}/({den})),"")'
+                    ws[f"{col}{r}"] = f'=IFERROR(IF({used_n}=0,"",IF({used_n}<{need},"n.a.",IF(({den})<=0,"n.m.",({num}){ann}/({den})))),"")'
                     ws[f"{col}{r}"].number_format = PCT2 if rk in ("ROA", "NSCI_YLD") else PCT
                 else:
-                    ws[f"{col}{r}"] = f'=IFERROR(({num}){ann}/({den}),"")'
+                    ws[f"{col}{r}"] = f'=IFERROR(IF({used_n}=0,"",IF({used_n}<{need},"n.a.",({num}){ann}/({den}))),"")'
                     ws[f"{col}{r}"].number_format = XF if rk == "ND_EBITDA" else (PCT2 if rk in ("ROA", "NSCI_YLD") else PCT)
                 rinfo = ds["sector"]["ratios_all" if not excl else "ratios_ex_largest"][rk][p]
                 if rinfo["excluded"]:
-                    ws[f"{col}{r}"].comment = Comment(f'{rinfo["n"]} companies; excluded for missing inputs: ' + ", ".join(ds["companies"][x]["name"] for x in rinfo["excluded"] if x in ds["companies"]), "analysis")
+                    pre = (f"n.a.: only {rinfo['n']} of {nblock} companies have the inputs (at least half are needed for a group ratio). "
+                           if rinfo["v"] == "n.a." else f'{rinfo["n"]} of {nblock} companies. ')
+                    ws[f"{col}{r}"].comment = Comment(pre + "Left out (missing inputs, short year" + (", or zero or negative average equity" if avg else "") + "): "
+                                                      + ", ".join(ds["companies"][x]["name"] for x in rinfo["excluded"] if x in ds["companies"]), "analysis")
                 if p.startswith("9M"):
                     ws[f"{col}{r}"].fill = YTD_FILL
             r += 1
