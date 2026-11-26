@@ -209,6 +209,8 @@ def build_company(wb, sector, t, cfg, ds, narr, adj_rows, facts_idx, sheetname, 
     yl = cfg.get("ytd_label", "9M")   # REIT group: H1 (half-yearly fund reports)
     fy_end = (facts_idx.get((t, "FY2025", top)) or {}).get("period_end", "") or "2025-12-31"
     ytd_m = {p: int(float((facts_idx.get((t, p, top)) or {}).get("period_months") or 9)) for p in ("9M2025", "9M2026")}
+    # true length of every period column: 9M slots as above; a short financial year (e.g. a 9-month transition year) is annualised too
+    pmon = dict(ytd_m, **{p: int(float((facts_idx.get((t, p, top)) or {}).get("period_months") or 12)) for p in ("FY2022", "FY2023", "FY2024", "FY2025")})
     MON = {"03": "31 Mar", "06": "30 Jun", "07": "31 Jul", "09": "30 Sep", "12": "31 Dec"}
     fye_txt = MON.get(fy_end[5:7], fy_end[5:])
     ytd_txt = ("2026 YTD = 9M (1 Jan–30 Sep 2026) vs 9M 2025" if ytd_m["9M2026"] == 9 else
@@ -306,9 +308,9 @@ def build_company(wb, sector, t, cfg, ds, narr, adj_rows, facts_idx, sheetname, 
         for p in ["FY2022", "FY2023", "FY2024", "FY2025", "9M2025", "9M2026"]:
             col = PCOL[p]
             n = numexpr(col)
-            ann = f"*12/{ytd_m[p]}" if p.startswith("9M") and avg is True else ""
+            ann = f"*12/{pmon[p]}" if pmon[p] != 12 and avg is True else ""
             if avg == "ann":
-                d = f"({col}{rowmap[den]}" + (f"*12/{ytd_m[p]})" if p.startswith("9M") else ")")
+                d = f"({col}{rowmap[den]}" + (f"*12/{pmon[p]})" if pmon[p] != 12 else ")")
                 cond = f"AND(ISNUMBER({col}{rowmap[den]}),ISNUMBER({col}{rowmap[num]}))"
                 ws[f"{col}{r}"] = f'=IF({cond},IF({d}>=10,{n}/{d},"n.m."),"")'
                 ws[f"{col}{r}"].number_format = XF

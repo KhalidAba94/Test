@@ -74,13 +74,13 @@ def main(sectors_json, out_json, *facts_csvs):
                 dm = d_m[4:]
                 c, o = v(t, p, dm), v(t, OPENING[p], dm)
                 d = calc.avg2(c, o)
-                n = calc.annualise(n, ytd_true.get((t, p), MONTHS[p])) if n is not None else None
+                n = calc.annualise(n, ytd_true.get((t, p)) or short_fy.get((t, p)) or MONTHS[p]) if n is not None else None
                 if n is not None and d is not None and d <= 0:
                     return calc.NM   # a return on zero or negative average equity (or assets) is not meaningful
             elif d_m.startswith("ann:"):
                 # stock over flow (e.g. net debt / EBITDA): the YTD flow is annualised
                 d = v(t, p, d_m[4:])
-                d = calc.annualise(d, ytd_true.get((t, p), MONTHS[p])) if d is not None else None
+                d = calc.annualise(d, ytd_true.get((t, p)) or short_fy.get((t, p)) or MONTHS[p]) if d is not None else None
                 if n is not None and d is not None and d < calc.MIN_BASE:
                     return calc.NM   # a multiple of negative, zero or immaterial (< SAR 10m a year) EBITDA is not meaningful
             else:
@@ -160,10 +160,10 @@ def main(sectors_json, out_json, *facts_csvs):
                         if d_m.startswith("avg:"):
                             dm = d_m[4:]
                             d = calc.avg2(v(t, p, dm), v(t, OPENING[p], dm))
-                            n = calc.annualise(n, ytd_true.get((t, p), MONTHS[p])) if n is not None else None
+                            n = calc.annualise(n, ytd_true.get((t, p)) or short_fy.get((t, p)) or MONTHS[p]) if n is not None else None
                         elif d_m.startswith("ann:"):
                             d = v(t, p, d_m[4:])
-                            d = calc.annualise(d, ytd_true.get((t, p), MONTHS[p])) if d is not None else None
+                            d = calc.annualise(d, ytd_true.get((t, p)) or short_fy.get((t, p)) or MONTHS[p]) if d is not None else None
                         else:
                             d = v(t, p, d_m)
                         if n is None or d is None:

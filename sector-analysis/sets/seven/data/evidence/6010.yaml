@@ -1,0 +1,500 @@
+# Evidence from NADEC filings (archive 6010_NADEC). Facts only; page = physical PDF page (1-based). Units SAR (not thousands).
+# Primary statements are scanned images in every annual and interim used (FY2025 annual pp8-12; 2026 Q3 pp5-9).
+ticker: '6010'
+company: The National Agricultural Development Company (NADEC)
+perimeter_changes:
+- event: Sale of 30% of Arabian Mills shares in its IPO; joint control lost; remaining stake reclassified from joint venture to FVOCI
+  type: deconsolidation
+  date: '2024'
+  consideration: 145267969
+  revenue_contribution: null
+  profit_contribution: 356513453
+  pro_forma_revenue: null
+  period: FY2024
+  unit: SAR
+  source: 6010_NADEC/2024_Annual_filed2025-03-02.pdf
+  page: 31
+  quote: the Group has lost joint control over Arabian bills and accordingly equity method of accounting to be discontinued
+  note: 'Equity-accounted: no revenue effect. Gain SAR 103.2m on the 30% sold plus SAR 253.3m day-one fair-value gain; consideration = cash "Proceed from sale of investment" (FY2025
+    annual p12).'
+- event: Joint venture AlRaie National Livestock Company set up with United Feed Company (51%)
+  type: new_subsidiary
+  date: '2024'
+  consideration: 2550000
+  revenue_contribution: null
+  profit_contribution: null
+  pro_forma_revenue: null
+  period: FY2024
+  unit: SAR
+  source: 6010_NADEC/2024_Annual_filed2025-03-02.pdf
+  page: 31
+  quote: NADEC's ownership stake will be equivalent to 51% of the company's capital and paid capital of SR 2,550,000.
+  note: Equity-accounted until 31 May 2026.
+- event: Closure of the Sudan and Qatar branches; PP&E written off
+  type: disposal
+  date: '2024'
+  consideration: null
+  revenue_contribution: null
+  profit_contribution: -7200000
+  pro_forma_revenue: null
+  period: FY2024
+  unit: SAR
+  source: 6010_NADEC/2025_Annual_filed2026-02-04.pdf
+  page: 28
+  quote: the Group has written off property, plant, and equipment with a net book value of 7.2 million, primarily related to the Sudan and Qatar branches
+  note: 'Branches of the company, not subsidiaries: treated as organic. Translation reserve of SAR 3.6m recycled on closure in FY2025 (p12).'
+- event: Control of AlRaie National Livestock Company obtained by buying the other 49%
+  type: acquisition
+  date: '2026-05-31'
+  consideration: 23687497
+  revenue_contribution: 9600000
+  profit_contribution: -4100000
+  pro_forma_revenue: 2712000000
+  period: 9M2026
+  unit: SAR
+  source: 6010_NADEC/2026_Q3_filed2026-10-21.pdf
+  page: 19
+  quote: For the nine months ended 30 September 2026, AlRaie contributed revenue of 9.6 million and loss of 4.1 million
+  note: Goodwill SAR 6.1m; total consideration incl. fair value of the previously held 51% SAR 42.0m (p19-20).
+- event: Business combinations FY2022-FY2025
+  type: acquisition
+  status: not found
+  period: FY2022-FY2025
+  source: 6010_NADEC/2025_Annual_filed2026-02-04.pdf
+  page: null
+  quote: No business combination note in the FY2023, FY2024 or FY2025 annual statements; the group is NADEC with foreign branches and one joint venture.
+segments:
+- period: FY2022
+  segment: Dairy and Food
+  basis: operating
+  revenue: 2584034067
+  unit: SAR
+  source: 6010_NADEC/2023_Annual_filed2024-02-21.pdf
+  page: 25
+  note: external revenue
+- period: FY2022
+  segment: Agriculture
+  basis: operating
+  revenue: 110213646
+  unit: SAR
+  source: 6010_NADEC/2023_Annual_filed2024-02-21.pdf
+  page: 25
+  note: external revenue
+- period: FY2022
+  segment: Total
+  basis: operating
+  revenue: 2694247713
+  unit: SAR
+  source: 6010_NADEC/2023_Annual_filed2024-02-21.pdf
+  page: 25
+  note: external revenue
+- period: FY2023
+  segment: Dairy and Beverages (incl. Protein from late Q4 2023)
+  basis: operating
+  revenue: 3080102397
+  unit: SAR
+  source: 6010_NADEC/2024_Annual_filed2025-03-02.pdf
+  page: 25
+  note: external revenue
+- period: FY2023
+  segment: Agriculture
+  basis: operating
+  revenue: 116864140
+  unit: SAR
+  source: 6010_NADEC/2024_Annual_filed2025-03-02.pdf
+  page: 25
+  note: external revenue
+- period: FY2023
+  segment: Total
+  basis: operating
+  revenue: 3196966537
+  unit: SAR
+  source: 6010_NADEC/2024_Annual_filed2025-03-02.pdf
+  page: 25
+  note: external revenue
+- period: FY2024
+  segment: Dairy and Beverages
+  basis: operating
+  revenue: 2971080065
+  unit: SAR
+  source: 6010_NADEC/2025_Annual_filed2026-02-04.pdf
+  page: 25
+  note: external revenue
+- period: FY2024
+  segment: Agriculture
+  basis: operating
+  revenue: 69032993
+  unit: SAR
+  source: 6010_NADEC/2025_Annual_filed2026-02-04.pdf
+  page: 25
+  note: external revenue
+- period: FY2024
+  segment: Protein (frozen and fresh meat)
+  basis: operating
+  revenue: 180287335
+  unit: SAR
+  source: 6010_NADEC/2025_Annual_filed2026-02-04.pdf
+  page: 25
+  note: external revenue
+- period: FY2024
+  segment: Total
+  basis: operating
+  revenue: 3220400393
+  unit: SAR
+  source: 6010_NADEC/2025_Annual_filed2026-02-04.pdf
+  page: 25
+  note: external revenue
+- period: FY2025
+  segment: Dairy and Beverages
+  basis: operating
+  revenue: 2979972273
+  unit: SAR
+  source: 6010_NADEC/2025_Annual_filed2026-02-04.pdf
+  page: 24
+  note: external revenue
+- period: FY2025
+  segment: Agriculture
+  basis: operating
+  revenue: 246831076
+  unit: SAR
+  source: 6010_NADEC/2025_Annual_filed2026-02-04.pdf
+  page: 24
+  note: external revenue
+- period: FY2025
+  segment: Protein
+  basis: operating
+  revenue: 300175346
+  unit: SAR
+  source: 6010_NADEC/2025_Annual_filed2026-02-04.pdf
+  page: 24
+  note: external revenue
+- period: FY2025
+  segment: Total
+  basis: operating
+  revenue: 3526978695
+  unit: SAR
+  source: 6010_NADEC/2025_Annual_filed2026-02-04.pdf
+  page: 24
+  note: external revenue
+- period: 9M2025
+  segment: Dairy and Beverages
+  basis: operating
+  revenue: 2281998597
+  unit: SAR
+  source: 6010_NADEC/2026_Q3_filed2026-10-21.pdf
+  page: 14
+  note: external revenue
+- period: 9M2025
+  segment: Agriculture
+  basis: operating
+  revenue: 186135941
+  unit: SAR
+  source: 6010_NADEC/2026_Q3_filed2026-10-21.pdf
+  page: 14
+  note: external revenue
+- period: 9M2025
+  segment: Protein
+  basis: operating
+  revenue: 217390298
+  unit: SAR
+  source: 6010_NADEC/2026_Q3_filed2026-10-21.pdf
+  page: 14
+  note: external revenue
+- period: 9M2025
+  segment: Total
+  basis: operating
+  revenue: 2685524836
+  unit: SAR
+  source: 6010_NADEC/2026_Q3_filed2026-10-21.pdf
+  page: 14
+  note: external revenue
+- period: 9M2026
+  segment: Dairy and Beverages
+  basis: operating
+  revenue: 2243107703
+  unit: SAR
+  source: 6010_NADEC/2026_Q3_filed2026-10-21.pdf
+  page: 14
+  note: external revenue
+- period: 9M2026
+  segment: Agriculture
+  basis: operating
+  revenue: 93359753
+  unit: SAR
+  source: 6010_NADEC/2026_Q3_filed2026-10-21.pdf
+  page: 14
+  note: external revenue
+- period: 9M2026
+  segment: Protein (incl. AlRaie from 31 May 2026)
+  basis: operating
+  revenue: 367559688
+  unit: SAR
+  source: 6010_NADEC/2026_Q3_filed2026-10-21.pdf
+  page: 14
+  note: external revenue
+- period: 9M2026
+  segment: Total
+  basis: operating
+  revenue: 2704027144
+  unit: SAR
+  source: 6010_NADEC/2026_Q3_filed2026-10-21.pdf
+  page: 14
+  note: external revenue
+- period: FY2022
+  segment: Saudi Arabia
+  basis: geographic
+  revenue: 2399685681
+  unit: SAR
+  source: 6010_NADEC/2023_Annual_filed2024-02-21.pdf
+  page: 25
+- period: FY2022
+  segment: Other Countries
+  basis: geographic
+  revenue: 294562032
+  unit: SAR
+  source: 6010_NADEC/2023_Annual_filed2024-02-21.pdf
+  page: 25
+- period: FY2023
+  segment: Saudi Arabia
+  basis: geographic
+  revenue: 2829356972
+  unit: SAR
+  source: 6010_NADEC/2024_Annual_filed2025-03-02.pdf
+  page: 25
+- period: FY2023
+  segment: Other Countries
+  basis: geographic
+  revenue: 367609565
+  unit: SAR
+  source: 6010_NADEC/2024_Annual_filed2025-03-02.pdf
+  page: 25
+- period: FY2024
+  segment: Saudi Arabia
+  basis: geographic
+  revenue: 2782176789
+  unit: SAR
+  source: 6010_NADEC/2025_Annual_filed2026-02-04.pdf
+  page: 25
+- period: FY2024
+  segment: Other GCC Countries
+  basis: geographic
+  revenue: 304414749
+  unit: SAR
+  source: 6010_NADEC/2025_Annual_filed2026-02-04.pdf
+  page: 25
+- period: FY2024
+  segment: Other Countries
+  basis: geographic
+  revenue: 133808855
+  unit: SAR
+  source: 6010_NADEC/2025_Annual_filed2026-02-04.pdf
+  page: 25
+- period: FY2025
+  segment: Saudi Arabia
+  basis: geographic
+  revenue: 3058389948
+  unit: SAR
+  source: 6010_NADEC/2025_Annual_filed2026-02-04.pdf
+  page: 25
+- period: FY2025
+  segment: Other GCC Countries
+  basis: geographic
+  revenue: 323278092
+  unit: SAR
+  source: 6010_NADEC/2025_Annual_filed2026-02-04.pdf
+  page: 25
+- period: FY2025
+  segment: Other Countries
+  basis: geographic
+  revenue: 145310655
+  unit: SAR
+  source: 6010_NADEC/2025_Annual_filed2026-02-04.pdf
+  page: 25
+- period: 9M2025
+  segment: Saudi Arabia
+  basis: geographic
+  revenue: 2324188082
+  unit: SAR
+  source: 6010_NADEC/2026_Q3_filed2026-10-21.pdf
+  page: 15
+- period: 9M2025
+  segment: Other GCC Countries
+  basis: geographic
+  revenue: 246801017
+  unit: SAR
+  source: 6010_NADEC/2026_Q3_filed2026-10-21.pdf
+  page: 15
+- period: 9M2025
+  segment: Other Countries
+  basis: geographic
+  revenue: 114535737
+  unit: SAR
+  source: 6010_NADEC/2026_Q3_filed2026-10-21.pdf
+  page: 15
+- period: 9M2026
+  segment: Saudi Arabia
+  basis: geographic
+  revenue: 2343012706
+  unit: SAR
+  source: 6010_NADEC/2026_Q3_filed2026-10-21.pdf
+  page: 15
+- period: 9M2026
+  segment: Other GCC Countries
+  basis: geographic
+  revenue: 246920867
+  unit: SAR
+  source: 6010_NADEC/2026_Q3_filed2026-10-21.pdf
+  page: 15
+- period: 9M2026
+  segment: Other Countries
+  basis: geographic
+  revenue: 114093571
+  unit: SAR
+  source: 6010_NADEC/2026_Q3_filed2026-10-21.pdf
+  page: 15
+revenue_drivers:
+- period: FY2024
+  driver: New Protein segment (frozen and fresh meat), started late Q4 2023 inside Dairy and Beverages
+  value: 180287335
+  unit: SAR
+  source: 6010_NADEC/2024_Annual_filed2025-03-02.pdf
+  page: 24
+  quote: The Protein segment operations commenced late in the fourth quarter of the year 2023 and has been classified as part of the Dairy
+- period: FY2022-9M2026
+  driver: Volumes, prices, outlet counts, like-for-like sales
+  value: null
+  unit: null
+  status: not found
+  source: 6010_NADEC/2025_Annual_filed2026-02-04.pdf
+  page: null
+  quote: Not in the financial statements; revenue is given by segment and region only.
+one_offs:
+- period: FY2022
+  item: Write-off / impairment losses on PP&E
+  amount: -10008012
+  unit: SAR
+  pnl_line: Write off/ impairment losses on PP&E
+  recurring: false
+  source: 6010_NADEC/2023_Annual_filed2024-02-21.pdf
+  page: 10
+  quote: Write off/ impairment losses on property, plant and equipment 13 (24,026,362) (10,008,012)
+  note: 'Impairment: outside EBITDA.'
+- period: FY2023
+  item: Write-off of a juice line, dairy-farm assets and a residential villa
+  amount: -24026362
+  unit: SAR
+  pnl_line: Write off/ impairment losses on PP&E
+  recurring: false
+  source: 6010_NADEC/2024_Annual_filed2025-03-02.pdf
+  page: 9
+  quote: Write off/ impairment losses on property, plant and equipment 14 (7,230,569) (24,026,362)
+  note: 'Impairment: outside EBITDA.'
+- period: FY2023
+  item: Zakat reversal related to previous years
+  amount: 26000000
+  unit: SAR
+  pnl_line: Zakat reversal related to previous years
+  recurring: false
+  source: 6010_NADEC/2024_Annual_filed2025-03-02.pdf
+  page: 9
+  quote: Zakat reversal related to previous years 32 - 26,000,000
+- period: FY2024
+  item: Gain from the reclassification of a joint venture (Arabian Mills) to an investment at FVOCI
+  amount: 356513453
+  unit: SAR
+  pnl_line: Gain from the reclassification of a joint venture to an investment at FVOCI
+  recurring: false
+  source: 6010_NADEC/2025_Annual_filed2026-02-04.pdf
+  page: 9
+  quote: Gain from the reclassification of a joint venture to an investment at FVOCI 19.1 - 356,513,453
+- period: FY2025
+  item: Recycling of currency translation reserve on closure of foreign operations
+  amount: 3570471
+  unit: SAR
+  pnl_line: not named
+  recurring: false
+  source: 6010_NADEC/2025_Annual_filed2026-02-04.pdf
+  page: 12
+  quote: Reclassification of currency translation on closure of foreign operations (3,570,471)
+- period: 9M2026
+  item: Reversal of impairment losses on trade and other receivables (allowance SAR 129.4m to 58.4m)
+  amount: 70993981
+  unit: SAR
+  pnl_line: (Impairment losses) / reversal of impairment losses on trade receivables
+  recurring: null
+  source: 6010_NADEC/2026_Q3_filed2026-10-21.pdf
+  page: 6
+  quote: (Impairment losses) / Reversal of impairment losses on trade receivables and other receivables, net 70,993,981
+  note: Ordinary credit-loss provision movement; not called non-recurring in the filing, so not removed (cross-set rule).
+restatements:
+- period_restated: FY2023
+  item: Balance sheet and P&L reclassifications
+  from: 5109759922
+  to: 5052457586
+  unit: SAR
+  reason: receivables netted with payables (57.3m), PP&E to intangibles, treasury income shown separately (note 39)
+  source: 6010_NADEC/2024_Annual_filed2025-03-02.pdf
+  page: 44
+  quote: the Group reclassified some balances as shown below which management considers a more accurate presentation
+- period_restated: FY2024
+  item: Balance sheet, cash flow and P&L reclassifications
+  from: 670020048
+  to: 763209286
+  unit: SAR
+  reason: IAS 8 reclassification of comparatives (CFO +93.2m; capex split from biological assets; write-off moved to other gains/losses) (note 43)
+  source: 6010_NADEC/2025_Annual_filed2026-02-04.pdf
+  page: 45
+  quote: management has reclassified the comparative figures to adjust prior years' financial statements.
+significant_events:
+- date: '2023-10-05'
+  event: CMA approved a SAR 2bn rights issue to fund the 2023-2027 strategy (EGM 5 Nov 2023)
+  financial_effect: share capital SAR 1,016m to 3,016m
+  source: 6010_NADEC/2023_Annual_filed2024-02-21.pdf
+  page: 34
+  quote: the Capital Market Authority (“CMA”) has approved the Company’s application for capital increase.
+- date: '2025'
+  event: Financial guarantee given to the Agricultural Development Fund for AlRaie's loan
+  financial_effect: guarantee liability SAR 82.1m at end-2025
+  source: 6010_NADEC/2026_Q3_filed2026-10-21.pdf
+  page: 18
+  quote: During 2025, the Group has provided financial guarantee to Agricultural Development Fund (ADF) in respect of loan
+- date: '2025'
+  event: Right-of-use additions of SAR 292.8m; lease liabilities rose to SAR 288.8m
+  financial_effect: leases
+  source: 6010_NADEC/2025_Annual_filed2026-02-04.pdf
+  page: 29
+  quote: Additions during 2025 85,053,509 207,735,057 - 292,788,566
+audit_opinion:
+- period: FY2023
+  opinion: unmodified (Ernst & Young)
+  emphasis_of_matter: none
+  source: 6010_NADEC/2023_Annual_filed2024-02-21.pdf
+  page: 3
+- period: FY2024
+  opinion: unmodified (Ernst & Young)
+  emphasis_of_matter: none
+  source: 6010_NADEC/2024_Annual_filed2025-03-02.pdf
+  page: 3
+- period: FY2025
+  opinion: unmodified (KPMG)
+  emphasis_of_matter: none
+  source: 6010_NADEC/2025_Annual_filed2026-02-04.pdf
+  page: 3
+- period: 9M2026
+  opinion: review conclusion unmodified
+  emphasis_of_matter: none
+  source: 6010_NADEC/2026_Q3_filed2026-10-21.pdf
+  page: 4
+kpis_in_filings:
+- period: FY2022-9M2026
+  kpi: herd size, milk volumes, outlets
+  value: null
+  unit: null
+  source: 6010_NADEC/2025_Annual_filed2026-02-04.pdf
+  page: null
+  status: not found
+special_extractions: []
+open_questions:
+- FY2023 revenue of the Protein business (started late Q4 2023 inside Dairy and Beverages) is not disclosed.
+- The 9M2026 reversal of receivable impairments (SAR 71.0m) is not explained in the interim notes; the end-2025 allowance included SAR 85.7m against government subsidies due.
+- The currency of "Other Countries" revenue (4% of FY2025 revenue) is not stated.

@@ -1,0 +1,220 @@
+ticker: '2281'
+headline: >-
+  Revenue grew 15.4% a year from SAR 1,727m (FY2022) to SAR 2,653m (FY2025), but debt-funded expansion and restaurant losses lifted
+  finance costs from SAR 31.2m to SAR 108m and turned FY2025 into an attributable loss of SAR 18.8m; in 9M 2026 revenue rose 18.4% to
+  SAR 2,298m and attributable profit recovered to SAR 23.2m (SAR 3.6m).
+lfl_basis:
+  definition_used: >-
+    Standard bridge on IFRS revenue from continuing operations. Supreme Foods Processing Company (60% sold on 1 Nov 2022, 40% kept as
+    an associate) is a discontinued operation, so its revenue is outside FY2022 and FY2023 alike. Other subsidiaries were set up, not
+    bought. Foreign revenue is mostly in USD-pegged currencies (Bahrain, UAE); Kuwaiti restaurant revenue began in 2025. New capacity
+    is measured only where restaurant revenue by country is disclosed (Bahrain from 2024, Kuwait from 2025); Saudi restaurant openings
+    and poultry capacity are not disclosed, so like-for-like growth is not determinable.
+  perimeter_changes:
+  - event: Sale of 60% of Supreme Foods Processing Company (discontinued operation; 40% kept as an associate)
+    date: '2022-11-01'
+    effect: SFPC revenue (SAR 324.2m for Jan-Oct 2022) excluded from both FY2022 and FY2023 continuing revenue
+    source: 2281_TANMIAH/2023_Annual_filed2024-02-15.pdf p.36, p.8
+  - event: MHP Desert Hills for Poultry set up with MHP SE (55%)
+    date: '2024'
+    effect: greenfield, no acquired revenue
+    source: 2281_TANMIAH/2024_Annual_filed2025-02-20.pdf p.14
+  capacity_changes:
+  - event: Restaurants opened in Bahrain (Nola)
+    date: '2024'
+    effect: SAR 1.7m in FY2024 and SAR 6.1m in FY2025, disclosed
+    source: 2281_TANMIAH/2025_Annual_filed2026-02-19.pdf p.64
+  - event: Restaurants opened in Kuwait
+    date: '2025'
+    effect: SAR 7.9m in FY2025, disclosed
+    source: 2281_TANMIAH/2025_Annual_filed2026-02-19.pdf p.64
+  - event: Saudi restaurant openings, feed mill and processing-plant expansion
+    date: 2023-2026
+    effect: not determinable (no counts or revenue)
+    source: 2281_TANMIAH/2025_Annual_filed2026-02-19.pdf p.63; 2281_TANMIAH/2026_Q3_filed2026-11-12.pdf p.13
+  fx_exposure: >-
+    Bahrain and UAE revenue is in USD-pegged currencies; Kuwaiti restaurant revenue (SAR 7.9m in FY2025) is in Kuwaiti dinars. Exchange
+    differences on foreign-currency liabilities sit inside finance costs (FY2025 loss SAR 8.0m).
+  price_volume_support: 'Not determinable: no poultry volumes, prices or restaurant counts are disclosed.'
+  confidence: Medium (perimeter High; new capacity partly disclosed; like-for-like not determinable)
+price_volume:
+- period: FY2025 vs FY2024
+  text: >-
+    Revenue rose SAR 90.0m (+3.5%). Poultry, food and agriculture rose 1.3% (SAR 2,422m to SAR 2,453m) and restaurant outlets 41.8%
+    (SAR 141m to SAR 201m), of which Kuwait (new) added SAR 7.9m and Bahrain SAR 4.4m. Volumes, prices and restaurant counts are not
+    disclosed.
+  basis: disclosed (segments and countries); split not determinable
+  confidence: High for the amounts
+  source: 2281_TANMIAH/2025_Annual_filed2026-02-19.pdf p.63-64
+  refs:
+  - 2281-FY2025-REV
+  - 2281-FY2024-REV
+- period: 9M 2026 vs 9M 2025
+  text: >-
+    Revenue rose SAR 358m (+18.4%): poultry, food and agriculture rose 17.6% (SAR 1,815m to SAR 2,135m) and restaurant outlets 29.6%
+    (SAR 145m to SAR 188m), so restaurants gave 12% of the increase (we calculate). Sales to the associate SFPC rose to SAR 26.2m (SAR
+    8.1m). Volumes and prices are not disclosed.
+  basis: disclosed (segments); split not determinable
+  confidence: High for the amounts
+  source: 2281_TANMIAH/2026_Q3_filed2026-11-12.pdf p.18, p.21
+  refs:
+  - 2281-9M2026-REV
+  - 2281-9M2025-REV
+profit_and_margin:
+  drivers:
+  - period: FY2023
+    driver: >-
+      Revenue rose 21.2% to SAR 2,093m, with Saudi revenue up 22.6%. Gross margin slipped to 23.6% (24.3%, we calculate) and the EBITDA
+      margin was 12.8%. The associate SFPC lost SAR 6.6m (FY2022 profit SAR 0.3m). Attributable profit fell 59.3% to SAR 75.9m because
+      FY2022 included SAR 114.3m from the discontinued SFPC; on continuing operations it rose from SAR 72.5m. Net margin 3.6%; ROE 12.3%.
+    source: 2281_TANMIAH/2024_Annual_filed2025-02-20.pdf p.8-9, p.62; 2281_TANMIAH/2023_Annual_filed2024-02-15.pdf p.8-9
+    refs:
+    - 2281-FY2023-REV
+    - 2281-FY2023-GP
+    - 2281-FY2023-EBITDA_C
+    - 2281-FY2023-SHARE_JV
+    - 2281-FY2023-NI_ATTR
+  - period: FY2024
+    driver: >-
+      Revenue rose 22.5% to SAR 2,563m and gross margin rose to 25.5%. EBITDA rose 33.4% to SAR 357m, an EBITDA margin of 13.9%. Finance
+      costs doubled to SAR 62.0m (SAR 30.9m) as borrowings rose from SAR 411m to SAR 736m and lease liabilities from SAR 410m to SAR
+      584m. Attributable profit rose 26.2% to SAR 95.8m, a net margin of 3.7%; ROE 14.7%.
+    source: 2281_TANMIAH/2025_Annual_filed2026-02-19.pdf p.7-9, p.11
+    refs:
+    - 2281-FY2024-REV
+    - 2281-FY2024-EBITDA_C
+    - 2281-FY2024-FIN_COST
+    - 2281-FY2024-DEBT
+    - 2281-FY2024-NI_ATTR
+  - period: FY2025
+    driver: >-
+      Revenue rose only 3.5% to SAR 2,653m (poultry +1.3%, restaurants +41.8%). Gross margin fell to 22.8%, selling costs rose 15.7%
+      and the slow-moving inventory provision rose to SAR 19.4m (SAR 6.2m), so EBITDA fell 13.8% to SAR 308m, an EBITDA margin of 11.6%.
+      Poultry profit before zakat fell to SAR 46.4m (SAR 153.3m) and restaurants lost SAR 55.7m (SAR 26.6m). Finance costs rose 74.5%
+      to SAR 108m, including an SAR 8.0m exchange loss. The attributable loss was SAR 18.8m, a net margin of -0.7%; ROE -2.9%.
+    source: 2281_TANMIAH/2025_Annual_filed2026-02-19.pdf p.8, p.11, p.63
+    refs:
+    - 2281-FY2025-REV
+    - 2281-FY2025-GP
+    - 2281-FY2025-EBITDA_C
+    - 2281-FY2025-FIN_COST
+    - 2281-FY2025-NI_ATTR
+  - period: 9M2026
+    driver: >-
+      Revenue rose 18.4% to SAR 2,298m and EBITDA 20.9% to SAR 291m, an EBITDA margin of 12.7% (12.4%), although gross margin eased
+      to 23.1% (23.7%). Restaurant losses before zakat narrowed to SAR 26.8m (SAR 41.2m), helped by longer useful lives for restaurant
+      equipment (SAR 1.8m less depreciation); PP&E of SAR 1.6m was written off. Finance costs rose to SAR 87.8m (SAR 74.0m) but included
+      a SAR 2.0m exchange gain against a SAR 7.5m loss. Attributable profit was SAR 23.2m (SAR 3.6m), a net margin of 1.0%; annualised
+      ROE 4.9%.
+    source: 2281_TANMIAH/2026_Q3_filed2026-11-12.pdf p.5, p.7, p.13, p.21
+    refs:
+    - 2281-9M2026-REV
+    - 2281-9M2026-EBITDA_C
+    - 2281-9M2026-FIN_COST
+    - 2281-9M2026-NI_ATTR
+    - 2281-9M2025-NI_ATTR
+  - period: FY2022-9M2026
+    driver: >-
+      Capex rose from SAR 162m (FY2022) to SAR 420m (FY2025), so free cash flow was negative every year (-SAR 109m in FY2025, we calculate),
+      and borrowings rose from SAR 308m to SAR 1,044m. Net debt including leases reached SAR 1,671m, 5.4 times FY2025 EBITDA. In 9M
+      2026 capex fell to SAR 92.7m and free cash flow was SAR 112m, but borrowings rose further to SAR 1,106m. Annual operating cash
+      flow is after interest paid on borrowings, while the 9M figures show it in financing, so the two are not comparable.
+    source: >-
+      2281_TANMIAH/2025_Annual_filed2026-02-19.pdf p.7, p.11; 2281_TANMIAH/2026_Q3_filed2026-11-12.pdf p.4, p.7, p.23
+    refs:
+    - 2281-FY2022-CAPEX
+    - 2281-FY2025-CAPEX
+    - 2281-FY2025-FCF
+    - 2281-FY2025-DEBT
+    - 2281-FY2025-NET_DEBT
+    - 2281-9M2026-FCF
+    - 2281-9M2026-DEBT
+  one_offs:
+  - item: >-
+      Profit and gain on disposal of the discontinued SFPC operation (gain SAR 101.9m: SAR 69.0m on the 60% sold and SAR 32.9m fair-value
+      gain on the 40% kept)
+    period: FY2022
+    amount_sar_m: 114.3
+    line: Discontinued operations, below profit before zakat (outside our operating income)
+    source: 2281_TANMIAH/2023_Annual_filed2024-02-15.pdf p.8-9, p.36
+    tax_nci: >-
+      Disclosed: shown after zakat and fully attributable to owners; attributable profit from continuing operations SAR 72.5m (FY2023
+      annual p.9)
+  - item: 'Exchange loss inside finance costs (FY2024: gain SAR 3.2m)'
+    period: FY2025
+    amount_sar_m: -8.0
+    line: Finance costs (outside our operating income)
+    source: 2281_TANMIAH/2025_Annual_filed2026-02-19.pdf p.11
+    tax_nci: 'Tax effect and minority share not disclosed: after-tax effect not determinable, profit kept as reported'
+  - item: 'Exchange gain inside finance costs (9M 2025: loss SAR 7.5m)'
+    period: 9M2026
+    amount_sar_m: 2.0
+    line: Finance costs (outside our operating income)
+    source: 2281_TANMIAH/2026_Q3_filed2026-11-12.pdf p.7
+    tax_nci: 'Tax effect and minority share not disclosed: after-tax effect not determinable, profit kept as reported'
+developments:
+- date: '2022-11-02'
+  category: M&A
+  text: >-
+    Completed the sale of 60% of Supreme Foods Processing Company; the 40% kept is an associate. The gain was SAR 101.9m.
+  source: 2281_TANMIAH/2023_Annual_filed2024-02-15.pdf p.36
+- date: '2024'
+  category: capacity
+  text: >-
+    Set up MHP Desert Hills for Poultry with MHP SE (Tanmiah 55%) to build a greenfield hatchery; MHP contributed SAR 26.8m.
+  source: 2281_TANMIAH/2024_Annual_filed2025-02-20.pdf p.14
+- date: 2024-2025
+  category: capacity
+  text: >-
+    Opened restaurants in Bahrain (revenue SAR 1.7m in FY2024, SAR 6.1m in FY2025) and Kuwait (SAR 7.9m in FY2025).
+  source: 2281_TANMIAH/2025_Annual_filed2026-02-19.pdf p.64
+- date: '2025'
+  category: strategy
+  text: Signed an MoU with Griffith Foods towards a supply agreement for food ingredients.
+  source: 2281_TANMIAH/2025_Annual_filed2026-02-19.pdf p.14
+- date: '2026-04-01'
+  category: operations
+  text: >-
+    Extended the useful lives of restaurant machinery from 5.5 to 8 years, cutting 9M 2026 depreciation by SAR 1.8m.
+  source: 2281_TANMIAH/2026_Q3_filed2026-11-12.pdf p.13
+- date: '2026'
+  category: regulation
+  text: PricewaterhouseCoopers reviewed the 2026 interim statements; Deloitte audited FY2022-FY2025.
+  source: 2281_TANMIAH/2026_Q3_filed2026-11-12.pdf p.3
+what_it_means:
+  improved: >-
+    Revenue grew 15.4% a year from FY2022 to FY2025 and 18.4% in 9M 2026, and 9M 2026 EBITDA rose 20.9% with free cash flow of SAR 112m
+    as capex fell.
+  weakened: >-
+    Finance costs rose from SAR 31.2m (FY2022) to SAR 108m (FY2025) and FY2025 ended in an attributable loss of SAR 18.8m; net debt
+    including leases was SAR 1,671m at end-2025, 5.4 times EBITDA.
+  why: >-
+    Capex of SAR 1.1bn over FY2022-FY2025 was funded with borrowings, poultry profit fell in FY2025 as gross margin dropped to 22.8%,
+    and the restaurant business lost SAR 55.7m.
+  uncertain: >-
+    The filings give no restaurant counts, volumes or prices, so the growth from new capacity and the outlook for restaurant losses
+    cannot be measured.
+confidence_overall: Medium
+data_notes:
+- >-
+  Stage A corrections: D&A includes depreciation of right-of-use assets (FY2025 SAR 146.0m; the XBRL left it out); receivable ECL removed
+  from impairments (set to 0); borrowings include the non-current portion (FY2025 SAR 1,044m vs SAR 459m in XBRL); lease liabilities
+  added; FY2025 and 9M 2025 cost of revenue added; 9M 2026 read from the PDF (no XBRL file).
+- >-
+  FY2022 attributable profit (SAR 186.8m) includes SAR 114.3m from the discontinued SFPC operation; PBT and revenue are continuing operations
+  only. The FY2021 balance sheet still consolidates SFPC.
+- >-
+  Basis break: annual operating cash flow (FY2022-FY2025) is after finance costs paid on borrowings; the 9M 2025 comparative was restated
+  in the 2026 Q3 interim (note 16) to show them in financing (SAR 237.0m to SAR 271.0m), as is 9M 2026.
+- >-
+  Exchange differences sit inside finance costs (note 29: FY2024 gain SAR 3.2m, FY2025 loss SAR 8.0m, 9M 2025 loss SAR 7.5m, 9M 2026
+  gain SAR 2.0m), so they are outside our operating income and EBITDA.
+- >-
+  No one-offs are removed from EBITDA: the disposal gain is below PBT, FX is in finance costs, and PP&E write-offs (9M 2026 SAR 1.6m)
+  and the feed subsidy (SAR 45.7m accrued in FY2025) recur every year.
+- >-
+  The restaurant segment was first reported in the FY2025 annual (with FY2024 comparatives); FY2022-FY2024 annuals show one segment
+  with a country split.
+- >-
+  Primary statements and annual notes are image pages, read by OCR and checked against printed subtotals; the 2024 Q3 interim file is
+  unreadable (not needed).

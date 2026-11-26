@@ -1,0 +1,183 @@
+ticker: '6010'
+headline: Revenue grew from SAR 2,694m (FY2022) to SAR 3,527m (FY2025), 9.4% a year, and a SAR 2bn rights issue in 2023 turned net debt into net cash; attributable profit peaked at SAR
+  775m in FY2024 on a SAR 357m Arabian Mills gain, fell to SAR 393m in FY2025, and dropped 42.7% in 9M 2026 as revenue was flat (+0.7%) and gross margin fell to 28.6%.
+lfl_basis:
+  definition_used: Standard bridge on IFRS revenue. NADEC had no consolidated acquisitions or disposals from FY2022 to FY2025 (its joint ventures are equity-accounted), so perimeter
+    effects are nil until AlRaie was consolidated on 31 May 2026 (SAR 9.6m of 9M 2026 revenue, disclosed). The new Protein business (from late Q4 2023) is a new-capacity item whose FY2023
+    revenue is not disclosed. About 13% of revenue is outside Saudi Arabia without constant-currency data, so FX is not determinable; no hyperinflation accounting applies. No volumes
+    or like-for-like sales are disclosed.
+  perimeter_changes:
+  - event: 'Arabian Mills: 30% of NADEC''s shares sold in the IPO, joint control lost, rest held at FVOCI'
+    date: '2024'
+    effect: equity-accounted; no revenue effect; gain SAR 356.5m
+    source: 6010_NADEC/2024_Annual_filed2025-03-02.pdf p.31
+  - event: AlRaie National Livestock joint venture (51%) set up
+    date: '2024'
+    effect: equity-accounted until May 2026
+    source: 6010_NADEC/2024_Annual_filed2025-03-02.pdf p.31
+  - event: Sudan and Qatar branches closed
+    date: '2024'
+    effect: treated as organic; PP&E written off SAR 7.2m
+    source: 6010_NADEC/2025_Annual_filed2026-02-04.pdf p.28
+  - event: 'AlRaie: remaining 49% bought, control from 31 May 2026'
+    date: '2026-05-31'
+    effect: 9M 2026 revenue SAR 9.6m (disclosed)
+    source: 6010_NADEC/2026_Q3_filed2026-10-21.pdf p.19
+  capacity_changes:
+  - event: Protein segment (frozen and fresh meat) launched
+    date: 2023-Q4
+    effect: FY2024 revenue SAR 180.3m, FY2025 SAR 300.2m; FY2023 amount not disclosed
+    source: 6010_NADEC/2024_Annual_filed2025-03-02.pdf p.24
+  - event: Capex SAR 385m in FY2025 (SAR 191m in FY2024) and right-of-use additions SAR 293m
+    date: '2025'
+    effect: revenue from new capacity not disclosed
+    source: 6010_NADEC/2025_Annual_filed2026-02-04.pdf p.12, p.29
+  fx_exposure: 'FY2025 revenue: Saudi Arabia 86.7%, other GCC 9.2% (pegged currencies), other countries 4.1% (currency not stated).'
+  price_volume_support: 'Not determinable: no volumes or prices are disclosed.'
+  confidence: Medium (perimeter nil or disclosed; new capacity and FX not determinable)
+price_volume:
+- period: 9M 2026 vs 9M 2025
+  text: Dairy and Beverages external revenue fell 1.7% (SAR 2,282m to 2,243m), Agriculture 49.8% (SAR 186m to 93m), and Protein rose 69.1% (SAR 217m to 368m, including SAR 9.6m from
+    AlRaie). Saudi revenue rose 0.8%. Volumes and prices are not disclosed.
+  basis: disclosed (segment revenue); split not determinable
+  confidence: High for the amounts
+  source: 6010_NADEC/2026_Q3_filed2026-10-21.pdf p.14-15, p.19
+  refs:
+  - 6010-9M2026-REV
+  - 6010-9M2025-REV
+- period: FY2025 vs FY2024
+  text: Dairy and Beverages external revenue was flat (+0.3%), Agriculture rose from SAR 69.0m to 246.8m and Protein 66.5% (SAR 180.3m to 300.2m). Volumes and prices are not disclosed.
+  basis: disclosed (segment revenue); split not determinable
+  confidence: High for the amounts
+  source: 6010_NADEC/2025_Annual_filed2026-02-04.pdf p.24-25
+  refs:
+  - 6010-FY2025-REV
+  - 6010-FY2024-REV
+profit_and_margin:
+  drivers:
+  - period: FY2023
+    driver: Revenue +18.7% (Dairy and Food +19.2%) and gross margin up to 37.0% (30.0%). Attributable profit rose to SAR 302m despite receivable impairments of SAR 48.9m and a SAR 24.0m
+      PP&E write-off; a SAR 26.0m zakat reversal helped. The Q4 2023 rights issue raised SAR 2bn, so cash rose to SAR 835m and borrowings fell to SAR 376m. We calculate an EBITDA margin
+      of 18.7%.
+    source: 6010_NADEC/2024_Annual_filed2025-03-02.pdf p.8-9, p.12, p.25; 6010_NADEC/2023_Annual_filed2024-02-21.pdf p.34
+    refs:
+    - 6010-FY2023-REV
+    - 6010-FY2023-GP
+    - 6010-FY2023-NI_ATTR
+    - 6010-FY2023-CASH
+    - 6010-FY2023-DEBT
+    - 6010-FY2023-EQ_ATTR
+  - period: FY2024
+    driver: 'Revenue +0.7%: Dairy and Beverages fell 3.5% while the new Protein segment added SAR 180.3m. Treasury income on rights-issue cash rose to SAR 91.4m (SAR 3.9m) and finance
+      cost fell to SAR 34.2m (SAR 76.0m). Attributable profit of SAR 775m includes the SAR 356.5m gain on Arabian Mills; the company reports operating profit of SAR 389m. Our operating
+      income and EBITDA include the gain (EBITDA margin 30.8%).'
+    source: 6010_NADEC/2025_Annual_filed2026-02-04.pdf p.9; 6010_NADEC/2024_Annual_filed2025-03-02.pdf p.9, p.24, p.31
+    refs:
+    - 6010-FY2024-REV
+    - 6010-FY2024-NI_ATTR
+    - 6010-FY2024-FIN_INC
+    - 6010-FY2024-OPINC
+  - period: FY2025
+    driver: Revenue +9.5% from Agriculture and Protein, but gross margin fell to 33.5% (37.0%) and selling costs rose 8.4%; operating profit was SAR 377m (SAR 389m). Without the FY2024
+      gain, attributable profit fell 49.2% to SAR 393m. We calculate an EBITDA margin of 19.3% and ROE of 8.8%. Capex doubled to SAR 385m and lease liabilities rose to SAR 289m.
+    source: 6010_NADEC/2025_Annual_filed2026-02-04.pdf p.8-9, p.12, p.24
+    refs:
+    - 6010-FY2025-REV
+    - 6010-FY2025-GP
+    - 6010-FY2025-NI_ATTR
+    - 6010-FY2025-CAPEX
+    - 6010-FY2025-LEASE_LIAB
+  - period: 9M2026
+    driver: 'Revenue +0.7% with gross margin down to 28.6% (34.7%); the share of AlRaie''s loss was SAR 15.0m and financing income fell to SAR 52.5m (SAR 76.6m). A SAR 71.0m reversal
+      of receivable impairments (9M 2025: SAR 7.1m charge) supported profit, yet attributable profit fell 42.7% to SAR 189m. We calculate an EBITDA margin of 16.7% (20.0%). Operating
+      cash flow fell 83.4% to SAR 75.8m as receivables rose and payables fell, so free cash flow was -SAR 226m.'
+    source: 6010_NADEC/2026_Q3_filed2026-10-21.pdf p.6, p.9
+    refs:
+    - 6010-9M2026-REV
+    - 6010-9M2026-GP
+    - 6010-9M2026-NI_ATTR
+    - 6010-9M2026-SHARE_JV
+    - 6010-9M2026-CFO
+    - 6010-9M2026-FCF
+  one_offs:
+  - item: Write-off / impairment of PP&E
+    period: FY2022
+    amount_sar_m: -10.0
+    line: Write off/ impairment losses on PP&E
+    source: 6010_NADEC/2023_Annual_filed2024-02-21.pdf p.10
+    tax_nci: 'Impairment, outside our EBITDA; zakat effect not disclosed: profit kept as reported'
+  - item: Write-off of a juice line, dairy-farm assets and a villa
+    period: FY2023
+    amount_sar_m: -24.0
+    line: Write off/ impairment losses on PP&E
+    source: 6010_NADEC/2024_Annual_filed2025-03-02.pdf p.9
+    tax_nci: 'Impairment, outside our EBITDA; zakat effect not disclosed: profit kept as reported'
+  - item: Zakat reversal related to previous years
+    period: FY2023
+    amount_sar_m: 26.0
+    line: Zakat reversal related to previous years
+    source: 6010_NADEC/2024_Annual_filed2025-03-02.pdf p.9
+    tax_nci: The item is zakat itself and NADEC has no non-controlling interests; we calculate attributable profit excluding it at SAR 276m; tables keep profit as reported
+  - item: Gain from reclassifying the Arabian Mills joint venture to FVOCI (SAR 103.2m on shares sold, SAR 253.3m fair-value gain)
+    period: FY2024
+    amount_sar_m: 356.5
+    line: Gain from the reclassification of a joint venture to an investment at FVOCI
+    source: 6010_NADEC/2025_Annual_filed2026-02-04.pdf p.9; 6010_NADEC/2024_Annual_filed2025-03-02.pdf p.31
+    tax_nci: 'No non-controlling interests, but the zakat effect is not disclosed: not determinable, profit kept as reported'
+  - item: Recycling of the translation reserve on closing foreign branches
+    period: FY2025
+    amount_sar_m: 3.6
+    line: not named
+    source: 6010_NADEC/2025_Annual_filed2026-02-04.pdf p.12
+    tax_nci: 'Under 5% of attributable profit: profit kept as reported'
+developments:
+- date: '2023-10-05'
+  category: financing
+  text: CMA approved a SAR 2bn rights issue (EGM 5 Nov 2023) to fund the 2023-2027 strategy; share capital rose to SAR 3,016m.
+  source: 6010_NADEC/2023_Annual_filed2024-02-21.pdf p.34
+- date: 2023-Q4
+  category: mix
+  text: Started a Protein business (frozen and fresh meat); reported as a separate segment from FY2024.
+  source: 6010_NADEC/2024_Annual_filed2025-03-02.pdf p.24
+- date: '2024'
+  category: M&A
+  text: Sold 30% of its Arabian Mills shares in the Arabian Mills IPO, lost joint control and booked a SAR 356.5m gain.
+  source: 6010_NADEC/2024_Annual_filed2025-03-02.pdf p.31
+- date: '2024'
+  category: M&A
+  text: Set up AlRaie National Livestock Company with United Feed Company (51%).
+  source: 6010_NADEC/2024_Annual_filed2025-03-02.pdf p.31
+- date: '2024'
+  category: operations
+  text: Closed the Sudan and Qatar branches, writing off SAR 7.2m of PP&E.
+  source: 6010_NADEC/2025_Annual_filed2026-02-04.pdf p.28
+- date: '2025'
+  category: capacity
+  text: Capex rose to SAR 385m and new leases added SAR 293m of right-of-use assets.
+  source: 6010_NADEC/2025_Annual_filed2026-02-04.pdf p.12, p.29
+- date: '2026-05-31'
+  category: M&A
+  text: Bought the other 49% of AlRaie for SAR 23.7m and consolidated it (goodwill SAR 6.1m).
+  source: 6010_NADEC/2026_Q3_filed2026-10-21.pdf p.19-20
+what_it_means:
+  improved: Revenue grew 9.4% a year from FY2022 to FY2025 and the 2023 rights issue left NADEC with net cash (borrowings SAR 282m against cash of SAR 1,080m at end-2025).
+  weakened: Gross margin fell from 37.0% (FY2024) to 28.6% (9M 2026), attributable profit fell in FY2025 and 9M 2026, and 9M 2026 free cash flow was negative.
+  why: FY2024 profit was lifted by the one-off Arabian Mills gain, and dairy revenue has been flat since FY2023 while growth came from the newer Protein and Agriculture lines; in 9M
+    2026 margins fell and a SAR 71.0m receivable-impairment reversal only partly offset this.
+  uncertain: The filings do not show how much of the growth came from new capacity or prices, nor what drove the 9M 2026 receivable-impairment reversal.
+confidence_overall: Medium
+data_notes:
+- 'CAPEX basis break: FY2022 and FY2023 capex is the combined cash-flow line "Acquisition of property, plant and equipment and biological assets" plus intangibles, so it includes additions
+  to biological assets (dairy herd); from FY2024 the FY2025 annual shows PP&E, long-term prepayments and biological assets separately and capex excludes biological assets (FY2024 SAR
+  191.1m vs SAR 284.3m on the old basis; FY2025 biological additions SAR 184.1m). FCF and capex intensity are not comparable across FY2023/FY2024.'
+- The 2023 rights issue (SAR 2bn, Q4 2023) explains the jump in equity attributable from SAR 1,295m (FY2022) to SAR 3,593m (FY2023) flagged by the sanity screen.
+- 'Re-presentations: FY2023 balance sheet and P&L (FY2024 annual note 39: receivables netted with payables, total assets SAR 5,109.8m to 5,052.5m; treasury income shown separately);
+  FY2024 balance sheet, cash flow and P&L (FY2025 annual note 43: CFO SAR 670.0m to 763.2m; write-offs moved into other gains/losses; capex split). The FY2024 SHARE_JV "R" flag is not
+  a restatement (XBRL had added the Arabian Mills gain). Reasons in reasons_6010.csv.'
+- 'Stage A overrides: D&A now includes right-of-use and biological-asset depreciation (FY2025 SAR 304.7m, was 184.2m); DEBT = all three Murabaha lines (FY2025 SAR 282.5m, was 193.5m);
+  IMPAIR_CF holds only PP&E write-off/impairment (FY2023 SAR 24.0m) and is nil from FY2024 (receivable ECL excluded).'
+- The FY2024 Arabian Mills gain (SAR 356.5m) sits below financing cost on the face, so it is inside our operating income (SAR 745.9m vs the company's operating profit of SAR 389.4m)
+  until EBITDA excluding one-offs is rebuilt with oneoffs_6010.csv.
+- NADEC reports in SAR (not thousands); there are no non-controlling interests, so attributable profit equals net profit. Net debt is negative from FY2023 (net cash), so net debt / EBITDA
+  is negative.
+- All primary statements used are scanned images; values were read visually and checked by OCR at high resolution.

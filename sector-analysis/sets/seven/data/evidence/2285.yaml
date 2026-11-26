@@ -1,8 +1,9 @@
 ticker: '2285'
 company: Arabian Mills for Food Products Company (formerly The Second Milling Company)
 perimeter_changes:
-- event: Statutory merger with the former parent (Food Security Holding Company) effective 30 Nov 2022, accounted for prospectively at book values;
-    it brought goodwill of SAR 822.4m and acquisition loans (borrowings SAR 1,747.9m at end-2022) but no operating revenue
+- event: Statutory merger with the former 100% parent (a holding company; the 2021 share register shows Food Security Holding Company as sole
+    shareholder) effective 30 Nov 2022, accounted for prospectively at book values; it brought goodwill of SAR 822.4m and acquisition loans (borrowings
+    SAR 1,747.9m at end-2022) but no operating revenue
   type: acquisition
   date: '2022-11-30'
   consideration: null
