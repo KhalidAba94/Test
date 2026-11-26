@@ -112,7 +112,7 @@ def main(sectors_json, out_json, *facts_csvs):
                 for cur, pri in PAIRS:
                     g[f"{cur}/{pri}"] = (calc.NM if ((t, cur) in short_fy or (t, pri) in short_fy)
                                          else calc.growth(facts.get(t, cur, m), facts.get(t, pri, m)))
-                g["CAGR_2022_2025"] = (calc.NM if ((t, "FY2025") in short_fy or (t, "FY2022") in short_fy)
+                g["CAGR_2022_2025"] = (calc.NM if any((t, y) in short_fy for y in FY)   # a short year inside the span: not three years
                                        else calc.cagr(facts.get(t, "FY2025", m), facts.get(t, "FY2022", m), 3))
                 growth[m] = g
             ratios = {rk: {p: ratio(t, p, spec) for p in ALLP} for rk, spec in sc["ratios"].items()}
@@ -141,7 +141,9 @@ def main(sectors_json, out_json, *facts_csvs):
                 res[f"{cur}/{pri}"] = {"growth": mg["growth"], "cur": mg["cur"], "prior": mg["prior"],
                                        "sample": mg["sample"], "excluded": mg["excluded"], "contrib": mg["contrib"]}
             # CAGR on matched sample with both FY2022 and FY2025
-            samp = [t for t in tk if facts.get(t, "FY2022", m) is not None and facts.get(t, "FY2025", m) is not None]
+            # companies with the metric in every year FY2022-FY2025 (a short year is left out of sector facts, which drops
+            # that company from the CAGR sample: its span is not three years)
+            samp = [t for t in tk if all(facts.get(t, y, m) is not None for y in FY)]
             s22 = sum(facts.get(t, "FY2022", m) for t in samp) if samp else None
             s25 = sum(facts.get(t, "FY2025", m) for t in samp) if samp else None
             res["CAGR_2022_2025"] = {"cagr": calc.cagr(s25, s22, 3), "sample": samp}

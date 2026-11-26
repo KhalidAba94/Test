@@ -262,7 +262,11 @@ def build_company(wb, sector, t, cfg, ds, narr, adj_rows, facts_idx, sheetname, 
                     if fx.get("note"):
                         txt += " " + fx["note"]
                     cell.comment = Comment(txt[:900], "analysis")
-            ws[f"G{r}"] = f'=IF(AND(ISNUMBER(F{r}),ISNUMBER(C{r})),IF(AND(C{r}>=10,F{r}>0),(F{r}/C{r})^(1/3)-1,"n.m."),"")'
+            if any(f"{t}|{y}" in ds["sector"].get("short_fy", {}) for y in ("FY2022", "FY2023", "FY2024", "FY2025")):
+                ws[f"G{r}"] = "n.m."   # the FY2022–FY2025 span includes a short financial year, so it is not three years
+                ws[f"G{r}"].comment = Comment("Not meaningful: FY2022–FY2025 includes a short financial year, so the span is not three years (see the company's data notes).", "analysis")
+            else:
+                ws[f"G{r}"] = f'=IF(AND(ISNUMBER(F{r}),ISNUMBER(C{r})),IF(AND(C{r}>=10,F{r}>0),(F{r}/C{r})^(1/3)-1,"n.m."),"")'
             ws[f"G{r}"].number_format = PCT
             ws[f"K{r}"] = growth_formula(f"J{r}", f"I{r}")
             ws[f"K{r}"].number_format = PCT
@@ -571,7 +575,8 @@ def build_sector(wb, sector, cfg, ds, narr, comp_sheets):
                     ws[f"{col}{r}"].fill = YTD_FILL
             # CAGR on matched FY2022/FY2025 sample
             c25, c22 = rng(m, "FY2025"), rng(m, "FY2022")
-            mask = f"--ISNUMBER({c25}),--ISNUMBER({c22})" + (f",--(ROW({c25})<>{row_of(m, excl)})" if excl else "")
+            # sample: companies with figures in every year FY2022-FY2025 (as analyze.py)
+            mask = f"--ISNUMBER({c25}),--ISNUMBER({c22}),--ISNUMBER({rng(m, 'FY2023')}),--ISNUMBER({rng(m, 'FY2024')})" + (f",--(ROW({c25})<>{row_of(m, excl)})" if excl else "")
             ws[f"F{vr}"] = f'=IFERROR(IF(AND(SUMPRODUCT({mask},{c22})>=10,SUMPRODUCT({mask},{c25})>0),(SUMPRODUCT({mask},{c25})/SUMPRODUCT({mask},{c22}))^(1/3)-1,"n.m."),"n.m.")'
             ws[f"F{vr}"].number_format = PCT
             ws[f"J{vr}"] = f'=IF(ISNUMBER(I{r}),I{r},"n.m.")'

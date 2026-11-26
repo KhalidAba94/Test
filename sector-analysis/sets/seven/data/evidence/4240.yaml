@@ -1,0 +1,548 @@
+# Evidence extracted from AFG International Company (formerly Fawaz Abdulaziz Al Hokair & Co.; Cenomi Retail) filings (archive: 4240_AFG_RETAIL). Facts only; page = physical PDF page (1-based).
+# Units as stated per item (SAR or SAR '000). FY2022 = nine months to 31 Dec 2022. FY2024 annual primary statements and the 2025 Q3 interim are scanned (OCR).
+ticker: '4240'
+company: AFG International Company (formerly Fawaz Abdulaziz Al Hokair & Co., Cenomi Retail)
+perimeter_changes:
+- event: Disposal of a subsidiary in the nine months to Dec 2022
+  type: disposal
+  date: '2022'
+  consideration: proceeds 16,988,412 (cash flow)
+  revenue_contribution: null
+  profit_contribution: 13372473
+  pro_forma_revenue: null
+  period: FY2022
+  unit: SAR
+  source: 4240_AFG_RETAIL/2023_Annual_filed2024-04-17.pdf
+  page: 10
+  quote: Gain on disposal of subsidiary - 13,372,473
+- event: Operations in the Balkans, Morocco and the United Kingdom disposed of and written off (discontinued)
+  type: discontinued
+  date: '2023-12-31'
+  consideration: null
+  revenue_contribution: 26193536
+  profit_contribution: -20666432
+  pro_forma_revenue: null
+  period: FY2023
+  unit: SAR
+  source: 4240_AFG_RETAIL/2024_Annual_filed2025-04-09.pdf
+  page: 63
+  quote: 'On 31 December 2023, the Group disposed of its companies’ operation in three countries: Balkan, Morocco, and United Kingdom.'
+- event: US operations disposed of (discontinued); FY2023 revenue 72,081,465
+  type: discontinued
+  date: '2024-12-31'
+  consideration: 19655494
+  revenue_contribution: 68143676
+  profit_contribution: -6441360
+  pro_forma_revenue: null
+  period: FY2024
+  unit: SAR
+  source: 4240_AFG_RETAIL/2024_Annual_filed2025-04-09.pdf
+  page: 62
+  quote: On 31 December 2024, the Group disposed of its companies’ operation in United States of America.
+- event: 5 fashion brands classified as held for sale and discontinued; FY2023 revenue 755,848,221
+  type: discontinued
+  date: '2024-12-31'
+  consideration: null
+  revenue_contribution: 300838692
+  profit_contribution: -45888346
+  pro_forma_revenue: null
+  period: FY2024
+  unit: SAR
+  source: 4240_AFG_RETAIL/2024_Annual_filed2025-04-09.pdf
+  page: 65
+  quote: The assets and liabilities related to the 5 Fashion Brands (part of the KSA retail operating segment) are presented as held for sale
+- event: Brands sold in 2024 (net assets 159.0m, consideration 369.3m); not presented as discontinued
+  type: disposal
+  date: '2024'
+  consideration: 369291190
+  revenue_contribution: null
+  profit_contribution: 210246153
+  pro_forma_revenue: null
+  period: FY2024
+  unit: SAR
+  source: 4240_AFG_RETAIL/2024_Annual_filed2025-04-09.pdf
+  page: 64
+  quote: Following is the gain on disposal of brands during the year
+- event: 'Three brands sold in 2025 (consideration 28.5m; revenue in discontinued operations: 9M 2025 23.5m)'
+  type: discontinued
+  date: 2025 (by 30 Sep)
+  consideration: 28527791
+  revenue_contribution: 23544133
+  profit_contribution: 19001491
+  pro_forma_revenue: null
+  period: FY2025
+  unit: SAR
+  source: 4240_AFG_RETAIL/2025_Annual_filed2026-03-16.pdf
+  page: 64
+  quote: The Group sold three brands during the year.
+- event: Assets of one further brand sold in 2025 (consideration 36.6m, gain 1.5m); revenue effect not disclosed
+  type: disposal
+  date: '2025'
+  consideration: 36636457
+  revenue_contribution: null
+  profit_contribution: 1523127
+  pro_forma_revenue: null
+  period: FY2025
+  unit: SAR
+  source: 4240_AFG_RETAIL/2025_Annual_filed2026-03-16.pdf
+  page: 65
+  quote: The Group sold assets of one brand during the year.
+- event: One loss-making brand classified as held for sale at 31 Dec 2025 (FY2025 revenue 31.3m in discontinued); reclassified back to continuing in the 2026 restatement (adjustment 8)
+  type: discontinued
+  date: '2025-11-11'
+  consideration: null
+  revenue_contribution: 31262192
+  profit_contribution: -48181333
+  pro_forma_revenue: null
+  period: FY2025
+  unit: SAR
+  source: 4240_AFG_RETAIL/2026_Q3_filed2026-11-11.pdf
+  page: 33
+  quote: the criteria for held-for-sale classification were not met, and the comparative information has been restated
+- event: 50% of FAS Lab Holding (equity-accounted) and 8.9% of Egyptian Centers for Real Estate Development classified as held for sale
+  type: disposal
+  date: '2026-09-30'
+  consideration: null
+  revenue_contribution: null
+  profit_contribution: null
+  pro_forma_revenue: null
+  period: 9M2026
+  unit: SAR
+  source: 4240_AFG_RETAIL/2026_Q3_filed2026-11-11.pdf
+  page: 31
+  quote: the Group committed to plans to dispose of certain strategic investments
+segments:
+- period: FY2024
+  segment: Fashion retail
+  basis: operating
+  revenue: 4024251
+  profit: -150105
+  unit: SAR '000
+  source: 4240_AFG_RETAIL/2025_Annual_filed2026-03-16.pdf
+  page: 49
+  note: profit = net loss from continuing operations
+- period: FY2024
+  segment: Electronics
+  basis: operating
+  revenue: 494740
+  profit: 21586
+  unit: SAR '000
+  source: 4240_AFG_RETAIL/2025_Annual_filed2026-03-16.pdf
+  page: 49
+- period: FY2024
+  segment: Food and beverages
+  basis: operating
+  revenue: 328152
+  profit: -23646
+  unit: SAR '000
+  source: 4240_AFG_RETAIL/2025_Annual_filed2026-03-16.pdf
+  page: 49
+- period: FY2024
+  segment: Domestic (KSA)
+  basis: geographic
+  revenue: 3512462
+  profit: -254966
+  unit: SAR '000
+  source: 4240_AFG_RETAIL/2025_Annual_filed2026-03-16.pdf
+  page: 49
+- period: FY2024
+  segment: International
+  basis: geographic
+  revenue: 1334681
+  profit: 102801
+  unit: SAR '000
+  source: 4240_AFG_RETAIL/2025_Annual_filed2026-03-16.pdf
+  page: 49
+- period: FY2025
+  segment: Fashion retail
+  basis: operating
+  revenue: 4285627
+  profit: -420125
+  unit: SAR '000
+  source: 4240_AFG_RETAIL/2025_Annual_filed2026-03-16.pdf
+  page: 48
+- period: FY2025
+  segment: Electronics
+  basis: operating
+  revenue: 494867
+  profit: 8706
+  unit: SAR '000
+  source: 4240_AFG_RETAIL/2025_Annual_filed2026-03-16.pdf
+  page: 48
+- period: FY2025
+  segment: Food and beverages
+  basis: operating
+  revenue: 323362
+  profit: -37141
+  unit: SAR '000
+  source: 4240_AFG_RETAIL/2025_Annual_filed2026-03-16.pdf
+  page: 48
+- period: FY2025
+  segment: Domestic (KSA)
+  basis: geographic
+  revenue: 3518883
+  profit: -553107
+  unit: SAR '000
+  source: 4240_AFG_RETAIL/2025_Annual_filed2026-03-16.pdf
+  page: 48
+- period: FY2025
+  segment: International (Jordan, Egypt, Kazakhstan, Azerbaijan, Georgia, Armenia, Uzbekistan)
+  basis: geographic
+  revenue: 1584973
+  profit: 104547
+  unit: SAR '000
+  source: 4240_AFG_RETAIL/2025_Annual_filed2026-03-16.pdf
+  page: 48
+- period: 9M2025
+  segment: Fashion retail
+  basis: operating
+  revenue: 3112391100
+  profit: -194906549
+  unit: SAR
+  source: 4240_AFG_RETAIL/2026_Q3_filed2026-11-11.pdf
+  page: 23
+- period: 9M2025
+  segment: Electronics
+  basis: operating
+  revenue: 313618300
+  profit: -4900751
+  unit: SAR
+  source: 4240_AFG_RETAIL/2026_Q3_filed2026-11-11.pdf
+  page: 23
+- period: 9M2025
+  segment: Food and beverages
+  basis: operating
+  revenue: 245985176
+  profit: -17817006
+  unit: SAR
+  source: 4240_AFG_RETAIL/2026_Q3_filed2026-11-11.pdf
+  page: 23
+- period: 9M2025
+  segment: Domestic (KSA)
+  basis: geographic
+  revenue: 2567212576
+  profit: -280822306
+  unit: SAR
+  source: 4240_AFG_RETAIL/2026_Q3_filed2026-11-11.pdf
+  page: 23
+- period: 9M2025
+  segment: International
+  basis: geographic
+  revenue: 1104782000
+  profit: 63198000
+  unit: SAR
+  source: 4240_AFG_RETAIL/2026_Q3_filed2026-11-11.pdf
+  page: 23
+- period: 9M2026
+  segment: Fashion retail
+  basis: operating
+  revenue: 3272290147
+  profit: -209552607
+  unit: SAR
+  source: 4240_AFG_RETAIL/2026_Q3_filed2026-11-11.pdf
+  page: 23
+- period: 9M2026
+  segment: Electronics
+  basis: operating
+  revenue: 413285036
+  profit: -11547276
+  unit: SAR
+  source: 4240_AFG_RETAIL/2026_Q3_filed2026-11-11.pdf
+  page: 23
+- period: 9M2026
+  segment: Food and beverages
+  basis: operating
+  revenue: 219139303
+  profit: -241175
+  unit: SAR
+  source: 4240_AFG_RETAIL/2026_Q3_filed2026-11-11.pdf
+  page: 23
+- period: 9M2026
+  segment: Domestic (KSA)
+  basis: geographic
+  revenue: 2643062425
+  profit: -344721128
+  unit: SAR
+  source: 4240_AFG_RETAIL/2026_Q3_filed2026-11-11.pdf
+  page: 23
+- period: 9M2026
+  segment: International
+  basis: geographic
+  revenue: 1261652061
+  profit: 123380070
+  unit: SAR
+  source: 4240_AFG_RETAIL/2026_Q3_filed2026-11-11.pdf
+  page: 23
+revenue_drivers:
+- period: 9M2026
+  driver: 'International apparel revenue (9M 2025: 1,022,380,181)'
+  value: 1173353705
+  unit: SAR
+  source: 4240_AFG_RETAIL/2026_Q3_filed2026-11-11.pdf
+  page: 24
+  quote: Apparels 1,874,828,470 1,173,353,705 3,048,182,175
+- period: 9M2026
+  driver: 'Electronics revenue, all KSA (9M 2025: 313,618,300)'
+  value: 413285036
+  unit: SAR
+  source: 4240_AFG_RETAIL/2026_Q3_filed2026-11-11.pdf
+  page: 24
+  quote: Electronics 413,285,036 - 413,285,036
+- period: FY2025
+  driver: 'Management: exits from underperforming brands improved gross margins and operating performance'
+  value: null
+  unit: SAR
+  source: 4240_AFG_RETAIL/2025_Annual_filed2026-03-16.pdf
+  page: 18
+  quote: Over the past two years, the Group has exited a number of underperforming brands and redirected resources toward higher-performing brands.
+- period: FY2022-9M2026
+  driver: Store counts, openings and like-for-like (same-store) sales
+  value: null
+  unit: count
+  status: not found
+  source: 4240_AFG_RETAIL/2025_Annual_filed2026-03-16.pdf
+  page: null
+  quote: Not disclosed in the annual or interim financial statements.
+one_offs:
+- period: FY2022
+  item: Gain on disposal of subsidiary
+  amount: 13372473
+  unit: SAR
+  pnl_line: Gain on disposal of subsidiary (below net finance costs)
+  recurring: false
+  source: 4240_AFG_RETAIL/2023_Annual_filed2024-04-17.pdf
+  page: 10
+  quote: Gain on disposal of subsidiary - 13,372,473
+- period: FY2022
+  item: Change in fair value of other investments (FVTPL)
+  amount: 3694908
+  unit: SAR
+  pnl_line: Change in fair value of other investments
+  recurring: false
+  source: 4240_AFG_RETAIL/2023_Annual_filed2024-04-17.pdf
+  page: 10
+  quote: Change in fair value of other investments 11 (33,000,000) 3,694,908
+- period: FY2022
+  item: 'Rental concessions for leases (FY2023: 4,258,902 on the FY2023-annual basis; nil from FY2024)'
+  amount: 19926978
+  unit: SAR
+  pnl_line: Other operating income
+  recurring: false
+  source: 4240_AFG_RETAIL/2023_Annual_filed2024-04-17.pdf
+  page: 51
+  quote: Rental concession for leases 28B 4,258,902 19,926,978
+- period: FY2023
+  item: Change in fair value of investments at FVTPL
+  amount: -33000000
+  unit: SAR
+  pnl_line: Change in fair value of other investments
+  recurring: false
+  source: 4240_AFG_RETAIL/2023_Annual_filed2024-04-17.pdf
+  page: 10
+  quote: Change in fair value of other investments 11 (33,000,000) 3,694,908
+- period: FY2023
+  item: Loss on liquidation / disposal of investment in subsidiaries
+  amount: -7122648
+  unit: SAR
+  pnl_line: Other operating expense
+  recurring: false
+  source: 4240_AFG_RETAIL/2024_Annual_filed2025-04-09.pdf
+  page: 50
+  quote: Losses from disposal of investment in subsidiary 1,307,461 7,122,648
+- period: FY2024
+  item: Gain on disposal of brands
+  amount: 210246153
+  unit: SAR
+  pnl_line: Other operating income
+  recurring: false
+  source: 4240_AFG_RETAIL/2025_Annual_filed2026-03-16.pdf
+  page: 52
+  quote: Gain on disposal of brands 33A 19,001,491 210,246,153
+- period: FY2024
+  item: Loss on disposal of investment in subsidiary (US operations)
+  amount: -1307461
+  unit: SAR
+  pnl_line: Other operating expense
+  recurring: false
+  source: 4240_AFG_RETAIL/2025_Annual_filed2026-03-16.pdf
+  page: 51
+  quote: Losses from disposal of investment in subsidiary -- 1,307,461
+- period: FY2025
+  item: Gain on disposal of brands
+  amount: 19001491
+  unit: SAR
+  pnl_line: Other operating income
+  recurring: false
+  source: 4240_AFG_RETAIL/2025_Annual_filed2026-03-16.pdf
+  page: 52
+  quote: Gain on disposal of brands 33A 19,001,491 210,246,153
+- period: FY2025
+  item: 'Foreign exchange loss (FY2024: gain 4.7m)'
+  amount: -59314338
+  unit: SAR
+  pnl_line: Other operating expense
+  recurring: false
+  source: 4240_AFG_RETAIL/2025_Annual_filed2026-03-16.pdf
+  page: 51
+  quote: Foreign exchange 59,314,338 --
+- period: 9M2025
+  item: Gain on disposal of brands
+  amount: 21881521
+  unit: SAR
+  pnl_line: Other operating income
+  recurring: false
+  source: 4240_AFG_RETAIL/2026_Q3_filed2026-11-11.pdf
+  page: 25
+  quote: Gain on disposal of brands -- 21,881,521
+- period: 9M2025
+  item: 'Foreign exchange loss, net (9M 2026: 5,388)'
+  amount: -57513205
+  unit: SAR
+  pnl_line: Other operating expenses
+  recurring: false
+  source: 4240_AFG_RETAIL/2026_Q3_filed2026-11-11.pdf
+  page: 25
+  quote: Foreign exchange loss, net 5,388 57,513,205
+- period: FY2022-9M2026
+  item: 'Write-offs of property, equipment and intangibles recur every year (FY2023 221.6m, FY2024 41.5m, FY2025 57.9m, 9M 2025 19.7m, 9M 2026 3.2m) with brand and store exits: treated as recurring, not one-offs'
+  amount: -57941299
+  unit: SAR
+  pnl_line: Other operating expense (from 2026 within S&D and G&A)
+  recurring: true
+  source: 4240_AFG_RETAIL/2025_Annual_filed2026-03-16.pdf
+  page: 51
+  quote: Property, equipment and intangibles write-off 57,941,299 41,504,595
+- period: FY2025
+  item: '"Tax expense" inside other operating expense (9M 2025 29.7m, 9M 2026 9.1m); nature not explained; not treated as a one-off'
+  amount: -50593968
+  unit: SAR
+  pnl_line: Other operating expense
+  recurring: true
+  source: 4240_AFG_RETAIL/2025_Annual_filed2026-03-16.pdf
+  page: 51
+  quote: Tax expense 50,593,968 --
+restatements:
+- period_restated: 31 Mar 2022 and FY2022 (nine months)
+  item: Right-of-use assets and lease liabilities (IFRS 16 database review)
+  from: 7916649887
+  to: 7152969241
+  unit: SAR
+  reason: 'FY2023 annual note 33: total assets 31 Dec 2022 7,916.6m -> 7,153.0m, equity 281.3m -> 345.9m; 1 Apr 2022 total assets 8,241.2m -> 7,362.8m. Follows the FY2022 qualified opinion on leases.'
+  source: 4240_AFG_RETAIL/2023_Annual_filed2024-04-17.pdf
+  page: 63
+  quote: the impact was considered in the consolidated financial statement as of and for the for the nine-month period ended 31 December 2022
+- period_restated: FY2023
+  item: Revenue and P&L re-presented for discontinued operations (US subsidiary, 5 fashion brands)
+  from: 5232231188
+  to: 4671223197
+  unit: SAR
+  reason: FY2024 annual notes 32 and 34; the discontinued revenue (72.1m + 755.8m) exceeds the change, so other re-presentations are not reconciled.
+  source: 4240_AFG_RETAIL/2024_Annual_filed2025-04-09.pdf
+  page: 10
+  quote: Revenue 21 4,844,508,690 4,671,223,197
+- period_restated: FY2024
+  item: 'P&L and balance sheet re-presented: one brand back from held for sale to continuing; D&A folded into functional lines; capex reclassification'
+  from: 4844508690
+  to: 4847143434
+  unit: SAR
+  reason: FY2025 annual note 36 (i) and (ii).
+  source: 4240_AFG_RETAIL/2025_Annual_filed2026-03-16.pdf
+  page: 67
+  quote: this brand has been reclassified from "assets classified as held for fale" to "continuing operations."
+- period_restated: 31 Dec 2025, 1 Jan 2025 and 9M 2025
+  item: 'Eleven adjustments: ECL presentation, cost of revenue reclassified to S&D/G&A, write-offs, D&A, accrued interest into loans, IFRS 16 lease terms, lease incentives, held-for-sale brand, supplier advances, store-level impairment (prospective), agency income net'
+  from: -1466203430
+  to: -1612192647
+  unit: SAR
+  reason: '2026 Q3 interim note 23 (p31-41): equity 31 Dec 2025 -1,466.2m -> -1,612.2m; lease liabilities 1,476.7m -> 2,201.4m; 9M 2025 gross profit 499.2m -> 1,189.4m; 9M 2025 loss -205.5m -> -234.7m.'
+  source: 4240_AFG_RETAIL/2026_Q3_filed2026-11-11.pdf
+  page: 31
+  quote: management has restated the comparative figures to adjust prior year condensed consolidated interim financial information.
+significant_events:
+- date: '2022'
+  event: Financial year end changed from 31 March to 31 December; FY2022 statements cover nine months (1 Apr - 31 Dec 2022)
+  financial_effect: FY2022 is a short period
+  source: 4240_AFG_RETAIL/2022_Annual_filed2023-04-10.pdf
+  page: 16
+  quote: approval by the Shareholders Extraordinary General Assembly to amend the Group's financial year end from 31 March to 31 December.
+- date: '2025-09-15'
+  event: Al Futtaim Retail Company completed the purchase of 49.95% of the shares from the Alhokair family and related companies at SAR 44 per share (SAR 2,522m)
+  financial_effect: Change of control; Al Futtaim Group is the ultimate parent
+  source: 4240_AFG_RETAIL/2025_Annual_filed2026-03-16.pdf
+  page: 47
+  quote: The Company also received a notice from Al Futtaim Retail Company confirming completion of the special transaction on 15 September 2025.
+- date: '2025-09-14'
+  event: SAR 1,600m Emirates NBD facility used to settle existing bank debt (SNB and Riyad loans fully settled 15 Sep 2025); converted to a three-year term loan on 14 Dec 2025
+  financial_effect: Loans and borrowings 1,608.7m at 31 Dec 2025
+  source: 4240_AFG_RETAIL/2025_Annual_filed2026-03-16.pdf
+  page: 43
+  quote: AFG International Company entered into a ⃀ 1,600 million credit facility agreement with Emirates NBD Bank
+- date: '2025-09-14'
+  event: SAR 1,350m shareholder loan from Al Futtaim Private Company (SAIBOR + 3.6%, interest capitalised quarterly, convertible into equity at the lender's option)
+  financial_effect: Shareholder loan 1,378.5m (31 Dec 2025), 1,469.6m (30 Sep 2026)
+  source: 4240_AFG_RETAIL/2025_Annual_filed2026-03-16.pdf
+  page: 44
+  quote: The agreement includes an option for the lender to convert the outstanding loan amounts into equity
+- date: '2026-01-20'
+  event: Renamed AFG International Company (EGM 6 Jan 2026)
+  financial_effect: none
+  source: 4240_AFG_RETAIL/2026_Q3_filed2026-11-11.pdf
+  page: 10
+  quote: The extraordinary general assembly of the Company in its meeting dated 6 January 2026 has approved changing the Company's name to be AFG International Company.
+- date: 2026 (9M)
+  event: Store-level impairment testing introduced; impairment of 59.2m recorded prospectively (part may relate to earlier periods)
+  financial_effect: Impairment of non-financial assets 59.2m
+  source: 4240_AFG_RETAIL/2026_Q3_filed2026-11-11.pdf
+  page: 34
+  quote: It is likely that some of this impairment loss relates to earlier periods
+- date: '2026-09-30'
+  event: 'Going concern: material uncertainty disclosed by management; support letter from the immediate parent'
+  financial_effect: Total liabilities exceed total assets by 1,836m
+  source: 4240_AFG_RETAIL/2026_Q3_filed2026-11-11.pdf
+  page: 13
+  quote: These conditions indicate the existence of a material uncertainty that may cast significant doubt on the Group’s ability to continue as a going concern.
+audit_opinion:
+- period: FY2022
+  opinion: 'Qualified (BDO Dr. Mohamed Al-Amri & Co.): insufficient evidence for right-of-use assets and lease liabilities'
+  emphasis_of_matter: basis for qualified opinion on IFRS 16 balances
+  source: 4240_AFG_RETAIL/2022_Annual_filed2023-04-10.pdf
+  page: 4
+- period: FY2023
+  opinion: Unmodified (BDO) with material uncertainty related to going concern; other matters on the restatement and unaudited Annex 1
+  emphasis_of_matter: material uncertainty related to going concern
+  source: 4240_AFG_RETAIL/2023_Annual_filed2024-04-17.pdf
+  page: 4
+- period: FY2024
+  opinion: Unmodified (BDO) with material uncertainty related to going concern
+  emphasis_of_matter: material uncertainty related to going concern
+  source: 4240_AFG_RETAIL/2024_Annual_filed2025-04-09.pdf
+  page: 4
+- period: FY2025
+  opinion: Unmodified (BDO) with material uncertainty related to going concern
+  emphasis_of_matter: material uncertainty related to going concern
+  source: 4240_AFG_RETAIL/2025_Annual_filed2026-03-16.pdf
+  page: 4
+- period: 9M2026
+  opinion: Review conclusion unmodified (PricewaterhouseCoopers); no paragraph on going concern in the review report (management note 3.2 still discloses the uncertainty)
+  emphasis_of_matter: none in the review report
+  source: 4240_AFG_RETAIL/2026_Q3_filed2026-11-11.pdf
+  page: 3
+kpis_in_filings:
+- period: FY2022-9M2026
+  kpi: Store counts, openings, like-for-like sales, selling space
+  value: null
+  unit: count
+  status: not found
+  source: 4240_AFG_RETAIL/2025_Annual_filed2026-03-16.pdf
+  page: null
+special_extractions:
+- item: 'Unaudited twelve-month calendar 2022 P&L (Annex 1, prepared for comparability): revenue 5,525,340,901; profit 36,864,663; attributable 39,386,109; on the FY2023-annual basis before later re-presentations.'
+  source: 4240_AFG_RETAIL/2023_Annual_filed2024-04-17.pdf
+  page: 66
+- item: 9M2025 total assets (4,828.0m) and lease liabilities (2,279.9m) are restated values from the 2026 Q3 XBRL only; the 2025 Q3 interim printed 4,214.8m and 1,499.7m.
+  source: 4240_AFG_RETAIL/2025_Q3_filed2025-11-12.pdf
+  page: 4
+open_questions:
+- The FY2025 "tax expense" of 50.6m in other operating expense (9M 2025 29.7m, 9M 2026 9.1m) is not explained; VAT payable fell from 335.9m to 11.8m in 2025.
+- The FY2023 revenue re-presented in the FY2024 annual (-561.0m) is smaller than the revenue of the operations shown as discontinued (827.9m); the rest of the re-presentation is not explained.
+- Whether the brand whose assets were sold in 2025 (note 33B) was still in continuing revenue in 9M 2025 is not disclosed.

@@ -160,5 +160,6 @@ data_notes:
   holds only non-financial impairments (FY2023 goodwill SAR 15.9m, FY2025 PP&E SAR 16.4m), not receivable ECL.'
 - FY2024 and 9M2025 income statements were re-presented for the discontinued Jordan, Kuwait and Bahrain subsidiaries (FY2024 revenue SAR 2,962.9m to 2,857.7m); FY2023 CFO was re-presented
   (finance costs paid moved to financing).
-- No borrowings in any period; net debt is lease liabilities less cash and is negative, so net debt / EBITDA is not shown.
+- 'No borrowings in any period: DEBT = 0 override rows were added in stage B for FY2021-9M2026 (balance-sheet pages; FY2021 and FY2022 from the XBRL comparative columns of the next filings,
+  as no PDF exists). Net debt is therefore lease liabilities less cash, which is negative (net cash) in every period.'
 - FY2024 annual primary statements are scanned images (read visually and checked at high resolution).

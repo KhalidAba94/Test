@@ -257,7 +257,7 @@ significant_events:
   page: 13
   quote: >-
     Had there been no revision to the useful lives, the depreciation charge for the three-month and nine-month periods ended 30 September
-    2026 would have been higher
+    2026
 - date: '2026'
   event: 'Auditor change: 2026 interims reviewed by PricewaterhouseCoopers (FY2022-FY2025 audited by Deloitte)'
   financial_effect: null

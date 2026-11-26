@@ -151,8 +151,9 @@ what_it_means:
     15.7m of cumulative fair-value losses in OCI).
 confidence_overall: High
 data_notes:
-- Revenue is below SAR 10m from FY2023, so revenue growth from FY2024 and all margins from FY2023 are n.m.; net debt / EBITDA is n.m.
-  (no borrowings, negative EBITDA).
+- 'Revenue is below SAR 10m from FY2023, so revenue growth from FY2024 and all margins from FY2023 are n.m. TECO has no borrowings:
+  DEBT = 0 override rows were added in stage B (balance-sheet pages), so net debt is a net cash position; net debt / EBITDA is n.m.
+  because EBITDA is negative (below SAR 10m).'
 - 'Stage A overrides: finance cost set to 0 for FY2023 and FY2024 (the XBRL had mapped the provision for legal claims); there is no
   finance-cost line on the face. Lease interest (SR 14,707 FY2024; SR 9,659 FY2025) and employee-benefit interest (SR 64,598; SR 71,360)
   sit inside operating expenses.'

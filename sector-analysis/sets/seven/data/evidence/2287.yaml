@@ -1,0 +1,274 @@
+# Evidence from Entaj (archive 2287_ENTAJ). Facts only; page = physical PDF page (1-based).
+# First period available: FY2023 (comparative in the FY2024 annual). Primary statements are image pages; notes are text.
+ticker: '2287'
+company: Arabian Company for Agricultural and Industrial Investment (Entaj)
+perimeter_changes:
+- event: >-
+    Single company (subsidiary of ARASCO) with a head office and two branches; no subsidiaries, acquisitions or disposals in FY2023-9M2026
+  type: acquisition
+  status: not found
+  period: FY2023-9M2026
+  source: 2287_ENTAJ/2025_Annual_filed2026-04-23.pdf
+  page: 14
+  quote: The Company operates through its Head Office in Riyadh and two branches in Kingdom of Saudi Arabia as below
+segments:
+- period: FY2024
+  segment: >-
+    Single segment (poultry and related products); Saudi Arabia 1,268,807,083, exports (UAE, Kuwait, Jordan) 10,896,635 (restated)
+  basis: geographic
+  revenue: 1279703718
+  profit: null
+  unit: SAR
+  source: 2287_ENTAJ/2025_Annual_filed2026-04-23.pdf
+  page: 25
+- period: FY2025
+  segment: Single segment; Saudi Arabia 1,320,116,621, exports 31,034,207 (UAE 21.1m, Kuwait 4.8m, Iraq 3.3m, others)
+  basis: geographic
+  revenue: 1351150828
+  profit: null
+  unit: SAR
+  source: 2287_ENTAJ/2025_Annual_filed2026-04-23.pdf
+  page: 25
+revenue_drivers:
+- period: FY2023
+  driver: Poultry 1,036,664,959; table eggs 23,928,950; live birds 25,667,139; exports 9,566,839 (FY2024 annual basis)
+  value: 1099348958
+  unit: SAR
+  source: 2287_ENTAJ/2024_Annual_filed2025-04-10.pdf
+  page: 45
+  quote: Poultry sales 1,187,642,800 1,036,664,959
+- period: FY2025
+  driver: >-
+    Domestic poultry 1,212,710,061 (FY2024 restated 1,182,552,217); table eggs 74,278,002 (37,454,918); packaging services 12,605,643
+    (nil); by-products 17,132,570 (30,982,320); exports 31,034,207 (10,896,635)
+  value: 1351150828
+  unit: SAR
+  source: 2287_ENTAJ/2025_Annual_filed2026-04-23.pdf
+  page: 42
+  quote: Table eggs sales 74,278,002 37,454,918
+- period: 9M2026
+  driver: >-
+    Domestic poultry 1,120,123,672 (9M2025 902,571,083); table eggs 41,414,026 (49,496,471); live birds 15,103,402 (1,156,290); exports
+    68,010,245 (20,317,015)
+  value: 1272367593
+  unit: SAR
+  source: 2287_ENTAJ/2026_Q3_filed2026-11-11.pdf
+  page: 22
+  quote: Poultry sales 345,760,631 300,242,143 1,120,123,672 902,571,083
+- period: FY2025
+  driver: 'Finance cost on loans 34.6m with nothing capitalised (FY2024: 25.4m capitalised into projects)'
+  value: 34596972
+  unit: SAR
+  source: 2287_ENTAJ/2025_Annual_filed2026-04-23.pdf
+  page: 44
+  quote: 'Less: interest capitalized (note 6) - (25,441,117)'
+- period: FY2023-9M2026
+  driver: Volumes (birds, tonnes, eggs), prices and farm capacity
+  value: null
+  unit: count
+  source: 2287_ENTAJ/2025_Annual_filed2026-04-23.pdf
+  page: null
+  status: not found
+one_offs:
+- period: FY2023
+  item: Gain on fair value remeasurement of broiler birds
+  amount: 2686725
+  unit: SAR
+  pnl_line: below profit from operations (FY2024 annual)
+  recurring: false
+  source: 2287_ENTAJ/2024_Annual_filed2025-04-10.pdf
+  page: 9
+  quote: (Loss) gain on fair value remeasurement of broiler birds’ biological assets 8 (1,167,671) 2,686,725
+- period: FY2024
+  item: Insurance proceeds (Amal farm fire)
+  amount: 2325176
+  unit: SAR
+  pnl_line: Other income
+  recurring: false
+  source: 2287_ENTAJ/2025_Annual_filed2026-04-23.pdf
+  page: 44
+  quote: Insurance proceeds (note 6 &13) 4,174,824 2,325,176
+- period: FY2024
+  item: Impairment of PP&E after the Amal farm fire (restated; already outside EBITDA)
+  amount: -3784260
+  unit: SAR
+  pnl_line: Other income
+  recurring: false
+  source: 2287_ENTAJ/2025_Annual_filed2026-04-23.pdf
+  page: 27
+  quote: primarily related to a fire accident in Amal farm.
+- period: FY2025
+  item: Gain on disposal of property, plant and equipment
+  amount: 15825457
+  unit: SAR
+  pnl_line: Other income
+  recurring: false
+  source: 2287_ENTAJ/2025_Annual_filed2026-04-23.pdf
+  page: 44
+  quote: Gain on disposal of property, plant and equipment (note 6) 15,825,457 347,438
+- period: FY2025
+  item: 'Gain on fair value remeasurement of biological assets (FY2024: loss 1,167,671)'
+  amount: 12990932
+  unit: SAR
+  pnl_line: Cost of revenue (since the note 32.2.8 reclassification)
+  recurring: false
+  source: 2287_ENTAJ/2025_Annual_filed2026-04-23.pdf
+  page: 12
+  quote: (Gain) / loss on fair value remeasurement of biological assets (12,990,932) 1,167,671
+- period: FY2025
+  item: Insurance proceeds
+  amount: 4174824
+  unit: SAR
+  pnl_line: Other income
+  recurring: false
+  source: 2287_ENTAJ/2025_Annual_filed2026-04-23.pdf
+  page: 44
+  quote: Insurance proceeds (note 6 &13) 4,174,824 2,325,176
+- period: 9M2025
+  item: Gain on disposal of PP&E 15,792,047 and insurance proceeds 4,174,826 (restated comparative)
+  amount: 19966873
+  unit: SAR
+  pnl_line: Other income
+  recurring: false
+  source: 2287_ENTAJ/2026_Q3_filed2026-11-11.pdf
+  page: 23
+  quote: plant and equipment 393,897 10,594 1,009,465 15,792,047
+- period: 9M2026
+  item: Extinguishment of trade payable balances
+  amount: 5520684
+  unit: SAR
+  pnl_line: Other income
+  recurring: false
+  source: 2287_ENTAJ/2026_Q3_filed2026-11-11.pdf
+  page: 23
+  quote: payable balances (Note 10) - - 5,520,684 -
+- period: 9M2026
+  item: 'Gain on fair value remeasurement of biological assets (9M2025: 11,418,997)'
+  amount: 1432747
+  unit: SAR
+  pnl_line: Cost of revenue
+  recurring: false
+  source: 2287_ENTAJ/2026_Q3_filed2026-11-11.pdf
+  page: 9
+  quote: Gain on fair value remeasurement of biological assets (1,432,747) (11,418,997)
+restatements:
+- period_restated: FY2024
+  item: >-
+    Error corrections and reclassifications (note 32): revenue 1,244.9m to 1,279.7m; cost of revenue 1,047.1m to 1,092.2m; finance costs
+    33.7m to 14.6m; operating cash flow 74.4m to 92.0m; profit unchanged
+  from: 1244885289
+  to: 1279703718
+  unit: SAR
+  reason: >-
+    Prior-period errors (rebates, inventory provision, depreciation, capitalised borrowing costs 16.4m, fire impairment 3.8m, diesel
+    subsidy) and reclassifications (by-product sales, bank charges)
+  source: 2287_ENTAJ/2025_Annual_filed2026-04-23.pdf
+  page: 48
+  quote: Revenue 1,244,885,289 (5,090,583) 32.1.1 39,909,012 32.2.7 1,279,703,718
+- period_restated: FY2023 (balance sheet at 1 Jan 2024)
+  item: >-
+    Reclassifications (hatchery eggs to biological assets, related-party payables to trade payables, intangibles and spare parts); equity
+    unchanged
+  from: null
+  to: null
+  unit: SAR
+  reason: note 32.3
+  source: 2287_ENTAJ/2025_Annual_filed2026-04-23.pdf
+  page: 49
+  quote: Statement of financial position as at 1 January 2024
+- period_restated: 9M2025
+  item: >-
+    Error corrections (note 18): revenue 995.0m to 1,000.1m; cost of revenue 798.3m to 862.2m; profit 18.9m to a loss of 39.2m; operating
+    cash flow 97.2m to 61.8m
+  from: 18856772
+  to: -39164306
+  unit: SAR
+  reason: >-
+    Inventory provision 25.3m and unrecorded cost of revenue 37.1m, unrecorded diesel subsidy 6.3m, other corrections (2026 Q3 note
+    18.2)
+  source: 2287_ENTAJ/2026_Q3_filed2026-11-11.pdf
+  page: 25
+  quote: Profit / (Loss) for the period 18,856,772 (58,021,078) (39,164,306)
+significant_events:
+- date: '2024-01-01'
+  event: Converted from a limited liability company to a closed joint stock company
+  financial_effect: null
+  source: 2287_ENTAJ/2025_Annual_filed2026-04-23.pdf
+  page: 14
+  quote: >-
+    Legal formalities in this regard were completed on 19 Jumada Al-Akhirah 1445H (corresponding to 1 January 2024).
+- date: '2025-03-17'
+  event: 30% of the shares listed on the Saudi Exchange (CMA approval 30 Sep 2024); majority shareholder ARASCO
+  financial_effect: null
+  source: 2287_ENTAJ/2025_Annual_filed2026-04-23.pdf
+  page: 14
+  quote: >-
+    the Company’s ordinary shares began trading on Saudi Stock Exchange (“Tadawul”) on 17 Ramadan 1446H (corresponding to 17 March 2025).
+- date: '2024'
+  event: >-
+    Fire at the Amal farm: PP&E impairment 3.8m and insurance compensation 2.3m (both recorded only in the FY2024 restatement)
+  financial_effect: net -1.5m in FY2024
+  source: 2287_ENTAJ/2025_Annual_filed2026-04-23.pdf
+  page: 45
+  quote: The impairment loss of SR 3.8 million related to fire accident at Amal farm was not recorded.
+- date: '2025-06-25'
+  event: 'First dividend as a listed company: SAR 15m for FY2024, paid July 2025'
+  financial_effect: cash outflow 15m
+  source: 2287_ENTAJ/2025_Annual_filed2026-04-23.pdf
+  page: 45
+  quote: approved the Board of Directors’ recommendation to distribute cash dividends amounting to SR 15 million
+- date: 2025-2026
+  event: >-
+    Auditor change: FY2023-FY2024 audited by Ernst & Young; FY2025 audit and 2025-2026 reviews by KPMG; the 9M2026 statements were signed
+    by an acting CFO and an acting CEO
+  financial_effect: null
+  source: 2287_ENTAJ/2026_Q3_filed2026-11-11.pdf
+  page: 6
+  quote: (Chief Financial Officer - Acting)
+audit_opinion:
+- period: FY2024
+  opinion: unmodified (Ernst & Young)
+  emphasis_of_matter: none
+  source: 2287_ENTAJ/2024_Annual_filed2025-04-10.pdf
+  page: 3
+- period: FY2025
+  opinion: unmodified (KPMG)
+  emphasis_of_matter: >-
+    Emphasis of matter: FY2024 comparatives restated (note 32); other matter: FY2023-FY2024 audited by another auditor
+  source: 2287_ENTAJ/2025_Annual_filed2026-04-23.pdf
+  page: 5
+- period: 9M2025
+  opinion: review conclusion (KPMG)
+  emphasis_of_matter: other matter on comparative figures
+  source: 2287_ENTAJ/2025_Q3_filed2025-11-12.pdf
+  page: 4
+- period: 9M2026
+  opinion: review conclusion unmodified (KPMG)
+  emphasis_of_matter: none
+  source: 2287_ENTAJ/2026_Q3_filed2026-11-11.pdf
+  page: 3
+kpis_in_filings:
+- period: FY2025
+  kpi: Export revenue (9 countries)
+  value: 31034207
+  unit: SAR
+  source: 2287_ENTAJ/2025_Annual_filed2026-04-23.pdf
+  page: 25
+- period: FY2023-9M2026
+  kpi: Birds or tonnes sold, farm capacity
+  value: null
+  unit: count
+  source: 2287_ENTAJ/2025_Annual_filed2026-04-23.pdf
+  page: null
+  status: not found
+special_extractions:
+- item: Stage A
+  detail: >-
+    9M2026 read from the PDF (no XBRL); 9M2025 replaced by the restated comparative; capex = PP&E + intangibles (XBRL had biological-asset
+    additions); D&A includes right-of-use depreciation and breeder-bird amortisation; finance income FY2025 corrected to nil.
+open_questions:
+- >-
+  The 30 Sep 2025 balance sheet is only available on the pre-restatement basis (equity 465.2m); the note 18 corrections are reflected
+  from 31 Dec 2025.
+- >-
+  No volumes, prices or capacity data are given, so the causes of the margin fall cannot be split between price and cost.

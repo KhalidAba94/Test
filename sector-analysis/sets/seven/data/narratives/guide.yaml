@@ -14,7 +14,7 @@ sections:
   - Like-for-like growth separates the existing business from acquisitions, disposals, currency and new capacity. Where the filings do not allow this, it says 'not determinable' instead of guessing.
 - heading: Periods
   lines:
-  - Compound annual growth (CAGR) 2022–25 = (FY2025 ÷ FY2022)^(1/3) − 1, i.e. three years of compounding. A 2022–26 CAGR needs full-year 2026 results (expected Feb–Apr 2027) and is not shown.
+  - Compound annual growth (CAGR) 2022–25 = (FY2025 ÷ FY2022)^(1/3) − 1, i.e. three years of compounding. A group's CAGR uses the companies with figures in every year 2022–2025; a company whose span includes a short year shows its CAGR as 'n.m.'. A 2022–26 CAGR needs full-year 2026 results (expected Feb–Apr 2027) and is not shown.
   - Growth and CAGR are 'n.m.' (not meaningful) when the starting value is zero, negative or below SAR 10m, or when a profit turns into a loss. Margins are 'n.m.' when revenue is below SAR 10m (e.g. an
     investment holding with almost no revenue). Return on equity is 'n.m.' when average equity is zero or negative, and net debt / EBITDA is 'n.m.' when (annualised) EBITDA is negative or below SAR 10m.
   - 9M ratios that divide by a balance-sheet amount (ROE) and net debt ÷ EBITDA are annualised (× 12/9; a short financial year × 12 / its months). Income figures in the tables are never annualised.

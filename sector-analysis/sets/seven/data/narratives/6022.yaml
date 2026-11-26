@@ -1,0 +1,200 @@
+ticker: '6022'
+headline: >-
+  Armah grew revenue from SAR 13.2m (FY2022) to SAR 225m (FY2025) as its fitness centres filled up, turning a SAR 25.2m loss into a
+  SAR 62.0m profit; in 9M 2026, its first quarterly report before moving from Nomu to the Main Market, revenue rose 10.6% to SAR 180m
+  but attributable profit fell 11.8% to SAR 39.4m, because 9M 2025 (unaudited and unreviewed) included a SAR 9.5m sublease gain and
+  9M 2026 carried SAR 4.2m of listing costs.
+lfl_basis:
+  definition_used: >-
+    Standard bridge on IFRS revenue. Armah is a single entity running fitness centres in Saudi Arabia through branches, with no acquisitions,
+    disposals or foreign operations, so organic growth equals reported growth. Growth in FY2023-FY2024 came mainly from the ramp-up
+    of new centres, but no centre count or same-centre revenue is disclosed, so like-for-like growth is not determinable.
+  perimeter_changes:
+  - event: None (single entity; branches in Riyadh and Jeddah)
+    date: FY2022-9M2026
+    effect: nil
+    source: 6022_ARMAH/2025_Annual_filed2026-05-07.pdf p.12
+  capacity_changes:
+  - event: 'Centre build-out: capex SR 118m (FY2022) and SR 128m (FY2023), falling to SR 41.4m (FY2024)'
+    date: FY2022-FY2024
+    effect: not determinable
+    source: 6022_ARMAH/2023_Annual_filed2024-04-02.pdf p.10; 6022_ARMAH/2025_Annual_filed2026-05-07.pdf p.10
+  - event: 'New leases in 9M 2026: right-of-use assets SR 63.6m added; capex SR 69.6m plus SR 21.7m of advances'
+    date: 9M2026
+    effect: not determinable
+    source: 6022_ARMAH/2026_Q3_filed2026-11-02.pdf p.7
+  fx_exposure: 'None: all revenue in Saudi Arabia.'
+  price_volume_support: 'Not determinable: revenue is split into subscriptions, personal training and other, but members, centres and
+    prices are not disclosed.'
+  confidence: Medium (perimeter and FX nil with High confidence; new capacity not determinable)
+price_volume:
+- period: 9M 2026 vs 9M 2025
+  text: >-
+    Revenue rose SAR 17.2m (+10.6%). Subscriptions rose 9.6% (SAR 140m to SAR 153m) and personal training 17.3% (SAR 18.4m to SAR 21.6m).
+    The 9M 2025 comparative is unaudited and unreviewed. Members and prices are not disclosed.
+  basis: disclosed (revenue by type); split not determinable
+  confidence: Medium (comparative not reviewed)
+  source: 6022_ARMAH/2026_Q3_filed2026-11-02.pdf p.11
+  refs:
+  - 6022-9M2026-REV
+  - 6022-9M2025-REV
+- period: FY2025 vs FY2024
+  text: >-
+    Revenue rose SAR 47m (+26.7%). Subscriptions rose 23.9% (SAR 156m to SAR 194m) and personal training 50.9% (SAR 16.6m to SAR 25.1m).
+  basis: disclosed (revenue by type)
+  confidence: High for the amounts
+  source: 6022_ARMAH/2025_Annual_filed2026-05-07.pdf p.31
+  refs:
+  - 6022-FY2025-REV
+  - 6022-FY2024-REV
+profit_and_margin:
+  drivers:
+  - period: FY2023
+    driver: >-
+      Revenue rose from SAR 13.2m to SAR 80.1m as new centres opened and filled; gross profit was SAR 28.5m (a loss of SAR 1.9m in FY2022).
+      Finance cost rose to SAR 11.8m (SAR 4.3m) with higher borrowings and leases. Attributable profit was SAR 0.8m (loss of SAR 25.2m).
+      EBITDA margin 41.4%; net margin 1.0%; ROE 0.2%. A SAR 109.9m share issue funded the build-out.
+    source: 6022_ARMAH/2024_Annual_filed2025-03-05.pdf p.8 (P&L); 6022_ARMAH/2023_Annual_filed2024-04-02.pdf p.8, p.10
+    refs:
+    - 6022-FY2023-REV
+    - 6022-FY2023-GP
+    - 6022-FY2023-NI_ATTR
+    - 6022-FY2023-EBITDA_C
+  - period: FY2024
+    driver: >-
+      Revenue +121.5% to SAR 177m and gross profit to SAR 84.4m (gross margin 47.5%, restated). Finance cost was SAR 22.7m and a SAR
+      4.5m gain on loan modification was booked. Attributable profit SAR 38.3m (restated). EBITDA margin 54.5%; net margin 21.6%; ROE
+      9.1%.
+    source: 6022_ARMAH/2025_Annual_filed2026-05-07.pdf p.8, p.41
+    refs:
+    - 6022-FY2024-REV
+    - 6022-FY2024-GP
+    - 6022-FY2024-NI_ATTR
+    - 6022-FY2024-EBITDA_C
+  - period: FY2025
+    driver: >-
+      Revenue +26.7% to SAR 225m (subscriptions +23.9%, personal training +50.9%) and gross margin 49.3%. Selling and marketing costs
+      rose to SAR 13.7m (SAR 7.7m). A SAR 9.5m gain on subleasing land at Al Wadi and finance income of SAR 6.3m lifted attributable
+      profit 62.1% to SAR 62.0m. EBITDA margin 55.1%; net margin 27.6%; ROE 12.1%.
+    source: 6022_ARMAH/2025_Annual_filed2026-05-07.pdf p.8, p.26, p.31
+    refs:
+    - 6022-FY2025-REV
+    - 6022-FY2025-GP
+    - 6022-FY2025-NI_ATTR
+    - 6022-FY2025-EBITDA_C
+    - 6022-FY2025-FIN_INC
+  - period: 9M2026
+    driver: >-
+      Revenue +10.6% to SAR 180m and gross profit +12.3% (gross margin 48.9% vs 48.1%). Listing fees of SAR 4.2m and no repeat of the
+      SAR 9.5m sublease gain cut attributable profit 11.8% to SAR 39.4m, while finance cost fell to SAR 16.1m (SAR 18.8m). EBITDA margin
+      48.8% (56.6%); we calculate EBITDA excluding the sublease gain and listing fees at SAR 92.1m (9M 2025: SAR 82.7m). Net margin
+      21.9% (27.5%); ROE 9.2% (annualised).
+    source: 6022_ARMAH/2026_Q3_filed2026-11-02.pdf p.4 (P&L), p.11 (revenue)
+    refs:
+    - 6022-9M2026-REV
+    - 6022-9M2026-GP
+    - 6022-9M2026-NI_ATTR
+    - 6022-9M2026-EBITDA_C
+    - 6022-9M2025-EBITDA_C
+  - period: 9M2026
+    driver: >-
+      Operating cash flow rose 21.1% to SAR 118m, but capex jumped to SAR 69.6m (SAR 16.8m) and new leases added SAR 63.6m of right-of-use
+      assets, so lease liabilities rose to SAR 268m (end-2025: SAR 209m) and net debt / EBITDA to 3.4x (annualised).
+    source: 6022_ARMAH/2026_Q3_filed2026-11-02.pdf p.5, p.7
+    refs:
+    - 6022-9M2026-CFO
+    - 6022-9M2026-CAPEX
+    - 6022-9M2026-LEASE_LIAB
+    - 6022-9M2026-NET_DEBT
+  one_offs:
+  - item: Rent concessions
+    period: FY2022
+    amount_sar_m: 6.0
+    line: Other income, net
+    source: 6022_ARMAH/2022_Annual_filed2023-11-30.pdf p.27
+    tax_nci: 'No minority interests; zakat effect not disclosed (no zakat charge in FY2022): not determinable, profit kept as reported'
+  - item: Gain on disposal of lease contracts
+    period: FY2022
+    amount_sar_m: 1.3
+    line: Other income, net
+    source: 6022_ARMAH/2022_Annual_filed2023-11-30.pdf p.27
+    tax_nci: 'No minority interests; zakat effect not disclosed: not determinable, profit kept as reported'
+  - item: Loss on modification of financial liability (loan rescheduling)
+    period: FY2022
+    amount_sar_m: -3.8
+    line: Other income, net
+    source: 6022_ARMAH/2022_Annual_filed2023-11-30.pdf p.27
+    tax_nci: 'No minority interests; zakat effect not disclosed: not determinable, profit kept as reported'
+  - item: Gain on modification of loans and borrowings
+    period: FY2024
+    amount_sar_m: 4.5
+    line: Gain on modification of loans and borrowings
+    source: 6022_ARMAH/2025_Annual_filed2026-05-07.pdf p.8
+    tax_nci: 'No minority interests; zakat effect not disclosed: not determinable, profit kept as reported'
+  - item: Gain on commencement of sublease (Al Wadi land)
+    period: FY2025
+    amount_sar_m: 9.5
+    line: Gain on commencement of sublease
+    source: 6022_ARMAH/2025_Annual_filed2026-05-07.pdf p.8, p.26
+    tax_nci: 'No minority interests; zakat effect not disclosed: not determinable, profit kept as reported'
+  - item: Listing fees and related expenses
+    period: FY2025
+    amount_sar_m: -1.5
+    line: Other expenses, net
+    source: 6022_ARMAH/2025_Annual_filed2026-05-07.pdf p.33
+    tax_nci: Under 5% of attributable profit but listing-related; zakat effect not disclosed, profit kept as reported
+  - item: Gain on commencement of sublease (Al Wadi land)
+    period: 9M2025
+    amount_sar_m: 9.5
+    line: Gain on commencement of sublease
+    source: 6022_ARMAH/2026_Q3_filed2026-11-02.pdf p.4
+    tax_nci: 'No minority interests; zakat effect not disclosed: not determinable, profit kept as reported'
+  - item: Listing fees and related expenses (move to the Main Market)
+    period: 9M2026
+    amount_sar_m: -4.2
+    line: Listing fees and related expenses
+    source: 6022_ARMAH/2026_Q3_filed2026-11-02.pdf p.4
+    tax_nci: 'No minority interests; zakat effect not disclosed: not determinable, profit kept as reported'
+developments:
+- date: '2022'
+  category: financing
+  text: Rescheduled its long-term loan twice (grace period extended; non-equal instalments at SAIBOR + 1.6%), a modification loss of
+    SR 9.2m, of which SR 5.5m was capitalised.
+  source: 6022_ARMAH/2022_Annual_filed2023-11-30.pdf p.24, p.21
+- date: '2023'
+  category: financing
+  text: Raised SR 109.9m from new shares (capital SR 328.6m, share premium SR 68.9m).
+  source: 6022_ARMAH/2023_Annual_filed2024-04-02.pdf p.7, p.10
+- date: '2025'
+  category: event
+  text: Subleased land at Al Wadi District for about 21 years (total rentals SR 127.6m), recording a SR 9.5m gain.
+  source: 6022_ARMAH/2025_Annual_filed2026-05-07.pdf p.26
+- date: '2026-08-30'
+  category: regulation
+  text: Moved from the Nomu parallel market to the Main Market (symbol 6022); the 2026 Q3 interim is its first quarterly report.
+  source: 6022_ARMAH/2026_Q3_filed2026-11-02.pdf p.8
+what_it_means:
+  improved: Revenue grew from SAR 13.2m (FY2022) to SAR 225m (FY2025) and the EBITDA margin from 41.4% (FY2023) to 55.1% (FY2025); operating
+    cash flow reached SAR 118m in 9M 2026 (+21.1%).
+  weakened: In 9M 2026 revenue growth slowed to 10.6%, attributable profit fell 11.8% and the EBITDA margin fell to 48.8% (56.6%), while
+    lease liabilities rose to SAR 268m.
+  why: The early growth came from opening and filling new centres; 9M 2025 included a SAR 9.5m sublease gain and 9M 2026 carried SAR
+    4.2m of listing costs; excluding both, we calculate EBITDA rose from SAR 82.7m to SAR 92.1m.
+  uncertain: The 9M 2025 comparative was neither audited nor reviewed, and no centre or member counts are disclosed, so the growth of
+    existing centres is not determinable.
+confidence_overall: Medium
+data_notes:
+- 'Armah was listed on Nomu (symbol 9590) and reported half-yearly until its transfer to the Main Market on 30 Aug 2026. The 2026 Q3
+  interim is its first quarterly report: its 9M 2025 comparative is labelled unaudited and unreviewed. No 30 Sep 2025 balance sheet
+  is printed; 9M 2025 total assets, borrowings and lease liabilities come only from the 2026 Q3 XBRL file.'
+- 'Restatements: FY2022 restated in the FY2023 annual (note 29); FY2023 cost of revenue re-presented in the FY2024 annual (note 31;
+  49.5m to 51.6m, no profit effect); FY2024 and 1 Jan 2024 restated in the FY2025 annual (note 32: capitalised loan-modification effects
+  and right-of-use depreciation reversed per CMA/SOCPA; FY2024 profit 37.8m to 38.3m; equity -7.2m) and FY2024 CFO re-presented (finance
+  income received moved to investing, 95.8m to 92.9m).'
+- The FY2025 annual PDF used (filed 7 May 2026) differs from the earlier XBRL file (10 Mar 2026) for FY2024 and FY2025 cost of revenue
+  and gross profit; stage A took the PDF figures.
+- 'Stage A overrides: D&A for EBITDA includes depreciation of right-of-use assets, which the XBRL omitted (e.g. FY2025 SR 42.8m vs 34.3m);
+  capex includes intangibles; advances to suppliers and contractors (a separate investing line) are excluded from capex.'
+- Right-of-use depreciation of centres under construction (SR 5.1m in FY2025) is in other expenses, outside cost of revenue. Finance
+  income includes sublease interest and deposit income.
+- Land is carried at revalued amounts (revaluation surplus SR 117.5m at end-2025); revaluation gains go to OCI, not profit.

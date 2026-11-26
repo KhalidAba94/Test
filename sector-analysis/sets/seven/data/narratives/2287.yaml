@@ -1,0 +1,229 @@
+ticker: '2287'
+headline: >-
+  Entaj, listed in March 2025, grew revenue from SAR 1,099m (FY2023) to SAR 1,351m (FY2025) but swung from a SAR 62.7m profit to a SAR
+  123m loss as margins fell and finance costs rose; in 9M 2026 revenue rose 27.2% to SAR 1,272m but the loss widened to SAR 57.5m (restated
+  9M 2025: SAR 39.2m).
+lfl_basis:
+  definition_used: >-
+    Standard bridge on IFRS revenue. Entaj is a single Saudi company with no subsidiaries, so perimeter and FX effects are nil (exports
+    are sold from Saudi Arabia). FY2023 is the first period available. FY2024 revenue is the restated figure in the FY2025 annual, which
+    adds SAR 34.8m of reclassified by-product and hatching-egg sales net of a rebates correction, while FY2023 was not restated; we
+    treat that as an accounting step. Entaj gives no volumes or capacity, so new capacity and like-for-like growth are not determinable.
+  perimeter_changes:
+  - event: 'None: single company (majority-owned by ARASCO); no acquisitions or disposals'
+    date: FY2023-9M2026
+    effect: nil
+    source: 2287_ENTAJ/2025_Annual_filed2026-04-23.pdf p.14
+  capacity_changes:
+  - event: >-
+      New leased farms (right-of-use additions SAR 64.9m in FY2024, SAR 195.7m in FY2025, SAR 159.7m in 9M 2026) and capex of SAR 191m
+      in FY2023
+    date: 2023-2026
+    effect: not determinable (no capacity or revenue disclosed)
+    source: 2287_ENTAJ/2025_Annual_filed2026-04-23.pdf p.13; 2287_ENTAJ/2026_Q3_filed2026-11-11.pdf p.9
+  fx_exposure: 'None: all operations in Saudi Arabia; exports were SAR 31.0m in FY2025 and SAR 68.0m in 9M 2026.'
+  price_volume_support: >-
+    Not determinable: revenue is split by product (poultry, eggs, live birds, by-products, packaging) and export market, but no volumes
+    or prices are given.
+  confidence: Medium (perimeter and FX nil with High confidence; new capacity not determinable)
+price_volume:
+- period: FY2025 vs FY2024
+  text: >-
+    Revenue rose SAR 71.4m (+5.6%). Domestic poultry sales rose 2.6% (SAR 1,183m to SAR 1,213m), table eggs nearly doubled (SAR 37.5m
+    to SAR 74.3m), exports rose from SAR 10.9m to SAR 31.0m and a new packaging service added SAR 12.6m, while by-product sales fell
+    from SAR 31.0m to SAR 17.1m. Volumes and prices are not disclosed.
+  basis: disclosed (revenue by product and market); split not determinable
+  confidence: High for the amounts
+  source: 2287_ENTAJ/2025_Annual_filed2026-04-23.pdf p.25, p.42
+  refs:
+  - 2287-FY2025-REV
+  - 2287-FY2024-REV
+- period: 9M 2026 vs 9M 2025
+  text: >-
+    Revenue rose SAR 272m (+27.2%). Domestic poultry sales rose 24.1% (SAR 903m to SAR 1,120m), exports rose from SAR 20.3m to SAR 68.0m
+    and live-bird sales from SAR 1.2m to SAR 15.1m, while table eggs fell 16.3%. Volumes and prices are not disclosed.
+  basis: disclosed (revenue by product); split not determinable
+  confidence: High for the amounts
+  source: 2287_ENTAJ/2026_Q3_filed2026-11-11.pdf p.22
+  refs:
+  - 2287-9M2026-REV
+  - 2287-9M2025-REV
+profit_and_margin:
+  drivers:
+  - period: FY2023
+    driver: >-
+      First period available. Revenue was SAR 1,099m and gross margin 20.9% (we calculate). The EBITDA margin was 11.2%, including an
+      SAR 2.7m gain on remeasuring broiler birds. Profit was SAR 62.7m, a net margin of 5.7%.
+    source: 2287_ENTAJ/2024_Annual_filed2025-04-10.pdf p.9
+    refs:
+    - 2287-FY2023-REV
+    - 2287-FY2023-GP
+    - 2287-FY2023-EBITDA_C
+    - 2287-FY2023-NI_ATTR
+  - period: FY2024
+    driver: >-
+      Revenue rose 16.4% to SAR 1,280m (restated); without the reclassified by-product and egg sales, growth was 13.2% (we calculate).
+      Gross margin fell to 14.7% (20.9%) after the note 32 error corrections added SAR 9.8m to cost of revenue. EBITDA fell 7.1% to
+      SAR 114m, an EBITDA margin of 8.9%. Finance costs were only SAR 14.6m because SAR 25.4m of interest was capitalised. A farm fire
+      cost SAR 3.8m (impairment) against SAR 2.3m of insurance. Profit fell 56.8% to SAR 27.1m with no zakat charge, a net margin of
+      2.1%; ROE 6.0%.
+    source: 2287_ENTAJ/2025_Annual_filed2026-04-23.pdf p.9, p.12, p.44, p.45-48
+    refs:
+    - 2287-FY2024-REV
+    - 2287-FY2024-GP
+    - 2287-FY2024-EBITDA_C
+    - 2287-FY2024-FIN_COST
+    - 2287-FY2024-NI_ATTR
+  - period: FY2025
+    driver: >-
+      Revenue rose 5.6% to SAR 1,351m but gross profit fell 32.4% to SAR 127m (gross margin 9.4%), even with an SAR 13.0m biological
+      fair-value gain in cost of revenue. Selling costs rose 61.1% and administrative costs 53.4%. Other income of SAR 20.9m included
+      an SAR 15.8m gain on selling property and SAR 4.2m of insurance. EBITDA fell 46.9% to SAR 60.5m, an EBITDA margin of 4.5%. Finance
+      costs rose to SAR 50.7m as no interest was capitalised and lease interest rose to SAR 14.4m. The loss was SAR 123m, a net margin
+      of -9.1%; ROE -31.5%.
+    source: 2287_ENTAJ/2025_Annual_filed2026-04-23.pdf p.9, p.12, p.44
+    refs:
+    - 2287-FY2025-REV
+    - 2287-FY2025-GP
+    - 2287-FY2025-EBITDA_C
+    - 2287-FY2025-FIN_COST
+    - 2287-FY2025-NI_ATTR
+  - period: 9M2026
+    driver: >-
+      Revenue rose 27.2% to SAR 1,272m and gross profit 29.5%, a gross margin of 14.0% (13.8% restated). Selling costs rose 31.2% and
+      receivable impairments were SAR 12.6m (9M 2025: SAR 1.0m reversal); other income fell to SAR 6.0m (SAR 20.4m, which held a SAR
+      15.8m disposal gain) and included SAR 5.5m of payables written back. EBITDA fell 5.1% to SAR 86.5m, an EBITDA margin of 6.8% (9.1%).
+      Finance costs rose 17.3% to SAR 42.6m. The loss was SAR 57.5m (SAR 39.2m), a net margin of -4.5%; annualised ROE -26.3%.
+    source: 2287_ENTAJ/2026_Q3_filed2026-11-11.pdf p.6, p.9, p.23
+    refs:
+    - 2287-9M2026-REV
+    - 2287-9M2026-GP
+    - 2287-9M2026-EBITDA_C
+    - 2287-9M2026-FIN_COST
+    - 2287-9M2026-NI_ATTR
+    - 2287-9M2025-NI_ATTR
+  - period: FY2023-9M2026
+    driver: >-
+      Leverage rose: lease liabilities grew from SAR 57.6m (FY2023) to SAR 366m (30 Sep 2026) as farms were leased, borrowings from
+      SAR 517m to SAR 680m, and net debt including leases from SAR 552m to SAR 1,043m, while equity fell from SAR 437m to SAR 262m.
+      At end-2025 net debt was 15.1 times EBITDA. In 9M 2026 operating cash flow rose to SAR 141m (SAR 61.8m) as trade payables grew,
+      giving free cash flow of SAR 96.1m (we calculate); cash was SAR 2.5m.
+    source: 2287_ENTAJ/2025_Annual_filed2026-04-23.pdf p.8; 2287_ENTAJ/2026_Q3_filed2026-11-11.pdf p.5, p.9
+    refs:
+    - 2287-FY2023-LEASE_LIAB
+    - 2287-9M2026-LEASE_LIAB
+    - 2287-9M2026-DEBT
+    - 2287-9M2026-NET_DEBT
+    - 2287-FY2025-NET_DEBT
+    - 2287-9M2026-CFO
+    - 2287-9M2026-FCF
+  one_offs:
+  - item: Insurance proceeds after the Amal farm fire (impairment of SAR 3.8m already outside EBITDA)
+    period: FY2024
+    amount_sar_m: 2.3
+    line: Other income
+    source: 2287_ENTAJ/2025_Annual_filed2026-04-23.pdf p.44-45
+    tax_nci: >-
+      Zakat effect not disclosed; no non-controlling interests: after-zakat effect not determinable, loss kept as reported
+  - item: Gain on disposal of property, plant and equipment
+    period: FY2025
+    amount_sar_m: 15.8
+    line: Other income
+    source: 2287_ENTAJ/2025_Annual_filed2026-04-23.pdf p.44
+    tax_nci: >-
+      Zakat effect not disclosed; no non-controlling interests: after-zakat effect not determinable, loss kept as reported
+  - item: >-
+      Gain on fair value remeasurement of biological assets (FY2023 SAR +2.7m, FY2024 SAR -1.2m, 9M 2025 SAR +11.4m, 9M 2026 SAR +1.4m)
+    period: FY2025
+    amount_sar_m: 13.0
+    line: Cost of revenue
+    source: 2287_ENTAJ/2025_Annual_filed2026-04-23.pdf p.12; 2287_ENTAJ/2026_Q3_filed2026-11-11.pdf p.9
+    tax_nci: >-
+      Zakat effect not disclosed; no non-controlling interests: after-zakat effect not determinable, loss kept as reported
+  - item: Insurance proceeds
+    period: FY2025
+    amount_sar_m: 4.2
+    line: Other income
+    source: 2287_ENTAJ/2025_Annual_filed2026-04-23.pdf p.44
+    tax_nci: >-
+      Zakat effect not disclosed; no non-controlling interests: after-zakat effect not determinable, loss kept as reported
+  - item: Gain on disposal of property, plant and equipment (restated comparative)
+    period: 9M2025
+    amount_sar_m: 15.8
+    line: Other income
+    source: 2287_ENTAJ/2026_Q3_filed2026-11-11.pdf p.23
+    tax_nci: >-
+      Zakat effect not disclosed; no non-controlling interests: after-zakat effect not determinable, loss kept as reported
+  - item: Extinguishment of trade payable balances
+    period: 9M2026
+    amount_sar_m: 5.5
+    line: Other income
+    source: 2287_ENTAJ/2026_Q3_filed2026-11-11.pdf p.23
+    tax_nci: >-
+      Zakat effect not disclosed; no non-controlling interests: after-zakat effect not determinable, loss kept as reported
+developments:
+- date: '2024-01-01'
+  category: regulation
+  text: >-
+    Converted from a limited liability company to a closed joint stock company; the parent ARASCO keeps the majority.
+  source: 2287_ENTAJ/2025_Annual_filed2026-04-23.pdf p.14
+- date: '2024'
+  category: event
+  text: >-
+    A fire at the Amal farm led to a SAR 3.8m impairment and SAR 2.3m of insurance compensation, both booked only in the restated FY2024
+    figures.
+  source: 2287_ENTAJ/2025_Annual_filed2026-04-23.pdf p.27, p.45
+- date: '2025-03-17'
+  category: financing
+  text: 30% of the shares began trading on the Saudi Exchange after CMA approval on 30 Sep 2024.
+  source: 2287_ENTAJ/2025_Annual_filed2026-04-23.pdf p.14
+- date: '2025-06-25'
+  category: financing
+  text: Approved a SAR 15m dividend for FY2024, paid in July 2025.
+  source: 2287_ENTAJ/2025_Annual_filed2026-04-23.pdf p.45
+- date: 2026-04
+  category: regulation
+  text: >-
+    The FY2025 statements restated FY2024 for errors (KPMG emphasis of matter); the 2026 Q3 interim then restated 9M 2025, turning a
+    SAR 18.9m profit into a SAR 39.2m loss.
+  source: 2287_ENTAJ/2025_Annual_filed2026-04-23.pdf p.5, p.45-48; 2287_ENTAJ/2026_Q3_filed2026-11-11.pdf p.24-25
+- date: 2026 (9M)
+  category: operations
+  text: The 9M 2026 statements were signed by an acting chief financial officer and an acting chief executive.
+  source: 2287_ENTAJ/2026_Q3_filed2026-11-11.pdf p.6
+what_it_means:
+  improved: >-
+    Revenue grew from SAR 1,099m (FY2023) to SAR 1,351m (FY2025) and rose 27.2% in 9M 2026, with exports up from SAR 20.3m to SAR 68.0m;
+    9M 2026 free cash flow was SAR 96.1m.
+  weakened: >-
+    The EBITDA margin fell from 11.2% (FY2023) to 4.5% (FY2025), the company lost SAR 123m in FY2025 and SAR 57.5m in 9M 2026, and net
+    debt including leases rose to SAR 1,043m while equity fell to SAR 262m.
+  why: >-
+    Gross margin fell from 20.9% to 9.4% while selling and administrative costs rose more than 50% in FY2025, and finance costs rose
+    once interest was no longer capitalised and new farm leases added lease interest.
+  uncertain: >-
+    Two restatements in a year (FY2024 and 9M 2025) for accounting errors, and no volume or price data, make it hard to tell how much
+    of the margin fall is operational; FY2025 profit also included SAR 33.0m of disposal, fair-value and insurance gains.
+confidence_overall: Medium
+data_notes:
+- >-
+  First period available is FY2023 (comparative in the FY2024 annual); the company converted to a joint stock company on 1 Jan 2024
+  and listed on 17 Mar 2025. FY2021-FY2022 are not available.
+- >-
+  FY2024 was restated in the FY2025 annual for prior-period errors and reclassifications (note 32): revenue SAR 1,244.9m to SAR 1,279.7m,
+  cost of revenue SAR 1,047.1m to SAR 1,092.2m, finance costs SAR 33.7m to SAR 14.6m (SAR 16.4m more interest capitalised), operating
+  cash flow SAR 74.4m to SAR 92.0m; profit unchanged. KPMG added an emphasis of matter on this.
+- >-
+  9M 2025 was restated in the 2026 Q3 interim (note 18): inventory provision SAR 25.3m, unrecorded cost of revenue SAR 37.1m and other
+  corrections turned a SAR 18.9m profit into a SAR 39.2m loss. The 30 Sep 2025 balance sheet exists only on the earlier basis (equity
+  SAR 465m).
+- >-
+  Stage A corrections: capex is PP&E plus intangibles (the XBRL took biological-asset additions); D&A includes right-of-use depreciation
+  and amortisation of breeder birds (bearer biological assets, kept in D&A: FY2025 SAR 14.5m); FY2025 finance income set to nil (the
+  XBRL took a receivables reversal); receivable allowances removed from impairments; 9M 2026 read from the PDF.
+- >-
+  Biological fair-value changes sit in cost of revenue since the FY2024 restatement (note 32.2.8); EBITDA excluding one-offs removes
+  them in every period, with the FY2024-FY2025 insurance receipts, the FY2025 and 9M 2025 disposal gain and the 9M 2026 payables write-back.
+- >-
+  Primary statements are image pages read by OCR and checked against printed subtotals; the FY2024 annual income-statement page carries
+  a wrong heading (statement of financial position, 2021) but shows the 2024 and 2023 income statement.
