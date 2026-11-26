@@ -76,7 +76,7 @@
     "Capex / revenue"
    ]
   },
-  "classification_note": "Constituents = the archive's Energy folder (6 companies). The archive files Aldrees (4200) under Consumer Discretionary Distribution & Retail and Luberef (2223) under Materials; the Saudi Exchange's own sector classification for these two should be confirmed before the sector total is used externally.",
+  "classification_note": "Constituents = the archive's Energy folder (6 companies). The Saudi Exchange's own sector directory (200listedsecurities.saudiexchange.sa, Energy section) lists Aldrees Petroleum & Transport Services (4200) under Energy, but the archive files it under Consumer Discretionary Distribution & Retail, so it is NOT in these totals; Luberef (2223) appears to be classified as Materials. Adding Aldrees would change the ex-Aramco view materially; recommended for the next iteration once the archive's sector mapping is confirmed.",
   "margin_base_note": "Margins use revenue plus Aramco's other income related to sales (REV_M) because that income is inside Aramco's operating profit, EBITDA and net profit; sector revenue growth and contributions use IFRS revenue (REV)."
  },
  "Banks": {

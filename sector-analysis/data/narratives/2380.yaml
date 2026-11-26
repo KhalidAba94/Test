@@ -15,7 +15,7 @@ lfl_basis:
     - {event: "Saudi Aramco bought a further 22.5% of Class A shares from Sumitomo Chemical (Aramco 60%, Sumitomo 15%, public 25%)", date: "2025-10-08", effect: "shareholder change only; no perimeter effect", source: "2380_PETRO_RABIGH/2025_Annual_filed2026-03-12.pdf p.14"}
   capacity_changes:
     - {event: "Planned maintenance shutdown of the Phase II facilities", date: "2022-12-01 to 2023-01-23", effect: "lower volumes in Dec 2022 and Jan 2023, not quantified; maintenance, not a capacity change", source: "2380_PETRO_RABIGH/2023_Annual_filed2024-03-25.pdf p.30"}
-    - {event: "Full-complex Turnaround and Inspection: all units shut for about 60 days from 15 Apr 2025", date: "2025-04-15", effect: "company reports a significant decrease in revenue and cost of revenue in 9M 2025 and FY2025; not quantified", source: "2380_PETRO_RABIGH/2025_Annual_filed2026-03-12.pdf p.28; 2380_PETRO_RABIGH/2025_Q3_filed2025-11-11.pdf p.8"}
+    - {event: "Full-complex Turnaround and Inspection: all units shut for about 60 days from 15 Apr 2025", date: "2025-04-15", effect: "company reports a significant decrease in revenue and cost of revenue in 9M 2025 and FY2025; not quantified", source: "2380_PETRO_RABIGH/2025_Annual_filed2026-03-12.pdf p.28; 2380_PETRO_RABIGH/2025_Q3_filed2025-11-11.pdf p.10"}
     - {event: "No new units commissioned; capital work in progress relates to plant-enhancement projects not yet in use", date: "FY2022 to 9M2026", effect: "none identified", source: "2380_PETRO_RABIGH/2025_Annual_filed2026-03-12.pdf p.28"}
   fx_exposure: "Products are sold through marketers at USD-linked prices and the riyal is pegged; no FX translation effect."
   price_volume_support: >-
