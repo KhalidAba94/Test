@@ -73,6 +73,8 @@ for sector in ("Energy", "Banks"):
                 continue
             for p, col in COLS.items():
                 py = d["sector"][key][rk][p]["v"]
+                if rk == "COR" and isinstance(py, (int, float)):
+                    py = py * 10000   # the workbook shows cost of risk in basis points
                 xl = ws[f"{col}{r}"].value
                 if not close(xl, py, 5e-4):
                     print(f"MISMATCH {sector} {scope} ratio {rk} {p}: excel={xl} python={py}")

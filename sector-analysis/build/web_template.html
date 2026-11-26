@@ -40,12 +40,12 @@ a{color:var(--accent)}
 .brand{font:600 17px/1.2 var(--f-head);letter-spacing:.01em;color:var(--ink);text-decoration:none;margin-right:6px}
 .brand small{display:block;font:500 11px var(--f-body);color:var(--muted);letter-spacing:.04em;text-transform:uppercase}
 nav.main{display:flex;gap:4px;flex-wrap:wrap}
-nav.main a{font:600 14px var(--f-head);text-decoration:none;color:var(--muted);padding:7px 10px;border-radius:var(--r);min-height:32px;display:inline-flex;align-items:center}
+nav.main a{font:600 14px var(--f-head);text-decoration:none;color:var(--muted);padding:7px 8px;border-radius:var(--r);min-height:32px;display:inline-flex;align-items:center}
 nav.main a[aria-current="page"]{background:var(--accent);color:var(--accent-ink)}
 nav.main a:hover{color:var(--ink)}
 nav.main a[aria-current="page"]:hover{color:var(--accent-ink)}
 .jump{margin-left:auto;display:flex;gap:6px;align-items:center}
-.jump select{font:14px var(--f-body);padding:6px 8px;border:1px solid var(--line);border-radius:var(--r);background:var(--surface);color:var(--ink);max-width:240px;min-height:34px}
+.jump select{font:14px var(--f-body);padding:6px 8px;border:1px solid var(--line);border-radius:var(--r);background:var(--surface);color:var(--ink);max-width:210px;min-height:34px}
 main:focus{outline:none}
 main{max-width:1180px;margin:0 auto;padding-block:18px 60px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
 .crumbs{font-size:13px;color:var(--muted);margin-bottom:6px;display:flex;gap:6px;flex-wrap:wrap}
@@ -87,6 +87,7 @@ sup{font-size:10px;margin-left:1px;color:var(--muted)}
 .fig{background:none;border:0;padding:3px 0;margin:-3px 0;font:inherit;color:inherit;cursor:pointer;border-bottom:1px dotted var(--faint);font-variant-numeric:tabular-nums;min-height:24px}
 .fig:hover{color:var(--accent);border-bottom-color:var(--accent)}
 .tile .fig{border-bottom-width:2px}
+.tile .v{padding-bottom:5px}
 .chip{display:inline-block;font:600 10.5px/1 var(--f-head);letter-spacing:.04em;padding:4px 5px;border-radius:4px;vertical-align:1px;margin-left:4px;color:var(--ink);cursor:help}
 .chip.D{background:var(--chip-d)}.chip.R{background:var(--chip-r)}.chip.C{background:var(--chip-c)}.chip.E{background:var(--chip-e)}.chip.O{background:var(--chip-o)}
 .conf{display:inline-block;font:600 11px var(--f-head);padding:2px 7px;border-radius:10px;border:1px solid var(--line)}
@@ -160,8 +161,16 @@ summary{cursor:pointer;font:600 14px var(--f-head);color:var(--accent);min-heigh
   .jump select{max-width:none;flex:1}
   td:first-child,th:first-child{min-width:132px}
   .narrow-only{display:inline-flex}
-  body[data-pv="fy"] .ptable .ytd, body[data-pv="fy"] .ptable .gap{display:none}
+  body[data-pv="fa"] .ptable .fb, body[data-pv="fa"] .ptable .ytd, body[data-pv="fa"] .ptable .gap,
+  body[data-pv="fb"] .ptable .fa, body[data-pv="fb"] .ptable .ytd, body[data-pv="fb"] .ptable .gap{display:none}
   body[data-pv="ytd"] .ptable .fy{display:none}
+  .ptable .xc{display:none}
+  .ptable{font-size:12.5px}
+  .ptable th,.ptable td{padding:7px 6px}
+  .ptable td:first-child,.ptable th:first-child{min-width:116px}
+  .top{position:static}
+  sup[tabindex]{display:inline-block;min-width:24px;text-align:center;padding:7px 0;margin:-7px 0}
+  .chip{min-width:24px;min-height:24px;display:inline-flex;align-items:center;justify-content:center;vertical-align:middle}
   .cb{grid-template-columns:minmax(0,8.5em) minmax(50px,1fr) 5.2em;gap:8px}
   table.stack thead{display:none}
   table.stack, table.stack tbody, table.stack tr, table.stack td{display:block;width:100%}
@@ -184,7 +193,7 @@ summary{cursor:pointer;font:600 14px var(--f-head);color:var(--accent);min-heigh
     <a href="#method" data-v="method">How to read</a>
     <a href="#data" data-v="data">Sources &amp; review</a>
   </nav>
-  <div class="jump"><label for="jumpco" class="note">Company</label><select id="jumpco"></select></div>
+  <div class="jump"><select id="jumpco" aria-label="Go to a company"></select></div>
 </div></div>
 <main id="main" tabindex="-1"></main>
 <aside class="drawer" id="drawer" role="dialog" aria-modal="true" aria-labelledby="dtitle" aria-hidden="true" inert><button class="close" id="dclose">Close</button><div id="dbody"></div></aside>
@@ -217,7 +226,7 @@ const fm = x => isNum(x) ? (x<0?'(':'') + Math.abs(x).toLocaleString('en-US',{ma
 const fpd = (x,d) => { if(!isNum(x)) return NMV(x); const r=+(x*100).toFixed(d); return (r<0?MINUS:'')+Math.abs(r).toFixed(d)+'%'; };
 const fp = x => fpd(x,1);
 const fg = x => { if(!isNum(x)) return NMV(x); const r=+(x*100).toFixed(1); return (r===0?'':sgn(r,true))+Math.abs(r).toFixed(1)+'%'; };
-const fpp = x => { if(!isNum(x)) return '–'; const v=x*100; const d=Math.abs(v)<0.995&&v!==0?2:1; const r=+v.toFixed(d); if(r===0) return (v===0?'':(v<0?MINUS:'+'))+(v===0?'0.0':'<0.01')+' pp'; return sgn(r,true)+Math.abs(r).toFixed(d)+' pp'; };
+const fpp = x => { if(!isNum(x)) return '–'; const v=x*100; const d=Math.abs(v)<0.995&&v!==0?2:1; const r=+v.toFixed(d); if(r===0) return (v===0?'0.0':'<0.01')+' pp'; return sgn(r,true)+Math.abs(r).toFixed(d)+' pp'; };
 const fbp = x => { if(!isNum(x)) return NMV(x); const r=Math.round(x*10000); return (r<0?MINUS:'')+Math.abs(r)+' bp'; };
 const RFMT = {COR:fbp, ROA:x=>fpd(x,2), NSCI_YLD:x=>fpd(x,2)};
 const fr = k => RFMT[k] || fp;
@@ -437,12 +446,13 @@ function waterfall(steps){
   return `<svg class="chart" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="Bridge from reported to like-for-like growth">${g}</svg>`;
 }
 // ---------------------------------------------------------------- shared table helpers
-const pvSwitch = () => `<span class="toggle narrow-only" role="group" aria-label="Periods shown"><button data-pv="fy" aria-pressed="${pvState==='fy'}">Full years</button><button data-pv="ytd" aria-pressed="${pvState==='ytd'}">9M 2026</button></span>`;
-let pvState='fy';
+const pvSwitch = () => `<span class="toggle narrow-only" role="group" aria-label="Columns shown"><button data-pv="fb" aria-pressed="${pvState==='fb'}">FY2024–25</button><button data-pv="fa" aria-pressed="${pvState==='fa'}">FY2022–23</button><button data-pv="ytd" aria-pressed="${pvState==='ytd'}">9M 2026</button></span>`;
+let pvState='fb';
 function setPV(v){ pvState=v; document.body.dataset.pv=v; document.querySelectorAll('[data-pv]').forEach(b=>b.setAttribute('aria-pressed', String(b.dataset.pv===v))); }
-function periodHead(first, extra){ return `<tr><th>${first||'SAR m'}</th>${FY.map(p=>`<th class="fy">${PL[p]}</th>`).join('')}<th class="fy" title="Compound annual growth FY2022–FY2025 (3 years)">CAGR 22–25</th><th class="gap"></th>${YTD.map(p=>`<th class="ytd">${PL[p]}</th>`).join('')}<th class="ytd">9M change</th>${extra||''}</tr>`; }
+function periodHead(first, extra){ return `<tr><th>${first||'SAR m'}</th>${FY.map(p=>`<th class="${fyc(p)}">${PL[p]}</th>`).join('')}<th class="fy fb" title="Compound annual growth FY2022–FY2025 (3 years)">CAGR 22–25</th><th class="gap"></th>${YTD.map(p=>`<th class="ytd">${PL[p]}</th>`).join('')}<th class="ytd">9M change</th>${extra||''}</tr>`; }
+const fyc = p => (p==='FY2022'||p==='FY2023') ? 'fy fa' : 'fy fb';
 const nCols = head => (head.match(/<th/g)||[]).length;
-const emptyCells = (extra) => `${FY.map(()=>'<td class="fy"></td>').join('')}<td class="fy"></td><td class="gap"></td>${YTD.map(()=>'<td class="ytd"></td>').join('')}<td class="ytd"></td>${extra||''}`;
+const emptyCells = (extra) => `${FY.map(p=>`<td class="${fyc(p)}"></td>`).join('')}<td class="fy fb"></td><td class="gap"></td>${YTD.map(()=>'<td class="ytd"></td>').join('')}<td class="ytd"></td>${extra||''}`;
 const CHIP_LEGEND = `<p class="note">Select an underlined figure for its source file and page. Chips: <span class="chip R">R</span> restated comparative used · <span class="chip C">C</span> calculated (formula in the drawer) · <span class="chip O">PDF</span> taken from the PDF because the XBRL file was missing or mis-tagged. A small number after a figure (e.g. <sup>5</sup>) means only that many companies had the inputs; hover over it or tap it to see which were left out. <abbr title="${NM_TITLE}">n.m.</abbr> = not meaningful.</p>`;
 // ---------------------------------------------------------------- sector view
 function sectorRows(S, sc, blk){
@@ -453,14 +463,14 @@ function sectorRows(S, sc, blk){
     .map(([m,lab])=>{ const miss=blk[m].totals.FY2025.missing; return [m, lab + (m==='GP'&&miss.includes(L)?` (${coShort(L)} does not report it)`:'')]; });
 }
 function sectorTable(S, scope){
-  const sc=D.sectors[S], blk=sc.sector[scope]; const head=periodHead('SAR m','<th title="Companies with the figure in FY2025">Companies (FY2025)</th>'); let h=`<thead>${head}</thead><tbody>`; const nc=nCols(head);
+  const sc=D.sectors[S], blk=sc.sector[scope]; const head=periodHead('SAR m','<th class="xc" title="Companies with the figure in FY2025">Companies (FY2025)</th>'); let h=`<thead>${head}</thead><tbody>`; const nc=nCols(head);
   sectorRows(S, sc, blk).forEach(([m,lab])=>{ const b=blk[m]; const g=b.growth;
     const cell=(p)=>`${sumFig(S,scope,m,p,b.totals[p].v,lab)}${supN(b.totals[p])}`;
-    h+=`<tr><td>${esc(lab)}</td>${FY.map(p=>`<td class="fy">${cell(p)}</td>`).join('')}<td class="fy">${fg(g.CAGR_2022_2025.cagr)}</td><td class="gap"></td>${YTD.map(p=>`<td class="ytd">${cell(p)}</td>`).join('')}<td class="ytd">${fg(g['9M2026/9M2025'].growth)}</td><td>${b.totals.FY2025.n}</td></tr>`;
-    if (m===sc.config.top_line || m==='NI_ATTR') h+=`<tr class="sub"><td>growth (matched sample)</td>${FY.map((p,i)=>`<td class="fy">${i?fg(g[PAIRS[i-1]].growth):''}</td>`).join('')}<td class="fy"></td><td class="gap"></td><td class="ytd"></td><td class="ytd"></td><td class="ytd"></td><td></td></tr>`; });
+    h+=`<tr><td>${esc(lab)}</td>${FY.map(p=>`<td class="${fyc(p)}">${cell(p)}</td>`).join('')}<td class="fy fb">${fg(g.CAGR_2022_2025.cagr)}</td><td class="gap"></td>${YTD.map(p=>`<td class="ytd">${cell(p)}</td>`).join('')}<td class="ytd">${fg(g['9M2026/9M2025'].growth)}</td><td class="xc">${b.totals.FY2025.n}</td></tr>`;
+    if (m===sc.config.top_line || m==='NI_ATTR') h+=`<tr class="sub"><td>growth (matched sample)</td>${FY.map((p,i)=>`<td class="${fyc(p)}">${i?fg(g[PAIRS[i-1]].growth):''}</td>`).join('')}<td class="fy fb"></td><td class="gap"></td><td class="ytd"></td><td class="ytd"></td><td class="ytd"></td><td class="xc"></td></tr>`; });
   const rk = sc.config.ratios, rat = sc.sector[scope==='all'?'ratios_all':'ratios_ex_largest'];
   h+=`<tr class="grp"><td colspan="${nc}">Ratios from sector totals (not averages of company ratios)</td></tr>`;
-  Object.keys(rk).forEach(k=>{ const rc=p=>`${fr(k)(rat[k][p].v)}${supN(rat[k][p])}`; h+=`<tr><td>${esc(rk[k][2])}</td>${FY.map(p=>`<td class="fy">${rc(p)}</td>`).join('')}<td class="fy"></td><td class="gap"></td>${YTD.map(p=>`<td class="ytd">${rc(p)}</td>`).join('')}<td class="ytd"></td><td>${rat[k].FY2025.n}</td></tr>`; });
+  Object.keys(rk).forEach(k=>{ const rc=p=>`${fr(k)(rat[k][p].v)}${supN(rat[k][p])}`; h+=`<tr><td>${esc(rk[k][2])}</td>${FY.map(p=>`<td class="${fyc(p)}">${rc(p)}</td>`).join('')}<td class="fy fb"></td><td class="gap"></td>${YTD.map(p=>`<td class="ytd">${rc(p)}</td>`).join('')}<td class="ytd"></td><td class="xc">${rat[k].FY2025.n}</td></tr>`; });
   return `<div class="scroller"><table class="ptable">${h}</tbody></table></div>`;
 }
 let scopeState = {Energy:'all', Banks:'all'}, pairState = {Energy:'FY2025/FY2024', Banks:'FY2025/FY2024'};
@@ -495,7 +505,7 @@ function viewSector(key, scope){
    <div class="card"><h3>${esc(cfg.top_line_name)} (${esc(scopeLab)})</h3>${cols({cats,vals:ALLP.map(p=>blk[top].totals[p].v),ytdFrom:4,figs:figsFor(top),title:cfg.top_line_name})}</div>
    <div class="card"><h3>Net profit attributable (${esc(scopeLab)})</h3>${cols({cats,vals:ALLP.map(p=>blk.NI_ATTR.totals[p].v),ytdFrom:4,figs:figsFor('NI_ATTR'),title:'Net profit attributable'})}</div>`;
   const rkeys = S==='Banks'?['CI','ROE','COR']:['EBITDA_M','NET_M','ROE'];
-  rkeys.forEach(k=>{ h+=`<div class="card"><h3>${esc(cfg.ratios[k][2])}${k==='COR'?' (basis points)':''}</h3>${lines({key:k,cats,series:[{name:'All companies',color:'var(--series-1)',vals:ALLP.map(p=>sec.ratios_all[k][p].v)},{name:'Excl. '+coShort(L),color:'var(--series-2)',dash:true,vals:ALLP.map(p=>sec.ratios_ex_largest[k][p].v)}],title:cfg.ratios[k][2]})}<p class="note">9M points are annualised where the ratio divides by a balance-sheet amount.</p></div>`; });
+  rkeys.forEach(k=>{ h+=`<div class="card"><h3>${esc(cfg.ratios[k][2])}</h3>${lines({key:k,cats,series:[{name:'All companies',color:'var(--series-1)',vals:ALLP.map(p=>sec.ratios_all[k][p].v)},{name:'Excl. '+coShort(L),color:'var(--series-2)',dash:true,vals:ALLP.map(p=>sec.ratios_ex_largest[k][p].v)}],title:cfg.ratios[k][2]})}<p class="note">9M points are annualised where the ratio divides by a balance-sheet amount.</p></div>`; });
   h+=`</div>`;
   const pair=pairState[S];
   h+=`<h2 id="s-contrib">Company contributions to growth (${esc(scopeLab)})</h2><div class="controls"><label for="pairsel">Comparison</label><select id="pairsel">${PAIRS.map(p=>`<option value="${p}" ${p===pair?'selected':''}>${PAIRL[p]}</option>`).join('')}</select></div>
@@ -524,10 +534,10 @@ function companyRows(S, c){
 function companyTable(S,t){
   const c=D.sectors[S].companies[t], s=c.series, cfg=D.sectors[S].config; const head=periodHead(); let h=`<thead>${head}</thead><tbody>`; const nc=nCols(head);
   companyRows(S,c).forEach(([m,lab])=>{ const g=c.growth[m]||{};
-    h+=`<tr><td>${esc(lab)}</td>${FY.map(p=>`<td class="fy">${s[m][p]?figBtn(t,p,m,s[m][p].v,lab):'–'}</td>`).join('')}<td class="fy">${fg(g.CAGR_2022_2025)}</td><td class="gap"></td>${YTD.map(p=>`<td class="ytd">${s[m][p]?figBtn(t,p,m,s[m][p].v,lab):'–'}</td>`).join('')}<td class="ytd">${fg(g['9M2026/9M2025'])}</td></tr>`;
-    if (m===cfg.top_line||m==='NI_ATTR') h+=`<tr class="sub"><td>growth</td>${FY.map((p,i)=>`<td class="fy">${i?fg(g[PAIRS[i-1]]):''}</td>`).join('')}<td class="fy"></td><td class="gap"></td><td class="ytd"></td><td class="ytd"></td><td class="ytd"></td></tr>`; });
+    h+=`<tr><td>${esc(lab)}</td>${FY.map(p=>`<td class="${fyc(p)}">${s[m][p]?figBtn(t,p,m,s[m][p].v,lab):'–'}</td>`).join('')}<td class="fy fb">${fg(g.CAGR_2022_2025)}</td><td class="gap"></td>${YTD.map(p=>`<td class="ytd">${s[m][p]?figBtn(t,p,m,s[m][p].v,lab):'–'}</td>`).join('')}<td class="ytd">${fg(g['9M2026/9M2025'])}</td></tr>`;
+    if (m===cfg.top_line||m==='NI_ATTR') h+=`<tr class="sub"><td>growth</td>${FY.map((p,i)=>`<td class="${fyc(p)}">${i?fg(g[PAIRS[i-1]]):''}</td>`).join('')}<td class="fy fb"></td><td class="gap"></td><td class="ytd"></td><td class="ytd"></td><td class="ytd"></td></tr>`; });
   h+=`<tr class="grp"><td colspan="${nc}">Ratios (calculated; balance-sheet ratios use average balances; 9M annualised)</td></tr>`;
-  Object.entries(cfg.ratios).forEach(([k,spec])=>{ h+=`<tr><td>${esc(spec[2])}</td>${FY.map(p=>`<td class="fy">${fr(k)(c.ratios[k][p])}</td>`).join('')}<td class="fy"></td><td class="gap"></td>${YTD.map(p=>`<td class="ytd">${fr(k)(c.ratios[k][p])}</td>`).join('')}<td class="ytd"></td></tr>`; });
+  Object.entries(cfg.ratios).forEach(([k,spec])=>{ h+=`<tr><td>${esc(spec[2])}</td>${FY.map(p=>`<td class="${fyc(p)}">${fr(k)(c.ratios[k][p])}</td>`).join('')}<td class="fy fb"></td><td class="gap"></td>${YTD.map(p=>`<td class="ytd">${fr(k)(c.ratios[k][p])}</td>`).join('')}<td class="ytd"></td></tr>`; });
   return `<div class="scroller"><table class="ptable">${h}</tbody></table></div>`;
 }
 const STEPS=[['perimeter','Perimeter (acquisitions and disposals)','perimeter'],['fx','FX translation','FX'],['hyperinflation','Hyperinflation','hyperinflation'],['accounting_other','Accounting / other','accounting'],['new_capacity','New capacity','new capacity']];
@@ -559,7 +569,7 @@ function viewCompany(t){
   </div>`;
   const wim=N.what_it_means||{};
   h+=`<h2 id="c-wim" style="margin-top:20px">What it means</h2>`;
-  if (Object.keys(wim).length) h+=`<div class="callout">${['improved','weakened','why','uncertain'].filter(k=>wim[k]).map(k=>`<div><b>${k[0].toUpperCase()+k.slice(1)}:</b> ${esc(wim[k])}</div>`).join('')}${N.confidence_overall?`<div class="note">Confidence: ${esc(N.confidence_overall)}</div>`:''}</div>`; else h+='<p class="note">Pending.</p>';
+  if (Object.keys(wim).length) h+=`<div class="callout">${['improved','weakened','why','uncertain'].filter(k=>wim[k]).map(k=>`<div><b>${k[0].toUpperCase()+k.slice(1)}:</b> ${esc(wim[k])}</div>`).join('')}${N.confidence_overall?`<div class="note">Confidence: ${esc(N.confidence_overall)}</div>`:''}<div class="note" style="margin-top:6px">Key figures: ${refsHtml([['FY2022',top],['FY2025',top],['FY2025','NI_ATTR'],['9M2026',top],['9M2026','NI_ATTR']].filter(([p,m])=>getFact(t,p,m)).map(([p,m])=>`${t}-${p}-${m}`))}</div></div>`; else h+='<p class="note">Pending.</p>';
   h+=`<h2 id="c-fig">Annual trends and 9M 2026</h2><div class="controls">${pvSwitch()}</div>${companyTable(S,t)}${CHIP_LEGEND}
   <div class="grid2"><div class="card"><h3>${esc(cfg.top_line_name)}</h3>${cols({cats:ALLP.map(p=>PL[p]),vals:ALLP.map(p=>v(top,p)),ytdFrom:4,figs:ALLP.map(p=>{ if(v(top,p)==null) return null; const id='f'+(figN++); FIGS[id]={t,p,m:top,label:cfg.top_line_name}; return id; }),title:cfg.top_line_name})}</div>
   <div class="card"><h3>Net profit attributable</h3>${cols({cats:ALLP.map(p=>PL[p]),vals:ALLP.map(p=>v('NI_ATTR',p)),ytdFrom:4,figs:ALLP.map(p=>{ if(v('NI_ATTR',p)==null) return null; const id='f'+(figN++); FIGS[id]={t,p,m:'NI_ATTR',label:'Net profit attributable'}; return id; }),title:'Net profit attributable'})}</div></div>`;
@@ -663,7 +673,9 @@ function viewData(){
   } else h+=`<p class="note">The review log has not been embedded in this build.</p>`;
   if ((D.template_changes||[]).length) h+=`<h2 id="d-tpl">Template improvements from the pilots</h2><ul class="clean">${D.template_changes.map(r=>`<li><b>${esc(r.change)}</b> ${esc(r.reason||'')}</li>`).join('')}</ul>`;
   const bad=Object.entries(D.sources).filter(([k,v])=>v.status!=='used');
-  h+=`<h2 id="d-files">Files with flags (${bad.length} of ${Object.keys(D.sources).length})</h2><div class="scroller"><table class="stack"><thead><tr><th>File</th><th class="t">Status</th><th class="t">Reason</th></tr></thead><tbody>${bad.map(([k,v])=>`<tr><td data-l="File">${v.url?`<a href="${esc(v.url)}" target="_blank" rel="noopener">${esc(k)}</a>`:esc(k)}</td><td class="t" data-l="Status">${esc(v.status)}</td><td class="t w" data-l="Reason">${esc(v.reason)}</td></tr>`).join('')}</tbody></table></div>`;
+  h+=`<h2 id="d-files">Files with flags (${bad.length} of ${Object.keys(D.sources).length})</h2><p class="note">Most flags mark PDF pages without a text layer (cover, auditor's report or scanned statements); figures on those pages rest on the XBRL file. Open a company to see its files.</p>`;
+  const byCo={}; bad.forEach(([k,v])=>{ const c=k.split('/')[0]; (byCo[c]=byCo[c]||[]).push([k,v]); });
+  Object.keys(byCo).sort().forEach(c=>{ const t=c.split('_')[0]; h+=`<details><summary>${esc(coInfo(t)?coName(t):c)} · ${byCo[c].length} file${byCo[c].length>1?'s':''}</summary><div class="scroller"><table class="stack"><thead><tr><th>File</th><th class="t">Status</th><th class="t">Reason</th></tr></thead><tbody>${byCo[c].map(([k,v])=>`<tr><td data-l="File">${v.url?`<a href="${esc(v.url)}" target="_blank" rel="noopener">${esc(k.split('/').pop())}</a>`:esc(k.split('/').pop())}</td><td class="t" data-l="Status">${esc(v.status)}</td><td class="t w" data-l="Reason">${esc(v.reason)}</td></tr>`).join('')}</tbody></table></div></details>`; });
   return {html:h, title:'Sources and review'};
 }
 // ---------------------------------------------------------------- post-render: n.m. explanations
@@ -685,8 +697,8 @@ function route(){
   if (['budget','method','data'].includes(v)) return {kind:v, nav:v};
   return {kind:'overview', nav:'overview'};
 }
-function render(){
-  FIGS={}; figN=0; hideDrawer(); drawerPushed=false; CW=colW();
+function render(keepPV){
+  FIGS={}; figN=0; hideDrawer(); drawerPushed=false; CW=colW(); if(!keepPV) setPV('fb');
   const r=route(); let out;
   if (r.kind==='sector') out=viewSector(r.key, r.scope); else if (r.kind==='company') out=viewCompany(r.t);
   else if (r.kind==='budget') out=viewBudget(); else if (r.kind==='method') out=viewMethod(); else if (r.kind==='data') out=viewData(); else out=viewOverview();
@@ -699,7 +711,7 @@ function render(){
 function rerender(){
   const y=window.scrollY, a=document.activeElement; let key=null;
   if (a && a!==document.body){ if (a.id) key='#'+a.id; else if (a.dataset && a.dataset.scope) key=`[data-scope="${a.dataset.scope}"]`; }
-  render(); window.scrollTo(0,y); if(key){ const el=document.querySelector(key); if(el) el.focus({preventScroll:true}); }
+  render(true); window.scrollTo(0,y); if(key){ const el=document.querySelector(key); if(el) el.focus({preventScroll:true}); }
 }
 function wire(r){
   document.querySelectorAll('[data-scope]').forEach(b=>b.addEventListener('click', ()=>{ history.replaceState(null,'','#'+r.key+(b.dataset.scope==='all'?'':'-ex')); rerender(); }));
@@ -711,7 +723,7 @@ function wire(r){
 }
 let rz=null; window.addEventListener('resize', ()=>{ clearTimeout(rz); rz=setTimeout(()=>{ if(Math.abs(colW()-CW)>24) rerender(); }, 200); });
 window.addEventListener('hashchange', ()=>{ render(); window.scrollTo(0,0); $('#main').focus({preventScroll:true}); });
-setPV('fy');
+setPV('fb');
 render();
 }
 })();

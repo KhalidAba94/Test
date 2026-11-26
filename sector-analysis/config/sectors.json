@@ -176,7 +176,7 @@
    "COR": [
     "IMPAIR_FIN",
     "avg:LOANS",
-    "Cost of risk (YTD annualised)"
+    "Cost of risk, bp (YTD annualised)"
    ],
    "NSCI_YLD": [
     "NSCI",

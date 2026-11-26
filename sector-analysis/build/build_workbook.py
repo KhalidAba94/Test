@@ -37,7 +37,8 @@ PAIRS = [("FY2023", "FY2022"), ("FY2024", "FY2023"), ("FY2025", "FY2024"), ("9M2
 NUM = '#,##0;(#,##0);"-"'
 NUM1 = '#,##0.0;(#,##0.0);"-"'
 PCT = '0.0%;(0.0%);"-"'
-PCT2 = '0.00%;(0.00%);"-"'   # cost of risk, ROA and margin on assets need two decimals
+PCT2 = '0.00%;(0.00%);"-"'   # ROA and margin on assets need two decimals
+BP = '0" bp";(0" bp");"0 bp"'   # cost of risk in basis points (value x 10,000), as on the HTML page
 PP = '+0.0" pp";-0.0" pp";"0.0 pp"'
 
 NAMES = {}
@@ -165,7 +166,7 @@ def company_rows(sector):
                 ("EQ_ATTR", "Equity attributable incl. Tier 1 sukuk", "val"), ("T1_SUKUK", "Tier 1 sukuk (period-end)", "val"),
                 ("T1_COST", "Tier 1 sukuk distributions", "val"), ("EQ_ORD", "Ordinary equity (C)", "val")]
         ratios = [("Cost-to-income", "OPEX_PRE", "TOI", False), ("ROE on ordinary equity (YTD annualised)", "NI_ATTR-T1_COST", "EQ_ORD", True),
-                  ("ROA (YTD annualised)", "NI_ATTR", "TA", True), ("Cost of risk (YTD annualised)", "IMPAIR_FIN", "LOANS", True),
+                  ("ROA (YTD annualised)", "NI_ATTR", "TA", True), ("Cost of risk, bp (YTD annualised)", "IMPAIR_FIN", "LOANS", True),
                   ("NSCI / avg assets (YTD annualised)", "NSCI", "TA", True), ("Net fees / TOI", "FEES_NET", "TOI", False),
                   ("Loans / deposits", "LOANS", "DEPOSITS", False)]
     return rows, ratios
@@ -274,6 +275,13 @@ def build_company(wb, sector, t, cfg, ds, narr, adj_rows, facts_idx, sheetname, 
             else:
                 d = f"{col}{rowmap[den]}"
                 cond = f"AND(ISNUMBER({col}{rowmap[den]}),ISNUMBER({col}{rowmap[num.split('-')[0]]}))"
+            if den == "LOANS" and num == "IMPAIR_FIN":
+                ws[f"{col}{r}"] = f'=IF({cond},IF({d}<>0,{n}{ann}/{d}*10000,""),"")'
+                ws[f"{col}{r}"].number_format = BP
+                ws[f"{col}{r}"].font = f(size=9)
+                if p.startswith("9M"):
+                    ws[f"{col}{r}"].fill = YTD_FILL
+                continue
             if den in ("REV", "REV_M", "TOI") and not avg:
                 ws[f"{col}{r}"] = f'=IF({cond},IF({d}<10,"n.m.",{n}{ann}/{d}),"")'
             else:
@@ -528,8 +536,12 @@ def build_sector(wb, sector, cfg, ds, narr, comp_sheets):
                     ann = "*12/9" if p.startswith("9M") else ""
                 else:
                     den, ann = f"SUMPRODUCT({mk},{rng(dm, p)})", ""
-                ws[f"{col}{r}"] = f'=IFERROR(({num}){ann}/({den}),"")'
-                ws[f"{col}{r}"].number_format = PCT2 if rk in ("COR", "ROA", "NSCI_YLD") else PCT
+                if rk == "COR":
+                    ws[f"{col}{r}"] = f'=IFERROR(({num}){ann}/({den})*10000,"")'
+                    ws[f"{col}{r}"].number_format = BP
+                else:
+                    ws[f"{col}{r}"] = f'=IFERROR(({num}){ann}/({den}),"")'
+                    ws[f"{col}{r}"].number_format = PCT2 if rk in ("ROA", "NSCI_YLD") else PCT
                 rinfo = ds["sector"]["ratios_all" if not excl else "ratios_ex_largest"][rk][p]
                 if rinfo["excluded"]:
                     ws[f"{col}{r}"].comment = Comment(f'{rinfo["n"]} companies; excluded for missing inputs: ' + ", ".join(ds["companies"][x]["name"] for x in rinfo["excluded"] if x in ds["companies"]), "analysis")

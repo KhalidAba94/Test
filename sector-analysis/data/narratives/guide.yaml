@@ -26,7 +26,7 @@ sections:
       - "A small number after a sector figure or ratio (e.g. 5) means only that many companies had the inputs for that period; hover over it or tap it to see which were left out."
       - "Chips: R = restated comparative used; C = calculated by us (formula shown); PDF = taken from the PDF because the XBRL file was missing, unreadable or mis-tagged. No chip = disclosed as printed."
       - "A dash (–) means the figure is not available. Missing figures are never filled with zeros or estimates."
-      - "Yellow cells and shaded chart areas are partial-year (9M) figures. On a phone, use the 'Full years / 9M 2026' switch above each table."
+      - "Yellow cells and shaded chart areas are partial-year (9M) figures. On a phone, period tables open on FY2024–FY2025 and the CAGR; use the switch above each table to see FY2022–FY2023 or 9M 2026."
       - "Cost of risk is shown in basis points (1 bp = 0.01%). ROA and the margin on assets are shown with two decimals."
   - heading: "Reported vs like-for-like growth"
     lines:
