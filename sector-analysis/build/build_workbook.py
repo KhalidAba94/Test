@@ -11,6 +11,7 @@ from __future__ import annotations
 import csv
 import json
 import os
+import re
 import sys
 
 import yaml
@@ -34,12 +35,12 @@ BOX = Border(top=THIN, bottom=THIN, left=THIN, right=THIN)
 FY = ["FY2022", "FY2023", "FY2024", "FY2025"]
 YTD = ["9M2025", "9M2026"]
 PAIRS = [("FY2023", "FY2022"), ("FY2024", "FY2023"), ("FY2025", "FY2024"), ("9M2026", "9M2025")]
-NUM = '#,##0;(#,##0);"-"'
-NUM1 = '#,##0.0;(#,##0.0);"-"'
-PCT = '0.0%;(0.0%);"-"'
-PCT2 = '0.00%;(0.00%);"-"'   # ROA and margin on assets need two decimals
+NUM = '#,##0.0;(#,##0.0);0.0'   # one decimal (methodology); a true zero shows 0.0, a missing figure stays blank
+NUM1 = '#,##0.0;(#,##0.0);0.0'
+PCT = '0.0%;(0.0%);0.0%'
+PCT2 = '0.00%;(0.00%);0.00%'   # ROA and margin on assets need two decimals
 BP = '0" bp";(0" bp");"0 bp"'   # cost of risk in basis points (value x 10,000), as on the HTML page
-XF = '0.0"x";(0.0"x");"-"'          # multiples (net debt / EBITDA)
+XF = '0.0"x";(0.0"x");0.0"x"'          # multiples (net debt / EBITDA)
 PP = '+0.0" pp";-0.0" pp";"0.0 pp"'
 
 NAMES = {}
@@ -103,7 +104,8 @@ def para(ws, row, text, ncols=12, height=None, bold=False, color=BLACK, fill=Non
 
 
 def lookup(key):
-    return f'=IFERROR(INDEX(Data!$G:$G,MATCH("{key}",Data!$A:$A,0)),"")'
+    # a fact row with an empty value must stay blank (INDEX of an empty cell would return 0)
+    return f'=IFERROR(IF(INDEX(Data!$G:$G,MATCH("{key}",Data!$A:$A,0))="","",INDEX(Data!$G:$G,MATCH("{key}",Data!$A:$A,0))),"")'
 
 
 def growth_formula(cur, pri):
@@ -206,6 +208,48 @@ PCOL = {"FY2021": "B", "FY2022": "C", "FY2023": "D", "FY2024": "E", "FY2025": "F
 OPENING = {"FY2022": "FY2021", "FY2023": "FY2022", "FY2024": "FY2023", "FY2025": "FY2024", "9M2025": "FY2024", "9M2026": "FY2025"}
 
 
+RK_OF = {}
+
+
+def build_overview(wb, ds, comp_sheets):
+    """One row per company: size, growth, margins, returns and leverage side by side (values from the dataset that
+    the company sheets reproduce with formulas)."""
+    ws = wb.create_sheet("Overview", 2)
+    title(ws, "Overview: all companies side by side (FY2025 and 9M 2026)",
+          "Values as on each company sheet (click a name to open it). Operating companies show EBITDA margin and net debt / EBITDA; REITs show FFO margin "
+          "and loan to value instead. n.m. = not meaningful (see How_to_read); blank = not available. 9M 2026 is compared only with 9M 2025.")
+    cols = ["Group", "Company", "Ticker", "Revenue FY2025 (SAR m)", "Revenue growth FY2025", "Revenue CAGR 2022–25", "EBITDA margin FY2025 (REIT: FFO margin)",
+            "Net margin FY2025", "ROE FY2025", "Net debt / EBITDA FY2025 (REIT: LTV)", "Net profit FY2025 (SAR m)",
+            "Revenue growth 9M 2026", "Net profit 9M 2026 (SAR m)", "Net profit growth 9M 2026"]
+    header_row(ws, 5, cols)
+    r = 6
+    for sector, S in ds.items():
+        reit = S["config"].get("template") == "reit"
+        for t in S["tickers"]:
+            c = S["companies"][t]
+            ser, g, ra = c["series"], c["growth"], c["ratios"]
+            def sv(m, p):
+                return (ser.get(m, {}).get(p) or {}).get("v")
+            vals = [S["config"].get("name", sector), c["name"], t, sv("REV", "FY2025"), g.get("REV", {}).get("FY2025/FY2024"),
+                    g.get("REV", {}).get("CAGR_2022_2025"), ra.get("FFO_M" if reit else "EBITDA_M", {}).get("FY2025"),
+                    ra.get("NET_M", {}).get("FY2025"), ra.get("ROE", {}).get("FY2025"), ra.get("LTV" if reit else "ND_EBITDA", {}).get("FY2025"),
+                    sv("NI_ATTR", "FY2025"), g.get("REV", {}).get("9M2026/9M2025"), sv("NI_ATTR", "9M2026"), g.get("NI_ATTR", {}).get("9M2026/9M2025")]
+            fmts = [None, None, None, NUM, PCT, PCT, PCT, PCT, PCT, (PCT if reit else XF), NUM, PCT, NUM, PCT]
+            for i, (v, fm) in enumerate(zip(vals, fmts), start=1):
+                cell = ws.cell(row=r, column=i, value=v)
+                cell.font = f(size=9)
+                if fm and isinstance(v, (int, float)):
+                    cell.number_format = fm
+            ws.cell(row=r, column=2).hyperlink = f"#'{comp_sheets[t]}'!A1"
+            ws.cell(row=r, column=2).font = f(color="0563C1", underline="single", size=9)
+            r += 1
+    for i, w in enumerate([22, 30, 8, 14, 12, 12, 14, 11, 11, 14, 13, 12, 13, 12], start=1):
+        ws.column_dimensions[get_column_letter(i)].width = w
+    ws.freeze_panes = "D6"
+    ws.auto_filter.ref = f"A5:{get_column_letter(len(cols))}{r - 1}"
+    return ws
+
+
 def build_company(wb, sector, t, cfg, ds, narr, adj_rows, facts_idx, sheetname, sector_sheet):
     ws = wb.create_sheet(sheetname)
     cinfo = ds["companies"][t]
@@ -231,18 +275,22 @@ def build_company(wb, sector, t, cfg, ds, narr, adj_rows, facts_idx, sheetname, 
     ws.column_dimensions["L"].width = 60
     r = 5
     r = section(ws, r, "A. Annual trends and comparable 2026 YTD (SAR m)")
-    header_row(ws, r, ["Metric", "FY2021 (opening)", "FY2022", "FY2023", "FY2024", "FY2025", "CAGR 2022–25", "",
-                       f"{yl} 2025", f"{yl} 2026", "YTD change", f"Basis / provenance (FY2025 · {yl} 2026)"])
+    ccfg = cfg["constituents"].get(t, {})
+    pl = ccfg.get("period_labels", {})   # short or non-calendar years are labelled in the column header
+    hdr = [pl.get("FY2021", "FY2021 (opening)")] + [pl.get(p, p if pmon.get(p, 12) == 12 else f"{p} ({pmon[p]}m)") for p in ("FY2022", "FY2023", "FY2024", "FY2025")]
+    header_row(ws, r, ["Metric"] + hdr + ["CAGR 2022–25", "", f"{yl} 2025", f"{yl} 2026", "YTD change", f"Basis / provenance (FY2025 · {yl} 2026)"])
     ws.cell(row=r, column=8).fill = PatternFill(None)
     r += 1
     rows, ratios = company_rows(sector)
     if sector != "Energy" and TPL.get(sector) in ("corporate", "reit"):
         # the company ratios mirror the group sheet's ratio list (config), on revenue (REV_M = REV outside Energy)
         ratios = []
-        for spec in cfg["ratios"].values():
+        for rk0, spec in cfg["ratios"].items():
             den = spec[1].replace("avg:", "").replace("ann:", "").replace("REV_M", "REV")
             ratios.append((spec[2], spec[0], den, True if spec[1].startswith("avg:") else ("ann" if spec[1].startswith("ann:") else False)))
+            RK_OF[spec[2]] = rk0
     rowmap = {}
+    cnotes = ccfg.get("cell_notes", {})
     for code, label, kind in rows:
         has = any((t, p, code) in facts_idx for p in PCOL)
         if not has and code in ("OIRS", "REV_M", "GP", "T1_COST", "T1_SUKUK", "DEBT", "LEASE_LIAB", "CASH", "NET_DEBT", "FFO", "DIST", "NAV_FV",
@@ -357,6 +405,14 @@ def build_company(wb, sector, t, cfg, ds, narr, adj_rows, facts_idx, sheetname, 
             ws[f"{col}{r}"].font = f(size=9)
             if p.startswith("9M"):
                 ws[f"{col}{r}"].fill = YTD_FILL
+            note = cnotes.get(f"{RK_OF.get(label, '')}|{p}")
+            if note:
+                ws[f"{col}{r}"].comment = Comment(note, "analysis")
+        # the multiple has its own branch above; attach its notes too
+        for p in ["FY2022", "FY2023", "FY2024", "FY2025", "9M2025", "9M2026"]:
+            note = cnotes.get(f"{RK_OF.get(label, '')}|{p}")
+            if note and avg == "ann":
+                ws[f"{PCOL[p]}{r}"].comment = Comment(note, "analysis")
         r += 1
     ws.cell(row=r, column=1, value="* Other income related to sales (Aramco only) is government compensation for regulated domestic prices. It is inside operating income, EBITDA and profit, so margins use revenue plus this income; revenue growth and sector totals use IFRS revenue." if sector == "Energy" else "").font = f(italic=True, color=GREY, size=8)
     r += 2
@@ -722,10 +778,13 @@ def build_sector(wb, sector, cfg, ds, narr, comp_sheets):
                     ws[f"{col}{r}"] = f'=IFERROR(IF({used_n}=0,"",IF({used_n}<{need},"n.a.",({num}){ann}/({den}))),"")'
                     ws[f"{col}{r}"].number_format = XF if rk == "ND_EBITDA" else (PCT2 if rk in ("ROA", "NSCI_YLD") else PCT)
                 rinfo = ds["sector"]["ratios_all" if not excl else "ratios_ex_largest"][rk][p]
+                gnote = (cfg.get("cell_notes") or {}).get(f"{rk}|{p}")
+                if gnote and not excl:
+                    ws[f"{col}{r}"].comment = Comment(gnote, "analysis")
                 if rinfo["excluded"]:
                     pre = (f"n.a.: only {rinfo['n']} of {nblock} companies have the inputs (at least half are needed for a group ratio). "
                            if rinfo["v"] == "n.a." else f'{rinfo["n"]} of {nblock} companies. ')
-                    ws[f"{col}{r}"].comment = Comment(pre + "Left out (missing inputs, short year" + (", or zero or negative average equity" if avg else "") + "): "
+                    ws[f"{col}{r}"].comment = Comment(((gnote + " ") if gnote and not excl else "") + pre + "Left out (missing inputs, short year" + (", or zero or negative average equity" if avg else "") + "): "
                                                       + ", ".join(ds["companies"][x]["name"] for x in rinfo["excluded"] if x in ds["companies"]), "analysis")
                 if p.startswith("9M"):
                     ws[f"{col}{r}"].fill = YTD_FILL
@@ -833,6 +892,9 @@ def _fix_chart(ch):
         pass
 
 
+NUMCOLS = {"amount_sar_m", "value_sar_m", "value used (SAR m)", "originally reported (SAR m)", "original_value"}
+
+
 def simple_table(wb, name, heading, sub, rows, cols, widths=None, index=None, blue_cols=()):
     ws = wb.create_sheet(name) if index is None else wb.create_sheet(name, index)
     title(ws, heading, sub)
@@ -846,9 +908,13 @@ def simple_table(wb, name, heading, sub, rows, cols, widths=None, index=None, bl
                     v = float(v)
             except ValueError:
                 pass
+            if c in NUMCOLS and isinstance(v, str) and re.fullmatch(r"-?\d+(\.\d+)?", v.strip()):
+                v = float(v)   # amounts are stored as numbers, not text
             cell = ws.cell(row=r, column=i, value=v)
             cell.font = f(color=BLUE if c in blue_cols else BLACK, size=9)
             cell.alignment = Alignment(wrap_text=True, vertical="top")
+            if isinstance(v, float) and c in NUMCOLS:
+                cell.number_format = NUM1
         r += 1
     for i, w in enumerate(widths or [], start=1):
         ws.column_dimensions[get_column_letter(i)].width = w
@@ -871,13 +937,17 @@ def main(root, out):
     wb = Workbook()
     wb.remove(wb.active)
     contents = wb.create_sheet("Contents")
+    # one company name per ticker in the Data sheet (XBRL entity names vary between filings)
+    legal = {t: c.get("legal_name") or c["name"] for S in ds.values() for t, c in S["companies"].items()}
+    for x in facts:
+        x["company"] = legal.get(x["ticker"], x.get("company", ""))
     build_data(wb, facts)
     # Adjustments sheet: columns A..M fixed (B ticker, C comparison, D step, F amount, G basis)
     adj_cols = ["adj_id", "ticker", "comparison", "bridge_step", "metric_affected", "amount_sar_m", "basis", "method",
                 "assumptions", "source", "page", "confidence", "notes"]
     simple_table(wb, "Adjustments", "Adjustments register: like-for-like bridge inputs",
                  "Each row moves reported growth towards like-for-like. amount_sar_m = contribution to the change in the top line "
-                 "(positive = added growth). basis: disclosed | calculated | estimated | not determinable. Blue = input.",
+                 "(positive = added growth). basis: disclosed | calculated | estimated | none identified (the filings show there was nothing) | not determinable. Blue = input.",
                  adj, adj_cols, [9, 7, 14, 16, 10, 12, 14, 50, 40, 40, 8, 10, 40], blue_cols=("amount_sar_m",))
     comp_sheets = {}
     for sector in ORDER:
@@ -892,6 +962,7 @@ def main(root, out):
         for t in ds[sector]["tickers"]:
             narr = load_yaml(os.path.join(root, "data", "narratives", f"{t}.yaml"))
             build_company(wb, sector, t, cfg, ds[sector], narr, adj, facts_idx, comp_sheets[t], sname)
+    build_overview(wb, ds, comp_sheets)
     # coverage, sources, policy, review, template changes, methodology, metrics
     cov = load_csv(os.path.join(root, "data", "coverage.csv"))
     guide0 = load_yaml(os.path.join(root, "data", "narratives", "guide.yaml"))
@@ -913,17 +984,29 @@ def main(root, out):
          "Material items the filing calls non-recurring, or clearly outside normal operations, that sit inside our operating income (in_metric OPINC; for REITs, items inside FFO, listed only). "
          "Impairments and fair-value gains on investment property are already outside EBITDA and are not listed. Net profit is never adjusted unless the filing gives both the tax/zakat effect and the minority share; "
          "each company page states that status."),
-        ("restatement_reasons.csv", "Restatements", "Restatements and re-presentations: why a later filing changed a figure",
-         "One row per restated figure used (provenance R). 'NOT A RESTATEMENT' marks a value the original XBRL file mis-tagged, where the PDF always showed the figure used."),
         ("review_log.csv", "Review_Log", "Independent review log", "Issues raised by independent reviewers, fixes and re-checks."),
         ("template_changes.csv", "Template_Changes", "Template improvements identified in the pilots", "Applied before roll-out to other sectors."),
     ):
         rows = load_csv(os.path.join(root, "data", fn))
         if rows:
             simple_table(wb, name, heading, sub, rows, list(rows[0].keys()), [12] + [28] * (len(rows[0]) - 1))
+    # restatements register: every figure used from a later filing that changed it (provenance R), with the reason
+    rst = []
+    for x in facts:
+        if x.get("provenance") != "R":
+            continue
+        rst.append({"ticker": x["ticker"], "company": ds[x["sector"]]["companies"].get(x["ticker"], {}).get("name", x.get("company", "")),
+                    "period": x["period"], "metric_code": x["metric_code"], "value used (SAR m)": x["value_sar_m"],
+                    "originally reported (SAR m)": x.get("original_value", ""), "first reported in": x.get("original_source", ""),
+                    "figure used from": x.get("source_id", ""), "reason": x.get("note", "")})
+    if rst:
+        simple_table(wb, "Restatements", "Restatements and re-presentations: every figure taken from a later filing that changed it",
+                     f"{len(rst)} figures (provenance R). The figure used is the comparative in the latest filing that shows the period. "
+                     "'NOT A RESTATEMENT' in a reason marks a value the exchange's XBRL file first mis-tagged, where the PDF always showed the figure used.",
+                     rst, list(rst[0].keys()), [7, 24, 9, 11, 12, 12, 36, 36, 90])
     met = load_csv(os.path.join(root, "config", "metrics.csv"))
     simple_table(wb, "Definitions", "Metric definitions", "All sectors use these definitions; sector ratios are ratios of totals.",
-                 met, list(met[0].keys()), [14, 8, 40, 12, 9, 14, 80, 30], index=1)
+                 met, list(met[0].keys()), [14, 18, 36, 14, 9, 14, 90, 30], index=1)
     guide = load_yaml(os.path.join(root, "data", "narratives", "guide.yaml"))
     gs = wb.create_sheet("How_to_read", 1)
     title(gs, "How to read this workbook, and the methodology in brief")
@@ -940,7 +1023,7 @@ def main(root, out):
             r += 1
         r += 1
     # final sheet order: guidance first, then each sector followed by its companies, then registers
-    order = ["Contents", "How_to_read", "Definitions", "Coverage"]
+    order = ["Contents", "How_to_read", "Overview", "Definitions", "Coverage"]
     for sector in ORDER:   # each sector (or group) sheet followed by its companies, in configured order
         order += [f"{sector}_Sector"] + [comp_sheets[t] for t in ds[sector]["tickers"]]
     order += ["Budget_Policy_Impact", "Budget_Policy_Facts", "Adjustments", "One_offs", "Restatements", "Data", "Sources", "Review_Log", "Template_Changes"]
@@ -950,6 +1033,7 @@ def main(root, out):
     title(contents, guide.get("workbook_title", "Saudi sector & company financial analysis 2022–2026: pilot sectors Energy and Banks"),
           f"Built from the 'Tadawul Financials' archive. Figures in SAR million unless stated. As of {guide.get('as_of', '')}.")
     contents["A3"].value = None
+    contents["A3"].hyperlink = None
     r = 5
     for ws in wb.worksheets:
         if ws.title == "Contents":

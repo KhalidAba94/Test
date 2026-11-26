@@ -57,6 +57,10 @@ def main(sectors_json, out_json, *facts_csvs):
                     if r["period"].startswith("FY") and str(r.get("period_months") or "").strip() not in ("", "0", "0.0", "12", "12.0")}
         # balance-sheet amounts at the end of a short year are ordinary point-in-time balances: they stay in sector totals
         # (and serve as opening balances); only the short year's flows are left out
+        # periods a group config leaves out of totals although they are full length (e.g. a non-calendar year known only from XBRL)
+        for t0, c0 in sc["constituents"].items():
+            for p0 in (c0.get("exclude_from_totals") or {}):
+                short_fy.setdefault((t0, p0), 12)
         STOCK = {"TA", "TE", "EQ_ATTR", "EQ_ORD", "CASH", "ST_DEP", "DEBT", "LEASE_LIAB", "NET_DEBT", "NAV_FV", "LOANS", "DEPOSITS", "T1_SUKUK"}
         sfacts = calc.Facts.from_rows([r for r in srows if (r["ticker"], r["period"]) not in ytd_months
                                        and not ((r["ticker"], r["period"]) in short_fy and r["metric_code"] not in STOCK)])
@@ -121,7 +125,7 @@ def main(sectors_json, out_json, *facts_csvs):
                 growth[m] = g
             ratios = {rk: {p: ratio(t, p, spec) for p in ALLP} for rk, spec in sc["ratios"].items()}
             comp[t] = {"name": sc["constituents"][t]["name"], "sub_industry": sc["constituents"][t]["sub_industry"],
-                       "legal_name": next((r["company"] for r in srows if r["ticker"] == t and r["company"]), ""),
+                       "legal_name": sc["constituents"][t].get("legal_name") or next((r["company"] for r in srows if r["ticker"] == t and r["company"]), ""),
                        "series": series, "growth": growth, "ratios": ratios}
 
         # ------------------------------------------------------------- sector

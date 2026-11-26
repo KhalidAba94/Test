@@ -24,7 +24,7 @@ TA,All,Total assets,Balance sheet,SAR m,sum,Period-end.,
 TE,All,Total equity,Balance sheet,SAR m,sum,"Period-end, including non-controlling interests.",
 EQ_ATTR,All,Equity attributable to shareholders,Balance sheet,SAR m,sum,"Period-end equity attributable to owners of the parent (funds: net assets attributable to unitholders, book value).",
 CASH,All,Cash and cash equivalents,Balance sheet,SAR m,sum,Cash and cash equivalents on the statement of financial position at period end.,
-ST_DEP,All,Short-term bank deposits,Balance sheet,SAR m,sum,"Term, time and murabaha deposits with banks shown in current assets outside cash and cash equivalents. Excludes restricted or pledged deposits, money-market funds and other investments.",
+ST_DEP,All,Short-term bank deposits,Balance sheet,SAR m,sum,"Term, time, murabaha and wakala deposits with banks or other financial institutions, held at amortised cost and shown in current assets outside cash and cash equivalents (maturity within 12 months). Excludes restricted or pledged deposits, money-market funds, FVTPL investments and non-current deposits.",
 DEBT,All,Borrowings,Balance sheet,SAR m,sum,"Interest-bearing borrowings at period end, current plus non-current: term loans, murabaha and tawarruq facilities, sukuk, overdrafts and shareholder loans. Excludes lease liabilities.",
 LEASE_LIAB,Operating companies,Lease liabilities,Balance sheet,SAR m,sum,"IFRS 16 lease liabilities, current plus non-current.",
 NET_DEBT,All,Net debt,Balance sheet,SAR m,sum,Operating companies: borrowings + lease liabilities − cash and cash equivalents − short-term bank deposits (C). REITs: borrowings − cash − short-term deposits. Negative = net cash.,DEBT + LEASE_LIAB − CASH − ST_DEP

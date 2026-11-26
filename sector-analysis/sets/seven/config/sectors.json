@@ -114,7 +114,10 @@
     "short_periods": {
      "FY2023": 8
     },
-    "period_note": "Incorporated 20 April 2023; subsidiaries consolidated from 30 June 2023, so FY2023 is a short first period (about six months of operations). No FY2021-FY2022 figures."
+    "period_note": "Incorporated 20 April 2023; subsidiaries consolidated from 30 June 2023, so FY2023 is a short first period (about six months of operations). No FY2021-FY2022 figures.",
+    "period_labels": {
+     "FY2023": "FY2023 (8m)"
+    }
    }
   },
   "table_metrics": [
@@ -207,12 +210,14 @@
    "6016": {
     "name": "Burgerizzr",
     "sub_industry": "Restaurants",
-    "short": "Burgerizzr"
+    "short": "Burgerizzr",
+    "legal_name": "Bait Alshateera Fast Food Restaurants Co. (Burgerizzr)"
    },
    "6012": {
     "name": "Raydan Food",
     "sub_industry": "Restaurants",
-    "short": "Raydan"
+    "short": "Raydan",
+    "legal_name": "Raydan Food Company"
    }
   },
   "table_metrics": [
@@ -372,7 +377,11 @@
     "short_periods": {
      "FY2022": 9
     },
-    "period_note": "Year-end changed from 31 March to 31 December (approved 29 Dec 2022): FY2022 is the nine-month transition period 1 Apr-31 Dec 2022; FY2021 opening balances are at 31 Mar 2022."
+    "period_note": "Year-end changed from 31 March to 31 December (approved 29 Dec 2022): FY2022 is the nine-month transition period 1 Apr-31 Dec 2022; FY2021 opening balances are at 31 Mar 2022.",
+    "period_labels": {
+     "FY2021": "31 Mar 2022",
+     "FY2022": "FY2022 (Apr–Dec 22, 9m)"
+    }
    },
    "4320": {
     "name": "Alandalus Property",
@@ -382,7 +391,8 @@
    "4150": {
     "name": "ARDCO (Arriyadh Development)",
     "sub_industry": "Centres and markets",
-    "short": "ARDCO"
+    "short": "ARDCO",
+    "legal_name": "Arriyadh Development Company"
    }
   },
   "table_metrics": [
@@ -461,42 +471,50 @@
    "4338": {
     "name": "Alahli REIT 1",
     "sub_industry": "REIT",
-    "short": "Alahli REIT"
+    "short": "Alahli REIT",
+    "legal_name": "Alahli REIT Fund (1)"
    },
    "4336": {
     "name": "Mulkia REIT",
     "sub_industry": "REIT",
-    "short": "Mulkia"
+    "short": "Mulkia",
+    "legal_name": "Mulkia Gulf Real Estate REIT Fund"
    },
    "4345": {
     "name": "Alinma Retail REIT",
     "sub_industry": "REIT",
-    "short": "Alinma Retail"
+    "short": "Alinma Retail",
+    "legal_name": "Alinma Retail REIT Fund"
    },
    "4335": {
     "name": "Musharaka REIT",
     "sub_industry": "REIT",
-    "short": "Musharaka"
+    "short": "Musharaka",
+    "legal_name": "Musharaka REIT Fund"
    },
    "4347": {
     "name": "Bonyan REIT",
     "sub_industry": "REIT",
-    "short": "Bonyan"
+    "short": "Bonyan",
+    "legal_name": "Bonyan REIT Fund"
    },
    "4344": {
     "name": "SEDCO Capital REIT",
     "sub_industry": "REIT",
-    "short": "SEDCO Capital"
+    "short": "SEDCO Capital",
+    "legal_name": "SEDCO Capital REIT Fund"
    },
    "4339": {
     "name": "Derayah REIT",
     "sub_industry": "REIT",
-    "short": "Derayah"
+    "short": "Derayah",
+    "legal_name": "Derayah REIT Fund"
    },
    "4346": {
     "name": "MEFIC REIT",
     "sub_industry": "REIT",
-    "short": "MEFIC"
+    "short": "MEFIC",
+    "legal_name": "MEFIC REIT Fund"
    }
   },
   "table_metrics": [
@@ -588,7 +606,15 @@
     "short_periods": {
      "FY2022": 9
     },
-    "period_note": "Year-end changed from 31 March to 31 December: FY2022 is the nine-month period April-December 2022 (an unaudited 12-month calendar-2022 view is in the FY2023 annual, Annex 1); FY2021 opening balances are at 31 March 2022."
+    "period_note": "Year-end changed from 31 March to 31 December: FY2022 is the nine-month period April-December 2022 (an unaudited 12-month calendar-2022 view is in the FY2023 annual, Annex 1); FY2021 opening balances are at 31 March 2022.",
+    "period_labels": {
+     "FY2021": "31 Mar 2022",
+     "FY2022": "FY2022 (Apr–Dec 22, 9m)"
+    },
+    "cell_notes": {
+     "GP_M|9M2025": "Nine-month gross profit is on the restated cost-of-revenue basis (2026 Q3 note 23); full years are not, so they are not comparable.",
+     "GP_M|9M2026": "Nine-month gross profit is on the restated cost-of-revenue basis (2026 Q3 note 23); full years are not, so they are not comparable."
+    }
    },
    "4008": {
     "name": "SACO (Saudi Company for Hardware)",
@@ -608,7 +634,10 @@
    "4011": {
     "name": "Lazurde",
     "sub_industry": "Jewellery",
-    "short": "Lazurde"
+    "short": "Lazurde",
+    "cell_notes": {
+     "ND_EBITDA|FY2025": "Borrowings include gold loans repaid in gold and matched by gold inventory; without them net debt is about nil (see data notes)."
+    }
    }
   },
   "table_metrics": [
@@ -671,7 +700,12 @@
    ]
   },
   "classification_note": "Retailers on the SEVEN list. Panda Retail, Lulu Retail and RATIO are in the benchmark but not listed on the Main Market, so they are not covered.",
-  "fy2021_balance_only": true
+  "fy2021_balance_only": true,
+  "cell_notes": {
+   "GP_M|9M2025": "Cenomi Retail's nine-month gross profit is on a different cost-of-revenue basis from its full years (2026 Q3 restatement, note 23), so 9M gross margins are not comparable with full years.",
+   "GP_M|9M2026": "Cenomi Retail's nine-month gross profit is on a different cost-of-revenue basis from its full years (2026 Q3 restatement, note 23), so 9M gross margins are not comparable with full years.",
+   "ND_EBITDA|FY2025": "Net debt includes Lazurde's gold loans (repaid in gold and matched by gold inventory); see Lazurde's page."
+  }
  },
  "Supporting": {
   "name": "Supporting consumer goods (second tier, not in the benchmark)",
@@ -691,7 +725,12 @@
    "2050": {
     "name": "Savola Group",
     "sub_industry": "Foods",
-    "short": "Savola"
+    "short": "Savola",
+    "cell_notes": {
+     "ROE|FY2024": "Includes the SAR 11,554.7m gain on the in-kind distribution of Almarai shares to shareholders (one-off).",
+     "NET_M|FY2024": "Includes the SAR 11,554.7m Almarai distribution gain (one-off).",
+     "OP_M|FY2024": "Includes the SAR 11,554.7m Almarai distribution gain (one-off)."
+    }
    },
    "2270": {
     "name": "SADAFCO",
@@ -700,7 +739,15 @@
     "short_periods": {
      "FY2023": 9
     },
-    "period_note": "Year-end changed from 31 March to 31 December: FY2022 = April 2022-March 2023; FY2023 = the nine-month period April-December 2023."
+    "period_note": "Year-end changed from 31 March to 31 December: FY2022 = April 2022-March 2023; FY2023 = the nine-month period April-December 2023.",
+    "period_labels": {
+     "FY2021": "31 Mar 2022",
+     "FY2022": "FY2022 (Apr 22–Mar 23)",
+     "FY2023": "FY2023 (Apr–Dec 23, 9m)"
+    },
+    "exclude_from_totals": {
+     "FY2022": "SADAFCO's FY2022 is the year to 31 March 2023 (not a calendar year) and exists in the archive only as an XBRL file, so it is left out of group totals."
+    }
    },
    "6010": {
     "name": "NADEC",
@@ -735,7 +782,8 @@
    "2284": {
     "name": "Modern Mills",
     "sub_industry": "Flour",
-    "short": "Modern Mills"
+    "short": "Modern Mills",
+    "legal_name": "Modern Mills Company"
    },
    "2285": {
     "name": "Arabian Mills",
@@ -813,6 +861,13 @@
    ]
   },
   "classification_note": "Second-tier consumer-goods companies added to the SEVEN list for context; not in the benchmark.",
-  "fy2021_balance_only": true
+  "fy2021_balance_only": true,
+  "cell_notes": {
+   "ROE|FY2024": "Includes Savola's SAR 11,554.7m gain on the in-kind distribution of its Almarai shares (a one-off on another company in this group); see the One_offs register and Savola's page.",
+   "ND_EBITDA|FY2024": "EBITDA includes Savola's SAR 11,554.7m Almarai distribution gain; on EBITDA excluding one-offs the multiple is higher (see the group commentary).",
+   "NET_M|FY2024": "Includes Savola's SAR 11,554.7m Almarai distribution gain.",
+   "OP_M|FY2024": "Includes Savola's SAR 11,554.7m Almarai distribution gain.",
+   "EBITDA_M|FY2024": "Includes Savola's SAR 11,554.7m Almarai distribution gain; see EBITDA margin excl. one-offs."
+  }
  }
 }
