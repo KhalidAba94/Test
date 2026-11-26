@@ -1,0 +1,83 @@
+ticker: "6012"
+headline: >-
+  Raydan lost money in every year: revenue fell from SAR 177m (FY2023) to SAR 114m (FY2025) and the attributable loss was SAR 64.7m
+  in FY2025, leaving equity of SAR 17.1m. In 9M 2026, after exiting several branches, revenue from continuing operations fell 67.4% to
+  SAR 19.8m, the net loss widened to SAR 39.7m (SAR 28.5m) and equity turned negative at -SAR 22.5m. The auditor reports a material
+  uncertainty over going concern.
+lfl_basis:
+  definition_used: >-
+    Standard bridge on IFRS revenue. For 9M 2025 and 9M 2026 the company shows revenue from continuing operations only, so both 9M
+    figures exclude the branches exited in 2026. Perimeter effects on our growth rates are nil: the Egyptian subsidiary, deconsolidated
+    on 7 Jan 2025, had no revenue, and the company itself removed the exited branches from both 9M periods. Organic growth therefore
+    equals reported growth. The filings give no restaurant count, openings or same-store sales, so new-capacity effects and
+    like-for-like growth are not determinable.
+  perimeter_changes:
+    - {event: "Egyptian subsidiary (Raydan Egypt Kitchens and Restaurants, 100%) placed under liquidation; control lost and FY2025 statements prepared stand-alone", date: "2025-01-07", effect: "no revenue effect: FY2024 revenue was all earned in Saudi regions; its costs moved to the line 'Liquidation deficit of a subsidiary'", source: "6012_RAYDAN/2025_Annual_filed2026-04-09.pdf p.57, p.58"}
+    - {event: "Remaining 1% non-controlling interest in the Egyptian subsidiary waived to the company", date: "2023-10-25", effect: "no revenue effect", source: "6012_RAYDAN/2024_Annual_filed2025-04-18.pdf p.15"}
+    - {event: "Branches exited in 2026 and the Jabal Omar branch (held for sale) shown as discontinued operations", date: "2026 (9M)", effect: "company re-presented 9M 2025 revenue from SAR 94.4m to SAR 60.7m (discontinued SAR 33.7m); discontinued revenue SAR 8.0m in 9M 2026; nil effect on our growth", source: "6012_RAYDAN/2026_Q3_filed2026-11-18.pdf p.24, p.34-35"}
+  capacity_changes:
+    - {event: "New branch commercial registrations in Makkah (Dhu al-Qa'dah 1444H, 2023) and Jeddah (three, Dhu al-Hijjah 1445H, 2024)", date: "2023-2024", effect: "revenue not disclosed; registrations are not restaurant counts", source: "6012_RAYDAN/2024_Annual_filed2025-04-18.pdf p.14"}
+    - {event: "Al-Qunfudhah branch and the Al-Zaydi catering kitchen disposed of", date: "2025", effect: "revenue not disclosed", source: "6012_RAYDAN/2026_Q3_filed2026-11-18.pdf p.18"}
+    - {event: "Two branches closed; 12 locations disposed of; 11 branch registrations cancelled, 6 remain active", date: "2026 (9M)", effect: "revenue of continuing branches not disclosed by branch", source: "6012_RAYDAN/2026_Q3_filed2026-11-18.pdf p.10, p.18, p.39"}
+  fx_exposure: "All revenue is earned in Saudi Arabia in riyals; the Egyptian subsidiary had no revenue in FY2022-FY2024. No FX translation effect."
+  price_volume_support: >-
+    Not determinable. The filings split revenue by stream (branch sales, catering contracts, Hajj contracts) and by segment
+    (traditional meals, catering), but give no covers, average spend or restaurant count, so price and volume cannot be separated.
+  confidence: "Medium (perimeter nil with High confidence; new capacity and like-for-like not determinable)"
+price_volume:
+  - period: "9M 2026 vs 9M 2025"
+    text: >-
+      Continuing revenue fell SAR 40.9m (67.4%). Traditional meals (branches) fell from SAR 51.6m to SAR 18.0m (-65.1%) and catering from
+      SAR 8.9m to SAR 3.0m (-66.3%, we calculate). Management reports the fall but does not explain it beyond the restructuring and
+      branch closures; covers and prices are not disclosed.
+    basis: "disclosed (segment revenue); price/volume split not determinable"
+    confidence: "High for the segment amounts; the split is not determinable"
+    source: "6012_RAYDAN/2026_Q3_filed2026-11-18.pdf p.34-35 (segments), p.38 (going-concern note)"
+    refs: ["6012-9M2026-REV", "6012-9M2025-REV"]
+  - period: "FY2025 vs FY2024"
+    text: >-
+      Revenue fell SAR 41.3m (26.6%). Branch sales fell from SAR 129m to SAR 101m (-21.7%), catering contract sales from SAR 18.8m
+      to SAR 14.2m (-24.2%) and Hajj contract sales from SAR 8.5m to nil (we calculate the percentages). The split between fewer covers
+      and lower prices is not disclosed.
+    basis: "disclosed (revenue by stream); split not determinable"
+    confidence: "High for the amounts; the split is not determinable"
+    source: "6012_RAYDAN/2025_Annual_filed2026-04-09.pdf p.58 (note 21)"
+    refs: ["6012-FY2025-REV", "6012-FY2024-REV"]
+profit_and_margin:
+  drivers:
+    - {period: "FY2023", driver: "Revenue +11.4% to SAR 177m, all from catering: catering segment revenue rose from SAR 7.5m to SAR 27.8m while traditional meals fell from SAR 149m to SAR 146m. Gross margin rose to 5.4% (4.1%) and EBITDA was SAR 0.1m (margin 0.1%), but the attributable loss widened to SAR 30.9m (SAR 24.6m) after a SAR 15.7m impairment of the associate (Al-Jonah), partly offset by a SAR 9.4m reversal of right-of-use impairments.", source: "6012_RAYDAN/2024_Annual_filed2025-04-18.pdf p.10 (P&L), p.56 (segments); 6012_RAYDAN/2023_Annual_filed2024-04-02.pdf p.52", refs: ["6012-FY2023-REV", "6012-FY2023-GP", "6012-FY2023-EBITDA_C", "6012-FY2023-NI_ATTR", "6012-FY2023-IMPAIR_CF"]}
+    - {period: "FY2024", driver: "Revenue -12.4% to SAR 155m as catering segment revenue fell to SAR 11.0m (SAR 27.8m) and traditional meals to SAR 143m. Gross margin fell to 0.8% and EBITDA to -SAR 9.0m (margin -5.8%). Impairments of SAR 40.2m (PP&E SAR 32.7m, right-of-use assets SAR 4.8m, associate SAR 2.7m) took the attributable loss to SAR 73.1m (net margin -47.1%). Operating cash flow was SAR 16.2m, helped by a SAR 9.0m rise in trade payables.", source: "6012_RAYDAN/2025_Annual_filed2026-04-09.pdf p.10 (P&L), p.12 (cash flow), p.62 (segments)", refs: ["6012-FY2024-REV", "6012-FY2024-GP", "6012-FY2024-EBITDA_C", "6012-FY2024-IMPAIR_CF", "6012-FY2024-NI_ATTR", "6012-FY2024-CFO"]}
+    - {period: "FY2025", driver: "Revenue -26.6% to SAR 114m: branch sales -21.7%, catering contracts -24.2% and no Hajj contracts (SAR 8.5m in FY2024). Revenue no longer covered cost of revenue (gross margin -10.0%) and EBITDA fell to -SAR 17.3m (margin -15.2%). Impairments of SAR 20.2m, mainly the associate (SAR 15.9m), took the attributable loss to SAR 64.7m; ROE -131.9%. Equity fell to SAR 17.1m after the capital was cut to SAR 73.1m to absorb losses.", source: "6012_RAYDAN/2025_Annual_filed2026-04-09.pdf p.10 (P&L), p.12 (cash flow), p.58 (revenue), p.49 (capital)", refs: ["6012-FY2025-REV", "6012-FY2025-GP", "6012-FY2025-EBITDA_C", "6012-FY2025-IMPAIR_CF", "6012-FY2025-NI_ATTR", "6012-FY2025-EQ_ATTR"]}
+    - {period: "9M2026", driver: "Continuing revenue -67.4% to SAR 19.8m and gross margin -49.8% (-15.3%). We calculate an operating loss of SAR 20.8m (SAR 23.2m) and EBITDA of -SAR 10.6m (margin -53.7%). Discontinued operations lost SAR 16.3m, including a SAR 17.9m loss on disposal of branch assets, so the net loss rose to SAR 39.7m (SAR 28.5m). Operating cash flow was -SAR 2.6m and equity -SAR 22.5m at 30 Sep 2026.", source: "6012_RAYDAN/2026_Q3_filed2026-11-18.pdf p.4-5 (statements), p.18 and p.24 (disposals and discontinued operations), p.7 (cash flow)", refs: ["6012-9M2026-REV", "6012-9M2026-GP", "6012-9M2026-OPINC", "6012-9M2026-EBITDA_C", "6012-9M2026-NI_ATTR", "6012-9M2026-CFO", "6012-9M2026-EQ_ATTR"]}
+    - {period: "FY2022-9M2026", driver: "Cash fell from SAR 76.2m at end-2021 (after a SAR 112.5m rights issue in August 2021) to SAR 1.2m at end-2024, through losses and capex of SAR 29.5m in FY2022. Borrowings were repaid from SAR 15.8m (FY2022) to SAR 3.4m (FY2025) and nil at 30 Sep 2026. Net debt was SAR 50.0m at end-2025, almost all lease liabilities (SAR 47.9m).", source: "6012_RAYDAN/2022_Annual_filed2023-04-06.pdf p.9; 6012_RAYDAN/2025_Annual_filed2026-04-09.pdf p.9, p.14; 6012_RAYDAN/2026_Q3_filed2026-11-18.pdf p.4", refs: ["6012-FY2021-CASH", "6012-FY2024-CASH", "6012-FY2022-CAPEX", "6012-FY2022-DEBT", "6012-FY2025-DEBT", "6012-9M2026-DEBT", "6012-FY2025-NET_DEBT", "6012-FY2025-LEASE_LIAB"]}
+  one_offs:
+    - {item: "Loss on disposal of property, plant and equipment", period: "FY2022", amount_sar_m: -2.4, line: "Inside operating loss", source: "6012_RAYDAN/2023_Annual_filed2024-04-02.pdf p.10", tax_nci: "Zakat effect not disclosed; minority share negligible (SAR 155 in FY2022): after-tax effect not determinable, profit kept as reported"}
+developments:
+  - {date: "2022-10-05", category: "financing", text: "Shareholders approved cutting share capital from SAR 337.5m to SAR 158.1m to absorb accumulated losses of SAR 179.4m.", source: "6012_RAYDAN/2025_Annual_filed2026-04-09.pdf p.14"}
+  - {date: "2023-10-10", category: "financing", text: "The statutory reserve of SAR 27.4m was transferred to accumulated losses.", source: "6012_RAYDAN/2023_Annual_filed2024-04-02.pdf p.11"}
+  - {date: "2025-01-07", category: "M&A", text: "The Egyptian subsidiary, which had no revenue after its branches were sold in 2021, was placed under liquidation; Raydan lost control and reports stand-alone statements from FY2025.", source: "6012_RAYDAN/2025_Annual_filed2026-04-09.pdf p.57"}
+  - {date: "2025", category: "operations", text: "Sold four land plots (carrying amounts SAR 3.8m, SAR 1.0m and SAR 4.6m), the main warehouse and a Riyadh villa, and disposed of the Al-Qunfudhah branch and Al-Zaydi catering kitchen; proceeds SAR 9.7m.", source: "6012_RAYDAN/2025_Annual_filed2026-04-09.pdf p.66; 6012_RAYDAN/2026_Q3_filed2026-11-18.pdf p.18"}
+  - {date: "2025-11-02", category: "financing", text: "Shareholders approved a second capital reduction, cancelling 8,494,864 shares and cutting share capital from SAR 158.1m to SAR 73.1m.", source: "6012_RAYDAN/2025_Annual_filed2026-04-09.pdf p.49"}
+  - {date: "2026-01-22", category: "financing", text: "Sold and leased back the Heraa branch in Jeddah for SAR 8.0m to raise liquidity.", source: "6012_RAYDAN/2026_Q3_filed2026-11-18.pdf p.19"}
+  - {date: "2026-04-14", category: "strategy", text: "The board approved a review of branches; the company exited several branches, closed two to cut losses and cancelled 11 branch registrations, leaving 6 active.", source: "6012_RAYDAN/2026_Q3_filed2026-11-18.pdf p.10, p.18, p.39"}
+  - {date: "2026 (9M)", category: "financing", text: "The remaining loan (SAR 3.4m at end-2025) was repaid and the land mortgage released; borrowings were nil at 30 Sep 2026.", source: "6012_RAYDAN/2026_Q3_filed2026-11-18.pdf p.29"}
+  - {date: "2026-09-09", category: "strategy", text: "First franchise agreement: the Jabal Omar branch in Makkah was handed to a franchisee with the sale of its assets for SAR 3.45m including VAT (control passed on 24 Oct 2026).", source: "6012_RAYDAN/2026_Q3_filed2026-11-18.pdf p.19, p.40"}
+  - {date: "2026-11-05", category: "financing", text: "After the period end the company applied to the CMA to cut share capital by SAR 58.5m and raise SAR 105m through a rights issue.", source: "6012_RAYDAN/2026_Q3_filed2026-11-18.pdf p.40"}
+what_it_means:
+  improved: "Borrowings were repaid from SAR 15.8m (FY2022) to nil at 30 Sep 2026, and operating cash flow was positive in FY2023-FY2025 (SAR 16.2m in FY2024)."
+  weakened: "Revenue fell 26.6% in FY2025 and continuing revenue 67.4% in 9M 2026; the gross margin went from 5.4% (FY2023) to -10.0% (FY2025) and -49.8% (9M 2026), and equity fell from SAR 185m (FY2022) to -SAR 22.5m at 30 Sep 2026."
+  why: "Catering and Hajj contract revenue fell away after FY2023 and branch sales fell 21.7% in FY2025. The company then wrote down branches and its associate (impairment add-backs of SAR 40.2m in FY2024 and SAR 20.2m in FY2025) and in 2026 exited branches at a SAR 17.9m disposal loss."
+  uncertain: "The auditor reports a material uncertainty over going concern, and the company depends on a proposed SAR 58.5m capital reduction and SAR 105m rights issue. The filings do not explain why revenue at the continuing branches fell."
+confidence_overall: "Medium"
+data_notes:
+  - "No XBRL file: every figure was read from the PDFs and entered as an override. The annual statements (FY2022-FY2025) and the 9M 2025 interim statements are scanned images, read by OCR and checked against the printed subtotals."
+  - "Perimeter: FY2022-FY2024 statements are consolidated (Egyptian subsidiary, no revenue); FY2025 onward stand-alone after control was lost on 7 Jan 2025. The FY2025 annual prints the name as 'Ridan Company Food'."
+  - "9M figures for REV, COGS, GP, PBT and finance costs are continuing operations; net profit includes discontinued operations (9M 2026 -SAR 16.3m; 9M 2025 -SAR 3.1m), so PBT less zakat does not equal net profit. The cash-flow figures (D&A, CFO, capex) cover continuing and discontinued operations together, so 9M EBITDA adds total D&A to continuing operating income; the split is not disclosed."
+  - "Restated values (R) used: 9M 2025 revenue SAR 60.7m (first reported SAR 94.4m), gross profit, PBT and finance costs re-presented for discontinued operations, and 9M 2025 CFO SAR 4.5m (first SAR 6.6m; finance costs paid moved into operating activities); FY2024 finance costs SAR 5.0m (first SAR 5.2m; Egyptian subsidiary costs moved to the liquidation line); FY2023 finance costs SAR 5.1m (first SAR 5.0m; FX now inside finance costs), FY2023 cash SAR 6.5m and CFO SAR 5.0m (first SAR 6.6m and SAR 5.1m; SAR 0.1m reclassified to receivables); FY2022 CFO -SAR 24.7m (first -SAR 18.6m) and D&A SAR 12.7m (first SAR 11.9m) after the FY2023 annual re-presented the cash-flow statement."
+  - "CFO basis: finance costs paid sit inside operating activities in FY2024-FY2025 and in the 9M 2026 interim (including the re-presented 9M 2025); earlier years show no separate line."
+  - "Finance items outside the finance lines: FY2022 FX loss of SAR 0.3m sits inside our operating income; FY2023 bank returns (finance income) of SAR 0.3m sit inside other income; FY2024 finance costs of SAR 0.15m sit in the liquidation-deficit line. Associate impairments (FY2023 SAR 15.7m, FY2024 SAR 2.7m, FY2025 SAR 15.9m) are inside our operating income and added back in EBITDA."
+  - "The FY2025 share of the associate's loss is SAR 4.6m on the face of the income statement but SAR 4.2m in the cash-flow add-back."
+  - "Ratios shown as n.m.: 9M 2026 ROE is n.m. because average equity is negative (SAR 17.1m at end-2025 to -SAR 22.5m at 30 Sep 2026); net debt / EBITDA is n.m. in every period because annualised EBITDA is below SAR 10m (it is negative except FY2023, SAR 0.1m)."
+  - "Other items left in operating income: disposal results, lease-termination gains, the FY2022 FX loss and the FY2023 expropriation loss are each about 1% of the loss or less; the 9M 2026 provision for potential claims (SAR 4.1m cash-flow add-back) has no stated P&L line. Impairments are excluded from EBITDA, and the 9M 2026 branch-disposal loss (SAR 17.9m) sits in discontinued operations."
+  - "Restaurant counts are not disclosed. Note 1 lists branch commercial registrations (FY2025: 17; 30 Sep 2026: 6 active), which include non-restaurant sites."
+  - "Main Market listing since November 2019 (from Nomu); all periods FY2021-9M 2026 are available."

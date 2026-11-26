@@ -310,7 +310,7 @@ def build_company(wb, sector, t, cfg, ds, narr, adj_rows, facts_idx, sheetname, 
             if avg == "ann":
                 d = f"({col}{rowmap[den]}" + (f"*12/{ytd_m[p]})" if p.startswith("9M") else ")")
                 cond = f"AND(ISNUMBER({col}{rowmap[den]}),ISNUMBER({col}{rowmap[num]}))"
-                ws[f"{col}{r}"] = f'=IF({cond},IF({col}{rowmap[den]}>0,{n}/{d},"n.m."),"")'
+                ws[f"{col}{r}"] = f'=IF({cond},IF({d}>=10,{n}/{d},"n.m."),"")'
                 ws[f"{col}{r}"].number_format = XF
                 ws[f"{col}{r}"].font = f(size=9)
                 if p.startswith("9M"):
@@ -332,6 +332,8 @@ def build_company(wb, sector, t, cfg, ds, narr, adj_rows, facts_idx, sheetname, 
                 continue
             if den in ("REV", "REV_M", "TOI") and not avg:
                 ws[f"{col}{r}"] = f'=IF({cond},IF({d}<10,"n.m.",{n}{ann}/{d}),"")'
+            elif avg:
+                ws[f"{col}{r}"] = f'=IF({cond},IF({d}<=0,"n.m.",{n}{ann}/{d}),"")'
             else:
                 ws[f"{col}{r}"] = f'=IF({cond},IF({d}<>0,{n}{ann}/{d},""),"")'
             ws[f"{col}{r}"].number_format = PCT2 if den in ("LOANS", "TA") else PCT

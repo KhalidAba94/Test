@@ -1,0 +1,154 @@
+# Evidence extracted from Bait Alshateera Fast Food Restaurants (Burgerizzr) filings (archive: SEVEN_FNB/6016_BURGERIZZR). Facts only; page = physical PDF page (1-based).
+# Units: SAR (full riyals) as presented. All primary statements used (annuals FY2022-FY2025, 9M 2025 and 9M 2026 interims) are scanned
+# images (read by OCR and checked against printed subtotals); the notes have a text layer. Listed on Nomu from 8 Sep 2021; moved to the
+# Main Market after approval on 13 Oct 2024. FY2022-FY2024 statements are stand-alone; FY2025 onward consolidated.
+ticker: "6016"
+company: "Bait Alshateera Fast Food Restaurants Company (Burgerizzr)"
+
+perimeter_changes:
+  - event: "Acquisition of 60% of Coffee Bean Trading Company (SHOVEL café brand; seven branches at acquisition)"
+    type: acquisition
+    date: "2025-10-27"
+    consideration: 10326288
+    revenue_contribution: 7053261
+    profit_contribution: 560148
+    pro_forma_revenue: 27009584
+    period: "FY2025"
+    unit: "SAR"
+    source: "6016_BURGERIZZR/2025_Annual_filed2026-03-29.pdf"
+    page: 25
+    quote: "On 27 October 2025, the Group has completed the acquisition of 60% of the equity interests in SHOVEL Coffee Bean Trading Company"
+    note: "Consideration = cash to previous shareholders 8,777,388 + capital injection 1,548,900 (p.26). Provisional goodwill 7,993,001; net assets at book value 1,307,311; NCI 40% (p.25). Post-acquisition revenue 7,053,261 and net profit 560,148 (p.26); note 22 says 7.1m (p.30). The 9M 2026 interim gives SHOVEL's full FY2025 revenue as 27,009,584 and post-acquisition FY2025 revenue as 8,321,447 (2026_Q3 p.14)."
+  - event: "SHOVEL contribution in 9M 2026 (QSR-Coffee segment; not owned in 9M 2025)"
+    type: acquisition
+    date: "2025-10-27"
+    consideration: null
+    revenue_contribution: 55671710
+    profit_contribution: 9463563
+    pro_forma_revenue: null
+    period: "9M2026"
+    unit: "SAR"
+    source: "6016_BURGERIZZR/2026_Q3_filed2026-11-15.pdf"
+    page: 18
+    quote: "Revenue from external customers 275,917,904 55,671,710 - 331,589,614"
+    note: "QSR-Coffee profit before zakat 9,572,833 and net profit 9,463,563; SHOVEL now manages nine branches (note 7, p.14). Non-controlling interests' share of 9M 2026 profit 3,733,648 (p.6)."
+  - event: "Two wholly owned subsidiaries incorporated (Hadaf Bas for Real Estate; Qemam Bas for Investment), dormant"
+    type: new_subsidiary
+    date: "2025-03-02"
+    consideration: null
+    revenue_contribution: 0
+    profit_contribution: null
+    pro_forma_revenue: null
+    period: "FY2025"
+    unit: "SAR"
+    source: "6016_BURGERIZZR/2025_Annual_filed2026-03-29.pdf"
+    page: 11
+    quote: "Two of the wholly owned subsidiaries have not started their commercial operations and remained dormant in 2025."
+  - event: "No subsidiaries or acquisitions before 2025 (single entity, one operating segment)"
+    type: acquisition
+    status: "not found"
+    period: "FY2022-FY2024"
+    source: "6016_BURGERIZZR/2024_Annual_filed2025-03-09.pdf"
+    page: 30
+    quote: "The Company has only one operating segment engaged in selling fast food across the Kingdom of Saudi Arabia."
+
+segments:
+  - {period: "FY2022", segment: "Single segment (fast food, KSA only)", basis: operating, revenue: 250436084, profit: 2696972, unit: "SAR", source: "6016_BURGERIZZR/2022_Annual_filed2023-03-30.pdf", page: 28}
+  - {period: "FY2023", segment: "Single segment (fast food, KSA only)", basis: operating, revenue: 281053038, profit: 12285277, unit: "SAR", source: "6016_BURGERIZZR/2023_Annual_filed2024-02-18.pdf", page: 28}
+  - {period: "FY2024", segment: "Single segment (fast food, KSA only)", basis: operating, revenue: 299575519, profit: 8186709, unit: "SAR", source: "6016_BURGERIZZR/2024_Annual_filed2025-03-09.pdf", page: 30, note: "profit = restated net profit (FY2025 AFS p.8)"}
+  - {period: "FY2025", segment: "QSR only in operation (no segment split given)", basis: operating, revenue: 366481879, profit: 11138948, unit: "SAR", source: "6016_BURGERIZZR/2025_Annual_filed2026-03-29.pdf", page: 36}
+  - {period: "9M2026", segment: "QSR-Burger", basis: operating, revenue: 275917904, profit: 8804635, unit: "SAR", source: "6016_BURGERIZZR/2026_Q3_filed2026-11-15.pdf", page: 18}
+  - {period: "9M2026", segment: "QSR-Coffee (SHOVEL)", basis: operating, revenue: 55671710, profit: 9463563, unit: "SAR", source: "6016_BURGERIZZR/2026_Q3_filed2026-11-15.pdf", page: 18}
+  - {period: "9M2026", segment: "Others (dormant subsidiaries)", basis: operating, revenue: 0, profit: -4500, unit: "SAR", source: "6016_BURGERIZZR/2026_Q3_filed2026-11-15.pdf", page: 18}
+  - {period: "9M2025", segment: "QSR-Burger (restated)", basis: operating, revenue: 260139198, profit: 6509779, unit: "SAR", source: "6016_BURGERIZZR/2026_Q3_filed2026-11-15.pdf", page: 18}
+
+revenue_drivers:
+  - {period: "FY2025", driver: "Gross revenue before returns (FY2024: 302,992,893); returns 3,024,155 (FY2024: 3,417,374)", value: 369506034, unit: "SAR", source: "6016_BURGERIZZR/2025_Annual_filed2026-03-29.pdf", page: 30, quote: "Gross revenue 369,506,034 302,992,893"}
+  - {period: "FY2025", driver: "Revenue of SHOVEL included in FY2025 (post-acquisition)", value: 7.1, unit: "SAR m", source: "6016_BURGERIZZR/2025_Annual_filed2026-03-29.pdf", page: 30, quote: "Gross revenue includes ⃀ 7.1 million revenue generated from Shovel, the new subsidiary acquired in 2025."}
+  - {period: "9M2026", driver: "Management statement on expansion (no counts given)", value: null, unit: "count", source: "6016_BURGERIZZR/2026_Q3_filed2026-11-15.pdf", page: 10, quote: "The Group is expanding its business, which is evident from the increase in revenue, number of branches and operating profits"}
+  - {period: "FY2025", driver: "SHOVEL branches at acquisition", value: 7, unit: "count", source: "6016_BURGERIZZR/2025_Annual_filed2026-03-29.pdf", page: 25, quote: "SHOVEL operates under the “SHOVEL” brand in the café sector and manages seven branches across Saudi Arabia."}
+  - {period: "9M2026", driver: "SHOVEL branches at 30 Sep 2026", value: 9, unit: "count", source: "6016_BURGERIZZR/2026_Q3_filed2026-11-15.pdf", page: 14, quote: "SHOVEL operates under the “SHOVEL” brand in the café sector and manages nine branches across Saudi Arabia."}
+
+one_offs:
+  - {period: "FY2022", item: "Loss on disposal of property and equipment (presented as 'Other expenses')", amount: -984829, unit: "SAR", pnl_line: "Other expenses (below operating profit, above profit before zakat)", recurring: false, source: "6016_BURGERIZZR/2023_Annual_filed2024-02-18.pdf", page: 30, quote: "Loss on disposal of property and equipment 1,713,135 984,829"}
+  - {period: "FY2023", item: "Loss on disposal of property and equipment", amount: -1713135, unit: "SAR", pnl_line: "Other expenses / Loss on disposal of non-current assets", recurring: false, source: "6016_BURGERIZZR/2023_Annual_filed2024-02-18.pdf", page: 30, quote: "Loss on disposal of property and equipment 1,713,135 984,829"}
+  - {period: "FY2024", item: "Loss on disposal of non-current assets", amount: -1252807, unit: "SAR", pnl_line: "Loss on disposal of non-current assets", recurring: false, source: "6016_BURGERIZZR/2025_Annual_filed2026-03-29.pdf", page: 8, quote: "Loss on disposal of non-current assets (1,670,884) (1,252,807)"}
+  - {period: "FY2025", item: "Loss on disposal of non-current assets", amount: -1670884, unit: "SAR", pnl_line: "Loss on disposal of non-current assets", recurring: false, source: "6016_BURGERIZZR/2025_Annual_filed2026-03-29.pdf", page: 8, quote: "Loss on disposal of non-current assets (1,670,884) (1,252,807)"}
+  - {period: "9M2025", item: "Loss on disposal of property and equipment and write-off of intangible assets", amount: -62855, unit: "SAR", pnl_line: "Loss on disposal of property and equipment and write-off of intangible assets", recurring: false, source: "6016_BURGERIZZR/2026_Q3_filed2026-11-15.pdf", page: 6, quote: "Loss on disposal of property and equipment and write-off of intangible assets (34,593) (62,855) (635,287) (62,855)"}
+  - {period: "9M2026", item: "Loss on disposal of property and equipment and write-off of intangible assets (all in QSR-Burger)", amount: -635287, unit: "SAR", pnl_line: "Loss on disposal of property and equipment and write-off of intangible assets", recurring: false, source: "6016_BURGERIZZR/2026_Q3_filed2026-11-15.pdf", page: 6, quote: "Loss on disposal of property and equipment and write-off of intangible assets (34,593) (62,855) (635,287) (62,855)"}
+  - {period: "FY2025", item: "Transfer from assets under construction to cost of revenue (FY2024: 245,625); nature not explained, kept in EBITDA", amount: -1361452, unit: "SAR", pnl_line: "Cost of revenue", recurring: false, source: "6016_BURGERIZZR/2025_Annual_filed2026-03-29.pdf", page: 24, quote: "Transfer to cost of revenue (1,361,452)"}
+  - {period: "FY2025", item: "Allowance for doubtful other receivables (FY2024: 1,327,787); ordinary receivable provision, kept in EBITDA", amount: -833840, unit: "SAR", pnl_line: "Not stated (cash-flow add-back)", recurring: false, source: "6016_BURGERIZZR/2025_Annual_filed2026-03-29.pdf", page: 10, quote: "Allowance for doubtful other receivables 12 833,840 1,327,787"}
+  - {period: "9M2026", item: "Impairment of trade receivables and other assets; ordinary receivable provision, kept in EBITDA", amount: -700000, unit: "SAR", pnl_line: "Not stated (cash-flow add-back)", recurring: false, source: "6016_BURGERIZZR/2026_Q3_filed2026-11-15.pdf", page: 8, quote: "Impairment of trade receivables and other assets 5 700,000 -"}
+
+restatements:
+  - period_restated: "FY2024 and 1 January 2024"
+    item: "Cost of revenue, profit, prepayments and retained earnings (employee Iqama fees expensed instead of deferred)"
+    from: 8445501
+    to: 8186709
+    unit: "SAR"
+    reason: "Correction of an error under IAS 8: cost of revenue +258,792 in FY2024; prepayments and retained earnings -1,543,808 at 1 Jan 2024 and -1,802,600 at 31 Dec 2024 (total assets 151,245,092 to 149,442,492; equity 72,059,455 to 70,256,855; 1 Jan 2024 total assets 145,149,233 to 143,605,425). FY2023 P&L was not restated."
+    source: "6016_BURGERIZZR/2025_Annual_filed2026-03-29.pdf"
+    page: 35
+    quote: "the Company has reflected the impact of this clarification as a correction of error in these financial statements retrospectively by restating prior years"
+  - period_restated: "FY2024"
+    item: "Net cash from operating activities"
+    from: 35988610
+    to: 34875418
+    unit: "SAR"
+    reason: "Finance cost paid (1,113,192) moved from financing into operating activities in the FY2025 annual (not mentioned in note 30). The 9M 2025 and 9M 2026 interims keep finance cost paid in financing."
+    source: "6016_BURGERIZZR/2025_Annual_filed2026-03-29.pdf"
+    page: 10
+    quote: "Finance cost paid (1,374,425) (1,113,192)"
+  - period_restated: "9M2025"
+    item: "Cost of revenue and profit (same Iqama-fee change, described as a change in accounting policy)"
+    from: 6921463
+    to: 6509779
+    unit: "SAR"
+    reason: "Cost of revenue +411,684 (177,747,467 to 178,159,151); profit before zakat 7,102,485 to 6,690,801. The 30 Sep 2025 balance sheet was not re-presented."
+    source: "6016_BURGERIZZR/2026_Q3_filed2026-11-15.pdf"
+    page: 17
+    quote: "the management of the Group changed its accounting policy for the recognition of prepaid Iqama expenses"
+  - period_restated: "FY2022 (EPS only)"
+    item: "Earnings per share restated for the share split (3.5m to 35m shares)"
+    from: null
+    to: null
+    unit: "SAR"
+    reason: "Share split approved by the EGM on 31 May 2023; no effect on amounts."
+    source: "6016_BURGERIZZR/2023_Annual_filed2024-02-18.pdf"
+    page: 30
+    quote: "On 31 May 2023, the Extraordinary General Assembly (“EGA”) approved the splitting of shares."
+
+significant_events:
+  - {date: "2021-09-08", event: "Shares listed on Nomu (parallel market)", financial_effect: "none", source: "6016_BURGERIZZR/2025_Annual_filed2026-03-29.pdf", page: 11, quote: "the shares of the Company are listed on Nomu on 08 September 2021."}
+  - {date: "2024-10-13", event: "Approval to move from Nomu to the Main Market", financial_effect: "none", source: "6016_BURGERIZZR/2025_Annual_filed2026-03-29.pdf", page: 11, quote: "the approval has been issued on 13 October 2024 to move from Nomu (Parallel Market) to the main market."}
+  - {date: "2024", event: "Cash dividend of SAR 4.9m (SAR 0.14 per share) for FY2023 paid", financial_effect: "Financing outflow 4,900,000", source: "6016_BURGERIZZR/2024_Annual_filed2025-03-09.pdf", page: 30, quote: "The said dividend has been paid during the year."}
+  - {date: "2025-10-27", event: "Acquisition of 60% of SHOVEL (Coffee Bean Trading Company)", financial_effect: "Cash outflow 10,326,288; goodwill 7,993,001 (provisional)", source: "6016_BURGERIZZR/2025_Annual_filed2026-03-29.pdf", page: 26, quote: "Total consideration 10,326,288"}
+  - {date: "2026-01", event: "Bonus issue: share capital raised from SAR 35m to SAR 56m", financial_effect: "Transfer of SAR 21m from retained earnings", source: "6016_BURGERIZZR/2025_Annual_filed2026-03-29.pdf", page: 36, quote: "has increased its share capital from 35 million to ﷼ 56 million through the issuance of bonus shares"}
+  - {date: "2026-06-30", event: "Cash dividend paid (approved 15 Apr 2026)", financial_effect: "Financing outflow 5,600,000", source: "6016_BURGERIZZR/2026_Q3_filed2026-11-15.pdf", page: 15, quote: "The dividend was paid on 30 June 2026."}
+  - {date: "2026 (9M)", event: "Purchase of 66,080 treasury shares", financial_effect: "Cost 499,677", source: "6016_BURGERIZZR/2026_Q3_filed2026-11-15.pdf", page: 15, quote: "the Group has purchased 66,080 treasury shares (31 December 2025: Nil) with an aggregate acquisition cost of ﷼ 499,677"}
+
+audit_opinion:
+  - {period: "FY2022", opinion: "unmodified (BDO Dr. Mohamed Al-Amri & Co.)", emphasis_of_matter: "none", source: "6016_BURGERIZZR/2022_Annual_filed2023-03-30.pdf", page: 3}
+  - {period: "FY2023", opinion: "unmodified (BDO Dr. Mohamed Al-Amri & Co.)", emphasis_of_matter: "none", source: "6016_BURGERIZZR/2023_Annual_filed2024-02-18.pdf", page: 3}
+  - {period: "FY2024", opinion: "unmodified (BDO Dr. Mohamed Al-Amri & Co.)", emphasis_of_matter: "none", source: "6016_BURGERIZZR/2024_Annual_filed2025-03-09.pdf", page: 3}
+  - {period: "FY2025", opinion: "unmodified (BDO Dr. Mohamed Al-Amri & Co.); key audit matter on revenue", emphasis_of_matter: "none", source: "6016_BURGERIZZR/2025_Annual_filed2026-03-29.pdf", page: 3}
+  - {period: "9M2026", opinion: "unmodified review conclusion (PKF Al-Bassam, new auditor)", emphasis_of_matter: "Other matter: FY2025 audited and 9M 2025 reviewed by another auditor", source: "6016_BURGERIZZR/2026_Q3_filed2026-11-15.pdf", page: 3}
+
+kpis_in_filings:
+  - {period: "FY2025", kpi: "SHOVEL café branches at acquisition", value: 7, unit: "count", source: "6016_BURGERIZZR/2025_Annual_filed2026-03-29.pdf", page: 25}
+  - {period: "9M2026", kpi: "SHOVEL café branches", value: 9, unit: "count", source: "6016_BURGERIZZR/2026_Q3_filed2026-11-15.pdf", page: 14}
+  - {period: "FY2022-9M2026", kpi: "Burgerizzr restaurant count, same-store sales, transactions or average ticket", value: null, unit: "count", status: "not found", source: "6016_BURGERIZZR/2025_Annual_filed2026-03-29.pdf", page: null, note: "Note 1 of the FY2022-FY2024 annuals lists branch commercial registrations (including a warehouse and a central kitchen), which are not restaurant counts."}
+
+special_extractions:
+  - name: "Working capital and going-concern statement"
+    unit: "SAR m"
+    items:
+      - {period: "9M2026", item: "Current liabilities exceeded current assets (31 Dec 2025: 22.64)", value: 15.14, source: "6016_BURGERIZZR/2026_Q3_filed2026-11-15.pdf", page: 10, quote: "Although the Group’s current liabilities exceeded its current assets by ﷼ 15.14 million as at 30 September 2026"}
+
+open_questions:
+  - "SHOVEL's post-acquisition FY2025 revenue is 7,053,261 in the FY2025 annual (note 10, p.26; '7.1 million' in note 22, p.30) but 8,321,447 in the 9M 2026 interim (note 7, p.14). We use the audited figure."
+  - "The FY2025 annual calls the Iqama-fee change a correction of an error (IAS 8, note 30); the 9M 2026 interim calls it a change in accounting policy (note 14)."
+  - "The 30 Sep 2025 balance sheet was not re-presented, so 9M 2025 total assets and equity are on the pre-restatement basis (about 2.2m higher)."
+  - "No restaurant count or same-store sales are disclosed for the Burgerizzr chain, so new-capacity effects cannot be measured."
+  - "The nature of the 'transfer from assets under construction to cost of revenue' (FY2025 1,361,452; 9M 2026 521,001) is not explained."
+  - "Purchase price allocation for SHOVEL is provisional; goodwill (7,993,001) may change in the FY2026 annual."

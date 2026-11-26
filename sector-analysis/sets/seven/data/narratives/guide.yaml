@@ -16,7 +16,7 @@ sections:
   lines:
   - Compound annual growth (CAGR) 2022–25 = (FY2025 ÷ FY2022)^(1/3) − 1, i.e. three years of compounding. A 2022–26 CAGR needs full-year 2026 results (expected Feb–Apr 2027) and is not shown.
   - Growth and CAGR are 'n.m.' (not meaningful) when the starting value is zero, negative or below SAR 10m, or when a profit turns into a loss. Margins are 'n.m.' when revenue is below SAR 10m (e.g. an
-    investment holding with almost no revenue).
+    investment holding with almost no revenue). Return on equity is 'n.m.' when average equity is zero or negative, and net debt / EBITDA is 'n.m.' when (annualised) EBITDA is negative or below SAR 10m.
   - 9M ratios that divide by a balance-sheet amount (ROE) and net debt ÷ EBITDA are annualised (× 12/9). Income figures are never annualised.
   - All 47 companies report to 31 December. SADAFCO changed its year-end from 31 March to 31 December, so its 2023 financial year is nine months (April to December 2023); growth across that year is labelled,
     not compared like for like. Companies listed during the period have no figures before their first filed statements in the archive.

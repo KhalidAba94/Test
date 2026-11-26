@@ -75,14 +75,15 @@ def main(root):
             for m, ser in c["series"].items():
                 for p in ser:
                     series.add((t, p, m))
-    items = {r["item_id"] for r in csv.DictReader(open(os.path.join(root, "data", "policy", "items.csv"), encoding="utf-8"))}
-    impacts = list(csv.DictReader(open(os.path.join(root, "data", "policy", "impacts.csv"), encoding="utf-8")))
+    pol = os.path.join(root, "data", "policy")   # sets without a policy section (e.g. sets/seven) have no policy folder
+    items = {r["item_id"] for r in csv.DictReader(open(os.path.join(pol, "items.csv"), encoding="utf-8"))} if os.path.exists(os.path.join(pol, "items.csv")) else set()
+    impacts = list(csv.DictReader(open(os.path.join(pol, "impacts.csv"), encoding="utf-8"))) if os.path.exists(os.path.join(pol, "impacts.csv")) else []
     impact_ids = {r.get("impact_id", "") for r in impacts}
 
     sources = {}
     for p in sorted(glob.glob(os.path.join(root, "data", "narratives", "*.yaml"))):
         sources[os.path.basename(p)] = yaml.safe_load(open(p, encoding="utf-8")) or {}
-    assess = yaml.safe_load(open(os.path.join(root, "data", "policy", "assessment.yaml"), encoding="utf-8")) or {}
+    assess = (yaml.safe_load(open(os.path.join(pol, "assessment.yaml"), encoding="utf-8")) or {}) if os.path.exists(os.path.join(pol, "assessment.yaml")) else {}
     refs = [(n, r) for n, y in sources.items() for r in collect_refs(y)]
     refs += [("assessment.yaml", r) for r in collect_refs(assess)]
     refs += [("impacts.csv", r) for row in impacts for r in re.split(r"[;, ]+", row.get("evidence_item_ids", "")) if r]
