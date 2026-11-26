@@ -295,9 +295,12 @@ def main(root, arch, parsed, cache):
         "PPOP": lambda g: g("TOI") - g("OPEX_PRE"),
         "EQ_ORD": lambda g: g("EQ_ATTR") - (g("T1_SUKUK", 0.0)),
         "OTHER_OI": lambda g: g("TOI") - g("NSCI") - g("FEES_NET"),
-        "FCF": lambda g: g("CFO") - g("CAPEX"),
+        "FCF": lambda g: g("CFO") - g("CAPEX") - g("IP_CAPEX", 0.0),   # owners of let property also deduct investment-property spend
+        "CAPEX_TOT": lambda g: g("CAPEX") + g("IP_CAPEX", 0.0),
+        "FFO": lambda g: g("NI") + g("DA_CF", 0.0) + g("IMPAIR_CF", 0.0) - g("GAIN_DISP", 0.0),   # REITs
+        "NET_DEBT": lambda g: g("DEBT") + g("LEASE_LIAB", 0.0) - g("CASH"),
         "REV_M": lambda g: g("REV") + g("OIRS", 0.0),
-        "EBITDA_C": lambda g: g("OPINC") + g("DA_CF", 0.0) + g("IMPAIR_CF", 0.0),
+        "EBITDA_C": lambda g: g("OPINC") + g("DA_CF", 0.0) + g("IMPAIR_CF", 0.0) - g("FV_IP", 0.0),   # fair-value gains on investment property out
         "OPINC": lambda g: g("PBT") + g("FIN_COST", 0.0) - g("FIN_INC", 0.0) - (0.0 if g.t in HOLDING else g("SHARE_JV", 0.0)),
         "EBITDA_U": lambda g: g("EBITDA_C") - sum(float(o["amount_sar_m"]) * (1 if o["direction"] == "gain" else -1)
                                                   for o in oneoffs if o["ticker"] == g.t and o["period"] == g.p and o["in_metric"] == "OPINC"),
