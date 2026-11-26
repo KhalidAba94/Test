@@ -7,7 +7,9 @@ Sheets:
   Review_Log           every issue: id, review, severity, where, finding, status, fix, recheck trail
   Not_fully_closed     issues whose status is not 'fixed', with the reason
   Accepted_limitations limitations that remain by design, with the evidence and where they are disclosed
-  Full_trace_summary   how every published figure was traced to its source PDF (data/trace/full_trace.csv)
+  Closed_in_closeout   issues not fully fixed before the close-out, and new full-review issues, with what was done
+  Full_trace_summary   how every figure was traced to its source PDF (full trace + hand check)
+  Full_review_checks   every figure checked by hand, with the page and value seen
 """
 from __future__ import annotations
 
@@ -85,7 +87,7 @@ def main(root, out):
                 ws.cell(row=rr, column=j).font = Font(bold=True)
         rr += 1
     rr += 1
-    for key, lab in (("checked", "What was checked"), ("fixed", "What was fixed"), ("unresolved", "Still open or accepted")):
+    for key, lab in (("checked", "What was checked"), ("fixed", "What was fixed"), ("unresolved", "Accepted limitations (still open by design)")):
         ws.cell(row=rr, column=1, value=lab).font = Font(bold=True)
         rr += 1
         for x in summ.get(key, []) or []:
@@ -97,9 +99,15 @@ def main(root, out):
     for j, w in enumerate([34, 12, 14, 12, 16, 10, 10, 10], 1):
         ws.column_dimensions[get_column_letter(j)].width = w
 
-    sheet(wb, "Review_Log", ["Issue", "Review", "Severity", "Where", "Finding", "Status", "Fix", "Recheck trail"],
-          [[r["issue_id"], r["review"], r["severity"], r["where"], r["finding"], r["status"], r["fix"], r["recheck"]] for r in log],
-          [11, 18, 10, 26, 70, 12, 70, 50])
+    bp = os.path.join(root, "data", "review", "review_log_before_closeout.csv")
+    before = {r["issue_id"]: r["status"] for r in csv.DictReader(open(bp, encoding="utf-8"))} if os.path.exists(bp) else {}
+    sheet(wb, "Review_Log", ["Issue", "Review", "Severity", "Where", "Finding", "Status before close-out", "Status now", "Fix", "Recheck trail"],
+          [[r["issue_id"], r["review"], r["severity"], r["where"], r["finding"], before.get(r["issue_id"], "new in close-out"), r["status"], r["fix"], r["recheck"]] for r in log],
+          [11, 18, 10, 26, 70, 14, 12, 70, 50])
+    ch = [r for r in log if before.get(r["issue_id"], "new") != "fixed"]
+    sheet(wb, "Closed_in_closeout", ["Issue", "Review", "Status before close-out", "Status now", "Finding", "What was done"],
+          [[r["issue_id"], r["review"], before.get(r["issue_id"], "new in close-out"), r["status"], r["finding"], r["fix"]] for r in ch],
+          [11, 18, 16, 12, 60, 80], title="Issues not fully fixed before the close-out (and issues found by the full review), with what was done")
     nf = [r for r in log if r["status"] != "fixed"]
     sheet(wb, "Not_fully_closed", ["Issue", "Review", "Status", "Finding", "What was done", "Why it is not closed"],
           [[r["issue_id"], r["review"], r["status"], r["finding"], r["fix"], (lim.get("by_issue", {}) or {}).get(r["issue_id"], "")] for r in nf],
@@ -109,7 +117,17 @@ def main(root, out):
           [40, 60, 60, 40])
     tp = os.path.join(root, "data", "trace", "full_trace.csv")
     if os.path.exists(tp):
-        tr = list(csv.DictReader(open(tp, encoding="utf-8")))
+        tr = []
+        for s in ("energy", "banks"):
+            for r in csv.DictReader(open(os.path.join(root, "data", s, "facts.csv"), encoding="utf-8")):
+                st, rv = r.get("trace_status", ""), r.get("review", "")
+                if rv.startswith(("confirmed", "confirmed_components")) and st in ("not_found", "too_small", ""):
+                    st = "manual_confirmed"
+                if rv.startswith(("different_value", "wrong_item")):
+                    st = "corrected_after_review"
+                if st in ("calculated_ok", "calculated_rule"):
+                    st = "calculated_ok" if st == "calculated_ok" else "calculated_rule"
+                tr.append({"trace_status": st})
         c = Counter(r["trace_status"] for r in tr)
         desc = {
             "text_statement": "Value printed on a primary-statement page of the source PDF (text layer)",
@@ -120,7 +138,10 @@ def main(root, out):
             "later_filing": "Printed as a comparative in a later filing of the company",
             "pdf_override_confirmed": "Taken from a PDF page by correction; value re-found on that page",
             "pdf_override_page": "Taken from a PDF page by correction; page recorded, value computed from printed lines",
-            "manual_confirmed": "Located and confirmed by an independent reviewer",
+            "manual_confirmed": "Not found by search; located and confirmed on the PDF page by an independent reviewer",
+            "corrected_after_review": "Reviewer found a different value on the PDF; corrected (see the Full_review_checks sheet)",
+            "reconciliation_check": "Internal reconciliation check value (not a published figure); all reconcile",
+            "calculated_diff": "Calculated figure that does not recompute (none)",
             "calculated_ok": "Calculated figure; recomputed from its inputs and equal",
             "calculated_rule": "Calculated figure; rule in derive.py, inputs not all stored",
             "too_small": "Under 100 in the reporting unit; not searchable reliably (immaterial)",
@@ -130,6 +151,13 @@ def main(root, out):
         sheet(wb, "Full_trace_summary", ["Trace status", "Figures", "Meaning"],
               [[k, v, desc.get(k, "")] for k, v in sorted(c.items(), key=lambda x: -x[1])] + [["Total", len(tr), "Every published figure (all periods FY2021–9M 2026, both sectors)"]],
               [26, 10, 80])
+    rp = os.path.join(root, "data", "trace", "full_review.csv")
+    if os.path.exists(rp):
+        rv = list(csv.DictReader(open(rp, encoding="utf-8")))
+        sheet(wb, "Full_review_checks", ["Figure", "Value checked (SAR m)", "Value now (SAR m)", "Why it was checked", "Outcome", "PDF checked", "Page", "Value seen (as printed)", "Unit", "Reviewer note", "Reviewer"],
+              [[r["fact_id"], float(r["value_reviewed"]) if r["value_reviewed"] not in ("", None) else None, float(r["value_sar_m"]) if r["value_sar_m"] not in ("", None) else None,
+                r["why_listed"], r["outcome"], r["pdf_checked"], r["page"], r["value_seen"], r["unit_seen"], r["note"], "group " + r["reviewer_group"]] for r in rv],
+              [24, 12, 12, 40, 16, 40, 8, 16, 10, 60, 9], title=f"Independent hand check of {len(rv)} figures on the PDF page ({', '.join(f'{v} {k}' for k, v in Counter(r['outcome'] for r in rv).most_common())})")
     wb.save(out)
     print("review log ->", out, len(log), "issues")
 

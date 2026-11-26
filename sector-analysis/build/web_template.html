@@ -670,7 +670,7 @@ function viewData(){
   <nav class="toc" aria-label="On this page"><a href="#d-rev" data-jump="d-rev">Review summary</a><a href="#d-trace" data-jump="d-trace">Traceability</a><a href="#d-cov" data-jump="d-cov">Coverage</a><a href="#d-log" data-jump="d-log">Review log</a><a href="#d-tpl" data-jump="d-tpl">Template changes</a><a href="#d-files" data-jump="d-files">Flagged files</a></nav>`;
   const RS=D.review_summary||{};
   h+=`<h2 id="d-rev">Independent review summary</h2>`;
-  if (RS.summary) h+=`<div class="callout">${esc(RS.summary)}</div>${['checked','fixed','unresolved'].filter(k=>RS[k]).map(k=>`<h3>${k==='checked'?'What was checked':k==='fixed'?'What was fixed':'Still unresolved'}</h3><ul class="clean">${RS[k].map(x=>`<li>${esc(x)}</li>`).join('')}</ul>`).join('')}`;
+  if (RS.summary) h+=`<div class="callout">${esc(RS.summary)}</div>${['checked','fixed','unresolved'].filter(k=>RS[k]).map(k=>`<h3>${k==='checked'?'What was checked':k==='fixed'?'What was fixed':'Accepted limitations (still open by design)'}</h3><ul class="clean">${RS[k].map(x=>`<li>${esc(x)}</li>`).join('')}</ul>`).join('')}`;
   else h+=`<p class="note">The review summary has not been embedded in this build.</p>`;
   const T=D.trace||{}; const pc=(a,b)=>b?Math.round(a/b*100)+'%':'–';
   const BM=T.by_method||{}; const nb=k=>BM[k]||0; const RO=T.review_out||{};

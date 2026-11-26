@@ -165,11 +165,11 @@ def main(sector, facts_csv, overrides_csv, out_csv):
             if not r or str(r.get("value_sar_m")) != v["value_sar_m"]:
                 continue
             r["review"] = v["outcome"] + (f" (p.{v['page']} of {v['pdf_checked'].split('/')[-1]})" if v.get("page") else "")
+            # the reviewer's page is the one checked by eye (often the primary statement where the search found a note), so it is cited
             if v["outcome"] in ("confirmed", "confirmed_components") and v.get("page") and v.get("pdf_checked"):
-                if not r.get("pdf_pages") or r.get("pdf_status") in ("not_found", "too_small", "") or r.get("trace_status") in ("not_found", "too_small"):
-                    r["pdf_pages"] = v["page"]
-                    r["pdf_file"] = v["pdf_checked"].split("/", 1)[1] if v["pdf_checked"].split("/")[0] in ("Banks", "Energy") else v["pdf_checked"]
-                    r["pdf_status"] = "manual_confirmed"
+                r["pdf_pages"] = v["page"]
+                r["pdf_file"] = v["pdf_checked"].split("/", 1)[1] if v["pdf_checked"].split("/")[0] in ("Banks", "Energy") else v["pdf_checked"]
+                r["pdf_status"] = "manual_confirmed"
     for k, r in facts.items():
         rr = reasons.get(k)
         if rr:

@@ -51,6 +51,7 @@ what_it_means:
   uncertain: "Credit costs: 9M 2026 net impairments of SAR 956m were held down by SAR 630m of recoveries, and the bank flags higher credit and liquidity risk after 30 Sep 2026; organic growth is not determinable because the income of deconsolidated funds is not disclosed."
 confidence_overall: "Medium"
 data_notes:
+  - "Investments (INVEST) are the balance-sheet investments: FVSI, FVOCI and amortised cost, net. They exclude investments in associates and the joint venture, which the investments note adds to its total (SAR 56,624m vs SAR 56,760m at 30 Sep 2026; full review)."
   - "Islamic bank: net income from financing and investments (financing and investment income less the return paid on deposits and other financial liabilities) is shown in the net special commission income (NSCI) row so that it can be added up with conventional banks; fees, other income, costs and impairments are mapped as for conventional banks."
   - "No restatement of 31 Dec 2024 equity or investments in the 9M 2025 interim (total equity SAR 41,442m in both); the bank only 'rearranged or reclassified' some comparatives for presentation."
   - "Primary statements (balance sheet, income statement, changes in equity) are image pages in all Alinma PDFs; Tier 1 costs and other checks were read visually."

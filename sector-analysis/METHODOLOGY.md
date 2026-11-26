@@ -109,7 +109,7 @@ Reported growth
 | Metric | Definition |
 |---|---|
 | Revenue | As reported. Any company-specific top line (e.g. revenue plus other income related to sales, where a company reports government compensation for regulated domestic prices) is defined on that company's sheet and used consistently. |
-| EBITDA | Company-reported where disclosed, with its definition. Sector EBITDA always uses the calculated basis: operating income + depreciation, amortisation and impairment from the cash-flow statement (`C`), so that it is consistent across companies. |
+| EBITDA | Company-reported where disclosed, with its definition. Sector EBITDA always uses the calculated basis: operating income + depreciation, amortisation and impairment from the cash-flow statement (`C`), so that it is consistent across companies. D&A includes depreciation of right-of-use assets (IFRS 16) for every company. The impairment add-back covers impairments, reversals and remeasurements of non-financial assets (property and equipment, intangibles, equity-accounted investments, assets held for sale); impairments and ECL on receivables and other financial assets are operating costs and are not added back. The XBRL add-back rows are checked against the printed cash-flow statement. |
 | Operating income, net profit attributable to shareholders | As reported. |
 | Margins | Gross, EBITDA, operating and net (attributable net profit ÷ revenue). |
 | Capex, operating cash flow, free cash flow | FCF = operating cash flow − capex (C), where both are disclosed. |
@@ -139,3 +139,11 @@ The forward-looking assessment sits in its own sheet and HTML section. It never 
 ## 9. Review and audit
 
 Independent reviewers (separate from the builder) re-extract figures from source files and recalculate all derived numbers. They check the like-for-like evidence and partial-year consistency, and challenge conclusions and the budget reasoning. Issues are logged in `Audit_Log` with severity, fix and re-check status. The review summary states the share of figures checked; a sample check is never described as a full audit.
+
+**Full trace (every figure).** Before sign-off every figure is traced, not a sample:
+1. `build/ocr_pages.py` OCRs every image-only page of every PDF the figures cite, and re-reads sideways (landscape) pages after rotation. `build/scanned_pages.py` lists the scanned statement pages shown in Coverage.
+2. `build/full_trace.py` classifies every figure: found on a page (text layer or OCR), built from printed components, taken from a PDF page by correction, printed in a later filing, or calculated and recomputed from its inputs. Internal reconciliation checks are kept apart.
+3. `build/label_check.py` tests whether each automatic match sits on a line that names the item.
+4. Independent reviewers check by hand, on the PDF page (rendered for scanned pages), every figure that is not located, not clearly matched, small, or taken from a correction page, plus all new figures (e.g. loan ECL) and a random sample of automatic matches. They work from a written brief (`data/review/full_review_brief.md`).
+5. Their outcomes (`data/trace/full_review.csv`) are merged into the facts: the confirmed page becomes the cited page, and wrong values are corrected by override with the reviewer's evidence.
+6. The trace is rerun after corrections. The HTML source drawer and the workbook Data sheet show, for each figure, how it was traced and the reviewer's outcome.

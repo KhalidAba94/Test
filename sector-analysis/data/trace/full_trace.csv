@@ -2,9 +2,9 @@ fact_id,sector,ticker,period,metric_code,provenance,value_sar_m,source_id,pdf_us
 2030-9M2025-CAPEX,Energy,2030,9M2025,CAPEX,D,0.4878,2030_SARCO/2026_Q3_filed2026-11-19.xls,Energy/2030_SARCO/2026_Q3_filed2026-11-18.pdf,text_other,"7,14",
 2030-9M2025-CFO,Energy,2030,9M2025,CFO,D,-3.816,2030_SARCO/2026_Q3_filed2026-11-19.xls,Energy/2030_SARCO/2026_Q3_filed2026-11-18.pdf,text_other,7,
 2030-9M2025-COGS,Energy,2030,9M2025,COGS,D,0.0,2030_SARCO/2026_Q3_filed2026-11-19.xls,Energy/2030_SARCO/2026_Q3_filed2026-11-18.pdf,too_small,,under 100 in the reporting unit; not searchable reliably
-2030-9M2025-DA_CF,Energy,2030,9M2025,DA_CF,D,0.078,2030_SARCO/2026_Q3_filed2026-11-19.xls,Energy/2030_SARCO/2026_Q3_filed2026-11-18.pdf,components_found,7;7,"components: Adjustments for depreciation and impairment (reversal of impairment) of property, plant and equipments + Adjustments for amortization and impairment (reversal of impairment) of intangible assets"
-2030-9M2025-EBITDA_C,Energy,2030,9M2025,EBITDA_C,C,-16.1459,2030_SARCO/2026_Q3_filed2026-11-19.xls,,calculated_ok,,recomputed -16.146
-2030-9M2025-EBITDA_U,Energy,2030,9M2025,EBITDA_U,C,-16.1459,2030_SARCO/2026_Q3_filed2026-11-19.xls,,calculated_ok,,recomputed -16.146
+2030-9M2025-DA_CF,Energy,2030,9M2025,DA_CF,D,0.269066,2030_SARCO/2026_Q3_filed2026-11-18.pdf,Energy/2030_SARCO/2026_Q3_filed2026-11-18.pdf,pdf_override_page,7,value not re-found by search (computed from printed lines or OCR-unreadable); page recorded in the override
+2030-9M2025-EBITDA_C,Energy,2030,9M2025,EBITDA_C,C,-15.954834,2030_SARCO/2026_Q3_filed2026-11-18.pdf | 2030_SARCO/2026_Q3_filed2026-11-19.xls,,calculated_ok,,recomputed -15.955
+2030-9M2025-EBITDA_U,Energy,2030,9M2025,EBITDA_U,C,-15.954834,2030_SARCO/2026_Q3_filed2026-11-18.pdf | 2030_SARCO/2026_Q3_filed2026-11-19.xls,,calculated_ok,,recomputed -15.955
 2030-9M2025-EQ_ATTR,Energy,2030,9M2025,EQ_ATTR,D,321.3908,2030_SARCO/2026_Q3_filed2026-11-19.xls,Energy/2030_SARCO/2026_Q3_filed2026-11-18.pdf,text_other,6,
 2030-9M2025-FCF,Energy,2030,9M2025,FCF,C,-4.3038,2030_SARCO/2026_Q3_filed2026-11-19.xls,,calculated_ok,,recomputed -4.304
 2030-9M2025-FIN_COST,Energy,2030,9M2025,FIN_COST,D,0.0241,2030_SARCO/2026_Q3_filed2026-11-19.xls,Energy/2030_SARCO/2026_Q3_filed2026-11-18.pdf,text_statement,5,
@@ -16,16 +16,16 @@ fact_id,sector,ticker,period,metric_code,provenance,value_sar_m,source_id,pdf_us
 2030-9M2025-PBT,Energy,2030,9M2025,PBT,D,-16.248,2030_SARCO/2026_Q3_filed2026-11-19.xls,Energy/2030_SARCO/2026_Q3_filed2026-11-18.pdf,text_statement,5,
 2030-9M2025-REV,Energy,2030,9M2025,REV,D,0.0,2030_SARCO/2026_Q3_filed2026-11-19.xls,Energy/2030_SARCO/2026_Q3_filed2026-11-18.pdf,too_small,,under 100 in the reporting unit; not searchable reliably
 2030-9M2025-REV_M,Energy,2030,9M2025,REV_M,C,0.0,2030_SARCO/2026_Q3_filed2026-11-19.xls,,calculated_ok,,recomputed 0.000
-2030-9M2025-SHARE_JV,Energy,2030,9M2025,SHARE_JV,D,-9.1201,2030_SARCO/2026_Q3_filed2026-11-19.xls,Energy/2030_SARCO/2025_Q3_filed2025-11-13.pdf,text_statement,5,
+2030-9M2025-SHARE_JV,Energy,2030,9M2025,SHARE_JV,D,3.997459,2030_SARCO/2026_Q3_filed2026-11-18.pdf,Energy/2030_SARCO/2026_Q3_filed2026-11-18.pdf,pdf_override_confirmed,5,
 2030-9M2025-TA,Energy,2030,9M2025,TA,D,342.3863,2030_SARCO/2026_Q3_filed2026-11-19.xls,Energy/2030_SARCO/2026_Q3_filed2026-11-18.pdf,text_other,20,
 2030-9M2025-TE,Energy,2030,9M2025,TE,D,321.3908,2030_SARCO/2026_Q3_filed2026-11-19.xls,Energy/2030_SARCO/2026_Q3_filed2026-11-18.pdf,text_other,6,
 2030-9M2025-ZAKAT_TAX,Energy,2030,9M2025,ZAKAT_TAX,D,5.8306,2030_SARCO/2026_Q3_filed2026-11-19.xls,Energy/2030_SARCO/2026_Q3_filed2026-11-18.pdf,text_statement,5,
 2030-9M2026-CAPEX,Energy,2030,9M2026,CAPEX,D,36.0391,2030_SARCO/2026_Q3_filed2026-11-19.xls,Energy/2030_SARCO/2026_Q3_filed2026-11-18.pdf,text_other,"7,14",
 2030-9M2026-CFO,Energy,2030,9M2026,CFO,D,-9.4229,2030_SARCO/2026_Q3_filed2026-11-19.xls,Energy/2030_SARCO/2026_Q3_filed2026-11-18.pdf,text_other,7,
 2030-9M2026-COGS,Energy,2030,9M2026,COGS,D,0.6241,2030_SARCO/2026_Q3_filed2026-11-19.xls,Energy/2030_SARCO/2026_Q3_filed2026-11-18.pdf,text_statement,5,
-2030-9M2026-DA_CF,Energy,2030,9M2026,DA_CF,D,0.2779,2030_SARCO/2026_Q3_filed2026-11-19.xls,Energy/2030_SARCO/2026_Q3_filed2026-11-18.pdf,components_found,"7,14;4","components: Adjustments for depreciation and impairment (reversal of impairment) of property, plant and equipments + Adjustments for amortization and impairment (reversal of impairment) of intangible assets"
-2030-9M2026-EBITDA_C,Energy,2030,9M2026,EBITDA_C,C,-23.8759,2030_SARCO/2026_Q3_filed2026-11-19.xls,,calculated_ok,,recomputed -23.876
-2030-9M2026-EBITDA_U,Energy,2030,9M2026,EBITDA_U,C,-23.8759,2030_SARCO/2026_Q3_filed2026-11-19.xls,,calculated_ok,,recomputed -23.876
+2030-9M2026-DA_CF,Energy,2030,9M2026,DA_CF,D,0.472467,2030_SARCO/2026_Q3_filed2026-11-18.pdf,Energy/2030_SARCO/2026_Q3_filed2026-11-18.pdf,pdf_override_page,7,value not re-found by search (computed from printed lines or OCR-unreadable); page recorded in the override
+2030-9M2026-EBITDA_C,Energy,2030,9M2026,EBITDA_C,C,-23.681333,2030_SARCO/2026_Q3_filed2026-11-18.pdf | 2030_SARCO/2026_Q3_filed2026-11-19.xls,,calculated_ok,,recomputed -23.681
+2030-9M2026-EBITDA_U,Energy,2030,9M2026,EBITDA_U,C,-23.681333,2030_SARCO/2026_Q3_filed2026-11-18.pdf | 2030_SARCO/2026_Q3_filed2026-11-19.xls,,calculated_ok,,recomputed -23.681
 2030-9M2026-EQ_ATTR,Energy,2030,9M2026,EQ_ATTR,D,255.9592,2030_SARCO/2026_Q3_filed2026-11-19.xls,Energy/2030_SARCO/2026_Q3_filed2026-11-18.pdf,text_statement,4,
 2030-9M2026-FCF,Energy,2030,9M2026,FCF,C,-45.462,2030_SARCO/2026_Q3_filed2026-11-19.xls,,calculated_ok,,recomputed -45.462
 2030-9M2026-FIN_COST,Energy,2030,9M2026,FIN_COST,D,0.0207,2030_SARCO/2026_Q3_filed2026-11-19.xls,Energy/2030_SARCO/2026_Q3_filed2026-11-18.pdf,text_statement,5,
@@ -37,7 +37,7 @@ fact_id,sector,ticker,period,metric_code,provenance,value_sar_m,source_id,pdf_us
 2030-9M2026-PBT,Energy,2030,9M2026,PBT,D,-24.1745,2030_SARCO/2026_Q3_filed2026-11-19.xls,Energy/2030_SARCO/2026_Q3_filed2026-11-18.pdf,text_statement,5,
 2030-9M2026-REV,Energy,2030,9M2026,REV,D,1.075,2030_SARCO/2026_Q3_filed2026-11-19.xls,Energy/2030_SARCO/2026_Q3_filed2026-11-18.pdf,text_statement,5,
 2030-9M2026-REV_M,Energy,2030,9M2026,REV_M,C,1.075,2030_SARCO/2026_Q3_filed2026-11-19.xls,,calculated_ok,,recomputed 1.075
-2030-9M2026-SHARE_JV,Energy,2030,9M2026,SHARE_JV,D,-15.7978,2030_SARCO/2026_Q3_filed2026-11-19.xls,Energy/2030_SARCO/2026_Q3_filed2026-11-18.pdf,not_found,,"value not printed as such in the archive PDFs (rounding, computed XBRL subtotal, or unreadable scan)"
+2030-9M2026-SHARE_JV,Energy,2030,9M2026,SHARE_JV,D,4.114902,2030_SARCO/2026_Q3_filed2026-11-18.pdf,Energy/2030_SARCO/2026_Q3_filed2026-11-18.pdf,pdf_override_confirmed,5,
 2030-9M2026-TA,Energy,2030,9M2026,TA,D,297.0794,2030_SARCO/2026_Q3_filed2026-11-19.xls,Energy/2030_SARCO/2026_Q3_filed2026-11-18.pdf,text_statement,4,
 2030-9M2026-TE,Energy,2030,9M2026,TE,D,256.2699,2030_SARCO/2026_Q3_filed2026-11-19.xls,Energy/2030_SARCO/2026_Q3_filed2026-11-18.pdf,text_statement,4,
 2030-9M2026-ZAKAT_TAX,Energy,2030,9M2026,ZAKAT_TAX,D,3.2932,2030_SARCO/2026_Q3_filed2026-11-19.xls,Energy/2030_SARCO/2026_Q3_filed2026-11-18.pdf,text_statement,5,
@@ -52,10 +52,10 @@ fact_id,sector,ticker,period,metric_code,provenance,value_sar_m,source_id,pdf_us
 2030-FY2021-NI_ATTR,Energy,2030,FY2021,NI_ATTR,D,6.5922,2030_SARCO/2022_Annual_filed2023-12-05.xls,Energy/2030_SARCO/2022_Annual_filed2023-03-31.pdf,text_other,30,
 2030-FY2021-OPINC,Energy,2030,FY2021,OPINC,C,7.1592,2030_SARCO/2022_Annual_filed2023-12-05.xls,,calculated_ok,,recomputed 7.159
 2030-FY2021-PBT,Energy,2030,FY2021,PBT,D,7.1592,2030_SARCO/2022_Annual_filed2023-12-05.xls,Energy/2030_SARCO/2022_Annual_filed2023-03-31.pdf,ocr_statement,"8,10",
-2030-FY2021-SHARE_JV,Energy,2030,FY2021,SHARE_JV,D,8.1785,2030_SARCO/2022_Annual_filed2023-12-05.xls,Energy/2030_SARCO/2022_Annual_filed2023-03-31.pdf,ocr_statement,8,
+2030-FY2021-SHARE_JV,Energy,2030,FY2021,SHARE_JV,D,0.078784,2030_SARCO/2022_Annual_filed2023-03-31.pdf,Energy/2030_SARCO/2022_Annual_filed2023-03-31.pdf,pdf_override_confirmed,"25,29","recorded page 17; value found on 25,29"
 2030-FY2021-TA,Energy,2030,FY2021,TA,D,563.4777,2030_SARCO/2022_Annual_filed2023-12-05.xls,Energy/2030_SARCO/2022_Q2_filed2022-08-25.pdf,text_statement,4,
 2030-FY2021-TE,Energy,2030,FY2021,TE,D,559.5348,2030_SARCO/2022_Annual_filed2023-12-05.xls,Energy/2030_SARCO/2022_Q2_filed2022-08-25.pdf,text_statement,4,
-2030-FY2022-CAPEX,Energy,2030,FY2022,CAPEX,D,0.0096,2030_SARCO/2023_Annual_filed2024-03-24.xls,Energy/2030_SARCO/2022_Q2_filed2022-08-25.pdf,text_statement,7,
+2030-FY2022-CAPEX,Energy,2030,FY2022,CAPEX,D,0.0096,2030_SARCO/2023_Annual_filed2024-03-24.xls,Energy/2030_SARCO/2022_Annual_filed2023-03-31.pdf,ocr_statement,10,
 2030-FY2022-CFO,Energy,2030,FY2022,CFO,D,31.0892,2030_SARCO/2023_Annual_filed2024-03-24.xls,Energy/2030_SARCO/2023_Annual_filed2024-03-21.pdf,ocr_statement,10,
 2030-FY2022-DA_CF,Energy,2030,FY2022,DA_CF,D,0.0337,2030_SARCO/2023_Annual_filed2024-03-24.xls,Energy/2030_SARCO/2023_Annual_filed2024-03-21.pdf,components_found,10;10,"components: Adjustments for depreciation and impairment (reversal of impairment) of property, plant and equipments + Adjustments for amortization and impairment (reversal of impairment) of intangible assets"
 2030-FY2022-EBITDA_C,Energy,2030,FY2022,EBITDA_C,C,29.7183,2030_SARCO/2023_Annual_filed2024-03-24.xls,,calculated_ok,,recomputed 29.718
@@ -66,7 +66,7 @@ fact_id,sector,ticker,period,metric_code,provenance,value_sar_m,source_id,pdf_us
 2030-FY2022-NI_ATTR,Energy,2030,FY2022,NI_ATTR,D,28.2301,2030_SARCO/2023_Annual_filed2024-03-24.xls,Energy/2030_SARCO/2022_Annual_filed2023-03-31.pdf,text_other,30,
 2030-FY2022-OPINC,Energy,2030,FY2022,OPINC,C,29.6846,2030_SARCO/2023_Annual_filed2024-03-24.xls,,calculated_ok,,recomputed 29.685
 2030-FY2022-PBT,Energy,2030,FY2022,PBT,D,29.6846,2030_SARCO/2023_Annual_filed2024-03-24.xls,Energy/2030_SARCO/2023_Annual_filed2024-03-21.pdf,ocr_statement,"8,10",
-2030-FY2022-SHARE_JV,Energy,2030,FY2022,SHARE_JV,D,34.3542,2030_SARCO/2023_Annual_filed2024-03-24.xls,Energy/2030_SARCO/2023_Annual_filed2024-03-21.pdf,ocr_statement,8,
+2030-FY2022-SHARE_JV,Energy,2030,FY2022,SHARE_JV,D,-0.124784,2030_SARCO/2023_Annual_filed2024-03-24.pdf,Energy/2030_SARCO/2023_Annual_filed2024-03-24.pdf,pdf_override_page,8,value not re-found by search (computed from printed lines or OCR-unreadable); page recorded in the override
 2030-FY2022-TA,Energy,2030,FY2022,TA,D,445.2342,2030_SARCO/2023_Annual_filed2024-03-24.xls,Energy/2030_SARCO/2023_Annual_filed2024-03-21.pdf,not_found,,"value not printed as such in the archive PDFs (rounding, computed XBRL subtotal, or unreadable scan)"
 2030-FY2022-TE,Energy,2030,FY2022,TE,D,438.8209,2030_SARCO/2023_Annual_filed2024-03-24.xls,Energy/2030_SARCO/2024_Annual_filed2025-04-09.pdf,text_other,"9,29",
 2030-FY2023-CAPEX,Energy,2030,FY2023,CAPEX,D,0.0167,2030_SARCO/2024_Annual_filed2025-04-10.xls,Energy/2030_SARCO/2024_Annual_filed2025-04-09.pdf,text_other,10,
@@ -80,36 +80,36 @@ fact_id,sector,ticker,period,metric_code,provenance,value_sar_m,source_id,pdf_us
 2030-FY2023-NI_ATTR,Energy,2030,FY2023,NI_ATTR,D,7.7016,2030_SARCO/2024_Annual_filed2025-04-10.xls,Energy/2030_SARCO/2024_Annual_filed2025-04-09.pdf,text_statement,8,
 2030-FY2023-OPINC,Energy,2030,FY2023,OPINC,C,9.3791,2030_SARCO/2024_Annual_filed2025-04-10.xls,,calculated_ok,,recomputed 9.379
 2030-FY2023-PBT,Energy,2030,FY2023,PBT,D,9.3791,2030_SARCO/2024_Annual_filed2025-04-10.xls,Energy/2030_SARCO/2024_Annual_filed2025-04-09.pdf,text_statement,8,
-2030-FY2023-SHARE_JV,Energy,2030,FY2023,SHARE_JV,D,15.5991,2030_SARCO/2024_Annual_filed2025-04-10.xls,Energy/2030_SARCO/2024_Annual_filed2025-04-09.pdf,text_statement,8,
+2030-FY2023-SHARE_JV,Energy,2030,FY2023,SHARE_JV,D,0.236855,2030_SARCO/2024_Annual_filed2025-04-09.pdf,Energy/2030_SARCO/2024_Annual_filed2025-04-09.pdf,pdf_override_confirmed,8,
 2030-FY2023-TA,Energy,2030,FY2023,TA,D,441.2141,2030_SARCO/2024_Annual_filed2025-04-10.xls,Energy/2030_SARCO/2024_Annual_filed2025-04-09.pdf,text_statement,7,
 2030-FY2023-TE,Energy,2030,FY2023,TE,D,434.0113,2030_SARCO/2024_Annual_filed2025-04-10.xls,Energy/2030_SARCO/2024_Annual_filed2025-04-09.pdf,text_statement,7,
 2030-FY2024-CAPEX,Energy,2030,FY2024,CAPEX,D,0.0188,2030_SARCO/2025_Annual_filed2026-04-02.xls,Energy/2030_SARCO/2025_Annual_filed2026-04-02.pdf,text_statement,10,
 2030-FY2024-CFO,Energy,2030,FY2024,CFO,D,5.1511,2030_SARCO/2025_Annual_filed2026-04-02.xls,Energy/2030_SARCO/2025_Annual_filed2026-04-02.pdf,text_statement,10,
-2030-FY2024-DA_CF,Energy,2030,FY2024,DA_CF,D,0.0426,2030_SARCO/2025_Annual_filed2026-04-02.xls,Energy/2030_SARCO/2025_Annual_filed2026-04-02.pdf,components_found,10;10,"components: Adjustments for depreciation and impairment (reversal of impairment) of property, plant and equipments + Adjustments for amortization and impairment (reversal of impairment) of intangible assets"
-2030-FY2024-EBITDA_C,Energy,2030,FY2024,EBITDA_C,C,-45.6454,2030_SARCO/2025_Annual_filed2026-04-02.xls,,calculated_ok,,recomputed -45.645
-2030-FY2024-EBITDA_U,Energy,2030,FY2024,EBITDA_U,C,-45.6454,2030_SARCO/2025_Annual_filed2026-04-02.xls,,calculated_ok,,recomputed -45.645
+2030-FY2024-DA_CF,Energy,2030,FY2024,DA_CF,D,0.141681,2030_SARCO/2025_Annual_filed2026-04-02.pdf,Energy/2030_SARCO/2025_Annual_filed2026-04-02.pdf,pdf_override_confirmed,30,recorded page 10; value found on 30
+2030-FY2024-EBITDA_C,Energy,2030,FY2024,EBITDA_C,C,-45.546319,2030_SARCO/2025_Annual_filed2026-04-02.pdf | 2030_SARCO/2025_Annual_filed2026-04-02.xls,,calculated_ok,,recomputed -45.546
+2030-FY2024-EBITDA_U,Energy,2030,FY2024,EBITDA_U,C,-45.546319,2030_SARCO/2025_Annual_filed2026-04-02.pdf | 2030_SARCO/2025_Annual_filed2026-04-02.xls,,calculated_ok,,recomputed -45.546
 2030-FY2024-EQ_ATTR,Energy,2030,FY2024,EQ_ATTR,D,343.4693,2030_SARCO/2025_Annual_filed2026-04-02.xls,Energy/2030_SARCO/2025_Annual_filed2026-04-02.pdf,text_statement,7,
 2030-FY2024-FCF,Energy,2030,FY2024,FCF,C,5.1323,2030_SARCO/2025_Annual_filed2026-04-02.xls,,calculated_ok,,recomputed 5.132
 2030-FY2024-NI,Energy,2030,FY2024,NI,D,-53.4877,2030_SARCO/2025_Annual_filed2026-04-02.xls,Energy/2030_SARCO/2025_Annual_filed2026-04-02.pdf,text_statement,8,
 2030-FY2024-NI_ATTR,Energy,2030,FY2024,NI_ATTR,D,-53.4877,2030_SARCO/2025_Annual_filed2026-04-02.xls,Energy/2030_SARCO/2025_Annual_filed2026-04-02.pdf,text_statement,8,
 2030-FY2024-OPINC,Energy,2030,FY2024,OPINC,C,-45.688,2030_SARCO/2025_Annual_filed2026-04-02.xls,,calculated_ok,,recomputed -45.688
 2030-FY2024-PBT,Energy,2030,FY2024,PBT,D,-45.688,2030_SARCO/2025_Annual_filed2026-04-02.xls,Energy/2030_SARCO/2025_Annual_filed2026-04-02.pdf,text_statement,"8,10",
-2030-FY2024-SHARE_JV,Energy,2030,FY2024,SHARE_JV,D,-33.3477,2030_SARCO/2025_Annual_filed2026-04-02.xls,Energy/2030_SARCO/2025_Annual_filed2026-04-02.pdf,text_statement,8,
+2030-FY2024-SHARE_JV,Energy,2030,FY2024,SHARE_JV,D,1.968105,2030_SARCO/2025_Annual_filed2026-04-02.pdf,Energy/2030_SARCO/2025_Annual_filed2026-04-02.pdf,pdf_override_confirmed,8,
 2030-FY2024-TA,Energy,2030,FY2024,TA,D,360.3685,2030_SARCO/2025_Annual_filed2026-04-02.xls,Energy/2030_SARCO/2025_Annual_filed2026-04-02.pdf,text_statement,7,
 2030-FY2024-TE,Energy,2030,FY2024,TE,D,343.4693,2030_SARCO/2025_Annual_filed2026-04-02.xls,Energy/2030_SARCO/2025_Annual_filed2026-04-02.pdf,text_statement,7,
 2030-FY2024-ZAKAT_TAX,Energy,2030,FY2024,ZAKAT_TAX,D,7.7997,2030_SARCO/2025_Annual_filed2026-04-02.xls,Energy/2030_SARCO/2025_Annual_filed2026-04-02.pdf,text_statement,"7,8",
 2030-FY2025-CAPEX,Energy,2030,FY2025,CAPEX,D,0.4878,2030_SARCO/2025_Annual_filed2026-04-02.xls,Energy/2030_SARCO/2025_Annual_filed2026-04-02.pdf,text_statement,10,
 2030-FY2025-CFO,Energy,2030,FY2025,CFO,D,-7.484,2030_SARCO/2025_Annual_filed2026-04-02.xls,Energy/2030_SARCO/2025_Annual_filed2026-04-02.pdf,text_statement,10,
-2030-FY2025-DA_CF,Energy,2030,FY2025,DA_CF,D,0.1103,2030_SARCO/2025_Annual_filed2026-04-02.xls,Energy/2030_SARCO/2025_Annual_filed2026-04-02.pdf,components_found,10;10,"components: Adjustments for depreciation and impairment (reversal of impairment) of property, plant and equipments + Adjustments for amortization and impairment (reversal of impairment) of intangible assets"
-2030-FY2025-EBITDA_C,Energy,2030,FY2025,EBITDA_C,C,-53.5155,2030_SARCO/2025_Annual_filed2026-04-02.xls,,calculated_ok,,recomputed -53.515
-2030-FY2025-EBITDA_U,Energy,2030,FY2025,EBITDA_U,C,-53.5155,2030_SARCO/2025_Annual_filed2026-04-02.xls,,calculated_ok,,recomputed -53.516
+2030-FY2025-DA_CF,Energy,2030,FY2025,DA_CF,D,0.364293,2030_SARCO/2025_Annual_filed2026-04-02.pdf,Energy/2030_SARCO/2025_Annual_filed2026-04-02.pdf,pdf_override_confirmed,30,recorded page 10; value found on 30
+2030-FY2025-EBITDA_C,Energy,2030,FY2025,EBITDA_C,C,-53.261507,2030_SARCO/2025_Annual_filed2026-04-02.pdf | 2030_SARCO/2025_Annual_filed2026-04-02.xls,,calculated_ok,,recomputed -53.262
+2030-FY2025-EBITDA_U,Energy,2030,FY2025,EBITDA_U,C,-53.261507,2030_SARCO/2025_Annual_filed2026-04-02.pdf | 2030_SARCO/2025_Annual_filed2026-04-02.xls,,calculated_ok,,recomputed -53.262
 2030-FY2025-EQ_ATTR,Energy,2030,FY2025,EQ_ATTR,D,283.3115,2030_SARCO/2026_Q3_filed2026-11-19.xls,Energy/2030_SARCO/2026_Q3_filed2026-11-18.pdf,text_statement,4,
 2030-FY2025-FCF,Energy,2030,FY2025,FCF,C,-7.9718,2030_SARCO/2025_Annual_filed2026-04-02.xls,,calculated_ok,,recomputed -7.972
 2030-FY2025-NI,Energy,2030,FY2025,NI,D,-60.183,2030_SARCO/2025_Annual_filed2026-04-02.xls,Energy/2030_SARCO/2025_Annual_filed2026-04-02.pdf,text_statement,8,
 2030-FY2025-NI_ATTR,Energy,2030,FY2025,NI_ATTR,D,-60.183,2030_SARCO/2025_Annual_filed2026-04-02.xls,Energy/2030_SARCO/2025_Annual_filed2026-04-02.pdf,text_statement,8,
 2030-FY2025-OPINC,Energy,2030,FY2025,OPINC,C,-53.6258,2030_SARCO/2025_Annual_filed2026-04-02.xls,,calculated_ok,,recomputed -53.626
 2030-FY2025-PBT,Energy,2030,FY2025,PBT,D,-53.6258,2030_SARCO/2025_Annual_filed2026-04-02.xls,Energy/2030_SARCO/2025_Annual_filed2026-04-02.pdf,text_statement,"8,10",
-2030-FY2025-SHARE_JV,Energy,2030,FY2025,SHARE_JV,D,-41.946,2030_SARCO/2025_Annual_filed2026-04-02.xls,Energy/2030_SARCO/2025_Annual_filed2026-04-02.pdf,text_statement,8,
+2030-FY2025-SHARE_JV,Energy,2030,FY2025,SHARE_JV,D,5.290919,2030_SARCO/2025_Annual_filed2026-04-02.pdf,Energy/2030_SARCO/2025_Annual_filed2026-04-02.pdf,pdf_override_confirmed,8,
 2030-FY2025-TA,Energy,2030,FY2025,TA,D,305.0432,2030_SARCO/2026_Q3_filed2026-11-19.xls,Energy/2030_SARCO/2026_Q3_filed2026-11-18.pdf,text_statement,4,
 2030-FY2025-TE,Energy,2030,FY2025,TE,D,283.3115,2030_SARCO/2026_Q3_filed2026-11-19.xls,Energy/2030_SARCO/2026_Q3_filed2026-11-18.pdf,text_statement,4,
 2030-FY2025-ZAKAT_TAX,Energy,2030,FY2025,ZAKAT_TAX,D,6.5572,2030_SARCO/2025_Annual_filed2026-04-02.xls,Energy/2030_SARCO/2025_Annual_filed2026-04-02.pdf,text_statement,8,
@@ -409,13 +409,14 @@ fact_id,sector,ticker,period,metric_code,provenance,value_sar_m,source_id,pdf_us
 2381-9M2025-CFO,Energy,2381,9M2025,CFO,D,571.4476,2381_ARABIAN_DRILLING/2026_Q3_filed2026-11-12.xls,Energy/2381_ARABIAN_DRILLING/2025_Q3_filed2025-11-02.pdf,text_statement,8,
 2381-9M2025-COGS,Energy,2381,9M2025,COGS,D,2205.0603,2381_ARABIAN_DRILLING/2026_Q3_filed2026-11-12.xls,Energy/2381_ARABIAN_DRILLING/2026_Q3_filed2026-11-08.pdf,text_other,21,
 2381-9M2025-DA_CF,Energy,2381,9M2025,DA_CF,D,717.5898,2381_ARABIAN_DRILLING/2026_Q3_filed2026-11-12.xls,Energy/2381_ARABIAN_DRILLING/2026_Q3_filed2026-11-08.pdf,not_found,,"value not printed as such in the archive PDFs (rounding, computed XBRL subtotal, or unreadable scan)"
-2381-9M2025-EBITDA_C,Energy,2381,9M2025,EBITDA_C,C,976.7803,2381_ARABIAN_DRILLING/2026_Q3_filed2026-11-12.xls,,calculated_ok,,recomputed 976.780
-2381-9M2025-EBITDA_U,Energy,2381,9M2025,EBITDA_U,C,976.7803,2381_ARABIAN_DRILLING/2026_Q3_filed2026-11-12.xls,,calculated_ok,,recomputed 976.780
+2381-9M2025-EBITDA_C,Energy,2381,9M2025,EBITDA_C,C,976.7803,2381_ARABIAN_DRILLING/2026_Q3_filed2026-11-08.pdf | 2381_ARABIAN_DRILLING/2026_Q3_filed2026-11-12.xls,,calculated_ok,,recomputed 976.780
+2381-9M2025-EBITDA_U,Energy,2381,9M2025,EBITDA_U,C,976.7803,2381_ARABIAN_DRILLING/2026_Q3_filed2026-11-08.pdf | 2381_ARABIAN_DRILLING/2026_Q3_filed2026-11-12.xls,,calculated_ok,,recomputed 976.780
 2381-9M2025-EQ_ATTR,Energy,2381,9M2025,EQ_ATTR,D,5885.6815,2381_ARABIAN_DRILLING/2026_Q3_filed2026-11-12.xls,Energy/2381_ARABIAN_DRILLING/2025_Q3_filed2025-11-02.pdf,text_statement,4,
 2381-9M2025-FCF,Energy,2381,9M2025,FCF,C,-12.7553,2381_ARABIAN_DRILLING/2026_Q3_filed2026-11-12.xls,,calculated_ok,,recomputed -12.755
 2381-9M2025-FIN_COST,Energy,2381,9M2025,FIN_COST,D,164.0256,2381_ARABIAN_DRILLING/2026_Q3_filed2026-11-12.xls,Energy/2381_ARABIAN_DRILLING/2025_Q3_filed2025-11-02.pdf,text_statement,8,
 2381-9M2025-FIN_INC,Energy,2381,9M2025,FIN_INC,D,1.8862,2381_ARABIAN_DRILLING/2026_Q3_filed2026-11-12.xls,Energy/2381_ARABIAN_DRILLING/2025_Q3_filed2025-11-02.pdf,text_statement,8,
 2381-9M2025-GP,Energy,2381,9M2025,GP,D,403.9246,2381_ARABIAN_DRILLING/2026_Q3_filed2026-11-12.xls,Energy/2381_ARABIAN_DRILLING/2026_Q3_filed2026-11-08.pdf,text_other,21,
+2381-9M2025-IMPAIR_CF,Energy,2381,9M2025,IMPAIR_CF,D,0.0,2381_ARABIAN_DRILLING/2026_Q3_filed2026-11-08.pdf,Energy/2381_ARABIAN_DRILLING/2026_Q3_filed2026-11-08.pdf,pdf_override_page,9,value not re-found by search (computed from printed lines or OCR-unreadable); page recorded in the override
 2381-9M2025-NI,Energy,2381,9M2025,NI,D,73.2678,2381_ARABIAN_DRILLING/2026_Q3_filed2026-11-12.xls,Energy/2381_ARABIAN_DRILLING/2026_Q3_filed2026-11-08.pdf,text_other,19,
 2381-9M2025-NI_ATTR,Energy,2381,9M2025,NI_ATTR,D,73.2678,2381_ARABIAN_DRILLING/2026_Q3_filed2026-11-12.xls,Energy/2381_ARABIAN_DRILLING/2026_Q3_filed2026-11-08.pdf,text_other,19,
 2381-9M2025-OPINC,Energy,2381,9M2025,OPINC,C,259.1905,2381_ARABIAN_DRILLING/2026_Q3_filed2026-11-12.xls,,calculated_ok,,recomputed 259.191
@@ -429,13 +430,14 @@ fact_id,sector,ticker,period,metric_code,provenance,value_sar_m,source_id,pdf_us
 2381-9M2026-CFO,Energy,2381,9M2026,CFO,D,625.9348,2381_ARABIAN_DRILLING/2026_Q3_filed2026-11-12.xls,Energy/2381_ARABIAN_DRILLING/2026_Q3_filed2026-11-08.pdf,not_found,,"value not printed as such in the archive PDFs (rounding, computed XBRL subtotal, or unreadable scan)"
 2381-9M2026-COGS,Energy,2381,9M2026,COGS,D,2092.9865,2381_ARABIAN_DRILLING/2026_Q3_filed2026-11-12.xls,Energy/2381_ARABIAN_DRILLING/2026_Q3_filed2026-11-08.pdf,text_other,21,
 2381-9M2026-DA_CF,Energy,2381,9M2026,DA_CF,D,698.2683,2381_ARABIAN_DRILLING/2026_Q3_filed2026-11-12.xls,Energy/2381_ARABIAN_DRILLING/2026_Q3_filed2026-11-08.pdf,not_found,,"value not printed as such in the archive PDFs (rounding, computed XBRL subtotal, or unreadable scan)"
-2381-9M2026-EBITDA_C,Energy,2381,9M2026,EBITDA_C,C,859.1106,2381_ARABIAN_DRILLING/2026_Q3_filed2026-11-12.xls,,calculated_ok,,recomputed 859.111
-2381-9M2026-EBITDA_U,Energy,2381,9M2026,EBITDA_U,C,859.1106,2381_ARABIAN_DRILLING/2026_Q3_filed2026-11-12.xls,,calculated_ok,,recomputed 859.111
+2381-9M2026-EBITDA_C,Energy,2381,9M2026,EBITDA_C,C,864.216705,2381_ARABIAN_DRILLING/2026_Q3_filed2026-11-08.pdf | 2381_ARABIAN_DRILLING/2026_Q3_filed2026-11-12.xls,,calculated_ok,,recomputed 864.217
+2381-9M2026-EBITDA_U,Energy,2381,9M2026,EBITDA_U,C,864.216705,2381_ARABIAN_DRILLING/2026_Q3_filed2026-11-08.pdf | 2381_ARABIAN_DRILLING/2026_Q3_filed2026-11-12.xls,,calculated_ok,,recomputed 864.217
 2381-9M2026-EQ_ATTR,Energy,2381,9M2026,EQ_ATTR,D,5760.1687,2381_ARABIAN_DRILLING/2026_Q3_filed2026-11-12.xls,Energy/2381_ARABIAN_DRILLING/2026_Q3_filed2026-11-08.pdf,ocr_statement,5,
 2381-9M2026-FCF,Energy,2381,9M2026,FCF,C,140.0027,2381_ARABIAN_DRILLING/2026_Q3_filed2026-11-12.xls,,calculated_ok,,recomputed 140.003
 2381-9M2026-FIN_COST,Energy,2381,9M2026,FIN_COST,D,143.6885,2381_ARABIAN_DRILLING/2026_Q3_filed2026-11-12.xls,Energy/2381_ARABIAN_DRILLING/2026_Q3_filed2026-11-08.pdf,ocr_statement,7,
 2381-9M2026-FIN_INC,Energy,2381,9M2026,FIN_INC,D,7.6498,2381_ARABIAN_DRILLING/2026_Q3_filed2026-11-12.xls,Energy/2381_ARABIAN_DRILLING/2026_Q3_filed2026-11-08.pdf,ocr_statement,"7,9",
 2381-9M2026-GP,Energy,2381,9M2026,GP,D,304.0325,2381_ARABIAN_DRILLING/2026_Q3_filed2026-11-12.xls,Energy/2381_ARABIAN_DRILLING/2026_Q3_filed2026-11-08.pdf,text_other,21,
+2381-9M2026-IMPAIR_CF,Energy,2381,9M2026,IMPAIR_CF,D,5.106105,2381_ARABIAN_DRILLING/2026_Q3_filed2026-11-08.pdf,Energy/2381_ARABIAN_DRILLING/2026_Q3_filed2026-11-08.pdf,pdf_override_confirmed,9,
 2381-9M2026-NI,Energy,2381,9M2026,NI,D,6.9022,2381_ARABIAN_DRILLING/2026_Q3_filed2026-11-12.xls,Energy/2381_ARABIAN_DRILLING/2026_Q3_filed2026-11-08.pdf,text_other,19,
 2381-9M2026-NI_ATTR,Energy,2381,9M2026,NI_ATTR,D,6.9022,2381_ARABIAN_DRILLING/2026_Q3_filed2026-11-12.xls,Energy/2381_ARABIAN_DRILLING/2026_Q3_filed2026-11-08.pdf,text_other,19,
 2381-9M2026-OPINC,Energy,2381,9M2026,OPINC,C,160.8423,2381_ARABIAN_DRILLING/2026_Q3_filed2026-11-12.xls,,calculated_ok,,recomputed 160.842
@@ -469,14 +471,14 @@ fact_id,sector,ticker,period,metric_code,provenance,value_sar_m,source_id,pdf_us
 2381-FY2022-CFO,Energy,2381,FY2022,CFO,D,1242.1958,2381_ARABIAN_DRILLING/2023_Annual_filed2024-03-24.xls,Energy/2381_ARABIAN_DRILLING/2023_Annual_filed2024-03-18.pdf,ocr_statement,11,
 2381-FY2022-COGS,Energy,2381,FY2022,COGS,D,1902.0924,2381_ARABIAN_DRILLING/2023_Annual_filed2024-03-24.xls,Energy/2381_ARABIAN_DRILLING/2023_Annual_filed2024-03-18.pdf,text_other,"45,50",
 2381-FY2022-DA_CF,Energy,2381,FY2022,DA_CF,D,525.2828,2381_ARABIAN_DRILLING/2023_Annual_filed2024-03-24.xls,Energy/2381_ARABIAN_DRILLING/2023_Annual_filed2024-03-18.pdf,not_found,,"value not printed as such in the archive PDFs (rounding, computed XBRL subtotal, or unreadable scan)"
-2381-FY2022-EBITDA_C,Energy,2381,FY2022,EBITDA_C,C,1165.0048,2381_ARABIAN_DRILLING/2023_Annual_filed2024-03-24.xls,,calculated_ok,,"recomputed 1,165.005"
-2381-FY2022-EBITDA_U,Energy,2381,FY2022,EBITDA_U,C,1165.0048,2381_ARABIAN_DRILLING/2023_Annual_filed2024-03-24.xls,,calculated_ok,,"recomputed 1,165.005"
+2381-FY2022-EBITDA_C,Energy,2381,FY2022,EBITDA_C,C,1144.3761,2381_ARABIAN_DRILLING/2023_Annual_filed2024-03-18.pdf | 2381_ARABIAN_DRILLING/2023_Annual_filed2024-03-24.xls,,calculated_ok,,"recomputed 1,144.376"
+2381-FY2022-EBITDA_U,Energy,2381,FY2022,EBITDA_U,C,1144.3761,2381_ARABIAN_DRILLING/2023_Annual_filed2024-03-18.pdf | 2381_ARABIAN_DRILLING/2023_Annual_filed2024-03-24.xls,,calculated_ok,,"recomputed 1,144.376"
 2381-FY2022-EQ_ATTR,Energy,2381,FY2022,EQ_ATTR,D,5589.8246,2381_ARABIAN_DRILLING/2023_Annual_filed2024-03-24.xls,Energy/2381_ARABIAN_DRILLING/2023_Annual_filed2024-03-18.pdf,text_statement,56,
 2381-FY2022-FCF,Energy,2381,FY2022,FCF,C,-507.1476,2381_ARABIAN_DRILLING/2023_Annual_filed2024-03-24.xls,,calculated_ok,,recomputed -507.148
 2381-FY2022-FIN_COST,Energy,2381,FY2022,FIN_COST,D,94.3183,2381_ARABIAN_DRILLING/2023_Annual_filed2024-03-24.xls,Energy/2381_ARABIAN_DRILLING/2023_Annual_filed2024-03-18.pdf,text_statement,"46,56",
 2381-FY2022-FIN_INC,Energy,2381,FY2022,FIN_INC,D,27.5252,2381_ARABIAN_DRILLING/2023_Annual_filed2024-03-24.xls,Energy/2381_ARABIAN_DRILLING/2023_Annual_filed2024-03-18.pdf,ocr_statement,"9,11",
 2381-FY2022-GP,Energy,2381,FY2022,GP,D,801.4431,2381_ARABIAN_DRILLING/2023_Annual_filed2024-03-24.xls,Energy/2381_ARABIAN_DRILLING/2023_Annual_filed2024-03-18.pdf,text_other,50,
-2381-FY2022-IMPAIR_CF,Energy,2381,FY2022,IMPAIR_CF,D,20.6287,2381_ARABIAN_DRILLING/2023_Annual_filed2024-03-24.xls,Energy/2381_ARABIAN_DRILLING/2023_Annual_filed2024-03-18.pdf,not_found,,"value not printed as such in the archive PDFs (rounding, computed XBRL subtotal, or unreadable scan)"
+2381-FY2022-IMPAIR_CF,Energy,2381,FY2022,IMPAIR_CF,D,0.0,2381_ARABIAN_DRILLING/2023_Annual_filed2024-03-18.pdf,Energy/2381_ARABIAN_DRILLING/2023_Annual_filed2024-03-18.pdf,pdf_override_page,11,value not re-found by search (computed from printed lines or OCR-unreadable); page recorded in the override
 2381-FY2022-NI,Energy,2381,FY2022,NI,D,557.72,2381_ARABIAN_DRILLING/2023_Annual_filed2024-03-24.xls,Energy/2381_ARABIAN_DRILLING/2023_Annual_filed2024-03-18.pdf,text_other,49,
 2381-FY2022-NI_ATTR,Energy,2381,FY2022,NI_ATTR,D,557.72,2381_ARABIAN_DRILLING/2023_Annual_filed2024-03-24.xls,Energy/2381_ARABIAN_DRILLING/2023_Annual_filed2024-03-18.pdf,text_other,49,
 2381-FY2022-OPINC,Energy,2381,FY2022,OPINC,C,619.0933,2381_ARABIAN_DRILLING/2023_Annual_filed2024-03-24.xls,,calculated_ok,,recomputed 619.093
@@ -490,14 +492,14 @@ fact_id,sector,ticker,period,metric_code,provenance,value_sar_m,source_id,pdf_us
 2381-FY2023-CFO,Energy,2381,FY2023,CFO,D,1360.0867,2381_ARABIAN_DRILLING/2024_Annual_filed2025-03-17.xls,Energy/2381_ARABIAN_DRILLING/2024_Annual_filed2025-03-12.pdf,ocr_statement,12,
 2381-FY2023-COGS,Energy,2381,FY2023,COGS,D,2500.6199,2381_ARABIAN_DRILLING/2024_Annual_filed2025-03-17.xls,Energy/2381_ARABIAN_DRILLING/2024_Annual_filed2025-03-12.pdf,text_other,"43,47",
 2381-FY2023-DA_CF,Energy,2381,FY2023,DA_CF,D,684.0704,2381_ARABIAN_DRILLING/2024_Annual_filed2025-03-17.xls,Energy/2381_ARABIAN_DRILLING/2024_Annual_filed2025-03-12.pdf,not_found,,"value not printed as such in the archive PDFs (rounding, computed XBRL subtotal, or unreadable scan)"
-2381-FY2023-EBITDA_C,Energy,2381,FY2023,EBITDA_C,C,1485.3036,2381_ARABIAN_DRILLING/2024_Annual_filed2025-03-17.xls,,calculated_ok,,"recomputed 1,485.304"
-2381-FY2023-EBITDA_U,Energy,2381,FY2023,EBITDA_U,C,1485.3036,2381_ARABIAN_DRILLING/2024_Annual_filed2025-03-17.xls,,calculated_ok,,"recomputed 1,485.304"
+2381-FY2023-EBITDA_C,Energy,2381,FY2023,EBITDA_C,C,1493.576043,2381_ARABIAN_DRILLING/2024_Annual_filed2025-03-12.pdf | 2381_ARABIAN_DRILLING/2024_Annual_filed2025-03-17.xls,,calculated_ok,,"recomputed 1,493.576"
+2381-FY2023-EBITDA_U,Energy,2381,FY2023,EBITDA_U,C,1493.576043,2381_ARABIAN_DRILLING/2024_Annual_filed2025-03-12.pdf | 2381_ARABIAN_DRILLING/2024_Annual_filed2025-03-17.xls,,calculated_ok,,"recomputed 1,493.576"
 2381-FY2023-EQ_ATTR,Energy,2381,FY2023,EQ_ATTR,D,5961.4214,2381_ARABIAN_DRILLING/2024_Annual_filed2025-03-17.xls,Energy/2381_ARABIAN_DRILLING/2024_Annual_filed2025-03-12.pdf,text_statement,53,
 2381-FY2023-FCF,Energy,2381,FY2023,FCF,C,-486.6601,2381_ARABIAN_DRILLING/2024_Annual_filed2025-03-17.xls,,calculated_ok,,recomputed -486.660
 2381-FY2023-FIN_COST,Energy,2381,FY2023,FIN_COST,D,160.8823,2381_ARABIAN_DRILLING/2024_Annual_filed2025-03-17.xls,Energy/2381_ARABIAN_DRILLING/2024_Annual_filed2025-03-12.pdf,text_statement,53,
 2381-FY2023-FIN_INC,Energy,2381,FY2023,FIN_INC,D,47.596,2381_ARABIAN_DRILLING/2024_Annual_filed2025-03-17.xls,Energy/2381_ARABIAN_DRILLING/2024_Annual_filed2025-03-12.pdf,ocr_statement,"10,12",
 2381-FY2023-GP,Energy,2381,FY2023,GP,D,975.9039,2381_ARABIAN_DRILLING/2024_Annual_filed2025-03-17.xls,Energy/2381_ARABIAN_DRILLING/2024_Annual_filed2025-03-12.pdf,text_other,47,
-2381-FY2023-IMPAIR_CF,Energy,2381,FY2023,IMPAIR_CF,D,0.0,2381_ARABIAN_DRILLING/2024_Annual_filed2025-03-17.xls,Energy/2381_ARABIAN_DRILLING/2024_Annual_filed2025-03-12.pdf,too_small,,under 100 in the reporting unit; not searchable reliably
+2381-FY2023-IMPAIR_CF,Energy,2381,FY2023,IMPAIR_CF,D,8.272443,2381_ARABIAN_DRILLING/2024_Annual_filed2025-03-12.pdf,Energy/2381_ARABIAN_DRILLING/2024_Annual_filed2025-03-12.pdf,pdf_override_confirmed,38,recorded page 12; value found on 38
 2381-FY2023-NI,Energy,2381,FY2023,NI,D,604.6139,2381_ARABIAN_DRILLING/2024_Annual_filed2025-03-17.xls,Energy/2381_ARABIAN_DRILLING/2024_Annual_filed2025-03-12.pdf,text_other,46,
 2381-FY2023-NI_ATTR,Energy,2381,FY2023,NI_ATTR,D,604.6139,2381_ARABIAN_DRILLING/2024_Annual_filed2025-03-17.xls,Energy/2381_ARABIAN_DRILLING/2024_Annual_filed2025-03-12.pdf,text_other,46,
 2381-FY2023-OPINC,Energy,2381,FY2023,OPINC,C,801.2332,2381_ARABIAN_DRILLING/2024_Annual_filed2025-03-17.xls,,calculated_ok,,recomputed 801.233
@@ -511,14 +513,14 @@ fact_id,sector,ticker,period,metric_code,provenance,value_sar_m,source_id,pdf_us
 2381-FY2024-CFO,Energy,2381,FY2024,CFO,D,1749.6,2381_ARABIAN_DRILLING/2025_Annual_filed2026-03-08.xls,Energy/2381_ARABIAN_DRILLING/2025_Annual_filed2026-03-02.pdf,ocr_statement,12,
 2381-FY2024-COGS,Energy,2381,FY2024,COGS,D,2858.9178,2381_ARABIAN_DRILLING/2025_Annual_filed2026-03-08.xls,Energy/2381_ARABIAN_DRILLING/2025_Annual_filed2026-03-02.pdf,text_statement,44,
 2381-FY2024-DA_CF,Energy,2381,FY2024,DA_CF,D,837.5849,2381_ARABIAN_DRILLING/2025_Annual_filed2026-03-08.xls,Energy/2381_ARABIAN_DRILLING/2025_Annual_filed2026-03-02.pdf,not_found,,"value not printed as such in the archive PDFs (rounding, computed XBRL subtotal, or unreadable scan)"
-2381-FY2024-EBITDA_C,Energy,2381,FY2024,EBITDA_C,C,1508.1178,2381_ARABIAN_DRILLING/2025_Annual_filed2026-03-08.xls,,calculated_ok,,"recomputed 1,508.118"
-2381-FY2024-EBITDA_U,Energy,2381,FY2024,EBITDA_U,C,1508.1178,2381_ARABIAN_DRILLING/2025_Annual_filed2026-03-08.xls,,calculated_ok,,"recomputed 1,508.118"
+2381-FY2024-EBITDA_C,Energy,2381,FY2024,EBITDA_C,C,1504.326393,2381_ARABIAN_DRILLING/2025_Annual_filed2026-03-02.pdf | 2381_ARABIAN_DRILLING/2025_Annual_filed2026-03-08.xls,,calculated_ok,,"recomputed 1,504.326"
+2381-FY2024-EBITDA_U,Energy,2381,FY2024,EBITDA_U,C,1504.326393,2381_ARABIAN_DRILLING/2025_Annual_filed2026-03-02.pdf | 2381_ARABIAN_DRILLING/2025_Annual_filed2026-03-08.xls,,calculated_ok,,"recomputed 1,504.326"
 2381-FY2024-EQ_ATTR,Energy,2381,FY2024,EQ_ATTR,D,5938.1849,2381_ARABIAN_DRILLING/2025_Annual_filed2026-03-08.xls,Energy/2381_ARABIAN_DRILLING/2025_Annual_filed2026-03-02.pdf,text_other,57,
 2381-FY2024-FCF,Energy,2381,FY2024,FCF,C,-160.7058,2381_ARABIAN_DRILLING/2025_Annual_filed2026-03-08.xls,,calculated_ok,,recomputed -160.706
 2381-FY2024-FIN_COST,Energy,2381,FY2024,FIN_COST,D,229.1269,2381_ARABIAN_DRILLING/2025_Annual_filed2026-03-08.xls,Energy/2381_ARABIAN_DRILLING/2025_Annual_filed2026-03-02.pdf,text_other,45,
 2381-FY2024-FIN_INC,Energy,2381,FY2024,FIN_INC,D,21.6136,2381_ARABIAN_DRILLING/2025_Annual_filed2026-03-08.xls,Energy/2381_ARABIAN_DRILLING/2025_Annual_filed2026-03-02.pdf,ocr_statement,"10,12",
 2381-FY2024-GP,Energy,2381,FY2024,GP,D,759.8997,2381_ARABIAN_DRILLING/2025_Annual_filed2026-03-08.xls,Energy/2381_ARABIAN_DRILLING/2025_Annual_filed2026-03-02.pdf,text_other,50,
-2381-FY2024-IMPAIR_CF,Energy,2381,FY2024,IMPAIR_CF,D,105.0,2381_ARABIAN_DRILLING/2025_Annual_filed2026-03-08.xls,Energy/2381_ARABIAN_DRILLING/2025_Annual_filed2026-03-02.pdf,text_other,33,
+2381-FY2024-IMPAIR_CF,Energy,2381,FY2024,IMPAIR_CF,D,101.208593,2381_ARABIAN_DRILLING/2025_Annual_filed2026-03-02.pdf,Energy/2381_ARABIAN_DRILLING/2025_Annual_filed2026-03-02.pdf,pdf_override_page,12,value not re-found by search (computed from printed lines or OCR-unreadable); page recorded in the override
 2381-FY2024-NI,Energy,2381,FY2024,NI,D,321.3647,2381_ARABIAN_DRILLING/2025_Annual_filed2026-03-08.xls,Energy/2381_ARABIAN_DRILLING/2025_Annual_filed2026-03-02.pdf,text_other,49,
 2381-FY2024-NI_ATTR,Energy,2381,FY2024,NI_ATTR,D,321.3647,2381_ARABIAN_DRILLING/2025_Annual_filed2026-03-08.xls,Energy/2381_ARABIAN_DRILLING/2025_Annual_filed2026-03-02.pdf,text_other,49,
 2381-FY2024-OPINC,Energy,2381,FY2024,OPINC,C,565.5329,2381_ARABIAN_DRILLING/2025_Annual_filed2026-03-08.xls,,calculated_ok,,recomputed 565.533
@@ -532,14 +534,14 @@ fact_id,sector,ticker,period,metric_code,provenance,value_sar_m,source_id,pdf_us
 2381-FY2025-CFO,Energy,2381,FY2025,CFO,D,1099.3105,2381_ARABIAN_DRILLING/2025_Annual_filed2026-03-08.xls,Energy/2381_ARABIAN_DRILLING/2025_Annual_filed2026-03-02.pdf,ocr_statement,12,
 2381-FY2025-COGS,Energy,2381,FY2025,COGS,D,3059.2551,2381_ARABIAN_DRILLING/2025_Annual_filed2026-03-08.xls,Energy/2381_ARABIAN_DRILLING/2025_Annual_filed2026-03-02.pdf,text_statement,44,
 2381-FY2025-DA_CF,Energy,2381,FY2025,DA_CF,D,957.6259,2381_ARABIAN_DRILLING/2025_Annual_filed2026-03-08.xls,Energy/2381_ARABIAN_DRILLING/2025_Annual_filed2026-03-02.pdf,not_found,,"value not printed as such in the archive PDFs (rounding, computed XBRL subtotal, or unreadable scan)"
-2381-FY2025-EBITDA_C,Energy,2381,FY2025,EBITDA_C,C,1240.2742,2381_ARABIAN_DRILLING/2025_Annual_filed2026-03-08.xls,,calculated_ok,,"recomputed 1,240.274"
-2381-FY2025-EBITDA_U,Energy,2381,FY2025,EBITDA_U,C,1240.2742,2381_ARABIAN_DRILLING/2025_Annual_filed2026-03-08.xls,,calculated_ok,,"recomputed 1,240.274"
+2381-FY2025-EBITDA_C,Energy,2381,FY2025,EBITDA_C,C,1240.44704,2381_ARABIAN_DRILLING/2025_Annual_filed2026-03-02.pdf | 2381_ARABIAN_DRILLING/2025_Annual_filed2026-03-08.xls,,calculated_ok,,"recomputed 1,240.447"
+2381-FY2025-EBITDA_U,Energy,2381,FY2025,EBITDA_U,C,1240.44704,2381_ARABIAN_DRILLING/2025_Annual_filed2026-03-02.pdf | 2381_ARABIAN_DRILLING/2025_Annual_filed2026-03-08.xls,,calculated_ok,,"recomputed 1,240.447"
 2381-FY2025-EQ_ATTR,Energy,2381,FY2025,EQ_ATTR,D,5745.9329,2381_ARABIAN_DRILLING/2026_Q3_filed2026-11-12.xls,Energy/2381_ARABIAN_DRILLING/2025_Annual_filed2026-03-02.pdf,text_other,57,
 2381-FY2025-FCF,Energy,2381,FY2025,FCF,C,353.393,2381_ARABIAN_DRILLING/2025_Annual_filed2026-03-08.xls,,calculated_ok,,recomputed 353.393
 2381-FY2025-FIN_COST,Energy,2381,FY2025,FIN_COST,D,219.8097,2381_ARABIAN_DRILLING/2025_Annual_filed2026-03-08.xls,Energy/2381_ARABIAN_DRILLING/2025_Annual_filed2026-03-02.pdf,text_other,45,
 2381-FY2025-FIN_INC,Energy,2381,FY2025,FIN_INC,D,3.7229,2381_ARABIAN_DRILLING/2025_Annual_filed2026-03-08.xls,Energy/2381_ARABIAN_DRILLING/2025_Annual_filed2026-03-02.pdf,ocr_statement,12,
 2381-FY2025-GP,Energy,2381,FY2025,GP,D,374.0723,2381_ARABIAN_DRILLING/2025_Annual_filed2026-03-08.xls,Energy/2381_ARABIAN_DRILLING/2025_Annual_filed2026-03-02.pdf,text_other,50,
-2381-FY2025-IMPAIR_CF,Energy,2381,FY2025,IMPAIR_CF,D,114.3492,2381_ARABIAN_DRILLING/2025_Annual_filed2026-03-08.xls,Energy/2381_ARABIAN_DRILLING/2025_Annual_filed2026-03-02.pdf,text_other,32,
+2381-FY2025-IMPAIR_CF,Energy,2381,FY2025,IMPAIR_CF,D,114.52204,2381_ARABIAN_DRILLING/2025_Annual_filed2026-03-02.pdf,Energy/2381_ARABIAN_DRILLING/2025_Annual_filed2026-03-02.pdf,pdf_override_page,12,value not re-found by search (computed from printed lines or OCR-unreadable); page recorded in the override
 2381-FY2025-NI,Energy,2381,FY2025,NI,D,-75.2503,2381_ARABIAN_DRILLING/2025_Annual_filed2026-03-08.xls,Energy/2381_ARABIAN_DRILLING/2025_Annual_filed2026-03-02.pdf,text_other,49,
 2381-FY2025-NI_ATTR,Energy,2381,FY2025,NI_ATTR,D,-75.2503,2381_ARABIAN_DRILLING/2025_Annual_filed2026-03-08.xls,Energy/2381_ARABIAN_DRILLING/2025_Annual_filed2026-03-02.pdf,text_other,49,
 2381-FY2025-OPINC,Energy,2381,FY2025,OPINC,C,168.2991,2381_ARABIAN_DRILLING/2025_Annual_filed2026-03-08.xls,,calculated_ok,,recomputed 168.299
@@ -553,12 +555,13 @@ fact_id,sector,ticker,period,metric_code,provenance,value_sar_m,source_id,pdf_us
 2382-9M2025-CFO,Energy,2382,9M2025,CFO,D,1934.896,2382_ADES/2026_Q3_filed2026-11-09.pdf,Energy/2382_ADES/2026_Q3_filed2026-11-09.pdf,pdf_override_confirmed,10,
 2382-9M2025-COGS,Energy,2382,9M2025,COGS,D,2914.465,2382_ADES/2026_Q3_filed2026-11-09.pdf,Energy/2382_ADES/2026_Q3_filed2026-11-09.pdf,pdf_override_confirmed,7,
 2382-9M2025-DA_CF,Energy,2382,9M2025,DA_CF,D,1114.345,2382_ADES/2026_Q3_filed2026-11-09.pdf,Energy/2382_ADES/2026_Q3_filed2026-11-09.pdf,pdf_override_confirmed,27,recorded page 10; value found on 27
-2382-9M2025-EBITDA_C,Energy,2382,9M2025,EBITDA_C,C,2537.752,2382_ADES/2026_Q3_filed2026-11-09.pdf,,calculated_ok,,"recomputed 2,537.752"
-2382-9M2025-EBITDA_U,Energy,2382,9M2025,EBITDA_U,C,2452.008,2382_ADES/2026_Q3_filed2026-11-09.pdf,,calculated_ok,,"recomputed 2,452.008"
+2382-9M2025-EBITDA_C,Energy,2382,9M2025,EBITDA_C,C,2549.265,2382_ADES/2026_Q3_filed2026-11-09.pdf,,calculated_ok,,"recomputed 2,549.265"
+2382-9M2025-EBITDA_U,Energy,2382,9M2025,EBITDA_U,C,2463.521,2382_ADES/2026_Q3_filed2026-11-09.pdf,,calculated_ok,,"recomputed 2,463.521"
 2382-9M2025-EQ_ATTR,Energy,2382,9M2025,EQ_ATTR,D,6588.725,2382_ADES/2025_Q3_filed2025-11-27.xls,Energy/2382_ADES/2025_Q3_filed2025-11-03.pdf,text_statement,5,
 2382-9M2025-FCF,Energy,2382,9M2025,FCF,C,557.371,2382_ADES/2026_Q3_filed2026-11-09.pdf,,calculated_ok,,recomputed 557.371
 2382-9M2025-FIN_COST,Energy,2382,9M2025,FIN_COST,D,668.235,2382_ADES/2026_Q3_filed2026-11-09.pdf,Energy/2382_ADES/2026_Q3_filed2026-11-09.pdf,pdf_override_confirmed,7,
 2382-9M2025-GP,Energy,2382,9M2025,GP,D,1788.433,2382_ADES/2026_Q3_filed2026-11-09.pdf,Energy/2382_ADES/2026_Q3_filed2026-11-09.pdf,pdf_override_confirmed,7,
+2382-9M2025-IMPAIR_CF,Energy,2382,9M2025,IMPAIR_CF,D,11.513,2382_ADES/2026_Q3_filed2026-11-09.pdf,Energy/2382_ADES/2026_Q3_filed2026-11-09.pdf,pdf_override_confirmed,10,
 2382-9M2025-NI,Energy,2382,9M2025,NI,D,607.506,2382_ADES/2026_Q3_filed2026-11-09.pdf,Energy/2382_ADES/2026_Q3_filed2026-11-09.pdf,pdf_override_confirmed,7,
 2382-9M2025-NI_ATTR,Energy,2382,9M2025,NI_ATTR,D,597.331,2382_ADES/2026_Q3_filed2026-11-09.pdf,Energy/2382_ADES/2026_Q3_filed2026-11-09.pdf,pdf_override_confirmed,7,
 2382-9M2025-NI_NCI,Energy,2382,9M2025,NI_NCI,D,10.175,2382_ADES/2026_Q3_filed2026-11-09.pdf,Energy/2382_ADES/2026_Q3_filed2026-11-09.pdf,pdf_override_confirmed,7,
@@ -579,6 +582,7 @@ fact_id,sector,ticker,period,metric_code,provenance,value_sar_m,source_id,pdf_us
 2382-9M2026-FCF,Energy,2382,9M2026,FCF,C,965.705,2382_ADES/2026_Q3_filed2026-11-09.pdf,,calculated_ok,,recomputed 965.705
 2382-9M2026-FIN_COST,Energy,2382,9M2026,FIN_COST,D,976.294,2382_ADES/2026_Q3_filed2026-11-09.pdf,Energy/2382_ADES/2026_Q3_filed2026-11-09.pdf,pdf_override_confirmed,7,
 2382-9M2026-GP,Energy,2382,9M2026,GP,D,2311.276,2382_ADES/2026_Q3_filed2026-11-09.pdf,Energy/2382_ADES/2026_Q3_filed2026-11-09.pdf,pdf_override_confirmed,7,
+2382-9M2026-IMPAIR_CF,Energy,2382,9M2026,IMPAIR_CF,D,0.0,2382_ADES/2026_Q3_filed2026-11-09.pdf,Energy/2382_ADES/2026_Q3_filed2026-11-09.pdf,pdf_override_page,10,value not re-found by search (computed from printed lines or OCR-unreadable); page recorded in the override
 2382-9M2026-NI,Energy,2382,9M2026,NI,D,473.336,2382_ADES/2026_Q3_filed2026-11-09.pdf,Energy/2382_ADES/2026_Q3_filed2026-11-09.pdf,pdf_override_confirmed,7,
 2382-9M2026-NI_ATTR,Energy,2382,9M2026,NI_ATTR,D,459.843,2382_ADES/2026_Q3_filed2026-11-09.pdf,Energy/2382_ADES/2026_Q3_filed2026-11-09.pdf,pdf_override_confirmed,7,
 2382-9M2026-NI_NCI,Energy,2382,9M2026,NI_NCI,D,13.493,2382_ADES/2026_Q3_filed2026-11-09.pdf,Energy/2382_ADES/2026_Q3_filed2026-11-09.pdf,pdf_override_confirmed,7,
@@ -590,7 +594,7 @@ fact_id,sector,ticker,period,metric_code,provenance,value_sar_m,source_id,pdf_us
 2382-9M2026-TE,Energy,2382,9M2026,TE,D,6867.36,2382_ADES/2026_Q3_filed2026-11-09.pdf,Energy/2382_ADES/2026_Q3_filed2026-11-09.pdf,pdf_override_confirmed,5,
 2382-9M2026-ZAKAT_TAX,Energy,2382,9M2026,ZAKAT_TAX,D,154.782,2382_ADES/2026_Q3_filed2026-11-09.pdf,Energy/2382_ADES/2026_Q3_filed2026-11-09.pdf,pdf_override_confirmed,7,
 2382-FY2021-EQ_ATTR,Energy,2382,FY2021,EQ_ATTR,D,1893.55,2382_ADES/2022_Annual_filed2024-10-09.pdf,Energy/2382_ADES/2022_Annual_filed2024-10-09.pdf,pdf_override_page,6,value not re-found by search (computed from printed lines or OCR-unreadable); page recorded in the override
-2382-FY2022-CAPEX,Energy,2382,FY2022,CAPEX,D,3923.2362,2382_ADES/2023_Annual_filed2024-04-13.xls,Energy/2382_ADES/2023_Annual_filed2024-03-07.pdf,not_found,,"value not printed as such in the archive PDFs (rounding, computed XBRL subtotal, or unreadable scan)"
+2382-FY2022-CAPEX,Energy,2382,FY2022,CAPEX,D,3923.2362,2382_ADES/2023_Annual_filed2024-04-13.xls,Energy/2382_ADES/2022_Annual_filed2024-10-09.pdf,components_found,10;10,"components: Purchase of property, plant and equipment + Expenditure on other intangible assets"
 2382-FY2022-CFO,Energy,2382,FY2022,CFO,D,1146.2479,2382_ADES/2023_Annual_filed2024-04-13.xls,Energy/2382_ADES/2022_Annual_filed2024-10-09.pdf,text_statement,10,
 2382-FY2022-DA_CF,Energy,2382,FY2022,DA_CF,D,403.356,2382_ADES/2023_Annual_filed2024-04-13.xls,Energy/2382_ADES/2022_Annual_filed2024-10-09.pdf,text_other,47,
 2382-FY2022-EBITDA_C,Energy,2382,FY2022,EBITDA_C,C,1140.1079,2382_ADES/2023_Annual_filed2024-03-07.pdf | 2382_ADES/2023_Annual_filed2024-04-13.xls | 2382_ADES/2023_Annual_filed2024-04-13.xls | 2382_ADES/2024_Annual_filed2025-03-04.pdf,,calculated_ok,,"recomputed 1,140.108"
@@ -615,13 +619,13 @@ fact_id,sector,ticker,period,metric_code,provenance,value_sar_m,source_id,pdf_us
 2382-FY2023-CFO,Energy,2382,FY2023,CFO,D,2282.704,2382_ADES/2024_Annual_filed2025-03-18.xls,Energy/2382_ADES/2024_Annual_filed2025-03-04.pdf,text_statement,12,
 2382-FY2023-COGS,Energy,2382,FY2023,COGS,D,2620.778,2382_ADES/2024_Annual_filed2025-03-18.xls,Energy/2382_ADES/2024_Annual_filed2025-03-04.pdf,text_statement,8,
 2382-FY2023-DA_CF,Energy,2382,FY2023,DA_CF,D,797.464,2382_ADES/2024_Annual_filed2025-03-18.xls,Energy/2382_ADES/2024_Annual_filed2025-03-04.pdf,text_other,50,
-2382-FY2023-EBITDA_C,Energy,2382,FY2023,EBITDA_C,C,2038.098,2382_ADES/2024_Annual_filed2025-03-04.pdf | 2382_ADES/2024_Annual_filed2025-03-18.xls,,calculated_ok,,"recomputed 2,038.098"
-2382-FY2023-EBITDA_U,Energy,2382,FY2023,EBITDA_U,C,2038.098,2382_ADES/2024_Annual_filed2025-03-04.pdf | 2382_ADES/2024_Annual_filed2025-03-18.xls,,calculated_ok,,"recomputed 2,038.098"
+2382-FY2023-EBITDA_C,Energy,2382,FY2023,EBITDA_C,C,2043.122,2382_ADES/2024_Annual_filed2025-03-18.pdf | 2382_ADES/2024_Annual_filed2025-03-18.xls,,calculated_ok,,"recomputed 2,043.122"
+2382-FY2023-EBITDA_U,Energy,2382,FY2023,EBITDA_U,C,2043.122,2382_ADES/2024_Annual_filed2025-03-18.pdf | 2382_ADES/2024_Annual_filed2025-03-18.xls,,calculated_ok,,"recomputed 2,043.122"
 2382-FY2023-EQ_ATTR,Energy,2382,FY2023,EQ_ATTR,D,5748.24,2382_ADES/2024_Annual_filed2025-03-18.xls,Energy/2382_ADES/2024_Annual_filed2025-03-04.pdf,text_statement,9,
 2382-FY2023-FCF,Energy,2382,FY2023,FCF,C,-1765.662,2382_ADES/2024_Annual_filed2025-03-18.xls,,calculated_ok,,"recomputed -1,765.662"
 2382-FY2023-FIN_COST,Energy,2382,FY2023,FIN_COST,D,711.255,2382_ADES/2024_Annual_filed2025-03-18.xls,Energy/2382_ADES/2024_Annual_filed2025-03-04.pdf,text_statement,"8,12",
 2382-FY2023-GP,Energy,2382,FY2023,GP,D,1711.125,2382_ADES/2024_Annual_filed2025-03-18.xls,Energy/2382_ADES/2024_Annual_filed2025-03-04.pdf,text_statement,8,
-2382-FY2023-IMPAIR_CF,Energy,2382,FY2023,IMPAIR_CF,C,0.0,2382_ADES/2024_Annual_filed2025-03-04.pdf,Energy/2382_ADES/2024_Annual_filed2025-03-04.pdf,pdf_override_page,,value not re-found by search (computed from printed lines or OCR-unreadable); page recorded in the override
+2382-FY2023-IMPAIR_CF,Energy,2382,FY2023,IMPAIR_CF,D,5.024,2382_ADES/2024_Annual_filed2025-03-18.pdf,Energy/2382_ADES/2024_Annual_filed2025-03-18.pdf,pdf_override_page,12,value not re-found by search (computed from printed lines or OCR-unreadable); page recorded in the override
 2382-FY2023-NI,Energy,2382,FY2023,NI,D,452.078,2382_ADES/2024_Annual_filed2025-03-18.xls,Energy/2382_ADES/2024_Annual_filed2025-03-04.pdf,text_statement,8,
 2382-FY2023-NI_ATTR,Energy,2382,FY2023,NI_ATTR,D,442.097,2382_ADES/2024_Annual_filed2025-03-18.xls,Energy/2382_ADES/2024_Annual_filed2025-03-04.pdf,text_statement,8,
 2382-FY2023-NI_NCI,Energy,2382,FY2023,NI_NCI,D,9.981,2382_ADES/2024_Annual_filed2025-03-18.xls,Energy/2382_ADES/2024_Annual_filed2025-03-04.pdf,text_statement,"8,13",
@@ -636,13 +640,13 @@ fact_id,sector,ticker,period,metric_code,provenance,value_sar_m,source_id,pdf_us
 2382-FY2024-CFO,Energy,2382,FY2024,CFO,D,2995.912,2382_ADES/2025_Annual_filed2026-04-22.xls,Energy/2382_ADES/2025_Annual_filed2026-03-29.pdf,text_statement,13,
 2382-FY2024-COGS,Energy,2382,FY2024,COGS,D,3841.373,2382_ADES/2025_Annual_filed2026-04-22.xls,Energy/2382_ADES/2025_Annual_filed2026-03-29.pdf,text_statement,10,
 2382-FY2024-DA_CF,Energy,2382,FY2024,DA_CF,D,1268.631,2382_ADES/2025_Annual_filed2026-04-22.xls,Energy/2382_ADES/2025_Annual_filed2026-03-29.pdf,text_other,56,
-2382-FY2024-EBITDA_C,Energy,2382,FY2024,EBITDA_C,C,3043.392,2382_ADES/2024_Annual_filed2025-03-04.pdf | 2382_ADES/2025_Annual_filed2026-04-22.xls,,calculated_ok,,"recomputed 3,043.392"
-2382-FY2024-EBITDA_U,Energy,2382,FY2024,EBITDA_U,C,3043.392,2382_ADES/2024_Annual_filed2025-03-04.pdf | 2382_ADES/2025_Annual_filed2026-04-22.xls,,calculated_ok,,"recomputed 3,043.392"
+2382-FY2024-EBITDA_C,Energy,2382,FY2024,EBITDA_C,C,2997.664,2382_ADES/2024_Annual_filed2025-03-18.pdf | 2382_ADES/2025_Annual_filed2026-04-22.xls,,calculated_ok,,"recomputed 2,997.664"
+2382-FY2024-EBITDA_U,Energy,2382,FY2024,EBITDA_U,C,2997.664,2382_ADES/2024_Annual_filed2025-03-18.pdf | 2382_ADES/2025_Annual_filed2026-04-22.xls,,calculated_ok,,"recomputed 2,997.664"
 2382-FY2024-EQ_ATTR,Energy,2382,FY2024,EQ_ATTR,D,6492.791,2382_ADES/2025_Annual_filed2026-04-22.xls,Energy/2382_ADES/2025_Annual_filed2026-03-29.pdf,text_statement,8,
 2382-FY2024-FCF,Energy,2382,FY2024,FCF,C,619.577,2382_ADES/2025_Annual_filed2026-04-22.xls,,calculated_ok,,recomputed 619.577
 2382-FY2024-FIN_COST,Energy,2382,FY2024,FIN_COST,D,803.915,2382_ADES/2025_Annual_filed2026-04-22.xls,Energy/2382_ADES/2025_Annual_filed2026-03-29.pdf,text_statement,"10,13",
 2382-FY2024-GP,Energy,2382,FY2024,GP,D,2357.649,2382_ADES/2025_Annual_filed2026-04-22.xls,Energy/2382_ADES/2025_Annual_filed2026-03-29.pdf,text_statement,10,
-2382-FY2024-IMPAIR_CF,Energy,2382,FY2024,IMPAIR_CF,C,0.0,2382_ADES/2024_Annual_filed2025-03-04.pdf,Energy/2382_ADES/2024_Annual_filed2025-03-04.pdf,pdf_override_page,,value not re-found by search (computed from printed lines or OCR-unreadable); page recorded in the override
+2382-FY2024-IMPAIR_CF,Energy,2382,FY2024,IMPAIR_CF,D,-45.728,2382_ADES/2024_Annual_filed2025-03-18.pdf,Energy/2382_ADES/2024_Annual_filed2025-03-18.pdf,pdf_override_page,12,value not re-found by search (computed from printed lines or OCR-unreadable); page recorded in the override
 2382-FY2024-NI,Energy,2382,FY2024,NI,D,816.195,2382_ADES/2025_Annual_filed2026-04-22.xls,Energy/2382_ADES/2025_Annual_filed2026-03-29.pdf,text_statement,10,
 2382-FY2024-NI_ATTR,Energy,2382,FY2024,NI_ATTR,D,802.498,2382_ADES/2025_Annual_filed2026-04-22.xls,Energy/2382_ADES/2025_Annual_filed2026-03-29.pdf,text_statement,10,
 2382-FY2024-NI_NCI,Energy,2382,FY2024,NI_NCI,D,13.697,2382_ADES/2025_Annual_filed2026-04-22.xls,Energy/2382_ADES/2025_Annual_filed2026-03-29.pdf,text_statement,"10,14",
@@ -657,12 +661,13 @@ fact_id,sector,ticker,period,metric_code,provenance,value_sar_m,source_id,pdf_us
 2382-FY2025-CFO,Energy,2382,FY2025,CFO,D,2980.723,2382_ADES/2025_Annual_filed2026-04-22.xls,Energy/2382_ADES/2025_Annual_filed2026-03-29.pdf,text_statement,13,
 2382-FY2025-COGS,Energy,2382,FY2025,COGS,D,4155.868,2382_ADES/2025_Annual_filed2026-04-22.xls,Energy/2382_ADES/2025_Annual_filed2026-03-29.pdf,text_statement,10,
 2382-FY2025-DA_CF,Energy,2382,FY2025,DA_CF,D,1547.12,2382_ADES/2025_Annual_filed2026-04-22.xls,Energy/2382_ADES/2025_Annual_filed2026-03-29.pdf,text_other,56,
-2382-FY2025-EBITDA_C,Energy,2382,FY2025,EBITDA_C,C,3532.584,2382_ADES/2025_Annual_filed2026-04-22.xls,,calculated_ok,,"recomputed 3,532.584"
-2382-FY2025-EBITDA_U,Energy,2382,FY2025,EBITDA_U,C,3532.584,2382_ADES/2025_Annual_filed2026-04-22.xls,,calculated_ok,,"recomputed 3,532.584"
+2382-FY2025-EBITDA_C,Energy,2382,FY2025,EBITDA_C,C,3560.707,2382_ADES/2025_Annual_filed2026-03-29.pdf | 2382_ADES/2025_Annual_filed2026-04-22.xls,,calculated_ok,,"recomputed 3,560.707"
+2382-FY2025-EBITDA_U,Energy,2382,FY2025,EBITDA_U,C,3560.707,2382_ADES/2025_Annual_filed2026-03-29.pdf | 2382_ADES/2025_Annual_filed2026-04-22.xls,,calculated_ok,,"recomputed 3,560.707"
 2382-FY2025-EQ_ATTR,Energy,2382,FY2025,EQ_ATTR,D,6780.163,2382_ADES/2026_Q2_filed2026-09-03.xls,Energy/2382_ADES/2026_Q2_filed2026-08-09.pdf,text_statement,5,
 2382-FY2025-FCF,Energy,2382,FY2025,FCF,C,1142.592,2382_ADES/2025_Annual_filed2026-04-22.xls,,calculated_ok,,"recomputed 1,142.592"
 2382-FY2025-FIN_COST,Energy,2382,FY2025,FIN_COST,D,940.536,2382_ADES/2025_Annual_filed2026-04-22.xls,Energy/2382_ADES/2025_Annual_filed2026-03-29.pdf,text_statement,"10,13",
 2382-FY2025-GP,Energy,2382,FY2025,GP,D,2533.091,2382_ADES/2025_Annual_filed2026-04-22.xls,Energy/2382_ADES/2025_Annual_filed2026-03-29.pdf,text_statement,10,
+2382-FY2025-IMPAIR_CF,Energy,2382,FY2025,IMPAIR_CF,D,28.123,2382_ADES/2025_Annual_filed2026-03-29.pdf,Energy/2382_ADES/2025_Annual_filed2026-03-29.pdf,pdf_override_confirmed,13,
 2382-FY2025-NI,Energy,2382,FY2025,NI,D,832.861,2382_ADES/2025_Annual_filed2026-04-22.xls,Energy/2382_ADES/2025_Annual_filed2026-03-29.pdf,text_statement,10,
 2382-FY2025-NI_ATTR,Energy,2382,FY2025,NI_ATTR,D,818.016,2382_ADES/2025_Annual_filed2026-04-22.xls,Energy/2382_ADES/2025_Annual_filed2026-03-29.pdf,text_statement,10,
 2382-FY2025-NI_NCI,Energy,2382,FY2025,NI_NCI,D,14.845,2382_ADES/2025_Annual_filed2026-04-22.xls,Energy/2382_ADES/2025_Annual_filed2026-03-29.pdf,text_statement,10,
@@ -676,10 +681,10 @@ fact_id,sector,ticker,period,metric_code,provenance,value_sar_m,source_id,pdf_us
 4030-9M2025-CAPEX,Energy,4030,9M2025,CAPEX,D,3534.368,4030_BAHRI/2026_Q3_filed2026-11-03.xls,Energy/4030_BAHRI/2026_Q3_filed2026-11-03.pdf,not_found,,"value not printed as such in the archive PDFs (rounding, computed XBRL subtotal, or unreadable scan)"
 4030-9M2025-CFO,Energy,4030,9M2025,CFO,D,2226.499,4030_BAHRI/2026_Q3_filed2026-11-03.xls,Energy/4030_BAHRI/2026_Q3_filed2026-11-03.pdf,ocr_statement,7,
 4030-9M2025-COGS,Energy,4030,9M2025,COGS,R,5281.929,4030_BAHRI/2026_Q3_filed2026-11-03.xls,Energy/4030_BAHRI/2026_Q3_filed2026-11-03.pdf,text_statement,26,
-4030-9M2025-DA_CF,Energy,4030,9M2025,DA_CF,D,1143.042,4030_BAHRI/2026_Q3_filed2026-11-03.xls,Energy/4030_BAHRI/2026_Q3_filed2026-11-03.pdf,components_found,7;7,"components: Adjustments for depreciation and impairment (reversal of impairment) of property, plant and equipments + Adjustments for amortization and impairment (reversal of impairment) of intangible assets"
-4030-9M2025-EBITDA_C,Energy,4030,9M2025,EBITDA_C,C,2807.831,4030_BAHRI/2026_Q3_filed2026-11-03.xls,,calculated_ok,,"recomputed 2,807.831"
-4030-9M2025-EBITDA_U,Energy,4030,9M2025,EBITDA_U,C,2807.831,4030_BAHRI/2026_Q3_filed2026-11-03.xls,,calculated_ok,,"recomputed 2,807.831"
-4030-9M2025-EQ_ATTR,Energy,4030,9M2025,EQ_ATTR,D,14285.829,4030_BAHRI/2026_Q3_filed2026-11-03.xls,Energy/4030_BAHRI/2026_Q3_filed2026-11-03.pdf,not_found,,"value not printed as such in the archive PDFs (rounding, computed XBRL subtotal, or unreadable scan)"
+4030-9M2025-DA_CF,Energy,4030,9M2025,DA_CF,D,1452.007,4030_BAHRI/2026_Q3_filed2026-11-03.pdf,Energy/4030_BAHRI/2026_Q3_filed2026-11-03.pdf,pdf_override_page,7,value not re-found by search (computed from printed lines or OCR-unreadable); page recorded in the override
+4030-9M2025-EBITDA_C,Energy,4030,9M2025,EBITDA_C,C,3116.796,4030_BAHRI/2026_Q3_filed2026-11-03.pdf | 4030_BAHRI/2026_Q3_filed2026-11-03.xls,,calculated_ok,,"recomputed 3,116.796"
+4030-9M2025-EBITDA_U,Energy,4030,9M2025,EBITDA_U,C,3116.796,4030_BAHRI/2026_Q3_filed2026-11-03.pdf | 4030_BAHRI/2026_Q3_filed2026-11-03.xls,,calculated_ok,,"recomputed 3,116.796"
+4030-9M2025-EQ_ATTR,Energy,4030,9M2025,EQ_ATTR,D,14285.829,4030_BAHRI/2026_Q3_filed2026-11-03.xls,Energy/4030_BAHRI/2025_Q3_filed2025-11-02.pdf,later_filing,4,found by ocr_statement in a later filing
 4030-9M2025-FCF,Energy,4030,9M2025,FCF,C,-1307.869,4030_BAHRI/2026_Q3_filed2026-11-03.xls,,calculated_ok,,"recomputed -1,307.869"
 4030-9M2025-FIN_COST,Energy,4030,9M2025,FIN_COST,D,525.924,4030_BAHRI/2026_Q3_filed2026-11-03.xls,Energy/4030_BAHRI/2026_Q3_filed2026-11-03.pdf,text_other,16,
 4030-9M2025-FIN_INC,Energy,4030,9M2025,FIN_INC,D,43.932,4030_BAHRI/2026_Q3_filed2026-11-03.xls,Energy/4030_BAHRI/2026_Q3_filed2026-11-03.pdf,text_other,16,
@@ -698,9 +703,9 @@ fact_id,sector,ticker,period,metric_code,provenance,value_sar_m,source_id,pdf_us
 4030-9M2026-CAPEX,Energy,4030,9M2026,CAPEX,D,1081.868,4030_BAHRI/2026_Q3_filed2026-11-03.xls,Energy/4030_BAHRI/2026_Q3_filed2026-11-03.pdf,not_found,,"value not printed as such in the archive PDFs (rounding, computed XBRL subtotal, or unreadable scan)"
 4030-9M2026-CFO,Energy,4030,9M2026,CFO,D,4073.027,4030_BAHRI/2026_Q3_filed2026-11-03.xls,Energy/4030_BAHRI/2026_Q3_filed2026-11-03.pdf,ocr_statement,7,
 4030-9M2026-COGS,Energy,4030,9M2026,COGS,D,15966.74,4030_BAHRI/2026_Q3_filed2026-11-03.xls,Energy/4030_BAHRI/2026_Q3_filed2026-11-03.pdf,text_other,15,
-4030-9M2026-DA_CF,Energy,4030,9M2026,DA_CF,D,1182.543,4030_BAHRI/2026_Q3_filed2026-11-03.xls,Energy/4030_BAHRI/2026_Q3_filed2026-11-03.pdf,components_found,18;7,"components: Adjustments for depreciation and impairment (reversal of impairment) of property, plant and equipments + Adjustments for amortization and impairment (reversal of impairment) of intangible assets"
-4030-9M2026-EBITDA_C,Energy,4030,9M2026,EBITDA_C,C,11183.298,4030_BAHRI/2026_Q3_filed2026-11-03.xls,,calculated_ok,,"recomputed 11,183.298"
-4030-9M2026-EBITDA_U,Energy,4030,9M2026,EBITDA_U,C,11183.298,4030_BAHRI/2026_Q3_filed2026-11-03.xls,,calculated_ok,,"recomputed 11,183.298"
+4030-9M2026-DA_CF,Energy,4030,9M2026,DA_CF,D,1295.69,4030_BAHRI/2026_Q3_filed2026-11-03.pdf,Energy/4030_BAHRI/2026_Q3_filed2026-11-03.pdf,pdf_override_page,7,value not re-found by search (computed from printed lines or OCR-unreadable); page recorded in the override
+4030-9M2026-EBITDA_C,Energy,4030,9M2026,EBITDA_C,C,11296.445,4030_BAHRI/2026_Q3_filed2026-11-03.pdf | 4030_BAHRI/2026_Q3_filed2026-11-03.xls,,calculated_ok,,"recomputed 11,296.445"
+4030-9M2026-EBITDA_U,Energy,4030,9M2026,EBITDA_U,C,11296.445,4030_BAHRI/2026_Q3_filed2026-11-03.pdf | 4030_BAHRI/2026_Q3_filed2026-11-03.xls,,calculated_ok,,"recomputed 11,296.445"
 4030-9M2026-EQ_ATTR,Energy,4030,9M2026,EQ_ATTR,D,22704.138,4030_BAHRI/2026_Q3_filed2026-11-03.xls,Energy/4030_BAHRI/2026_Q3_filed2026-11-03.pdf,ocr_statement,4,
 4030-9M2026-FCF,Energy,4030,9M2026,FCF,C,2991.159,4030_BAHRI/2026_Q3_filed2026-11-03.xls,,calculated_ok,,"recomputed 2,991.159"
 4030-9M2026-FIN_COST,Energy,4030,9M2026,FIN_COST,D,494.851,4030_BAHRI/2026_Q3_filed2026-11-03.xls,Energy/4030_BAHRI/2026_Q3_filed2026-11-03.pdf,text_other,15,
@@ -720,9 +725,9 @@ fact_id,sector,ticker,period,metric_code,provenance,value_sar_m,source_id,pdf_us
 4030-FY2021-CAPEX,Energy,4030,FY2021,CAPEX,D,1150.964,4030_BAHRI/2022_Annual_filed2023-03-21.xls,Energy/4030_BAHRI/2022_Annual_filed2023-03-19.pdf,not_found,,"value not printed as such in the archive PDFs (rounding, computed XBRL subtotal, or unreadable scan)"
 4030-FY2021-CFO,Energy,4030,FY2021,CFO,D,805.536,4030_BAHRI/2022_Annual_filed2023-03-21.xls,Energy/4030_BAHRI/2022_Annual_filed2023-03-19.pdf,ocr_statement,10,
 4030-FY2021-COGS,Energy,4030,FY2021,COGS,D,4917.976,4030_BAHRI/2022_Annual_filed2023-03-21.xls,Energy/4030_BAHRI/2022_Annual_filed2023-03-19.pdf,text_other,"26,38",
-4030-FY2021-DA_CF,Energy,4030,FY2021,DA_CF,D,1090.22,4030_BAHRI/2022_Annual_filed2023-03-21.xls,Energy/4030_BAHRI/2022_Annual_filed2023-03-19.pdf,components_found,29;30,"components: Adjustments for depreciation and impairment (reversal of impairment) of property, plant and equipments + Adjustments for amortization and impairment (reversal of impairment) of intangible assets"
-4030-FY2021-EBITDA_C,Energy,4030,FY2021,EBITDA_C,C,1515.048,4030_BAHRI/2022_Annual_filed2023-03-21.xls,,calculated_ok,,"recomputed 1,515.048"
-4030-FY2021-EBITDA_U,Energy,4030,FY2021,EBITDA_U,C,1515.048,4030_BAHRI/2022_Annual_filed2023-03-21.xls,,calculated_ok,,"recomputed 1,515.048"
+4030-FY2021-DA_CF,Energy,4030,FY2021,DA_CF,D,1198.713,4030_BAHRI/2022_Annual_filed2023-03-19.pdf,Energy/4030_BAHRI/2022_Annual_filed2023-03-19.pdf,pdf_override_page,10,value not re-found by search (computed from printed lines or OCR-unreadable); page recorded in the override
+4030-FY2021-EBITDA_C,Energy,4030,FY2021,EBITDA_C,C,1623.541,4030_BAHRI/2022_Annual_filed2023-03-19.pdf | 4030_BAHRI/2022_Annual_filed2023-03-21.xls,,calculated_ok,,"recomputed 1,623.541"
+4030-FY2021-EBITDA_U,Energy,4030,FY2021,EBITDA_U,C,1623.541,4030_BAHRI/2022_Annual_filed2023-03-19.pdf | 4030_BAHRI/2022_Annual_filed2023-03-21.xls,,calculated_ok,,"recomputed 1,623.541"
 4030-FY2021-EQ_ATTR,Energy,4030,FY2021,EQ_ATTR,D,9413.106,4030_BAHRI/2022_Annual_filed2023-03-21.xls,Energy/4030_BAHRI/2022_Annual_filed2023-03-19.pdf,ocr_other,11,
 4030-FY2021-FCF,Energy,4030,FY2021,FCF,C,-345.428,4030_BAHRI/2022_Annual_filed2023-03-21.xls,,calculated_ok,,recomputed -345.428
 4030-FY2021-FIN_COST,Energy,4030,FY2021,FIN_COST,D,180.027,4030_BAHRI/2022_Annual_filed2023-03-21.xls,Energy/4030_BAHRI/2022_Annual_filed2023-03-19.pdf,text_other,"26,39",
@@ -741,9 +746,9 @@ fact_id,sector,ticker,period,metric_code,provenance,value_sar_m,source_id,pdf_us
 4030-FY2022-CAPEX,Energy,4030,FY2022,CAPEX,D,1310.352,4030_BAHRI/2023_Annual_filed2024-03-25.xls,Energy/4030_BAHRI/2023_Annual_filed2024-03-21.pdf,not_found,,"value not printed as such in the archive PDFs (rounding, computed XBRL subtotal, or unreadable scan)"
 4030-FY2022-CFO,Energy,4030,FY2022,CFO,R,1989.531,4030_BAHRI/2023_Annual_filed2024-03-21.pdf,Energy/4030_BAHRI/2023_Annual_filed2024-03-21.pdf,pdf_override_confirmed,10,
 4030-FY2022-COGS,Energy,4030,FY2022,COGS,D,7204.452,4030_BAHRI/2023_Annual_filed2024-03-25.xls,Energy/4030_BAHRI/2023_Annual_filed2024-03-21.pdf,text_statement,8,
-4030-FY2022-DA_CF,Energy,4030,FY2022,DA_CF,D,1207.773,4030_BAHRI/2023_Annual_filed2024-03-25.xls,Energy/4030_BAHRI/2023_Annual_filed2024-03-21.pdf,components_found,30;10,"components: Adjustments for depreciation and impairment (reversal of impairment) of property, plant and equipments + Adjustments for amortization and impairment (reversal of impairment) of intangible assets"
-4030-FY2022-EBITDA_C,Energy,4030,FY2022,EBITDA_C,C,2690.92,4030_BAHRI/2023_Annual_filed2024-03-25.xls,,calculated_ok,,"recomputed 2,690.920"
-4030-FY2022-EBITDA_U,Energy,4030,FY2022,EBITDA_U,C,2690.92,4030_BAHRI/2023_Annual_filed2024-03-25.xls,,calculated_ok,,"recomputed 2,690.920"
+4030-FY2022-DA_CF,Energy,4030,FY2022,DA_CF,D,1332.272,4030_BAHRI/2023_Annual_filed2024-03-21.pdf,Energy/4030_BAHRI/2023_Annual_filed2024-03-21.pdf,pdf_override_page,10,value not re-found by search (computed from printed lines or OCR-unreadable); page recorded in the override
+4030-FY2022-EBITDA_C,Energy,4030,FY2022,EBITDA_C,C,2815.419,4030_BAHRI/2023_Annual_filed2024-03-21.pdf | 4030_BAHRI/2023_Annual_filed2024-03-25.xls,,calculated_ok,,"recomputed 2,815.419"
+4030-FY2022-EBITDA_U,Energy,4030,FY2022,EBITDA_U,C,2815.419,4030_BAHRI/2023_Annual_filed2024-03-21.pdf | 4030_BAHRI/2023_Annual_filed2024-03-25.xls,,calculated_ok,,"recomputed 2,815.419"
 4030-FY2022-EQ_ATTR,Energy,4030,FY2022,EQ_ATTR,D,10491.154,4030_BAHRI/2023_Annual_filed2024-03-25.xls,Energy/4030_BAHRI/2023_Q2_filed2023-08-01.pdf,text_other,5,
 4030-FY2022-FCF,Energy,4030,FY2022,FCF,C,679.179,4030_BAHRI/2023_Annual_filed2024-03-21.pdf | 4030_BAHRI/2023_Annual_filed2024-03-25.xls,,calculated_ok,,recomputed 679.179
 4030-FY2022-FIN_COST,Energy,4030,FY2022,FIN_COST,D,297.408,4030_BAHRI/2023_Annual_filed2024-03-25.xls,Energy/4030_BAHRI/2023_Annual_filed2024-03-21.pdf,text_statement,8,
@@ -763,9 +768,9 @@ fact_id,sector,ticker,period,metric_code,provenance,value_sar_m,source_id,pdf_us
 4030-FY2023-CAPEX,Energy,4030,FY2023,CAPEX,D,1647.22,4030_BAHRI/2024_Annual_filed2025-03-25.xls,Energy/4030_BAHRI/2024_Annual_filed2025-03-26.pdf,not_found,,"value not printed as such in the archive PDFs (rounding, computed XBRL subtotal, or unreadable scan)"
 4030-FY2023-CFO,Energy,4030,FY2023,CFO,R,3560.56,4030_BAHRI/2024_Annual_filed2025-03-25.xls,Energy/4030_BAHRI/2024_Annual_filed2025-03-26.pdf,ocr_statement,11,
 4030-FY2023-COGS,Energy,4030,FY2023,COGS,D,6861.726,4030_BAHRI/2024_Annual_filed2025-03-25.xls,Energy/4030_BAHRI/2024_Annual_filed2025-03-26.pdf,text_other,"29,42",
-4030-FY2023-DA_CF,Energy,4030,FY2023,DA_CF,D,1206.869,4030_BAHRI/2024_Annual_filed2025-03-25.xls,Energy/4030_BAHRI/2024_Annual_filed2025-03-26.pdf,components_found,32;11,"components: Adjustments for depreciation and impairment (reversal of impairment) of property, plant and equipments + Adjustments for amortization and impairment (reversal of impairment) of intangible assets"
-4030-FY2023-EBITDA_C,Energy,4030,FY2023,EBITDA_C,C,3376.579,4030_BAHRI/2024_Annual_filed2025-03-25.xls,,calculated_ok,,"recomputed 3,376.579"
-4030-FY2023-EBITDA_U,Energy,4030,FY2023,EBITDA_U,C,3376.579,4030_BAHRI/2024_Annual_filed2025-03-25.xls,,calculated_ok,,"recomputed 3,376.579"
+4030-FY2023-DA_CF,Energy,4030,FY2023,DA_CF,D,1405.652,4030_BAHRI/2024_Annual_filed2025-03-26.pdf,Energy/4030_BAHRI/2024_Annual_filed2025-03-26.pdf,pdf_override_page,11,value not re-found by search (computed from printed lines or OCR-unreadable); page recorded in the override
+4030-FY2023-EBITDA_C,Energy,4030,FY2023,EBITDA_C,C,3575.362,4030_BAHRI/2024_Annual_filed2025-03-25.xls | 4030_BAHRI/2024_Annual_filed2025-03-26.pdf,,calculated_ok,,"recomputed 3,575.362"
+4030-FY2023-EBITDA_U,Energy,4030,FY2023,EBITDA_U,C,3575.362,4030_BAHRI/2024_Annual_filed2025-03-25.xls | 4030_BAHRI/2024_Annual_filed2025-03-26.pdf,,calculated_ok,,"recomputed 3,575.362"
 4030-FY2023-EQ_ATTR,Energy,4030,FY2023,EQ_ATTR,D,11838.577,4030_BAHRI/2024_Annual_filed2025-03-25.xls,Energy/4030_BAHRI/2024_Annual_filed2025-03-26.pdf,ocr_statement,8,
 4030-FY2023-FCF,Energy,4030,FY2023,FCF,C,1913.34,4030_BAHRI/2024_Annual_filed2025-03-25.xls,,calculated_ok,,"recomputed 1,913.340"
 4030-FY2023-FIN_COST,Energy,4030,FY2023,FIN_COST,D,621.648,4030_BAHRI/2024_Annual_filed2025-03-25.xls,Energy/4030_BAHRI/2024_Annual_filed2025-03-26.pdf,text_other,"29,42",
@@ -785,9 +790,9 @@ fact_id,sector,ticker,period,metric_code,provenance,value_sar_m,source_id,pdf_us
 4030-FY2024-CAPEX,Energy,4030,FY2024,CAPEX,D,5478.523,4030_BAHRI/2025_Annual_filed2026-03-16.xls,Energy/4030_BAHRI/2025_Annual_filed2026-03-17.pdf,not_found,,"value not printed as such in the archive PDFs (rounding, computed XBRL subtotal, or unreadable scan)"
 4030-FY2024-CFO,Energy,4030,FY2024,CFO,D,3405.523,4030_BAHRI/2025_Annual_filed2026-03-16.xls,Energy/4030_BAHRI/2025_Annual_filed2026-03-17.pdf,ocr_statement,11,
 4030-FY2024-COGS,Energy,4030,FY2024,COGS,D,7119.252,4030_BAHRI/2025_Annual_filed2026-03-16.xls,Energy/4030_BAHRI/2025_Annual_filed2026-03-17.pdf,text_other,"29,42",
-4030-FY2024-DA_CF,Energy,4030,FY2024,DA_CF,D,1218.283,4030_BAHRI/2025_Annual_filed2026-03-16.xls,Energy/4030_BAHRI/2025_Annual_filed2026-03-17.pdf,components_found,32;11,"components: Adjustments for depreciation and impairment (reversal of impairment) of property, plant and equipments + Adjustments for amortization and impairment (reversal of impairment) of intangible assets"
-4030-FY2024-EBITDA_C,Energy,4030,FY2024,EBITDA_C,C,3822.274,4030_BAHRI/2025_Annual_filed2026-03-16.xls,,calculated_ok,,"recomputed 3,822.274"
-4030-FY2024-EBITDA_U,Energy,4030,FY2024,EBITDA_U,C,3822.274,4030_BAHRI/2025_Annual_filed2026-03-16.xls,,calculated_ok,,"recomputed 3,822.274"
+4030-FY2024-DA_CF,Energy,4030,FY2024,DA_CF,D,1670.446,4030_BAHRI/2025_Annual_filed2026-03-17.pdf,Energy/4030_BAHRI/2025_Annual_filed2026-03-17.pdf,pdf_override_page,11,value not re-found by search (computed from printed lines or OCR-unreadable); page recorded in the override
+4030-FY2024-EBITDA_C,Energy,4030,FY2024,EBITDA_C,C,4274.437,4030_BAHRI/2025_Annual_filed2026-03-16.xls | 4030_BAHRI/2025_Annual_filed2026-03-17.pdf,,calculated_ok,,"recomputed 4,274.437"
+4030-FY2024-EBITDA_U,Energy,4030,FY2024,EBITDA_U,C,4274.437,4030_BAHRI/2025_Annual_filed2026-03-16.xls | 4030_BAHRI/2025_Annual_filed2026-03-17.pdf,,calculated_ok,,"recomputed 4,274.437"
 4030-FY2024-EQ_ATTR,Energy,4030,FY2024,EQ_ATTR,D,13625.214,4030_BAHRI/2025_Annual_filed2026-03-16.xls,Energy/4030_BAHRI/2025_Annual_filed2026-03-17.pdf,ocr_statement,8,
 4030-FY2024-FCF,Energy,4030,FY2024,FCF,C,-2073.0,4030_BAHRI/2025_Annual_filed2026-03-16.xls,,calculated_ok,,"recomputed -2,073.000"
 4030-FY2024-FIN_COST,Energy,4030,FY2024,FIN_COST,D,621.649,4030_BAHRI/2025_Annual_filed2026-03-16.xls,Energy/4030_BAHRI/2025_Annual_filed2026-03-17.pdf,text_other,"29,43",
@@ -807,9 +812,9 @@ fact_id,sector,ticker,period,metric_code,provenance,value_sar_m,source_id,pdf_us
 4030-FY2025-CAPEX,Energy,4030,FY2025,CAPEX,D,4250.501,4030_BAHRI/2025_Annual_filed2026-03-16.xls,Energy/4030_BAHRI/2025_Annual_filed2026-03-17.pdf,not_found,,"value not printed as such in the archive PDFs (rounding, computed XBRL subtotal, or unreadable scan)"
 4030-FY2025-CFO,Energy,4030,FY2025,CFO,D,3214.077,4030_BAHRI/2025_Annual_filed2026-03-16.xls,Energy/4030_BAHRI/2025_Annual_filed2026-03-17.pdf,ocr_statement,11,
 4030-FY2025-COGS,Energy,4030,FY2025,COGS,D,7550.132,4030_BAHRI/2025_Annual_filed2026-03-16.xls,Energy/4030_BAHRI/2025_Annual_filed2026-03-17.pdf,text_other,"28,42",
-4030-FY2025-DA_CF,Energy,4030,FY2025,DA_CF,D,1555.37,4030_BAHRI/2025_Annual_filed2026-03-16.xls,Energy/4030_BAHRI/2025_Annual_filed2026-03-17.pdf,components_found,31;33,"components: Adjustments for depreciation and impairment (reversal of impairment) of property, plant and equipments + Adjustments for amortization and impairment (reversal of impairment) of intangible assets"
-4030-FY2025-EBITDA_C,Energy,4030,FY2025,EBITDA_C,C,4280.905,4030_BAHRI/2025_Annual_filed2026-03-16.xls,,calculated_ok,,"recomputed 4,280.905"
-4030-FY2025-EBITDA_U,Energy,4030,FY2025,EBITDA_U,C,4280.905,4030_BAHRI/2025_Annual_filed2026-03-16.xls,,calculated_ok,,"recomputed 4,280.905"
+4030-FY2025-DA_CF,Energy,4030,FY2025,DA_CF,D,1941.257,4030_BAHRI/2025_Annual_filed2026-03-17.pdf,Energy/4030_BAHRI/2025_Annual_filed2026-03-17.pdf,pdf_override_page,11,value not re-found by search (computed from printed lines or OCR-unreadable); page recorded in the override
+4030-FY2025-EBITDA_C,Energy,4030,FY2025,EBITDA_C,C,4666.792,4030_BAHRI/2025_Annual_filed2026-03-16.xls | 4030_BAHRI/2025_Annual_filed2026-03-17.pdf,,calculated_ok,,"recomputed 4,666.792"
+4030-FY2025-EBITDA_U,Energy,4030,FY2025,EBITDA_U,C,4666.792,4030_BAHRI/2025_Annual_filed2026-03-16.xls | 4030_BAHRI/2025_Annual_filed2026-03-17.pdf,,calculated_ok,,"recomputed 4,666.792"
 4030-FY2025-EQ_ATTR,Energy,4030,FY2025,EQ_ATTR,D,15269.259,4030_BAHRI/2026_Q3_filed2026-11-03.xls,Energy/4030_BAHRI/2026_Q3_filed2026-11-03.pdf,ocr_statement,4,
 4030-FY2025-FCF,Energy,4030,FY2025,FCF,C,-1036.424,4030_BAHRI/2025_Annual_filed2026-03-16.xls,,calculated_ok,,"recomputed -1,036.424"
 4030-FY2025-FIN_COST,Energy,4030,FY2025,FIN_COST,D,707.729,4030_BAHRI/2025_Annual_filed2026-03-16.xls,Energy/4030_BAHRI/2025_Annual_filed2026-03-17.pdf,text_other,"28,43",
@@ -996,7 +1001,7 @@ fact_id,sector,ticker,period,metric_code,provenance,value_sar_m,source_id,pdf_us
 1010-FY2023-T1_COST,Banks,1010,FY2023,T1_COST,D,319.041,1010_RIBL/2023_Annual_filed2024-03-03.pdf,Banks/1010_RIBL/2023_Annual_filed2024-03-03.pdf,pdf_override_confirmed,13,
 1010-FY2023-T1_SUKUK,Banks,1010,FY2023,T1_SUKUK,D,6562.5,1010_RIBL/2023_Annual_filed2024-03-03.pdf,Banks/1010_RIBL/2023_Annual_filed2024-03-03.pdf,pdf_override_confirmed,52,recorded page 10; value found on 52
 1010-FY2023-TA,Banks,1010,FY2023,TA,D,386848.929,1010_RIBL/2024_Annual_filed2025-03-20.xls,Banks/1010_RIBL/2024_Annual_filed2025-02-11.pdf,text_other,"69,92,97",
-1010-FY2023-TE,Banks,1010,FY2023,TE,D,60258.071,1010_RIBL/2024_Annual_filed2025-03-20.xls,Banks/1010_RIBL/2024_Annual_filed2025-02-11.pdf,text_other,"92,97",
+1010-FY2023-TE,Banks,1010,FY2023,TE,R,60709.554,1010_RIBL/2025_Annual_filed2026-02-10.pdf,Banks/1010_RIBL/2025_Annual_filed2026-02-10.pdf,pdf_override_confirmed,12,
 1010-FY2023-TOI,Banks,1010,FY2023,TOI,D,15898.838,1010_RIBL/2024_Annual_filed2025-03-20.xls,Banks/1010_RIBL/2024_Annual_filed2025-02-11.pdf,text_other,69,
 1010-FY2023-ZAKAT_TAX,Banks,1010,FY2023,ZAKAT_TAX,D,924.955,1010_RIBL/2024_Annual_filed2025-03-20.xls,Banks/1010_RIBL/2024_Annual_filed2025-02-11.pdf,not_found,,"value not printed as such in the archive PDFs (rounding, computed XBRL subtotal, or unreadable scan)"
 1010-FY2024-CFO,Banks,1010,FY2024,CFO,R,10346.74,1010_RIBL/2025_Annual_filed2026-05-17.xls,Banks/1010_RIBL/2025_Annual_filed2026-02-10.pdf,text_statement,13,
@@ -1120,7 +1125,7 @@ fact_id,sector,ticker,period,metric_code,provenance,value_sar_m,source_id,pdf_us
 1020-9M2026-INVEST,Banks,1020,9M2026,INVEST,D,41638.752,1020_BJAZ/2026_Q3_filed2026-10-29.xls,Banks/1020_BJAZ/2026_Q3_filed2026-10-29.pdf,text_other,"17,19",
 1020-9M2026-LOANS,Banks,1020,9M2026,LOANS,D,123367.946,1020_BJAZ/2026_Q3_filed2026-10-29.xls,Banks/1020_BJAZ/2026_Q3_filed2026-10-29.pdf,text_other,"22,47",
 1020-9M2026-NI,Banks,1020,9M2026,NI,D,1319.438,1020_BJAZ/2026_Q3_filed2026-10-29.xls,Banks/1020_BJAZ/2026_Q3_filed2026-10-29.pdf,text_other,34,
-1020-9M2026-NI_ATTR,Banks,1020,9M2026,NI_ATTR,D,1319.438,1020_BJAZ/2026_Q3_filed2026-10-29.xls,,not_found,,"value not printed as such in the archive PDFs (rounding, computed XBRL subtotal, or unreadable scan)"
+1020-9M2026-NI_ATTR,Banks,1020,9M2026,NI_ATTR,D,1319.438,1020_BJAZ/2026_Q3_filed2026-10-29.xls,Banks/1020_BJAZ/2026_Q3_filed2026-10-29.pdf,not_found,,"value not printed as such in the archive PDFs (rounding, computed XBRL subtotal, or unreadable scan)"
 1020-9M2026-NI_CONT,Banks,1020,9M2026,NI_CONT,D,1319.438,1020_BJAZ/2026_Q3_filed2026-10-29.xls,Banks/1020_BJAZ/2026_Q3_filed2026-10-29.pdf,text_other,34,
 1020-9M2026-NSCI,Banks,1020,9M2026,NSCI,D,2516.592,1020_BJAZ/2026_Q3_filed2026-10-29.xls,Banks/1020_BJAZ/2026_Q3_filed2026-10-29.pdf,text_other,43,
 1020-9M2026-OPEX_PRE,Banks,1020,9M2026,OPEX_PRE,D,1854.33,1020_BJAZ/2026_Q3_filed2026-10-29.xls,Banks/1020_BJAZ/2026_Q3_filed2026-10-29.pdf,ocr_statement,4,
@@ -1349,7 +1354,7 @@ fact_id,sector,ticker,period,metric_code,provenance,value_sar_m,source_id,pdf_us
 1030-9M2025-TE,Banks,1030,9M2025,TE,D,21744.764,1030_SAIB/2026_Q3_filed2026-11-03.xls,Banks/1030_SAIB/2026_Q3_filed2026-11-01.pdf,ocr_other,"3,7",
 1030-9M2025-TOI,Banks,1030,9M2025,TOI,D,3166.14,1030_SAIB/2026_Q3_filed2026-11-03.xls,Banks/1030_SAIB/2026_Q3_filed2026-11-01.pdf,text_other,26,
 1030-9M2025-ZAKAT_TAX,Banks,1030,9M2025,ZAKAT_TAX,D,249.751,1030_SAIB/2026_Q3_filed2026-11-03.xls,Banks/1030_SAIB/2026_Q3_filed2026-11-01.pdf,not_found,,"value not printed as such in the archive PDFs (rounding, computed XBRL subtotal, or unreadable scan)"
-1030-9M2026-CFO,Banks,1030,9M2026,CFO,D,5769.746,1030_SAIB/2026_Q3_filed2026-11-03.xls,Banks/1030_SAIB/2026_Q3_filed2026-11-01.pdf,not_found,,"value not printed as such in the archive PDFs (rounding, computed XBRL subtotal, or unreadable scan)"
+1030-9M2026-CFO,Banks,1030,9M2026,CFO,D,5748.285,1030_SAIB/2026_Q3_filed2026-11-01.pdf,Banks/1030_SAIB/2026_Q3_filed2026-11-01.pdf,pdf_override_confirmed,8,
 1030-9M2026-DEBT_ISSUED,Banks,1030,9M2026,DEBT_ISSUED,D,3363.562,1030_SAIB/2026_Q3_filed2026-11-03.xls,Banks/1030_SAIB/2026_Q3_filed2026-11-01.pdf,text_other,28,
 1030-9M2026-DEPOSITS,Banks,1030,9M2026,DEPOSITS,D,120761.216,1030_SAIB/2026_Q3_filed2026-11-03.xls,Banks/1030_SAIB/2026_Q3_filed2026-11-01.pdf,text_other,"22,28",
 1030-9M2026-DEPR,Banks,1030,9M2026,DEPR,D,123.231,1030_SAIB/2026_Q3_filed2026-11-03.xls,Banks/1030_SAIB/2026_Q3_filed2026-11-01.pdf,not_found,,"value not printed as such in the archive PDFs (rounding, computed XBRL subtotal, or unreadable scan)"
@@ -1927,7 +1932,7 @@ fact_id,sector,ticker,period,metric_code,provenance,value_sar_m,source_id,pdf_us
 1060-FY2022-OTHER_OI,Banks,1060,FY2022,OTHER_OI,C,1356.285,1060_SAB/2023_Annual_filed2024-03-24.xls,,calculated_ok,,"recomputed 1,356.285"
 1060-FY2022-PBT,Banks,1060,FY2022,PBT,R,5715.265,1060_SAB/2023_Annual_filed2024-03-24.xls,Banks/1060_SAB/2023_Annual_filed2024-02-15.pdf,text_other,72,
 1060-FY2022-PPOP,Banks,1060,FY2022,PPOP,C,5988.382,1060_SAB/2023_Annual_filed2024-03-24.xls,,calculated_ok,,"recomputed 5,988.382"
-1060-FY2022-PREMISES,Banks,1060,FY2022,PREMISES,D,49.957,1060_SAB/2023_Annual_filed2024-03-24.xls,Banks/1060_SAB/2022_Annual_filed2023-02-14.pdf,later_filing,12,found by ocr_statement in a later filing
+1060-FY2022-PREMISES,Banks,1060,FY2022,PREMISES,D,49.957,1060_SAB/2023_Annual_filed2024-03-24.xls,Banks/1060_SAB/2022_Annual_filed2023-02-14.pdf,ocr_statement,12,
 1060-FY2022-SCE,Banks,1060,FY2022,SCE,D,1913.587,1060_SAB/2023_Annual_filed2024-03-24.xls,Banks/1060_SAB/2023_Annual_filed2024-02-15.pdf,text_other,64,
 1060-FY2022-SCI_GROSS,Banks,1060,FY2022,SCI_GROSS,D,9321.874,1060_SAB/2023_Annual_filed2024-03-24.xls,Banks/1060_SAB/2023_Annual_filed2024-02-15.pdf,text_other,64,
 1060-FY2022-SHARE_JV,Banks,1060,FY2022,SHARE_JV,D,172.144,1060_SAB/2023_Annual_filed2024-03-24.xls,Banks/1060_SAB/2023_Annual_filed2024-02-15.pdf,text_other,"48,72",
@@ -1937,7 +1942,7 @@ fact_id,sector,ticker,period,metric_code,provenance,value_sar_m,source_id,pdf_us
 1060-FY2022-TA,Banks,1060,FY2022,TA,D,314404.124,1060_SAB/2023_Annual_filed2024-03-24.xls,Banks/1060_SAB/2023_Annual_filed2024-02-15.pdf,text_statement,95,
 1060-FY2022-TE,Banks,1060,FY2022,TE,D,54636.651,1060_SAB/2023_Annual_filed2024-03-24.xls,Banks/1060_SAB/2023_Annual_filed2024-02-15.pdf,text_statement,95,
 1060-FY2022-TOI,Banks,1060,FY2022,TOI,D,9650.228,1060_SAB/2023_Annual_filed2024-03-24.xls,Banks/1060_SAB/2023_Annual_filed2024-02-15.pdf,text_statement,95,
-1060-FY2022-ZAKAT_TAX,Banks,1060,FY2022,ZAKAT_TAX,D,835.81,1060_SAB/2023_Annual_filed2024-03-24.xls,Banks/1060_SAB/2022_Annual_filed2023-02-14.pdf,later_filing,12,found by ocr_statement in a later filing
+1060-FY2022-ZAKAT_TAX,Banks,1060,FY2022,ZAKAT_TAX,D,835.81,1060_SAB/2023_Annual_filed2024-03-24.xls,Banks/1060_SAB/2022_Annual_filed2023-02-14.pdf,ocr_statement,12,
 1060-FY2023-CFO,Banks,1060,FY2023,CFO,R,8294.229,1060_SAB/2024_Annual_filed2025-02-20.xls,Banks/1060_SAB/2024_Annual_filed2025-02-10.pdf,text_statement,16,
 1060-FY2023-DEBT_ISSUED,Banks,1060,FY2023,DEBT_ISSUED,D,5177.862,1060_SAB/2024_Annual_filed2025-02-20.xls,Banks/1060_SAB/2024_Annual_filed2025-02-10.pdf,text_other,"91,100,105,108",
 1060-FY2023-DEPOSITS,Banks,1060,FY2023,DEPOSITS,R,253457.49,1060_SAB/2024_Annual_filed2025-02-20.xls,Banks/1060_SAB/2024_Annual_filed2025-02-10.pdf,text_other,"70,108",
@@ -2745,7 +2750,7 @@ fact_id,sector,ticker,period,metric_code,provenance,value_sar_m,source_id,pdf_us
 1140-FY2025-TE,Banks,1140,FY2025,TE,D,21355.92,1140_ALBILAD/2026_Q3_filed2026-10-27.xls,Banks/1140_ALBILAD/2026_Q3_filed2026-10-27.pdf,text_statement,"4,40",
 1140-FY2025-TOI,Banks,1140,FY2025,TOI,D,6191.897,1140_ALBILAD/2025_Annual_filed2026-02-15.xls,Banks/1140_ALBILAD/2025_Annual_filed2026-02-12.pdf,text_statement,9,
 1140-FY2025-ZAKAT_TAX,Banks,1140,FY2025,ZAKAT_TAX,D,350.149,1140_ALBILAD/2025_Annual_filed2026-02-15.xls,Banks/1140_ALBILAD/2025_Annual_filed2026-02-12.pdf,text_statement,9,
-1150-9M2025-CFO,Banks,1150,9M2025,CFO,D,537.572,1150_ALINMA/2026_Q3_filed2026-10-27.xls,Banks/1150_ALINMA/2025_Q3_filed2025-10-29.pdf,later_filing,9,found by ocr_statement in a later filing
+1150-9M2025-CFO,Banks,1150,9M2025,CFO,D,537.572,1150_ALINMA/2026_Q3_filed2026-10-27.xls,Banks/1150_ALINMA/2025_Q3_filed2025-10-29.pdf,ocr_statement,9,
 1150-9M2025-DEBT_ISSUED,Banks,1150,9M2025,DEBT_ISSUED,D,3879.18,1150_ALINMA/2026_Q3_filed2026-10-27.xls,Banks/1150_ALINMA/2026_Q3_filed2026-10-28.pdf,ocr_statement,4,
 1150-9M2025-DEPOSITS,Banks,1150,9M2025,DEPOSITS,D,234622.97,1150_ALINMA/2026_Q3_filed2026-10-27.xls,Banks/1150_ALINMA/2026_Q3_filed2026-10-28.pdf,text_other,"24,33",
 1150-9M2025-DEPR,Banks,1150,9M2025,DEPR,D,313.723,1150_ALINMA/2026_Q3_filed2026-10-27.xls,Banks/1150_ALINMA/2026_Q3_filed2026-10-28.pdf,text_other,28,
@@ -2985,7 +2990,7 @@ fact_id,sector,ticker,period,metric_code,provenance,value_sar_m,source_id,pdf_us
 1150-FY2025-TE,Banks,1150,FY2025,TE,D,48241.122,1150_ALINMA/2026_Q3_filed2026-10-27.xls,Banks/1150_ALINMA/2025_Annual_filed2026-02-05.pdf,text_other,"100,105",
 1150-FY2025-TOI,Banks,1150,FY2025,TOI,D,11905.33,1150_ALINMA/2025_Annual_filed2026-02-05.xls,Banks/1150_ALINMA/2025_Annual_filed2026-02-05.pdf,text_other,"79,80",
 1150-FY2025-ZAKAT_TAX,Banks,1150,FY2025,ZAKAT_TAX,D,728.802,1150_ALINMA/2025_Annual_filed2026-02-05.xls,Banks/1150_ALINMA/2025_Annual_filed2026-02-05.pdf,text_statement,76,
-1180-9M2025-CFO,Banks,1180,9M2025,CFO,D,20494.273,1180_SNB/2026_Q3_filed2026-11-03.xls,Banks/1180_SNB/2026_Q3_filed2026-10-28.pdf,not_found,,"value not printed as such in the archive PDFs (rounding, computed XBRL subtotal, or unreadable scan)"
+1180-9M2025-CFO,Banks,1180,9M2025,CFO,D,20514.355,1180_SNB/2026_Q3_filed2026-10-28.pdf,Banks/1180_SNB/2026_Q3_filed2026-10-28.pdf,pdf_override_confirmed,8,
 1180-9M2025-DEBT_ISSUED,Banks,1180,9M2025,DEBT_ISSUED,D,120679.611,1180_SNB/2026_Q3_filed2026-11-03.xls,Banks/1180_SNB/2026_Q3_filed2026-10-28.pdf,text_statement,4,
 1180-9M2025-DEPOSITS,Banks,1180,9M2025,DEPOSITS,D,639487.977,1180_SNB/2026_Q3_filed2026-11-03.xls,Banks/1180_SNB/2026_Q3_filed2026-10-28.pdf,text_statement,4,
 1180-9M2025-DEPR,Banks,1180,9M2025,DEPR,D,1689.498,1180_SNB/2026_Q3_filed2026-11-03.xls,Banks/1180_SNB/2026_Q3_filed2026-10-28.pdf,components_found,"5,8;5,8",components: Depreciation and amortisation expense + Amortization of intangible assets
@@ -3019,7 +3024,7 @@ fact_id,sector,ticker,period,metric_code,provenance,value_sar_m,source_id,pdf_us
 1180-9M2025-TE,Banks,1180,9M2025,TE,D,197040.749,1180_SNB/2026_Q3_filed2026-11-03.xls,Banks/1180_SNB/2026_Q3_filed2026-10-28.pdf,text_statement,4,
 1180-9M2025-TOI,Banks,1180,9M2025,TOI,D,29267.393,1180_SNB/2026_Q3_filed2026-11-03.xls,Banks/1180_SNB/2026_Q3_filed2026-10-28.pdf,text_statement,5,
 1180-9M2025-ZAKAT_TAX,Banks,1180,9M2025,ZAKAT_TAX,D,2276.801,1180_SNB/2026_Q3_filed2026-11-03.xls,Banks/1180_SNB/2026_Q3_filed2026-10-28.pdf,text_statement,5,
-1180-9M2026-CFO,Banks,1180,9M2026,CFO,D,17463.483,1180_SNB/2026_Q3_filed2026-11-03.xls,Banks/1180_SNB/2026_Q3_filed2026-10-28.pdf,not_found,,"value not printed as such in the archive PDFs (rounding, computed XBRL subtotal, or unreadable scan)"
+1180-9M2026-CFO,Banks,1180,9M2026,CFO,D,17481.545,1180_SNB/2026_Q3_filed2026-10-28.pdf,Banks/1180_SNB/2026_Q3_filed2026-10-28.pdf,pdf_override_confirmed,8,
 1180-9M2026-DEBT_ISSUED,Banks,1180,9M2026,DEBT_ISSUED,D,132975.719,1180_SNB/2026_Q3_filed2026-11-03.xls,Banks/1180_SNB/2026_Q3_filed2026-10-28.pdf,text_statement,4,
 1180-9M2026-DEPOSITS,Banks,1180,9M2026,DEPOSITS,D,669863.179,1180_SNB/2026_Q3_filed2026-11-03.xls,Banks/1180_SNB/2026_Q3_filed2026-10-28.pdf,text_statement,4,
 1180-9M2026-DEPR,Banks,1180,9M2026,DEPR,D,1793.117,1180_SNB/2026_Q3_filed2026-11-03.xls,Banks/1180_SNB/2026_Q3_filed2026-10-28.pdf,components_found,"5,8;5,8",components: Depreciation and amortisation expense + Amortization of intangible assets

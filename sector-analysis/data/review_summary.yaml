@@ -1,30 +1,39 @@
-summary: >-
-  Four independent reviewers checked the pilot: Energy data accuracy, Banks data accuracy, budget and policy reasoning,
-  and the HTML page's usability on desktop and mobile. The reviews were sample-based, not a full audit: about 640 of the
-  roughly 3,160 published values were traced back to the PDFs, and about 90 of the 146 policy items were checked against
-  their sources. Every reviewer rechecked the fixes, which produced 26 further issues. Of the 139 logged issues, 130 are
-  fixed, 6 partly fixed, 1 accepted as documented, 1 kept after disagreement (with reasons) and 1 open. A final short pass
-  confirmed the second-round fixes (Banks 10 of 10, HTML 8 of 11, policy 25 of 30). The few corrections made after that pass
-  (the bank top-up-tax reasoning, the phone table layout and some leftover wording) were checked by the automated build
-  checks and a browser test but not re-reviewed by the reviewers.
+summary: 'The pilot was reviewed in two stages. First, four independent sample reviews (Energy data, Banks data, budget and policy reasoning, HTML usability) traced about 640 of the roughly 3,160 published
+  values to the PDFs and logged 139 issues. Then, at close-out, every figure was traced. All 3,227 figures in the dataset (16 companies, FY2021 to 9M 2026, including supporting figures) were matched to
+  a page of their source PDF, built from printed component lines, or recomputed from their inputs. The matching used the text layer, OCR of all 588 image-only pages and the PDF pages recorded for corrections.
+  Every automatic match was then tested for whether the matched line names the item. 544 figures were checked by hand on the PDF page by six independent reviewers: every figure not located or not clearly
+  matched, all 60 loan-ECL figures, every small or correction-page figure, and a random sample of 170 automatic matches. The hand checks found 14 wrong values; all are corrected, with 33 figures changed
+  including related periods, and logged as 10 new issues. Of the 149 logged issues, 148 are fixed and 1 is accepted with reasons (exchange links for older filings).'
 checked:
-  - "Energy: 176 values traced from the published data to the PDF statements (148 matched first time; core metrics 105 of 108). All 28 differences were explained or corrected. The second round rechecked all 23 Energy issues."
-  - "Banks: 442 values traced to the PDFs (432 matched first time), plus 25 more in the recheck (24 matched; the miss, an Alinma impairment basis, is now corrected). The 10 differences were five FY2023 equity figures not yet updated to the restated comparatives, and five Alinma impairment figures; all are now corrected. SNB's 9M 2026 credit-loss charge of SAR 2.6m was confirmed on the income statement (p.5)."
-  - "Budget and policy: 75 fact-base items checked against their source (64 fully confirmed, 11 partly; all dates confirmed), and 18 more in the recheck (17 values confirmed). The reviewer challenged the reasoning in each impact channel twice (39 issues, then 15 more), including the top-up tax channel, the oil-volume illustration and the rate mechanism."
-  - "HTML: every view at 1280 px and 390 px, in light and dark mode, tested twice; in the recheck all 1,865 page figures matched the workbook and all 536 reference chips opened a source. 12 figures were compared with the workbook, and all 64 company like-for-like bridges matched the workbook. Navigation, the drawer and keyboard use were also tested."
-  - "Automated checks on every build: Excel sector totals, growth, CAGR and ratios recalculated in LibreOffice and compared with the Python engine (244 values, 0 mismatches). 5,052 formulas, 0 errors. Every reference chip resolves (485). Ratio levels quoted in company narratives match the calculated ratios. Browser test: no script errors and no horizontal overflow."
+- 'Full trace of all 3,227 figures: 2,360 matched on a PDF page (2,097 on the text layer, 263 by OCR of scanned pages, including sideways statements); 77 built from printed component lines; 171 taken from
+  a PDF page by correction; 111 located by hand; 13 corrected after the hand check; 417 calculated figures recomputed from their inputs (0 differences); 70 internal reconciliation checks; 7 left blank on
+  purpose. None remains unlocated. In the company tables, all 1,320 disclosed figures name their PDF page (73% before).'
+- 'Independent hand check of 544 figures by six reviewers working from the PDFs (rendered images for scanned pages): 448 confirmed as printed, 82 confirmed from printed components, 14 wrong and corrected.
+  Of a random sample of 170 automatic matches, 168 were confirmed; both errors were definitional (SARCO), not misread digits.'
+- 'Label check on the 2,496 automatic matches: 2,298 sat on a line that names the item; the other 198 were all checked by hand, which found 4 wrong lines (SARCO''s associates), now corrected.'
+- 'Bank cost of risk: the ECL charge on loans and financing was read from each bank''s credit-risk note for 10 banks x 6 periods, and all 60 figures were checked again by hand against the notes.'
+- 'Underlying profit: 25 one-offs (all register items and every item over 5% of attributable profit) were read in the notes for their tax or zakat effect and minority share.'
+- 'Earlier sample reviews: Energy 176 values and Banks 467 values traced to the PDFs; 93 budget and policy items checked against their sources with the reasoning challenged twice; every HTML view tested
+  at 1280 px and 390 px.'
+- 'Automated checks on every build: Excel sector totals, growth, CAGR and ratios recalculated in LibreOffice and compared with the Python engine (244 values, 0 mismatches); 5,132 formulas, 0 errors; every
+  reference chip resolves; ratio levels and cost-of-risk quotes in the narratives match the calculated ratios.'
 fixed:
-  - "Equity attributable now includes companies without minority interests (Petro Rabigh), so sector ROE covers all six Energy companies."
-  - "Energy margins use revenue plus Aramco's other income related to sales (the margin base). Operating income uses a single definition, and the inconsistent reported operating-profit series was removed. EBITDA excluding identified one-offs was added, with one-offs removed symmetrically (ADES 9M 2025 and 9M 2026)."
-  - "Bank income statements are classified by position (fees net of fee expense; impairments split from operating costs). The fee figures in the Al Rajhi FY2022 XBRL were corrected from the PDF."
-  - "Latest restated comparatives applied evenly: FY2023 equity for five banks and Alinma impairments, with a reason recorded for every restatement."
-  - "Growth, CAGR and margins are n.m. when the base is zero, negative, below SAR 10m, or the sign changes. This applies in both the HTML and the workbook (e.g. SARCO)."
-  - "Policy section rewritten: confirmed final-budget facts are separated from preliminary and ministerial statements and from interpretation. Bank impacts are differentiated by rate sensitivity, citing fact ids. Both bases are given for the 2027 spending change (−3% vs the 2026 outturn, +6% vs the 2026 budget)."
-  - "HTML: Aramco's text now agrees with its table. Bridge signs are consistent. The page is readable on phones (charts at card width, period switch, stacked cards). Scope is in the URL. Reference chips are labelled and all resolve. The figure drawer is accessible and closes with Back. The review log is embedded."
-  - "Workbook is delivered recalculated with cached values; COR, ROA and the margin on assets are shown to two decimals."
+- 'Cost of risk is on one basis for all ten banks: ECL on loans and financing from the credit-risk notes, net of recoveries, over average net loans, in basis points. The sector trend is restated: 44 bp
+  (FY2022), a low of 32 bp (FY2024), 35 bp (FY2025); the old mixed basis showed a steady fall from 46 to 30 bp.'
+- 'Every one-off shows its tax and minority-share status. Net profit is adjusted only where both are disclosed: Bank Aljazira''s FY2025 prior-year zakat. Reported profit is kept everywhere else.'
+- 'Full-review corrections: SNB and SAIB 9M operating cash flow; Arabian Drilling and ADES impairment add-backs; SARCO''s share of associates (was its whole investment-results subtotal); right-of-use depreciation
+  added to D&A for Bahri and SARCO. As a result Bahri''s FY2025 EBITDA margin is 45.1% (was 41.4%) and the ex-Aramco FY2025 margin is 18.3% (was 17.6%); all-Energy margins move by 0.03 pp at most. Riyad
+  Bank''s FY2023 total equity now uses the restated balance.'
+- 'Aldrees: the Saudi Exchange moved it from Energy to Consumer Discretionary Distribution & Retail on 14 Sep 2025, so it is excluded from every period (constant universe); the Energy totals are unchanged.'
+- Like-for-like growth stays 'not determinable' where evidence is insufficient (SNB, Alinma FY2025 and 9M 2026, SAIB FY2025); Petro Rabigh's new-capacity step is now not determinable rather than an inferred
+  zero.
+- Coverage labels every filing whose primary statements are scanned, with the pages read by OCR (54 filings). Every figure's source drawer says how it was traced and whether a reviewer checked it.
+- 'Earlier rounds: definitions made consistent (margin base, operating income, bank income-statement classification, n.m. rules); restated comparatives applied evenly; policy section rewritten; HTML usable
+  on phones; workbook delivered recalculated.'
 unresolved:
-  - "Aldrees Petroleum (4200) is listed in Energy by the Saudi Exchange but filed elsewhere in the archive, so it is not in the Energy totals (open; recommended for the roll-out once the sector mapping is confirmed)."
-  - "Underlying net profit is not computed because the filings do not disclose the tax and zakat effect of the one-offs (partly fixed: EBITDA excluding one-offs is shown, and Aramco's own adjusted profit is quoted with attribution)."
-  - "Cost of risk across banks is approximately comparable: some banks' impairment line includes non-financing assets (partly fixed: each bank's basis is documented)."
-  - "Values on scanned PDF pages (73 files) rest on the XBRL file plus the auditors' sample checks. For about 27% of disclosed figures no PDF page was located, and about half have no saudiexchange.sa link because the archive manifests list only recent filings."
-  - "Petro Rabigh new capacity is recorded as 'none identified' from the financial-statement notes. The reviewer would prefer 'not determinable' because the archive holds no operating report. Kept, at Medium confidence."
+- 'Underlying net profit is not shown, except Bank Aljazira FY2025: no other filing gives both the tax effect and the minority share of its one-offs. Reported profit is kept, and each one-off states why.'
+- Like-for-like growth is not determinable for SNB (every year), Alinma (FY2025, 9M 2026), SAIB (FY2025) and the Petro Rabigh new-capacity step, because the filings do not quantify the step.
+- 'Cost of risk has small labelled basis differences: Riyad includes commitments; Albilad is before recoveries; SAB''s write-off and recovery line is attributed to loans; SNB 9M is derived; SAIB 9M 2026
+  is approximate.'
+- 'About half of the disclosed figures have no saudiexchange.sa link: the archive manifests list only recent filings, and the exchange website refuses automated look-ups. The archive file and PDF page are
+  the locator for every figure.'

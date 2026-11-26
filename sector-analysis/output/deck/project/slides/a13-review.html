@@ -1,35 +1,36 @@
 <section id="a13-review">
 <div class="head">
 <p class="eyebrow">A13 · Data coverage and review record</p>
-<h2>What was checked, and what is still open</h2>
+<h2>Every figure traced; 148 of 149 issues fixed</h2>
 </div>
 <div class="cols2">
 <div class="panel" style="flex:0 0 700px">
 <h3>Coverage and traceability</h3>
 <ul>
 <li>16 companies, FY2022 to 9M 2026 complete; all 600 archive files checked inside the file.</li>
-<li>66 PDFs are image-only; their figures rest on the XBRL file plus sample checks.</li>
-<li>1,314 disclosed figures: PDF page located for 73%, exchange link for 50%.</li>
-<li>Excel matches the Python engine on all 244 sector checks; 5,052 formulas, 0 errors.</li>
+<li>All 3,227 figures traced: 2,360 found by search (263 by OCR of scanned pages), 373 from components, correction pages or by hand, 417 recomputed, 77 checks or blanks; none unlocated.</li>
+<li>All 1,320 disclosed figures in the tables name their PDF page (73% before); exchange link for 50%.</li>
+<li>544 figures checked by hand by six reviewers: 530 confirmed, 14 corrected. Excel matches Python on all 244 checks.</li>
 </ul>
 </div>
 <div class="panel">
-<h3>Independent reviews (sample-based)</h3>
+<h3>Independent reviews</h3>
 <table>
 <tr><th style="width:26%">Review</th><th style="width:30%">Checked</th><th style="width:12%;text-align:right">Issues</th><th style="width:32%">Outcome</th></tr>
-<tr><td>Energy data</td><td>176 values to PDFs</td><td>23</td><td>19 fixed, 2 partly, 2 open/kept</td></tr>
-<tr><td>Banks data</td><td>467 values to PDFs</td><td>14</td><td>12 fixed, 1 partly, 1 accepted</td></tr>
-<tr><td>Budget, policy</td><td>93 items, reasoning</td><td>54</td><td>53 fixed, 1 partly</td></tr>
-<tr><td>HTML page</td><td>All views, two sizes</td><td>48</td><td>46 fixed, 2 partly</td></tr>
-<tr class="tot"><td>Total</td><td></td><td>139</td><td>130 fixed</td></tr>
+<tr><td>Energy data</td><td>176 values to PDFs</td><td>23</td><td>23 fixed</td></tr>
+<tr><td>Banks data</td><td>467 values to PDFs</td><td>14</td><td>14 fixed</td></tr>
+<tr><td>Budget, policy</td><td>93 items, reasoning</td><td>54</td><td>54 fixed</td></tr>
+<tr><td>HTML page</td><td>All views, two sizes</td><td>48</td><td>47 fixed, 1 accepted</td></tr>
+<tr><td>Full review</td><td>Every figure; 544 by hand</td><td>10</td><td>10 fixed</td></tr>
+<tr class="tot"><td>Total</td><td></td><td>149</td><td>148 fixed, 1 accepted</td></tr>
 </table>
-<p class="note">Still open: Aldrees outside Energy totals; no underlying net profit (tax effects not disclosed); cost of risk only roughly comparable across banks; no manual page search for scanned statements.</p>
+<p class="note">Accepted: no exchange link for older filings (the website blocks automated look-ups; file and page are given). By design: underlying profit only where tax and minority share are disclosed; like-for-like n.d. where the filings do not quantify it.</p>
 </div>
 </div>
 <div class="footer">
-<p class="src">Full review log: workbook Review_Log sheet and the <a href="https://claude.ai/artifact/S6WbKW982FXGgTX9c3gKwt#data">interactive page</a></p>
+<p class="src">Full review log: Review_Log.xlsx (every issue and every hand check) and the <a href="https://claude.ai/artifact/S6WbKW982FXGgTX9c3gKwt#data">interactive page</a></p>
 <p class="go"><a href="https://claude.ai/artifact/UBQR6WJDgHtK2MRQ9xFPky#slide-8">← Review summary</a> · <a href="https://claude.ai/artifact/UBQR6WJDgHtK2MRQ9xFPky#slide-9">Contents</a></p>
 <p class="pn"></p>
 </div>
-<aside>Each reviewer checked our fixes, and a final short pass confirmed the second-round fixes; the last few corrections after that pass were covered by automated checks and a browser test only. The reviews traced about one published value in five back to the PDFs, so this is not a full audit. One Energy item was kept after disagreement: Petro Rabigh’s new capacity is recorded as none identified from the statement notes, where the reviewer preferred not determinable.</aside>
+<aside>The first four reviews were sample-based (about 640 of 3,160 values). The close-out traced every figure: text search and OCR of all 588 scanned pages, a check that each match sits on the right line, and a hand check of 544 figures by six independent reviewers on the PDF page. They found 14 wrong values: SNB and SAIB 9M operating cash flow, impairment add-backs at Arabian Drilling and ADES, SARCO’s share of associates and right-of-use depreciation at Bahri and SARCO. All are corrected; Bahri’s FY2025 EBITDA margin is now 45.1% (was 41.4%). Of 170 automatic matches sampled at random, 168 were right; the two misses were definitions, not misread digits.</aside>
 </section>

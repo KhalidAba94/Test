@@ -80,6 +80,7 @@ what_it_means:
 confidence_overall: "Medium"
 data_notes:
   - "Operating income (OPINC) is calculated as PBT + finance cost - finance income - share of equity-accounted results, which equals the 'Operating profit' line in the audited and reviewed statements (e.g. FY2025 SAR 2,725.5m, p.9; 9M 2026 SAR 10,000.8m, p.5). The XBRL 'Operating profit' tag kept as OPINC_REP excludes 'Other income' (FY2025 SAR 107.4m; FY2023 SAR 340.3m) and should not be used as the reported figure."
+  - "D&A for EBITDA includes depreciation of right-of-use assets (chartered vessels; FY2024 SAR 452m, FY2025 SAR 386m, 9M 2026 SAR 113m vs SAR 309m), on the same IFRS 16 basis as the other Energy companies. The XBRL D&A rows omit it; it was added from the cash-flow statements in the full review."
   - "Gross profit (GP) is 'gross profit before bunker subsidy'. The unconditional government bunker subsidy (FY2025 SAR 301.1m; 9M 2026 SAR 189.9m vs SAR 238.9m) is added below it and is not in revenue."
   - "9M 2025 comparatives were reclassified in the 9M 2026 interim (SAR 112.3m moved out of operating costs; G&A, a new marketing line and other income changed); no effect on net profit. GP 9M 2025 is therefore SAR 1,801.8m (R) vs SAR 1,689.5m first reported."
   - "FY2022 operating cash flow uses the FY2023 AFS comparative (SAR 1,989.5m, override 4030_fix.csv); FY2023 CFO is the FY2024 AFS comparative (SAR 3,560.6m vs SAR 3,642.9m first reported). Capex = additions to PP&E, projects under construction and intangibles."

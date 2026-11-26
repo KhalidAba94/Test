@@ -2,7 +2,7 @@
 import csv, glob, os, sys
 root = sys.argv[1]
 res = {r["issue_id"]: r for r in csv.DictReader(open(os.path.join(root, "data", "review", "resolutions.csv"), encoding="utf-8"))}
-area = {"energy_data": "Energy data accuracy", "banks_data": "Banks data accuracy", "policy_review": "Budget & policy reasoning", "html_review": "HTML presentation & usability"}
+area = {"energy_data": "Energy data accuracy", "banks_data": "Banks data accuracy", "policy_review": "Budget & policy reasoning", "html_review": "HTML presentation & usability", "fullreview": "Full review (every figure)"}
 out = []
 for f in sorted(glob.glob(os.path.join(root, "data", "review", "*_issues.csv"))):
     key = os.path.basename(f).replace("_issues.csv", "")
