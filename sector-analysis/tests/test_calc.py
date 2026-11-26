@@ -9,6 +9,7 @@ def F(rows):
 def test_growth_and_cagr():
     assert abs(c.growth(110, 100) - 0.10) < 1e-12
     assert c.growth(10, -5) == c.NM
+    assert c.growth(-5, 10) == c.NM          # profit to loss: sign change
     assert c.growth(None, 5) is None
     assert abs(c.cagr(133.1, 100, 3) - 0.10) < 1e-9
     assert c.cagr(10, -1, 3) == c.NM

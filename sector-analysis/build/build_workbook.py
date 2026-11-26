@@ -104,7 +104,7 @@ def lookup(key):
 
 
 def growth_formula(cur, pri):
-    return f'=IF(AND(ISNUMBER({cur}),ISNUMBER({pri})),IF({pri}>0,{cur}/{pri}-1,"n.m."),"")'
+    return f'=IF(AND(ISNUMBER({cur}),ISNUMBER({pri})),IF(AND({pri}>0,{cur}>=0),{cur}/{pri}-1,"n.m."),"")'
 
 
 # ---------------------------------------------------------------- sheets
@@ -485,7 +485,7 @@ def build_sector(wb, sector, cfg, ds, narr, comp_sheets):
                     mask = f"--ISNUMBER({cr}),--ISNUMBER({prr}),--(ROW({cr})<>{i})"
                 else:
                     mask = f"--ISNUMBER({cr}),--ISNUMBER({prr})"
-                ws[f"{col}{r}"] = f'=IFERROR(IF(SUMPRODUCT({mask},{prr})>0,SUMPRODUCT({mask},{cr})/SUMPRODUCT({mask},{prr})-1,"n.m."),"n.m.")'
+                ws[f"{col}{r}"] = f'=IFERROR(IF(AND(SUMPRODUCT({mask},{prr})>0,SUMPRODUCT({mask},{cr})>=0),SUMPRODUCT({mask},{cr})/SUMPRODUCT({mask},{prr})-1,"n.m."),"n.m.")'
                 ws[f"{col}{r}"].number_format = PCT
                 if cur.startswith("9M"):
                     ws[f"{col}{r}"].fill = YTD_FILL

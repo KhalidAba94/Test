@@ -19,11 +19,11 @@ def _ok(x) -> bool:
 
 
 def growth(cur, prior):
-    """YoY growth as a fraction; n.m. if prior <= 0 or either side is missing."""
+    """YoY growth as a fraction; n.m. if prior <= 0 or the sign changes; None if either side is missing."""
     if not (_ok(cur) and _ok(prior)):
         return NA
-    if prior <= 0:
-        return NM
+    if prior <= 0 or cur < 0:
+        return NM   # non-positive base or a change of sign (profit to loss) is not meaningful
     return cur / prior - 1.0
 
 
