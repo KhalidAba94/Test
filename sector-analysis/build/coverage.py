@@ -21,6 +21,8 @@ out = []
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import sectors as _sectors
 _SLUG = {x["key"]: x["slug"] for x in _sectors.load(root)}
+_ARCH = {x["key"]: x["archive"] for x in _sectors.load(root)}
+_RAW = _sectors.raw(root)
 for sector in [k for k in _SLUG if k in ds]:
     s = _SLUG[sector]
     src = list(csv.DictReader(open(os.path.join(root, "data", s, "sources.csv"), encoding="utf-8")))
@@ -40,23 +42,39 @@ for sector in [k for k in _SLUG if k in ds]:
             pdf, xls = d.get("pdf"), d.get("xls")
             have = []
             if pdf:
-                stm = scanned.get(f"{sector}/{pdf['source_id']}")
+                stm = scanned.get(f"{_ARCH[sector]}/{pdf['source_id']}") or scanned.get(f"{sector}/{pdf['source_id']}")
                 have.append("PDF" + (f"(statements scanned, read by OCR: p.{stm})" if stm else ""))
             if xls:
-                have.append("XBRL" if xls.get("status") == "used" else "XBRL(unreadable)")
+                have.append({"used": "XBRL", "flagged": "XBRL (label or symbol flag explained in Sources)"}.get(xls.get("status"), "XBRL(unreadable)"))
             metric = "NI_ATTR" if t in ("2030",) else top   # investment holding: no revenue line
             fx = fidx.get((t, per, metric))
+            anyfx = [x for k, x in fidx.items() if k[0] == t and k[1] == per and x.get("value_sar_m") not in ("", None)]
+            first = min((k[1] for k, x in fidx.items() if k[0] == t and k[1].startswith("FY") and k[1] != "FY2021" and x.get("value_sar_m") not in ("", None)), default="FY2022")
+            ccfg = (_RAW.get(sector, {}).get("constituents", {}) or {}).get(t, {})
+            plab = (ccfg.get("period_labels") or {}).get(per, "")
+            excl = (ccfg.get("exclude_from_totals") or {}).get(per, "")
             if fx:
                 used = fx["source_id"].split("/")[-1].split("_filed")[0].replace("_", " ")
                 prov = {"D": "", "R": " [restated]", "C": " [calc]"}.get(fx["provenance"], "")
                 cell = f'{"+".join(have) or "no own filing"}; value used from {used}{prov}'
                 if "OVERRIDE" in fx.get("note", ""):
                     cell += " [from PDF]"
+            elif anyfx:
+                # the period is covered but the top line is not printed (e.g. a REIT fact sheet without rental income)
+                src0 = anyfx[0]["source_id"].split("/")[-1].split("_filed")[0].replace("_", " ")
+                cell = f'{"+".join(have) or "no own filing"}; {len(anyfx)} figures used from {src0}; {metric} not printed'
+                flags.append(f"{per}: {metric} not printed")
+            elif per.startswith("FY") and per < first:
+                cell = "not applicable: before the company's first financial period in the archive"
             else:
                 cell = ("MISSING: " + ("+".join(have) if have else "no filing in archive"))
+                if per.startswith("9M") and l == "Q3" and not d:
+                    cell = "MISSING: no Q3 filing in archive"
                 flags.append(f"{per}: {metric} not available")
-            if per.startswith("9M") and l == "Q3" and not d:
-                cell = "MISSING: no Q3 filing in archive"
+            if plab and per != "FY2021":
+                cell += f" [period: {plab}]"
+            if excl:
+                cell += " [left out of group totals]"
             row[per] = cell
         nr = sum(1 for k, x in fidx.items() if k[0] == t and x["provenance"] == "R")
         no = sum(1 for k, x in fidx.items() if k[0] == t and "OVERRIDE" in x.get("note", ""))

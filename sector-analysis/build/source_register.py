@@ -72,7 +72,27 @@ def pdf_check(path, ticker, year, label):
     return n_pages, "yes" if name_ok else "NO", "yes" if date_ok else "NO", "; ".join(notes)
 
 
+def _name_keys(out_sources):
+    """Distinctive name words for every company of this root (config names), added to the pilot list."""
+    root = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(out_sources))))
+    p = os.path.join(root, "config", "sectors.json")
+    if not os.path.exists(p):
+        return
+    STOPW = {"company", "co.", "co", "the", "group", "fund", "reit", "for", "and", "holding", "saudi", "arabia", "of", "(1)", "1"}
+    for g, c in json.load(open(p, encoding="utf-8")).items():
+        for t, cc in (c.get("constituents") or {}).items():
+            if t in NAME_KEYS:
+                continue
+            words = set()
+            for nm in (cc.get("name", ""), cc.get("short", ""), cc.get("legal_name", "")):
+                for w in re.split(r"[\s(),]+", nm):
+                    if len(w) >= 4 and w.lower() not in STOPW:
+                        words.add(w)
+            NAME_KEYS[t] = sorted(words)
+
+
 def main(src_dir, sector, meta_csv, out_sources, out_cov):
+    _name_keys(out_sources)
     meta = {(m["company_dir"], m["file"]): m for m in csv.DictReader(open(meta_csv, encoding="utf-8"))}
     rows = []
     for comp_dir in sorted(glob.glob(os.path.join(src_dir, "*"))):
@@ -87,7 +107,9 @@ def main(src_dir, sector, meta_csv, out_sources, out_cov):
         for f in sorted(os.listdir(comp_dir)):
             if f == "manifest_part.json":
                 continue
-            m = re.match(r"(\d{4})_(Annual|Q1|Q2|Q3|Q4)_filed(\d{4}-\d{2}-\d{2})\.(pdf|xls)$", f)
+            # archive names may carry a suffix: a time stamp (_t16-46-18), the XBRL period and year-end
+            # (_XBRLperiod..._FYE-Mar2023) or a note that the exchange mislabelled the filing
+            m = re.match(r"(\d{4})_(Annual|Q1|Q2|Q3|Q4)_filed(\d{4}-\d{2}-\d{2})(?:_[A-Za-z0-9_.-]*?)?\.(pdf|xls)$", f)
             if not m:
                 rows.append({"source_id": f"{comp}/{f}", "sector": sector, "ticker": ticker, "file": f,
                              "status": "excluded", "status_reason": "unrecognised filename pattern"})
