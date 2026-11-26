@@ -193,7 +193,12 @@ summary{cursor:pointer;font:600 14px var(--f-head);color:var(--accent);min-heigh
 <script>
 (function(){
 "use strict";
-const D = JSON.parse(document.getElementById('data').textContent);
+// data is embedded in the standalone file; the hosted page loads it from data.json beside the page
+const raw = document.getElementById('data').textContent.trim();
+if (raw && raw !== 'null') boot(JSON.parse(raw));
+else fetch('data.json').then(r=>{ if(!r.ok) throw new Error(String(r.status)); return r.json(); }).then(boot)
+  .catch(()=>{ document.getElementById('main').innerHTML='<p style="padding:24px 0">The data file could not be loaded. Reload the page to try again.</p>'; });
+function boot(D){
 const $ = s => document.querySelector(s);
 const esc = s => String(s==null?'':s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const MINUS='−';
@@ -674,7 +679,7 @@ const jump = $('#jumpco');
 jump.innerHTML = `<option value="">Go to a company…</option>` + ['Energy','Banks'].map(S=>`<optgroup label="${S}">${D.sectors[S].tickers.map(t=>`<option value="${t}">${esc(coName(t))}</option>`).join('')}</optgroup>`).join('');
 jump.addEventListener('change', ()=>{ if (jump.value) location.hash='co-'+jump.value; });
 function route(){
-  const v=(location.hash||'#overview').slice(1)||'overview'; const m=v.match(/^(energy|banks)(?:\/(ex))?$/);
+  const v=(location.hash||'#overview').slice(1)||'overview'; const m=v.match(/^(energy|banks)(?:-(ex))?$/);
   if (m) return {kind:'sector', key:m[1], scope:m[2]?'ex_largest':'all', nav:m[1]};
   if (/^co-\d{4}$/.test(v) && coInfo(v.slice(3))) return {kind:'company', t:v.slice(3), nav:coSector(v.slice(3)).toLowerCase()};
   if (['budget','method','data'].includes(v)) return {kind:v, nav:v};
@@ -697,7 +702,7 @@ function rerender(){
   render(); window.scrollTo(0,y); if(key){ const el=document.querySelector(key); if(el) el.focus({preventScroll:true}); }
 }
 function wire(r){
-  document.querySelectorAll('[data-scope]').forEach(b=>b.addEventListener('click', ()=>{ history.replaceState(null,'','#'+r.key+(b.dataset.scope==='all'?'':'/ex')); rerender(); }));
+  document.querySelectorAll('[data-scope]').forEach(b=>b.addEventListener('click', ()=>{ history.replaceState(null,'','#'+r.key+(b.dataset.scope==='all'?'':'-ex')); rerender(); }));
   const ps=$('#pairsel'); if(ps) ps.addEventListener('change', ()=>{ pairState[SECT[r.key]]=ps.value; rerender(); });
   const bs=$('#brsel'); if(bs) bs.addEventListener('change', ()=>{ window.__bridgePair=window.__bridgePair||{}; window.__bridgePair[bs.dataset.t]=bs.value; rerender(); });
   const cf=$('#clsf'), sf=$('#secf'); const ff=()=>{ document.querySelectorAll('#itbl tr[data-cls]').forEach(x=>{ const cv=cf.value; const okc=!cv || (cv.startsWith('g:')? x.dataset.grp===cv.slice(2) : x.dataset.cls===cv); x.hidden = !okc || (sf.value && x.dataset.sec!==sf.value && x.dataset.sec!=='All'); }); };
@@ -708,5 +713,6 @@ let rz=null; window.addEventListener('resize', ()=>{ clearTimeout(rz); rz=setTim
 window.addEventListener('hashchange', ()=>{ render(); window.scrollTo(0,0); $('#main').focus({preventScroll:true}); });
 setPV('fy');
 render();
+}
 })();
 </script>

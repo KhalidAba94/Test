@@ -143,9 +143,11 @@ def main(root, out, body_out=None):
     open(out, "w", encoding="utf-8").write(STANDALONE_HEAD + body)
     print(f"html -> {out} ({len(body)/1024:.0f} KB); supporting facts: {len(extra)}; "
           f"disclosed figures with PDF page {st['with_page']}/{st['disclosed']}, with link {st['with_link']}/{st['disclosed']}")
-    if body_out:
-        open(body_out, "w", encoding="utf-8").write(body)
-        print(f"artifact body -> {body_out}")
+    if body_out:   # hosted page: no document head, data in data.json beside the page
+        open(body_out, "w", encoding="utf-8").write(tpl)
+        open(os.path.join(os.path.dirname(os.path.abspath(body_out)), "data.json"), "w", encoding="utf-8").write(
+            json.dumps(web, separators=(",", ":"), default=lambda o: None))
+        print(f"artifact body -> {body_out} (+ data.json)")
 
 
 if __name__ == "__main__":
