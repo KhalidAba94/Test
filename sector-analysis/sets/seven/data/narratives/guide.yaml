@@ -18,10 +18,9 @@ sections:
   - Growth and CAGR are 'n.m.' (not meaningful) when the starting value is zero, negative or below SAR 10m, or when a profit turns into a loss. Margins are 'n.m.' when revenue is below SAR 10m (e.g. an
     investment holding with almost no revenue). Return on equity is 'n.m.' when average equity is zero or negative, and net debt / EBITDA is 'n.m.' when (annualised) EBITDA is negative or below SAR 10m.
   - 9M ratios that divide by a balance-sheet amount (ROE) and net debt ÷ EBITDA are annualised (× 12/9). Income figures are never annualised.
-  - All 47 companies report to 31 December. SADAFCO changed its year-end from 31 March to 31 December, so its 2023 financial year is nine months (April to December 2023); growth across that year is labelled,
-    not compared like for like. Companies listed during the period have no figures before their first filed statements in the archive.
-  - REITs publish half-yearly fund reports, not quarterly statements, so their 2026 year-to-date is the six months to 30 June (H1 2026 vs H1 2025), shown in the 9M columns and labelled; it is not added
-    to nine-month totals.
+  - "All 47 companies now report to 31 December. Four have a short year, shown with its true length, left out of group totals, and with growth across it shown as 'n.m.': SADAFCO FY2023 (nine months, after moving from a 31 March year-end), Cenomi Centers FY2022 and Cenomi Retail FY2022 (nine months each, after moving from 31 March) and MBC FY2023 (its first, eight-month period). Companies listed or formed during the period have no figures before their first filed statements in the archive (e.g. Entaj from FY2023)."
+  - REITs publish audited annual and reviewed half-yearly statements. Their nine-month figures come from the quarterly fund fact sheets, which are unaudited and print only some items
+    (several funds give no nine-month rental income), so REIT 9M totals cover fewer funds and the company pages show which figures exist.
 - heading: Numbers and labels
   lines:
   - 'Units: SAR million unless stated. Filings in SAR or SAR ''000 were converted using the rounding level declared in each filing, then checked against the next year''s comparatives to catch unit errors.'

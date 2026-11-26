@@ -14,8 +14,13 @@ STMT = re.compile(r"statement of (profit|income|financial position|cash flows|co
 
 
 def main(root, cache):
+    sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+    import sectors   # only the archive folders of this root's sectors (the cache is shared between sets)
+    archives = {s["archive"] for s in sectors.load(root)}
     rows = []
     for d in sorted(os.listdir(cache)):
+        if d.split("__")[0] not in archives:
+            continue
         pages, stm = [], []
         for f in sorted(os.listdir(os.path.join(cache, d)), key=lambda x: int(x[:-4]) if x[:-4].isdigit() else 0):
             if not f.endswith(".txt"):
