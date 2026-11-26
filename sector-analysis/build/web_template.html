@@ -486,6 +486,7 @@ function viewSector(key, scope){
   const tk=N.takeaways||{}; const TKL={improved:'Improved',weakened:'Weakened',why:'Why',concentration:'Concentration',ytd_2026:'2026 so far (9M)',uncertain:'Uncertain'};
   let h=`<div class="crumbs"><a href="#overview">Overview</a> › <span>${S}</span></div><h1>${S} sector</h1>
   <p class="lede">${esc(N.headline||'')}</p>
+  <p class="note">Figures behind this summary: ${[[top,'FY2022',cfg.top_line_name+' FY2022'],[top,'FY2025',cfg.top_line_name+' FY2025'],['NI_ATTR','FY2022','Net profit FY2022'],['NI_ATTR','FY2025','Net profit FY2025'],[top,'9M2026',cfg.top_line_name+' 9M 2026'],['NI_ATTR','9M2026','Net profit 9M 2026']].map(([m,p,l])=>`<span class="refs"><button data-fig="${(()=>{const id='f'+(figN++); FIGS[id]={S,scope:'all',m,p,label:l,sum:true}; return id;})()}" class="k-fact">${esc(l)}: SAR ${fm(sec.all[m].totals[p].v)} m</button></span>`).join(' ')}</p>
   <nav class="toc" aria-label="On this page"><a href="#s-take" data-jump="s-take">Takeaways</a><a href="#s-tot" data-jump="s-tot">Sector totals</a><a href="#s-trend" data-jump="s-trend">Trends</a><a href="#s-contrib" data-jump="s-contrib">Company contributions</a><a href="#s-changes" data-jump="s-changes">What changed and why</a><a href="#s-notes" data-jump="s-notes">Data notes</a></nav>
   <div class="controls"><span class="toggle" role="group" aria-label="Companies included on this page"><button data-scope="all" aria-pressed="${isAll}">All companies</button><button data-scope="ex_largest" aria-pressed="${!isAll}">Excluding ${esc(Ln)}</button></span><span class="note">Applies to the tiles, totals, trend bars and contributions on this page.</span></div>
   <div class="tiles">
@@ -590,7 +591,7 @@ function viewCompany(t){
    <tr><td>Reported growth</td><td>${fg(b.rep)}</td></tr>
    ${STEPS.filter(([k])=>k!=='new_capacity').map(([k,n])=>`<tr><td>Effect of ${n.replace(/^([A-Z])([a-z])/,(m,x,y)=>x.toLowerCase()+y)}</td><td>${b.nd[k]?'not determinable':(b.basis[k].length?fpp(b.val[k]):'none identified')}</td></tr>`).join('')}
    <tr><td><b>Organic growth</b> = reported − effects above</td><td><b>${b.preND?'not determinable':fg(b.org)}</b></td></tr>
-   <tr><td>Effect of new capacity</td><td>${b.nd.new_capacity?'not determinable':(b.basis.new_capacity.length?fpp(b.val.new_capacity):'none identified')}</td></tr>
+   <tr><td>Effect of new capacity</td><td>${S==='Banks'?'not applicable (banks: like-for-like = organic)':b.nd.new_capacity?'not determinable':(b.basis.new_capacity.length?fpp(b.val.new_capacity):'none identified')}</td></tr>
    <tr><td><b>Like-for-like growth</b> = organic − new capacity</td><td><b>${b.lfl==null?'not determinable':fg(b.lfl)}</b></td></tr></tbody></table></div>
    ${b.adj.length?`<details><summary>Adjustment basis (${b.adj.length})</summary><ul class="clean">${b.adj.map(a=>`<li><b>${esc(a.bridge_step.replace('_',' / '))}</b>: ${esc(a.method)} <span class="conf ${esc((a.confidence||'').split(' ')[0])}">${esc(a.confidence)}</span> <span class="src">${esc(a.basis)} · ${esc(a.source)}${a.page?' p.'+esc(a.page):''}</span></li>`).join('')}</ul></details>`:''}</div></div>`;
   const lb=N.lfl_basis||{};

@@ -5,11 +5,12 @@ headline: >-
   prices during the regional conflict, against a 9M 2025 base cut by a 60-day full-site shutdown.
 lfl_basis:
   definition_used: >-
-    Standard bridge on IFRS revenue. Petro Rabigh is a single company with no subsidiaries, acquisitions or disposals, and no new units were
-    commissioned in the period, so perimeter and new-capacity effects are nil. The only adjustment is presentational: FY2024 revenue was
+    Standard bridge on IFRS revenue. Petro Rabigh is a single company with no subsidiaries, acquisitions or disposals, so the perimeter effect
+    is nil. The notes report no new units commissioned, but with no operating report in the archive the revenue from new capacity cannot be
+    confirmed, so like-for-like growth is not determinable and organic growth is the closest measure. The only adjustment is presentational: FY2024 revenue was
     restated from SAR 39,349m to SAR 38,662m to net marketer re-charges against revenue (IFRS 15), while FY2023 remains on the old gross
     basis, so the FY2024/FY2023 comparison removes the SAR 686.9m netting. Planned shutdowns (Phase II, Dec 2022 to Jan 2023; full-site
-    turnaround, Apr to Jun 2025) are volume effects inside like-for-like.
+    turnaround, Apr to Jun 2025) are volume effects inside organic growth.
   perimeter_changes:
     - {event: "None: single-entity company with no subsidiaries", date: "FY2022 to 9M2026", effect: "nil", source: "2380_PETRO_RABIGH/2025_Annual_filed2026-03-12.pdf p.13"}
     - {event: "Saudi Aramco bought a further 22.5% of Class A shares from Sumitomo Chemical (Aramco 60%, Sumitomo 15%, public 25%)", date: "2025-10-08", effect: "shareholder change only; no perimeter effect", source: "2380_PETRO_RABIGH/2025_Annual_filed2026-03-12.pdf p.14"}

@@ -82,7 +82,7 @@
     "Capex / revenue"
    ]
   },
-  "classification_note": "Constituents = the archive's Energy folder (6 companies). The Saudi Exchange's own sector directory (200listedsecurities.saudiexchange.sa, Energy section) lists Aldrees Petroleum & Transport Services (4200) under Energy, but the archive files it under Consumer Discretionary Distribution & Retail, so it is NOT in these totals; Luberef (2223) appears to be classified as Materials. Adding Aldrees would change the ex-Aramco view materially; recommended for the next iteration once the archive's sector mapping is confirmed.",
+  "classification_note": "Constituents = the six companies the Saudi Exchange classifies in the Energy sector at the analysis date (Aramco, SARCO, Petro Rabigh, Bahri, Arabian Drilling, ADES), which matches the archive's Energy folder. Aldrees Petroleum & Transport Services (4200) was moved by the Saudi Exchange from Energy to Consumer Discretionary (Consumer Discretionary Distribution & Retail) with effect from 14 Sep 2025, under GICS, so it is excluded from all periods. Luberef (2223) has been classified in Materials since its listing in Dec 2022, so it is excluded too. The current classification is applied to every period (a constant universe), so totals and growth rates do not jump when a company is reclassified.",
   "margin_base_note": "Margins use revenue plus Aramco's other income related to sales (REV_M) because that income is inside Aramco's operating profit, EBITDA and net profit; sector revenue growth and contributions use IFRS revenue (REV)."
  },
  "Banks": {

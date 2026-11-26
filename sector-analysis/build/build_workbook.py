@@ -312,6 +312,8 @@ def build_company(wb, sector, t, cfg, ds, narr, adj_rows, facts_idx, sheetname, 
     r += 1
     step_rows = {}
     for key, label in steps:
+        if key == "new_capacity" and sector == "Banks":
+            label = "New capacity: not applicable to banks (like-for-like = organic)"
         ws.cell(row=r, column=1, value=f"  less: {label}").font = f(size=9)
         step_rows[key] = r
         for i, comp in enumerate(comps):

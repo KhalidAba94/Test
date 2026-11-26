@@ -92,7 +92,7 @@ sections:
       - {text: "• Real estate and REITs: the rent freeze, land release and foreign ownership."}
       - {text: "• Insurance: the marine insurance pool, and health spending, which is partly reclassified."}
       - {text: "• Transportation: shipping security."}
-      - {text: "Aldrees (fuel retail), which the Saudi Exchange lists in Energy, is exposed to regulated fuel prices and diesel costs."}
+      - {text: "Aldrees (fuel retail), which the Saudi Exchange moved from Energy to Consumer Discretionary in Sep 2025, is exposed to regulated fuel prices and diesel costs; it is assessed with its current sector."}
 sector_notes:
   Energy:
     opportunities: ["Volume recovery towards OPEC+ required levels if flows normalise", "Bypass export capacity (East-West pipeline expansion under consideration)", "Rig reactivations (Arabian Drilling notified to resume all suspended offshore rigs in Aug 2026) and the gas programme"]

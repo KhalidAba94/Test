@@ -119,6 +119,27 @@ def main(sector, facts_csv, overrides_csv, out_csv):
         if k[2] == "SHARE_JV" and k[0] in HOLDING:
             r["note"] = (r.get("note", "") + " " if r.get("note") else "") + "XBRL subtotal of investment results (dividends, associates, fair-value changes), not share of associates alone; kept inside operating income for this investment holding."
     for k, r in facts.items():
+        # lines the bank parser computed (e.g. other operating income = TOI - NSCI - fees) are calculated, not disclosed
+        if r.get("line_item_label", "").startswith("calc:") and r.get("provenance") in ("D", "R") and not r.get("note", "").startswith("OVERRIDE"):
+            if r["provenance"] == "R":
+                r["note"] = (r.get("note", "") + " " if r.get("note") else "") + "Inputs restated in a later filing."
+            r["provenance"] = "C"
+            r["location"] = "formula: " + r["line_item_label"][5:].strip()
+    # full-trace results (data/trace/full_trace.csv): page and method for every fact, applied only when the value is unchanged
+    tp = os.path.join(os.path.dirname(os.path.abspath(out_csv)), "..", "trace", "full_trace.csv")
+    if os.path.exists(tp):
+        for t in csv.DictReader(open(tp, encoding="utf-8")):
+            r = facts.get((t["ticker"], t["period"], t["metric_code"]))
+            if not r or str(r.get("value_sar_m")) != t["value_sar_m"]:
+                continue
+            r["trace_status"] = t["trace_status"]
+            if t["pages"] and t["trace_status"] not in ("calculated_ok", "calculated_rule"):
+                if not r.get("pdf_pages") or r.get("pdf_status") == "not_found":
+                    r["pdf_pages"] = t["pages"]
+                    if t["pdf_used"]:
+                        r["pdf_file"] = t["pdf_used"].split("/", 1)[1]
+                r["pdf_status"] = t["trace_status"]
+    for k, r in facts.items():
         rr = reasons.get(k)
         if rr:
             if rr["reason"].startswith("NOT A RESTATEMENT") and r.get("provenance") == "R":
@@ -128,7 +149,7 @@ def main(sector, facts_csv, overrides_csv, out_csv):
     fields = ["fact_id", "sector", "ticker", "company", "period", "period_end", "period_months", "metric_code",
               "value_sar_m", "value_original", "unit_original", "currency_original", "provenance", "source_id",
               "location", "line_item_label", "reported_in_filing", "original_value", "original_source",
-              "assurance", "n_documents", "pdf_file", "pdf_status", "pdf_pages", "note"]
+              "assurance", "n_documents", "pdf_file", "pdf_status", "pdf_pages", "trace_status", "note"]
     with open(out_csv, "w", newline="", encoding="utf-8") as fh:
         w = csv.DictWriter(fh, fieldnames=fields, extrasaction="ignore")
         w.writeheader(); w.writerows(out)
