@@ -601,6 +601,11 @@ def build_sector(wb, sector, cfg, ds, narr, comp_sheets):
         if tk.get(lab):
             r = para(ws, r, f'{lab.replace("_", " ").capitalize()}: {tk[lab]}')
     r += 1
+    r = section(ws, r, "5b. Data notes: series breaks, bases and classification")
+    for n in (narr.get("data_notes", []) or []) + [cfg.get("margin_base_note", ""), cfg.get("classification_note", "")]:
+        if n:
+            r = para(ws, r, "• " + n)
+    r += 1
     r = section(ws, r, "6. Charts (full years and 9M shown in separate charts)")
     chart_row = r
     # charts from calc block

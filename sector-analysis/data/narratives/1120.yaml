@@ -44,6 +44,7 @@ what_it_means:
   uncertain: "Whether credit quality holds through the regional escalation flagged after 30 Sep 2026; margin gains depend on the rate path."
 confidence_overall: "High"
 data_notes:
+  - "Islamic bank: net income from financing and investments (financing and investment income less the return paid on deposits and other financial liabilities) is shown in the net special commission income (NSCI) row so that it can be added up with conventional banks; fees, other income, costs and impairments are mapped as for conventional banks."
   - "FY2022 net fees corrected from the PDF (SAR 4,624m): the FY2023 XBRL comparative tags FY2022 exchange income as a fee line (override, PDF p.57)."
   - "Tier 1 (equity) sukuk distributions come from the statement of changes in equity (image pages, read visually) and are deducted in ROE on ordinary equity."
   - "Customer deposits from FY2024 include balances previously shown as due to banks; the loan-to-deposit ratio is not comparable across that break."

@@ -1,15 +1,15 @@
 summary: >-
   Four independent reviewers checked the pilot: Energy data accuracy, Banks data accuracy, budget and policy reasoning,
-  and the HTML page's usability on desktop and mobile. The reviews were sample-based, not a full audit: about 620 of the
-  roughly 3,160 published values were traced back to the PDFs, and 75 of the 145 policy items were checked against their
-  sources. The reviewers logged 113 issues. As of this build, 104 are fixed, 6 partly fixed, 1 accepted as documented,
-  1 kept after disagreement (with reasons) and 1 open. The Energy fixes were rechecked by the same auditor in two rounds.
-  Rechecks of the Banks, policy and HTML fixes are recorded in the review log as they come back.
+  and the HTML page's usability on desktop and mobile. The reviews were sample-based, not a full audit: about 640 of the
+  roughly 3,160 published values were traced back to the PDFs, and about 90 of the 146 policy items were checked against
+  their sources. Every reviewer rechecked the fixes, which produced 26 further issues. Of the 139 logged issues, 130 are
+  fixed, 6 partly fixed, 1 accepted as documented, 1 kept after disagreement (with reasons) and 1 open. The fixes made after
+  the first recheck were confirmed in a final short pass, recorded in the review log.
 checked:
   - "Energy: 176 values traced from the published data to the PDF statements (148 matched first time; core metrics 105 of 108). All 28 differences were explained or corrected. The second round rechecked all 23 Energy issues."
-  - "Banks: 442 values traced to the PDFs (432 matched first time). The 10 differences were five FY2023 equity figures not yet updated to the restated comparatives, and five Alinma impairment figures; all are now corrected. SNB's 9M 2026 credit-loss charge of SAR 2.6m was confirmed on the income statement (p.5)."
-  - "Budget and policy: 75 of 145 fact-base items checked against their source (64 fully confirmed, 11 partly; all dates confirmed; 4 reclassified). The reviewer also challenged the reasoning in each impact channel (39 issues)."
-  - "HTML: every view at 1280 px and 390 px, in light and dark mode. 12 figures were compared with the workbook, and all 64 company like-for-like bridges matched the workbook. Navigation, the drawer and keyboard use were also tested."
+  - "Banks: 442 values traced to the PDFs (432 matched first time), plus 25 more in the recheck (24 matched; the miss, an Alinma impairment basis, is now corrected). The 10 differences were five FY2023 equity figures not yet updated to the restated comparatives, and five Alinma impairment figures; all are now corrected. SNB's 9M 2026 credit-loss charge of SAR 2.6m was confirmed on the income statement (p.5)."
+  - "Budget and policy: 75 fact-base items checked against their source (64 fully confirmed, 11 partly; all dates confirmed), and 18 more in the recheck (17 values confirmed). The reviewer challenged the reasoning in each impact channel twice (39 issues, then 15 more), including the top-up tax channel, the oil-volume illustration and the rate mechanism."
+  - "HTML: every view at 1280 px and 390 px, in light and dark mode, tested twice; in the recheck all 1,865 page figures matched the workbook and all 536 reference chips opened a source. 12 figures were compared with the workbook, and all 64 company like-for-like bridges matched the workbook. Navigation, the drawer and keyboard use were also tested."
   - "Automated checks on every build: Excel sector totals, growth, CAGR and ratios recalculated in LibreOffice and compared with the Python engine (244 values, 0 mismatches). 5,052 formulas, 0 errors. Every reference chip resolves (485). Ratio levels quoted in company narratives match the calculated ratios. Browser test: no script errors and no horizontal overflow."
 fixed:
   - "Equity attributable now includes companies without minority interests (Petro Rabigh), so sector ROE covers all six Energy companies."

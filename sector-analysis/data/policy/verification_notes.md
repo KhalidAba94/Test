@@ -1,6 +1,6 @@
 # Verification notes: budget and policy fact base (Energy and Banks)
 
-As of 2026-11-25. Companion to `items.csv` (138 items). Facts only; no impact interpretation.
+As of 2026-11-25. Companion to `items.csv` (146 items after the review rounds; counts below describe the 2026-11-25 pass of 138 items). Facts only; no impact interpretation.
 
 ## 1. Scope and method
 
