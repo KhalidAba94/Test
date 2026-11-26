@@ -1,159 +1,159 @@
-"ticker": "4164"
-"headline": Revenue grew every year from SAR 8,616m (FY2022) to SAR 10,213m (FY2025) and 7.0% in 9M 2026 as pharma and clinic sales rose, but attributable profit slipped from SAR 888m to SAR 831m (SAR 623m in 9M 2026, -4.9%) as gross margin and the higher lease and finance costs of a larger network weighed.
-"lfl_basis":
-  "definition_used": 'Standard bridge on IFRS revenue. Nahdi made no acquisitions or disposals from FY2022 to 9M 2026: the subsidiaries (Nahdi Care clinics, Al Sakhaa, Nahdi Investment and its UAE pharmacy and drug-store companies) are unchanged, and the only new entity (Rawa Alsihha, July 2026) is a start-up, so perimeter effects are nil and organic growth equals reported growth. Revenue is in SAR and AED, both pegged to the US dollar, so FX is nil. The financial statements give no pharmacy count, no openings and no like-for-like (same-store) sales, so the new-capacity step and like-for-like growth are not determinable; organic growth is the closest available measure.'
-  "perimeter_changes":
-  - "event": "No business combinations or disposals; subsidiaries unchanged FY2022-FY2025"
-    "date": "FY2022-FY2025"
-    "effect": "nil"
-    "source": "4164_NAHDI/2024_Annual_filed2025-03-12.pdf p.12; 4164_NAHDI/2025_Annual_filed2026-03-16.pdf p.12"
-  - "event": "Rawa Alsihha Company established (supply chain and delivery start-up)"
-    "date": "2026-07-16"
-    "effect": "no acquired revenue"
-    "source": "4164_NAHDI/2026_Q3_filed2026-10-29.pdf p.11"
-  "capacity_changes":
-  - "event": "39 pharmacy leases terminated before expiry; openings not disclosed"
-    "date": "2024"
-    "effect": "not determinable"
-    "source": "4164_NAHDI/2024_Annual_filed2025-03-12.pdf p.35"
-  - "event": "49 pharmacy leases terminated before expiry; openings not disclosed"
-    "date": "2025"
-    "effect": "not determinable"
-    "source": "4164_NAHDI/2025_Annual_filed2026-03-16.pdf p.36"
-  - "event": "Clinic and other revenue (mainly Nahdi Care clinics) rose from SAR 74.6m (FY2022) to SAR 577.8m (FY2025)"
-    "date": "FY2022-FY2025"
-    "effect": "part from new clinics not disclosed"
-    "source": "4164_NAHDI/2023_Annual_filed2024-03-18.pdf p.46; 4164_NAHDI/2025_Annual_filed2026-03-16.pdf p.45"
-  "fx_exposure": More than 90% of operations are in KSA; the UAE pharmacies earn AED, which is pegged to the US dollar. No FX translation effect identified.
-  "price_volume_support": Not determinable. The filings split revenue into front shop, pharma and other (mainly clinics) but give no basket size, transactions, prices or store counts, so price and volume cannot be separated.
-  "confidence": "Medium (perimeter and FX nil with High confidence; new capacity not determinable)"
-"price_volume":
-- "period": "FY2025 vs FY2024"
-  "text": Revenue rose SAR 767m. Front-shop revenue rose 7.4% (SAR 3,907m to SAR 4,195m), pharma 5.0% (SAR 5,183m to SAR 5,440m) and clinic and other revenue 62.3% (SAR 356m to SAR 578m). Price and volume are not disclosed.
-  "basis": "disclosed (revenue by category); split not determinable"
-  "confidence": "High for the amounts; the split is not determinable"
-  "source": "4164_NAHDI/2025_Annual_filed2026-03-16.pdf p.45"
-  "refs":
-  - "4164-FY2025-REV"
-  - "4164-FY2024-REV"
-- "period": "9M2026 vs 9M2025"
-  "text": Revenue rose SAR 537m (+7.0%). Pharma added SAR 344m (+8.6%), clinic and other revenue SAR 151m (+36.4%) and front shop SAR 42.5m (+1.3%), so pharma and clinics gave 92% of the increase (we calculate). Price and volume are not disclosed.
-  "basis": "disclosed (revenue by category); split not determinable"
-  "confidence": "High for the amounts; the split is not determinable"
-  "source": "4164_NAHDI/2026_Q3_filed2026-10-29.pdf p.25"
-  "refs":
-  - "4164-9M2026-REV"
-  - "4164-9M2025-REV"
-- "period": "FY2024 vs FY2023"
-  "text": Revenue rose 8.4% as pharma grew 17.5% (SAR 4,412m to SAR 5,183m) and clinic and other revenue doubled (SAR 172m to SAR 356m), while front-shop revenue fell 5.4% (SAR 4,130m to SAR 3,907m). Pharma rose from 49.5% of revenue in FY2022 to 53.3% in FY2025 (we calculate).
-  "basis": "disclosed (revenue by category); split not determinable"
-  "confidence": "High for the amounts; the split is not determinable"
-  "source": "4164_NAHDI/2024_Annual_filed2025-03-12.pdf p.43; 4164_NAHDI/2023_Annual_filed2024-03-18.pdf p.46"
-  "refs":
-  - "4164-FY2024-REV"
-  - "4164-FY2023-REV"
-"profit_and_margin":
-  "drivers":
-  - "period": "FY2023"
-    "driver": Revenue +1.1% and attributable profit +0.5% to SAR 893m. Gross profit fell 0.7% and operating income 4.2% to SAR 963m, but finance income rose to SAR 64.7m (SAR 13.9m). Net margin 10.2%.
-    "source": "4164_NAHDI/2024_Annual_filed2025-03-12.pdf p.8 (P&L), p.43 (revenue)"
-    "refs":
-    - "4164-FY2023-REV"
-    - "4164-FY2023-GP"
-    - "4164-FY2023-OPINC"
-    - "4164-FY2023-FIN_INC"
-    - "4164-FY2023-NI_ATTR"
-  - "period": "FY2024"
-    "driver": Revenue +8.4% but attributable profit -8.1% to SAR 821m. Gross profit was flat (-0.3%), so the gross margin fell from 40.4% to 37.2% (we calculate) as pharma, not front shop, drove growth; operating income fell 7.4% to SAR 891m and finance costs rose to SAR 116m (SAR 83.0m) as lease liabilities grew to SAR 1,530m. A lower zakat charge (SAR 13.8m vs SAR 51.6m) softened the fall. Net margin 8.7%.
-    "source": 4164_NAHDI/2025_Annual_filed2026-03-16.pdf p.8 (P&L), p.7 (balance sheet); 4164_NAHDI/2024_Annual_filed2025-03-12.pdf p.43
-    "refs":
-    - "4164-FY2024-REV"
-    - "4164-FY2024-GP"
-    - "4164-FY2024-OPINC"
-    - "4164-FY2024-FIN_COST"
-    - "4164-FY2024-ZAKAT_TAX"
-    - "4164-FY2024-LEASE_LIAB"
-    - "4164-FY2024-NI_ATTR"
-  - "period": "FY2025"
-    "driver": Revenue +8.1% and gross profit +8.3% (gross margin 37.3%), operating income +4.0% to SAR 927m, but finance costs rose to SAR 142m and attributable profit grew only 1.2% to SAR 831m. Net margin 8.1%. Operating cash flow fell 24.0% to SAR 1,134m as inventories absorbed SAR 628m, and cash fell to SAR 554m after SAR 728m of dividends.
-    "source": "4164_NAHDI/2025_Annual_filed2026-03-16.pdf p.8 (P&L), p.10 (cash flow)"
-    "refs":
-    - "4164-FY2025-REV"
-    - "4164-FY2025-GP"
-    - "4164-FY2025-OPINC"
-    - "4164-FY2025-FIN_COST"
-    - "4164-FY2025-NI_ATTR"
-    - "4164-FY2025-CFO"
-    - "4164-FY2025-CASH"
-  - "period": "9M2026"
-    "driver": Revenue +7.0% and gross profit +3.6%, so the gross margin eased to 36.2% (37.4%, we calculate). Operating income was SAR 715m (-0.5%), including a SAR 12.5m fair-value gain on a money market fund; finance income fell to SAR 27.1m (SAR 49.9m) and attributable profit fell 4.9% to SAR 623m. Net margin 7.6% (8.6%).
-    "source": "4164_NAHDI/2026_Q3_filed2026-10-29.pdf p.6 (P&L), p.21 (note 11)"
-    "refs":
-    - "4164-9M2026-REV"
-    - "4164-9M2026-GP"
-    - "4164-9M2026-OPINC"
-    - "4164-9M2026-FIN_INC"
-    - "4164-9M2026-NI_ATTR"
-    - "4164-9M2025-NI_ATTR"
-  - "period": "9M2026"
-    "driver": 'Operating cash flow rose 39.3% to SAR 1,402m as inventories released SAR 104m (9M 2025: absorbed SAR 528m) and capex fell 30.5% to SAR 221m. Cash fell to SAR 159m after SAR 728m of dividends, SAR 200m invested in sukuk and SAR 342m in a money market fund.'
-    "source": "4164_NAHDI/2026_Q3_filed2026-10-29.pdf p.8 (cash flow), p.5 (balance sheet)"
-    "refs":
-    - "4164-9M2026-CFO"
-    - "4164-9M2026-CAPEX"
-    - "4164-9M2026-CASH"
-  - "period": "FY2022-FY2025"
-    "driver": ROE fell from 46.2% to 31.2% as equity rose from SAR 2,243m to SAR 2,744m while profit slipped. Nahdi has no borrowings; net debt (lease liabilities less cash) rose from SAR 91.8m to SAR 1,229m as lease liabilities grew and cash fell.
-    "source": "balance sheets (FY2023-FY2025 annuals p.7)"
-    "refs":
-    - "4164-FY2022-EQ_ATTR"
-    - "4164-FY2025-EQ_ATTR"
-    - "4164-FY2025-NET_DEBT"
-    - "4164-FY2022-NET_DEBT"
-  "one_offs":
-  - "item": "Unrealised fair-value gain on a money market fund measured at FVTPL (removed for EBITDA excluding one-offs)"
-    "period": "9M2026"
-    "amount_sar_m": 12.5
-    "line": "Unrealized gain on financial assets measured at FVTPL (above profit before zakat)"
-    "source": "4164_NAHDI/2026_Q3_filed2026-10-29.pdf p.6, p.21"
-    "tax_nci": 'Zakat effect not disclosed; no non-controlling interests; 2.0% of attributable profit: after-tax effect not determinable, profit kept as reported'
-"developments":
-- "date": "2024"
-  "category": "event"
-  "text": "Auditor changed from Ernst & Young (FY2022-FY2023) to KPMG (FY2024 onward)."
-  "source": "4164_NAHDI/2023_Annual_filed2024-03-18.pdf p.3; 4164_NAHDI/2024_Annual_filed2025-03-12.pdf p.3"
-- "date": "2024-2025"
-  "category": "operations"
-  "text": The company reports early termination of 39 pharmacy leases in 2024 and 49 in 2025, and lower rents agreed for 38 and 63 pharmacies.
-  "source": "4164_NAHDI/2024_Annual_filed2025-03-12.pdf p.35; 4164_NAHDI/2025_Annual_filed2026-03-16.pdf p.36"
-- "date": "2025"
-  "category": "financing"
-  "text": "Transferred the SAR 369.2m statutory reserve to retained earnings; paid dividends of SAR 728m in 2025."
-  "source": "4164_NAHDI/2026_Q3_filed2026-10-29.pdf p.7; 4164_NAHDI/2025_Annual_filed2026-03-16.pdf p.10"
-- "date": "2026-03-08"
-  "category": "financing"
-  "text": "Board announced a SAR 390m dividend (SAR 3 per share) for H2 2025."
-  "source": "4164_NAHDI/2025_Annual_filed2026-03-16.pdf p.53"
-- "date": "2026 (9M)"
-  "category": "strategy"
-  "text": "Invested SAR 200m in sukuk and SAR 342m in a money market fund, reducing cash to SAR 159m at 30 Sep 2026."
-  "source": "4164_NAHDI/2026_Q3_filed2026-10-29.pdf p.8, p.21"
-- "date": "2026-07-16"
-  "category": "strategy"
-  "text": "Established Rawa Alsihha Company to build supply chain, logistics, distribution and delivery capabilities."
-  "source": "4164_NAHDI/2026_Q3_filed2026-10-29.pdf p.11"
-"what_it_means":
-  "improved": Revenue grew 5.8% a year from FY2022 to FY2025 and 7.0% in 9M 2026, led by pharma and clinics, and 9M 2026 operating cash flow rose 39.3% to SAR 1,402m.
-  "weakened": Net margin fell from 10.3% in FY2022 to 8.1% in FY2025 and 7.6% in 9M 2026, and operating income fell from SAR 1,005m to SAR 927m over FY2022-FY2025.
-  "why": Pharma rose from 49.5% to 53.3% of revenue (we calculate) while the gross margin fell from 41.1% to 37.3%, and finance costs rose from SAR 81.2m to SAR 142m; Nahdi has no borrowings, and in FY2025 these were lease interest of SAR 88.0m and bank charges of SAR 53.8m (note 24).
-  "uncertain": The filings give no pharmacy count, openings or like-for-like sales, so growth from new pharmacies and clinics cannot be separated; the fall in zakat to SAR 13.8m-15.2m in FY2024-FY2025 is not explained.
-"confidence_overall": "Medium"
-"data_notes":
+ticker: '4164'
+headline: Revenue grew every year from SAR 8,616m (FY2022) to SAR 10,213m (FY2025) and 7.0% in 9M 2026 as pharma and clinic sales rose, but attributable profit slipped from SAR 888m to SAR 831m (SAR 623m in 9M 2026, -4.9%) as gross margin and the higher lease and finance costs of a larger network weighed.
+lfl_basis:
+  definition_used: 'Standard bridge on IFRS revenue. Nahdi made no acquisitions or disposals from FY2022 to 9M 2026: the subsidiaries (Nahdi Care clinics, Al Sakhaa, Nahdi Investment and its UAE pharmacy and drug-store companies) are unchanged, and the only new entity (Rawa Alsihha, July 2026) is a start-up, so perimeter effects are nil and organic growth equals reported growth. Revenue is in SAR and AED, both pegged to the US dollar, so FX is nil. The financial statements give no pharmacy count, no openings and no like-for-like (same-store) sales, so the new-capacity step and like-for-like growth are not determinable; organic growth is the closest available measure.'
+  perimeter_changes:
+  - event: No business combinations or disposals; subsidiaries unchanged FY2022-FY2025
+    date: FY2022-FY2025
+    effect: nil
+    source: 4164_NAHDI/2024_Annual_filed2025-03-12.pdf p.12; 4164_NAHDI/2025_Annual_filed2026-03-16.pdf p.12
+  - event: Rawa Alsihha Company established (supply chain and delivery start-up)
+    date: '2026-07-16'
+    effect: no acquired revenue
+    source: 4164_NAHDI/2026_Q3_filed2026-10-29.pdf p.11
+  capacity_changes:
+  - event: 39 pharmacy leases terminated before expiry; openings not disclosed
+    date: '2024'
+    effect: not determinable
+    source: 4164_NAHDI/2024_Annual_filed2025-03-12.pdf p.35
+  - event: 49 pharmacy leases terminated before expiry; openings not disclosed
+    date: '2025'
+    effect: not determinable
+    source: 4164_NAHDI/2025_Annual_filed2026-03-16.pdf p.36
+  - event: Clinic and other revenue (mainly Nahdi Care clinics) rose from SAR 74.6m (FY2022) to SAR 577.8m (FY2025)
+    date: FY2022-FY2025
+    effect: part from new clinics not disclosed
+    source: 4164_NAHDI/2023_Annual_filed2024-03-18.pdf p.46; 4164_NAHDI/2025_Annual_filed2026-03-16.pdf p.45
+  fx_exposure: More than 90% of operations are in KSA; the UAE pharmacies earn AED, which is pegged to the US dollar. No FX translation effect identified.
+  price_volume_support: Not determinable. The filings split revenue into front shop, pharma and other (mainly clinics) but give no basket size, transactions, prices or store counts, so price and volume cannot be separated.
+  confidence: Medium (perimeter and FX nil with High confidence; new capacity not determinable)
+price_volume:
+- period: FY2025 vs FY2024
+  text: Revenue rose SAR 767m. Front-shop revenue rose 7.4% (SAR 3,907m to SAR 4,195m), pharma 5.0% (SAR 5,183m to SAR 5,440m) and clinic and other revenue 62.3% (SAR 356m to SAR 578m). Price and volume are not disclosed.
+  basis: disclosed (revenue by category); split not determinable
+  confidence: High for the amounts; the split is not determinable
+  source: 4164_NAHDI/2025_Annual_filed2026-03-16.pdf p.45
+  refs:
+  - 4164-FY2025-REV
+  - 4164-FY2024-REV
+- period: 9M2026 vs 9M2025
+  text: Revenue rose SAR 537m (+7.0%). Pharma added SAR 344m (+8.6%), clinic and other revenue SAR 151m (+36.4%) and front shop SAR 42.5m (+1.3%), so pharma and clinics gave 92% of the increase (we calculate). Price and volume are not disclosed.
+  basis: disclosed (revenue by category); split not determinable
+  confidence: High for the amounts; the split is not determinable
+  source: 4164_NAHDI/2026_Q3_filed2026-10-29.pdf p.25
+  refs:
+  - 4164-9M2026-REV
+  - 4164-9M2025-REV
+- period: FY2024 vs FY2023
+  text: Revenue rose 8.4% as pharma grew 17.5% (SAR 4,412m to SAR 5,183m) and clinic and other revenue doubled (SAR 172m to SAR 356m), while front-shop revenue fell 5.4% (SAR 4,130m to SAR 3,907m). Pharma rose from 49.5% of revenue in FY2022 to 53.3% in FY2025 (we calculate).
+  basis: disclosed (revenue by category); split not determinable
+  confidence: High for the amounts; the split is not determinable
+  source: 4164_NAHDI/2024_Annual_filed2025-03-12.pdf p.43; 4164_NAHDI/2023_Annual_filed2024-03-18.pdf p.46
+  refs:
+  - 4164-FY2024-REV
+  - 4164-FY2023-REV
+profit_and_margin:
+  drivers:
+  - period: FY2023
+    driver: Revenue +1.1% and attributable profit +0.5% to SAR 893m. Gross profit fell 0.7% and operating income 4.2% to SAR 963m, but finance income rose to SAR 64.7m (SAR 13.9m). Net margin 10.2%.
+    source: 4164_NAHDI/2024_Annual_filed2025-03-12.pdf p.8 (P&L), p.43 (revenue)
+    refs:
+    - 4164-FY2023-REV
+    - 4164-FY2023-GP
+    - 4164-FY2023-OPINC
+    - 4164-FY2023-FIN_INC
+    - 4164-FY2023-NI_ATTR
+  - period: FY2024
+    driver: Revenue +8.4% but attributable profit -8.1% to SAR 821m. Gross profit was flat (-0.3%), so the gross margin fell from 40.4% to 37.2% (we calculate) as pharma, not front shop, drove growth; operating income fell 7.4% to SAR 891m and finance costs rose to SAR 116m (SAR 83.0m) as lease liabilities grew to SAR 1,530m. A lower zakat charge (SAR 13.8m vs SAR 51.6m) softened the fall. Net margin 8.7%.
+    source: 4164_NAHDI/2025_Annual_filed2026-03-16.pdf p.8 (P&L), p.7 (balance sheet); 4164_NAHDI/2024_Annual_filed2025-03-12.pdf p.43
+    refs:
+    - 4164-FY2024-REV
+    - 4164-FY2024-GP
+    - 4164-FY2024-OPINC
+    - 4164-FY2024-FIN_COST
+    - 4164-FY2024-ZAKAT_TAX
+    - 4164-FY2024-LEASE_LIAB
+    - 4164-FY2024-NI_ATTR
+  - period: FY2025
+    driver: Revenue +8.1% and gross profit +8.3% (gross margin 37.3%), operating income +4.0% to SAR 927m, but finance costs rose to SAR 142m and attributable profit grew only 1.2% to SAR 831m. Net margin 8.1%. Operating cash flow fell 24.0% to SAR 1,134m as inventories absorbed SAR 628m, and cash fell to SAR 554m after SAR 728m of dividends.
+    source: 4164_NAHDI/2025_Annual_filed2026-03-16.pdf p.8 (P&L), p.10 (cash flow)
+    refs:
+    - 4164-FY2025-REV
+    - 4164-FY2025-GP
+    - 4164-FY2025-OPINC
+    - 4164-FY2025-FIN_COST
+    - 4164-FY2025-NI_ATTR
+    - 4164-FY2025-CFO
+    - 4164-FY2025-CASH
+  - period: 9M2026
+    driver: Revenue +7.0% and gross profit +3.6%, so the gross margin eased to 36.2% (37.4%, we calculate). Operating income was SAR 715m (-0.5%), including a SAR 12.5m fair-value gain on a money market fund; finance income fell to SAR 27.1m (SAR 49.9m) and attributable profit fell 4.9% to SAR 623m. Net margin 7.6% (8.6%).
+    source: 4164_NAHDI/2026_Q3_filed2026-10-29.pdf p.6 (P&L), p.21 (note 11)
+    refs:
+    - 4164-9M2026-REV
+    - 4164-9M2026-GP
+    - 4164-9M2026-OPINC
+    - 4164-9M2026-FIN_INC
+    - 4164-9M2026-NI_ATTR
+    - 4164-9M2025-NI_ATTR
+  - period: 9M2026
+    driver: 'Operating cash flow rose 39.3% to SAR 1,402m as inventories released SAR 104m (9M 2025: absorbed SAR 528m) and capex fell 30.5% to SAR 221m. Cash fell to SAR 159m after SAR 728m of dividends, SAR 200m invested in sukuk and SAR 342m in a money market fund.'
+    source: 4164_NAHDI/2026_Q3_filed2026-10-29.pdf p.8 (cash flow), p.5 (balance sheet)
+    refs:
+    - 4164-9M2026-CFO
+    - 4164-9M2026-CAPEX
+    - 4164-9M2026-CASH
+  - period: FY2022-FY2025
+    driver: ROE fell from 46.2% to 31.2% as equity rose from SAR 2,243m to SAR 2,744m while profit slipped. Nahdi has no borrowings; net debt (lease liabilities less cash) rose from SAR 91.8m to SAR 1,229m as lease liabilities grew and cash fell.
+    source: balance sheets (FY2023-FY2025 annuals p.7)
+    refs:
+    - 4164-FY2022-EQ_ATTR
+    - 4164-FY2025-EQ_ATTR
+    - 4164-FY2025-NET_DEBT
+    - 4164-FY2022-NET_DEBT
+  one_offs:
+  - item: Unrealised fair-value gain on a money market fund measured at FVTPL (removed for EBITDA excluding one-offs)
+    period: 9M2026
+    amount_sar_m: 12.5
+    line: Unrealized gain on financial assets measured at FVTPL (above profit before zakat)
+    source: 4164_NAHDI/2026_Q3_filed2026-10-29.pdf p.6, p.21
+    tax_nci: 'Zakat effect not disclosed; no non-controlling interests; 2.0% of attributable profit: after-tax effect not determinable, profit kept as reported'
+developments:
+- date: '2024'
+  category: event
+  text: Auditor changed from Ernst & Young (FY2022-FY2023) to KPMG (FY2024 onward).
+  source: 4164_NAHDI/2023_Annual_filed2024-03-18.pdf p.3; 4164_NAHDI/2024_Annual_filed2025-03-12.pdf p.3
+- date: 2024-2025
+  category: operations
+  text: The company reports early termination of 39 pharmacy leases in 2024 and 49 in 2025, and lower rents agreed for 38 and 63 pharmacies.
+  source: 4164_NAHDI/2024_Annual_filed2025-03-12.pdf p.35; 4164_NAHDI/2025_Annual_filed2026-03-16.pdf p.36
+- date: '2025'
+  category: financing
+  text: Transferred the SAR 369.2m statutory reserve to retained earnings; paid dividends of SAR 728m in 2025.
+  source: 4164_NAHDI/2026_Q3_filed2026-10-29.pdf p.7; 4164_NAHDI/2025_Annual_filed2026-03-16.pdf p.10
+- date: '2026-03-08'
+  category: financing
+  text: Board announced a SAR 390m dividend (SAR 3 per share) for H2 2025.
+  source: 4164_NAHDI/2025_Annual_filed2026-03-16.pdf p.53
+- date: 2026 (9M)
+  category: strategy
+  text: Invested SAR 200m in sukuk and SAR 342m in a money market fund, reducing cash to SAR 159m at 30 Sep 2026.
+  source: 4164_NAHDI/2026_Q3_filed2026-10-29.pdf p.8, p.21
+- date: '2026-07-16'
+  category: strategy
+  text: Established Rawa Alsihha Company to build supply chain, logistics, distribution and delivery capabilities.
+  source: 4164_NAHDI/2026_Q3_filed2026-10-29.pdf p.11
+what_it_means:
+  improved: Revenue grew 5.8% a year from FY2022 to FY2025 and 7.0% in 9M 2026, led by pharma and clinics, and 9M 2026 operating cash flow rose 39.3% to SAR 1,402m.
+  weakened: Net margin fell from 10.3% in FY2022 to 8.1% in FY2025 and 7.6% in 9M 2026, and operating income fell from SAR 1,005m to SAR 927m over FY2022-FY2025.
+  why: Pharma rose from 49.5% to 53.3% of revenue (we calculate) while the gross margin fell from 41.1% to 37.3%, and finance costs rose from SAR 81.2m to SAR 142m; Nahdi has no borrowings, and in FY2025 these were lease interest of SAR 88.0m and bank charges of SAR 53.8m (note 24).
+  uncertain: The filings give no pharmacy count, openings or like-for-like sales, so growth from new pharmacies and clinics cannot be separated; the fall in zakat to SAR 13.8m-15.2m in FY2024-FY2025 is not explained.
+confidence_overall: Medium
+data_notes:
 - Primary statements in every annual and both Q3 interims are scanned images (the FY2025 annual is fully scanned); stage A read them by OCR and checked each value to printed subtotals.
 - 'Gross profit FY2024 (SAR 3,512m) is the FY2025 annual comparative: SAR 20.5m of D&A of medical services was moved from selling expenses into cost of revenue (note 33, p.52-53); the FY2024 annual printed SAR 3,533m. FY2023 and earlier are not re-presented, so the FY2024 gross-margin fall is overstated by about 0.2 pp.'
 - FY2023 operating cash flow (SAR 1,316m) is the FY2024 annual comparative, after interest received (SAR 52.7m) was moved to investing activities; the FY2023 annual printed SAR 1,369m. FY2022 CFO (SAR 1,668m) is on the earlier basis, with interest received inside operating cash flow.
 - FY2022 finance costs and finance income were both grossed up by SAR 1.8m in the FY2023 annual (generic note 32); net finance cost is unchanged.
-- "Nahdi has no borrowings: DEBT is recorded as nil and net debt is lease liabilities less cash."
+- 'Nahdi has no borrowings: DEBT is recorded as nil and net debt is lease liabilities less cash.'
 - IMPAIR_CF holds reversals of impairment on investment properties (FY2022 -SAR 17.2m incl. a PP&E reversal, FY2023 -SAR 0.5m, FY2024 -SAR 1.6m); they reduce EBITDA.
 - Finance costs include bank charges (SAR 32.6m FY2023, SAR 42.1m FY2024, SAR 53.8m FY2025; FY2024 annual note 23 p.45, FY2025 annual note 24 p.46) besides lease interest. Because our operating income adds back all finance costs, it excludes these bank charges, which other retailers report in operating expenses (e.g. point-of-sale commissions); operating income and EBITDA are overstated by that amount relative to such peers. The 9M interims do not split finance costs.
 - COGS and GP were added from the PDFs in stage A (missing from the XBRL extraction); D&A includes right-of-use depreciation.

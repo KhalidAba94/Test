@@ -248,10 +248,11 @@ one_offs:
   amount: 4434760
   unit: SAR
   pnl_line: Other income, net (note 7)
-  recurring: false
+  recurring: true
   source: 6001_HB/2025_Annual_filed2026-02-11.pdf
   page: 35
   quote: Export sales support income (Note a) 4,434,760 86,913
+  note: 'Received every year (FY2022 1.38m, FY2023 0.94m, FY2024 0.09m): treated as recurring, not removed from EBITDA'
 - period: FY2025
   item: Asset impairment; already outside EBITDA
   amount: -2250779
