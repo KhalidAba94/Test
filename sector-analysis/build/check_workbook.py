@@ -49,7 +49,7 @@ for sector in list(ds.keys()):
             block = None
         if block and isinstance(v, str):
             labels[(block, v.strip())] = r
-    for scope in ("all", "ex_largest"):
+    for scope in (("all", "ex_largest") if len(d["tickers"]) > 1 else ("all",)):
         for m, lab in ((cfg["top_line"], cfg["top_line_name"]), (cfg["profit"], "Net profit attributable to shareholders")):
             r = labels[(scope, lab)]
             for p, col in COLS.items():

@@ -533,11 +533,13 @@ def build_sector(wb, sector, cfg, ds, narr, comp_sheets):
             ws.cell(row=r, column=1, value=lab).font = f(True, size=9)
             for p, col in cols.items():
                 a, b = mat[m]
+                # blank (not 0) when no company in the block reports the period
+                cnt = f"SUMPRODUCT(--ISNUMBER({pc[p]}{a}:{pc[p]}{b}))"
                 if excl:
                     i = row_of(m, excl)
-                    formula = f"=SUM({pc[p]}{a}:{pc[p]}{b})-N({pc[p]}{i})"
+                    formula = f'=IF({cnt}-ISNUMBER({pc[p]}{i})=0,"",SUM({pc[p]}{a}:{pc[p]}{b})-N({pc[p]}{i}))'
                 else:
-                    formula = f"=SUM({pc[p]}{a}:{pc[p]}{b})"
+                    formula = f'=IF({cnt}=0,"",SUM({pc[p]}{a}:{pc[p]}{b}))'
                 ws[f"{col}{r}"] = formula
                 ws[f"{col}{r}"].number_format = NUM
                 tinfo = ds["sector"]["ex_largest" if excl else "all"][m]["totals"][p]
@@ -614,7 +616,8 @@ def build_sector(wb, sector, cfg, ds, narr, comp_sheets):
 
     r, sec_rows = totals_block(r, f"1. Sector totals: all {len(tickers)} companies")
     lname = ds["companies"][largest]["name"]
-    r, _ = totals_block(r, f"2. Excluding the largest company ({lname}, largest by FY2025 {cfg['top_line_name'].lower()})", excl=largest)
+    if len(tickers) > 1:   # a one-company group has no "excluding the largest" view
+        r, _ = totals_block(r, f"2. Excluding the largest company ({lname}, largest by FY2025 {cfg['top_line_name'].lower()})", excl=largest)
 
     # 3. company contributions
     r = section(ws, r, "3. Company contribution: share of sector and contribution to sector growth")
