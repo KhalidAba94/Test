@@ -135,6 +135,6 @@ P-R-053,fixed,"Retagged F-092 and B-027 as market data, F-082/F-083 as an offici
 P-R-054,fixed,"Base case relabelled ""our reading of the budget's growth path; Fitch for credit"", with each element attributed.",
 B-D-010,fixed,Overrides for Alinma FY2023 and FY2021 IMPAIR_FIN (financing-only).,
 B-D-011,fixed,Five equity notes and the Alinma impairment note rewritten to describe the corrected data; Alinma FY2025 driver now cites IMPAIR_TOTAL.,
-B-D-012,fixed,"BSF FY2022 equity overridden to the restated 39,028.1 (FY2024 AFS p.13, note 45).",
+B-D-012,fixed,"BSF FY2022 equity overridden to the restated 39,028.1 (FY2024 AFS p.13, note 45). The BSF data note now says FY2022 ROE mixes an unrestated FY2021 opening with the restated FY2022 close (9.75% vs 9.79%).",
 B-D-013,fixed,"Reasons recorded for all 65 R facts without one: specific causes where known (IAS 8 FVOCI corrections, fee re-presentations, deposit reclassification, SAIB expense reclassification); otherwise the difference and ""no explanatory note located"".",
 B-D-014,fixed,build_workbook.py renders sector data notes (plus margin-base and classification notes) as section 5b on each sector sheet.,
