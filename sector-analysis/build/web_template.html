@@ -165,11 +165,12 @@ summary{cursor:pointer;font:600 14px var(--f-head);color:var(--accent);min-heigh
   body[data-pv="fb"] .ptable .fa, body[data-pv="fb"] .ptable .ytd, body[data-pv="fb"] .ptable .gap{display:none}
   body[data-pv="ytd"] .ptable .fy{display:none}
   .ptable .xc{display:none}
-  .ptable{font-size:12.5px}
-  .ptable th,.ptable td{padding:7px 6px}
-  .ptable td:first-child,.ptable th:first-child{min-width:116px}
+  .ptable th,.ptable td{padding:7px 5px}
   .top{position:static}
-  sup[tabindex]{display:inline-block;min-width:24px;text-align:center;padding:7px 0;margin:-7px 0}
+  sup[tabindex]{display:inline-block;padding:7px 9px;margin:-7px -9px -7px 0}
+  .ptable{font-size:12px}
+  .ptable td:first-child,.ptable th:first-child{min-width:96px}
+  .ptable .chip{display:flex;width:max-content;margin:3px 0 0 auto}
   .chip{min-width:24px;min-height:24px;display:inline-flex;align-items:center;justify-content:center;vertical-align:middle}
   .cb{grid-template-columns:minmax(0,8.5em) minmax(50px,1fr) 5.2em;gap:8px}
   table.stack thead{display:none}
@@ -381,8 +382,8 @@ const textW = s => String(s).length*6.6;
 function unitFor(vals){ const mx=Math.max(0,...vals.filter(isNum).map(Math.abs)); return mx>=10000?{div:1000,lab:'SAR bn'}:{div:1,lab:'SAR m'}; }
 function band(x0,x1,T,H,label){ return `<rect x="${x0}" y="${T}" width="${x1-x0}" height="${H}" fill="var(--ytd)"/><text x="${x0+4}" y="${T+12}" style="font-size:11px">${esc(label)}</text>`; }
 function cols(opts){
-  // opts: {cats, vals (SAR m), ytdFrom, figs:[fig ids], title}
-  const W=CW, H=Math.round(Math.min(250,Math.max(200,W*0.45))), T=22, B=28, R=8; const u=unitFor(opts.vals);
+  // opts: {cats, vals (SAR m), ytdFrom, figs:[fig ids], title, unit (optional, shared by paired charts)}
+  const W=CW, H=Math.round(Math.min(250,Math.max(200,W*0.45))), T=22, B=28, R=8; const u=opts.unit||unitFor(opts.vals);
   const vals=opts.vals.map(v=>isNum(v)?v/u.div:null), nv=vals.filter(isNum);
   if(!nv.length) return '<p class="note">No data.</p>';
   let mx=Math.max(0,...nv), mn=Math.min(0,...nv); const span=(mx-mn)||1; if(mx>0) mx+=span*0.1; if(mn<0) mn-=span*0.12;
@@ -501,9 +502,10 @@ function viewSector(key, scope){
   <p class="note">Growth uses companies with figures in both periods. 9M figures cover 1 Jan–30 Sep and are compared only with 9M 2025. CAGR 2022–25 = (FY2025 ÷ FY2022)^(1/3) − 1; a 2022–26 CAGR needs full-year 2026 results.</p>${CHIP_LEGEND}`;
   const cats=ALLP.map(p=>PL[p]);
   const figsFor=m=>ALLP.map(p=>{ const id='f'+(figN++); FIGS[id]={S,scope,m,p,label:m==='NI_ATTR'?'Net profit attributable':cfg.top_line_name,sum:true}; return id; });
+  const secU=unitFor(ALLP.map(p=>blk[top].totals[p].v));
   h+=`<h2 id="s-trend">Trends</h2><div class="grid2">
-   <div class="card"><h3>${esc(cfg.top_line_name)} (${esc(scopeLab)})</h3>${cols({cats,vals:ALLP.map(p=>blk[top].totals[p].v),ytdFrom:4,figs:figsFor(top),title:cfg.top_line_name})}</div>
-   <div class="card"><h3>Net profit attributable (${esc(scopeLab)})</h3>${cols({cats,vals:ALLP.map(p=>blk.NI_ATTR.totals[p].v),ytdFrom:4,figs:figsFor('NI_ATTR'),title:'Net profit attributable'})}</div>`;
+   <div class="card"><h3>${esc(cfg.top_line_name)} (${esc(scopeLab)})</h3>${cols({cats,unit:secU,vals:ALLP.map(p=>blk[top].totals[p].v),ytdFrom:4,figs:figsFor(top),title:cfg.top_line_name})}</div>
+   <div class="card"><h3>Net profit attributable (${esc(scopeLab)})</h3>${cols({cats,unit:secU,vals:ALLP.map(p=>blk.NI_ATTR.totals[p].v),ytdFrom:4,figs:figsFor('NI_ATTR'),title:'Net profit attributable'})}</div>`;
   const rkeys = S==='Banks'?['CI','ROE','COR']:['EBITDA_M','NET_M','ROE'];
   rkeys.forEach(k=>{ h+=`<div class="card"><h3>${esc(cfg.ratios[k][2])}</h3>${lines({key:k,cats,series:[{name:'All companies',color:'var(--series-1)',vals:ALLP.map(p=>sec.ratios_all[k][p].v)},{name:'Excl. '+coShort(L),color:'var(--series-2)',dash:true,vals:ALLP.map(p=>sec.ratios_ex_largest[k][p].v)}],title:cfg.ratios[k][2]})}<p class="note">9M points are annualised where the ratio divides by a balance-sheet amount.</p></div>`; });
   h+=`</div>`;
@@ -570,9 +572,10 @@ function viewCompany(t){
   const wim=N.what_it_means||{};
   h+=`<h2 id="c-wim" style="margin-top:20px">What it means</h2>`;
   if (Object.keys(wim).length) h+=`<div class="callout">${['improved','weakened','why','uncertain'].filter(k=>wim[k]).map(k=>`<div><b>${k[0].toUpperCase()+k.slice(1)}:</b> ${esc(wim[k])}</div>`).join('')}${N.confidence_overall?`<div class="note">Confidence: ${esc(N.confidence_overall)}</div>`:''}<div class="note" style="margin-top:6px">Key figures: ${refsHtml([['FY2022',top],['FY2025',top],['FY2025','NI_ATTR'],['9M2026',top],['9M2026','NI_ATTR']].filter(([p,m])=>getFact(t,p,m)).map(([p,m])=>`${t}-${p}-${m}`))}</div></div>`; else h+='<p class="note">Pending.</p>';
+  const coU=unitFor(ALLP.map(p=>v(top,p)));
   h+=`<h2 id="c-fig">Annual trends and 9M 2026</h2><div class="controls">${pvSwitch()}</div>${companyTable(S,t)}${CHIP_LEGEND}
-  <div class="grid2"><div class="card"><h3>${esc(cfg.top_line_name)}</h3>${cols({cats:ALLP.map(p=>PL[p]),vals:ALLP.map(p=>v(top,p)),ytdFrom:4,figs:ALLP.map(p=>{ if(v(top,p)==null) return null; const id='f'+(figN++); FIGS[id]={t,p,m:top,label:cfg.top_line_name}; return id; }),title:cfg.top_line_name})}</div>
-  <div class="card"><h3>Net profit attributable</h3>${cols({cats:ALLP.map(p=>PL[p]),vals:ALLP.map(p=>v('NI_ATTR',p)),ytdFrom:4,figs:ALLP.map(p=>{ if(v('NI_ATTR',p)==null) return null; const id='f'+(figN++); FIGS[id]={t,p,m:'NI_ATTR',label:'Net profit attributable'}; return id; }),title:'Net profit attributable'})}</div></div>`;
+  <div class="grid2"><div class="card"><h3>${esc(cfg.top_line_name)}</h3>${cols({cats:ALLP.map(p=>PL[p]),unit:coU,vals:ALLP.map(p=>v(top,p)),ytdFrom:4,figs:ALLP.map(p=>{ if(v(top,p)==null) return null; const id='f'+(figN++); FIGS[id]={t,p,m:top,label:cfg.top_line_name}; return id; }),title:cfg.top_line_name})}</div>
+  <div class="card"><h3>Net profit attributable</h3>${cols({cats:ALLP.map(p=>PL[p]),unit:coU,vals:ALLP.map(p=>v('NI_ATTR',p)),ytdFrom:4,figs:ALLP.map(p=>{ if(v('NI_ATTR',p)==null) return null; const id='f'+(figN++); FIGS[id]={t,p,m:'NI_ATTR',label:'Net profit attributable'}; return id; }),title:'Net profit attributable'})}</div></div>`;
   const curPair = (window.__bridgePair && window.__bridgePair[t]) || 'FY2025/FY2024';
   const b=bridgeFor(S,t,curPair);
   h+=`<h2 id="c-lfl">Reported vs like-for-like growth of ${esc(cfg.top_line_name.toLowerCase())}</h2><div class="controls"><label for="brsel">Comparison</label><select id="brsel" data-t="${t}">${PAIRS.map(p=>`<option value="${p}" ${p===curPair?'selected':''}>${PAIRL[p]}</option>`).join('')}</select></div>
@@ -691,7 +694,7 @@ const jump = $('#jumpco');
 jump.innerHTML = `<option value="">Go to a company…</option>` + ['Energy','Banks'].map(S=>`<optgroup label="${S}">${D.sectors[S].tickers.map(t=>`<option value="${t}">${esc(coName(t))}</option>`).join('')}</optgroup>`).join('');
 jump.addEventListener('change', ()=>{ if (jump.value) location.hash='co-'+jump.value; });
 function route(){
-  const v=(location.hash||'#overview').slice(1)||'overview'; const m=v.match(/^(energy|banks)(?:-(ex))?$/);
+  const v=(location.hash||'#overview').slice(1)||'overview'; const m=v.match(/^(energy|banks)(?:[-\/](ex))?$/);
   if (m) return {kind:'sector', key:m[1], scope:m[2]?'ex_largest':'all', nav:m[1]};
   if (/^co-\d{4}$/.test(v) && coInfo(v.slice(3))) return {kind:'company', t:v.slice(3), nav:coSector(v.slice(3)).toLowerCase()};
   if (['budget','method','data'].includes(v)) return {kind:v, nav:v};
