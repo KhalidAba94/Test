@@ -1,0 +1,6 @@
+ticker,period,metric_code,kind,values,used_file,used,original
+6002,FY2021,LEASE_LIAB,restated (like documents),2022_Q1_filed2022-05-23.xls=516.554 | 2022_Q2_filed2022-08-11.xls=516.554 | 2022_Q3_filed2022-10-31.xls=516.554 | 2022_Annual_filed2023-03-27.xls=618.811,2022_Annual_filed2023-03-27.xls,618.811035,516.5541509999999
+6002,FY2021,TA,restated (like documents),2022_Q1_filed2022-05-23.xls=1845.397 | 2022_Q2_filed2022-08-11.xls=1845.397 | 2022_Q3_filed2022-10-31.xls=1845.397 | 2022_Annual_filed2023-03-27.xls=2000.160,2022_Annual_filed2023-03-27.xls,2000.160013,1845.397072
+6002,FY2022,CAPEX,restated (like documents),2022_Annual_filed2023-03-27.xls=103.294 | 2023_Q4_filed2024-02-27.xls=109.665 | 2023_Annual_filed2024-04-14.xls=109.665,2023_Annual_filed2024-04-14.xls,109.664698,103.293679
+6002,FY2023,CAPEX,differs across document types (not a restatement),2023_Q4_filed2024-02-27.xls=65.887 | 2023_Annual_filed2024-04-14.xls=67.750 | 2024_Annual_filed2025-03-26.xls=67.750,2024_Annual_filed2025-03-26.xls,67.750086,67.750086
+6002,FY2023,CFO,differs across document types (not a restatement),2023_Q4_filed2024-02-27.xls=188.603 | 2023_Annual_filed2024-04-14.xls=190.465 | 2024_Annual_filed2025-03-26.xls=190.465,2024_Annual_filed2025-03-26.xls,190.465396,190.465396

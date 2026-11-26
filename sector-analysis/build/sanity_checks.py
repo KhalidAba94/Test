@@ -21,7 +21,8 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import sectors  # noqa: E402
 
 CORE = {"corporate": ["REV", "NI", "NI_ATTR", "PBT", "DA_CF", "CFO", "CAPEX", "TA", "TE", "EQ_ATTR", "CASH"],
-        "bank": ["TOI", "NSCI", "NI_ATTR", "TA", "LOANS", "DEPOSITS", "EQ_ATTR"]}
+        "bank": ["TOI", "NSCI", "NI_ATTR", "TA", "LOANS", "DEPOSITS", "EQ_ATTR"],
+        "reit": ["REV", "NI", "NI_ATTR", "DA_CF", "TA", "DEBT", "CASH", "EQ_ATTR", "DIST"]}
 FY = ["FY2022", "FY2023", "FY2024", "FY2025"]
 
 

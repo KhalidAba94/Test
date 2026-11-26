@@ -130,6 +130,17 @@ def main(sector, facts_csv, overrides_csv, out_csv):
                     add(t, p, "NET_DEBT", val(t, p, "DEBT") + (lease or 0.0) - val(t, p, "CASH"),
                         "DEBT + LEASE_LIAB - CASH" + ("" if lease is not None else " (no lease liabilities tagged: borrowings only)"),
                         [(p, "DEBT"), (p, "LEASE_LIAB"), (p, "CASH")])
+            if tpl == "reit":
+                # REITs: rental revenue is the margin base; FFO = net income + depreciation + impairment of investment
+                # properties (non-cash), unless the fund reports FFO itself (then the reported figure is an override)
+                if val(t, p, "REV") is not None:
+                    add(t, p, "REV_M", val(t, p, "REV"), "Revenue (margin base)", [(p, "REV")])
+                if val(t, p, "FFO") is None and val(t, p, "NI") is not None and val(t, p, "DA_CF") is not None:
+                    add(t, p, "FFO", val(t, p, "NI") + val(t, p, "DA_CF") + (val(t, p, "IMPAIR_CF") or 0.0),
+                        "NI + depreciation + impairment of investment properties (funds from operations, calculated)",
+                        [(p, "NI"), (p, "DA_CF"), (p, "IMPAIR_CF")])
+                if val(t, p, "DEBT") is not None and val(t, p, "CASH") is not None:
+                    add(t, p, "NET_DEBT", val(t, p, "DEBT") - val(t, p, "CASH"), "DEBT - CASH", [(p, "DEBT"), (p, "CASH")])
             if tpl == "bank":
                 if val(t, p, "TOI") is not None and val(t, p, "OPEX_PRE") is not None:
                     add(t, p, "PPOP", val(t, p, "TOI") - val(t, p, "OPEX_PRE"), "TOI - OPEX_PRE", [(p, "TOI"), (p, "OPEX_PRE")])

@@ -94,7 +94,7 @@ def main(cand_csv, sector, out_csv, checks_csv):
             "fact_id": f"{t}-{p}-{m}", "sector": sector, "ticker": t, "company": latest["entity_name"],
             "period": p, "period_end": latest["period_end"], "period_months": latest["period_months"],
             "metric_code": m, "value_sar_m": round(used, 4), "value_original": latest["value_original"],
-            "unit_original": latest["rounding"], "currency_original": "SAR", "provenance": prov,
+            "unit_original": latest["rounding"], "currency_original": latest.get("currency") or "SAR", "provenance": prov,
             "source_id": latest["company_dir"] + "/" + latest["file"],
             "location": f'XBRL xls section {latest["section_code"]}, row(s) {latest["xls_rows"]}',
             "line_item_label": latest["labels"], "reported_in_filing": latest["file"],

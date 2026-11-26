@@ -1,0 +1,6 @@
+ticker,period,flag,item,detail
+1830,9M2026,missing,no top line or profit for this period,
+1820,FY2025,jump,EQ_ATTR,206.6 -> 16.6 (-92%)
+6018,FY2022,missing,no top line or profit for this period,
+6018,FY2023,missing,no top line or profit for this period,
+6022,FY2023,jump,REV,13.2 -> 80.1 (+507%)

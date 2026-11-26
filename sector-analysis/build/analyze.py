@@ -41,11 +41,21 @@ def main(sectors_json, out_json, *facts_csvs):
         # non-December year-ends: the 9M slot holds the year-to-date to 30 Sep, which can be shorter than nine
         # months (e.g. six months for a March year-end). It is annualised on its true length for the company's
         # ratios and left out of the sector's 9M totals and growth (listed in ytd_not_9m).
-        ytd_months = {}
+        # A group can set ytd_months (e.g. 6 for REITs, which report half-yearly): its YTD slot then holds H1, and only
+        # companies whose YTD has that length enter the group totals.
+        target = int(sc.get("ytd_months", 9))
+        ytd_months, ytd_true = {}, {}
         for r in srows:
-            if r["period"].startswith("9M") and str(r.get("period_months") or "").strip() not in ("", "0", "0.0", "9", "9.0"):
-                ytd_months[(r["ticker"], r["period"])] = int(float(r["period_months"]))
-        sfacts = calc.Facts.from_rows([r for r in srows if (r["ticker"], r["period"]) not in ytd_months])
+            if r["period"].startswith("9M") and str(r.get("period_months") or "").strip() not in ("", "0", "0.0"):
+                mo = int(float(r["period_months"]))
+                ytd_true[(r["ticker"], r["period"])] = mo
+                if mo != target:
+                    ytd_months[(r["ticker"], r["period"])] = mo
+        # short financial years after a year-end change (e.g. SADAFCO FY2023 = 9 months): kept on the company page,
+        # left out of sector totals, and growth across them is not meaningful
+        short_fy = {(r["ticker"], r["period"]): int(float(r["period_months"])) for r in srows
+                    if r["period"].startswith("FY") and str(r.get("period_months") or "").strip() not in ("", "0", "0.0", "12", "12.0")}
+        sfacts = calc.Facts.from_rows([r for r in srows if (r["ticker"], r["period"]) not in ytd_months and (r["ticker"], r["period"]) not in short_fy])
         tickers = list(sc["constituents"].keys())
 
         def v(t, p, m):
@@ -64,11 +74,11 @@ def main(sectors_json, out_json, *facts_csvs):
                 dm = d_m[4:]
                 c, o = v(t, p, dm), v(t, OPENING[p], dm)
                 d = calc.avg2(c, o)
-                n = calc.annualise(n, ytd_months.get((t, p), MONTHS[p])) if n is not None else None
+                n = calc.annualise(n, ytd_true.get((t, p), MONTHS[p])) if n is not None else None
             elif d_m.startswith("ann:"):
                 # stock over flow (e.g. net debt / EBITDA): the YTD flow is annualised
                 d = v(t, p, d_m[4:])
-                d = calc.annualise(d, ytd_months.get((t, p), MONTHS[p])) if d is not None else None
+                d = calc.annualise(d, ytd_true.get((t, p), MONTHS[p])) if d is not None else None
                 if n is not None and d is not None and d <= 0:
                     return calc.NM   # a multiple of zero or negative EBITDA is not meaningful
             else:
@@ -98,8 +108,10 @@ def main(sectors_json, out_json, *facts_csvs):
             for m in sc["table_metrics"]:
                 g = {}
                 for cur, pri in PAIRS:
-                    g[f"{cur}/{pri}"] = calc.growth(facts.get(t, cur, m), facts.get(t, pri, m))
-                g["CAGR_2022_2025"] = calc.cagr(facts.get(t, "FY2025", m), facts.get(t, "FY2022", m), 3)
+                    g[f"{cur}/{pri}"] = (calc.NM if ((t, cur) in short_fy or (t, pri) in short_fy)
+                                         else calc.growth(facts.get(t, cur, m), facts.get(t, pri, m)))
+                g["CAGR_2022_2025"] = (calc.NM if ((t, "FY2025") in short_fy or (t, "FY2022") in short_fy)
+                                       else calc.cagr(facts.get(t, "FY2025", m), facts.get(t, "FY2022", m), 3))
                 growth[m] = g
             ratios = {rk: {p: ratio(t, p, spec) for p in ALLP} for rk, spec in sc["ratios"].items()}
             comp[t] = {"name": sc["constituents"][t]["name"], "sub_industry": sc["constituents"][t]["sub_industry"],
@@ -146,10 +158,10 @@ def main(sectors_json, out_json, *facts_csvs):
                         if d_m.startswith("avg:"):
                             dm = d_m[4:]
                             d = calc.avg2(v(t, p, dm), v(t, OPENING[p], dm))
-                            n = calc.annualise(n, ytd_months.get((t, p), MONTHS[p])) if n is not None else None
+                            n = calc.annualise(n, ytd_true.get((t, p), MONTHS[p])) if n is not None else None
                         elif d_m.startswith("ann:"):
                             d = v(t, p, d_m[4:])
-                            d = calc.annualise(d, ytd_months.get((t, p), MONTHS[p])) if d is not None else None
+                            d = calc.annualise(d, ytd_true.get((t, p), MONTHS[p])) if d is not None else None
                         else:
                             d = v(t, p, d_m)
                         if n is None or d is None:
@@ -172,6 +184,7 @@ def main(sectors_json, out_json, *facts_csvs):
             "hhi": {m: {p: calc.hhi(facts, tickers, p, m) for p in ALLP} for m in (top, prof)},
             "profit_makers_total": {p: sum(x for x in (facts.get(t, p, prof) for t in tickers) if x is not None and x > 0) for p in ALLP},
             "ytd_not_9m": {f"{t}|{p}": mo for (t, p), mo in ytd_months.items()},
+            "short_fy": {f"{t}|{p}": mo for (t, p), mo in short_fy.items()},
         }
         out[sector] = {"config": sc, "tickers": tickers, "companies": comp, "sector": sec,
                        "periods": ALLP, "pairs": [f"{a}/{b}" for a, b in PAIRS]}

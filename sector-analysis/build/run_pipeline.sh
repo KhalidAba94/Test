@@ -2,7 +2,7 @@
 # Rebuild data for the configured sectors (config/sectors.json) from the downloaded archive.
 # Usage: build/run_pipeline.sh <work_dir_with_archive> [sector keys...]   (archive/<archive folder>/<company_dir>/ files)
 set -euo pipefail
-WORK="$1"; HERE="$(cd "$(dirname "$0")" && pwd)"; ROOT="$(dirname "$HERE")"
+WORK="$1"; HERE="$(cd "$(dirname "$0")" && pwd)"; ROOT="${SA_ROOT:-$(dirname "$HERE")}"   # SA_ROOT: another project root, e.g. sets/seven
 python3 "$HERE/merge_parts.py" "$ROOT"
 mkdir -p "$WORK/parsed"
 # sectors from config/sectors.json (key, slug, template, archive folder); pass sector keys as extra arguments to build only those
@@ -13,6 +13,13 @@ while read -r S s; do
   T=$(python3 "$HERE/sectors.py" "$ROOT" template | awk -v k="$S" '$1==k{print $2}')
   [ -d "$WORK/archive/$A" ] || { echo "skip $S: no archive folder $A"; continue; }
   mkdir -p "$ROOT/data/$s"
+  if ! ls "$WORK/archive/$A"/*/*.xls >/dev/null 2>&1; then
+    # no XBRL in the archive (e.g. REIT fund reports): every figure comes from the PDFs via overrides
+    echo "fact_id,sector,ticker,company,period,period_end,period_months,metric_code,value_sar_m,value_original,unit_original,currency_original,provenance,source_id,location,line_item_label,reported_in_filing,original_value,original_source,assurance,n_documents,pdf_file,pdf_status,pdf_pages" > "$WORK/parsed/${s}_facts_located.csv"
+    python3 "$HERE/derive.py" "$S" "$WORK/parsed/${s}_facts_located.csv" "$ROOT/data/overrides.csv" "$ROOT/data/$s/facts.csv"
+    python3 "$HERE/source_register.py" "$WORK/archive/$A" "$S" "$WORK/parsed/${s}_meta.csv" "$ROOT/data/$s/sources.csv" "$ROOT/data/$s/coverage_documents.csv" || true
+    continue
+  fi
   python3 "$HERE/parse_xbrl_xls.py" "$WORK/archive/$A" "$WORK/parsed/${s}_xbrl.csv" "$WORK/parsed/${s}_meta.csv"
   python3 "$HERE/extract_facts.py" "$WORK/parsed/${s}_xbrl.csv" "$WORK/parsed/${s}_meta.csv" "$ROOT/config/mapping_$( [ -f "$ROOT/config/mapping_${s}.json" ] && echo "$s" || echo "$T" ).json" "$WORK/parsed/${s}_candidates.csv"
   if [ "$T" = "bank" ]; then

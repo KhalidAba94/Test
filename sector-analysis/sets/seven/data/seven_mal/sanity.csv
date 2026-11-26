@@ -1,0 +1,9 @@
+ticker,period,flag,item,detail
+4321,FY2025,relation,EBITDA above revenue,EBITDA 2360.2 > REV 2288.3
+4321,9M2025,relation,EBITDA above revenue,EBITDA 1976.4 > REV 1724.5
+4150,FY2022,missing,no top line or profit for this period,
+4150,FY2023,missing,no top line or profit for this period,
+4150,FY2024,missing,no top line or profit for this period,
+4150,FY2025,missing,no top line or profit for this period,
+4150,9M2025,missing,no top line or profit for this period,
+4150,9M2026,missing,no top line or profit for this period,

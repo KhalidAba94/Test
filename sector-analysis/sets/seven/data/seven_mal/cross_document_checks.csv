@@ -1,0 +1,9 @@
+ticker,period,metric_code,kind,values,used_file,used,original
+4320,9M2025,DA_CF,restated (like documents),2025_Q3_filed2025-11-27.xls=34.887 | 2026_Q3_filed2026-11-15.xls=28.947,2026_Q3_filed2026-11-15.xls,28.947412999999997,34.887437
+4320,FY2021,LEASE_LIAB,restated (like documents),2022_Q1_filed2022-05-19.xls=129.994 | 2022_Q2_filed2022-08-23.xls=15.700,2022_Q2_filed2022-08-23.xls,15.7,129.994193
+4320,FY2022,LEASE_LIAB,restated (like documents),2023_Q1_filed2023-06-22.xls=120.037 | 2023_Q2_filed2023-08-23.xls=120.037 | 2023_Q3_filed2023-11-22.xls=103.844,2023_Q3_filed2023-11-22.xls,103.843881,120.036631
+4320,FY2023,DEBT,differs across document types (not a restatement),2023_Annual_filed2024-08-06.xls=798.367 | 2024_Q1_filed2024-08-07.xls=803.810 | 2024_Q3_filed2024-11-25.xls=803.810 | 2024_Annual_filed2025-04-08.xls=798.367,2024_Annual_filed2025-04-08.xls,798.367365,798.367365
+4320,FY2024,DEBT,differs across document types (not a restatement),2024_Annual_filed2025-04-08.xls=839.035 | 2025_Q1_filed2025-05-25.xls=853.401 | 2025_Annual_filed2026-03-31.xls=839.035,2025_Annual_filed2026-03-31.xls,839.034552,839.034552
+4320,FY2025,DEBT,restated (like documents),2025_Annual_filed2026-03-31.xls=863.280 | 2026_Q1_filed2026-06-06.xls=880.069 | 2026_Q3_filed2026-11-15.xls=16.789,2026_Q3_filed2026-11-15.xls,16.78876,863.2803299999999
+4320,FY2025,LEASE_LIAB,differs across document types (not a restatement),2026_Q1_filed2026-06-06.xls=78.567 | 2026_Q2_filed2026-09-09.xls=13.248 | 2026_Q3_filed2026-11-15.xls=78.567,2026_Q3_filed2026-11-15.xls,78.566986,78.566986
+4321,FY2022,CFO,restated (like documents),2022_Annual_filed2023-08-30.xls=871.508 | 2023_Annual_filed2024-05-02.xls=818.678,2023_Annual_filed2024-05-02.xls,818.678082,871.5083529999999

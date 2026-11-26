@@ -150,6 +150,18 @@ ORDER = []
 
 
 def company_rows(sector):
+    if TPL.get(sector) == "reit":
+        rows = [("REV", "Revenue (rental income)", "val"), ("REV", "  growth YoY", "growth"),
+                ("NI_ATTR", "Net income", "val"), ("NI_ATTR", "  growth YoY", "growth"),
+                ("FFO", "Funds from operations (FFO)", "val"), ("DIST", "Distributions declared", "val"),
+                ("TA", "Total assets (period-end)", "val"), ("DEBT", "Borrowings (period-end)", "val"),
+                ("CASH", "Cash and cash equivalents (period-end)", "val"), ("NET_DEBT", "Net debt (C)", "val"),
+                ("EQ_ATTR", "Net assets attributable to unitholders (book, period-end)", "val"),
+                ("NAV_FV", "Net assets at fair value (period-end)", "val")]
+        ratios = [("Net margin", "NI_ATTR", "REV_M", False), ("FFO margin", "FFO", "REV_M", False),
+                  ("Loan to value (borrowings / total assets)", "DEBT", "TA", False),
+                  ("Return on net assets (YTD annualised)", "NI_ATTR", "EQ_ATTR", True), ("Distributions / FFO", "DIST", "FFO", False)]
+        return rows, ratios
     if TPL.get(sector) == "corporate":
         rows = [("REV", "Revenue", "val"), ("REV", "  growth YoY", "growth"), ("OIRS", "Other income related to sales*", "val"),
                 ("REV_M", "Revenue incl. other income related to sales (margin base)*", "val"), ("GP", "Gross profit", "val"),
@@ -194,11 +206,13 @@ def build_company(wb, sector, t, cfg, ds, narr, adj_rows, facts_idx, sheetname, 
     ws = wb.create_sheet(sheetname)
     cinfo = ds["companies"][t]
     top = cfg["top_line"]
+    yl = cfg.get("ytd_label", "9M")   # REIT group: H1 (half-yearly fund reports)
     fy_end = (facts_idx.get((t, "FY2025", top)) or {}).get("period_end", "") or "2025-12-31"
     ytd_m = {p: int(float((facts_idx.get((t, p, top)) or {}).get("period_months") or 9)) for p in ("9M2025", "9M2026")}
     MON = {"03": "31 Mar", "06": "30 Jun", "07": "31 Jul", "09": "30 Sep", "12": "31 Dec"}
     fye_txt = MON.get(fy_end[5:7], fy_end[5:])
     ytd_txt = ("2026 YTD = 9M (1 Jan–30 Sep 2026) vs 9M 2025" if ytd_m["9M2026"] == 9 else
+               "2026 YTD = H1 (1 Jan–30 Jun 2026) vs H1 2025 (half-yearly fund reports)" if ytd_m["9M2026"] == 6 and yl == "H1" else
                f"2026 YTD column = the {ytd_m['9M2026']} months to 30 Sep 2026 (fiscal year ends {fye_txt}; FY columns = fiscal years shown under the calendar year holding most of their months); left out of sector 9M totals")
     title(ws, f'{cinfo["name"]} ({t}) · {cfg.get("name", sector)} · {cinfo["sub_industry"]}',
           f'Legal name in filings: {cinfo["legal_name"]} · Year-end {fye_txt} · SAR million unless stated · '
@@ -212,14 +226,14 @@ def build_company(wb, sector, t, cfg, ds, narr, adj_rows, facts_idx, sheetname, 
     r = 5
     r = section(ws, r, "A. Annual trends and comparable 2026 YTD (SAR m)")
     header_row(ws, r, ["Metric", "FY2021 (opening)", "FY2022", "FY2023", "FY2024", "FY2025", "CAGR 2022–25", "",
-                       "9M 2025", "9M 2026", "YTD change", "Basis / provenance (FY2025 · 9M 2026)"])
+                       f"{yl} 2025", f"{yl} 2026", "YTD change", f"Basis / provenance (FY2025 · {yl} 2026)"])
     ws.cell(row=r, column=8).fill = PatternFill(None)
     r += 1
     rows, ratios = company_rows(sector)
     rowmap = {}
     for code, label, kind in rows:
         has = any((t, p, code) in facts_idx for p in PCOL)
-        if not has and code in ("OIRS", "REV_M", "GP", "T1_COST", "T1_SUKUK", "DEBT", "LEASE_LIAB", "CASH", "NET_DEBT"):
+        if not has and code in ("OIRS", "REV_M", "GP", "T1_COST", "T1_SUKUK", "DEBT", "LEASE_LIAB", "CASH", "NET_DEBT", "FFO", "DIST", "NAV_FV"):
             continue
         ws.cell(row=r, column=1, value=label).font = f(kind == "val" and not label.startswith("  "), size=9)
         if kind == "val":
@@ -263,6 +277,11 @@ def build_company(wb, sector, t, cfg, ds, narr, adj_rows, facts_idx, sheetname, 
             vr = rowmap[code]
             for p in ("FY2023", "FY2024", "FY2025"):
                 prev = {"FY2023": "FY2022", "FY2024": "FY2023", "FY2025": "FY2024"}[p]
+                sf = ds["sector"].get("short_fy", {})
+                if f"{t}|{p}" in sf or f"{t}|{prev}" in sf:
+                    ws[f"{PCOL[p]}{r}"] = "n.m."   # short financial year after a year-end change
+                    ws[f"{PCOL[p]}{r}"].comment = Comment("Not meaningful: one of the two years is a short financial year after a year-end change (see the company's data notes).", "analysis")
+                    continue
                 ws[f"{PCOL[p]}{r}"] = growth_formula(f"{PCOL[p]}{vr}", f"{PCOL[prev]}{vr}")
                 ws[f"{PCOL[p]}{r}"].number_format = PCT
             for col in "CDEFGIJK":
@@ -326,7 +345,7 @@ def build_company(wb, sector, t, cfg, ds, narr, adj_rows, facts_idx, sheetname, 
     # ---------------- B. growth bridge
     r = section(ws, r, f"B. Reported vs like-for-like growth of {cfg['top_line_name'].lower()} (percentage points of prior-period {cfg['top_line_name'].lower()})")
     comps = [f"{a}/{b}" for a, b in PAIRS]
-    header_row(ws, r, ["Bridge step", "FY23 vs FY22", "FY24 vs FY23", "FY25 vs FY24", "9M26 vs 9M25"], start_col=1)
+    header_row(ws, r, ["Bridge step", "FY23 vs FY22", "FY24 vs FY23", "FY25 vs FY24", f"{yl}26 vs {yl}25"], start_col=1)
     ws.cell(row=r, column=6, value="Adjustment basis (see Adjustments sheet)").font = f(True, size=9)
     r += 1
     toprow = rowmap.get(top)
@@ -451,10 +470,11 @@ def build_sector(wb, sector, cfg, ds, narr, comp_sheets):
     tickers = ds["tickers"]
     top, prof = cfg["top_line"], cfg["profit"]
     largest = ds["sector"]["largest_by_top_line_FY2025"]
-    title(ws, f"{cfg.get('name', sector)} sector summary, FY2022–FY2025 and 9M 2026",
+    yl, ym = cfg.get("ytd_label", "9M"), int(cfg.get("ytd_months", 9))
+    title(ws, f"{cfg.get('name', sector)} summary, FY2022–FY2025 and {yl} 2026",
           f"SAR million. Sector ratios are calculated from summed numerators and denominators, never averaged. "
           f"Sector growth uses a matched sample (companies with data in both periods). 9M columns are partial-year and "
-          f"compared only with 9M 2025. Constituents: {len(tickers)} companies. {cfg.get('classification_note', '')}")
+          f"compared only with {yl} 2025. Constituents: {len(tickers)} companies. {cfg.get('classification_note', '')}")
     ws.column_dimensions["A"].width = 42
     for col in "BCDEFGHIJKL":
         ws.column_dimensions[col].width = 12
@@ -467,7 +487,8 @@ def build_sector(wb, sector, cfg, ds, narr, comp_sheets):
         for part in (spec[0], spec[1].replace("avg:", "").replace("ann:", "")):
             for m in part.split("-"):
                 needed.add(m)
-    needed |= {"EBITDA_C", "EBITDA_U", "OPINC", "CAPEX", "FCF", "REV_M"} if TPL.get(sector) == "corporate" else {"NSCI", "FEES_NET", "OPEX_PRE", "IMPAIR_TOTAL", "PPOP"}
+    needed |= ({"EBITDA_C", "EBITDA_U", "OPINC", "CAPEX", "FCF", "REV_M"} if TPL.get(sector) == "corporate" else
+               {"FFO", "DIST", "REV_M", "NET_DEBT"} if TPL.get(sector) == "reit" else {"NSCI", "FEES_NET", "OPEX_PRE", "IMPAIR_TOTAL", "PPOP"})
     needed = [m for m in needed if m]
     base = 200
     mat = {}
@@ -481,7 +502,7 @@ def build_sector(wb, sector, cfg, ds, narr, comp_sheets):
             ws.cell(row=r, column=1, value=f'{ds["companies"][t]["name"]} ({t})').font = f(size=9)
             for p in periods:
                 c = ws[f"{pc[p]}{r}"]
-                if f"{t}|{p}" in ds["sector"].get("ytd_not_9m", {}):
+                if f"{t}|{p}" in ds["sector"].get("ytd_not_9m", {}) or f"{t}|{p}" in ds["sector"].get("short_fy", {}):
                     c.value = None   # YTD shorter than nine months: excluded from sector 9M totals
                     continue
                 c.value = lookup(f"{t}-{p}-{m}")
@@ -504,7 +525,7 @@ def build_sector(wb, sector, cfg, ds, narr, comp_sheets):
 
     def totals_block(r, label, excl=None):
         r = section(ws, r, label, 12)
-        header_row(ws, r, ["", "FY2022", "FY2023", "FY2024", "FY2025", "CAGR 2022–25", "", "9M 2025", "9M 2026", "YTD change", "Companies (FY2025)"])
+        header_row(ws, r, ["", "FY2022", "FY2023", "FY2024", "FY2025", "CAGR 2022–25", "", f"{yl} 2025", f"{yl} 2026", "YTD change", "Companies (FY2025)"])
         r += 1
         cols = {"FY2022": "B", "FY2023": "C", "FY2024": "D", "FY2025": "E", "9M2025": "H", "9M2026": "I"}
         out = {}
@@ -572,9 +593,9 @@ def build_sector(wb, sector, cfg, ds, narr, comp_sheets):
                     num += f"-SUMPRODUCT({mk},{rng(nparts[1], p)})"
                 if avg:
                     den = f"(SUMPRODUCT({mk},{rng(dm, p)})+SUMPRODUCT({mk},{rng(dm, OPENING[p])}))/2"
-                    ann = "*12/9" if p.startswith("9M") else ""
+                    ann = f"*12/{ym}" if p.startswith("9M") else ""
                 elif annd:
-                    den, ann = f"SUMPRODUCT({mk},{rng(dm, p)})" + ("*12/9" if p.startswith("9M") else ""), ""
+                    den, ann = f"SUMPRODUCT({mk},{rng(dm, p)})" + (f"*12/{ym}" if p.startswith("9M") else ""), ""
                 else:
                     den, ann = f"SUMPRODUCT({mk},{rng(dm, p)})", ""
                 if rk == "COR":
@@ -598,7 +619,7 @@ def build_sector(wb, sector, cfg, ds, narr, comp_sheets):
     # 3. company contributions
     r = section(ws, r, "3. Company contribution: share of sector and contribution to sector growth")
     for m, lab in ((top, cfg["top_line_name"]), (prof, "Net profit attributable")):
-        header_row(ws, r, [f"{lab}: share of sector", "FY2022", "FY2023", "FY2024", "FY2025", "", "", "9M 2025", "9M 2026"])
+        header_row(ws, r, [f"{lab}: share of sector", "FY2022", "FY2023", "FY2024", "FY2025", "", "", f"{yl} 2025", f"{yl} 2026"])
         r += 1
         for t in tickers:
             nm = ds["companies"][t]["name"]
@@ -610,7 +631,7 @@ def build_sector(wb, sector, cfg, ds, narr, comp_sheets):
                 ws[f"{col}{r}"] = f'=IF(ISNUMBER({pc[p]}{i}),{pc[p]}{i}/SUM({rng(m, p)}),"")'
                 ws[f"{col}{r}"].number_format = PCT
             r += 1
-        header_row(ws, r, [f"{lab}: contribution to sector growth (pp)", "FY23 vs FY22", "FY24 vs FY23", "FY25 vs FY24", "", "", "", "", "9M26 vs 9M25"])
+        header_row(ws, r, [f"{lab}: contribution to sector growth (pp)", "FY23 vs FY22", "FY24 vs FY23", "FY25 vs FY24", "", "", "", "", f"{yl}26 vs {yl}25"])
         r += 1
         for t in tickers:
             ws.cell(row=r, column=1, value=ds["companies"][t]["name"]).font = f(size=9)
@@ -666,7 +687,7 @@ def build_sector(wb, sector, cfg, ds, narr, comp_sheets):
     ws.add_chart(ch, f"A{chart_row}")
     a2, b2 = mat[prof]
     ch2 = BarChart(); ch2.type = "col"; ch2.grouping = "clustered"
-    ch2.title = "Net profit attributable: 9M 2025 vs 9M 2026 (partial year, SAR m)"
+    ch2.title = f"Net profit attributable: {yl} 2025 vs {yl} 2026 (partial year, SAR m)"
     for p, col in (("9M2025", 7), ("9M2026", 8)):
         ref = Reference(ws, min_col=col, max_col=col, min_row=a2 - 1, max_row=b2)
         ch2.add_data(ref, titles_from_data=True)
@@ -741,7 +762,7 @@ def main(root, out):
     for sector in ORDER:
         for t in ds[sector]["tickers"]:
             short = ds[sector]["companies"][t]["name"].split(" (")[0].replace(" ", "")[:14]
-            comp_sheets[t] = f"{sector[0]}_{t}_{short}"
+            comp_sheets[t] = f"{cfg_all[sector].get('code', sector[0])}_{t}_{short}"
     for s in SEC:
         sector = s["key"]
         cfg = cfg_all[sector]
@@ -791,14 +812,14 @@ def main(root, out):
             r += 1
         r += 1
     # final sheet order: guidance first, then each sector followed by its companies, then registers
-    order = ["Contents", "How_to_read", "Definitions", "Coverage", "Energy_Sector"]
-    order += [n for n in wb.sheetnames if n.startswith("E_")]
-    order += ["Banks_Sector"] + [n for n in wb.sheetnames if n.startswith("B_") and n not in order]
+    order = ["Contents", "How_to_read", "Definitions", "Coverage"]
+    for sector in ORDER:   # each sector (or group) sheet followed by its companies, in configured order
+        order += [f"{sector}_Sector"] + [comp_sheets[t] for t in ds[sector]["tickers"]]
     order += ["Budget_Policy_Impact", "Budget_Policy_Facts", "Adjustments", "Data", "Sources", "Review_Log", "Template_Changes"]
     order = [n for n in order if n in wb.sheetnames] + [n for n in wb.sheetnames if n not in order]
     wb._sheets = [wb[n] for n in order]
     # contents
-    title(contents, "Saudi sector & company financial analysis 2022–2026: pilot sectors Energy and Banks",
+    title(contents, guide.get("workbook_title", "Saudi sector & company financial analysis 2022–2026: pilot sectors Energy and Banks"),
           f"Built from the 'Tadawul Financials' archive. Figures in SAR million unless stated. As of {guide.get('as_of', '')}.")
     contents["A3"].value = None
     r = 5

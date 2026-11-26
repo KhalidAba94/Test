@@ -36,7 +36,7 @@ def fiscal_year(e, fye_month):
     return e.year if fye_month >= 6 else e.year - 1
 
 
-def period_label(start, end, is_balance, fye_month=12):
+def period_label(start, end, is_balance, fye_month=12, is_annual=False):
     e = d(end)
     if e is None:
         return None, None
@@ -48,6 +48,9 @@ def period_label(start, end, is_balance, fye_month=12):
     months = (e.year - s.year) * 12 + (e.month - s.month) + 1
     if months == 12 and e.month == 12 and e.day == 31:
         return f"FY{e.year}", 12
+    if is_annual and e.month == 12 and e.day == 31 and 6 <= months < 12 and not (s.month == 1 and s.day == 1):
+        # short financial year after a year-end change (e.g. SADAFCO: April-December 2023); period_months keeps its length
+        return f"FY{e.year}", months
     if fye_month != 12:
         # non-December fiscal years (file names carry FYEdd-mm): the fiscal year -> FY<calendar year with most
         # of its months>; the year-to-date to 30 Sep -> the 9M slot, with its true length in period_months
@@ -99,7 +102,12 @@ def main(long_csv, meta_csv, mapping_json, out_csv):
         scale = SCALE.get(m.get("rounding", ""), None)
         ticker = comp.split("_", 1)[0]
         fm = re.search(r"FYE\d{2}-(\d{2})", f)
-        fye_month = int(fm.group(1)) if fm else 12
+        fm2 = re.search(r"FYE-([A-Z][a-z]{2})\d{4}", f)
+        MON = {"Jan": 1, "Feb": 2, "Mar": 3, "Apr": 4, "May": 5, "Jun": 6, "Jul": 7, "Aug": 8, "Sep": 9, "Oct": 10, "Nov": 11, "Dec": 12}
+        fye_month = int(fm.group(1)) if fm else (MON.get(fm2.group(1), 12) if fm2 else 12)
+        is_annual = "_Annual_" in f
+        cur = m.get("currency", "") or ""
+        fx = 3.75 if "dollar" in cur.lower() else 1.0   # USD reporters (e.g. Americana): converted at the SAR peg
         filed = re.search(r"filed(\d{4}-\d{2}-\d{2})", f)
         filed = filed.group(1) if filed else ""
         for metric, spec in mapping.items():
@@ -108,7 +116,7 @@ def main(long_csv, meta_csv, mapping_json, out_csv):
                 for col in cols:
                     st, en = ctx.get((comp, f, sec, col), ("", ""))
                     is_bal = sec in balance_sections
-                    plabel, months = period_label(st, en, is_bal, fye_month)
+                    plabel, months = period_label(st, en, is_bal, fye_month, is_annual)
                     if plabel is None:
                         continue
                     found, labels_used, rows_used = [], [], []
@@ -128,7 +136,8 @@ def main(long_csv, meta_csv, mapping_json, out_csv):
                         "ticker": ticker, "company_dir": comp, "metric_code": metric,
                         "period": plabel, "period_months": months, "period_start": st, "period_end": en,
                         "value_original": val, "rounding": m.get("rounding", ""),
-                        "value_sar_m": (val * scale) if scale is not None else "",
+                        "value_sar_m": (val * scale * fx) if scale is not None else "",
+                        "currency": "USD" if fx != 1.0 else "SAR",
                         "file": f, "filed": filed, "column_role": role, "section_code": sec,
                         "labels": " + ".join(labels_used), "xls_rows": ",".join(str(int(x) + 1) for x in rows_used),
                         "status": m.get("status", ""), "entity_name": m.get("entity_name", ""), "fye_month": fye_month,

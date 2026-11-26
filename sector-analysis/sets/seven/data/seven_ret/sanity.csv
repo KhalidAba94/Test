@@ -1,0 +1,9 @@
+ticker,period,flag,item,detail
+4001,9M2026,missing,no top line or profit for this period,
+4161,9M2026,missing,no top line or profit for this period,
+4003,9M2026,missing,DA_CF,
+4003,9M2026,missing,CFO,
+4003,9M2026,missing,CAPEX,
+4240,FY2023,restated_big,REV,5232.2 -> 4671.2
+4240,FY2023,jump,EQ_ATTR,438.1 -> -778.7 (-278%)
+4193,FY2022,missing,no top line or profit for this period,
