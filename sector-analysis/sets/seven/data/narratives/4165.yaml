@@ -1,0 +1,198 @@
+ticker: '4165'
+headline: >-
+  Revenue grew 23.3% a year from SAR 588m (FY2022) to SAR 1,104m (FY2025) and attributable profit rose from SAR 125m to SAR 218m, with
+  Gulf sales growing fastest; in 9M 2026 revenue rose 11.4% to SAR 949m but higher selling and administrative costs held attributable
+  profit growth to 3.9% (SAR 182m).
+lfl_basis:
+  definition_used: >-
+    Standard bridge on IFRS revenue (after sales discounts). Al Majed was a stand-alone company with Gulf branches until FY2023; FY2024
+    is the first consolidated year, with a 100% Qatar subsidiary whose origin and revenue are not disclosed, so the FY2024/FY2023 perimeter
+    step is not determinable. No other acquisitions or disposals. About a fifth of revenue is in the Gulf, mostly in USD-pegged currencies
+    plus the Kuwaiti dinar; revenue by country is not given, so the FX step is not determinable but small. The company gives no store
+    count or same-store sales, so like-for-like growth is not determinable; organic growth is the closest measure where the perimeter
+    is unchanged.
+  perimeter_changes:
+  - event: Qatar subsidiary (100%) first consolidated; FY2024 is the first consolidated year
+    date: '2024'
+    effect: not determinable (no revenue disclosed)
+    source: 4165_ALMAJED_OUD/2024_Annual_filed2025-03-18.pdf p.12
+  - event: >-
+      UAE holding company and US subsidiary established (UK after the period); no significant operations at 30 Sep 2026
+    date: 2026-06 to 2026-10
+    effect: nil to 9M 2026
+    source: 4165_ALMAJED_OUD/2026_Q3_filed2026-11-07.pdf p.9, p.20
+  - event: MoU to acquire Al-Safa Pharmaceuticals and Medical Supplies Group (not completed by 30 Sep 2026)
+    date: '2025-12-30'
+    effect: none yet
+    source: 4165_ALMAJED_OUD/2025_Annual_filed2026-02-11.pdf p.52
+  capacity_changes:
+  - event: >-
+      Store openings and e-commerce growth: store counts not disclosed; e-commerce and other channels SAR 73.0m in FY2024 (SAR 40.5m
+      in FY2023)
+    date: 2023-2024
+    effect: not determinable
+    source: 4165_ALMAJED_OUD/2024_Annual_filed2025-03-18.pdf p.53
+  fx_exposure: >-
+    GCC was 20.6% of FY2025 revenue (Kuwait, UAE, Bahrain, Oman, Qatar). All but the Kuwaiti dinar are pegged to the US dollar; Kuwaiti
+    revenue is not disclosed.
+  price_volume_support: >-
+    Not determinable: the filings give revenue by region and gross sales less discounts, but no volumes, prices or store data.
+  confidence: Medium (perimeter High except FY2024; FX and new capacity not determinable)
+price_volume:
+- period: FY2025 vs FY2024
+  text: >-
+    Revenue rose SAR 178m (+19.2%). Saudi revenue rose 12.8% (SAR 776m to SAR 876m) and Gulf revenue 52.1% (SAR 150m to SAR 228m). Gross
+    sales rose 27.7% to SAR 2,159m while sales discounts rose 37.1% to SAR 1,065m, so discounts took 49.3% of gross sales (45.9% in
+    FY2024, we calculate). Volumes and prices are not disclosed.
+  basis: disclosed (region; gross sales and discounts); split not determinable
+  confidence: High for the amounts; the split is not determinable
+  source: 4165_ALMAJED_OUD/2025_Annual_filed2026-02-11.pdf p.45, p.52
+  refs:
+  - 4165-FY2025-REV
+  - 4165-FY2024-REV
+- period: 9M 2026 vs 9M 2025
+  text: >-
+    Revenue rose SAR 97.3m (+11.4%): Gulf revenue rose 56.2% (SAR 136m to SAR 212m) and Saudi revenue 2.9% (SAR 715m to SAR 736m). The
+    Gulf provided 78% of the increase (we calculate). No store or volume data are given.
+  basis: disclosed (region); split not determinable
+  confidence: High for the amounts
+  source: 4165_ALMAJED_OUD/2026_Q3_filed2026-11-07.pdf p.18
+  refs:
+  - 4165-9M2026-REV
+  - 4165-9M2025-REV
+profit_and_margin:
+  drivers:
+  - period: FY2023
+    driver: >-
+      Revenue rose 31.3% to SAR 772m (re-presented). Gross margin rose to 66.4% (64.1%, we calculate), but selling and marketing costs
+      rose 47.0% and the EBITDA margin fell to 35.7% (38.3%). The Gulf business lost SAR 8.4m while Saudi Arabia earned SAR 157.1m.
+      Attributable profit rose 18.6% to SAR 148.7m, a net margin of 19.2%; ROE 42.8%.
+    source: >-
+      4165_ALMAJED_OUD/2024_Annual_filed2025-03-18.pdf p.9, p.53; 4165_ALMAJED_OUD/2023_Annual_filed2024-10-01.pdf p.6
+    refs:
+    - 4165-FY2023-REV
+    - 4165-FY2023-GP
+    - 4165-FY2023-EBITDA_C
+    - 4165-FY2023-NI_ATTR
+  - period: FY2024
+    driver: >-
+      Revenue rose 19.9% to SAR 926m: Gulf revenue rose 80.9% (SAR 80.2m to SAR 145.0m) in the first consolidated year, e-commerce and
+      other channels 80.1% and Saudi regions 12.8%. Selling and marketing costs rose 25.4% and SAR 5.0m of listing costs were charged,
+      so the EBITDA margin fell to 32.4%. Attributable profit rose 5.6% to SAR 157.0m, a net margin of 17.0%; ROE 37.1%.
+    source: >-
+      4165_ALMAJED_OUD/2024_Annual_filed2025-03-18.pdf p.9, p.53; 4165_ALMAJED_OUD/2025_Annual_filed2026-02-11.pdf p.46
+    refs:
+    - 4165-FY2024-REV
+    - 4165-FY2024-EBITDA_C
+    - 4165-FY2024-NI_ATTR
+  - period: FY2025
+    driver: >-
+      Revenue rose 19.2% to SAR 1,104m (Saudi +12.8%, Gulf +52.1%). Gross margin was 65.5% and selling costs grew more slowly (+11.2%),
+      lifting the EBITDA margin to 34.2%. Other income rose to SAR 8.2m (SAR 1.8m), of which SAR 4.8m was murabaha deposit income. Attributable
+      profit rose 38.6% to SAR 217.6m, a net margin of 19.7%; ROE 41.4%. Operating cash flow almost doubled to SAR 439m as inventory
+      fell by SAR 51.6m.
+    source: 4165_ALMAJED_OUD/2025_Annual_filed2026-02-11.pdf p.9, p.11, p.47, p.52
+    refs:
+    - 4165-FY2025-REV
+    - 4165-FY2025-GP
+    - 4165-FY2025-EBITDA_C
+    - 4165-FY2025-NI_ATTR
+    - 4165-FY2025-CFO
+  - period: 9M2026
+    driver: >-
+      Revenue rose 11.4% to SAR 949m and gross profit 11.4% (both 9M gross margins 69.0% after the note 22 reclassification). Selling
+      and marketing costs rose 13.4% and general and administrative costs 47.4% (SAR 58.9m vs SAR 40.0m), so the EBITDA margin fell
+      to 33.7% (34.7%). Murabaha and call-account income in other income rose to SAR 9.4m (SAR 2.6m). Attributable profit rose 3.9%
+      to SAR 182.2m, a net margin of 19.2% (20.6%); annualised ROE 38.9%.
+    source: 4165_ALMAJED_OUD/2026_Q3_filed2026-11-07.pdf p.5, p.7, p.17, p.19
+    refs:
+    - 4165-9M2026-REV
+    - 4165-9M2026-GP
+    - 4165-9M2026-EBITDA_C
+    - 4165-9M2026-NI_ATTR
+    - 4165-9M2025-NI_ATTR
+  - period: FY2022-9M2026
+    driver: >-
+      The business is cash generative and lease-funded: free cash flow was SAR 111m to SAR 404m a year (we calculate), the company has
+      had no borrowings since repaying SAR 45m of short-term loans in 2024, and cash reached SAR 385m at 30 Sep 2026 after SAR 100m
+      of dividends in each of 2025 and 2026. Lease liabilities were SAR 222m.
+    source: >-
+      4165_ALMAJED_OUD/2025_Annual_filed2026-02-11.pdf p.8, p.11-12; 4165_ALMAJED_OUD/2026_Q3_filed2026-11-07.pdf p.4, p.8
+    refs:
+    - 4165-FY2025-FCF
+    - 4165-FY2023-DEBT
+    - 4165-9M2026-CASH
+    - 4165-9M2026-LEASE_LIAB
+  one_offs:
+  - item: >-
+      Listing costs charged to profit or loss (the selling shareholders reimbursed SAR 9.6m of IPO costs through equity)
+    period: FY2024
+    amount_sar_m: -5.0
+    line: General and administrative expenses
+    source: 4165_ALMAJED_OUD/2025_Annual_filed2026-02-11.pdf p.46-48
+    tax_nci: >-
+      Zakat effect not disclosed; no non-controlling interests: after-zakat effect not determinable, profit kept as reported (3.2% of
+      attributable profit)
+developments:
+- date: '2023-03-21'
+  category: regulation
+  text: Converted from a limited liability company to a joint stock company.
+  source: 4165_ALMAJED_OUD/2023_Annual_filed2024-10-01.pdf p.9
+- date: '2024'
+  category: M&A
+  text: 'First consolidated year: a wholly owned Qatar subsidiary is included; its revenue is not disclosed.'
+  source: 4165_ALMAJED_OUD/2024_Annual_filed2025-03-18.pdf p.12
+- date: '2024-10-07'
+  category: financing
+  text: >-
+    Listing of 30% of the shares (7.5m shares) on the Saudi Exchange completed after CMA approval on 3 Jun 2024; SAR 5.0m of listing
+    costs were charged to profit.
+  source: 4165_ALMAJED_OUD/2025_Annual_filed2026-02-11.pdf p.46-47
+- date: '2025-12-30'
+  category: M&A
+  text: >-
+    Signed an MoU for the potential acquisition of the whole share capital of Al-Safa Pharmaceuticals and Medical Supplies Group.
+  source: 4165_ALMAJED_OUD/2025_Annual_filed2026-02-11.pdf p.52
+- date: '2026-05-11'
+  category: financing
+  text: Paid a SAR 100m dividend for FY2025 (SAR 4 per share), as for FY2024.
+  source: 4165_ALMAJED_OUD/2026_Q3_filed2026-11-07.pdf p.19
+- date: 2026-06 to 2026-10
+  category: strategy
+  text: >-
+    Set up a UAE holding company with subsidiaries in the USA (July 2026) and the UK (October 2026, after the period); none had significant
+    operations at 30 Sep 2026.
+  source: 4165_ALMAJED_OUD/2026_Q3_filed2026-11-07.pdf p.9, p.20
+what_it_means:
+  improved: >-
+    Revenue grew 23.3% a year from FY2022 to FY2025 and attributable profit from SAR 125m to SAR 218m; free cash flow reached SAR 404m
+    in FY2025 and the company has no borrowings.
+  weakened: >-
+    The EBITDA margin fell from 38.3% (FY2022) to 32.4% (FY2024) before recovering to 34.2%, and in 9M 2026 it slipped to 33.7% as administrative
+    costs rose 47.4%, so profit grew only 3.9% on 11.4% higher revenue.
+  why: >-
+    Growth came mainly from the Gulf (revenue up from SAR 80m in FY2023 to SAR 228m in FY2025) and online channels, while selling costs
+    and discounts grew with sales; Saudi revenue grew 12.8% a year in FY2024-FY2025 but only 2.9% in 9M 2026.
+  uncertain: >-
+    The filings give no store counts or same-store sales, so growth from new stores cannot be separated, and the effect of the Qatar
+    subsidiary and the planned Al-Safa acquisition is not disclosed.
+confidence_overall: Medium
+data_notes:
+- >-
+  Listed on 7 Oct 2024. FY2022 and FY2023 figures come from the company-only statements filed on 1 Oct 2024 (no XBRL); FY2021 balance
+  sheet from the FY2022 annual. FY2024 is the first consolidated year.
+- >-
+  Restatements: FY2023 revenue re-presented from SAR 767.0m to SAR 772.5m (FY2024 annual note 35); FY2023 equity cut by SAR 50m for
+  a dividend approved on 28 Dec 2023 (note 34). Both values in the tables are the restated ones but carry no R chip because the original
+  filing has no XBRL.
+- >-
+  Gross-profit basis break: the 2026 Q3 interim moved SAR 26.5m from cost of revenue to selling and marketing for 9M 2025 (note 22).
+  FY2025 annual cost of revenue appears to be on the earlier basis, so the 9M gross margins (69.0%) are not comparable with FY2025 (65.5%).
+- 'Revenue is shown after large sales discounts (FY2025: gross sales SAR 2,159m less discounts SAR 1,065m).'
+- >-
+  Finance income is not shown on the face: murabaha deposit income sits in other income (FY2024 SAR 0.8m, FY2025 SAR 4.8m, 9M 2025 SAR
+  2.6m, 9M 2026 SAR 9.4m), so it is inside our operating income and EBITDA. It is recurring and not treated as a one-off. Lease concessions
+  (SAR 1.4m in FY2025) also recur.
+- >-
+  D&A includes amortisation of right-of-use assets (FY2025 SAR 97.9m), added in stage A; the XBRL D&A covered only PP&E and intangibles.
+  Receivable ECL was removed from impairments.

@@ -1,0 +1,361 @@
+ticker: '4003'
+company: United Electronics Company (eXtra)
+perimeter_changes:
+- event: 'Partial IPO of United International Holding Company (UIHC, parent of the Tas''heel consumer-finance business): 30% sold on Tadawul for SAR 990.0m; control retained'
+  type: disposal
+  date: '2024'
+  consideration: 990000
+  revenue_contribution: null
+  profit_contribution: null
+  pro_forma_revenue: null
+  period: FY2024
+  unit: SAR '000
+  source: 4003_EXTRA/2024_Annual_filed2025-02-19.pdf
+  page: 14
+  quote: the Group disposed 30% of its shareholding in UIHC by means of an initial public offer (“IPO") of shares of UIHC on the Saudi Stock Exchange
+  note: 'No change in consolidation: revenue unaffected; creates non-controlling interests (NCI share of profit SAR 6.5m FY2024, SAR 79.0m FY2025). Effective holding 68.75% in 2026.'
+- event: Plans to expand in Egypt discontinued; Egypt assets (SAR 7.1m) and liabilities (SAR 5.0m) held for sale
+  type: discontinued
+  date: '2023-04-30'
+  consideration: null
+  revenue_contribution: null
+  profit_contribution: null
+  pro_forma_revenue: null
+  period: FY2023
+  unit: SAR '000
+  source: 4003_EXTRA/2023_Annual_filed2024-02-19.pdf
+  page: 50
+  quote: On 30 April 2023, the Board of Directors of the Group resolved to discontinue the Group's plans to expand in Egypt.
+  note: Not presented as a discontinued operation in the income statement; immaterial (assets 0.1% of revenue).
+- event: NowAccess incorporated by UIHC (75%) to provide payroll advances (start-up)
+  type: new_subsidiary
+  date: '2025'
+  consideration: 10000
+  revenue_contribution: 1110
+  profit_contribution: null
+  pro_forma_revenue: null
+  period: FY2025
+  unit: SAR '000
+  source: 4003_EXTRA/2025_Annual_filed2026-02-18.pdf
+  page: 15
+  quote: During the year ended 31 December 2025, UIHC has incorporated a new subsidiary, NowAccess, with a total paid-up share capital of Saudi Riyals 10.0 million.
+  note: Income from payroll advances SAR 1.1m in FY2025 (start-up, not an acquisition).
+- event: Acquisitions of businesses (IFRS 3)
+  type: acquisition
+  status: not found
+  period: FY2022-9M2026
+  source: 4003_EXTRA/2025_Annual_filed2026-02-18.pdf
+  page: 14
+  quote: No business combination note in the FY2022-FY2025 annuals or the 2026 Q3 interim; subsidiary list unchanged apart from NowAccess.
+segments:
+- period: FY2022
+  segment: Sales and services
+  basis: operating
+  revenue: 5618011
+  profit: null
+  unit: SAR '000
+  source: 4003_EXTRA/2023_Annual_filed2024-02-19.pdf
+  page: 61
+- period: FY2022
+  segment: Consumer finance (Tas'heel)
+  basis: operating
+  revenue: 416956
+  profit: null
+  unit: SAR '000
+  source: 4003_EXTRA/2023_Annual_filed2024-02-19.pdf
+  page: 61
+- period: FY2023
+  segment: Sales and services
+  basis: operating
+  revenue: 5680764
+  profit: 178294
+  unit: SAR '000
+  source: 4003_EXTRA/2024_Annual_filed2025-02-19.pdf
+  page: 59
+- period: FY2023
+  segment: Consumer finance
+  basis: operating
+  revenue: 523855
+  profit: 212355
+  unit: SAR '000
+  source: 4003_EXTRA/2024_Annual_filed2025-02-19.pdf
+  page: 59
+- period: FY2024
+  segment: Sales and services
+  basis: operating
+  revenue: 6161554
+  profit: 314283
+  unit: SAR '000
+  source: 4003_EXTRA/2025_Annual_filed2026-02-18.pdf
+  page: 57
+- period: FY2024
+  segment: Consumer finance
+  basis: operating
+  revenue: 623672
+  profit: 223088
+  unit: SAR '000
+  source: 4003_EXTRA/2025_Annual_filed2026-02-18.pdf
+  page: 57
+- period: FY2025
+  segment: Sales and services
+  basis: operating
+  revenue: 6680738
+  profit: 303831
+  unit: SAR '000
+  source: 4003_EXTRA/2025_Annual_filed2026-02-18.pdf
+  page: 56
+- period: FY2025
+  segment: Consumer finance
+  basis: operating
+  revenue: 768361
+  profit: 281111
+  unit: SAR '000
+  source: 4003_EXTRA/2025_Annual_filed2026-02-18.pdf
+  page: 56
+- period: 9M2025
+  segment: Sales and services
+  basis: operating
+  revenue: 5094475
+  profit: 195975
+  unit: SAR '000
+  source: 4003_EXTRA/2026_Q3_filed2026-11-05.pdf
+  page: 32
+- period: 9M2025
+  segment: Consumer finance
+  basis: operating
+  revenue: 565617
+  profit: 205201
+  unit: SAR '000
+  source: 4003_EXTRA/2026_Q3_filed2026-11-05.pdf
+  page: 32
+- period: 9M2026
+  segment: Sales and services
+  basis: operating
+  revenue: 5352998
+  profit: 214696
+  unit: SAR '000
+  source: 4003_EXTRA/2026_Q3_filed2026-11-05.pdf
+  page: 31
+- period: 9M2026
+  segment: Consumer finance
+  basis: operating
+  revenue: 613323
+  profit: 134429
+  unit: SAR '000
+  source: 4003_EXTRA/2026_Q3_filed2026-11-05.pdf
+  page: 31
+- period: FY2025
+  segment: Kingdom of Saudi Arabia (before eliminations)
+  basis: geographic
+  revenue: 6995034
+  profit: 558664
+  unit: SAR '000
+  source: 4003_EXTRA/2025_Annual_filed2026-02-18.pdf
+  page: 57
+- period: FY2025
+  segment: 'Others: Oman, Bahrain, Egypt (before eliminations)'
+  basis: geographic
+  revenue: 485137
+  profit: 17325
+  unit: SAR '000
+  source: 4003_EXTRA/2025_Annual_filed2026-02-18.pdf
+  page: 57
+- period: FY2024
+  segment: Kingdom of Saudi Arabia (before eliminations)
+  basis: geographic
+  revenue: 6330811
+  profit: null
+  unit: SAR '000
+  source: 4003_EXTRA/2025_Annual_filed2026-02-18.pdf
+  page: 57
+- period: FY2024
+  segment: Others (before eliminations)
+  basis: geographic
+  revenue: 477757
+  profit: null
+  unit: SAR '000
+  source: 4003_EXTRA/2025_Annual_filed2026-02-18.pdf
+  page: 57
+revenue_drivers:
+- period: FY2025
+  driver: 'Income from Islamic financing contracts (Tas''heel), part of total revenue (FY2024: 624,567)'
+  value: 769012
+  unit: SAR '000
+  source: 4003_EXTRA/2025_Annual_filed2026-02-18.pdf
+  page: 8
+  quote: Income from Islamic financing contracts 769,012 624,567
+- period: FY2025
+  driver: 'Funding cost of the consumer-finance business presented in cost of revenue (FY2024: 79.9m; FY2023: 63.2m; FY2022: 27.8m)'
+  value: 96.8
+  unit: SAR m
+  source: 4003_EXTRA/2025_Annual_filed2026-02-18.pdf
+  page: 33
+  quote: 'Finance cost amounting to Saudi Riyals 96.8 million (31 December 2024: Saudi Riyals 79.9 million) related to the consumer financing activities'
+- period: 9M2026
+  driver: Net impairment losses on financial assets (ECL on Islamic financing) 167,195 vs 84,644; Tawarruq 121,242 (64,115) and Islamic credit card 50,508 (22,810)
+  value: 167195
+  unit: SAR '000
+  source: 4003_EXTRA/2026_Q3_filed2026-11-05.pdf
+  page: 19
+  quote: Net impairment losses on financial assets - - 121,242 64,115 (4,555) (2,281) 50,508 22,810 167,195 84,644
+- period: FY2022-9M2026
+  driver: Like-for-like (same-store) sales
+  status: not found
+  value: null
+  unit: '%'
+  source: 4003_EXTRA/2025_Annual_filed2026-02-18.pdf
+  page: null
+  quote: Not disclosed in the annual or interim financial statements in the archive.
+one_offs:
+- period: FY2022
+  item: Gain on recognition of net investment in finance lease (sub-lease of a leased land parcel)
+  amount: 13635
+  unit: SAR '000
+  pnl_line: Other income
+  recurring: false
+  source: 4003_EXTRA/2023_Annual_filed2024-02-19.pdf
+  page: 33
+  quote: Gain on recognition of net investment in finance lease 7.1 - 13,635
+- period: FY2022
+  item: 'VAT claim: additional 2018-2019 VAT assessments refunded after a successful appeal (note text says the appeal concluded in 2023; the table shows the income in 2022)'
+  amount: 10590
+  unit: SAR '000
+  pnl_line: Other income
+  recurring: false
+  source: 4003_EXTRA/2023_Annual_filed2024-02-19.pdf
+  page: 33
+  quote: Value-added-tax (“VAT”) claim 7.2 - 10,590
+- period: FY2024
+  item: Value added tax (VAT) refund
+  amount: 16300
+  unit: SAR '000
+  pnl_line: Other income
+  recurring: false
+  source: 4003_EXTRA/2024_Annual_filed2025-02-19.pdf
+  page: 32
+  quote: Value added tax (“VAT”) refund 16,300 -
+- period: FY2024
+  item: Initial public offering costs of UIHC charged to equity, not to profit
+  amount: 62793
+  unit: SAR '000
+  pnl_line: Equity (retained earnings); cash in financing
+  recurring: false
+  source: 4003_EXTRA/2024_Annual_filed2025-02-19.pdf
+  page: 12
+  quote: Transation cost relating to initial public offering (62,793) -
+restatements:
+- period_restated: FY2022-FY2025
+  item: No restatement or re-presentation of revenue or profit found; FY2024 NI_ATTR and CAPEX differences in our data were XBRL line picks, not restatements
+  from: null
+  to: null
+  unit: SAR '000
+  reason: n/a
+  source: 4003_EXTRA/2025_Annual_filed2026-02-18.pdf
+  page: 8
+  quote: 'Net profit for the year is attributable to: Owners of United Electronics Company 497,002 527,895'
+significant_events:
+- date: 2026-02-28 onward
+  event: 'Conflict in the Middle East: management monitors supply-chain risk and the credit profile of financing customers; no significant impact stated'
+  financial_effect: ECL measurement reviewed (note 14.1)
+  source: 4003_EXTRA/2026_Q3_filed2026-11-05.pdf
+  page: 12
+  quote: the geopolitical situation has not had a significant impact on the Group’s financial performance as at and for the period ended 30 September 2026
+- date: 2025-2026
+  event: 'Share buy-backs: SAR 237.9m in FY2025 and SAR 30.2m in 9M 2026 (treasury shares)'
+  financial_effect: Equity reduced
+  source: 4003_EXTRA/2026_Q3_filed2026-11-05.pdf
+  page: 11
+  quote: The total consideration paid for the buy-back of shares amounted to Saudi Riyals 30.2 million.
+- date: 2022-2026
+  event: 'Borrowings fund the consumer-finance book: SAR 1,179m end-2022 to SAR 1,652m end-2025 and SAR 1,533m at 30 Sep 2026'
+  financial_effect: Debt
+  source: 4003_EXTRA/2026_Q3_filed2026-11-05.pdf
+  page: 6
+  quote: Borrowings 8 913,091 1,091,207
+audit_opinion:
+- period: FY2022
+  opinion: Unmodified (PwC); fully scanned report
+  emphasis_of_matter: none
+  source: 4003_EXTRA/2022_Annual_filed2023-02-19.pdf
+  page: 3
+- period: FY2023
+  opinion: Unmodified (PwC)
+  emphasis_of_matter: none
+  source: 4003_EXTRA/2023_Annual_filed2024-02-19.pdf
+  page: 3
+- period: FY2024
+  opinion: Unmodified (PwC)
+  emphasis_of_matter: none
+  source: 4003_EXTRA/2024_Annual_filed2025-02-19.pdf
+  page: 3
+- period: FY2025
+  opinion: Unmodified (PwC)
+  emphasis_of_matter: none
+  source: 4003_EXTRA/2025_Annual_filed2026-02-18.pdf
+  page: 3
+- period: 9M2026
+  opinion: Review conclusion unmodified (PwC)
+  emphasis_of_matter: none
+  source: 4003_EXTRA/2026_Q3_filed2026-11-05.pdf
+  page: 3
+kpis_in_filings:
+- period: 31 Dec 2022
+  kpi: Branches (total)
+  value: 54
+  unit: count
+  source: 4003_EXTRA/2023_Annual_filed2024-02-19.pdf
+  page: 14
+- period: 31 Dec 2023
+  kpi: Branches (48 in Saudi Arabia)
+  value: 53
+  unit: count
+  source: 4003_EXTRA/2024_Annual_filed2025-02-19.pdf
+  page: 14
+- period: 31 Dec 2024
+  kpi: Branches (50 in Saudi Arabia)
+  value: 55
+  unit: count
+  source: 4003_EXTRA/2024_Annual_filed2025-02-19.pdf
+  page: 14
+- period: 31 Dec 2025
+  kpi: Branches (51 in Saudi Arabia)
+  value: 57
+  unit: count
+  source: 4003_EXTRA/2025_Annual_filed2026-02-18.pdf
+  page: 14
+- period: 30 Sep 2025
+  kpi: Branches
+  value: 57
+  unit: count
+  source: 4003_EXTRA/2025_Q3_filed2025-11-03.pdf
+  page: 11
+- period: 30 Sep 2026
+  kpi: Branches (51 in Saudi Arabia)
+  value: 57
+  unit: count
+  source: 4003_EXTRA/2026_Q3_filed2026-11-05.pdf
+  page: 11
+special_extractions:
+- name: Consumer-finance funding cost inside cost of revenue (SAR m)
+  values:
+    FY2022: 27.8
+    FY2023: 63.2
+    FY2024: 79.9
+    FY2025: 96.8
+    9M2025: 'about 70.4 (derived: cash-flow finance costs 104.8 less face 34.4)'
+    9M2026: 'about 73.6 (derived: 115.1 less 41.6)'
+  source: 4003_EXTRA/2023_Annual_filed2024-02-19.pdf p.33; 4003_EXTRA/2024_Annual_filed2025-02-19.pdf p.32; 4003_EXTRA/2025_Annual_filed2026-02-18.pdf p.33; 4003_EXTRA/2026_Q3_filed2026-11-05.pdf
+    p.4, p.9
+- name: Finance income inside other income (SAR m)
+  values:
+    FY2022: 2.5
+    FY2023: 2.9
+    FY2024: 2.8
+    FY2025: 4.1
+    9M2025: 2.1
+    9M2026: 2.0
+  source: 4003_EXTRA/2023_Annual_filed2024-02-19.pdf p.33; 4003_EXTRA/2025_Annual_filed2026-02-18.pdf p.33; 4003_EXTRA/2026_Q3_filed2026-11-05.pdf p.9
+open_questions:
+- Revenue of new branches and same-store sales are not disclosed.
+- Note 7.2 of the FY2023 annual says the VAT appeal concluded in 2023, but the table books the SAR 10.6m in FY2022.
+- The 9M split of finance costs between the face line and cost of revenue is not disclosed; we derive it from the cash-flow add-back.

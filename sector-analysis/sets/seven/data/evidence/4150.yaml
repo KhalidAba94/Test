@@ -1,0 +1,212 @@
+# Evidence extracted from Arriyadh Development Company (ARDCO) filings (archive: 4150_ARDCO). Facts only; page = physical PDF page (1-based).
+# Units: SAR (Actuals) as presented. No usable XBRL: every figure was read from the PDFs. Primary statements have garbled OCR text layers
+# (FY2022 annual pp.8-12 are images), so they were re-read by OCR at 300 dpi and cross-footed (GP, PBT, NI, CFO, TA = TE + TL).
+# Standalone financial statements to FY2024; consolidated from FY2025 (two wholly owned subsidiaries set up in 2025, no NCI).
+ticker: "4150"
+company: "Arriyadh Development Company (ARDCO)"
+
+perimeter_changes:
+  - event: "Purchase of land and buildings (investment properties: lands 8.6m, lands with buildings 60.2m, buildings 121.0m); property not named"
+    type: acquisition
+    date: "2022"
+    consideration: "SAR 189,867,685"
+    revenue_contribution: null
+    profit_contribution: null
+    pro_forma_revenue: null
+    period: "FY2022"
+    unit: "SAR"
+    source: "4150_ARDCO/2022_Annual_filed2023-03-22.pdf"
+    page: 25
+    quote: "Additions 8,592,685 60,230,000 121,045,000 189,867,685"
+  - event: "Ta'meer market properties (land, buildings, works in progress; carrying amount about SAR 673m) contributed to Dira Development Company, a 46.34% associate with Riyadh Holding Company, for shares worth SAR 705.2m; realised gain SAR 17.2m"
+    type: deconsolidation
+    date: "2024-12-01"
+    consideration: "shares in Dira, SAR 705,209,071"
+    revenue_contribution: null
+    profit_contribution: 17187949
+    pro_forma_revenue: null
+    period: "FY2024 (one month) / FY2025 (full year)"
+    unit: "SAR"
+    source: "4150_ARDCO/2025_Annual_filed2026-03-08.pdf"
+    page: 32
+    quote: "The Group entered into an agreement with Dira Development Company for Real Estate Development and Investment on 1 December 2024, for the transfer of Ta'meer market properties."
+    note: "Ta'meer market revenue is not disclosed. The commercial-centres segment fell from SAR 164.1m (FY2024) to SAR 123.5m (FY2025)."
+  - event: "Two real-estate assets (recorded as land) bought from Remat Al-Riyadh Development Company against 56,153,041 new shares (capital +SAR 561.5m, additional capital SAR 842.3m)"
+    type: acquisition
+    date: "2025-02"
+    consideration: "SAR 1,403,826,025 in new shares (non-cash)"
+    revenue_contribution: null
+    profit_contribution: null
+    pro_forma_revenue: null
+    period: "FY2025"
+    unit: "SAR"
+    source: "4150_ARDCO/2025_Annual_filed2026-03-08.pdf"
+    page: 41
+    quote: "This was in exchange for the acquisition of two real estate assets owned by Remat Al-Riyadh Development Company for a total value of SAR 1,403,826,025"
+  - event: "Al-Rimal Logistics Park Company (22 Sep 2025) and Hulul Salasil Imdad Almontajat Altazija Company (5 Oct 2025) set up, wholly owned; first consolidated statements"
+    type: new_subsidiary
+    date: "2025-09-22 and 2025-10-05"
+    consideration: "SAR 10,000 and SAR 500,000 cash capital"
+    revenue_contribution: null
+    profit_contribution: null
+    pro_forma_revenue: null
+    period: "FY2025"
+    unit: "SAR"
+    source: "4150_ARDCO/2025_Annual_filed2026-03-08.pdf"
+    page: 14
+    quote: "There are no non-controlling interests as it's fully owned by Arriyadh Development Company."
+    note: "From 1 Jan 2026 the Al Aziziyah fruit and vegetable market assets moved to Hulul Salasil (internal transfer; 2026 Q3 p.9)."
+  - event: "Building received when a build-operate-transfer land lease expired (fair value SAR 45.1m); a further SAR 12.5m of buildings received on lease termination in 2025"
+    type: acquisition
+    date: "2026-04-18"
+    consideration: "nil (non-cash gain in other income)"
+    revenue_contribution: null
+    profit_contribution: 45059887
+    pro_forma_revenue: null
+    period: "9M2026"
+    unit: "SAR"
+    source: "4150_ARDCO/2026_Q3_filed2026-11-01.pdf"
+    page: 12
+    quote: "upon expiry of the lease on 18 April 2026, ownership of the building transferred to the Company."
+  - event: "Board resolved to sell the Al Malqa Business Center (SAR 165m) and Al Rimal land plots (241,402 sq m, SAR 60m); classified as held for sale"
+    type: disposal
+    date: "2026-09-22"
+    consideration: "not yet sold"
+    revenue_contribution: null
+    profit_contribution: null
+    pro_forma_revenue: null
+    period: "9M2026"
+    unit: "SAR"
+    source: "4150_ARDCO/2026_Q3_filed2026-11-01.pdf"
+    page: 22
+    quote: "On 22 September 2026, the Board of Directors resolved to sell the Business Center located in Al Malqa District in Riyadh."
+
+segments:
+  - {period: "FY2022", segment: "Commercial centres (transport centre, Ta'meer car auction and market, Otiqa, meat and Riyadh markets, office tower, Al-Aziziyah land)", basis: operating, revenue: 145376365, profit: 69481891, unit: "SAR", source: "4150_ARDCO/2023_Annual_filed2024-03-14.pdf", page: 37}
+  - {period: "FY2022", segment: "Public benefit (wholesale vegetables and fruits market)", basis: operating, revenue: 113520669, profit: 98174040, unit: "SAR", source: "4150_ARDCO/2023_Annual_filed2024-03-14.pdf", page: 37}
+  - {period: "FY2022", segment: "Land sales, contributions and property development", basis: operating, revenue: 0, profit: 0, unit: "SAR", source: "4150_ARDCO/2023_Annual_filed2024-03-14.pdf", page: 37}
+  - {period: "FY2023", segment: "Commercial centres", basis: operating, revenue: 162510242, profit: 65352269, unit: "SAR", source: "4150_ARDCO/2024_Annual_filed2025-03-02.pdf", page: 43}
+  - {period: "FY2023", segment: "Public benefit", basis: operating, revenue: 135315768, profit: 110268208, unit: "SAR", source: "4150_ARDCO/2024_Annual_filed2025-03-02.pdf", page: 43}
+  - {period: "FY2023", segment: "Land sales, contributions and property development", basis: operating, revenue: 41359395, profit: 49156897, unit: "SAR", source: "4150_ARDCO/2024_Annual_filed2025-03-02.pdf", page: 43}
+  - {period: "FY2024", segment: "Commercial centres", basis: operating, revenue: 164069882, profit: 68483253, unit: "SAR", source: "4150_ARDCO/2025_Annual_filed2026-03-08.pdf", page: 45}
+  - {period: "FY2024", segment: "Public benefit", basis: operating, revenue: 151777586, profit: 123289190, unit: "SAR", source: "4150_ARDCO/2025_Annual_filed2026-03-08.pdf", page: 45}
+  - {period: "FY2024", segment: "Land sales, contributions and property development (development fees)", basis: operating, revenue: 5670000, profit: 5670000, unit: "SAR", source: "4150_ARDCO/2025_Annual_filed2026-03-08.pdf", page: 45}
+  - {period: "FY2025", segment: "Commercial centres", basis: operating, revenue: 123462798, profit: 40428031, unit: "SAR", source: "4150_ARDCO/2025_Annual_filed2026-03-08.pdf", page: 45}
+  - {period: "FY2025", segment: "Public benefit", basis: operating, revenue: 159315746, profit: 132064383, unit: "SAR", source: "4150_ARDCO/2025_Annual_filed2026-03-08.pdf", page: 45}
+  - {period: "FY2025", segment: "Land sales, contributions and property development (land 96.5m + development fees 4.8m)", basis: operating, revenue: 101378715, profit: 90739802, unit: "SAR", source: "4150_ARDCO/2025_Annual_filed2026-03-08.pdf", page: 45}
+  - {period: "9M2025", segment: "Commercial centres", basis: operating, revenue: 95902402, profit: 29445752, unit: "SAR", source: "4150_ARDCO/2026_Q3_filed2026-11-01.pdf", page: 26}
+  - {period: "9M2025", segment: "Public benefit", basis: operating, revenue: 117837640, profit: 99632358, unit: "SAR", source: "4150_ARDCO/2026_Q3_filed2026-11-01.pdf", page: 26}
+  - {period: "9M2025", segment: "Land sales, contributions and property development", basis: operating, revenue: 96548715, profit: 90912241, unit: "SAR", source: "4150_ARDCO/2026_Q3_filed2026-11-01.pdf", page: 26}
+  - {period: "9M2026", segment: "Commercial centres (now incl. Train mall)", basis: operating, revenue: 87974299, profit: 30001948, unit: "SAR", source: "4150_ARDCO/2026_Q3_filed2026-11-01.pdf", page: 26}
+  - {period: "9M2026", segment: "Public benefit", basis: operating, revenue: 134032754, profit: 115141287, unit: "SAR", source: "4150_ARDCO/2026_Q3_filed2026-11-01.pdf", page: 26}
+  - {period: "9M2026", segment: "Land sales, contributions and property development", basis: operating, revenue: 33350624, profit: 27244087, unit: "SAR", source: "4150_ARDCO/2026_Q3_filed2026-11-01.pdf", page: 26}
+  - {period: "FY2022-9M2026", segment: "Geographic", basis: geographic, revenue: null, profit: null, unit: "SAR", source: "4150_ARDCO/2025_Annual_filed2026-03-08.pdf", page: 43, quote: "All of the Group's revenues were generated within the Kingdom of Saudi Arabia."}
+
+revenue_drivers:
+  - {period: "FY2025", driver: "Revenue by type (FY2024): rental 168,230,828 (203,784,592); operating 114,547,716 (112,062,876); sale of lands 96,548,715 (nil); real estate development 4,830,000 (5,670,000)", value: 384157259, unit: "SAR", source: "4150_ARDCO/2025_Annual_filed2026-03-08.pdf", page: 43, quote: "Sale of lands revenue 96,548,715 -"}
+  - {period: "FY2023", driver: "Sale of lands revenue in FY2023 (FY2024: nil); rental income 220,941,681 and operating income 76,884,329", value: 41359395, unit: "SAR", source: "4150_ARDCO/2024_Annual_filed2025-03-02.pdf", page: 39, quote: "Sale of lands revenue - 41,359,395"}
+  - {period: "9M2026", driver: "Revenue by type (9M2025): rental 128,607,608 (126,002,492); operating 93,399,444 (85,217,550); land sales 33,350,625 (96,548,715); real estate development nil (2,520,000)", value: 255357677, unit: "SAR", source: "4150_ARDCO/2026_Q3_filed2026-11-01.pdf", page: 24, quote: "Land Sales (note 11) 33,350,625 96,548,715"}
+  - {period: "31 Dec 2025", driver: "Murabaha investment deposits held outside cash and cash equivalents (31 Dec 2024: SAR 930m incl. SAR 630m long term); income SAR 56.9m in FY2025", value: 1025000000, unit: "SAR", source: "4150_ARDCO/2025_Annual_filed2026-03-08.pdf", page: 40, quote: "As of 31 December 2025, total Murabaha investment deposits amounted to SAR 1.025 billion"}
+
+one_offs:
+  - {period: "FY2023", item: "Gain on sale of land (sale of lands revenue 41,359,395 less cost 3,476,607), booked gross in revenue", amount: 37882788, unit: "SAR", pnl_line: "Revenue / cost of revenue (cash-flow add-back 'Gains of sale of investment properties')", recurring: false, source: "4150_ARDCO/2023_Annual_filed2024-03-14.pdf", page: 12, quote: "Gains of sale of investment properties (37,882,788) -"}
+  - {period: "FY2024", item: "Realised gain on transferring the Ta'meer market properties to the Dira associate", amount: 17187949, unit: "SAR", pnl_line: "Gain from sale of investment properties", recurring: false, source: "4150_ARDCO/2025_Annual_filed2026-03-08.pdf", page: 32, quote: "The realized gains from the asset transfer amounted to SAR 17,187,949"}
+  - {period: "FY2024", item: "Settlement of a provision made in earlier years for the Al-Shorouk land contribution", amount: 26771963, unit: "SAR", pnl_line: "Other income", recurring: false, source: "4150_ARDCO/2025_Annual_filed2026-03-08.pdf", page: 44, quote: "Settlement of a provision previously provided in previous years 9,095,860 26,771,963"}
+  - {period: "FY2024", item: "Litigation expense provision", amount: -14679353, unit: "SAR", pnl_line: "General and administrative expenses", recurring: false, source: "4150_ARDCO/2025_Annual_filed2026-03-08.pdf", page: 44, quote: "Litigation expense provision 454,000 14,679,353"}
+  - {period: "FY2025", item: "Gain on sale of land (sale of lands revenue 96,548,715 less land selling costs 5,881,335), booked gross in revenue", amount: 90667381, unit: "SAR", pnl_line: "Revenue / cost of revenue (cash-flow add-back 'Gain from sale of investment properties')", recurring: false, source: "4150_ARDCO/2025_Annual_filed2026-03-08.pdf", page: 13, quote: "Gain from sale of investment properties 5 (90,667,381) (17,187,949)"}
+  - {period: "FY2025", item: "Gain on buildings received upon lease termination (non-cash)", amount: 12500000, unit: "SAR", pnl_line: "Other income", recurring: false, source: "4150_ARDCO/2025_Annual_filed2026-03-08.pdf", page: 44, quote: "Gain on buildings received upon lease termination 12,500,000 -"}
+  - {period: "FY2025", item: "Settlement of a provision made in earlier years", amount: 9095860, unit: "SAR", pnl_line: "Other income", recurring: false, source: "4150_ARDCO/2025_Annual_filed2026-03-08.pdf", page: 44, quote: "Settlement of a provision previously provided in previous years 9,095,860 26,771,963"}
+  - {period: "FY2025", item: "Non-refundable customer deposit from a land sale", amount: 3577989, unit: "SAR", pnl_line: "Other income", recurring: false, source: "4150_ARDCO/2025_Annual_filed2026-03-08.pdf", page: 44, quote: "Non-refundable customer deposit from land sale 3,577,989 -"}
+  - {period: "FY2025", item: "Unrealised gain on investments designated at FVTPL (real estate fund units)", amount: 1998167, unit: "SAR", pnl_line: "Unrealized gains from investments designated at FVTPL", recurring: false, source: "4150_ARDCO/2025_Annual_filed2026-03-08.pdf", page: 11, quote: "Unrealized gains from investments designated at FVTPL 9 1,998,167 -"}
+  - {period: "9M2025", item: "Margin on land sales (land sales 96,548,715 less segment cost 5,636,474); no gain line in the 9M2025 cash flow", amount: 90912241, unit: "SAR", pnl_line: "Revenue / cost of revenue", recurring: false, source: "4150_ARDCO/2026_Q3_filed2026-11-01.pdf", page: 26, quote: "Revenue 95,902,402 117,837,640 96,548,715 - 310,288,757"}
+  - {period: "9M2025", item: "Unrealised gain on investments designated at FVTPL", amount: 14843065, unit: "SAR", pnl_line: "Unrealized (losses) gains from investments designated at FVTPL", recurring: false, source: "4150_ARDCO/2026_Q3_filed2026-11-01.pdf", page: 5, quote: "designated at FVTPL - (268,976) - 14,843,065"}
+  - {period: "9M2026", item: "Gain on sale of land (Telal Arriyadh plot held for sale at SAR 2.0m, sold for SAR 33.4m)", amount: 31347785, unit: "SAR", pnl_line: "Revenue / cost of revenue (cash-flow add-back 'Gain from sale of investment properties')", recurring: false, source: "4150_ARDCO/2026_Q3_filed2026-11-01.pdf", page: 7, quote: "Gain from sale of investment properties (31,347,785) -"}
+  - {period: "9M2026", item: "Gain on recognition of a building received when a BOT land lease expired (non-cash)", amount: 45059887, unit: "SAR", pnl_line: "Other income", recurring: false, source: "4150_ARDCO/2026_Q3_filed2026-11-01.pdf", page: 25, quote: "Gain on recognition of buildings received upon lease termination (Note 3) 45,059,887 -"}
+  - {period: "9M2026", item: "Legal expenses: provision for a SAR 74m lawsuit by a lessee", amount: -16142300, unit: "SAR", pnl_line: "General and administrative expenses", recurring: false, source: "4150_ARDCO/2026_Q3_filed2026-11-01.pdf", page: 24, quote: "Legal expenses (Note 25) 16,142,300 -"}
+  - {period: "9M2026", item: "White Land Fees under the regulation of 24 Nov 2025 (first invoice 1 Jan 2026); treated as a new recurring levy, not a one-off", amount: -18308074, unit: "SAR", pnl_line: "General and administrative expenses", recurring: true, source: "4150_ARDCO/2026_Q3_filed2026-11-01.pdf", page: 23, quote: "This amount represents a provision against the White Land Fees invoice issued on 1 January 2026"}
+
+restatements:
+  - period_restated: "FY2024 (in the FY2025 annual)"
+    item: "Operating cash flow 66,458,141 -> 63,943,508: finance costs paid on lease liabilities (2,514,633) moved from financing into operating activities; Murabaha income received shown separately in investing"
+    from: 66458141
+    to: 63943508
+    unit: "SAR"
+    reason: "Re-presentation of the cash-flow statement; note 33 lists only balance-sheet reclassifications"
+    source: "4150_ARDCO/2025_Annual_filed2026-03-08.pdf"
+    page: 13
+    quote: "Finance costs paid - Lease liabilities (3,032,549) (2,514,633)"
+  - period_restated: "31 Dec 2024 balance sheet"
+    item: "Admin buildings and their land moved from investment properties to PP&E (+1,087,559); the Otiqa market BOT contract moved from right-of-use assets into investment properties (-40,622,502); totals unchanged"
+    from: 813676420
+    to: 853211363
+    unit: "SAR"
+    reason: "Reclassification, FY2025 annual note 33"
+    source: "4150_ARDCO/2025_Annual_filed2026-03-08.pdf"
+    page: 49
+    quote: "Certain figures have been reclassified as listed below to conform with the classification used for the year ended 31 December 2025."
+  - period_restated: "FY2022 (in the FY2023 annual)"
+    item: "Capex re-split: purchase of PP&E 3,654,005 and projects under construction 5,676,632 shown as PP&E 7,518,637 and investment properties under development 1,812,000"
+    from: 3654005
+    to: 7518637
+    unit: "SAR"
+    reason: "Re-presentation of the cash-flow statement (no note)"
+    source: "4150_ARDCO/2023_Annual_filed2024-03-14.pdf"
+    page: 12
+    quote: "Purchase of property, plant and equipment (5,884,698) (7,518,637)"
+
+significant_events:
+  - date: "2024-12-01"
+    event: "Joint venture Dira Development Company formed with Riyadh Holding Company (46.34%), ARDCO contributing the Ta'meer market properties and Riyadh Holding the Al-Muqayliah and Dira markets"
+    financial_effect: "Investment in associates rose to SAR 756.4m at end-2024; realised gain SAR 17.2m"
+    source: "4150_ARDCO/2025_Annual_filed2026-03-08.pdf"
+    page: 34
+    quote: "In 2024, the Company reached an agreement with Riyadh Holding Company to establish a joint venture (Dira Development Company for Real Estate Development and Investment)"
+  - date: "2025-02-03"
+    event: "Extraordinary general assembly approved the capital increase to SAR 2,339.3m for the Remat Al-Riyadh assets; statutory reserve (SAR 184.7m) moved to retained earnings under the new Companies Law"
+    financial_effect: "Equity +SAR 1,403.8m; total assets SAR 2,910m to SAR 4,441m"
+    source: "4150_ARDCO/2025_Annual_filed2026-03-08.pdf"
+    page: 41
+    quote: "the Group's Extraordinary General Assembly approved increasing the Company's capital to SAR 2,339,308,180 through the issuance of 56,153,041 new ordinary shares"
+  - date: "2026 (9M)"
+    event: "Lawsuit by a lessee for SAR 74m over a 2004 land lease south of Riyadh; provision booked (legal expenses SAR 16.1m in 9M2026)"
+    financial_effect: "SAR 16.1m charge"
+    source: "4150_ARDCO/2026_Q3_filed2026-11-01.pdf"
+    page: 29
+    quote: "There is also a lawsuit filed against the Group by one of its lessees for an amount of SAR 74 million"
+  - date: "2026-01-01"
+    event: "White Land Fees invoice under the regulation of 24 Nov 2025"
+    financial_effect: "SAR 18.3m in G&A in 9M2026"
+    source: "4150_ARDCO/2026_Q3_filed2026-11-01.pdf"
+    page: 23
+    quote: "a provision against the White Land Fees invoice issued on 1 January 2026"
+  - date: "2026-09-22"
+    event: "Board approved selling the Al Malqa Business Center and Al Rimal land plots (SAR 225.4m held for sale)"
+    financial_effect: "Reclassified to assets held for sale"
+    source: "4150_ARDCO/2026_Q3_filed2026-11-01.pdf"
+    page: 21
+    quote: "Business Center - Al Malqa District (a) 165,393,909 -"
+
+audit_opinion:
+  - {period: "FY2022", opinion: "Unmodified (EY); other matter: FY2021 audited by another auditor", emphasis_of_matter: none, source: "4150_ARDCO/2022_Annual_filed2023-03-22.pdf", page: 6}
+  - {period: "FY2023", opinion: "Unmodified (EY); no emphasis of matter found (scanned pages)", emphasis_of_matter: none, source: "4150_ARDCO/2023_Annual_filed2024-03-14.pdf", page: 3}
+  - {period: "FY2024", opinion: "Unmodified (EY); no emphasis of matter found", emphasis_of_matter: none, source: "4150_ARDCO/2024_Annual_filed2025-03-02.pdf", page: 3}
+  - {period: "FY2025", opinion: "Unmodified (EY); no emphasis of matter found", emphasis_of_matter: none, source: "4150_ARDCO/2025_Annual_filed2026-03-08.pdf", page: 3}
+  - {period: "9M2026", opinion: "Review conclusion unmodified (EY); no emphasis of matter", emphasis_of_matter: none, source: "4150_ARDCO/2026_Q3_filed2026-11-01.pdf", page: 3}
+
+kpis_in_filings:
+  - {period: "31 Dec 2025", kpi: "Fair value of investment properties incl. the Remat assets (31 Dec 2024: SAR 2,522.9m); carried at cost of SAR 2,259.6m", value: 4136.1, unit: "SAR m", source: "4150_ARDCO/2026_Q3_filed2026-11-01.pdf", page: 13}
+  - {period: "FY2022-9M2026", kpi: "Gross leasable area, occupancy, visitors, auction volumes", value: null, unit: "count", status: "not found", source: "4150_ARDCO/2025_Annual_filed2026-03-08.pdf", page: null}
+
+special_extractions:
+  - name: "Land sales inside revenue (we treat the margin as a one-off and the revenue as a presentation step in the bridge)"
+    unit: "SAR"
+    FY2023: {revenue: 41359395, cost: 3476607, source: "4150_ARDCO/2024_Annual_filed2025-03-02.pdf p.43"}
+    FY2025: {revenue: 96548715, cost: 5881335, source: "4150_ARDCO/2025_Annual_filed2026-03-08.pdf p.43-44"}
+    9M2025: {revenue: 96548715, cost: 5636474, source: "4150_ARDCO/2026_Q3_filed2026-11-01.pdf p.26"}
+    9M2026: {revenue: 33350625, cost_carrying_value: 2002840, source: "4150_ARDCO/2026_Q3_filed2026-11-01.pdf p.7, p.21"}
+
+open_questions:
+  - "Revenue of the Ta'meer market properties (contributed to Dira on 1 Dec 2024) and of the property bought in 2022 is not disclosed, so the perimeter effects on FY2023 and FY2025 are not determinable."
+  - "Whether the Remat Al-Riyadh assets (SAR 1,403.8m, recorded as land) earn any revenue is not stated."
+  - "Cash and cash equivalents in the FY2023 cash-flow statement (SAR 315.0m) include SAR 270m of Murabaha deposits that the balance sheet shows outside 'cash at banks' (SAR 45.0m, used as CASH)."
+  - "The FY2023 other income of SAR 12.0m is shown only as 'Others'; its nature is not disclosed."

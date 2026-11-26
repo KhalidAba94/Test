@@ -1,0 +1,82 @@
+ticker: "6014"
+headline: >-
+  Revenue fell from SAR 1,076m (FY2022) to SAR 892m (FY2024) and attributable profit from SAR 116m to SAR 38.3m, then recovered:
+  FY2025 revenue rose 6.1% to SAR 946m and attributable profit 24.1% to SAR 47.6m, and in 9M 2026 revenue rose 18.3% to SAR 809m
+  with two Saudi acquisitions (29 Domino's branches and Five Guys, which added SAR 46.9m) and more restaurants (535 Domino's vs 488).
+lfl_basis:
+  definition_used: >-
+    Standard bridge on IFRS revenue (restaurant sales; royalty income from sub-franchisees is in other income). No business
+    combinations in FY2022-FY2024. Perimeter from FY2025: 29 Domino's branches in Makkah and Taif bought from a sub-franchisee
+    (from 1 October 2025; revenue not disclosed) and Five Guys Saudi Arabia (from 29 April 2026; SAR 46.9m revenue in 9M 2026,
+    disclosed in the segment note). The Egyptian pound and Moroccan dirham are not pegged and no constant-currency figures are given,
+    so the FX step is not determinable in every period. Alamar reports restaurant counts but no same-store sales, so the new-restaurant
+    step and like-for-like growth are not determinable.
+  perimeter_changes:
+    - {event: "No business combinations; subsidiaries in UAE, Jordan, Egypt, Qatar, Bahrain, Lebanon and Morocco unchanged since 2020", date: "FY2022-FY2024", effect: "none on revenue", source: "6014_ALAMAR/2024_Annual_filed2025-03-27.pdf p.12"}
+    - {event: "29 Domino's branches in Makkah and Taif acquired from a sub-franchisee (consideration SAR 39.5m, goodwill SAR 33.5m)", date: "2025-10-01", effect: "revenue not disclosed (consideration 4.4% of FY2024 revenue): not determinable", source: "6014_ALAMAR/2025_Annual_filed2026-04-01.pdf p.32-33"}
+    - {event: "Al Shaghaf Arabia Company Limited (Five Guys Saudi Arabia, 13 restaurants), consideration SAR 84.8m, provisional goodwill SAR 63.6m", date: "2026-04-29", effect: "SAR 46.9m revenue in 9M 2026, disclosed (segment note brand line)", source: "6014_ALAMAR/2026_Q3_filed2026-11-08.pdf p.9, p.12, p.18"}
+  capacity_changes:
+    - {event: "Domino's restaurants 383 (end-2021), 439 (2022), 460 (2023), 472 (2024), 488 (30 Sep 2025), 523 (end-2025, incl. 29 acquired), 535 (30 Sep 2026)", date: "2021-2026", effect: "revenue of new restaurants not disclosed", source: "6014_ALAMAR/2022_Annual_filed2023-03-30.pdf p.12; 6014_ALAMAR/2025_Annual_filed2026-04-01.pdf p.14; 6014_ALAMAR/2026_Q3_filed2026-11-08.pdf p.8"}
+    - {event: "Dunkin restaurants 44 (end-2021), 56, 61, 65, 72 (end-2025), 74 (30 Sep 2026)", date: "2021-2026", effect: "revenue of new restaurants not disclosed", source: "6014_ALAMAR/2023_Annual_filed2024-03-31.pdf p.12; 6014_ALAMAR/2026_Q3_filed2026-11-08.pdf p.8"}
+  fx_exposure: >-
+    North Africa (Egypt and Morocco) was 11.3% of FY2025 revenue (we calculate). The company says the Egyptian pound's devaluation in
+    2023 and March 2024 affected the translation of the Egypt subsidiary; North Africa revenue fell 16.5% in FY2023 and 21.3% in FY2024.
+    No constant-currency figures are given. Gulf and Jordanian currencies are pegged to the USD; the Lebanese subsidiary is not
+    restated under IAS 29.
+  price_volume_support: >-
+    Not determinable. The filings give revenue by region and brand and restaurant counts, but no transactions, average ticket or
+    same-store sales; revenue per restaurant mixes price, volume, mix, currency and the timing of openings and acquisitions.
+  confidence: "Not determinable for like-for-like; High for the disclosed Five Guys perimeter amount"
+price_volume:
+  - period: "FY2025 vs FY2024"
+    text: >-
+      Domino's revenue rose 4.4% (SAR 833m to SAR 869m) while Domino's restaurants rose from 472 to 523, of which 29 were acquired
+      on 1 October 2025. We calculate Domino's revenue per average restaurant at SAR 1.75m in FY2025 against SAR 1.79m in FY2024
+      (-2.2%), using simple averages of year-end counts; this overstates the FY2025 base because the 29 acquired branches counted
+      for three months only. Dunkin revenue rose 27.8% with 72 restaurants against 65.
+    basis: "calculated (revenue per average restaurant); price/volume split not determinable"
+    confidence: "Low"
+    source: "6014_ALAMAR/2025_Annual_filed2026-04-01.pdf p.14, p.45-46; 6014_ALAMAR/2024_Annual_filed2025-03-27.pdf p.12"
+    refs: ["6014-FY2025-REV", "6014-FY2024-REV"]
+  - period: "9M 2026 vs 9M 2025"
+    text: >-
+      Domino's revenue rose 11.2% (SAR 627m to SAR 698m) with 535 Domino's restaurants at 30 September 2026 against 488 a year
+      earlier (29 of the 47 added were acquired). Dunkin revenue rose 30.4% (SAR 40.4m to SAR 52.7m) with 74 restaurants against 72.
+      Five Guys added SAR 46.9m. Transactions and prices are not disclosed.
+    basis: "disclosed (brand revenue and restaurant counts); split not determinable"
+    confidence: "High for the amounts; the split is not determinable"
+    source: "6014_ALAMAR/2026_Q3_filed2026-11-08.pdf p.8, p.18-19; 6014_ALAMAR/2025_Q3_filed2025-11-10.pdf p.8"
+    refs: ["6014-9M2026-REV", "6014-9M2025-REV"]
+profit_and_margin:
+  drivers:
+    - {period: "FY2023", driver: "Revenue -7.8% to SAR 992m: Saudi Arabia -7.1%, Other GCC and Levant -4.8% and North Africa -16.5% after the Egyptian pound devaluation; Dunkin revenue -21.4%. The gross margin fell to 29.5% (33.7%). Operating income fell 42.1% to SAR 81.8m (operating margin 8.2%), after a SAR 6.8m listing-linked share plan expense (SAR 16.0m in FY2022). Zakat and tax rose to SAR 13.5m (SAR 8.3m), and attributable profit fell 49.8% to SAR 58.0m (net margin 5.8%, ROE 17.6%). EBITDA SAR 195m (EBITDA margin 19.7%).", source: "6014_ALAMAR/2024_Annual_filed2025-03-27.pdf p.9, p.53; 6014_ALAMAR/2023_Annual_filed2024-03-31.pdf p.9", refs: ["6014-FY2023-REV", "6014-FY2023-GP", "6014-FY2023-OPINC", "6014-FY2023-NI_ATTR", "6014-FY2023-EBITDA_C"]}
+    - {period: "FY2024", driver: "Revenue -10.1% to SAR 892m: Saudi Arabia -8.7%, Other GCC and Levant -8.4%, North Africa -21.3% after the March 2024 devaluation; Dunkin revenue -32.1%. Selling and distribution costs rose 7.5%. Operating income fell 36.9% to SAR 51.6m (operating margin 5.8%), helped by a SAR 5.8m non-cash gain on lease modifications (such gains and losses recur every year) and a SAR 3.4m reversal of receivable impairments. Attributable profit fell 33.9% to SAR 38.3m (net margin 4.3%, ROE 12.3%); EBITDA SAR 162m (EBITDA margin 18.2%). Operating cash flow fell 47.9% to SAR 96.7m.", source: "6014_ALAMAR/2025_Annual_filed2026-04-01.pdf p.11, p.13, p.46; 6014_ALAMAR/2024_Annual_filed2025-03-27.pdf p.9", refs: ["6014-FY2024-REV", "6014-FY2024-OPINC", "6014-FY2024-NI_ATTR", "6014-FY2024-EBITDA_C", "6014-FY2024-CFO"]}
+    - {period: "FY2025", driver: "Revenue +6.1% to SAR 946m: Saudi Arabia +2.2% (including the Makkah and Taif branches from October), Other GCC and Levant +12.3%, North Africa +19.0%; Dunkin +27.8%. The gross margin rose to 29.3% (28.9%). Operating income rose 26.9% to SAR 65.5m (operating margin 6.9%), after a SAR 3.5m loss on lease modifications; administrative expenses rose 12.1% and other income to SAR 19.0m. Attributable profit rose 24.1% to SAR 47.6m (net margin 5.0%, ROE 15.9%); EBITDA rose 11.2% to SAR 180m (EBITDA margin 19.1%). Operating cash flow rose 34.5% to SAR 130m and free cash flow was SAR 94.8m.", source: "6014_ALAMAR/2025_Annual_filed2026-04-01.pdf p.11, p.13, p.44-45", refs: ["6014-FY2025-REV", "6014-FY2025-GP", "6014-FY2025-OPINC", "6014-FY2025-NI_ATTR", "6014-FY2025-EBITDA_C", "6014-FY2025-CFO", "6014-FY2025-FCF"]}
+    - {period: "9M2026", driver: "Revenue +18.3% to SAR 809m: Saudi Arabia +17.3% with Five Guys (SAR 46.9m) and the Makkah and Taif branches, Other GCC and Levant +17.9%, North Africa +24.4%. The gross margin rose to 29.7% (28.5%) and other income to SAR 21.7m (SAR 11.5m). Operating income rose 31.5% to SAR 56.4m (operating margin 7.0%) after a SAR 2.3m loss on disposals of equipment; attributable profit rose 28.9% to SAR 38.8m (net margin 4.8%, annualised ROE 17.5%); EBITDA rose 16.3% to SAR 146m (EBITDA margin 18.0%). An SAR 85m loan for Five Guys took borrowings to SAR 103m and net debt to SAR 225m; operating cash flow rose 38.7% to SAR 124m.", source: "6014_ALAMAR/2026_Q3_filed2026-11-08.pdf p.4-5, p.7, p.15, p.18-19", refs: ["6014-9M2026-REV", "6014-9M2026-GP", "6014-9M2026-OPINC", "6014-9M2026-NI_ATTR", "6014-9M2026-EBITDA_C", "6014-9M2026-DEBT", "6014-9M2026-NET_DEBT", "6014-9M2026-CFO"]}
+  one_offs:
+    - {item: "Employee share plan expense: awards that vested on the 9 August 2022 listing and its first two anniversaries (separate face line)", period: "FY2022", amount_sar_m: -16.0, line: "Employees share plan compensation expense (inside operating profit)", source: "6014_ALAMAR/2022_Annual_filed2023-03-30.pdf p.45; 6014_ALAMAR/2023_Annual_filed2024-03-31.pdf p.9", tax_nci: "Zakat effect not disclosed; parent-company plan, minority share not stated: after-tax effect not determinable, profit kept as reported"}
+    - {item: "Employee share plan expense (listing awards)", period: "FY2023", amount_sar_m: -6.8, line: "Employees share plan compensation expense (inside operating profit)", source: "6014_ALAMAR/2024_Annual_filed2025-03-27.pdf p.9", tax_nci: "Zakat effect not disclosed; minority share not stated: after-tax effect not determinable, profit kept as reported"}
+    - {item: "Employee share plan expense (listing awards, final vesting)", period: "FY2024", amount_sar_m: -0.7, line: "Employees share plan compensation expense (inside operating profit)", source: "6014_ALAMAR/2025_Annual_filed2026-04-01.pdf p.11", tax_nci: "Under 5% of attributable profit: tax effect not checked; profit kept as reported"}
+    - {item: "Employee share plan compensation reversal (listing awards)", period: "FY2025", amount_sar_m: 0.5, line: "Employees share plan compensation reversal (inside operating profit)", source: "6014_ALAMAR/2025_Annual_filed2026-04-01.pdf p.11", tax_nci: "Under 5% of attributable profit: tax effect not checked; profit kept as reported"}
+    - {item: "Employee share plan compensation reversal (listing awards)", period: "9M2025", amount_sar_m: 0.5, line: "Employees share plan compensation reversal (inside operating profit)", source: "6014_ALAMAR/2026_Q3_filed2026-11-08.pdf p.5", tax_nci: "Under 5% of attributable profit: tax effect not checked; profit kept as reported"}
+developments:
+  - {date: "2022-08-09", category: "financing", text: "IPO of 10.6 million shares (42.2%); trading on Tadawul started on 9 August 2022.", source: "6014_ALAMAR/2025_Annual_filed2026-04-01.pdf p.14"}
+  - {date: "2023-2024", category: "event", text: "The Egyptian pound devalued in 2023 and again in March 2024; the company says this affected the translation of the Egypt subsidiary's results.", source: "6014_ALAMAR/2023_Annual_filed2024-03-31.pdf p.45; 6014_ALAMAR/2024_Annual_filed2025-03-27.pdf p.45"}
+  - {date: "2025-10-01", category: "M&A", text: "Took control of 29 Domino's branches in Makkah and Taif previously run by a sub-franchisee (agreement 30 September 2025; consideration SAR 39.5m, of which SAR 21.1m deferred and paid in 2026).", source: "6014_ALAMAR/2025_Annual_filed2026-04-01.pdf p.32-33; 6014_ALAMAR/2026_Q3_filed2026-11-08.pdf p.11"}
+  - {date: "2025", category: "event", text: "Auditor changed from KPMG (FY2022-FY2024) to Dr. Mohamed Al-Amri & Co. (BDO) for FY2025; all opinions unmodified.", source: "6014_ALAMAR/2024_Annual_filed2025-03-27.pdf p.3; 6014_ALAMAR/2025_Annual_filed2026-04-01.pdf p.3"}
+  - {date: "2026-04-29", category: "M&A", text: "Completed the purchase of Al Shaghaf Arabia Company Limited, the exclusive Five Guys franchisee in Saudi Arabia with 13 restaurants (SPA signed 1 January 2026; consideration SAR 84.8m), financed partly by an SAR 85m loan.", source: "6014_ALAMAR/2026_Q3_filed2026-11-08.pdf p.9, p.12, p.15"}
+  - {date: "2026-09-30", category: "capacity", text: "Operated 535 Domino's, 74 Dunkin and 13 Five Guys restaurants (31 December 2025: 523, 72 and nil).", source: "6014_ALAMAR/2026_Q3_filed2026-11-08.pdf p.8"}
+what_it_means:
+  improved: "After two years of decline, revenue rose 6.1% in FY2025 and 18.3% in 9M 2026, attributable profit rose 24.1% and 28.9%, and the EBITDA margin recovered to 19.1% in FY2025 from 18.2% in FY2024."
+  weakened: "Results are still below FY2022: FY2025 revenue was 12.1% lower and attributable profit 58.8% lower (we calculate), the net margin was 5.0% against 10.7%, and net debt rose to SAR 225m at 30 September 2026 after the acquisition loan."
+  why: "Revenue fell in every region in FY2023 and FY2024, with North Africa hit by the Egyptian pound devaluations and Dunkin revenue down 21.4% and 32.1%; the recovery since FY2025 came with more restaurants (Domino's 472 to 535 between end-2024 and September 2026) and two acquisitions in Saudi Arabia."
+  uncertain: "Alamar reports no same-store sales and does not disclose the revenue of the 29 acquired Makkah and Taif branches, so acquired, new-restaurant and like-for-like growth cannot be separated."
+confidence_overall: "Medium"
+data_notes:
+  - "The XBRL files in the archive are mislabelled by year and contain nothing after FY2024; all FY2025, 9M 2025 and 9M 2026 figures were read from the PDFs (override file 6014.csv). The 30 September 2025 balance sheet comes from the 2025 Q3 interim."
+  - "Cash flow re-presentations: FY2023 operating cash flow is the FY2024 AFS comparative SAR 185.7m (SAR 190.4m first reported; finance income received and loan interest moved to financing) and FY2024 is the FY2025 AFS comparative SAR 96.7m (SAR 97.0m first reported; loan interest kept in operating). Interim cash flows include lease interest within lease payments in financing."
+  - "FY2023 capex is the FY2024 AFS comparative SAR 51.5m (SAR 55.0m first reported): the FY2024 AFS netted a SAR 3.5m capital-advance refund into the PP&E line. Capital advances paid are excluded from capex in other periods (FY2025 SAR 3.5m, 9M 2026 SAR 6.7m)."
+  - "Impairment add-back covers property and equipment only: FY2022 corrected to nil (the XBRL value was a receivable reversal), FY2023 corrected to SAR 1.0m, FY2025 a reversal of SAR 0.9m. Receivable ECL and inventory write-downs are excluded."
+  - "Finance costs are 'finance costs and bank charges', which include bank charges and lease interest (FY2025: SAR 4.7m bank charges and loan cost, SAR 11.0m lease interest)."
+  - "Lease-modification gains and losses and disposal results recur every year (FY2024 gain SAR 5.8m, FY2025 loss SAR 3.5m, 9M 2026 disposal loss SAR 2.3m), so they are explained in the drivers and not treated as one-offs."
+  - "No IAS 29 restatement is applied to the Lebanese subsidiary; FX effects on Egypt and Morocco are not separable. Year-end 31 December; Main Market listing from 9 August 2022."
