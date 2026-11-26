@@ -16,8 +16,9 @@ while read -r S s; do
   if ! ls "$WORK/archive/$A"/*/*.xls >/dev/null 2>&1; then
     # no XBRL in the archive (e.g. REIT fund reports): every figure comes from the PDFs via overrides
     echo "fact_id,sector,ticker,company,period,period_end,period_months,metric_code,value_sar_m,value_original,unit_original,currency_original,provenance,source_id,location,line_item_label,reported_in_filing,original_value,original_source,assurance,n_documents,pdf_file,pdf_status,pdf_pages" > "$WORK/parsed/${s}_facts_located.csv"
+    echo "company_dir,file,entity_name,symbol,isin,sector,industry_group,period_covered,start,end,start_comparative,end_comparative,nature,status,currency,rounding,is_method,n_values,read_note,parse_error" > "$WORK/parsed/${s}_meta.csv"
     python3 "$HERE/derive.py" "$S" "$WORK/parsed/${s}_facts_located.csv" "$ROOT/data/overrides.csv" "$ROOT/data/$s/facts.csv"
-    python3 "$HERE/source_register.py" "$WORK/archive/$A" "$S" "$WORK/parsed/${s}_meta.csv" "$ROOT/data/$s/sources.csv" "$ROOT/data/$s/coverage_documents.csv" || true
+    python3 "$HERE/source_register.py" "$WORK/archive/$A" "$S" "$WORK/parsed/${s}_meta.csv" "$ROOT/data/$s/sources.csv" "$ROOT/data/$s/coverage_documents.csv"
     continue
   fi
   python3 "$HERE/parse_xbrl_xls.py" "$WORK/archive/$A" "$WORK/parsed/${s}_xbrl.csv" "$WORK/parsed/${s}_meta.csv"
