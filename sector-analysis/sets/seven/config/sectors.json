@@ -582,9 +582,13 @@
     "short": "Aldawaa"
    },
    "4240": {
-    "name": "Cenomi Retail (Fawaz Alhokair)",
+    "name": "Cenomi Retail (AFG International)",
     "sub_industry": "Mall franchise retail",
-    "short": "Cenomi Retail"
+    "short": "Cenomi Retail",
+    "short_periods": {
+     "FY2022": 9
+    },
+    "period_note": "Year-end changed from 31 March to 31 December: FY2022 is the nine-month period April-December 2022 (an unaudited 12-month calendar-2022 view is in the FY2023 annual, Annex 1); FY2021 opening balances are at 31 March 2022."
    },
    "4008": {
     "name": "SACO (Saudi Company for Hardware)",
