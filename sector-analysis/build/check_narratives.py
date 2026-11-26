@@ -34,6 +34,13 @@ RATIO_WORDS = [
     # cost of risk is quoted in basis points; a percentage quote is flagged too
     (re.compile(r"cost of risk(?:(?!bp)[^.;%]){0,40}?(\d\.\d\d?)%(?:(?:(?!bp)[^.;%]){0,24}?(?:to|vs) (\d\.\d\d?)%)?", re.I), ["COR"]),
     (re.compile(r"cost of risk[^.;%]{0,60}?(\d{1,3}) ?bp(?:[^.;%]{0,40}?(?:to|vs|from) (\d{1,3}) ?bp)?", re.I), ["COR_BP"]),
+    # SEVEN set: gross margin, FFO margin, LTV, payout and net debt / EBITDA multiples
+    (re.compile(r"gross margin[^.;%]{0,60}?(-?\d{1,3}\.\d)%(?:[^.;%]{0,12}?to (-?\d{1,3}\.\d)%)?", re.I), ["GP_M"]),
+    (re.compile(r"FFO margin[^.;%]{0,60}?(-?\d{1,3}\.\d)%(?:[^.;%]{0,12}?to (-?\d{1,3}\.\d)%)?", re.I), ["FFO_M"]),
+    (re.compile(r"\bLTV\b[^.;%]{0,40}?(\d{1,3}\.\d)%(?:[^.;%]{0,12}?to (\d{1,3}\.\d)%)?"), ["LTV"]),
+    (re.compile(r"payout[^.;%]{0,40}?(\d{1,3}\.\d)%(?:[^.;%]{0,12}?to (\d{1,3}\.\d)%)?", re.I), ["PAYOUT"]),
+    (re.compile(r"net debt[^.;]{0,25}?(?:/|÷|to|over) ?EBITDA[^.;x]{0,50}?(-?\d{1,3}\.\d) ?x(?:[^.;x]{0,12}?to (-?\d{1,3}\.\d) ?x)?", re.I), ["ND_EBITDA_X"]),
+    (re.compile(r"net debt[^.;]{0,80}?(-?\d{1,3}\.\d) ?x (?:annualised )?EBITDA()", re.I), ["ND_EBITDA_X"]),
 ]
 
 
@@ -115,24 +122,25 @@ def main(root):
         if not comp:
             continue
         vals = {k: [v for v in comp["ratios"].get(k, {}).values() if isinstance(v, (int, float))] for k in
-                ("EBITDA_M", "EBITDA_M_U", "NET_M", "OP_M", "CI", "ROE", "COR")}
+                ("EBITDA_M", "EBITDA_M_U", "NET_M", "OP_M", "CI", "ROE", "COR", "GP_M", "FFO_M", "LTV", "PAYOUT", "ND_EBITDA")}
         for path, text in walk(y):
             if not isinstance(text, str) or ".data_notes" in path or "lfl_basis" in path:
                 continue
             for rx, keys in RATIO_WORDS:
                 for mt in rx.finditer(text):
-                    for g in (mt.group(1), mt.group(2)):
-                        if g is None:
+                    for g in (mt.group(1), mt.group(2) if mt.re.groups > 1 else None):
+                        if not g:
                             continue
                         bp = keys == ["COR_BP"]
-                        x = float(g) / (10000 if bp else 100)
-                        cands = [v for k in (["COR"] if bp else keys) for v in vals.get(k, [])]
+                        mult = keys == ["ND_EBITDA_X"]   # multiples are quoted as 2.3x, not percentages
+                        x = float(g) if mult else float(g) / (10000 if bp else 100)
+                        cands = [v for k in (["COR"] if bp else ["ND_EBITDA"] if mult else keys) for v in vals.get(k, [])]
                         # bp quotes are whole numbers: allow rounding (0.5 bp)
-                        tol = 0.0000501 if bp else (0.00006 if keys == ["COR"] else 0.0015)
+                        tol = 0.0000501 if bp else (0.06 if mult else (0.00006 if keys == ["COR"] else 0.0015))
                         if cands and not any(abs(x - v) <= tol for v in cands):
                             warns += 1
                             near = min(cands, key=lambda v: abs(v - x))
-                            print(f"  WARN {name}{path}: '{mt.group(0)[:70]}' {g}{' bp' if bp else '%'} not in calculated {'/'.join(keys)} (nearest {near*(10000 if bp else 100):.1f}{' bp' if bp else '%'})")
+                            print(f"  WARN {name}{path}: '{mt.group(0)[:70]}' {g}{' bp' if bp else 'x' if mult else '%'} not in calculated {'/'.join(keys)} (nearest {near if mult else near*(10000 if bp else 100):.1f}{' bp' if bp else 'x' if mult else '%'})")
     print(f"ratio quotes: {warns} warning(s)")
     return 1 if unresolved else 0
 

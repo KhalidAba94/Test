@@ -7,10 +7,11 @@ sections:
 - heading: 'Start here: the five rules behind every number'
   lines:
   - Full years (FY2022–FY2025) and the 2026 year-to-date (9M 2026 = 1 January to 30 September) are always shown apart. 9M 2026 is compared only with 9M 2025, never with a full year.
-  - 'Each year uses the latest restated figure: the comparative in the most recent filing that shows that year. Where this differs from what was first reported, the figure carries an R chip and the original
-    value is shown.'
-  - Sector totals and ratios are built from summed company figures. A sector cost-to-income ratio is total costs ÷ total income, not an average of bank ratios.
-  - 'Sector growth uses a matched sample: only companies with figures in both periods. The number of companies in each total is shown.'
+  - 'Each year uses the latest restated figure: the comparative in the most recent filing that shows that year. Where this differs from what was first reported, the figure is marked R (restated) in the
+    Data sheet and in a cell comment, the original value is shown, and the Restatements sheet gives the reason.'
+  - 'Group totals and ratios are built from summed company figures: a group EBITDA margin is total EBITDA ÷ total revenue, not an average of company margins. Group totals are simple sums of listed companies,
+    not consolidated accounts, so where one company owns part of another on the list the same profit can appear twice (see each group''s data notes).'
+  - 'Group growth uses a matched sample: only companies with figures in both periods. Each totals block shows how many companies the revenue total covers in each period; a comment names any left out.'
   - Like-for-like growth separates the existing business from acquisitions, disposals, currency and new capacity. Where the filings do not allow this, it says 'not determinable' instead of guessing.
 - heading: Periods
   lines:
@@ -19,9 +20,10 @@ sections:
   - Growth and CAGR are 'n.m.' (not meaningful) when the starting value is zero, negative or below SAR 10m, or when a profit turns into a loss. Margins are 'n.m.' when revenue is below SAR 10m (e.g. an
     investment holding with almost no revenue). Return on equity is 'n.m.' when average equity is zero or negative, and net debt / EBITDA is 'n.m.' when (annualised) EBITDA is negative or below SAR 10m.
   - 9M ratios that divide by a balance-sheet amount (ROE) and net debt ÷ EBITDA are annualised (× 12/9; a short financial year × 12 / its months). Income figures in the tables are never annualised.
-  - 'All 47 companies now report to 31 December. Four have a short year, shown with its true length, left out of group totals, and with growth across it shown as ''n.m.'': SADAFCO FY2023 (nine months, after
-    moving from a 31 March year-end), Cenomi Centers FY2022 and Cenomi Retail FY2022 (nine months each, after moving from 31 March) and MBC FY2023 (its first, eight-month period). Companies listed or formed
-    during the period have no figures before their first filed statements in the archive (e.g. Entaj from FY2023).'
+  - 'All 47 companies now report to 31 December. SADAFCO''s FY2022 is its year to 31 March 2023 (the year holding most of calendar 2022); it exists in the archive only as an XBRL file and is left out of
+    group totals. Four have a short year, shown with its true length, left out of group totals, and with growth across it shown as ''n.m.'': SADAFCO FY2023 (nine months, after moving from a 31 March year-end),
+    Cenomi Centers FY2022 and Cenomi Retail FY2022 (nine months each, after moving from 31 March) and MBC FY2023 (its first, eight-month period). Companies listed or formed during the period have no figures
+    before their first filed statements in the archive (e.g. Entaj from FY2023).'
   - REITs publish audited annual and reviewed half-yearly statements. Their nine-month figures come from the quarterly fund fact sheets, which are unaudited and print only some items (several funds give
     no nine-month rental income), so REIT 9M totals cover fewer funds and the company pages show which figures exist.
 - heading: Numbers and labels
@@ -29,26 +31,44 @@ sections:
   - 'Units: SAR million unless stated. Filings in SAR or SAR ''000 were converted using the rounding level declared in each filing, then checked against the next year''s comparatives to catch unit errors.'
   - Hover over a figure with a red corner (a cell comment) to see why it is restated, how it was calculated, or which companies a total leaves out. The Data sheet lists every figure with its source file,
     XBRL row or PDF page, provenance and the checks made against the PDF.
-  - Group totals and ratios show in a comment how many companies they cover and which were left out for missing inputs; the 'Companies (FY2025)' column gives the count.
+  - Group totals and ratios carry a comment naming the companies left out; the 'companies in the total' row and the 'Companies (FY2025)' column give the counts.
   - 'Provenance (Data sheet and comments): D = disclosed as printed; R = restated comparative from a later filing (the original value is shown); C = calculated by us (formula shown). Figures taken from
     a PDF where the XBRL file was missing, unreadable or mis-tagged carry the PDF page.'
-  - A dash (–) means the figure is not available. Missing figures are never filled with zeros or estimates.
+  - A blank cell means the figure is not available; missing figures are never filled with zeros or estimates. A true zero (e.g. no borrowings) shows as 0.0. 'n.m.' = not meaningful (see Periods); 'n.a.'
+    = a group ratio is not shown because fewer than half of the group's companies report its inputs; 'not determinable' = the filings do not allow a like-for-like step to be measured; 'not assessed' = no
+    bridge entry was made for that step.
+  - Amounts are shown with one decimal (SAR m); the commentary rounds amounts above SAR 100m to whole numbers.
   - Yellow cells are partial-year (9M) figures.
+- heading: Reading the group sheets
+  lines:
+  - '1. Totals: summed company figures for the group, with growth on a matched sample and the 2022–25 CAGR; the ratios below are ratios of the totals.'
+  - '2. Excluding the largest company: the same block without the group''s largest company by FY2025 revenue, so a reader can see whether one company drives the group (not shown for one-company groups).'
+  - '3. Contribution: each company''s share of the group total, and its contribution to group growth in percentage points (its change ÷ the group''s prior-period total); contributions add up to group growth.'
+  - 'Concentration (HHI): the sum of squared revenue shares × 10,000; above 2,500 is highly concentrated, 10,000 = one company.'
+  - 'YTD change: 9M 2026 against 9M 2025 for the same companies.'
 - heading: Reported vs like-for-like growth
   lines:
   - Reported growth − perimeter (acquisitions/disposals) − FX translation − hyperinflation − accounting/presentation changes = organic growth.
   - Organic growth − revenue from new capacity added in the period (new stores, restaurants, clubs, malls or plants) = like-for-like growth of the existing business.
   - Price, tariff and rate changes in the existing business are part of like-for-like growth. They are not treated as non-organic.
   - The Saudi riyal is pegged to the US dollar, so FX is nil for SAR and USD business; it matters only for other currencies (e.g. Egyptian pound for Americana, Gulf and Egyptian operations for retailers).
-  - Each adjustment shows its basis (disclosed, calculated, estimated, not determinable), its source page and a confidence level.
-  - For retailers and restaurant operators, same-store (like-for-like) sales growth reported by the company is quoted where the filings give it, with its definition; our bridge uses the filed store openings
-    and closures only where revenue from them is disclosed.
+  - Each adjustment shows its basis (disclosed, calculated, estimated, none identified, not determinable), its source page and a confidence level. 'None identified' means the filings show there was nothing
+    (e.g. a single Saudi entity has no FX step); it is never assumed.
+  - Same-store (like-for-like) sales growth reported by a company would be quoted, with its definition, where the filings give it. None of the 47 companies' statements in the archive does, so the new-capacity
+    step is 'not determinable' for retailers and restaurant operators; store, restaurant and branch counts are quoted where given.
 - heading: Measures
   lines:
   - 'Operating companies (all groups except REITs): IFRS revenue; gross profit where the income statement shows it; operating income on one definition (profit before zakat and tax + finance costs − finance
     income − share of associates); EBITDA calculated the same way for every company (operating income + depreciation and amortisation including right-of-use assets + impairments of non-financial assets,
     from the cash-flow statement); net profit attributable; operating cash flow; capex (property, plant, equipment and intangibles); free cash flow = operating cash flow − capex − spend on investment property
-    (for owners of let property such as malls); borrowings, lease liabilities, cash and net debt (borrowings + lease liabilities − cash).'
+    (for owners of let property such as malls); borrowings, lease liabilities, cash, short-term bank deposits and net debt (borrowings + lease liabilities − cash − short-term bank deposits). Capex excludes
+    right-of-use additions, key money and biological assets (e.g. dairy herds), so capex intensity is not fully comparable for agricultural companies.'
+  - 'Operating income includes items some companies print below their own operating profit (FX differences, fair-value results on investments, disposal gains). One-offs: items the filing calls non-recurring,
+    and items clearly outside normal operations (disposal gains and losses on property, investments or businesses; insurance and compensation receipts; IPO and listing costs; fair-value results on financial
+    investments; FX differences on financing balances), are listed in the One_offs register and removed in ''EBITDA excl. identified one-offs''. Small items that recur in normal operations (equipment disposals,
+    lease modifications, write-offs) are not one-offs.'
+  - Operating cash flow is as reported; companies differ on whether interest paid sits in operating or financing cash flow, and lease payments are financing cash flows under IFRS 16, so free cash flow is
+    before lease payments. Each company page notes its basis.
   - Lease-heavy businesses (restaurants, gyms, retailers, malls) report under IFRS 16, so EBITDA is before rent and net debt includes lease liabilities; net debt ÷ EBITDA is on that basis for every company.
     Borrowings and lease liabilities are shown on separate lines, so a borrowings-only view can be read from each company page.
   - 'REITs: rental (and hotel) revenue; net income; funds from operations (FFO), which we calculate as net income + depreciation and impairments of real estate − gains on property disposals; distributions
