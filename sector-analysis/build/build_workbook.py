@@ -117,7 +117,8 @@ def build_data(wb, facts):
           "Provenance: D = disclosed, R = restated comparative used, C = calculated (formula in 'Location'). Blue = input.")
     cols = ["fact_id", "sector", "ticker", "company", "period", "metric_code", "value_sar_m", "provenance",
             "source_id (archive file)", "location (XBRL row / PDF page / formula)", "PDF checked", "PDF match status",
-            "PDF page(s)", "line item label", "originally reported (SAR m)", "original source", "assurance", "note"]
+            "PDF page(s)", "line item label", "originally reported (SAR m)", "original source", "assurance", "note",
+            "how traced to the PDF (full trace)", "independent manual check"]
     header_row(ws, 5, cols)
     r = 6
     for x in facts:
@@ -125,7 +126,8 @@ def build_data(wb, facts):
                 float(x["value_sar_m"]) if x["value_sar_m"] not in ("", None) else None, x["provenance"],
                 x["source_id"], x["location"], x.get("pdf_file", ""), x.get("pdf_status", ""), x.get("pdf_pages", ""),
                 x.get("line_item_label", ""), float(x["original_value"]) if x.get("original_value") not in ("", None) else None,
-                x.get("original_source", ""), x.get("assurance", ""), x.get("note", "")]
+                x.get("original_source", ""), x.get("assurance", ""), x.get("note", ""),
+                x.get("trace_status", ""), x.get("review", "")]
         for i, v in enumerate(vals, start=1):
             if isinstance(v, str) and v.startswith("="):
                 v = "formula: " + v[1:].strip()
@@ -134,7 +136,7 @@ def build_data(wb, facts):
             if i in (7, 15):
                 c.number_format = NUM1
         r += 1
-    widths = [22, 8, 7, 28, 9, 12, 13, 6, 44, 40, 34, 14, 10, 40, 13, 40, 9, 40]
+    widths = [22, 8, 7, 28, 9, 12, 13, 6, 44, 40, 34, 14, 10, 40, 13, 40, 9, 40, 20, 30]
     for i, w in enumerate(widths, start=1):
         ws.column_dimensions[get_column_letter(i)].width = w
     ws.freeze_panes = "A6"

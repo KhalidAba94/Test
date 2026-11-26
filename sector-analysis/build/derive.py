@@ -157,6 +157,19 @@ def main(sector, facts_csv, overrides_csv, out_csv):
                     if t["pdf_used"]:
                         r["pdf_file"] = t["pdf_used"].split("/", 1)[1]
                 r["pdf_status"] = t["trace_status"]
+    # independent manual review (data/trace/full_review.csv): reviewer outcome and the page they confirmed
+    rp = os.path.join(os.path.dirname(os.path.abspath(out_csv)), "..", "trace", "full_review.csv")
+    if os.path.exists(rp):
+        for v in csv.DictReader(open(rp, encoding="utf-8")):
+            r = facts.get((v["ticker"], v["period"], v["metric_code"]))
+            if not r or str(r.get("value_sar_m")) != v["value_sar_m"]:
+                continue
+            r["review"] = v["outcome"] + (f" (p.{v['page']} of {v['pdf_checked'].split('/')[-1]})" if v.get("page") else "")
+            if v["outcome"] in ("confirmed", "confirmed_components") and v.get("page") and v.get("pdf_checked"):
+                if not r.get("pdf_pages") or r.get("pdf_status") in ("not_found", "too_small", "") or r.get("trace_status") in ("not_found", "too_small"):
+                    r["pdf_pages"] = v["page"]
+                    r["pdf_file"] = v["pdf_checked"].split("/", 1)[1] if v["pdf_checked"].split("/")[0] in ("Banks", "Energy") else v["pdf_checked"]
+                    r["pdf_status"] = "manual_confirmed"
     for k, r in facts.items():
         rr = reasons.get(k)
         if rr:
@@ -167,7 +180,7 @@ def main(sector, facts_csv, overrides_csv, out_csv):
     fields = ["fact_id", "sector", "ticker", "company", "period", "period_end", "period_months", "metric_code",
               "value_sar_m", "value_original", "unit_original", "currency_original", "provenance", "source_id",
               "location", "line_item_label", "reported_in_filing", "original_value", "original_source",
-              "assurance", "n_documents", "pdf_file", "pdf_status", "pdf_pages", "trace_status", "note"]
+              "assurance", "n_documents", "pdf_file", "pdf_status", "pdf_pages", "trace_status", "review", "note"]
     with open(out_csv, "w", newline="", encoding="utf-8") as fh:
         w = csv.DictWriter(fh, fieldnames=fields, extrasaction="ignore")
         w.writeheader(); w.writerows(out)

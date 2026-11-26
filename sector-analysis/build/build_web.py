@@ -60,7 +60,8 @@ def fact_obj(r):
     num = lambda x: None if x in ("", None) else float(x)
     return {"v": num(r["value_sar_m"]), "prov": r["provenance"], "src": r["source_id"], "loc": r["location"],
             "pdf": r.get("pdf_file", ""), "pages": r.get("pdf_pages", ""), "label": r.get("line_item_label", ""),
-            "orig": num(r.get("original_value")), "note": r.get("note", ""), "supporting": True}
+            "orig": num(r.get("original_value")), "note": r.get("note", ""), "trace": r.get("trace_status", ""),
+            "review": r.get("review", ""), "supporting": True}
 
 
 def main(root, out, body_out=None):
@@ -101,7 +102,8 @@ def main(root, out, body_out=None):
     extra = {f"{t}|{p}|{m}": fact_obj(facts[(t, p, m)]) for (t, p, m) in sorted(wanted - in_series) if (t, p, m) in facts}
 
     # traceability statistics for the disclosed figures shown in company tables
-    st = {"figures": 0, "disclosed": 0, "with_page": 0, "with_link": 0, "calculated": 0}
+    st = {"figures": 0, "disclosed": 0, "with_page": 0, "with_link": 0, "calculated": 0, "by_method": {}, "reviewed": 0, "review_out": {}}
+    PAGED = ("text_statement", "text_other", "ocr_statement", "ocr_other", "components_found", "later_filing", "pdf_override_confirmed", "pdf_override_page", "manual_confirmed")
     for S in ds.values():
         for t, c in S["companies"].items():
             for m, ser in c["series"].items():
@@ -114,6 +116,14 @@ def main(root, out, body_out=None):
                         continue
                     st["disclosed"] += 1
                     st["with_page"] += bool(x.get("pages"))
+                    k = x.get("trace") or "untraced"
+                    if x.get("review", "").startswith(("confirmed", "confirmed_components")) and k in ("not_found", "too_small"):
+                        k = "manual_confirmed"
+                    st["by_method"][k] = st["by_method"].get(k, 0) + 1
+                    if x.get("review"):
+                        st["reviewed"] += 1
+                        o = x["review"].split(" ")[0]
+                        st["review_out"][o] = st["review_out"].get(o, 0) + 1
                     ids = (x.get("src") or "").split(" | ") + [x.get("pdf") or ""]
                     st["with_link"] += any(srcs.get(i, {}).get("url") for i in ids)
 

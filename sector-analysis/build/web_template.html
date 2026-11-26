@@ -298,6 +298,11 @@ function srcLink(sid){
   if(!sid) return '–';
   return sid.split(' | ').map(x=>{ const s=D.sources[x]||{}; return `${linkFor(x)}<br><span class="src">${esc(s.type||'')}${s.assurance?', '+esc(s.assurance):''} · archive folder ${esc(x.split('/')[0])}</span>`; }).join('<br>');
 }
+const TRACE_TXT={text_statement:'Value found on a primary-statement page of the PDF (text layer)',text_other:'Value found in the PDF outside the primary statements, e.g. a note (text layer)',
+ ocr_statement:'Value read by OCR on a scanned primary-statement page',ocr_other:'Value read by OCR on another scanned page',components_found:'Not printed as one number: every component line was found in the PDF',
+ later_filing:'Printed as a comparative in a later filing of the company',pdf_override_confirmed:'Taken from the PDF by correction; value re-found on that page',pdf_override_page:'Taken from the PDF by correction; page recorded',
+ too_small:'Under 100 in the reporting unit, too small to search automatically',not_found:'Not located by automatic search',no_value:'Left blank on purpose (see note)',reconciliation_check:'Internal reconciliation check, not a published figure'};
+const REVIEW_TXT={confirmed:'confirmed on the PDF page',confirmed_components:'components confirmed on the PDF page',not_printed:'not printed as such in the archive PDFs (XBRL figure kept)',different_value:'reviewer found a different value; corrected',wrong_item_or_period:'reviewer found the match was the wrong line; corrected',unreadable:'page unreadable even when rendered'};
 function figDetails(f){
   if (f.sum){
     const sc = D.sectors[f.S]; const blk = sc.sector[f.scope][f.m].totals[f.p]; const L=sc.sector.largest_by_top_line_FY2025;
@@ -311,7 +316,7 @@ function figDetails(f){
   const ovr = s.note && s.note.indexOf('OVERRIDE')===0; const locPdf = (s.loc||'').match(/PDF p\.\s*([\w–\-, ]+)/);
   let pdf;
   if (ovr && locPdf) pdf = `Value read from the PDF, page ${esc(locPdf[1])}${s.pdf?' of '+linkFor(s.pdf):''}`;
-  else if (s.pdf) pdf = `${linkFor(s.pdf)} · ${s.pages?'page '+esc(s.pages):'page not located by text search (scanned page or rounding); use the XBRL row above'}`;
+  else if (s.pdf) pdf = `${linkFor(s.pdf)} · ${s.pages?'page '+esc(s.pages):'page not located (see "How it was traced"); use the XBRL row above'}`;
   else pdf = 'No PDF for this period in the archive; the XBRL row above is the locator';
   let calc='';
   if (s.prov==='C'){
@@ -325,6 +330,7 @@ function figDetails(f){
   ${s.orig!=null && s.prov==='R' ? `<dt>Originally reported</dt><dd>SAR ${fm(s.orig)} m</dd>`:''}
   ${calc}
   ${s.prov!=='C'?`<dt>Source document</dt><dd>${srcLink(s.src)}</dd><dt>Location</dt><dd>${esc(s.loc||'')}</dd><dt>PDF check</dt><dd>${pdf}</dd>`:''}
+  ${s.prov!=='C'&&(s.trace||s.review)?`<dt>How it was traced</dt><dd>${esc(TRACE_TXT[s.trace]||s.trace||'')}${s.review?`<br>Independent manual check: ${esc(REVIEW_TXT[s.review.split(' ')[0]]||s.review.split(' ')[0])}${s.review.indexOf('(')>0?' '+esc(s.review.slice(s.review.indexOf('('))):''}`:''}</dd>`:''}
   ${s.label?`<dt>Line item in filing</dt><dd>${esc(s.label)}</dd>`:''}
   ${s.note?`<dt>Note</dt><dd>${esc(s.note.replace(/^OVERRIDE:\s*/,''))}</dd>`:''}
   <dt>Definition</dt><dd>${esc((D.metrics[f.m]||{}).def||'')}</dd></dl>
@@ -667,7 +673,16 @@ function viewData(){
   if (RS.summary) h+=`<div class="callout">${esc(RS.summary)}</div>${['checked','fixed','unresolved'].filter(k=>RS[k]).map(k=>`<h3>${k==='checked'?'What was checked':k==='fixed'?'What was fixed':'Still unresolved'}</h3><ul class="clean">${RS[k].map(x=>`<li>${esc(x)}</li>`).join('')}</ul>`).join('')}`;
   else h+=`<p class="note">The review summary has not been embedded in this build.</p>`;
   const T=D.trace||{}; const pc=(a,b)=>b?Math.round(a/b*100)+'%':'–';
-  h+=`<h2 id="d-trace">Traceability of figures</h2><p>Company tables show ${T.figures} figures: ${T.disclosed} taken from filings and ${T.calculated} calculated from them. Every disclosed figure names its archive file and XBRL section and row (or PDF page). The PDF page was located by text search for ${T.with_page} of ${T.disclosed} (${pc(T.with_page,T.disclosed)}); the rest sit on scanned pages or differ by rounding. A saudiexchange.sa link is available for ${T.with_link} (${pc(T.with_link,T.disclosed)}), because the archive's manifests list the exchange address only for each company's most recent filings.</p>`;
+  const BM=T.by_method||{}; const nb=k=>BM[k]||0; const RO=T.review_out||{};
+  h+=`<h2 id="d-trace">Traceability of figures</h2><p>Company tables show ${T.figures} figures: ${T.disclosed} taken from filings and ${T.calculated} calculated from them (every calculated figure was recomputed from its inputs). Every disclosed figure names its archive file and XBRL section and row, and ${T.with_page} of ${T.disclosed} (${pc(T.with_page,T.disclosed)}) also name the PDF page where the value is printed.</p>
+  <div class="scroller"><table><thead><tr><th>How the disclosed figure was traced to the PDF</th><th>Figures</th></tr></thead><tbody>
+  ${[['Found on a primary-statement page (text layer)',nb('text_statement')],['Found elsewhere in the PDF, e.g. a note (text layer)',nb('text_other')],
+     ['Read by OCR on a scanned page (image-only statements, including sideways pages)',nb('ocr_statement')+nb('ocr_other')],['Not printed as one number; every component line found',nb('components_found')],
+     ['Printed as a comparative in a later filing',nb('later_filing')],['Taken from a PDF page by correction',nb('pdf_override_confirmed')+nb('pdf_override_page')],
+     ['Located by an independent reviewer',nb('manual_confirmed')],['Not printed as such in any archive PDF (XBRL figure kept)',nb('not_found')],
+     ['Too small to search (under 100 in the reporting unit)',nb('too_small')]].filter(x=>x[1]>0).map(x=>`<tr><td>${x[0]}</td><td>${x[1]}</td></tr>`).join('')}
+  </tbody></table></div>
+  <p>Independent checks beyond the XBRL file: each automatic match was tested for whether the matched line names the item, and ${T.reviewed} figures (everything not located or not clearly matched, all loan-ECL figures and a random sample of automatic matches) were checked by hand by independent reviewers on the PDF page (${Object.entries(RO).map(([k,v])=>`${v} ${esc((REVIEW_TXT[k]||k).split(';')[0])}`).join('; ')}). A saudiexchange.sa link is available for ${T.with_link} (${pc(T.with_link,T.disclosed)}): the archive's manifests list the exchange address only for recent filings, and the exchange website refuses automated look-ups, so the archive file and page are the locator.</p>`;
   h+=`<h2 id="d-cov">Coverage by company and period</h2><div class="controls"><label for="covf">Sector</label><select id="covf"><option value="">Both</option><option>Energy</option><option>Banks</option></select></div><div class="scroller"><table class="stack" id="covt"><thead><tr><th>Company</th>${['FY2022','FY2023','FY2024','FY2025','9M2025','9M2026'].map(p=>`<th class="t">${PL[p]}</th>`).join('')}<th class="t">Flags</th></tr></thead><tbody>${D.coverage.map(r=>`<tr data-sec="${esc(r.sector)}"><td data-l="Company"><a href="#co-${esc(r.ticker)}">${esc(r.company)}</a></td>${['FY2022','FY2023','FY2024','FY2025','9M2025','9M2026'].map(p=>`<td class="t ${/^MISSING/.test(r[p])?'neg':''}" data-l="${PL[p]}" style="min-width:150px">${esc(r[p])}</td>`).join('')}<td class="t" data-l="Flags" style="min-width:240px">${esc(r.flags)}</td></tr>`).join('')}</tbody></table></div>`;
   const R=D.review||[];
   h+=`<h2 id="d-log">Review log (${R.length} issues)</h2>`;

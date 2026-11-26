@@ -77,7 +77,7 @@ def main(sectors_json, out_json, *facts_csvs):
                         ser[p] = {"v": num(r["value_sar_m"]), "prov": r["provenance"], "src": r["source_id"],
                                   "loc": r["location"], "pdf": r.get("pdf_file", ""), "pages": r.get("pdf_pages", ""),
                                   "label": r.get("line_item_label", ""), "orig": num(r.get("original_value")),
-                                  "note": r.get("note", ""), "trace": r.get("trace_status", "")}
+                                  "note": r.get("note", ""), "trace": r.get("trace_status", ""), "review": r.get("review", "")}
                 if ser:
                     series[m] = ser
             growth = {}
