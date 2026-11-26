@@ -1,7 +1,7 @@
 headline: >-
   The listed Energy sector is, in effect, Aramco: 94–97% of revenue and essentially all of the profit (concentration index about
   9,300 out of 10,000). From FY2022 to FY2025 sector revenue fell 8.0% a year and attributable profit 16.6% a year as oil prices and
-  Aramco's price-equalisation income fell; the EBITDA margin narrowed from 53.3% to 48.8%, and free cash flow fell from SAR 558bn to
+  Aramco's price-equalisation income fell; the EBITDA margin narrowed from 53.2% to 48.8%, and free cash flow fell from SAR 558bn to
   SAR 319bn as capex rose. The 2026 conflict reversed the trend: 9M 2026 revenue rose 18.7% and profit 42.8%, on higher prices despite
   lower output. Shipping and refining swung most, and the sector outside Aramco went from losses to SAR 17.1bn of profit.
 main_changes:
@@ -13,7 +13,7 @@ main_changes:
     driver: "The Strait of Hormuz closure and attacks on facilities from 28 Feb 2026 cut output. Exports were rerouted through the East-West pipeline at its 7 mb/d maximum. On crude alone we calculate a price effect of about +13.2 pp and a volume effect of about −9.8 pp of Aramco's 9M 2025 revenue."
     evidence: "Aramco 9M 2026 interim p.1, p.6, p.40; policy facts E-011, E-037"
     refs: ["2222-9M2026-REV", "E-011", "E-037", "E-016"]
-  - change: "Margins narrowed and did not recover in 2026. On a consistent base (revenue plus price-equalisation income), EBITDA margin was 53.3% in FY2022, 48.8% in FY2025, and 47.4% in 9M 2026 vs 49.2% in 9M 2025; 45.8% excluding the SAR 25.9bn PRefChem gain."
+  - change: "Margins narrowed and did not recover in 2026. On a consistent base (revenue plus price-equalisation income), EBITDA margin was 53.2% in FY2022, 48.8% in FY2025, and 47.4% in 9M 2026 vs 49.2% in 9M 2025; 45.8% excluding the SAR 25.9bn PRefChem gain."
     driver: "Royalties rise with price, and the 2026 profit gain came through higher revenue rather than better margins. Downstream EBIT moved from losses in FY2024–FY2025 to SAR 138.2bn in 9M 2026, including the gain."
     evidence: "Sector ratios from totals; one-offs register O-2222-01"
     refs: ["2222-9M2026-EBITDA_C"]
@@ -25,16 +25,16 @@ main_changes:
     driver: "Petro Rabigh lost SAR 3.9–4.7bn a year in FY2023–FY2025 before earning SAR 6.7bn in 9M 2026 on crisis margins. Bahri's profit more than doubled by FY2025, then rose to SAR 10.0bn in 9M 2026 on record tanker rates (crude transport was 95% of its revenue increase). The drillers moved the other way in 2026: offshore rigs were suspended, Arabian Drilling earned only SAR 7m in 9M 2026, and ADES's revenue growth came from its Shelf Drilling acquisition."
     evidence: "Company narratives 2380, 4030, 2381, 2382"
     refs: ["2380-9M2026-NI_ATTR", "4030-9M2026-NI_ATTR", "2381-9M2026-NI_ATTR", "2382-9M2026-REV"]
-  - change: "Acquisitions mattered for ADES, not for the sector. Aramco's acquisitions and disposals moved its revenue by less than 1.2 pp in any year. ADES's revenue grew 39.4% a year, mostly through rig and company acquisitions."
+  - change: "Acquisitions mattered for ADES, not for the sector. Aramco's acquisitions and disposals moved its revenue by at most 1.6 pp in any year. ADES's revenue grew 39.4% a year, mostly through rig and company acquisitions."
     driver: "ADES bought Shelf Drilling (Nov 2025), Saudi Arabian Saipem (Sep 2026) and earlier rig portfolios. We estimate, with Low confidence, that revenue of the business it owned before Shelf fell about 18% in 9M 2026."
     evidence: "Adjustments register"
     refs: []
 takeaways:
   improved: "2026 profitability. Sector profit +42.8% in 9M 2026 (Aramco +36.1%, or +22.0% on its adjusted basis). Bahri and Petro Rabigh had their best results in the period, and 9M free cash flow rose 11.4%."
-  weakened: "The 2022–2025 trend: revenue −8.0% a year, profit −16.6% a year, EBITDA margin −4.5 pp, free cash flow nearly halved. In 2026 the drillers weakened as offshore activity was suspended and finance costs rose."
+  weakened: "The 2022–2025 trend: revenue −8.0% a year, profit −16.6% a year, EBITDA margin −4.4 pp, free cash flow nearly halved. In 2026 the drillers weakened as offshore activity was suspended and finance costs rose."
   why: "The oil price cycle and lower government price-equalisation income in 2022–2025; in 2026, a conflict price premium that outweighed lost volumes. Shipping and refining are the most leveraged to that premium."
   concentration: "Aramco is 93.9% of 9M 2026 revenue and 95.7% of profit. Excluding it, the remaining five companies tell a different story: small, loss-making until 2025, and highly cyclical. Sector averages say almost nothing about them, so read the ex-Aramco view."
-  ytd_2026: "9M 2026 vs 9M 2025: revenue +18.7%, profit +42.8%, EBITDA +19.6% (+15.5% excluding identified one-offs), EBITDA margin down 1.8 pp. The gain rests on prices during a supply disruption."
+  ytd_2026: "9M 2026 vs 9M 2025: revenue +18.7%, profit +42.8%, EBITDA +19.6% (+15.5% excluding identified one-offs), EBITDA margin down 1.7 pp. The gain rests on prices during a supply disruption."
   uncertain: "How long the conflict premium lasts; the pace of volume recovery; and refinancing for the drillers. The sector definition is also open: the Saudi Exchange lists Aldrees (fuel retail) in Energy, but it is not in this archive folder."
 data_notes:
   - "Operating income uses one definition for every company (PBT + finance costs − finance income − share of results of associates). Aramco's printed operating income matches it; Bahri, Petro Rabigh and ADES were aligned after the independent audit."

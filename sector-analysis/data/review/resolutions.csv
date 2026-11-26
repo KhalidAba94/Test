@@ -1,20 +1,72 @@
 issue_id,status,fix,recheck
-E-D-001,fixed,"EQ_ATTR = total equity where no non-controlling interests are reported (rule in derive.py); ADES FY2021 opening equity added from special-purpose FS p.6. Petro Rabigh now in ROE; ex-Aramco ROE FY2025 = -2.0%.","Re-ran pipeline: Petro Rabigh EQ_ATTR present all periods; sector ROE n=6 every period."
-E-D-002,fixed,"Margins now use REV_M = revenue + other income related to sales (Aramco only); sector revenue growth stays on IFRS revenue; note on sector sheets and HTML.","9M EBITDA margin now 49.2% -> 47.4% (matches auditor's recomputation)."
-E-D-003,fixed,"Adjustments register populated for all 16 companies (94 rows) with basis, source page and confidence; not-determinable steps shown as 'not determinable', never 0.","Bridges render in workbook and HTML; ADES Shelf Drilling perimeter included."
-E-D-004,fixed,"One-offs register (data/one_offs.csv) and EBITDA excl. identified one-offs (EBITDA_U) at company and sector level; PRefChem gain registered.","Sector 9M2026 EBITDA margin excl. one-offs 45.8%."
-E-D-005,fixed,"Operating income uses one definition for every Energy company (PBT + finance costs - finance income - share of associates), equal to Bahri's printed operating profit.","Bahri FY2025 OPINC 2,725.5 = printed."
-E-D-006,fixed,"Same single definition; Petro Rabigh 9M figures now equal printed operating profit/loss.","9M2026 OPINC 7,731.1 = printed."
-E-D-007,fixed,"ADES operating income = PBT + net finance costs in every period (labelled C).","FY2025 1,985.5 = auditor's figure."
-E-D-008,fixed,"SARCO treated as an investment holding: investment results kept inside operating income; shown on a profit basis.","SARCO OPINC no longer excludes its main income."
-E-D-009,fixed,"Bahri capex mapping now includes 'Expenditure on other intangible assets'.","FY2025 capex 4,250.5 = PDF."
-E-D-010,fixed,"Bahri FY2022 CFO set to the latest restated comparative 1,989.531 (FY2023 AFS p.10) via override, provenance R.","Value and R flag correct."
-E-D-011,fixed,"Restatement detection now compares annual with annual and Q3 with Q3; XBRL tagging artefacts labelled 'not a restatement'; reasons recorded in restatement_reasons.csv and shown on each figure.","Energy R flags reduced from 20 to genuine cases, each with a reason."
-E-D-012,fixed,"Petro Rabigh FY2024 IFRS 15 netting (-686.9m) bridged as an accounting/presentation step; CAGR flagged as not like-for-like in data notes.","FY2024 organic -11.8% vs reported -13.3%."
-E-D-013,fixed,"ADES FY2022 basis flagged in coverage, source notes and company data notes; bargain gain registered as a one-off.","Coverage flag present."
-E-D-014,fixed,"Source register now detects image-only pages across the whole PDF and labels coverage 'PDF(statements scanned)'.","Scanned statement pages listed per file."
-E-D-015,open,"Classification checked: Saudi Exchange's own directory lists Aldrees (4200) in Energy; the archive files it elsewhere. Flagged on the Energy sector page and in the review summary; inclusion recommended for the next iteration.","Not resolved within the pilot scope (archive folder)."
-E-D-016,fixed,"Coverage judges SARCO on profit (no revenue line) and flags ADES FY2022 basis.","Labels corrected."
-E-D-017,fixed,"Ratio cells show the number of companies and which were excluded (workbook comments; HTML superscript + tooltip); sector narratives filled.","Sections 4-5 populated."
-E-D-018,fixed,"Aramco narrative wording kept (calculated operating income equals the printed line); noted in sector data notes.","No numeric change."
-E-D-019,fixed,"Source note added for Petro Rabigh 9M2026 comparative-date typo.","Shown in Sources sheet read_note."
+E-D-001,fixed,EQ_ATTR = total equity where no non-controlling interests are reported (rule in derive.py); ADES FY2021 opening equity added from special-purpose FS p.6. Petro Rabigh now in ROE; ex-Aramco ROE FY2025 = -2.0%.,Re-ran pipeline: Petro Rabigh EQ_ATTR present all periods; sector ROE n=6 every period.
+E-D-002,fixed,Margins now use REV_M = revenue + other income related to sales (Aramco only); sector revenue growth stays on IFRS revenue; note on sector sheets and HTML.,9M EBITDA margin now 49.2% -> 47.4% (matches auditor's recomputation).
+E-D-003,fixed,"Bridges populated for all companies. Petro Rabigh new capacity is recorded as 'none identified' with the AFS pages that describe no new units (2023 AFS p.30; 2025 AFS p.28), not as an unsupported 0.",Recheck round 2: populated; Petro Rabigh basis cited.
+E-D-004,partly fixed,EBITDA excl. identified one-offs at company and sector level. Underlying net profit is not computed because the tax effect of most one-offs is not disclosed; Aramco's own adjusted net income (non-IFRS) is quoted in its narrative.,Open by design: no tax effects disclosed.
+E-D-005,fixed,"Single operating-income definition; the superseded XBRL operating-profit tag (OPINC_REP) is no longer published, removing the stale values and the false Bahri 9M2025 R flag.",Recheck round 2: calculated values confirmed correct.
+E-D-006,fixed,As E-D-005.,
+E-D-007,fixed,As E-D-005; ADES receivables ECL no longer added back to EBITDA (FY2022-FY2024).,
+E-D-008,fixed,As E-D-005; SARCO investment-results subtotal annotated on the figure.,
+E-D-009,fixed,Bahri capex mapping now includes 'Expenditure on other intangible assets'.,"FY2025 capex 4,250.5 = PDF."
+E-D-010,fixed,"Bahri FY2022 CFO set to the latest restated comparative 1,989.531 (FY2023 AFS p.10) via override, provenance R.",Value and R flag correct.
+E-D-011,fixed,Reasons added for the remaining restatements (Arabian Drilling FY2025 total assets; Bahri FY2023 CFO); tagging artefacts marked not a restatement.,
+E-D-012,fixed,Petro Rabigh FY2024 IFRS 15 netting (-686.9m) bridged as an accounting/presentation step; CAGR flagged as not like-for-like in data notes.,FY2024 organic -11.8% vs reported -13.3%.
+E-D-013,fixed,"ADES FY2022 basis flagged in coverage, source notes and company data notes; bargain gain registered as a one-off.",Coverage flag present.
+E-D-014,fixed,Coverage subtitle reworded to state what was verified inside files and what rests on XBRL with sample visual checks.,
+E-D-015,open,Classification checked: Saudi Exchange's own directory lists Aldrees (4200) in Energy; the archive files it elsewhere. Flagged on the Energy sector page and in the review summary; inclusion recommended for the next iteration.,Not resolved within the pilot scope (archive folder).
+E-D-016,fixed,Scanned-statement detection refined (see E-D-023); SARCO coverage on profit basis.,
+E-D-017,fixed,Header now 'Companies (FY2025)'; ratio sample sizes per period shown in comments/tooltips.,
+E-D-018,fixed,Aramco wording now: our definition equals the printed operating income line.,
+E-D-019,fixed,Source note added for Petro Rabigh 9M2026 comparative-date typo.,Shown in Sources sheet read_note.
+E-D-020,fixed,Final build recalculates the workbook in LibreOffice after every rebuild (rebuild_outputs.sh); the delivered file carries cached values.,Checked with openpyxl data_only=True after the final build.
+E-D-021,fixed,"ADES 9M 2025 fair-value gain (SAR 85.7m) added to the one-offs register, so 9M EBITDA excl. one-offs removes gains in both periods (+21.3%).","EBITDA_U 9M2025 = 2,452."
+E-D-022,fixed,Narratives corrected: perimeter effects 'at most 1.6 pp'; EBITDA margin change 1.7 pp (9M) and 4.4 pp (FY22-25); ADES note-30 wording now states the PBT/tax presentation difference.,Text re-checked against dataset.
+E-D-023,fixed,Scanned-statement flag now requires that no early page contains a text-layer primary statement; Aramco annuals and ADES FY2022-24 no longer mislabelled.,Coverage regenerated.
+B-D-001,fixed,"FY2023 equity for Riyad, Aljazira, SAIB, BSF and SAB set to the restated 1 Jan 2024 balances from the FY2025 AFS (overrides with page references).",Sector FY2024 ROE 14.4% (was 14.5%); bank narratives updated.
+B-D-002,fixed,"Alinma IMPAIR_FIN set to the financing-only line printed on its income statement for FY2022, FY2024, FY2025, 9M2025 and 9M2026.",Alinma COR FY2025 0.48%.
+B-D-003,partly fixed,Per-bank impairment basis documented in the sector data notes; cost of risk labelled as approximate across banks. A single financing-only basis needs note-level extraction for every bank and period (planned for the roll-out template).,Open as a known limitation.
+B-D-004,fixed,Same as E-D-020: delivered workbook recalculated with cached values.,Checked after final build.
+B-D-005,fixed,Deposit series breaks (Al Rajhi FY2024 reclassification; SAB FY2023 restatement) recorded on the figures and in sector data notes with like-for-like growth.,Notes visible on figures and sector page.
+B-D-006,fixed,Fee/NSCI/other-income re-presentations noted in sector data notes (affected years and amounts).,Documented.
+B-D-007,accepted,Values are identical in the original and latest filings; provenance points to the original filing. Documented rather than re-sourced.,No numeric effect.
+B-D-008,fixed,Al Rajhi FY2023 fees/other income and BSF FY2021 equity marked 'not a restatement'; Aljazira 9M2026 profit now flagged disclosed (no NCI).,Flags corrected.
+B-D-009,fixed,Islamic banks' NSCI facts carry a mapping note ('net income from financing and investments').,Note shown in figure drawer.
+P-R-001,fixed,"Domestic Minimum Top-up Tax added (V-016) with Energy and Banks rows (P-E-10, P-B-07); no Zakat rule change found stated in section 4.",Rows present.
+P-R-002,fixed,Rate channel rebuilt on each bank's observed margin response to the 2023 hikes and 2024-25 cuts; SAIB example restated as sensitivity to cuts.,P-B-04 and bank rows rewritten.
+P-R-003,fixed,"Al Rajhi, Albilad and Aljazira classed as liability-sensitive (margin fell in 2023 hikes); SNB roughly neutral; corporate lenders asset-sensitive; dataset ratios cited.",P-B-04 rewritten.
+P-R-004,fixed,Restated as gross domestic borrowing about 7.7% of deposits (net about 6.3%); bank share not disclosed; not presented as a drain measure.,P-B-01 quantified field.
+P-R-005,fixed,"P-B-01 significance lowered to Medium, confidence Low-Medium; smaller 2027 net need stated.",
+P-R-006,fixed,Government-deposit channel (Fitch ~SAR 370bn vs budget reserves SAR 399bn) added to section 1 and P-B-01.,
+P-R-007,fixed,Both loan-to-deposit measures shown (simple 107% vs SAMA regulatory <85% vs 90% cap).,
+P-R-008,fixed,F-085 relabelled as a stated intention (plan pending) and moved to section 2; item reclassified.,
+P-R-009,fixed,"P-B-02 restated: loan growth below the 2022-25 trend but flat-to-higher vs 2026; capex change attributed per MoF to military spending brought forward; direction neutral to slightly negative, Low confidence.",
+P-R-010,fixed,F-105 removed from impact evidence; kept only as an unverified note.,
+P-R-011,fixed,"PIF/government-entity channel added (P-B-02, P-E-03, section 3).",
+P-R-012,fixed,Privatisation and share-sale signal added (V-019; P-E-03; section 2).,
+P-R-013,fixed,P-E-01 made conditional with an explicit illustrative calculation on one crude series and stated assumptions.,
+P-R-014,fixed,"One output series used (OPEC secondary sources 6.82 Q2 vs 9.19 Oct), marked secondary.",
+P-R-015,fixed,P-E-04 set to 'Neutral / not determinable until the Jan 2027 price notices'.,
+P-R-016,fixed,Insurance pool no longer counted as support for Bahri; described as covering shipments to Saudi ports.,
+P-R-017,fixed,"P-E-06 rebuilt around margins, feedstock notices and Zakat; tariff effect not quantified; utility supply marked unverified.",
+P-R-018,fixed,P-E-07: finance-cost rise attributed to Shelf acquisition debt; geographic diversification explains difference from Arabian Drilling.,
+P-R-019,fixed,P-E-08 updated with the Aug 2026 rig-resumption notices; refinancing kept as company-specific risk; budget link Low.,
+P-R-020,fixed,P-B-06 reworded: CCyB is a CET1 buffer met via retained earnings; AT1 coupons affect ordinary-equity returns; confidence Medium.,
+P-R-021,fixed,Ten bank rows differentiated in direction and significance with cited fact ids and evidence.,
+P-R-022,fixed,Bank rows use 30 Sep 2026 loan-to-deposit ratios.,
+P-R-023,fixed,P-B-05 uses 2026 mortgage data and adds the income-support effect.,
+P-R-024,fixed,Utilities lending sub-channel added to P-B-02.,
+P-R-025,fixed,Security and credit-quality row (P-B-08) and a downside scenario (section 4) added; Energy volume direction conditional.,
+P-R-026,fixed,Wording: 'recent increases of 3.5% a year'; distributions equal to FCF (company-reported).,
+P-R-027,fixed,Historical figures in impact rows labelled 'historical context' with fact ids.,
+P-R-028,fixed,Pipeline wording: 'under consideration (no FID)'.,
+P-R-029,fixed,"End-Q3 2026 actual debt SAR 1,773.6bn and the budget's caveat added.",
+P-R-030,fixed,"Jan-Sep crude supply cited to F-053 (final), with F-028 as the preliminary comparison.",
+P-R-031,fixed,"Item classes corrected (F-084, F-085 FINAL_BUDGET; F-089, F-090 MARKET_DATA; F-091 EVENT).",
+P-R-032,fixed,Roles filled for F-065 and F-102; reviewer re-check noted.,
+P-R-033,fixed,Documents list uses specific URLs.,
+P-R-034,partly fixed,Aldrees channel note added (section 5); inclusion in Energy totals remains open (see E-D-015).,
+P-R-035,fixed,Nitaqat wage floors added (V-017) as a cost/household item.,
+P-R-036,fixed,Section 4 states no Zakat rule change found (search to 26 Nov 2026).,
+P-R-037,fixed,Subsidy and health wording corrected.,
+P-R-038,fixed,Tenders law quoted from the MoF release; F-099 restored; depends on Implementing Regulations.,
+P-R-039,fixed,Headline states both bases (-3% vs 2026 outturn; +6% vs FY2026 budget).,

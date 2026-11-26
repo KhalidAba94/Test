@@ -2,3 +2,4 @@ oneoff_id,ticker,period,item,amount_sar_m,in_metric,direction,source,page,notes
 O-2222-01,2222,9M2026,Gain on sale of equity interest in PRefChem (Malaysia),25902,OPINC,gain,2222_SAUDI_ARAMCO/2026_Q3_filed2026-11-03.pdf,,Inside operating income; removed for EBITDA excl. one-offs
 O-2382-01,2382,FY2022,Bargain purchase gain (special-purpose FS),422.267,OPINC,gain,2382_ADES/2022_Annual_filed2024-10-09.pdf,5,ADES FY2022 profit is mostly this gain
 O-2382-02,2382,9M2026,Bargain purchase gain on Saudi Arabian Saipem acquisition,77.809,OPINC,gain,2382_ADES/2026_Q3_filed2026-11-09.pdf,7,
+O-2382-03,2382,9M2025,Gain on equity instruments at fair value through profit or loss,85.744,OPINC,gain,2382_ADES/2026_Q3_filed2026-11-09.pdf,7,Removed for symmetry with the 9M 2026 bargain-purchase gain (independent audit E-D-021)

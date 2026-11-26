@@ -23,7 +23,7 @@ lfl_basis:
     Annual filings in the archive contain financial statements only (no realised prices or volumes), so an annual price/volume split
     is not determinable. The 9M 2026 interim report discloses the realised crude price and liquids production, which supports a split
     of crude oil revenue for 9M 2026 vs 9M 2025.
-  confidence: "Medium (perimeter effects are below 1.2 pp in every year; one estimate is Low confidence)"
+  confidence: "Medium (perimeter effects are at most 1.6 pp in any year; one estimate is Low confidence)"
 price_volume:
   - period: "9M 2026 vs 9M 2025"
     text: >-
@@ -66,11 +66,11 @@ developments:
 what_it_means:
   improved: "2026 so far: attributable profit up 36.1% (22.0% on management's adjusted basis), with downstream earnings recovering strongly and price-equalisation income doubling."
   weakened: "2022–2025: revenue fell at an 8.1% annual rate and attributable profit at 16.5%; EBITDA margin fell from 61.6% to 53.4% and free cash flow from SAR 557bn to SAR 320bn as capex rose to 12.2% of revenue."
-  why: "Lower crude prices and lower price-equalisation income drove most of the 2022–2025 decline (crude revenue −34%, other income related to sales −57%), while downstream losses and SAR 32.4bn of 2025 impairments widened the profit fall. Acquisitions and disposals moved revenue by less than 1.2 pp in any year."
+  why: "Lower crude prices and lower price-equalisation income drove most of the 2022–2025 decline (crude revenue −34%, other income related to sales −57%), while downstream losses and SAR 32.4bn of 2025 impairments widened the profit fall. Acquisitions and disposals moved revenue by at most 1.6 pp in any year (FY2023, including a Low-confidence estimate for Aramco Fuels Poland)."
   uncertain: "The 2026 rebound rests on conflict-driven prices with volumes constrained, and includes a one-off gain; the annual split of price versus volume, and new-capacity contributions, cannot be determined from the archive."
 confidence_overall: "Medium-High"
 data_notes:
-  - "Operating income is calculated (PBT + finance costs − finance and other income − share of results of joint ventures and associates) because Aramco presents expenses by nature; 9M 2026 operating income includes the SAR 25.9bn PRefChem gain."
+  - "Operating income uses the analysis-wide definition (PBT + finance costs − finance and other income − share of results of joint ventures and associates); for Aramco it equals the operating income line printed on the income statement. 9M 2026 operating income includes the SAR 25.9bn PRefChem gain."
   - "FY2024 and 9M 2025 depreciation were restated in later filings to move impairments into a separate line (FY2024: SAR 103.2bn → 91.7bn); EBITDA adds back both, so it is unaffected."
   - "Other income related to sales (government compensation for regulated domestic prices) is shown separately and excluded from sector revenue; Aramco's own top line (revenue + this income) fell 26.3% from FY2022 to FY2025."
   - "Operating KPIs come from the 9M 2026 interim report's management pages; the annual files in the archive contain financial statements only."

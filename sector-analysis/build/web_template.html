@@ -300,7 +300,7 @@ const sectorRows = S => S==='Energy'
   : [['TOI','Total operating income'],['NSCI','Net special commission income'],['FEES_NET','Net fees & commissions'],['OTHER_OI','Other operating income'],['OPEX_PRE','Operating expenses (pre-impairment)'],['PPOP','Pre-provision profit'],['IMPAIR_TOTAL','Impairment charges'],['NI_ATTR','Net profit attributable']];
 function periodHead(extra){ return `<tr><th>SAR m</th>${FY.map(p=>`<th>${PL[p]}</th>`).join('')}<th title="Compound annual growth FY2022–FY2025 (3 years)">CAGR 22–25</th><th class="gap"></th>${YTD.map(p=>`<th class="ytd">${PL[p]}</th>`).join('')}<th class="ytd">9M change</th>${extra||''}</tr>`; }
 function sectorTable(S, scope){
-  const sc=D.sectors[S], blk=sc.sector[scope]; let h=periodHead('<th>Companies</th>');
+  const sc=D.sectors[S], blk=sc.sector[scope]; let h=periodHead('<th title="Companies with data in FY2025; ratio cells with fewer companies show a superscript">Companies (FY2025)</th>');
   sectorRows(S).forEach(([m,lab])=>{ const b=blk[m]; if(!b) return;
     const g=b.growth; h+=`<tr><td>${esc(lab)}</td>${FY.map(p=>`<td>${sumFig(S,scope,m,p,b.totals[p].v)}</td>`).join('')}<td>${fg(g.CAGR_2022_2025.cagr)}</td><td class="gap"></td>${YTD.map(p=>`<td class="ytd">${sumFig(S,scope,m,p,b.totals[p].v)}</td>`).join('')}<td class="ytd">${fg(g['9M2026/9M2025'].growth)}</td><td>${b.totals.FY2025.n}</td></tr>`;
     if (m===sc.config.top_line || m==='NI_ATTR') h+=`<tr class="sub"><td>growth (matched sample)</td>${FY.map((p,i)=>`<td>${i?fg(g[PAIRS[i-1]].growth):''}</td>`).join('')}<td></td><td class="gap"></td><td class="ytd"></td><td class="ytd"></td><td class="ytd"></td><td></td></tr>`; });

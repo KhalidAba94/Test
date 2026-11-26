@@ -73,7 +73,8 @@ def main(sector, facts_csv, overrides_csv, out_csv):
         for p in PERIODS:
             # attributable profit fallback: no NCI line and no attributable line -> NI
             if val(t, p, "NI_ATTR") is None and val(t, p, "NI") is not None and val(t, p, "NI_NCI") is None:
-                add(t, p, "NI_ATTR", val(t, p, "NI"), "NI (no non-controlling interest line in the filing)", [(p, "NI")])
+                add(t, p, "NI_ATTR", val(t, p, "NI"), "Profit for the period (no non-controlling interests reported, so all profit is attributable)", [(p, "NI")])
+                facts[(t, p, "NI_ATTR")]["provenance"] = facts[(t, p, "NI")]["provenance"]
             if val(t, p, "EQ_ATTR") is None and val(t, p, "TE") is not None and val(t, p, "NI_NCI") is None:
                 add(t, p, "EQ_ATTR", val(t, p, "TE"), "Total equity (no non-controlling interests reported)", [(p, "TE")])
             if sector == "Energy":
@@ -109,6 +110,14 @@ def main(sector, facts_csv, overrides_csv, out_csv):
                 if val(t, p, "EQ_ATTR") is not None:
                     s = val(t, p, "T1_SUKUK") or 0.0
                     add(t, p, "EQ_ORD", val(t, p, "EQ_ATTR") - s, "EQ_ATTR - T1_SUKUK (0 if none)", [(p, "EQ_ATTR"), (p, "T1_SUKUK")])
+    for k in [k for k in facts if k[2] == "OPINC_REP"]:
+        del facts[k]   # superseded by the single operating-income definition (OPINC); not published
+    ISLAMIC = {"1120", "1140", "1150", "1020"}
+    for k, r in facts.items():
+        if k[2] == "NSCI" and k[0] in ISLAMIC:
+            r["note"] = (r.get("note", "") + " " if r.get("note") else "") + "Islamic bank: 'net income from financing and investments' mapped to net special commission income."
+        if k[2] == "SHARE_JV" and k[0] in HOLDING:
+            r["note"] = (r.get("note", "") + " " if r.get("note") else "") + "XBRL subtotal of investment results (dividends, associates, fair-value changes), not share of associates alone; kept inside operating income for this investment holding."
     for k, r in facts.items():
         rr = reasons.get(k)
         if rr:

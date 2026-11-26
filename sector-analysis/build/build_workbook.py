@@ -454,7 +454,7 @@ def build_sector(wb, sector, cfg, ds, narr, comp_sheets):
 
     def totals_block(r, label, excl=None):
         r = section(ws, r, label, 12)
-        header_row(ws, r, ["", "FY2022", "FY2023", "FY2024", "FY2025", "CAGR 2022–25", "", "9M 2025", "9M 2026", "YTD change", "Companies in total"])
+        header_row(ws, r, ["", "FY2022", "FY2023", "FY2024", "FY2025", "CAGR 2022–25", "", "9M 2025", "9M 2026", "YTD change", "Companies (FY2025)"])
         r += 1
         cols = {"FY2022": "B", "FY2023": "C", "FY2024": "D", "FY2025": "E", "9M2025": "H", "9M2026": "I"}
         out = {}
@@ -684,7 +684,7 @@ def main(root, out):
     cov = load_csv(os.path.join(root, "data", "coverage.csv"))
     if cov:
         simple_table(wb, "Coverage", "Coverage: available filings and gaps by company and period",
-                     "Verified inside each file (company, period, units, assurance). See Sources for file-level checks.",
+                     "File-level checks (company name, period, units, assurance) were done inside every file - see Sources. Individual values were matched to PDF text where it exists (Data: PDF match status); figures on scanned pages rest on the XBRL file, with a sample checked visually by the independent auditors.",
                      cov, list(cov[0].keys()), [10, 8, 28] + [16] * (len(cov[0]) - 3), index=2)
     src = load_csv(os.path.join(root, "data", "energy", "sources.csv")) + load_csv(os.path.join(root, "data", "banks", "sources.csv"))
     if src:

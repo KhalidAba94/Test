@@ -21,3 +21,10 @@ ticker,period,metric_code,reason,source
 2381,FY2022,IMPAIR_CF,"NOT A RESTATEMENT: XBRL tagging of impairment add-backs differs between filings; immaterial.",XBRL
 2381,FY2023,IMPAIR_CF,"NOT A RESTATEMENT: XBRL tagging of impairment add-backs differs between filings; immaterial.",XBRL
 2030,9M2025,SHARE_JV,"NOT A RESTATEMENT: SARCO's XBRL subtotal for investment results was re-tagged in the 2026 filing.",XBRL
+2381,FY2025,TA,"2026 interim comparatives show 31 Dec 2025 total assets of SAR 10,177.2m vs 10,089.4m in the FY2025 AFS; the interims give no reason. Latest figure used.",2381_ARABIAN_DRILLING/2026_Q2 and Q3 interims
+4030,FY2023,CFO,"FY2024 AFS cash-flow comparative (SAR 3,560.6m) differs from the FY2023 AFS (3,642.9m); a reclassification within the cash-flow statement, reason not stated. Latest figure used.",4030_BAHRI/2024_Annual_filed2025-03-26.pdf
+1120,FY2023,FEES_NET,"NOT A RESTATEMENT: the FY2023 XBRL tag added exchange income to fees; the AFS shows net fees of SAR 4,225.7m.",1120_ALRAJHI/2023_Annual_filed2024-02-08.pdf p.57
+1120,FY2023,OTHER_OI,"NOT A RESTATEMENT: follows the FY2023 fee tag correction.",1120_ALRAJHI/2023_Annual_filed2024-02-08.pdf p.10
+1050,FY2021,EQ_ATTR,"NOT A RESTATEMENT: the original XBRL value excluded Tier 1 sukuk; the figure used includes them, consistently with other periods.",1050_BSF/2023_Annual_filed2024-02-13.pdf p.13
+1120,FY2024,DEPOSITS,"Series break: SAR 26,750m moved from 'due to banks' into customer deposits at 31 Dec 2024 (note 43); FY2022-FY2023 not re-presented (like-for-like FY2024 deposit growth 9.6%).",1120_ALRAJHI/2025_Annual_filed2026-02-04.pdf p.109
+1060,FY2023,DEPOSITS,"Restated in the FY2024 AFS (240,940m -> 253,457m); FY2022 not re-presented (like-for-like FY2023 deposit growth 12.4%).",1060_SAB/2024_Annual AFS

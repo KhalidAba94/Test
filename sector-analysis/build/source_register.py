@@ -48,7 +48,9 @@ def pdf_check(path, ticker, year, label):
     pages = re.search(r"Pages:\s+(\d+)", info)
     n_pages = int(pages.group(1)) if pages else None
     img = [i + 1 for i, pg in enumerate(full[: (n_pages or len(full))]) if len(pg.strip()) < 80]
-    early = [i for i in img if i <= 15]
+    stmt_text = any(re.search(r"statement of (financial position|profit|income|comprehensive)|balance sheet|income statement", pg, re.I)
+                    and re.search(r"\d{1,3},\d{3}", pg) for pg in full[:20])
+    early = [i for i in img if i <= 15] if not stmt_text else []
     scan_note = (f"{len(img)} of {n_pages} pages have no text layer" + (f" (incl. pages {','.join(map(str, early[:8]))} where the primary statements usually sit)" if early else "")
                  + "; figures on those pages were taken from the XBRL file and checked visually where audited") if img else ""
     if len(flat.strip()) < 200:
