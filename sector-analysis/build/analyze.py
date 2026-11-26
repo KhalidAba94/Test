@@ -55,7 +55,11 @@ def main(sectors_json, out_json, *facts_csvs):
         # left out of sector totals, and growth across them is not meaningful
         short_fy = {(r["ticker"], r["period"]): int(float(r["period_months"])) for r in srows
                     if r["period"].startswith("FY") and str(r.get("period_months") or "").strip() not in ("", "0", "0.0", "12", "12.0")}
-        sfacts = calc.Facts.from_rows([r for r in srows if (r["ticker"], r["period"]) not in ytd_months and (r["ticker"], r["period"]) not in short_fy])
+        # balance-sheet amounts at the end of a short year are ordinary point-in-time balances: they stay in sector totals
+        # (and serve as opening balances); only the short year's flows are left out
+        STOCK = {"TA", "TE", "EQ_ATTR", "EQ_ORD", "CASH", "DEBT", "LEASE_LIAB", "NET_DEBT", "NAV_FV", "LOANS", "DEPOSITS", "T1_SUKUK"}
+        sfacts = calc.Facts.from_rows([r for r in srows if (r["ticker"], r["period"]) not in ytd_months
+                                       and not ((r["ticker"], r["period"]) in short_fy and r["metric_code"] not in STOCK)])
         tickers = list(sc["constituents"].keys())
 
         def v(t, p, m):
@@ -174,6 +178,10 @@ def main(sectors_json, out_json, *facts_csvs):
                     val = (nsum / dsum) if used and dsum else None
                     if val is not None and spec[1] in REVENUE_BASES and dsum < calc.MIN_BASE:
                         val = calc.NM
+                    if val is not None and spec[1].startswith("ann:") and dsum < calc.MIN_BASE:
+                        val = calc.NM   # multiple of negative or immaterial group EBITDA
+                    if val is not None and spec[1].startswith("avg:") and dsum <= 0:
+                        val = calc.NM   # return on zero or negative group equity
                     res[rk][p] = {"v": val, "n": len(used),
                                   "excluded": [t for t in tk if t not in used]}
             return res

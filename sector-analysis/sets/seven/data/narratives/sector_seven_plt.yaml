@@ -1,0 +1,31 @@
+headline: >-
+  The Platform group is one company, Jahez International, a delivery platform kept apart from the restaurant operators. Revenue grew
+  13.2% a year from FY2022 to FY2025 to SAR 2,324m, while attributable profit peaked at SAR 188m in FY2024 and fell 61.2% to SAR 73.0m
+  in FY2025. Snoonu (Qatar and Oman), consolidated from 6 October 2025, added SAR 228m of FY2025 revenue; without it revenue fell 5.5%
+  (we calculate). In 9M 2026 revenue rose 37.5% to SAR 2,237m with Snoonu, delivery revenue inside Saudi Arabia fell 10.0%, and Jahez
+  made an attributable loss of SAR 28.5m.
+main_changes:
+  - change: "Growth moved from Saudi delivery to acquisitions abroad. Delivery revenue inside the Kingdom fell 8.6% in FY2025 (SAR 1,928m to SAR 1,761m) and 10.0% in 9M 2026, while delivery revenue outside the Kingdom rose from SAR 212m to SAR 462m in FY2025 and from SAR 183m to SAR 946m in 9M 2026."
+    driver: "Jahez bought 76.56% of Snoonu for SAR 802m in cash plus treasury shares and a capital injection. Snoonu's revenue is disclosed for FY2025 (SAR 228m from 6 October) but not for 9M 2026, so organic growth in 2026 is not determinable. Customer promotions and cash back deducted from revenue rose to SAR 198m in FY2025 (SAR 168m). Orders and users are not disclosed."
+    evidence: "Company narrative 6017 (segment note); adjustments register A-6017-08, A-6017-11"
+    refs: ["6017-FY2024-REV", "6017-FY2025-REV", "6017-9M2025-REV", "6017-9M2026-REV"]
+  - change: "Margins fell after FY2024. The EBITDA margin went from 9.7% (FY2024) to 6.0% (FY2025) and 4.3% in 9M 2026 (8.8%); the operating margin from 7.3% to 1.6% and −2.0% (5.7%)."
+    driver: "Marketing and advertising rose 34.8% in FY2025 and 68.4% in 9M 2026, and G&A 16.7% and 69.6%. Depreciation and amortisation rose to SAR 140m in 9M 2026 (SAR 49.8m), including amortisation of Snoonu's brand, and the gross margin fell to 20.1% (23.2%) as goods sales grew. Excluding fair-value results on start-up investments, the EBITDA margin was 10.0% (FY2024), 6.5% (FY2025) and 4.3% (9M 2026)."
+    evidence: "Company narrative 6017; ratios of totals"
+    refs: ["6017-FY2024-EBITDA_C", "6017-FY2025-EBITDA_C", "6017-9M2026-EBITDA_C", "6017-9M2026-OPINC"]
+  - change: "Net cash turned into net debt. Net debt including leases moved from −SAR 982m at end-2024 to SAR 26.9m at end-2025 and SAR 208m at 30 Sep 2026 (1.6x annualised EBITDA)."
+    driver: "The Snoonu payment cut cash from SAR 1,054m to SAR 428m (SAR 323m at 30 Sep 2026), borrowings of SAR 165m appeared at end-2025, and lease liabilities rose from SAR 71.8m to SAR 290m. Finance income fell to SAR 2.4m in 9M 2026 (SAR 30.3m) and capex rose to SAR 124m (SAR 39.1m)."
+    evidence: "Company narrative 6017; sector NET_DEBT, CASH and DEBT"
+    refs: ["6017-FY2024-CASH", "6017-FY2025-CASH", "6017-FY2025-DEBT", "6017-9M2026-NET_DEBT"]
+takeaways:
+  improved: "Scale: revenue grew 13.2% a year from FY2022 to FY2025 and 37.5% in 9M 2026, and 9M 2026 operating cash flow rose 61.4% to SAR 87.5m."
+  weakened: "Profitability and the Saudi core: delivery revenue inside the Kingdom fell in FY2025 and 9M 2026, the net margin went from 8.5% (FY2024) to 3.1% (FY2025) and −1.3% in 9M 2026, and ROE from 15.7% to 5.7%."
+  why: "Marketing, G&A and technology costs grew faster than revenue; Snoonu added revenue but also amortisation, losses and a minority share, and the cash paid for it reduced finance income."
+  concentration: "One company: Jahez is 100% of the group, so there is no excluding-the-largest view and the group figures are the company's."
+  ytd_2026: "9M 2026 vs 9M 2025: revenue +37.5%, gross profit +19.0%, EBITDA −32.7% (−32.4% excluding one-offs) to SAR 95.8m, and an attributable loss of SAR 28.5m against a profit of SAR 121.5m; minority shareholders bore SAR 27.2m of losses. Capex rose 216.3% and free cash flow was −SAR 36.1m."
+  uncertain: "Snoonu's own 2026 revenue and profit are not disclosed, so organic growth cannot be measured, and the filings do not explain why delivery revenue inside Saudi Arabia fell."
+data_notes:
+  - "One company, with full-year and 9M figures for every period (no short years), so every total is Jahez's own."
+  - "Perimeter: Snoonu (76.56%) is consolidated from 6 October 2025, with SAR 228m of FY2025 revenue disclosed; its 9M 2026 revenue is not disclosed. Marn (from 2 January 2023) added SAR 1.1m in FY2023; SOL (consolidated from 26 December 2023) has no disclosed revenue, so FY2024 organic growth is not determinable."
+  - "Revenue is net of customer promotions and cash back (SAR 198m in FY2025). Our operating income includes unrealised fair-value results on start-up investments (FY2025 −SAR 11.3m), which EBITDA excluding one-offs removes, so it differs from Jahez's printed operating profit (FY2025: SAR 49.4m printed, SAR 38.1m on our definition)."
+  - "All 9M 2026 figures were read from the 2026 Q3 interim PDF (no XBRL file)."

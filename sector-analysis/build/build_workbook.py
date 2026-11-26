@@ -510,8 +510,9 @@ def build_sector(wb, sector, cfg, ds, narr, comp_sheets):
             ws.cell(row=r, column=1, value=f'{ds["companies"][t]["name"]} ({t})').font = f(size=9)
             for p in periods:
                 c = ws[f"{pc[p]}{r}"]
-                if f"{t}|{p}" in ds["sector"].get("ytd_not_9m", {}) or f"{t}|{p}" in ds["sector"].get("short_fy", {}):
-                    c.value = None   # YTD shorter than nine months: excluded from sector 9M totals
+                STOCK = {"TA", "TE", "EQ_ATTR", "EQ_ORD", "CASH", "DEBT", "LEASE_LIAB", "NET_DEBT", "NAV_FV", "LOANS", "DEPOSITS", "T1_SUKUK"}
+                if f"{t}|{p}" in ds["sector"].get("ytd_not_9m", {}) or (f"{t}|{p}" in ds["sector"].get("short_fy", {}) and m not in STOCK):
+                    c.value = None   # YTD shorter than nine months, or a short year's flows: excluded from sector totals
                     continue
                 c.value = lookup(f"{t}-{p}-{m}")
                 c.number_format = NUM
@@ -612,6 +613,12 @@ def build_sector(wb, sector, cfg, ds, narr, comp_sheets):
                 if rk == "COR":
                     ws[f"{col}{r}"] = f'=IFERROR(({num}){ann}/({den})*10000,"")'
                     ws[f"{col}{r}"].number_format = BP
+                elif annd:
+                    ws[f"{col}{r}"] = f'=IFERROR(IF(({den})<10,"n.m.",({num})/({den})),"")'
+                    ws[f"{col}{r}"].number_format = XF
+                elif avg:
+                    ws[f"{col}{r}"] = f'=IFERROR(IF(({den})<=0,"n.m.",({num}){ann}/({den})),"")'
+                    ws[f"{col}{r}"].number_format = PCT2 if rk in ("ROA", "NSCI_YLD") else PCT
                 else:
                     ws[f"{col}{r}"] = f'=IFERROR(({num}){ann}/({den}),"")'
                     ws[f"{col}{r}"].number_format = XF if rk == "ND_EBITDA" else (PCT2 if rk in ("ROA", "NSCI_YLD") else PCT)

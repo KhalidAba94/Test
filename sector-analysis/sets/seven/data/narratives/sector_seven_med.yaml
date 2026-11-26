@@ -1,0 +1,32 @@
+headline: >-
+  The Media group is one company, MBC Group, kept apart from the attraction operators. Its first statutory period, FY2023 (20 April
+  to 31 December 2023, with operations consolidated from 30 June), is left out of totals and there is no FY2022, so the only full-year
+  comparison is FY2025 vs FY2024: revenue rose 28.5% to SAR 5,391m and attributable profit fell 4.4% to SAR 383m. Profit in both years
+  leaned on the ACSC stake, with gains of SAR 171m in FY2024 and SAR 179m in FY2025. In 9M 2026 revenue fell 22.8% to SAR 2,964m and
+  a SAR 575m fair-value loss on ACSC turned the result into an attributable loss of SAR 510m.
+main_changes:
+  - change: "Revenue follows government-funded production and broadcast services: it rose 28.5% in FY2025 and fell 22.8% in 9M 2026."
+    driver: "In FY2025 revenue from contracts with customers rose 20.0% and government-funded 'other operating revenues' 73.9% (SAR 659m to SAR 1,147m), mainly production-related initiatives (SAR 308m to SAR 775m). In 9M 2026 broadcast and technical services fell 53.1%, advertising 21.1% and production funding from SAR 386m to SAR 50.3m, while digital revenue rose 14.8%. The filings do not explain the fall in broadcast and technical services."
+    evidence: "Company narrative 4072 (revenue note and segments)"
+    refs: ["4072-FY2024-REV", "4072-FY2025-REV", "4072-9M2025-REV", "4072-9M2026-REV"]
+  - change: "Profit swings with the ACSC stake. Excluding identified one-offs, EBITDA rose 46.4% in FY2025 (SAR 237m to SAR 347m) and fell 48.4% in 9M 2026 (SAR 431m to SAR 222m); on that basis the EBITDA margin was 5.6% in FY2024, 6.4% in FY2025 and 7.5% in 9M 2026 (11.2%)."
+    driver: "Inside our operating income are a SAR 171m gain on selling 4.9% of ACSC and SAR 67.7m of compensation income in FY2024, a SAR 179m net fair-value gain in FY2025 (mainly the SAR 264m gain on reclassifying ACSC, less later fair-value losses), and a SAR 575m fair-value loss in 9M 2026 as the remaining stake was marked from SAR 960m to SAR 385m. Reported EBITDA was −SAR 353m in 9M 2026. The FY2025 gross margin fell from 28.7% to 23.5% because government-funded production carries its costs in direct costs."
+    evidence: "One-offs register O-4072-03 to O-4072-08; EBITDA_U totals; company narrative 4072"
+    refs: ["4072-FY2024-EBITDA_C", "4072-FY2025-EBITDA_U", "4072-9M2026-EBITDA_C", "4072-9M2026-EBITDA_U", "4072-9M2026-NI_ATTR"]
+  - change: "MBC has no borrowings and holds net cash, but FY2025 operating cash flow fell 69.1% to SAR 175m and free cash flow was −SAR 80.6m."
+    driver: "Deferred revenue fell by SAR 495m and receivables rose by SAR 550m in FY2025. Net cash was SAR 1,259m at end-2025 and SAR 1,099m at 30 Sep 2026; 9M 2026 operating cash flow was SAR 197m (−SAR 58.0m in 9M 2025)."
+    evidence: "Company narrative 4072 (cash flow); sector NET_DEBT"
+    refs: ["4072-FY2025-CFO", "4072-FY2025-FCF", "4072-FY2025-NET_DEBT", "4072-9M2026-NET_DEBT"]
+takeaways:
+  improved: "FY2025 revenue (+28.5%) and EBITDA excluding one-offs (+46.4%); digital revenue still grew 14.8% in 9M 2026, and the group has net cash."
+  weakened: "9M 2026: revenue −22.8%, EBITDA excluding one-offs −48.4%, and an attributable loss of SAR 510m (net margin −17.2%; annualised ROE −15.8%). FY2025 operating cash flow fell 69.1%."
+  why: "Revenue depends on government-funded production and broadcast contracts, and reported profit on the market value of the ACSC stake, which sits inside operating income."
+  concentration: "One company: MBC is 100% of the group, so there is no excluding-the-largest view and the group figures are the company's."
+  ytd_2026: "9M 2026 vs 9M 2025: revenue −22.8% (SAR 3,842m to SAR 2,964m) with the gross margin unchanged at 28.9%; EBITDA −SAR 353m (SAR 483m), or SAR 222m excluding the ACSC loss and other one-offs (SAR 431m); attributable loss of SAR 510m against a profit of SAR 403m."
+  uncertain: "How much government funding is committed is not disclosed; the remaining ACSC stake (SAR 385m at 30 Sep 2026) is still marked to market through profit; and the fall in broadcast and technical services revenue is not explained."
+data_notes:
+  - "One company. FY2023 is MBC's first statutory period (20 April to 31 December 2023; group entities consolidated from 30 June 2023, so about six months of operations) and is left out of totals; there are no FY2022 or FY2021 figures. Growth for FY2023/FY2022 and FY2024/FY2023 and the 2022–2025 CAGR are therefore not available. Both 9M periods are full nine months."
+  - "Group ROE starts in FY2025 (8.8%): FY2024 needs FY2023 opening equity, which is left out with the short year. The company page shows an FY2024 ROE of 10.1% on its own basis."
+  - "The group's 9M 2026 net debt to EBITDA (2.3x) divides net cash (SAR 1,099m) by negative annualised EBITDA, so it is not meaningful; the company page shows n.m."
+  - "Revenue = revenue from contracts with customers + 'other operating revenues' (Saudi government funding for media and entertainment initiatives, treated as government grants). Our operating income includes other income, the ACSC and Anghami fair-value results and call options, so it differs from MBC's printed operating profit (FY2025: SAR 198m printed, SAR 403m on our definition)."
+  - "Borrowings exclude interest-free shareholder and related-party loans and are nil from 31 Dec 2024, so net debt is lease liabilities less cash."
