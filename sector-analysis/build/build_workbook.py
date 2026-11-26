@@ -892,7 +892,7 @@ def _fix_chart(ch):
         pass
 
 
-NUMCOLS = {"amount_sar_m", "value_sar_m", "value used (SAR m)", "originally reported (SAR m)", "original_value"}
+NUMCOLS = {"amount_sar_m", "stake", "value_sar_m", "value used (SAR m)", "originally reported (SAR m)", "original_value"}
 
 
 def simple_table(wb, name, heading, sub, rows, cols, widths=None, index=None, blue_cols=()):
@@ -984,6 +984,8 @@ def main(root, out):
          "Material items the filing calls non-recurring, or clearly outside normal operations, that sit inside our operating income (in_metric OPINC; for REITs, items inside FFO, listed only). "
          "Impairments and fair-value gains on investment property are already outside EBITDA and are not listed. Net profit is never adjusted unless the filing gives both the tax/zakat effect and the minority share; "
          "each company page states that status."),
+        ("cross_holdings.csv", "Cross_holdings", "Cross-holdings: where one listed company owns another on the list",
+         "Group totals are simple sums of listed companies, not consolidated. These holdings mean some revenue or profit appears twice (or in another group). Amounts from the holder's notes; derived figures are marked in the note."),
         ("review_log.csv", "Review_Log", "Independent review log", "Issues raised by independent reviewers, fixes and re-checks."),
         ("template_changes.csv", "Template_Changes", "Template improvements identified in the pilots", "Applied before roll-out to other sectors."),
     ):
@@ -1026,7 +1028,7 @@ def main(root, out):
     order = ["Contents", "How_to_read", "Overview", "Definitions", "Coverage"]
     for sector in ORDER:   # each sector (or group) sheet followed by its companies, in configured order
         order += [f"{sector}_Sector"] + [comp_sheets[t] for t in ds[sector]["tickers"]]
-    order += ["Budget_Policy_Impact", "Budget_Policy_Facts", "Adjustments", "One_offs", "Restatements", "Data", "Sources", "Review_Log", "Template_Changes"]
+    order += ["Budget_Policy_Impact", "Budget_Policy_Facts", "Adjustments", "One_offs", "Restatements", "Cross_holdings", "Data", "Sources", "Review_Log", "Template_Changes"]
     order = [n for n in order if n in wb.sheetnames] + [n for n in wb.sheetnames if n not in order]
     wb._sheets = [wb[n] for n in order]
     # contents
