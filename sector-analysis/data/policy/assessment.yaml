@@ -4,7 +4,7 @@ headline: >-
   private channels. It assumes a strong rebound in oil output. For Energy, the 2027 outcome depends on whether flows normalise: a
   recovery that lifts output clearly above the 2026 average is net positive, disruption at 2026 intensity roughly repeats 2026, and only a worsening is clearly negative. For Banks, the main effects are steady pressure on funding
   costs, loan growth well below the 2022–25 pace, and a credit-quality risk if the escalation since 30 Sep continues. Support for
-  households and contractors and a small rate rise partly offset these.
+  households and contractors partly offsets these; the Sep 2026 rate rise affects banks' margins in different directions.
 intro: >-
   This section is forward-looking and kept separate from the historical results and like-for-like calculations. It separates the
   confirmed final budget and enacted measures from preliminary figures, stated intentions, policy signals and our own interpretation.
@@ -96,9 +96,9 @@ sections:
 sector_notes:
   Energy:
     opportunities: ["Volume recovery towards OPEC+ required levels if flows normalise", "Bypass export capacity (East-West pipeline expansion under consideration)", "Rig reactivations (Arabian Drilling notified to resume all suspended offshore rigs in Aug 2026) and the gas programme"]
-    risks: ["Persisting disruption or renewed attacks on facilities, pipelines and tankers", "Normalisation of crisis freight rates and refining margins", "Refinancing for leveraged drillers (Arabian Drilling sukuk due Feb 2027)", "Minimum top-up tax for large multinational groups (regulations pending)"]
+    risks: ["Persisting disruption or renewed attacks on facilities, pipelines and tankers", "Normalisation of crisis freight rates and refining margins", "Refinancing for leveraged drillers (Arabian Drilling sukuk due Feb 2027)", "Minimum top-up tax for in-scope groups with low Saudi effective rates (detailed rules not yet reviewed)"]
     indicators: ["Saudi crude output (one series, monthly)", "OPEC+ 29 Nov 2026 decision", "Brent and VLCC rates", "Hormuz and Red Sea traffic", "January 2027 fuel and feedstock price notices", "Aramco FY2026 results (Mar 2027)"]
   Banks:
     opportunities: ["Foreign demand for SAR sukuk after J.P. Morgan index inclusion (29 Jan 2027)", "Utilities and municipal lending", "Faster contractor payments if the procurement rule is enforced", "Margin support at asset-sensitive banks after the Sep 2026 hike"]
-    risks: ["Deposit competition and higher funding costs", "Credit costs if the escalation persists", "Loan growth well below the 2022–25 pace", "Top-up tax on low-taxed foreign units"]
+    risks: ["Deposit competition and higher funding costs", "Credit costs if the escalation persists", "Loan growth well below the 2022–25 pace", "Top-up tax on Saudi profits for banks that are multinational groups (about 5% of pre-tax profit at current zakat and tax rates)"]
     indicators: ["NDMC 2027 borrowing plan", "3M SAIBOR and time-deposit share", "Monthly bank credit, deposits and mortgages (SAMA)", "Quarterly impairments and overlays", "ZATCA top-up tax regulations"]

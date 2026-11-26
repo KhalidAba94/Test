@@ -3,8 +3,10 @@ summary: >-
   and the HTML page's usability on desktop and mobile. The reviews were sample-based, not a full audit: about 640 of the
   roughly 3,160 published values were traced back to the PDFs, and about 90 of the 146 policy items were checked against
   their sources. Every reviewer rechecked the fixes, which produced 26 further issues. Of the 139 logged issues, 130 are
-  fixed, 6 partly fixed, 1 accepted as documented, 1 kept after disagreement (with reasons) and 1 open. The fixes made after
-  the first recheck were confirmed in a final short pass, recorded in the review log.
+  fixed, 6 partly fixed, 1 accepted as documented, 1 kept after disagreement (with reasons) and 1 open. A final short pass
+  confirmed the second-round fixes (Banks 10 of 10, HTML 8 of 11, policy 25 of 30). The few corrections made after that pass
+  (the bank top-up-tax reasoning, the phone table layout and some leftover wording) were checked by the automated build
+  checks and a browser test but not re-reviewed by the reviewers.
 checked:
   - "Energy: 176 values traced from the published data to the PDF statements (148 matched first time; core metrics 105 of 108). All 28 differences were explained or corrected. The second round rechecked all 23 Energy issues."
   - "Banks: 442 values traced to the PDFs (432 matched first time), plus 25 more in the recheck (24 matched; the miss, an Alinma impairment basis, is now corrected). The 10 differences were five FY2023 equity figures not yet updated to the restated comparatives, and five Alinma impairment figures; all are now corrected. SNB's 9M 2026 credit-loss charge of SAR 2.6m was confirmed on the income statement (p.5)."
