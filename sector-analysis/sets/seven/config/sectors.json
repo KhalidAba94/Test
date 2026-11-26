@@ -538,7 +538,7 @@
     "Distributions / FFO"
    ]
   },
-  "classification_note": "REITs selected by the benchmark; their portfolios are not pure-play retail. The archive holds fund reports (half-yearly) and no XBRL, so every figure is read from the PDFs.",
+  "classification_note": "REITs selected by the benchmark; their portfolios are not pure-play retail. The archive holds the funds' audited annual and reviewed half-yearly statements and quarterly fact sheets, and no XBRL, so every figure is read from the PDFs. Nine-month figures come from the unaudited fact sheets and are partial (several funds print no nine-month rental income).",
   "fy2021_balance_only": true
  },
  "Retailers": {

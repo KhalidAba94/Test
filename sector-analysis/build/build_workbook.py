@@ -119,7 +119,7 @@ def build_data(wb, facts):
     cols = ["fact_id", "sector", "ticker", "company", "period", "metric_code", "value_sar_m", "provenance",
             "source_id (archive file)", "location (XBRL row / PDF page / formula)", "PDF checked", "PDF match status",
             "PDF page(s)", "line item label", "originally reported (SAR m)", "original source", "assurance", "note",
-            "how traced to the PDF (full trace)", "independent manual check"]
+            "how traced to the PDF (full trace)", "manual check against the PDF"]
     header_row(ws, 5, cols)
     r = 6
     for x in facts:
@@ -785,9 +785,10 @@ def main(root, out):
             build_company(wb, sector, t, cfg, ds[sector], narr, adj, facts_idx, comp_sheets[t], sname)
     # coverage, sources, policy, review, template changes, methodology, metrics
     cov = load_csv(os.path.join(root, "data", "coverage.csv"))
+    guide0 = load_yaml(os.path.join(root, "data", "narratives", "guide.yaml"))
     if cov:
         simple_table(wb, "Coverage", "Coverage: available filings and gaps by company and period",
-                     "File-level checks (company name, period, units, assurance) were done inside every file - see Sources. Individual values were matched to PDF text where it exists (Data: PDF match status); figures on scanned pages rest on the XBRL file, with a sample checked visually by the independent auditors.",
+                     guide0.get("coverage_note", "File-level checks (company name, period, units, assurance) were done inside every file - see Sources. Individual values were matched to PDF text where it exists (Data: PDF match status); figures on scanned pages rest on the XBRL file, with a sample checked visually by the independent auditors."),
                      cov, list(cov[0].keys()), [10, 8, 28] + [16] * (len(cov[0]) - 3), index=2)
     src = [x for s in SEC if os.path.exists(os.path.join(root, "data", s["slug"], "sources.csv")) for x in load_csv(os.path.join(root, "data", s["slug"], "sources.csv"))]
     if src:
@@ -799,6 +800,12 @@ def main(root, out):
          "Final budget vs preliminary statement vs ministerial statement vs regulatory measure. Dated official sources."),
         ("policy/impacts.csv", "Budget_Policy_Impact", "Budget and policy: impact assessment by sector and company (interpretation)",
          "Direction, timing, significance and confidence are our interpretation and do not feed historical or like-for-like figures."),
+        ("one_offs.csv", "One_offs", "One-offs register: items removed in EBITDA excluding one-offs",
+         "Material items the filing calls non-recurring, or clearly outside normal operations, that sit inside our operating income (in_metric OPINC; for REITs, items inside FFO, listed only). "
+         "Impairments and fair-value gains on investment property are already outside EBITDA and are not listed. Net profit is never adjusted unless the filing gives both the tax/zakat effect and the minority share; "
+         "each company page states that status."),
+        ("restatement_reasons.csv", "Restatements", "Restatements and re-presentations: why a later filing changed a figure",
+         "One row per restated figure used (provenance R). 'NOT A RESTATEMENT' marks a value the original XBRL file mis-tagged, where the PDF always showed the figure used."),
         ("review_log.csv", "Review_Log", "Independent review log", "Issues raised by independent reviewers, fixes and re-checks."),
         ("template_changes.csv", "Template_Changes", "Template improvements identified in the pilots", "Applied before roll-out to other sectors."),
     ):
@@ -827,7 +834,7 @@ def main(root, out):
     order = ["Contents", "How_to_read", "Definitions", "Coverage"]
     for sector in ORDER:   # each sector (or group) sheet followed by its companies, in configured order
         order += [f"{sector}_Sector"] + [comp_sheets[t] for t in ds[sector]["tickers"]]
-    order += ["Budget_Policy_Impact", "Budget_Policy_Facts", "Adjustments", "Data", "Sources", "Review_Log", "Template_Changes"]
+    order += ["Budget_Policy_Impact", "Budget_Policy_Facts", "Adjustments", "One_offs", "Restatements", "Data", "Sources", "Review_Log", "Template_Changes"]
     order = [n for n in order if n in wb.sheetnames] + [n for n in wb.sheetnames if n not in order]
     wb._sheets = [wb[n] for n in order]
     # contents
