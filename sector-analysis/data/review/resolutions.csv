@@ -1,22 +1,22 @@
 issue_id,status,fix,recheck
 E-D-001,fixed,EQ_ATTR = total equity where no non-controlling interests are reported (rule in derive.py); ADES FY2021 opening equity added from special-purpose FS p.6. Petro Rabigh now in ROE; ex-Aramco ROE FY2025 = -2.0%.,Re-ran pipeline: Petro Rabigh EQ_ATTR present all periods; sector ROE n=6 every period.
 E-D-002,fixed,Margins now use REV_M = revenue + other income related to sales (Aramco only); sector revenue growth stays on IFRS revenue; note on sector sheets and HTML.,9M EBITDA margin now 49.2% -> 47.4% (matches auditor's recomputation).
-E-D-003,fixed,"Bridges populated for all companies. Petro Rabigh new capacity is recorded as 'none identified' with the AFS pages that describe no new units (2023 AFS p.30; 2025 AFS p.28), not as an unsupported 0.",Recheck round 2: populated; Petro Rabigh basis cited.
+E-D-003,disagreed - kept,"Petro Rabigh new-capacity steps stay ""none identified"": the cited AFS pages (PP&E / operations notes) show no new units commissioned, only maintenance turnarounds. Confidence is Medium (not High), and the note records that the archive holds no operating report.",Reviewer view recorded; the like-for-like result equals organic growth for every Petro Rabigh comparison.
 E-D-004,partly fixed,EBITDA excl. identified one-offs at company and sector level. Underlying net profit is not computed because the tax effect of most one-offs is not disclosed; Aramco's own adjusted net income (non-IFRS) is quoted in its narrative.,Open by design: no tax effects disclosed.
-E-D-005,fixed,"Single operating-income definition; the superseded XBRL operating-profit tag (OPINC_REP) is no longer published, removing the stale values and the false Bahri 9M2025 R flag.",Recheck round 2: calculated values confirmed correct.
-E-D-006,fixed,As E-D-005.,
-E-D-007,fixed,As E-D-005; ADES receivables ECL no longer added back to EBITDA (FY2022-FY2024).,
-E-D-008,fixed,As E-D-005; SARCO investment-results subtotal annotated on the figure.,
+E-D-005,fixed,OPINC_REP removed from the published data (derive.py drops it); operating income is the single calculated definition.,Data sheet and facts.csv contain no OPINC_REP rows.
+E-D-006,fixed,Resolved with E-D-005 (OPINC_REP no longer published).,
+E-D-007,fixed,"OPINC_REP removed; ADES FY2022-FY2024 impairment add-back set to 0 (it is an expected-credit-loss charge on receivables, an operating cost).",facts.csv 2382 FY2022 IMPAIR_CF = 0.0 with override note.
+E-D-008,fixed,"SARCO SHARE_JV note states it is the XBRL investment-results subtotal and that, for this investment holding, investment results stay inside operating income (so the value does not enter OPINC).",
 E-D-009,fixed,Bahri capex mapping now includes 'Expenditure on other intangible assets'.,"FY2025 capex 4,250.5 = PDF."
 E-D-010,fixed,"Bahri FY2022 CFO set to the latest restated comparative 1,989.531 (FY2023 AFS p.10) via override, provenance R.",Value and R flag correct.
-E-D-011,fixed,Reasons added for the remaining restatements (Arabian Drilling FY2025 total assets; Bahri FY2023 CFO); tagging artefacts marked not a restatement.,
+E-D-011,fixed,"Reasons recorded: Arabian Drilling FY2025 TA = mobilisation cost gross-up of SAR 87.8m (9M 2026 interim note 16, p.23); Bahri FY2023 CFO = finance income received moved to investing (FY2024 AFS policy 4.13, p.22; SAR 82.3m). Spurious Bahri 9M2025 OPINC_REP R flag removed with OPINC_REP.",Both checked in the PDFs.
 E-D-012,fixed,Petro Rabigh FY2024 IFRS 15 netting (-686.9m) bridged as an accounting/presentation step; CAGR flagged as not like-for-like in data notes.,FY2024 organic -11.8% vs reported -13.3%.
 E-D-013,fixed,"ADES FY2022 basis flagged in coverage, source notes and company data notes; bargain gain registered as a one-off.",Coverage flag present.
-E-D-014,fixed,Coverage subtitle reworded to state what was verified inside files and what rests on XBRL with sample visual checks.,
+E-D-014,partly fixed,"Coverage sheet wording now says file-level checks were done inside every file, values were matched to PDF text where it exists, and figures on scanned pages rest on the XBRL file with sample visual checks. The 11 core facts without a PDF text match keep the XBRL row as locator.",
 E-D-015,open,Classification checked: Saudi Exchange's own directory lists Aldrees (4200) in Energy; the archive files it elsewhere. Flagged on the Energy sector page and in the review summary; inclusion recommended for the next iteration.,Not resolved within the pilot scope (archive folder).
-E-D-016,fixed,Scanned-statement detection refined (see E-D-023); SARCO coverage on profit basis.,
-E-D-017,fixed,Header now 'Companies (FY2025)'; ratio sample sizes per period shown in comments/tooltips.,
-E-D-018,fixed,Aramco wording now: our definition equals the printed operating income line.,
+E-D-016,fixed,"Scanned-statement test now requires that no early page carries a text-layer primary statement (heading in the page title, >= 10 amounts); ADES FY2022 special-purpose FS no longer labelled scanned (only auditor pages 2-4 are images). Same correction for BSF FY2024 and Albilad FY2023/FY2025 annuals; Riyad Bank 2022 interims stay flagged (statements are images).",
+E-D-017,fixed,"Each sector total and ratio shows the company count for its own period where companies are missing (HTML superscript with names; workbook cell comments), not only the FY2025 count.",
+E-D-018,fixed,"Resolved with E-D-005: Aramco operating income is the calculated definition, which equals its printed operating income; OPINC_REP removed.",
 E-D-019,fixed,Source note added for Petro Rabigh 9M2026 comparative-date typo.,Shown in Sources sheet read_note.
 E-D-020,fixed,Final build recalculates the workbook in LibreOffice after every rebuild (rebuild_outputs.sh); the delivered file carries cached values.,Checked with openpyxl data_only=True after the final build.
 E-D-021,fixed,"ADES 9M 2025 fair-value gain (SAR 85.7m) added to the one-offs register, so 9M EBITDA excl. one-offs removes gains in both periods (+21.3%).","EBITDA_U 9M2025 = 2,452."
@@ -70,3 +70,45 @@ P-R-036,fixed,Section 4 states no Zakat rule change found (search to 26 Nov 2026
 P-R-037,fixed,Subsidy and health wording corrected.,
 P-R-038,fixed,Tenders law quoted from the MoF release; F-099 restored; depends on Implementing Regulations.,
 P-R-039,fixed,Headline states both bases (-3% vs 2026 outturn; +6% vs FY2026 budget).,
+H-R-001,fixed,"Aramco narrative restated on the margin base: EBITDA margin 54.5% -> 52.0% (FY23), 48.7% (FY24), 49.8% (FY25); capex 6.2% -> 11.4% of that base. New build check (check_narratives.py) compares every EBITDA/operating/net margin, cost-to-income and ROE level quoted in company narratives with the calculated ratios.",check_narratives: 0 warnings; the old wording (61.6%/53.4%) is flagged by the check when re-inserted.
+H-R-002,fixed,"One sign convention: the table lists each effect as its contribution to reported growth (+ adds to growth) and the chart step is labelled ""Remove ..."" with the opposite sign; a sentence above the bridge explains this. Nice ticks that include 0; totals use the same +/− formatter as the table.","ADES 9M26: table perimeter effect +9.5 pp (FY25 vs FY24), chart ""Remove perimeter −9.5 pp""; organic −1.6% in both."
+H-R-003,fixed,"Standalone build now starts with <!doctype html>, <html lang=""en"">, charset and viewport meta; a separate body-only file is produced for hosts that add their own skeleton.",
+H-R-004,fixed,"Charts are drawn at the width of their card (re-drawn on resize), so text renders at 12 px; bar labels are dropped when bars are narrow; contributions are an HTML list (name | bar | value) that wraps instead of shrinking.","Checked at 390 px: axis and labels legible, no horizontal page overflow."
+H-R-005,fixed,"Bar charts switch to SAR bn above SAR 10,000m with the unit printed on the chart; left margin sized to the longest tick label; 1-2-2.5-5 nice ticks.",
+H-R-006,fixed,"Contribution bars rebuilt as an HTML grid: value in its own column (no overlap), full names wrap, two decimals below 1 pp, and the bars follow the scope toggle (ex-largest contributions use the ex-largest matched sample).",
+H-R-007,fixed,Line charts draw FY2022-FY2025 and 9M 2025-9M 2026 as separate segments with a gap and a shaded 9M band (legend entry added).,
+H-R-008,fixed,Nice ticks including 0 where the range crosses it; percentage tick decimals follow the step; cost of risk in basis points; right padding; negative waterfall labels placed below the bar.,
+H-R-009,fixed,Materiality rule added to METHODOLOGY s.1 and applied identically in calc.py (MIN_BASE = SAR 10m) and the workbook formulas: growth/CAGR from a base below SAR 10m and margins on revenue (or TOI) below SAR 10m are n.m.,SARCO 9M 2026 margins and capex growth now n.m. in HTML and workbook (E_2030_SARCO verified on the recalculated file).
+H-R-010,fixed,"The 8 facts (SCE, ZAKAT_TAX, SCI_GROSS, SHARE_JV) are embedded as supporting facts with file, row and page; build_web.py now fails if any chip in narratives, the assessment or impacts does not resolve.","485 references checked, 0 unresolved; browser test clicked every chip on 9 pages: none ""not found""."
+H-R-011,fixed,"Fact chips read ""<short name> · <plain metric> · <period>"" (e.g. ""Petro Rabigh · net profit · 9M 2026""); policy chips keep the id verbatim with a class prefix (Final / Regulation / Prelim / Quarterly / Statement / OPEC+ / Company / Market / Event / Analyst) and a colour per status group.",
+H-R-012,partly fixed,"Drawer now says explicitly when the archive manifest has no saudiexchange.sa link, names the XBRL row as the locator when no PDF page was found, and links the PDF where available. Overview and How-to-read claims softened and the Sources view states the actual coverage (PDF page 953 of 1,314 disclosed figures = 73%; link 652 = 50%). Pages for scanned statements were not located manually.",Remaining: manual page location for scanned statements (73 PDFs) is left for the roll-out.
+H-R-013,fixed,"Dictionary entries added for REV_M, EBITDA_U, EBITDA_M_U, OTHER_OI, NI, TE, SCE, SCI_GROSS, ZAKAT_TAX, SHARE_JV. Calculated figures show the formula and each input value (clickable). PDF overrides show the page under ""PDF check"". Balance-sheet items read ""as at 31 Dec / 30 Sep"". Drawer title reuses the row label.",
+H-R-014,fixed,"Scope is in the URL (#energy/ex, #banks/ex) and applies to the tiles, sector totals, trend bars and contributions; the toggle reads ""All companies"" / ""Excluding <largest>"" and a note states what it changes. Ratio line charts always show both series.",
+H-R-015,fixed,"Totals show a superscript company count wherever companies are missing, with a tooltip naming them; the Gross profit row says that Aramco does not report it.",
+H-R-016,fixed,"Legend under every period table explains the superscript, chips and n.m.; How to read has the same rule.",
+H-R-017,fixed,Every n.m. is wrapped in <abbr> with the reason; chips and superscripts are focusable and show their tooltip on focus; chip legend repeated on sector pages.,
+H-R-018,fixed,Concentration callout is labelled FY2025 and explains a share above 100% (other companies made a combined loss of SAR x m) and gives the share of profit-making companies; company table note explains shares above 100% or below 0.,
+H-R-019,fixed,"Banks sector table adds Total assets, Net financing, Customer deposits and Equity (period-end); Energy adds Total assets and Equity.",
+H-R-020,partly fixed,Overview and tile figures open the same company breakdown as the table; trend bars are clickable (sector breakdown or company source). What-it-means bullets have no reference chips yet (the narratives carry none).,
+H-R-021,fixed,"Chips now show the item class, so the status of every source in section 1 is visible without opening it. Section 1 paragraphs rest on final-budget or regulatory items; preliminary items appear only as stated comparisons (e.g. ""the pre-budget statement said -3.6%""). SANED and the marine insurance pool rest on a ministerial statement reporting a Royal Order (F-062), and the chip shows it as ""Statement"".",
+H-R-022,fixed,Text columns are left-aligned (class t) in every table; numeric columns stay right-aligned.,
+H-R-023,fixed,"On screens up to 640 px, impacts, fact base, developments, one-offs, coverage, review log and documents render as stacked cards with field labels.",
+H-R-024,fixed,"Fact-base filter uses plain labels grouped as Confirmed / Preliminary / Statements / Data and events (with ""all in this group""); in-page contents bar; impact ids shown; directions with both positive and negative elements coloured as mixed, neutral/not determinable in grey.",
+H-R-025,fixed,"Drawer is role=dialog aria-modal with aria-labelledby, inert and hidden from the tab order when closed, traps focus while open and returns focus to the button that opened it.",
+H-R-026,fixed,Re-render after a control change restores scroll position and focus to the control (select or toggle).,
+H-R-027,fixed,.src text uses --muted; 9M bars use the same colour as full-year bars on a lighter shaded band.,
+H-R-028,fixed,"Figure buttons, chips, reference buttons and nav links have at least 24 px hit areas; figure buttons carry aria-labels such as ""Revenue, Energy sector, FY2022: SAR ... m. Show companies"".",
+H-R-029,fixed,Mobile nav wraps to two rows (no hidden items); the in-page company selector was removed so there is one selector.,
+H-R-030,fixed,"Period tables have a ""Full years / 9M 2026"" switch on phones; scrollers show edge shadows.",
+H-R-031,fixed,"Review log (grouped by review, with status counts) and review summary are embedded from the same files as the workbook.",
+H-R-032,fixed,rebuild_outputs.sh recalculates the workbook in LibreOffice as a required step; verified with openpyxl data_only=True.,"5,052 formulas, 0 errors; 4,955 carry cached values and 97 deliberately return blank (missing input, e.g. SARCO revenue)."
+H-R-033,fixed,Cost of risk in basis points; ROA and NSCI/average assets with two decimals (HTML and workbook).,
+H-R-034,fixed,"One percentage formatter (true minus, + on changes, 0.0 instead of −0.0).",
+H-R-035,fixed,"Takeaways moved directly under the tiles; in-page contents bar on sector, company, budget and data views.",
+H-R-036,fixed,colspan computed from the header cell count.,
+H-R-037,fixed,"Both FY tiles show vs FY2024 and CAGR; 9M tiles show the SAR m value and the change, with the reason when it is n.m.",
+H-R-038,fixed,document.title set per view; skip link to the content.,
+H-R-039,fixed,"Build steps moved into a collapsed technical note; How to read adds the margin-base rule, the superscript rule, bp for cost of risk and the SAR 10m n.m. rule.",
+H-R-040,fixed,Margin-base and other-income rows hidden when equal to revenue (shown for Aramco only; hidden in the ex-Aramco sector view).,
+H-R-041,fixed,Drawer heading padded clear of Close; opening the drawer adds a history entry so Back closes it first; links inside the drawer replace that entry.,"Browser test: open figure, Back -> drawer closed, still on #co-2222, focus returned to the figure."
+H-R-042,fixed,"Orange is reserved for ""excluding largest"" lines; 9M is shown by shading only; tooltips state SAR m.",

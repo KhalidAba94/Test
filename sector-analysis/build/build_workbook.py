@@ -37,6 +37,7 @@ PAIRS = [("FY2023", "FY2022"), ("FY2024", "FY2023"), ("FY2025", "FY2024"), ("9M2
 NUM = '#,##0;(#,##0);"-"'
 NUM1 = '#,##0.0;(#,##0.0);"-"'
 PCT = '0.0%;(0.0%);"-"'
+PCT2 = '0.00%;(0.00%);"-"'   # cost of risk, ROA and margin on assets need two decimals
 PP = '+0.0" pp";-0.0" pp";"0.0 pp"'
 
 NAMES = {}
@@ -104,7 +105,7 @@ def lookup(key):
 
 
 def growth_formula(cur, pri):
-    return f'=IF(AND(ISNUMBER({cur}),ISNUMBER({pri})),IF(AND({pri}>0,{cur}>=0),{cur}/{pri}-1,"n.m."),"")'
+    return f'=IF(AND(ISNUMBER({cur}),ISNUMBER({pri})),IF(AND({pri}>=10,{cur}>=0),{cur}/{pri}-1,"n.m."),"")'
 
 
 # ---------------------------------------------------------------- sheets
@@ -224,7 +225,7 @@ def build_company(wb, sector, t, cfg, ds, narr, adj_rows, facts_idx, sheetname, 
                     if fx.get("note"):
                         txt += " " + fx["note"]
                     cell.comment = Comment(txt[:900], "analysis")
-            ws[f"G{r}"] = f'=IF(AND(ISNUMBER(F{r}),ISNUMBER(C{r})),IF(AND(C{r}>0,F{r}>0),(F{r}/C{r})^(1/3)-1,"n.m."),"")'
+            ws[f"G{r}"] = f'=IF(AND(ISNUMBER(F{r}),ISNUMBER(C{r})),IF(AND(C{r}>=10,F{r}>0),(F{r}/C{r})^(1/3)-1,"n.m."),"")'
             ws[f"G{r}"].number_format = PCT
             ws[f"K{r}"] = growth_formula(f"J{r}", f"I{r}")
             ws[f"K{r}"].number_format = PCT
@@ -273,8 +274,11 @@ def build_company(wb, sector, t, cfg, ds, narr, adj_rows, facts_idx, sheetname, 
             else:
                 d = f"{col}{rowmap[den]}"
                 cond = f"AND(ISNUMBER({col}{rowmap[den]}),ISNUMBER({col}{rowmap[num.split('-')[0]]}))"
-            ws[f"{col}{r}"] = f'=IF({cond},IF({d}<>0,{n}{ann}/{d},""),"")'
-            ws[f"{col}{r}"].number_format = PCT
+            if den in ("REV", "REV_M", "TOI") and not avg:
+                ws[f"{col}{r}"] = f'=IF({cond},IF({d}<10,"n.m.",{n}{ann}/{d}),"")'
+            else:
+                ws[f"{col}{r}"] = f'=IF({cond},IF({d}<>0,{n}{ann}/{d},""),"")'
+            ws[f"{col}{r}"].number_format = PCT2 if den in ("LOANS", "TA") else PCT
             ws[f"{col}{r}"].font = f(size=9)
             if p.startswith("9M"):
                 ws[f"{col}{r}"].fill = YTD_FILL
@@ -469,6 +473,9 @@ def build_sector(wb, sector, cfg, ds, narr, comp_sheets):
                     formula = f"=SUM({pc[p]}{a}:{pc[p]}{b})"
                 ws[f"{col}{r}"] = formula
                 ws[f"{col}{r}"].number_format = NUM
+                tinfo = ds["sector"]["ex_largest" if excl else "all"][m]["totals"][p]
+                if tinfo["missing"]:
+                    ws[f"{col}{r}"].comment = Comment(f'{tinfo["n"]} companies in this total; not reported by: ' + ", ".join(ds["companies"][x]["name"] for x in tinfo["missing"] if x in ds["companies"]), "analysis")
                 if p.startswith("9M"):
                     ws[f"{col}{r}"].fill = YTD_FILL
             ws[f"K{r}"] = f'=SUMPRODUCT(--ISNUMBER({rng(m, "FY2025")}))' + (f"-ISNUMBER({pc['FY2025']}{row_of(m, excl)})" if excl else "")
@@ -485,14 +492,14 @@ def build_sector(wb, sector, cfg, ds, narr, comp_sheets):
                     mask = f"--ISNUMBER({cr}),--ISNUMBER({prr}),--(ROW({cr})<>{i})"
                 else:
                     mask = f"--ISNUMBER({cr}),--ISNUMBER({prr})"
-                ws[f"{col}{r}"] = f'=IFERROR(IF(AND(SUMPRODUCT({mask},{prr})>0,SUMPRODUCT({mask},{cr})>=0),SUMPRODUCT({mask},{cr})/SUMPRODUCT({mask},{prr})-1,"n.m."),"n.m.")'
+                ws[f"{col}{r}"] = f'=IFERROR(IF(AND(SUMPRODUCT({mask},{prr})>=10,SUMPRODUCT({mask},{cr})>=0),SUMPRODUCT({mask},{cr})/SUMPRODUCT({mask},{prr})-1,"n.m."),"n.m.")'
                 ws[f"{col}{r}"].number_format = PCT
                 if cur.startswith("9M"):
                     ws[f"{col}{r}"].fill = YTD_FILL
             # CAGR on matched FY2022/FY2025 sample
             c25, c22 = rng(m, "FY2025"), rng(m, "FY2022")
             mask = f"--ISNUMBER({c25}),--ISNUMBER({c22})" + (f",--(ROW({c25})<>{row_of(m, excl)})" if excl else "")
-            ws[f"F{vr}"] = f'=IFERROR(IF(AND(SUMPRODUCT({mask},{c22})>0,SUMPRODUCT({mask},{c25})>0),(SUMPRODUCT({mask},{c25})/SUMPRODUCT({mask},{c22}))^(1/3)-1,"n.m."),"n.m.")'
+            ws[f"F{vr}"] = f'=IFERROR(IF(AND(SUMPRODUCT({mask},{c22})>=10,SUMPRODUCT({mask},{c25})>0),(SUMPRODUCT({mask},{c25})/SUMPRODUCT({mask},{c22}))^(1/3)-1,"n.m."),"n.m.")'
             ws[f"F{vr}"].number_format = PCT
             ws[f"J{vr}"] = f'=IF(ISNUMBER(I{r}),I{r},"n.m.")'
             ws[f"J{vr}"].number_format = PCT
@@ -522,7 +529,7 @@ def build_sector(wb, sector, cfg, ds, narr, comp_sheets):
                 else:
                     den, ann = f"SUMPRODUCT({mk},{rng(dm, p)})", ""
                 ws[f"{col}{r}"] = f'=IFERROR(({num}){ann}/({den}),"")'
-                ws[f"{col}{r}"].number_format = PCT
+                ws[f"{col}{r}"].number_format = PCT2 if rk in ("COR", "ROA", "NSCI_YLD") else PCT
                 rinfo = ds["sector"]["ratios_all" if not excl else "ratios_ex_largest"][rk][p]
                 if rinfo["excluded"]:
                     ws[f"{col}{r}"].comment = Comment(f'{rinfo["n"]} companies; excluded for missing inputs: ' + ", ".join(ds["companies"][x]["name"] for x in rinfo["excluded"] if x in ds["companies"]), "analysis")

@@ -23,6 +23,9 @@ MONTHS = {p: (9 if p.startswith("9M") else 12) for p in ALLP}
 PAIRS = [("FY2023", "FY2022"), ("FY2024", "FY2023"), ("FY2025", "FY2024"), ("9M2026", "9M2025")]
 
 
+REVENUE_BASES = {"REV", "REV_M", "TOI"}
+
+
 def num(x):
     return None if x in ("", None) else float(x)
 
@@ -58,6 +61,8 @@ def main(sectors_json, out_json, *facts_csvs):
                 d = v(t, p, d_m)
             if n is None or d is None or d == 0:
                 return None
+            if d_m in REVENUE_BASES and d < calc.MIN_BASE:
+                return calc.NM   # margin on an immaterial revenue base is not meaningful
             return n / d
 
         comp = {}
@@ -132,7 +137,10 @@ def main(sectors_json, out_json, *facts_csvs):
                         if n is None or d is None:
                             continue
                         nsum += n; dsum += d; used.append(t)
-                    res[rk][p] = {"v": (nsum / dsum) if used and dsum else None, "n": len(used),
+                    val = (nsum / dsum) if used and dsum else None
+                    if val is not None and spec[1] in REVENUE_BASES and dsum < calc.MIN_BASE:
+                        val = calc.NM
+                    res[rk][p] = {"v": val, "n": len(used),
                                   "excluded": [t for t in tk if t not in used]}
             return res
 

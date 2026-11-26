@@ -3,27 +3,29 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@500;600;700&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap">
 <style>
-/* Layout: sticky top bar with sector/company navigation; one reading column with wide tables in their own scrollers; a figure drawer slides in from the right (bottom sheet on phones). */
+/* Layout: sticky top bar with sector/company navigation; one reading column with wide tables in their own scrollers;
+   a figure drawer (dialog) slides in from the right, or up from the bottom on phones. Charts are drawn at the width of
+   their card so text stays at its nominal size. */
 :root{
-  --bg:#f4f6f8; --surface:#ffffff; --ink:#15212c; --muted:#5a6977; --faint:#8696a5; --line:#dbe2e9;
-  --accent:#0e6b70; --accent-ink:#ffffff; --accent-weak:#e1f0f0; --ytd:#fff3d1; --ytd-line:#e7cf8a;
-  --pos:#1b64be; --neg:#c23b3c; --series-1:#257de0; --series-2:#f47230; --series-3:#00b894; --grid:#e8edf2;
+  --bg:#f4f6f8; --surface:#ffffff; --ink:#15212c; --muted:#56636f; --faint:#8696a5; --line:#dbe2e9;
+  --accent:#0e6b70; --accent-ink:#ffffff; --accent-weak:#e1f0f0; --ytd:#fff6dc; --ytd-line:#e2c46f;
+  --pos:#1b64be; --neg:#c23b3c; --series-1:#257de0; --series-2:#e0601c; --grid:#e8edf2; --shadow:rgba(20,33,44,.16);
   --chip-r:#fbe7c4; --chip-c:#dceafb; --chip-e:#ece6fb; --chip-o:#fbdada; --chip-d:#e9eef2;
-  --good:#0a7d1c; --warn:#9a6a00; --bad:#b42f30;
+  --good:#0a7d1c; --warn:#8a5f00; --bad:#b42f30;
   --f-head:"IBM Plex Sans Condensed","Arial Narrow",Arial,sans-serif;
   --f-body:"IBM Plex Sans",Arial,Helvetica,sans-serif;
   --r:6px;
 }
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
-  --bg:#0e141a; --surface:#151d25; --ink:#e4ebf1; --muted:#9aabba; --faint:#71839a; --line:#27333f;
-  --accent:#55b6bb; --accent-ink:#0e141a; --accent-weak:#16343a; --ytd:#33301f; --ytd-line:#6c5d2a;
-  --pos:#519ced; --neg:#eb6263; --series-1:#338ced; --series-2:#e76624; --series-3:#00a888; --grid:#222d38;
+  --bg:#0e141a; --surface:#151d25; --ink:#e4ebf1; --muted:#a3b2c0; --faint:#71839a; --line:#27333f;
+  --accent:#55b6bb; --accent-ink:#0e141a; --accent-weak:#16343a; --ytd:#2e2b1c; --ytd-line:#6c5d2a;
+  --pos:#519ced; --neg:#eb6263; --series-1:#4a98ef; --series-2:#f0813f; --grid:#222d38; --shadow:rgba(0,0,0,.5);
   --chip-r:#4a3a17; --chip-c:#1d3552; --chip-e:#33295a; --chip-o:#4f2223; --chip-d:#25303b;
   --good:#3cc458; --warn:#e0b23c; --bad:#f07374; color-scheme:dark}}
 :root[data-theme="dark"]{
-  --bg:#0e141a; --surface:#151d25; --ink:#e4ebf1; --muted:#9aabba; --faint:#71839a; --line:#27333f;
-  --accent:#55b6bb; --accent-ink:#0e141a; --accent-weak:#16343a; --ytd:#33301f; --ytd-line:#6c5d2a;
-  --pos:#519ced; --neg:#eb6263; --series-1:#338ced; --series-2:#e76624; --series-3:#00a888; --grid:#222d38;
+  --bg:#0e141a; --surface:#151d25; --ink:#e4ebf1; --muted:#a3b2c0; --faint:#71839a; --line:#27333f;
+  --accent:#55b6bb; --accent-ink:#0e141a; --accent-weak:#16343a; --ytd:#2e2b1c; --ytd-line:#6c5d2a;
+  --pos:#519ced; --neg:#eb6263; --series-1:#4a98ef; --series-2:#f0813f; --grid:#222d38; --shadow:rgba(0,0,0,.5);
   --chip-r:#4a3a17; --chip-c:#1d3552; --chip-e:#33295a; --chip-o:#4f2223; --chip-d:#25303b;
   --good:#3cc458; --warn:#e0b23c; --bad:#f07374; color-scheme:dark}
 *{box-sizing:border-box}
@@ -31,25 +33,31 @@ body{background:var(--bg);color:var(--ink);font:15px/1.55 var(--f-body);margin:0
 body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:30;background:var(--surface)}
 a{color:var(--accent)}
 :focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.skip{position:absolute;left:8px;top:-60px;z-index:60;background:var(--accent);color:var(--accent-ink);padding:8px 12px;border-radius:var(--r);font-weight:600}
+.skip:focus{top:calc(env(safe-area-inset-top,0px) + 8px)}
 .top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--surface);border-bottom:1px solid var(--line)}
 .top-in{max-width:1180px;margin:0 auto;padding-block:8px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:flex;gap:12px;align-items:center;flex-wrap:wrap}
 .brand{font:600 17px/1.2 var(--f-head);letter-spacing:.01em;color:var(--ink);text-decoration:none;margin-right:6px}
 .brand small{display:block;font:500 11px var(--f-body);color:var(--muted);letter-spacing:.04em;text-transform:uppercase}
 nav.main{display:flex;gap:4px;flex-wrap:wrap}
-nav.main a{font:600 14px var(--f-head);text-decoration:none;color:var(--muted);padding:6px 10px;border-radius:var(--r)}
+nav.main a{font:600 14px var(--f-head);text-decoration:none;color:var(--muted);padding:7px 10px;border-radius:var(--r);min-height:32px;display:inline-flex;align-items:center}
 nav.main a[aria-current="page"]{background:var(--accent);color:var(--accent-ink)}
 nav.main a:hover{color:var(--ink)}
+nav.main a[aria-current="page"]:hover{color:var(--accent-ink)}
 .jump{margin-left:auto;display:flex;gap:6px;align-items:center}
-.jump select{font:14px var(--f-body);padding:5px 8px;border:1px solid var(--line);border-radius:var(--r);background:var(--surface);color:var(--ink);max-width:220px}
+.jump select{font:14px var(--f-body);padding:6px 8px;border:1px solid var(--line);border-radius:var(--r);background:var(--surface);color:var(--ink);max-width:240px;min-height:34px}
 main:focus{outline:none}
 main{max-width:1180px;margin:0 auto;padding-block:18px 60px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
 .crumbs{font-size:13px;color:var(--muted);margin-bottom:6px;display:flex;gap:6px;flex-wrap:wrap}
 .crumbs a{text-decoration:none}
 h1{font:600 30px/1.15 var(--f-head);margin:0 0 6px;text-wrap:balance}
-h2{font:600 21px/1.2 var(--f-head);margin:34px 0 10px;text-wrap:balance}
+h2{font:600 21px/1.2 var(--f-head);margin:34px 0 10px;text-wrap:balance;scroll-margin-top:90px}
+h2:focus{outline:none}
 h3{font:600 16px/1.3 var(--f-head);margin:20px 0 8px;letter-spacing:.01em}
 .lede{color:var(--muted);max-width:75ch;margin:0 0 14px}
 .note{font-size:13px;color:var(--muted)}
+.toc{display:flex;flex-wrap:wrap;gap:4px 6px;margin:10px 0 4px;font-size:13px}
+.toc a{text-decoration:none;border:1px solid var(--line);background:var(--surface);border-radius:14px;padding:4px 10px;min-height:28px;display:inline-flex;align-items:center}
 .tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin:14px 0}
 .tile{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:12px 14px;min-width:0}
 .tile .k{font:600 12px var(--f-head);letter-spacing:.05em;text-transform:uppercase;color:var(--muted)}
@@ -57,74 +65,115 @@ h3{font:600 16px/1.3 var(--f-head);margin:20px 0 8px;letter-spacing:.01em}
 .tile .s{font-size:13px;color:var(--muted)}
 .tile.ytd{background:var(--ytd);border-color:var(--ytd-line)}
 .card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:14px 16px;min-width:0}
+.card h3{margin-top:0}
 .grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:14px}
-.scroller{overflow-x:auto;-webkit-overflow-scrolling:touch;border:1px solid var(--line);border-radius:var(--r);background:var(--surface)}
+.scroller{overflow-x:auto;-webkit-overflow-scrolling:touch;border:1px solid var(--line);border-radius:var(--r);
+  background:linear-gradient(to right,var(--surface) 30%,transparent) left/40px 100% no-repeat local,
+    linear-gradient(to left,var(--surface) 30%,transparent) right/40px 100% no-repeat local,
+    radial-gradient(farthest-side at 0 50%,var(--shadow),transparent) left/12px 100% no-repeat scroll,
+    radial-gradient(farthest-side at 100% 50%,var(--shadow),transparent) right/12px 100% no-repeat scroll,var(--surface)}
 table{border-collapse:collapse;width:100%;font-size:13.5px;font-variant-numeric:tabular-nums}
 th,td{padding:7px 9px;border-bottom:1px solid var(--line);text-align:right;white-space:nowrap}
 th{font:600 12px var(--f-head);letter-spacing:.04em;text-transform:uppercase;color:var(--muted);background:var(--surface);position:sticky;top:0}
 td:first-child,th:first-child{text-align:left;position:sticky;left:0;background:var(--surface);white-space:normal;min-width:180px;max-width:280px}
+td.t,th.t{text-align:left;white-space:normal}
+td.w{min-width:300px}
 tr.sub td{color:var(--muted);font-style:italic}
 tr.sub td:first-child{padding-left:20px}
-tr.grp td{background:var(--bg);font:600 12px var(--f-head);letter-spacing:.05em;text-transform:uppercase;color:var(--muted)}
+tr.grp td{background:var(--bg);font:600 12px var(--f-head);letter-spacing:.05em;text-transform:uppercase;color:var(--muted);text-align:left}
 td.ytd,th.ytd{background:var(--ytd)}
 td.gap,th.gap{width:10px;padding:0;border-bottom:none;background:transparent}
-.fig{background:none;border:0;padding:0;font:inherit;color:inherit;cursor:pointer;border-bottom:1px dotted var(--faint);font-variant-numeric:tabular-nums}
+sup{font-size:10px;margin-left:1px;color:var(--muted)}
+.fig{background:none;border:0;padding:3px 0;margin:-3px 0;font:inherit;color:inherit;cursor:pointer;border-bottom:1px dotted var(--faint);font-variant-numeric:tabular-nums;min-height:24px}
 .fig:hover{color:var(--accent);border-bottom-color:var(--accent)}
-.chip{display:inline-block;font:600 10.5px/1 var(--f-head);letter-spacing:.04em;padding:3px 5px;border-radius:4px;vertical-align:1px;margin-left:4px;color:var(--ink)}
+.tile .fig{border-bottom-width:2px}
+.chip{display:inline-block;font:600 10.5px/1 var(--f-head);letter-spacing:.04em;padding:4px 5px;border-radius:4px;vertical-align:1px;margin-left:4px;color:var(--ink);cursor:help}
 .chip.D{background:var(--chip-d)}.chip.R{background:var(--chip-r)}.chip.C{background:var(--chip-c)}.chip.E{background:var(--chip-e)}.chip.O{background:var(--chip-o)}
 .conf{display:inline-block;font:600 11px var(--f-head);padding:2px 7px;border-radius:10px;border:1px solid var(--line)}
 .conf.High{color:var(--good)}.conf.Medium{color:var(--warn)}.conf.Low,.conf.Not{color:var(--bad)}
 .neg{color:var(--neg)}
+abbr[title]{text-decoration:underline dotted var(--faint);cursor:help}
 .toggle{display:inline-flex;border:1px solid var(--line);border-radius:var(--r);overflow:hidden;background:var(--surface)}
-.toggle button{font:600 13px var(--f-head);border:0;background:transparent;color:var(--muted);padding:6px 12px;cursor:pointer}
+.toggle button{font:600 13px var(--f-head);border:0;background:transparent;color:var(--muted);padding:7px 12px;cursor:pointer;min-height:34px}
 .toggle button[aria-pressed="true"]{background:var(--accent);color:var(--accent-ink)}
 .controls{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin:8px 0 12px}
 .controls label{font-size:13px;color:var(--muted)}
-.controls select{font:14px var(--f-body);padding:5px 8px;border:1px solid var(--line);border-radius:var(--r);background:var(--surface);color:var(--ink)}
+.controls select{font:14px var(--f-body);padding:6px 8px;border:1px solid var(--line);border-radius:var(--r);background:var(--surface);color:var(--ink);min-height:34px}
+.narrow-only{display:none}
 ul.clean{padding-left:18px;margin:6px 0}
 ul.clean li{margin:5px 0}
-.refs{display:inline-flex;gap:4px;flex-wrap:wrap}
-.refs button{font:600 11px var(--f-head);border:1px solid var(--line);background:var(--bg);color:var(--accent);border-radius:10px;padding:1px 7px;cursor:pointer}
-.src{font-size:12px;color:var(--faint)}
-.chart{width:100%;height:auto;display:block}
+.refs{display:inline-flex;gap:4px;flex-wrap:wrap;vertical-align:1px}
+.refs button{font:600 11.5px var(--f-head);border:1px solid var(--line);background:var(--bg);color:var(--accent);border-radius:12px;padding:3px 8px;cursor:pointer;min-height:24px}
+.refs button.k-conf{background:var(--accent-weak);border-color:var(--accent)}
+.refs button.k-prel{background:var(--ytd);border-color:var(--ytd-line);color:var(--warn)}
+.refs button.k-stmt{background:var(--chip-e);color:var(--ink)}
+.refs button.k-data{background:var(--chip-d);color:var(--ink)}
+.src{font-size:12px;color:var(--muted)}
+.chart{width:100%;height:auto;display:block;overflow:visible}
 .chart text{fill:var(--muted);font:12px var(--f-body)}
 .chart .lbl{fill:var(--ink);font-weight:600}
+.chart .unit{fill:var(--muted);font:600 11px var(--f-head);letter-spacing:.04em}
+.chart [data-fig]{cursor:pointer}
 .legend{display:flex;gap:14px;flex-wrap:wrap;font-size:13px;color:var(--muted);margin:4px 0}
-.legend i{display:inline-block;width:11px;height:11px;border-radius:3px;margin-right:5px;vertical-align:-1px}
-.tip{position:fixed;z-index:50;pointer-events:none;background:var(--ink);color:var(--bg);font-size:12.5px;padding:6px 8px;border-radius:5px;max-width:260px;display:none}
-.drawer{position:fixed;z-index:40;top:0;right:0;bottom:0;width:min(440px,100%);background:var(--surface);border-left:1px solid var(--line);box-shadow:-8px 0 24px rgba(0,0,0,.12);padding:calc(env(safe-area-inset-top,0px) + 16px) max(18px,env(safe-area-inset-right,0px)) 24px 18px;overflow:auto;transform:translateX(105%);transition:transform .18s ease}
-.drawer.open{transform:none}
-.drawer h3{margin-top:0}
+.legend i{display:inline-block;width:14px;height:3px;border-radius:2px;margin-right:6px;vertical-align:3px}
+.legend i.dash{background:repeating-linear-gradient(90deg,var(--series-2) 0 5px,transparent 5px 8px)!important}
+.legend i.band{height:11px;width:14px;vertical-align:-1px;background:var(--ytd);border:1px solid var(--ytd-line)}
+.cbars{display:flex;flex-direction:column;gap:2px;margin:6px 0}
+.cb{display:grid;grid-template-columns:minmax(0,12em) minmax(70px,1fr) 5.6em;gap:10px;align-items:center;padding:3px 0;font-size:13px;border-bottom:1px solid var(--grid)}
+.cb-n{text-decoration:none;color:var(--ink);overflow-wrap:anywhere}
+.cb-n:hover{color:var(--accent)}
+.cb-t{position:relative;height:14px}
+.cb-b{position:absolute;top:0;bottom:0;border-radius:3px}
+.cb-b.p{background:var(--pos)}.cb-b.n{background:var(--neg)}
+.cb-z{position:absolute;top:-4px;bottom:-4px;width:1px;background:var(--faint)}
+.cb-v{text-align:right;font-variant-numeric:tabular-nums;font-weight:600}
+.tip{position:fixed;z-index:50;pointer-events:none;background:var(--ink);color:var(--bg);font-size:12.5px;padding:6px 8px;border-radius:5px;max-width:280px;display:none}
+.drawer{position:fixed;z-index:40;top:0;right:0;bottom:0;width:min(460px,100%);background:var(--surface);border-left:1px solid var(--line);box-shadow:-8px 0 24px var(--shadow);padding:calc(env(safe-area-inset-top,0px) + 16px) max(18px,env(safe-area-inset-right,0px)) 24px 18px;overflow:auto;transform:translateX(105%);visibility:hidden;transition:transform .18s ease,visibility 0s linear .18s}
+.drawer.open{transform:none;visibility:visible;transition:transform .18s ease}
+.drawer h3{margin-top:0;padding-right:78px}
 .drawer dl{display:grid;grid-template-columns:120px 1fr;gap:6px 10px;font-size:13.5px;margin:10px 0}
 .drawer dt{color:var(--muted)}
 .drawer dd{margin:0;overflow-wrap:anywhere}
-.drawer .close{position:absolute;top:calc(env(safe-area-inset-top,0px) + 10px);right:max(12px,env(safe-area-inset-right,0px));font:600 13px var(--f-head);border:1px solid var(--line);background:var(--bg);color:var(--ink);border-radius:var(--r);padding:5px 10px;cursor:pointer}
-@media (max-width:640px){
-  .top-in{gap:6px;padding-block:6px}
-  .brand small{display:none}
-  nav.main{flex-wrap:nowrap;overflow-x:auto;width:100%;scrollbar-width:none}
-  nav.main a{white-space:nowrap;padding:5px 8px}
-  .jump label{display:none}
-  .tiles{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
-  .tile .v{font-size:21px}
-  .drawer{top:auto;width:100%;max-height:78vh;border-left:0;border-top:1px solid var(--line);transform:translateY(105%);padding-bottom:calc(env(safe-area-inset-bottom,0px) + 20px);padding-left:max(16px,env(safe-area-inset-left,0px))}
-  h1{font-size:25px}
-  .jump{margin-left:0;width:100%}
-  .jump select{max-width:none;flex:1}
-  td:first-child,th:first-child{min-width:140px}
-}
+.drawer .close{position:absolute;top:calc(env(safe-area-inset-top,0px) + 10px);right:max(12px,env(safe-area-inset-right,0px));font:600 13px var(--f-head);border:1px solid var(--line);background:var(--bg);color:var(--ink);border-radius:var(--r);padding:7px 12px;cursor:pointer;min-height:34px}
 .pill{display:inline-block;font:600 11px var(--f-head);letter-spacing:.04em;text-transform:uppercase;padding:2px 7px;border-radius:10px;background:var(--accent-weak);color:var(--accent)}
-.dir-up{color:var(--good);font-weight:600}.dir-down{color:var(--bad);font-weight:600}.dir-mixed{color:var(--warn);font-weight:600}
+.dir-up{color:var(--good);font-weight:600}.dir-down{color:var(--bad);font-weight:600}.dir-mixed{color:var(--warn);font-weight:600}.dir-neutral{color:var(--muted);font-weight:600}
 .callout{border-left:3px solid var(--accent);background:var(--accent-weak);padding:10px 14px;border-radius:0 var(--r) var(--r) 0;margin:12px 0}
 .callout.ytd{border-left-color:var(--ytd-line);background:var(--ytd)}
 .kv{display:grid;grid-template-columns:max-content 1fr;gap:4px 12px;font-size:14px}
 .kv dt{color:var(--muted)}
 .kv dd{margin:0}
 details{margin:8px 0}
-summary{cursor:pointer;font:600 14px var(--f-head);color:var(--accent)}
-@media (prefers-reduced-motion:reduce){.drawer{transition:none}}
+summary{cursor:pointer;font:600 14px var(--f-head);color:var(--accent);min-height:28px;display:list-item}
+@media (max-width:640px){
+  .top-in{gap:6px;padding-block:6px}
+  .brand small{display:none}
+  nav.main{width:100%;gap:2px 4px}
+  nav.main a{padding:5px 8px;font-size:13.5px}
+  .jump label{display:none}
+  .tiles{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+  .tile{padding:10px 11px}
+  .tile .v{font-size:21px}
+  .drawer{top:auto;width:100%;max-height:80vh;border-left:0;border-top:1px solid var(--line);transform:translateY(105%);padding-bottom:calc(env(safe-area-inset-bottom,0px) + 20px);padding-left:max(16px,env(safe-area-inset-left,0px));border-radius:12px 12px 0 0}
+  .drawer dl{grid-template-columns:96px 1fr}
+  h1{font-size:25px}
+  .jump{margin-left:0;width:100%}
+  .jump select{max-width:none;flex:1}
+  td:first-child,th:first-child{min-width:132px}
+  .narrow-only{display:inline-flex}
+  body[data-pv="fy"] .ptable .ytd, body[data-pv="fy"] .ptable .gap{display:none}
+  body[data-pv="ytd"] .ptable .fy{display:none}
+  .cb{grid-template-columns:minmax(0,8.5em) minmax(50px,1fr) 5.2em;gap:8px}
+  table.stack thead{display:none}
+  table.stack, table.stack tbody, table.stack tr, table.stack td{display:block;width:100%}
+  table.stack tr{border-bottom:1px solid var(--line);padding:8px 0}
+  table.stack td{border:0;padding:3px 12px;text-align:left;white-space:normal;position:static;min-width:0!important;max-width:none}
+  table.stack td[data-l]::before{content:attr(data-l);display:block;font:600 11px var(--f-head);letter-spacing:.05em;text-transform:uppercase;color:var(--muted)}
+  table.stack td:first-child{font-weight:600}
+}
+@media (prefers-reduced-motion:reduce){.drawer,.drawer.open{transition:none}}
 </style>
 
+<a class="skip" href="#main" data-jump="main">Skip to content</a>
 <div class="top"><div class="top-in">
   <a class="brand" href="#overview">Saudi Sector Financials<small>Pilot: Energy &amp; Banks · FY2022–FY2025 · 9M 2026</small></a>
   <nav class="main" aria-label="Main">
@@ -138,7 +187,7 @@ summary{cursor:pointer;font:600 14px var(--f-head);color:var(--accent)}
   <div class="jump"><label for="jumpco" class="note">Company</label><select id="jumpco"></select></div>
 </div></div>
 <main id="main" tabindex="-1"></main>
-<aside class="drawer" id="drawer" aria-label="Figure details" aria-hidden="true"><button class="close" id="dclose">Close</button><div id="dbody"></div></aside>
+<aside class="drawer" id="drawer" role="dialog" aria-modal="true" aria-labelledby="dtitle" aria-hidden="true" inert><button class="close" id="dclose">Close</button><div id="dbody"></div></aside>
 <div class="tip" id="tip" role="tooltip"></div>
 <script id="data" type="application/json">/*__DATA__*/null</script>
 <script>
@@ -147,370 +196,517 @@ summary{cursor:pointer;font:600 14px var(--f-head);color:var(--accent)}
 const D = JSON.parse(document.getElementById('data').textContent);
 const $ = s => document.querySelector(s);
 const esc = s => String(s==null?'':s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const MINUS='−';
 const SECT = {energy:'Energy', banks:'Banks'};
-const FY = ['FY2022','FY2023','FY2024','FY2025'], YTD=['9M2025','9M2026'];
+const FY = ['FY2022','FY2023','FY2024','FY2025'], YTD=['9M2025','9M2026'], ALLP=[...FY,...YTD];
 const PAIRS = ['FY2023/FY2022','FY2024/FY2023','FY2025/FY2024','9M2026/9M2025'];
 const PL = {FY2021:'FY2021',FY2022:'FY2022',FY2023:'FY2023',FY2024:'FY2024',FY2025:'FY2025','9M2025':'9M 2025','9M2026':'9M 2026'};
-const PAIRL = {'FY2023/FY2022':'FY23 vs FY22','FY2024/FY2023':'FY24 vs FY23','FY2025/FY2024':'FY25 vs FY24','9M2026/9M2025':'9M26 vs 9M25'};
+const PAIRL = {'FY2023/FY2022':'FY2023 vs FY2022','FY2024/FY2023':'FY2024 vs FY2023','FY2025/FY2024':'FY2025 vs FY2024','9M2026/9M2025':'9M 2026 vs 9M 2025'};
+const STOCKS = new Set(['TA','EQ_ATTR','EQ_ORD','TE','LOANS','DEPOSITS','T1_SUKUK','DEBT_ISSUED']);
+const NM_TITLE = 'not meaningful: the base is zero, negative or below SAR 10m, or a profit turned into a loss';
 const isNum = x => typeof x === 'number' && isFinite(x);
-const fm = x => isNum(x) ? (x<0?'(':'') + Math.abs(x).toLocaleString('en-US',{maximumFractionDigits: Math.abs(x)<100?1:0}) + (x<0?')':'') : (x==='n.m.'?'n.m.':'–');
-const fp = x => isNum(x) ? (x*100).toFixed(1)+'%' : (x==='n.m.'?'n.m.':'–');
-const fpp = x => isNum(x) ? (x>=0?'+':'−')+Math.abs(x*100).toFixed(1)+' pp' : '–';
-const fg = x => isNum(x) ? (x>=0?'+':'−')+Math.abs(x*100).toFixed(1)+'%' : (x==='n.m.'?'n.m.':'–');
-const coName = t => { for (const S of ['Energy','Banks']) if (D.sectors[S].companies[t]) return D.sectors[S].companies[t].name; return t; };
+const sgn = (x, plus) => x<0 ? MINUS : (plus && x>0 ? '+' : '');
+const NMV = x => x==='n.m.' ? 'n.m.' : '–';
+// one set of formatters: amounts in SAR m with brackets for negatives; percentages with a true minus
+const fm = x => isNum(x) ? (x<0?'(':'') + Math.abs(x).toLocaleString('en-US',{maximumFractionDigits: Math.abs(x)<1&&x!==0?2:Math.abs(x)<100?1:0}) + (x<0?')':'') : NMV(x);
+const fpd = (x,d) => { if(!isNum(x)) return NMV(x); const r=+(x*100).toFixed(d); return (r<0?MINUS:'')+Math.abs(r).toFixed(d)+'%'; };
+const fp = x => fpd(x,1);
+const fg = x => { if(!isNum(x)) return NMV(x); const r=+(x*100).toFixed(1); return (r===0?'':sgn(r,true))+Math.abs(r).toFixed(1)+'%'; };
+const fpp = x => { if(!isNum(x)) return '–'; const v=x*100; const d=Math.abs(v)<0.995&&v!==0?2:1; const r=+v.toFixed(d); if(r===0) return (v===0?'':(v<0?MINUS:'+'))+(v===0?'0.0':'<0.01')+' pp'; return sgn(r,true)+Math.abs(r).toFixed(d)+' pp'; };
+const fbp = x => { if(!isNum(x)) return NMV(x); const r=Math.round(x*10000); return (r<0?MINUS:'')+Math.abs(r)+' bp'; };
+const RFMT = {COR:fbp, ROA:x=>fpd(x,2), NSCI_YLD:x=>fpd(x,2)};
+const fr = k => RFMT[k] || fp;
+const coInfo = t => { for (const S of ['Energy','Banks']) if (D.sectors[S].companies[t]) return {S, c:D.sectors[S].companies[t], cfg:D.sectors[S].config.constituents[t]||{}}; return null; };
+const coName = t => { const i=coInfo(t); return i?i.c.name:t; };
+const coShort = t => { const i=coInfo(t); return i?(i.cfg.short||i.c.name):t; };
 const coSector = t => D.sectors.Energy.companies[t] ? 'Energy' : 'Banks';
 const mname = m => (D.metrics[m]&&D.metrics[m].name) || m;
+const PLAIN = {REV:'revenue',OIRS:'other income related to sales',REV_M:'margin base',GP:'gross profit',OPINC:'operating income',EBITDA_C:'EBITDA',EBITDA_U:'EBITDA excl. one-offs',NI_ATTR:'net profit',NI:'net profit incl. minorities',CFO:'operating cash flow',CAPEX:'capex',FCF:'free cash flow',TA:'total assets',EQ_ATTR:'equity',EQ_ORD:'ordinary equity',TE:'total equity',TOI:'operating income',NSCI:'net financing income',FEES_NET:'net fees',OTHER_OI:'other income',OPEX_PRE:'operating costs',PPOP:'pre-provision profit',IMPAIR_TOTAL:'impairments',IMPAIR_FIN:'credit losses on financing',LOANS:'net financing',DEPOSITS:'customer deposits',T1_SUKUK:'Tier 1 sukuk',T1_COST:'Tier 1 distributions',PBT:'pre-tax profit',SCE:'commission expense',SCI_GROSS:'gross commission income',ZAKAT_TAX:'zakat and tax',SHARE_JV:'share of JVs',DA_CF:'depreciation & amortisation',IMPAIR_CF:'impairment add-back',FIN_COST:'finance costs',FIN_INC:'finance income'};
+const plain = m => PLAIN[m] || mname(m).toLowerCase();
+const CLS = {FINAL_BUDGET:['Final','conf','final budget'],REGULATORY_MEASURE:['Regulation','conf','regulatory measure'],PRE_BUDGET_STATEMENT:['Prelim','prel','pre-budget statement (preliminary)'],QUARTERLY_PERFORMANCE:['Quarterly','prel','quarterly budget performance report'],MINISTERIAL_STATEMENT:['Statement','stmt','ministerial statement'],OPEC_DECISION:['OPEC+','stmt','OPEC+ decision'],COMPANY_POLICY:['Company','stmt','company policy or guidance'],MARKET_DATA:['Market','data','market data'],EVENT:['Event','data','event'],ANALYST_COMMENTARY:['Analyst','data','analyst commentary']};
+const GROUPS = {conf:'Confirmed: final budget and enacted rules',prel:'Preliminary and in-year estimates',stmt:'Statements and decisions',data:'Market data, events and commentary'};
 let FIGS = {}; let figN = 0;
-function figBtn(t, p, m, v, fmt){
-  const id = 'f'+(figN++); FIGS[id] = {t,p,m};
-  const s = (D.sectors[coSector(t)].companies[t].series[m]||{})[p];
-  const chip = s ? (s.note && s.note.indexOf('OVERRIDE')===0 ? '<span class="chip O" title="Taken from PDF">PDF</span>' : (s.prov && s.prov!=='D' ? `<span class="chip ${s.prov}" title="${s.prov==='R'?'Restated comparative':'Calculated'}">${s.prov}</span>`:'')) : '';
+function getFact(t,p,m){ const i=coInfo(t); const s=i&&((i.c.series[m]||{})[p]); return s || (D.extra||{})[`${t}|${p}|${m}`] || null; }
+function chipFor(s){
+  if (!s) return '';
+  if (s.note && s.note.indexOf('OVERRIDE')===0) return '<span class="chip O" tabindex="0" data-tip="Taken from the PDF because the XBRL file was missing, unreadable or mis-tagged">PDF</span>';
+  if (s.prov==='R') return '<span class="chip R" tabindex="0" data-tip="Restated comparative from a later filing; the drawer shows the original value">R</span>';
+  if (s.prov==='C') return '<span class="chip C" tabindex="0" data-tip="Calculated by us; the drawer shows the formula and inputs">C</span>';
+  return '';
+}
+function figBtn(t, p, m, v, label, fmt){
+  const id = 'f'+(figN++); FIGS[id] = {t,p,m,label};
+  const s = getFact(t,p,m);
   const txt = (fmt||fm)(v);
   if (!s) return txt;
-  return `<button class="fig" data-fig="${id}" aria-label="${esc(mname(m))} ${PL[p]} ${txt}: show source">${txt}</button>${chip}`;
+  return `<button class="fig" data-fig="${id}" aria-label="${esc(coShort(t))}, ${esc(label||mname(m))}, ${PL[p]}: SAR ${esc(txt)} m. Show source">${txt}</button>${chipFor(s)}`;
 }
-function sumFig(S, scope, m, p, v){
-  const id = 'f'+(figN++); FIGS[id] = {S, scope, m, p, sum:true};
-  return `<button class="fig" data-fig="${id}">${fm(v)}</button>`;
+function sumFig(S, scope, m, p, v, label){
+  const id = 'f'+(figN++); FIGS[id] = {S, scope, m, p, label, sum:true};
+  return `<button class="fig" data-fig="${id}" aria-label="${esc(label||mname(m))}, ${S} sector, ${PL[p]}: SAR ${esc(fm(v))} m. Show companies">${fm(v)}</button>`;
 }
-// ---------------------------------------------------------------- drawer
-function openDrawer(html){ $('#dbody').innerHTML = html; const d=$('#drawer'); d.classList.add('open'); d.setAttribute('aria-hidden','false'); $('#dclose').focus(); }
-function closeDrawer(){ const d=$('#drawer'); d.classList.remove('open'); d.setAttribute('aria-hidden','true'); }
+function supN(blk, S){ // superscript company count where a total or ratio leaves companies out
+  const miss = blk.missing || blk.excluded || []; if (!miss.length) return '';
+  return `<sup tabindex="0" data-tip="${esc(blk.n+' companies had this figure; not included: '+miss.map(coName).join(', '))}">${blk.n}</sup>`;
+}
+const periodText = (p,m) => STOCKS.has(m) ? `as at ${p.startsWith('9M')?'30 Sep':'31 Dec'} ${p.slice(-4)}` : (p.startsWith('9M') ? `${PL[p]} (1 Jan–30 Sep ${p.slice(-4)}, partial year)` : `${PL[p]} (full year to 31 Dec ${p.slice(-4)})`);
+function nmReason(cur, prior){
+  if (!isNum(cur)||!isNum(prior)) return 'figure not available';
+  if (prior<=0) return 'the earlier period was a loss or zero';
+  if (prior<10) return 'the base is below SAR 10m';
+  if (cur<0) return 'profit turned into a loss';
+  return '';
+}
+// ---------------------------------------------------------------- drawer (modal dialog; Back closes it)
+let drawerTrigger=null, drawerPushed=false;
+const drawer=$('#drawer');
+function openDrawer(html){
+  $('#dbody').innerHTML = html;
+  if (!drawer.classList.contains('open')){ drawerTrigger=document.activeElement; try{ history.pushState({drawer:1}, ''); drawerPushed=true; }catch(e){ drawerPushed=false; } }
+  drawer.classList.add('open'); drawer.removeAttribute('inert'); drawer.setAttribute('aria-hidden','false'); postRender(drawer); $('#dclose').focus();
+}
+function hideDrawer(){ if(!drawer.classList.contains('open')) return false; drawer.classList.remove('open'); drawer.setAttribute('inert',''); drawer.setAttribute('aria-hidden','true'); tip.style.display='none'; return true; }
+function restoreFocus(){ if (drawerTrigger && document.body.contains(drawerTrigger)) drawerTrigger.focus({preventScroll:true}); drawerTrigger=null; }
+function closeDrawer(){ if(!hideDrawer()) return; if(drawerPushed){ drawerPushed=false; history.back(); } restoreFocus(); }
+window.addEventListener('popstate', ()=>{ if(drawerPushed){ drawerPushed=false; if(hideDrawer()) restoreFocus(); } });
 $('#dclose').addEventListener('click', closeDrawer);
-document.addEventListener('keydown', e=>{ if(e.key==='Escape') closeDrawer(); });
+drawer.addEventListener('keydown', e=>{
+  if (e.key!=='Tab') return; const f=[...drawer.querySelectorAll('a[href],button,[tabindex="0"],select')].filter(x=>x.offsetParent!==null);
+  if(!f.length) return; const first=f[0], last=f[f.length-1];
+  if (e.shiftKey && document.activeElement===first){ e.preventDefault(); last.focus(); } else if (!e.shiftKey && document.activeElement===last){ e.preventDefault(); first.focus(); }
+});
+drawer.addEventListener('click', e=>{ const a=e.target.closest('a[href^="#"]'); if(!a) return; e.preventDefault(); const h=a.getAttribute('href'); hideDrawer(); drawerTrigger=null; if(drawerPushed){ drawerPushed=false; location.replace(h); } else location.hash=h; });
+document.addEventListener('keydown', e=>{ if(e.key==='Escape' && drawer.classList.contains('open')) closeDrawer(); });
+function linkFor(id, label){ const s=D.sources[id]; const nm=esc(label||id.split('/').pop());
+  return s && s.url ? `<a href="${esc(s.url)}" target="_blank" rel="noopener">${nm}</a>` : `${nm} <span class="src">(no saudiexchange.sa link in the archive manifest for this file)</span>`; }
 function srcLink(sid){
   if(!sid) return '–';
-  return sid.split(' | ').map(x=>{ const s=D.sources[x]; const nm=esc(x.split('/').pop());
-    return s && s.url ? `<a href="${esc(s.url)}" target="_blank" rel="noopener">${nm}</a> <span class="src">(${esc(s.type||'')}${s.assurance?', '+esc(s.assurance):''})</span>` : nm; }).join('<br>');
+  return sid.split(' | ').map(x=>{ const s=D.sources[x]||{}; return `${linkFor(x)}<br><span class="src">${esc(s.type||'')}${s.assurance?', '+esc(s.assurance):''} · archive folder ${esc(x.split('/')[0])}</span>`; }).join('<br>');
 }
 function figDetails(f){
   if (f.sum){
-    const sc = D.sectors[f.S]; const blk = sc.sector[f.scope][f.m].totals[f.p];
-    const rows = sc.tickers.filter(t=> f.scope==='all' || t!==sc.sector.largest_by_top_line_FY2025).map(t=>{
+    const sc = D.sectors[f.S]; const blk = sc.sector[f.scope][f.m].totals[f.p]; const L=sc.sector.largest_by_top_line_FY2025;
+    const rows = sc.tickers.filter(t=> f.scope==='all' || t!==L).map(t=>{
       const s=(sc.companies[t].series[f.m]||{})[f.p];
-      return `<tr><td><a href="#co-${t}">${esc(coName(t))}</a></td><td>${s?fm(s.v):'missing'}</td></tr>`;}).join('');
-    return `<h3>${esc(mname(f.m))}: ${f.S} sector, ${PL[f.p]}</h3><p class="note">${f.scope==='all'?'All companies':'Excluding the largest company'} · sum of ${blk.n} companies with data${blk.missing.length?' · missing: '+blk.missing.map(coName).join(', '):''}</p><div class="scroller"><table><tr><th>Company</th><th>SAR m</th></tr>${rows}<tr><td><b>Total</b></td><td><b>${fm(blk.v)}</b></td></tr></table></div><p class="note">Click a company to see its own figures and sources.</p>`;
+      return `<tr><td><a href="#co-${t}">${esc(coName(t))}</a></td><td>${s?fm(s.v):'not reported'}</td><td>${s&&isNum(blk.v)&&blk.v?fp(s.v/blk.v):''}</td></tr>`;}).join('');
+    return `<h3 id="dtitle">${esc(f.label||mname(f.m))}: ${f.S} sector, ${esc(periodText(f.p,f.m))}</h3><p class="note">${f.scope==='all'?'All companies':'Excluding '+esc(coName(L))} · sum of ${blk.n} companies with this figure${blk.missing.length?' · not included: '+blk.missing.map(coName).join(', '):''}</p><div class="scroller"><table><thead><tr><th>Company</th><th>SAR m</th><th>Share</th></tr></thead><tbody>${rows}<tr><td><b>Total</b></td><td><b>${fm(blk.v)}</b></td><td></td></tr></tbody></table></div><p class="note">Select a company to see its own figures and sources.</p>`;
   }
-  const S = coSector(f.t); const s = D.sectors[S].companies[f.t].series[f.m][f.p];
-  const prov = {D:'Disclosed in the filing',R:'Restated comparative (latest filing) used',C:'Calculated by us'}[s.prov]||s.prov;
-  const pdf = s.pdf ? `${esc(s.pdf.split('/').pop())}${s.pages?' · page '+esc(s.pages):' · page not located by text search (scanned page or rounding)'}` : '–';
-  return `<h3>${esc(coName(f.t))} · ${esc(mname(f.m))}</h3>
-  <dl><dt>Period</dt><dd>${PL[f.p]} ${f.p.startsWith('9M')?'(1 Jan–30 Sep, partial year)':'(full year to 31 Dec)'}</dd>
+  const s = getFact(f.t,f.p,f.m);
+  const prov = {D:'Disclosed in the filing',R:'Restated comparative from a later filing',C:'Calculated by us',E:'Estimated'}[s.prov]||s.prov;
+  const ovr = s.note && s.note.indexOf('OVERRIDE')===0; const locPdf = (s.loc||'').match(/PDF p\.\s*([\w–\-, ]+)/);
+  let pdf;
+  if (ovr && locPdf) pdf = `Value read from the PDF, page ${esc(locPdf[1])}${s.pdf?' of '+linkFor(s.pdf):''}`;
+  else if (s.pdf) pdf = `${linkFor(s.pdf)} · ${s.pages?'page '+esc(s.pages):'page not located by text search (scanned page or rounding); use the XBRL row above'}`;
+  else pdf = 'No PDF for this period in the archive; the XBRL row above is the locator';
+  let calc='';
+  if (s.prov==='C'){
+    const ins=(D.calc_inputs[f.m]||[]).map(m=>{ const x=getFact(f.t,f.p,m); return x?`<li>${esc(mname(m))}: ${figBtn(f.t,f.p,m,x.v,mname(m))}</li>`:''; }).join('');
+    calc=`<dt>Calculation</dt><dd>${esc((s.loc||'').replace(/^formula:\s*/,''))}${ins?`<ul class="clean">${ins}</ul>`:''}</dd>`;
+  }
+  return `<h3 id="dtitle">${esc(coName(f.t))} · ${esc(f.label||mname(f.m))}</h3>
+  <dl><dt>Period</dt><dd>${esc(periodText(f.p,f.m))}</dd>
   <dt>Value</dt><dd><b>SAR ${fm(s.v)} m</b></dd>
-  <dt>Provenance</dt><dd>${esc(prov)}</dd>
+  <dt>Provenance</dt><dd>${esc(prov)}${s.supporting?' · supporting figure (not shown in the tables)':''}</dd>
   ${s.orig!=null && s.prov==='R' ? `<dt>Originally reported</dt><dd>SAR ${fm(s.orig)} m</dd>`:''}
-  <dt>Source document</dt><dd>${srcLink(s.src)}</dd>
-  <dt>Location</dt><dd>${esc(s.loc||'')}</dd>
-  <dt>PDF check</dt><dd>${pdf}</dd>
-  ${s.label?`<dt>Line item</dt><dd>${esc(s.label)}</dd>`:''}
-  ${s.note?`<dt>Note</dt><dd>${esc(s.note)}</dd>`:''}
+  ${calc}
+  ${s.prov!=='C'?`<dt>Source document</dt><dd>${srcLink(s.src)}</dd><dt>Location</dt><dd>${esc(s.loc||'')}</dd><dt>PDF check</dt><dd>${pdf}</dd>`:''}
+  ${s.label?`<dt>Line item in filing</dt><dd>${esc(s.label)}</dd>`:''}
+  ${s.note?`<dt>Note</dt><dd>${esc(s.note.replace(/^OVERRIDE:\s*/,''))}</dd>`:''}
   <dt>Definition</dt><dd>${esc((D.metrics[f.m]||{}).def||'')}</dd></dl>
-  <p class="note">Archive file names are shown as stored in the Drive archive; links open the original on saudiexchange.sa.</p>`;
+  <p class="note">File names are as stored in the Drive archive. Links open the original on saudiexchange.sa where the archive's manifest lists one.</p>`;
 }
+function actFig(el){ const k=el.dataset.fig; if(k&&FIGS[k]) openDrawer(figDetails(FIGS[k])); }
 document.addEventListener('click', e=>{
-  const b = e.target.closest('[data-fig]'); if (b){ openDrawer(figDetails(FIGS[b.dataset.fig])); return; }
+  const j = e.target.closest('[data-jump]'); if (j){ e.preventDefault(); const el=document.getElementById(j.dataset.jump); if(el){ el.scrollIntoView({block:'start'}); if(!el.hasAttribute('tabindex')) el.setAttribute('tabindex','-1'); el.focus({preventScroll:true}); } return; }
+  const b = e.target.closest('[data-fig]'); if (b){ actFig(b); return; }
   const r = e.target.closest('[data-ref]'); if (r){ showRef(r.dataset.ref); return; }
+  const pv = e.target.closest('[data-pv]'); if (pv){ setPV(pv.dataset.pv); return; }
 });
+document.addEventListener('keydown', e=>{ if((e.key==='Enter'||e.key===' ') && e.target.matches && e.target.matches('svg [data-fig]')){ e.preventDefault(); actFig(e.target); } });
+function itemCls(it){ return CLS[it.item_class] || [it.item_class,'data',it.item_class]; }
 function showRef(ref){
-  // ref formats: "2222-FY2025-REV" (fact) or policy item id "F-001"
   const m = ref.match(/^(\d{4})-(FY20\d\d|9M20\d\d)-([A-Z0-9_]+)$/);
-  if (m){ const s=((D.sectors[coSector(m[1])].companies[m[1]]||{}).series||{})[m[3]]; if(s&&s[m[2]]) { openDrawer(figDetails({t:m[1],p:m[2],m:m[3]})); return; } }
+  if (m && getFact(m[1],m[2],m[3])) { openDrawer(figDetails({t:m[1],p:m[2],m:m[3],label:mname(m[3])})); return; }
   const it = D.policy_items.find(x=>x.item_id===ref);
-  if (it){ openDrawer(`<h3>${esc(it.item_id)} · ${esc(it.item_class.replace(/_/g,' ').toLowerCase())}</h3><dl>
-    <dt>Fact / quote</dt><dd>${esc(it.fact_or_quote)}</dd><dt>Value</dt><dd>${esc(it.value)} ${esc(it.unit)}</dd>
+  if (it){ const c=itemCls(it); openDrawer(`<h3 id="dtitle">${esc(it.item_id)} · ${esc(c[2])}</h3><dl>
+    <dt>Status</dt><dd>${esc(GROUPS[c[1]]||'')}</dd>
+    <dt>Fact / quote</dt><dd>${esc(it.fact_or_quote)}</dd>${it.value?`<dt>Value</dt><dd>${esc(it.value)} ${esc(it.unit)}</dd>`:''}
+    <dt>Document</dt><dd>${esc(it.document_or_statement||'')}</dd>
     <dt>Speaker</dt><dd>${esc(it.speaker)}${it.role?', '+esc(it.role):''}</dd><dt>Published</dt><dd>${esc(it.pub_date)}</dd>
     <dt>Source</dt><dd>${it.url?`<a href="${esc(it.url)}" target="_blank" rel="noopener">${esc(it.url)}</a>`:'–'}</dd>
     <dt>Type</dt><dd>${esc(it.primary_secondary)}; read in full: ${esc(it.read_primary)}</dd>${it.notes?`<dt>Notes</dt><dd>${esc(it.notes)}</dd>`:''}</dl>`); return; }
-  openDrawer(`<p>Reference ${esc(ref)} not found.</p>`);
+  const im = (D.policy_impacts||[]).find(x=>x.impact_id===ref);
+  if (im){ openDrawer(`<h3 id="dtitle">Impact ${esc(im.impact_id)} · ${esc(im.ticker?coName(im.ticker):im.sector)}</h3><dl><dt>Channel</dt><dd>${esc(im.channel)}</dd><dt>Direction</dt><dd>${esc(im.direction)}</dd><dt>Timing</dt><dd>${esc(im.timing)}</dd><dt>Significance</dt><dd>${esc(im.significance)}</dd><dt>Confidence</dt><dd>${esc(im.confidence)}</dd><dt>Reasoning</dt><dd>${esc(im.rationale)} ${refsHtml(splitRefs(im.evidence_item_ids))}</dd></dl>`); return; }
+  openDrawer(`<h3 id="dtitle">Reference ${esc(ref)}</h3><p>This reference could not be found.</p>`);
 }
-const refsHtml = refs => (refs&&refs.length) ? `<span class="refs">${refs.map(r=>`<button data-ref="${esc(r)}" title="Show the figure or source">${esc(r.replace(/^(\d{4})-/,'').replace(/-/g,' '))}</button>`).join('')}</span>` : '';
+const splitRefs = s => (s||'').split(/[;, ]+/).filter(Boolean);
+function refLabel(r){
+  const m = r.match(/^(\d{4})-(FY20\d\d|9M20\d\d)-([A-Z0-9_]+)$/);
+  if (m) return {txt:`${coShort(m[1])} · ${plain(m[3])} · ${PL[m[2]]}`, k:'fact', tip:`${coName(m[1])}: ${mname(m[3])}, ${PL[m[2]]}`};
+  const it = D.policy_items.find(x=>x.item_id===r); if (it){ const c=itemCls(it); return {txt:`${c[0]} ${r}`, k:c[1], tip:`${c[2]}, ${it.pub_date}`}; }
+  if ((D.policy_impacts||[]).some(x=>x.impact_id===r)) return {txt:`Impact ${r}`, k:'fact', tip:'Impact row'};
+  return {txt:r, k:'fact', tip:''};
+}
+const refsHtml = refs => (refs&&refs.length) ? `<span class="refs">${refs.map(r=>{ const l=refLabel(String(r)); return `<button data-ref="${esc(r)}" class="k-${l.k}" title="${esc(l.tip)}: show source">${esc(l.txt)}</button>`; }).join('')}</span>` : '';
 // ---------------------------------------------------------------- tooltip
 const tip = $('#tip');
-document.addEventListener('pointermove', e=>{ const t=e.target.closest('[data-tip]'); if(!t){tip.style.display='none';return;}
+document.addEventListener('pointermove', e=>{ const t=e.target.closest&&e.target.closest('[data-tip]'); if(!t){tip.style.display='none';return;}
   tip.innerHTML=t.getAttribute('data-tip'); tip.style.display='block';
   const x=Math.min(e.clientX+12, window.innerWidth-tip.offsetWidth-8), y=Math.max(8,e.clientY-tip.offsetHeight-10);
-  tip.style.left=x+'px'; tip.style.top=y+'px'; });
-document.addEventListener('focusin', e=>{ const t=e.target.closest('[data-tip]'); if(!t) return; const r=t.getBoundingClientRect(); tip.innerHTML=t.getAttribute('data-tip'); tip.style.display='block'; tip.style.left=Math.max(8,Math.min(r.left, window.innerWidth-tip.offsetWidth-8))+'px'; tip.style.top=Math.max(8,r.top-tip.offsetHeight-8)+'px'; });
+  tip.style.left=Math.max(8,x)+'px'; tip.style.top=y+'px'; });
+document.addEventListener('focusin', e=>{ const t=e.target.closest&&e.target.closest('[data-tip]'); if(!t){ tip.style.display='none'; return; } const r=t.getBoundingClientRect(); tip.innerHTML=t.getAttribute('data-tip'); tip.style.display='block'; tip.style.left=Math.max(8,Math.min(r.left, window.innerWidth-tip.offsetWidth-8))+'px'; tip.style.top=Math.max(8,r.top-tip.offsetHeight-8)+'px'; });
 document.addEventListener('focusout', ()=>{ tip.style.display='none'; });
-// ---------------------------------------------------------------- charts (SVG, one scale per chart)
-function niceMax(v){ if(v<=0) return 1; const p=Math.pow(10,Math.floor(Math.log10(v))); const n=v/p; return (n<=1?1:n<=2?2:n<=2.5?2.5:n<=5?5:10)*p; }
-function ticks(lo,hi,n){ const out=[]; const step=(hi-lo)/n; for(let i=0;i<=n;i++) out.push(lo+step*i); return out; }
+// ---------------------------------------------------------------- charts (SVG drawn at card width, nice ticks that include 0)
+function colW(){ const m=$('#main'); const cs=getComputedStyle(m); const w=m.clientWidth-parseFloat(cs.paddingLeft)-parseFloat(cs.paddingRight); const two=w>=868; return Math.max(280, Math.min(620, Math.floor((two?(w-14)/2:w)-34))); }
+let CW = 560;
+function niceStep(range,n){ const raw=range/n; const p=Math.pow(10,Math.floor(Math.log10(raw))); const f=raw/p; return (f<=1?1:f<=2?2:f<=2.5?2.5:f<=5?5:10)*p; }
+function niceScale(lo,hi,n){ if(!(hi>lo)){ hi=lo+(Math.abs(lo)||1); } const st=niceStep(hi-lo,n||4); const a=Math.floor(lo/st+1e-9)*st, b=Math.ceil(hi/st-1e-9)*st; const t=[]; for(let i=0, v=a; v<=b+st/2 && i<12; i++, v=a+st*i) t.push(Math.abs(v)<st*1e-6?0:v); return {lo:a,hi:b,ticks:t,step:st}; }
+const decFor = st => st>=1 ? 0 : st>=0.1 ? 1 : 2;
+const fax = (v,d) => (v<0?MINUS:'')+Math.abs(v).toLocaleString('en-US',{minimumFractionDigits:d,maximumFractionDigits:d});
+const textW = s => String(s).length*6.6;
+function unitFor(vals){ const mx=Math.max(0,...vals.filter(isNum).map(Math.abs)); return mx>=10000?{div:1000,lab:'SAR bn'}:{div:1,lab:'SAR m'}; }
+function band(x0,x1,T,H,label){ return `<rect x="${x0}" y="${T}" width="${x1-x0}" height="${H}" fill="var(--ytd)"/><text x="${x0+4}" y="${T+12}" style="font-size:11px">${esc(label)}</text>`; }
 function cols(opts){
-  // opts: {cats:[], vals:[], fmt, color, ytdFrom, title, unit}
-  const W=560,H=230,L=58,R=12,T=14,B=34; const vals=opts.vals.map(v=>isNum(v)?v:null);
-  const mx=Math.max(0,...vals.filter(isNum)), mn=Math.min(0,...vals.filter(isNum));
-  const top=niceMax(mx||1), bot=mn<0?-niceMax(-mn):0; const y=v=>T+(top-v)/(top-bot)*(H-T-B);
-  const bw=(W-L-R)/vals.length; let g='';
-  ticks(bot,top,4).forEach(t=>{ g+=`<line x1="${L}" x2="${W-R}" y1="${y(t)}" y2="${y(t)}" stroke="var(--grid)"/><text x="${L-6}" y="${y(t)+4}" text-anchor="end">${fm(t)}</text>`; });
-  vals.forEach((v,i)=>{ const x=L+i*bw+bw*0.2, w=bw*0.6; const ytd = opts.ytdFrom!=null && i>=opts.ytdFrom;
-    if (ytd && i===opts.ytdFrom) g+=`<rect x="${L+i*bw}" y="${T}" width="${bw*(vals.length-i)}" height="${H-T-B}" fill="var(--ytd)"/><text x="${L+i*bw+4}" y="${T+11}" style="font-size:11px">partial year</text>`;
-    if (isNum(v)){ const y0=y(Math.max(v,0)), h=Math.abs(y(v)-y(0)); const col = v<0?'var(--neg)':(ytd?'var(--series-2)':opts.color||'var(--series-1)');
-      g+=`<rect x="${x}" y="${y0}" width="${w}" height="${Math.max(h,1)}" rx="3" fill="${col}" tabindex="0" data-tip="${esc(opts.cats[i])}: ${esc((opts.fmt||fm)(v))}${opts.unit?' '+opts.unit:''}"/>`;
-      if (vals.length<=8) g+=`<text class="lbl" x="${x+w/2}" y="${v>=0?y0-4:y0+h+12}" text-anchor="middle">${esc((opts.fmt||fm)(v))}</text>`; }
-    g+=`<text x="${x+w/2}" y="${H-B+16}" text-anchor="middle">${esc(opts.cats[i])}</text>`; });
+  // opts: {cats, vals (SAR m), ytdFrom, figs:[fig ids], title}
+  const W=CW, H=Math.round(Math.min(250,Math.max(200,W*0.45))), T=22, B=28, R=8; const u=unitFor(opts.vals);
+  const vals=opts.vals.map(v=>isNum(v)?v/u.div:null), nv=vals.filter(isNum);
+  if(!nv.length) return '<p class="note">No data.</p>';
+  let mx=Math.max(0,...nv), mn=Math.min(0,...nv); const span=(mx-mn)||1; if(mx>0) mx+=span*0.1; if(mn<0) mn-=span*0.12;
+  const sc=niceScale(mn,mx,4); const d=decFor(sc.step); const tl=sc.ticks.map(t=>fax(t,d));
+  const L=Math.ceil(Math.max(...tl.map(textW)))+12; const y=v=>T+(sc.hi-v)/(sc.hi-sc.lo)*(H-T-B);
+  const n=vals.length, gapW=opts.ytdFrom!=null?0.5:0, slots=n+gapW, sw=(W-L-R)/slots; const xs=i=> L+(i+(opts.ytdFrom!=null&&i>=opts.ytdFrom?gapW:0))*sw;
+  let g=`<text class="unit" x="0" y="11">${u.lab}</text>`;
+  if (opts.ytdFrom!=null) g+=band(xs(opts.ytdFrom)-sw*0.25, W-R, T, H-T-B, '9M, partial year');
+  sc.ticks.forEach((t,i)=>{ g+=`<line x1="${L}" x2="${W-R}" y1="${y(t)}" y2="${y(t)}" stroke="var(--grid)"/><text x="${L-6}" y="${y(t)+4}" text-anchor="end">${tl[i]}</text>`; });
+  const showLbl = sw>=40;
+  vals.forEach((v,i)=>{ const x=xs(i)+sw*0.18, w=sw*0.64;
+    if (isNum(v)){ const y0=y(Math.max(v,0)), h=Math.max(1,Math.abs(y(v)-y(0))); const col=v<0?'var(--neg)':'var(--series-1)';
+      const raw=opts.vals[i]; const fid=opts.figs&&opts.figs[i];
+      g+=`<rect x="${x}" y="${y0}" width="${w}" height="${h}" rx="3" fill="${col}" tabindex="0" ${fid?`data-fig="${fid}" role="button"`:''} aria-label="${esc(opts.cats[i])}: SAR ${esc(fm(raw))} m" data-tip="${esc(opts.cats[i])}: SAR ${esc(fm(raw))} m${i>=(opts.ytdFrom??99)?' (9M, partial year)':''}${fid?'<br>Click for the companies or source':''}"/>`;
+      if (showLbl) g+=`<text class="lbl" x="${x+w/2}" y="${v>=0?y0-5:y0+h+13}" text-anchor="middle">${fax(v, Math.abs(v)<100?1:0)}</text>`; }
+    else g+=`<text x="${x+w/2}" y="${y(0)-5}" text-anchor="middle">–</text>`;
+    g+=`<text x="${x+w/2}" y="${H-B+17}" text-anchor="middle">${esc(sw<52?opts.cats[i].replace('FY20','FY').replace('9M 20','9M '):opts.cats[i])}</text>`; });
   g+=`<line x1="${L}" x2="${W-R}" y1="${y(0)}" y2="${y(0)}" stroke="var(--faint)"/>`;
-  return `<svg class="chart" viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(opts.title||'')}">${g}</svg>`;
+  return `<svg class="chart" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="${esc(opts.title||'')} in ${u.lab}">${g}</svg>`;
 }
-function hbars(opts){
-  // opts: {cats:[], vals:[], fmt, title, links:[]} diverging around 0
-  const n=opts.cats.length, RH=26, W=560, L=180, R=70, T=6, H=T+n*RH+8; const vals=opts.vals.map(v=>isNum(v)?v:0);
-  const mx=Math.max(...vals.map(Math.abs),1e-9); const hasNeg=vals.some(v=>v<0); const x0 = hasNeg? L+(W-L-R)/2 : L; const sc=(hasNeg?(W-L-R)/2:(W-L-R))/mx;
-  let g=`<line x1="${x0}" x2="${x0}" y1="${T}" y2="${H-6}" stroke="var(--faint)"/>`;
-  opts.cats.forEach((c,i)=>{ const v=opts.vals[i], yy=T+i*RH; const nm = c.length>26?c.slice(0,25)+'…':c;
-    g+=`<text x="${L-8}" y="${yy+RH/2+4}" text-anchor="end">${esc(nm)}</text>`;
-    if (isNum(v)){ const w=Math.abs(v)*sc, xx=v>=0?x0:x0-w;
-      g+=`<rect x="${xx}" y="${yy+5}" width="${Math.max(w,1)}" height="${RH-10}" rx="3" fill="${v>=0?'var(--pos)':'var(--neg)'}" tabindex="0" data-tip="${esc(c)}: ${esc((opts.fmt||fp)(v))}"/>`;
-      g+=`<text class="lbl" x="${v>=0?xx+w+5:xx-5}" y="${yy+RH/2+4}" text-anchor="${v>=0?'start':'end'}">${esc((opts.fmt||fp)(v))}</text>`; }
-    else g+=`<text x="${x0+5}" y="${yy+RH/2+4}">n/a</text>`; });
-  return `<svg class="chart" viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(opts.title||'')}">${g}</svg>`;
+function cbars(items, fmt){
+  // HTML diverging bars: name | bar | value; names wrap instead of being cut, labels never overlap
+  const vals=items.map(i=>isNum(i.v)?i.v:0); const neg=Math.max(0,...vals.map(v=>-v)), pos=Math.max(0,...vals); const span=(neg+pos)||1; const z=neg/span*100;
+  return `<div class="cbars">${items.map(it=>{ const v=it.v; const w=isNum(v)?Math.abs(v)/span*100:0; const left=isNum(v)&&v<0? z-w : z;
+    return `<div class="cb"><a class="cb-n" href="#co-${it.t}">${esc(it.name)}</a><span class="cb-t" aria-hidden="true"><span class="cb-z" style="left:${z}%"></span>${isNum(v)?`<span class="cb-b ${v<0?'n':'p'}" style="left:${left}%;width:${Math.max(w,0.5)}%"></span>`:''}</span><span class="cb-v">${isNum(v)?fmt(v):'<span class="src">not in sample</span>'}</span></div>`; }).join('')}</div>`;
 }
 function lines(opts){
-  // opts: {cats:[], series:[{name, vals, color, dash}], fmt, title}
-  const W=560,H=220,L=52,R=12,T=14,B=30; const all=opts.series.flatMap(s=>s.vals).filter(isNum);
+  // opts: {cats, series:[{name, vals, color, dash}], fmt, key, title}; FY points and 9M points are drawn as separate segments
+  const W=CW, H=Math.round(Math.min(230,Math.max(190,W*0.4))), T=14, B=28, R=18; const all=opts.series.flatMap(s=>s.vals).filter(isNum);
   if(!all.length) return '<p class="note">No data.</p>';
-  let lo=Math.min(...all), hi=Math.max(...all); const pad=(hi-lo)*0.15||Math.abs(hi)*0.1||0.01; lo=Math.max(lo-pad, lo<0?lo-pad:0); hi=hi+pad;
-  const n=opts.cats.length; const x=i=>L+(n===1?0.5:i/(n-1))*(W-L-R); const y=v=>T+(hi-v)/(hi-lo)*(H-T-B); let g='';
-  ticks(lo,hi,4).forEach(t=>{ g+=`<line x1="${L}" x2="${W-R}" y1="${y(t)}" y2="${y(t)}" stroke="var(--grid)"/><text x="${L-6}" y="${y(t)+4}" text-anchor="end">${(opts.fmt||fp)(t)}</text>`; });
-  opts.cats.forEach((c,i)=>{ g+=`<text x="${x(i)}" y="${H-B+18}" text-anchor="middle">${esc(c)}</text>`; });
-  opts.series.forEach(s=>{ let d=''; s.vals.forEach((v,i)=>{ if(isNum(v)) d+=(d?'L':'M')+x(i)+' '+y(v); });
-    g+=`<path d="${d}" fill="none" stroke="${s.color}" stroke-width="2" ${s.dash?'stroke-dasharray="5 4"':''}/>`;
-    s.vals.forEach((v,i)=>{ if(isNum(v)) g+=`<circle cx="${x(i)}" cy="${y(v)}" r="4.5" fill="${s.color}" stroke="var(--surface)" stroke-width="2" tabindex="0" data-tip="${esc(s.name)} · ${esc(opts.cats[i])}: ${esc((opts.fmt||fp)(v))}"/>`; }); });
-  const leg = `<div class="legend">${opts.series.map(s=>`<span><i style="background:${s.color}"></i>${esc(s.name)}</span>`).join('')}</div>`;
-  return leg+`<svg class="chart" viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(opts.title||'')}">${g}</svg>`;
+  let lo=Math.min(...all), hi=Math.max(...all); const pad=(hi-lo)*0.12||Math.abs(hi)*0.1||0.001; lo-=pad; hi+=pad; if(lo>0 && lo<(hi-lo)*0.6) lo=0;
+  const bp = opts.key==='COR'; const sc=niceScale(lo,hi,4);
+  const tl=sc.ticks.map(t=> bp ? fax(Math.round(t*10000),0)+' bp' : fax(t*100, decFor(sc.step*100))+'%');
+  const L=Math.ceil(Math.max(...tl.map(textW)))+12; const nF=4, gap=0.7;
+  const xi=i=> i<nF ? i : i+gap; const span=(opts.cats.length-1)+gap; const x=i=>L+12+xi(i)/span*(W-L-R-24); const y=v=>T+(sc.hi-v)/(sc.hi-sc.lo)*(H-T-B);
+  let g=band((x(nF-1)+x(nF))/2, W-R, T, H-T-B, '9M');
+  sc.ticks.forEach((t,i)=>{ g+=`<line x1="${L}" x2="${W-R}" y1="${y(t)}" y2="${y(t)}" stroke="var(--grid)"/><text x="${L-6}" y="${y(t)+4}" text-anchor="end">${tl[i]}</text>`; });
+  if (sc.lo<0 && sc.hi>0) g+=`<line x1="${L}" x2="${W-R}" y1="${y(0)}" y2="${y(0)}" stroke="var(--faint)"/>`;
+  const short = W<420;
+  opts.cats.forEach((c,i)=>{ g+=`<text x="${x(i)}" y="${H-B+18}" text-anchor="middle">${esc(short?c.replace('FY20','FY').replace('9M 20','9M '):c)}</text>`; });
+  opts.series.forEach(s=>{ [[0,nF],[nF,s.vals.length]].forEach(([a,b])=>{ let d=''; for(let i=a;i<b;i++){ const v=s.vals[i]; if(isNum(v)) d+=(d?'L':'M')+x(i).toFixed(1)+' '+y(v).toFixed(1); else if(d) d+=' '; } if(d) g+=`<path d="${d}" fill="none" stroke="${s.color}" stroke-width="2" ${s.dash?'stroke-dasharray="5 4"':''}/>`; });
+    s.vals.forEach((v,i)=>{ if(isNum(v)) g+=`<circle cx="${x(i)}" cy="${y(v)}" r="4.5" fill="${s.color}" stroke="var(--surface)" stroke-width="2" tabindex="0" aria-label="${esc(s.name)}, ${esc(opts.cats[i])}: ${esc(fr(opts.key)(v))}" data-tip="${esc(s.name)} · ${esc(opts.cats[i])}: ${esc(fr(opts.key)(v))}${i>=nF?' (9M, annualised where the ratio uses balances)':''}"/>`; }); });
+  const leg = `<div class="legend">${opts.series.map(s=>`<span><i class="${s.dash?'dash':''}" style="background:${s.color}"></i>${esc(s.name)}</span>`).join('')}<span><i class="band"></i>9M (partial year)</span></div>`;
+  return leg+`<svg class="chart" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="${esc(opts.title||'')}">${g}</svg>`;
 }
 function waterfall(steps){
-  // steps: [{name, v (pp), kind:'total'|'step'}]
-  const W=560,H=230,L=52,R=10,T=14,B=46; let run=0; const bars=[];
+  // steps: [{name, v (fraction), kind:'total'|'step'}]; steps are drawn with the sign they have in the table
+  const W=CW, H=240, T=18, B=40, R=8; let run=0; const bars=[];
   steps.forEach(s=>{ if(s.kind==='total'){ bars.push({n:s.name,a:0,b:s.v,t:true,v:s.v}); run=s.v; } else { bars.push({n:s.name,a:run,b:run+s.v,v:s.v}); run+=s.v; } });
-  const vals=bars.flatMap(b=>[b.a,b.b]).filter(isNum); const hi=Math.max(0,...vals), lo=Math.min(0,...vals); const pad=(hi-lo)*0.12||0.01;
-  const y=v=>T+((hi+pad)-v)/((hi+pad)-(lo-pad))*(H-T-B); const bw=(W-L-R)/bars.length; let g='';
-  ticks(lo-pad,hi+pad,4).forEach(t=>{ g+=`<line x1="${L}" x2="${W-R}" y1="${y(t)}" y2="${y(t)}" stroke="var(--grid)"/><text x="${L-6}" y="${y(t)+4}" text-anchor="end">${(t*100).toFixed(0)}%</text>`; });
-  bars.forEach((b,i)=>{ const x=L+i*bw+bw*0.18, w=bw*0.64; const top=y(Math.max(b.a,b.b)), h=Math.max(1,Math.abs(y(b.a)-y(b.b)));
-    const col=b.t?'var(--series-1)':(b.v>=0?'var(--pos)':'var(--neg)');
-    g+=`<rect x="${x}" y="${top}" width="${w}" height="${h}" rx="3" fill="${col}" ${b.t?'':'fill-opacity=".55"'} tabindex="0" data-tip="${esc(b.n)}: ${b.t?fp(b.v):fpp(b.v)}"/>`;
-    g+=`<text class="lbl" x="${x+w/2}" y="${top-4}" text-anchor="middle">${b.t?fp(b.v):fpp(b.v)}</text>`;
-    const words=b.n.split(' '); const l1=words.slice(0,2).join(' '), l2=words.slice(2).join(' ');
+  const vals=bars.flatMap(b=>[b.a,b.b]).filter(isNum); let hi=Math.max(0,...vals), lo=Math.min(0,...vals); const pad=(hi-lo)*0.14||0.01; if(hi>0) hi+=pad; if(lo<0) lo-=pad;
+  const sc=niceScale(lo,hi,4); const tl=sc.ticks.map(t=>fax(t*100, decFor(sc.step*100))+'%');
+  const L=Math.ceil(Math.max(...tl.map(textW)))+12; const y=v=>T+(sc.hi-v)/(sc.hi-sc.lo)*(H-T-B); const bw=(W-L-R)/bars.length; let g='';
+  sc.ticks.forEach((t,i)=>{ g+=`<line x1="${L}" x2="${W-R}" y1="${y(t)}" y2="${y(t)}" stroke="var(--grid)"/><text x="${L-6}" y="${y(t)+4}" text-anchor="end">${tl[i]}</text>`; });
+  bars.forEach((b,i)=>{ const x=L+i*bw+bw*0.16, w=bw*0.68; const top=y(Math.max(b.a,b.b)), bot=y(Math.min(b.a,b.b)), h=Math.max(1,bot-top);
+    const col=b.t?'var(--series-1)':(b.v>=0?'var(--pos)':'var(--neg)'); const lab=b.t?fg(b.v):fpp(b.v);
+    g+=`<rect x="${x}" y="${top}" width="${w}" height="${h}" rx="3" fill="${col}" ${b.t?'':'fill-opacity=".6"'} tabindex="0" aria-label="${esc(b.n)}: ${esc(lab)}" data-tip="${esc(b.n)}: ${esc(lab)}"/>`;
+    const below = !b.t && b.v<0; g+=`<text class="lbl" x="${x+w/2}" y="${below?bot+13:top-5}" text-anchor="middle">${esc(lab)}</text>`;
+    const words=b.n.split(' '); const l1=words.slice(0,words.length>2?2:1).join(' '), l2=words.slice(words.length>2?2:1).join(' ');
     g+=`<text x="${x+w/2}" y="${H-B+15}" text-anchor="middle">${esc(l1)}</text>${l2?`<text x="${x+w/2}" y="${H-B+29}" text-anchor="middle">${esc(l2)}</text>`:''}`; });
   g+=`<line x1="${L}" x2="${W-R}" y1="${y(0)}" y2="${y(0)}" stroke="var(--faint)"/>`;
-  return `<svg class="chart" viewBox="0 0 ${W} ${H}" role="img" aria-label="Growth bridge">${g}</svg>`;
+  return `<svg class="chart" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="Bridge from reported to like-for-like growth">${g}</svg>`;
 }
-// ---------------------------------------------------------------- views
-const sectorRows = S => S==='Energy'
-  ? [['REV','Revenue'],['REV_M','Revenue incl. other income related to sales (margin base)'],['GP','Gross profit'],['OPINC','Operating income'],['EBITDA_C','EBITDA (calculated)'],['EBITDA_U','EBITDA excl. identified one-offs'],['NI_ATTR','Net profit attributable'],['CFO','Operating cash flow'],['CAPEX','Capex'],['FCF','Free cash flow']]
-  : [['TOI','Total operating income'],['NSCI','Net special commission income'],['FEES_NET','Net fees & commissions'],['OTHER_OI','Other operating income'],['OPEX_PRE','Operating expenses (pre-impairment)'],['PPOP','Pre-provision profit'],['IMPAIR_TOTAL','Impairment charges'],['NI_ATTR','Net profit attributable']];
-function periodHead(extra){ return `<tr><th>SAR m</th>${FY.map(p=>`<th>${PL[p]}</th>`).join('')}<th title="Compound annual growth FY2022–FY2025 (3 years)">CAGR 22–25</th><th class="gap"></th>${YTD.map(p=>`<th class="ytd">${PL[p]}</th>`).join('')}<th class="ytd">9M change</th>${extra||''}</tr>`; }
+// ---------------------------------------------------------------- shared table helpers
+const pvSwitch = () => `<span class="toggle narrow-only" role="group" aria-label="Periods shown"><button data-pv="fy" aria-pressed="${pvState==='fy'}">Full years</button><button data-pv="ytd" aria-pressed="${pvState==='ytd'}">9M 2026</button></span>`;
+let pvState='fy';
+function setPV(v){ pvState=v; document.body.dataset.pv=v; document.querySelectorAll('[data-pv]').forEach(b=>b.setAttribute('aria-pressed', String(b.dataset.pv===v))); }
+function periodHead(first, extra){ return `<tr><th>${first||'SAR m'}</th>${FY.map(p=>`<th class="fy">${PL[p]}</th>`).join('')}<th class="fy" title="Compound annual growth FY2022–FY2025 (3 years)">CAGR 22–25</th><th class="gap"></th>${YTD.map(p=>`<th class="ytd">${PL[p]}</th>`).join('')}<th class="ytd">9M change</th>${extra||''}</tr>`; }
+const nCols = head => (head.match(/<th/g)||[]).length;
+const emptyCells = (extra) => `${FY.map(()=>'<td class="fy"></td>').join('')}<td class="fy"></td><td class="gap"></td>${YTD.map(()=>'<td class="ytd"></td>').join('')}<td class="ytd"></td>${extra||''}`;
+const CHIP_LEGEND = `<p class="note">Select an underlined figure for its source file and page. Chips: <span class="chip R">R</span> restated comparative used · <span class="chip C">C</span> calculated (formula in the drawer) · <span class="chip O">PDF</span> taken from the PDF because the XBRL file was missing or mis-tagged. A small number after a figure (e.g. <sup>5</sup>) means only that many companies had the inputs; hover over it or tap it to see which were left out. <abbr title="${NM_TITLE}">n.m.</abbr> = not meaningful.</p>`;
+// ---------------------------------------------------------------- sector view
+function sectorRows(S, sc, blk){
+  const L=sc.sector.largest_by_top_line_FY2025, rows = S==='Energy'
+  ? [['REV','Revenue'],['REV_M','Revenue incl. other income related to sales (margin base)'],['GP','Gross profit'],['OPINC','Operating income'],['EBITDA_C','EBITDA (calculated)'],['EBITDA_U','EBITDA excl. identified one-offs'],['NI_ATTR','Net profit attributable'],['CFO','Operating cash flow'],['CAPEX','Capex'],['FCF','Free cash flow'],['TA','Total assets (period-end)'],['EQ_ATTR','Equity attributable (period-end)']]
+  : [['TOI','Total operating income'],['NSCI','Net special commission (financing) income'],['FEES_NET','Net fees & commissions'],['OTHER_OI','Other operating income'],['OPEX_PRE','Operating expenses (pre-impairment)'],['PPOP','Pre-provision profit'],['IMPAIR_TOTAL','Impairment charges'],['NI_ATTR','Net profit attributable'],['TA','Total assets (period-end)'],['LOANS','Net financing (period-end)'],['DEPOSITS','Customer deposits (period-end)'],['EQ_ATTR','Equity attributable incl. Tier 1 (period-end)']];
+  return rows.filter(([m])=>blk[m]).filter(([m])=> m!=='REV_M' || ALLP.some(p=>Math.abs((blk.REV_M.totals[p].v||0)-(blk.REV.totals[p].v||0))>0.5))
+    .map(([m,lab])=>{ const miss=blk[m].totals.FY2025.missing; return [m, lab + (m==='GP'&&miss.includes(L)?` (${coShort(L)} does not report it)`:'')]; });
+}
 function sectorTable(S, scope){
-  const sc=D.sectors[S], blk=sc.sector[scope]; let h=periodHead('<th title="Companies with data in FY2025; ratio cells with fewer companies show a superscript">Companies (FY2025)</th>');
-  sectorRows(S).forEach(([m,lab])=>{ const b=blk[m]; if(!b) return;
-    const g=b.growth; h+=`<tr><td>${esc(lab)}</td>${FY.map(p=>`<td>${sumFig(S,scope,m,p,b.totals[p].v)}</td>`).join('')}<td>${fg(g.CAGR_2022_2025.cagr)}</td><td class="gap"></td>${YTD.map(p=>`<td class="ytd">${sumFig(S,scope,m,p,b.totals[p].v)}</td>`).join('')}<td class="ytd">${fg(g['9M2026/9M2025'].growth)}</td><td>${b.totals.FY2025.n}</td></tr>`;
-    if (m===sc.config.top_line || m==='NI_ATTR') h+=`<tr class="sub"><td>growth (matched sample)</td>${FY.map((p,i)=>`<td>${i?fg(g[PAIRS[i-1]].growth):''}</td>`).join('')}<td></td><td class="gap"></td><td class="ytd"></td><td class="ytd"></td><td class="ytd"></td><td></td></tr>`; });
+  const sc=D.sectors[S], blk=sc.sector[scope]; const head=periodHead('SAR m','<th title="Companies with the figure in FY2025">Companies (FY2025)</th>'); let h=`<thead>${head}</thead><tbody>`; const nc=nCols(head);
+  sectorRows(S, sc, blk).forEach(([m,lab])=>{ const b=blk[m]; const g=b.growth;
+    const cell=(p)=>`${sumFig(S,scope,m,p,b.totals[p].v,lab)}${supN(b.totals[p])}`;
+    h+=`<tr><td>${esc(lab)}</td>${FY.map(p=>`<td class="fy">${cell(p)}</td>`).join('')}<td class="fy">${fg(g.CAGR_2022_2025.cagr)}</td><td class="gap"></td>${YTD.map(p=>`<td class="ytd">${cell(p)}</td>`).join('')}<td class="ytd">${fg(g['9M2026/9M2025'].growth)}</td><td>${b.totals.FY2025.n}</td></tr>`;
+    if (m===sc.config.top_line || m==='NI_ATTR') h+=`<tr class="sub"><td>growth (matched sample)</td>${FY.map((p,i)=>`<td class="fy">${i?fg(g[PAIRS[i-1]].growth):''}</td>`).join('')}<td class="fy"></td><td class="gap"></td><td class="ytd"></td><td class="ytd"></td><td class="ytd"></td><td></td></tr>`; });
   const rk = sc.config.ratios, rat = sc.sector[scope==='all'?'ratios_all':'ratios_ex_largest'];
-  h+=`<tr class="grp"><td colspan="10">Ratios from sector totals (not averages of company ratios)</td></tr>`;
-  const rc = (k,p)=>{ const x=rat[k][p]; const ex=(x.excluded||[]).map(coName); return ex.length?`<span data-tip="${esc(x.n+' companies; excluded for missing inputs: '+ex.join(', '))}" tabindex="0">${fp(x.v)}<sup>${x.n}</sup></span>`:fp(x.v); };
-  Object.keys(rk).forEach(k=>{ h+=`<tr><td>${esc(rk[k][2])}</td>${FY.map(p=>`<td>${rc(k,p)}</td>`).join('')}<td></td><td class="gap"></td>${YTD.map(p=>`<td class="ytd">${rc(k,p)}</td>`).join('')}<td class="ytd"></td><td>${rat[k].FY2025.n}</td></tr>`; });
-  return `<div class="scroller"><table>${h}</table></div>`;
+  h+=`<tr class="grp"><td colspan="${nc}">Ratios from sector totals (not averages of company ratios)</td></tr>`;
+  Object.keys(rk).forEach(k=>{ const rc=p=>`${fr(k)(rat[k][p].v)}${supN(rat[k][p])}`; h+=`<tr><td>${esc(rk[k][2])}</td>${FY.map(p=>`<td class="fy">${rc(p)}</td>`).join('')}<td class="fy"></td><td class="gap"></td>${YTD.map(p=>`<td class="ytd">${rc(p)}</td>`).join('')}<td class="ytd"></td><td>${rat[k].FY2025.n}</td></tr>`; });
+  return `<div class="scroller"><table class="ptable">${h}</tbody></table></div>`;
 }
 let scopeState = {Energy:'all', Banks:'all'}, pairState = {Energy:'FY2025/FY2024', Banks:'FY2025/FY2024'};
-function viewSector(key){
+function viewSector(key, scope){
   const S=SECT[key], sc=D.sectors[S], cfg=sc.config, top=cfg.top_line, sec=sc.sector, N=D.sector_narr[S]||{};
-  const L=sec.largest_by_top_line_FY2025, Ln=coName(L), scope=scopeState[S];
-  const tA=sec.all[top], tP=sec.all.NI_ATTR;
+  const L=sec.largest_by_top_line_FY2025, Ln=coName(L); scopeState[S]=scope; const blk=sec[scope]; const isAll=scope==='all';
+  const scopeLab = isAll?'all companies':'excl. '+Ln;
+  const tA=blk[top], tP=blk.NI_ATTR;
+  const shT=sec.shares[top].FY2025[L], shP=sec.shares.NI_ATTR.FY2025[L];
+  const niAll=sec.all.NI_ATTR.totals.FY2025.v, niL=(sc.companies[L].series.NI_ATTR||{}).FY2025; const others=isNum(niAll)&&niL?niAll-niL.v:null;
+  const pm=sec.profit_makers_total.FY2025;
+  const tk=N.takeaways||{}; const TKL={improved:'Improved',weakened:'Weakened',why:'Why',concentration:'Concentration',ytd_2026:'2026 so far (9M)',uncertain:'Uncertain'};
   let h=`<div class="crumbs"><a href="#overview">Overview</a> › <span>${S}</span></div><h1>${S} sector</h1>
   <p class="lede">${esc(N.headline||'')}</p>
+  <nav class="toc" aria-label="On this page"><a href="#s-take" data-jump="s-take">Takeaways</a><a href="#s-tot" data-jump="s-tot">Sector totals</a><a href="#s-trend" data-jump="s-trend">Trends</a><a href="#s-contrib" data-jump="s-contrib">Company contributions</a><a href="#s-changes" data-jump="s-changes">What changed and why</a><a href="#s-notes" data-jump="s-notes">Data notes</a></nav>
+  <div class="controls"><span class="toggle" role="group" aria-label="Companies included on this page"><button data-scope="all" aria-pressed="${isAll}">All companies</button><button data-scope="ex_largest" aria-pressed="${!isAll}">Excluding ${esc(Ln)}</button></span><span class="note">Applies to the tiles, totals, trend bars and contributions on this page.</span></div>
   <div class="tiles">
-   <div class="tile"><div class="k">${esc(cfg.top_line_name)} FY2025</div><div class="v">${sumFig(S,'all',top,'FY2025',tA.totals.FY2025.v)}</div><div class="s">SAR m · CAGR 2022–25 ${fg(tA.growth.CAGR_2022_2025.cagr)}</div></div>
-   <div class="tile"><div class="k">Net profit attributable FY2025</div><div class="v">${sumFig(S,'all','NI_ATTR','FY2025',tP.totals.FY2025.v)}</div><div class="s">SAR m · CAGR 2022–25 ${fg(tP.growth.CAGR_2022_2025.cagr)}</div></div>
-   <div class="tile ytd"><div class="k">${esc(cfg.top_line_name)} 9M 2026</div><div class="v">${fg(tA.growth['9M2026/9M2025'].growth)}</div><div class="s">vs 9M 2025 · partial year</div></div>
-   <div class="tile ytd"><div class="k">Net profit 9M 2026</div><div class="v">${fg(tP.growth['9M2026/9M2025'].growth)}</div><div class="s">vs 9M 2025 · partial year</div></div>
+   <div class="tile"><div class="k">${esc(cfg.top_line_name)} FY2025 · ${esc(scopeLab)}</div><div class="v">${sumFig(S,scope,top,'FY2025',tA.totals.FY2025.v,cfg.top_line_name)}</div><div class="s">SAR m · vs FY2024 ${fg(tA.growth['FY2025/FY2024'].growth)} · CAGR 22–25 ${fg(tA.growth.CAGR_2022_2025.cagr)}</div></div>
+   <div class="tile"><div class="k">Net profit FY2025 · ${esc(scopeLab)}</div><div class="v">${sumFig(S,scope,'NI_ATTR','FY2025',tP.totals.FY2025.v,'Net profit attributable')}</div><div class="s">SAR m · vs FY2024 ${fg(tP.growth['FY2025/FY2024'].growth)} · CAGR 22–25 ${fg(tP.growth.CAGR_2022_2025.cagr)}</div></div>
+   <div class="tile ytd"><div class="k">${esc(cfg.top_line_name)} 9M 2026</div><div class="v">${sumFig(S,scope,top,'9M2026',tA.totals['9M2026'].v,cfg.top_line_name)}</div><div class="s">SAR m · ${fg(tA.growth['9M2026/9M2025'].growth)} vs 9M 2025</div></div>
+   <div class="tile ytd"><div class="k">Net profit 9M 2026</div><div class="v">${sumFig(S,scope,'NI_ATTR','9M2026',tP.totals['9M2026'].v,'Net profit attributable')}</div><div class="s">SAR m · ${fg(tP.growth['9M2026/9M2025'].growth)} vs 9M 2025${isNum(tP.growth['9M2026/9M2025'].growth)?'':' ('+nmReason(tP.totals['9M2026'].v,tP.totals['9M2025'].v)+')'}</div></div>
   </div>
-  <div class="callout"><b>Concentration:</b> ${esc(Ln)} is the largest company (${fp(sec.shares[top].FY2025[L])} of FY2025 ${esc(cfg.top_line_name.toLowerCase())}, ${fp(sec.shares.NI_ATTR.FY2025[L])} of profit). Use the toggle to see the sector without it.</div>
-  <h2>Sector totals</h2>
-  <div class="controls"><span class="toggle" role="group" aria-label="Scope"><button data-scope="all" aria-pressed="${scope==='all'}">All ${sc.tickers.length} companies</button><button data-scope="ex_largest" aria-pressed="${scope!=='all'}">Excluding ${esc(Ln)}</button></span><span class="note">Click any total to see the companies behind it.</span></div>
+  <div class="callout"><b>Concentration (FY2025):</b> ${esc(Ln)} is the largest company, with ${fp(shT)} of sector ${esc(cfg.top_line_name.toLowerCase())} and ${fp(shP)} of sector net profit${shP>1&&isNum(others)?` (above 100% because the other companies together made a net loss of SAR ${fm(-others)} m; its share of the profit of profit-making companies is ${fp(niL.v/pm)})`:''}. ${isAll?`Select “Excluding ${esc(Ln)}” above to see the rest of the sector.`:`This page currently excludes it.`}</div>
+  <h2 id="s-take">Takeaways</h2><dl class="kv">${Object.keys(TKL).filter(k=>tk[k]).map(k=>`<dt>${TKL[k]}</dt><dd>${esc(tk[k])}</dd>`).join('')}</dl>
+  <h2 id="s-tot">Sector totals (${esc(scopeLab)})</h2>
+  <div class="controls">${pvSwitch()}<span class="note">Select a total to see the companies behind it.</span></div>
   ${sectorTable(S, scope)}
-  <p class="note">Growth uses companies with data in both periods. 9M figures cover 1 Jan–30 Sep and are compared only with 9M 2025. CAGR 2022–25 = (FY2025 ÷ FY2022)^(1/3) − 1; a 2022–26 CAGR needs full-year 2026 results.</p>`;
-  // charts
-  const blk=sec[scope];
-  h+=`<h2>Trends</h2><div class="grid2">
-   <div class="card"><h3>${esc(cfg.top_line_name)} (${scope==='all'?'all companies':'excl. '+esc(Ln)}), SAR m</h3>${cols({cats:[...FY,...YTD].map(p=>PL[p]),vals:[...FY,...YTD].map(p=>blk[top].totals[p].v),ytdFrom:4,title:'Top line'})}</div>
-   <div class="card"><h3>Net profit attributable (${scope==='all'?'all companies':'excl. '+esc(Ln)}), SAR m</h3>${cols({cats:[...FY,...YTD].map(p=>PL[p]),vals:[...FY,...YTD].map(p=>blk.NI_ATTR.totals[p].v),ytdFrom:4,title:'Profit'})}</div>`;
+  <p class="note">Growth uses companies with figures in both periods. 9M figures cover 1 Jan–30 Sep and are compared only with 9M 2025. CAGR 2022–25 = (FY2025 ÷ FY2022)^(1/3) − 1; a 2022–26 CAGR needs full-year 2026 results.</p>${CHIP_LEGEND}`;
+  const cats=ALLP.map(p=>PL[p]);
+  const figsFor=m=>ALLP.map(p=>{ const id='f'+(figN++); FIGS[id]={S,scope,m,p,label:m==='NI_ATTR'?'Net profit attributable':cfg.top_line_name,sum:true}; return id; });
+  h+=`<h2 id="s-trend">Trends</h2><div class="grid2">
+   <div class="card"><h3>${esc(cfg.top_line_name)} (${esc(scopeLab)})</h3>${cols({cats,vals:ALLP.map(p=>blk[top].totals[p].v),ytdFrom:4,figs:figsFor(top),title:cfg.top_line_name})}</div>
+   <div class="card"><h3>Net profit attributable (${esc(scopeLab)})</h3>${cols({cats,vals:ALLP.map(p=>blk.NI_ATTR.totals[p].v),ytdFrom:4,figs:figsFor('NI_ATTR'),title:'Net profit attributable'})}</div>`;
   const rkeys = S==='Banks'?['CI','ROE','COR']:['EBITDA_M','NET_M','ROE'];
-  rkeys.forEach(k=>{ h+=`<div class="card"><h3>${esc(cfg.ratios[k][2])}</h3>${lines({cats:[...FY,...YTD].map(p=>PL[p]),series:[{name:'All companies',color:'var(--series-1)',vals:[...FY,...YTD].map(p=>sec.ratios_all[k][p].v)},{name:'Excl. '+Ln,color:'var(--series-2)',dash:true,vals:[...FY,...YTD].map(p=>sec.ratios_ex_largest[k][p].v)}]})}<p class="note">Last two points are 9M (annualised where the ratio uses a balance-sheet denominator).</p></div>`; });
+  rkeys.forEach(k=>{ h+=`<div class="card"><h3>${esc(cfg.ratios[k][2])}${k==='COR'?' (basis points)':''}</h3>${lines({key:k,cats,series:[{name:'All companies',color:'var(--series-1)',vals:ALLP.map(p=>sec.ratios_all[k][p].v)},{name:'Excl. '+coShort(L),color:'var(--series-2)',dash:true,vals:ALLP.map(p=>sec.ratios_ex_largest[k][p].v)}],title:cfg.ratios[k][2]})}<p class="note">9M points are annualised where the ratio divides by a balance-sheet amount.</p></div>`; });
   h+=`</div>`;
-  // contributions
   const pair=pairState[S];
-  h+=`<h2>Company contributions</h2><div class="controls"><label for="pairsel">Comparison</label><select id="pairsel">${PAIRS.map(p=>`<option value="${p}" ${p===pair?'selected':''}>${PAIRL[p]}</option>`).join('')}</select><span class="note">Contribution = company change ÷ sector prior-period total (pp); contributions add up to sector growth.</span></div>
-  <div class="grid2">`;
-  [top,'NI_ATTR'].forEach(m=>{ const g=sec.all[m].growth[pair]; const ts=sc.tickers.slice().sort((a,b)=>(g.contrib[b]??-1e9)-(g.contrib[a]??-1e9));
-    h+=`<div class="card"><h3>${m==='NI_ATTR'?'Net profit':esc(cfg.top_line_name)}: contribution to ${PAIRL[pair]} growth of ${fg(g.growth)}</h3>${hbars({cats:ts.map(coName),vals:ts.map(t=>g.contrib[t]),fmt:fpp})}${g.excluded.length?`<p class="note">Not in matched sample: ${g.excluded.map(coName).join(', ')}</p>`:''}</div>`; });
-  h+=`</div><h3>Company table</h3><div class="scroller"><table><tr><th>Company</th><th>${esc(cfg.top_line_name)} FY2025</th><th>Share FY2025</th><th>CAGR 22–25</th><th>Profit FY2025</th><th>Profit share</th><th class="ytd">${esc(cfg.top_line_name)} 9M change</th><th class="ytd">Profit 9M change</th>${S==='Banks'?'<th>Cost-to-income FY2025</th><th>ROE FY2025</th>':'<th>EBITDA margin FY2025</th><th>ROE FY2025</th>'}</tr>`;
-  sc.tickers.forEach(t=>{ const c=sc.companies[t], s=c.series; const r1=S==='Banks'?c.ratios.CI.FY2025:c.ratios.EBITDA_M.FY2025;
-    h+=`<tr><td><a href="#co-${t}">${esc(c.name)}</a> <span class="src">${t}</span></td><td>${figBtn(t,'FY2025',top,(s[top]||{}).FY2025&&s[top].FY2025.v)}</td><td>${fp(sec.shares[top].FY2025[t])}</td><td>${fg(c.growth[top].CAGR_2022_2025)}</td><td>${figBtn(t,'FY2025','NI_ATTR',(s.NI_ATTR||{}).FY2025&&s.NI_ATTR.FY2025.v)}</td><td>${fp(sec.shares.NI_ATTR.FY2025[t])}</td><td class="ytd">${fg(c.growth[top]['9M2026/9M2025'])}</td><td class="ytd">${fg(c.growth.NI_ATTR['9M2026/9M2025'])}</td><td>${fp(r1)}</td><td>${fp(c.ratios.ROE.FY2025)}</td></tr>`; });
-  h+=`</table></div><p class="note">HHI concentration of ${esc(cfg.top_line_name.toLowerCase())} FY2025: ${isNum(sec.hhi[top].FY2025)?Math.round(sec.hhi[top].FY2025).toLocaleString():'–'} (10,000 = one company).</p>`;
-  // narrative
-  h+=`<h2>What changed since 2022, and why</h2>`;
+  h+=`<h2 id="s-contrib">Company contributions to growth (${esc(scopeLab)})</h2><div class="controls"><label for="pairsel">Comparison</label><select id="pairsel">${PAIRS.map(p=>`<option value="${p}" ${p===pair?'selected':''}>${PAIRL[p]}</option>`).join('')}</select></div>
+  <p class="note">Contribution = the company's change ÷ the prior-period total of the companies in the sample, in percentage points (pp). The contributions add up to the sector growth shown in each heading.</p><div class="grid2">`;
+  [top,'NI_ATTR'].forEach(m=>{ const g=blk[m].growth[pair]; const tks=sc.tickers.filter(t=>isAll||t!==L); const ts=tks.slice().sort((a,b)=>(g.contrib[b]??-1e9)-(g.contrib[a]??-1e9));
+    h+=`<div class="card"><h3>${m==='NI_ATTR'?'Net profit':esc(cfg.top_line_name)}: ${PAIRL[pair]} growth ${fg(g.growth)}</h3>${isNum(g.growth)?cbars(ts.map(t=>({t,name:coName(t),v:g.contrib[t]})),fpp):`<p class="note">Growth is not meaningful for this comparison (${nmReason(g.cur,g.prior)}), so contributions are not shown.</p>`}${g.excluded.length?`<p class="note">Not in the matched sample: ${g.excluded.map(coName).join(', ')}</p>`:''}</div>`; });
+  const r1k = S==='Banks'?'CI':'EBITDA_M';
+  h+=`</div><h3>Company table (all companies)</h3><div class="scroller"><table class="stack"><thead><tr><th>Company</th><th>${esc(cfg.top_line_name)} FY2025</th><th>Share FY2025</th><th>CAGR 22–25</th><th>Profit FY2025</th><th>Profit share</th><th class="ytd">${esc(cfg.top_line_name)} 9M change</th><th class="ytd">Profit 9M change</th><th>${S==='Banks'?'Cost-to-income':'EBITDA margin'} FY2025</th><th>ROE FY2025</th></tr></thead><tbody>`;
+  sc.tickers.forEach(t=>{ const c=sc.companies[t], s=c.series;
+    h+=`<tr><td data-l="Company"><a href="#co-${t}">${esc(c.name)}</a> <span class="src">${t}</span></td><td data-l="${esc(cfg.top_line_name)} FY2025, SAR m">${figBtn(t,'FY2025',top,(s[top]||{}).FY2025&&s[top].FY2025.v,cfg.top_line_name)}</td><td data-l="Share FY2025">${fp(sec.shares[top].FY2025[t])}</td><td data-l="CAGR 22–25">${fg(c.growth[top].CAGR_2022_2025)}</td><td data-l="Profit FY2025, SAR m">${figBtn(t,'FY2025','NI_ATTR',(s.NI_ATTR||{}).FY2025&&s.NI_ATTR.FY2025.v,'Net profit attributable')}</td><td data-l="Profit share">${fp(sec.shares.NI_ATTR.FY2025[t])}</td><td class="ytd" data-l="${esc(cfg.top_line_name)} 9M change">${fg(c.growth[top]['9M2026/9M2025'])}</td><td class="ytd" data-l="Profit 9M change">${fg(c.growth.NI_ATTR['9M2026/9M2025'])}</td><td data-l="${S==='Banks'?'Cost-to-income':'EBITDA margin'} FY2025">${fp(c.ratios[r1k].FY2025)}</td><td data-l="ROE FY2025">${fp(c.ratios.ROE.FY2025)}</td></tr>`; });
+  h+=`</tbody></table></div><p class="note">Profit shares can exceed 100% or be negative when some companies make losses. HHI concentration of ${esc(cfg.top_line_name.toLowerCase())} FY2025: ${isNum(sec.hhi[top].FY2025)?Math.round(sec.hhi[top].FY2025).toLocaleString():'–'} (10,000 = one company).</p>`;
+  h+=`<h2 id="s-changes">What changed since 2022, and why</h2>`;
   (N.main_changes||[]).forEach(c=>{ h+=`<div class="card" style="margin:8px 0"><b>${esc(c.change)}</b><div>${esc(c.driver)}</div><div class="note">${esc(c.evidence||'')} ${refsHtml(c.refs)}</div></div>`; });
   if(!(N.main_changes||[]).length) h+='<p class="note">Narrative pending.</p>';
-  const tk=N.takeaways||{};
-  h+=`<h2>Takeaways</h2><dl class="kv">${['improved','weakened','why','concentration','ytd_2026','uncertain'].filter(k=>tk[k]).map(k=>`<dt>${({improved:'Improved',weakened:'Weakened',why:'Why',concentration:'Concentration',ytd_2026:'2026 so far (9M)',uncertain:'Uncertain'})[k]}</dt><dd>${esc(tk[k])}</dd>`).join('')}</dl>`;
-  if ((N.data_notes||[]).length) h+=`<h3>Data notes</h3><ul class="clean">${N.data_notes.map(x=>`<li>${esc(x)}</li>`).join('')}</ul>`;
-  h+=`<p class="note">${esc(cfg.margin_base_note||'')} ${esc(cfg.classification_note||'')} A superscript number on a ratio means fewer companies had the inputs; hover or focus it to see which were excluded.</p>`;
-  return h;
+  h+=`<h2 id="s-notes">Data notes</h2><ul class="clean">${(N.data_notes||[]).map(x=>`<li>${esc(x)}</li>`).join('')}${cfg.margin_base_note?`<li>${esc(cfg.margin_base_note)}</li>`:''}${cfg.classification_note?`<li>${esc(cfg.classification_note)}</li>`:''}</ul>`;
+  return {html:h, title:`${S} sector${isAll?'':' excl. '+coShort(L)}`};
+}
+// ---------------------------------------------------------------- company view
+function companyRows(S, c){
+  const s=c.series; const rows = S==='Energy'
+   ? [['REV','Revenue'],['OIRS','Other income related to sales'],['REV_M','Revenue incl. other income related to sales (margin base)'],['GP','Gross profit'],['OPINC','Operating income'],['EBITDA_C','EBITDA (calculated)'],['EBITDA_U','EBITDA excl. identified one-offs'],['NI_ATTR','Net profit attributable'],['CFO','Operating cash flow'],['CAPEX','Capex'],['FCF','Free cash flow'],['TA','Total assets (period-end)'],['EQ_ATTR','Equity attributable (period-end)']]
+   : [['TOI','Total operating income'],['NSCI','Net special commission (financing) income'],['FEES_NET','Net fees & commissions'],['OTHER_OI','Other operating income'],['OPEX_PRE','Operating expenses (pre-impairment)'],['PPOP','Pre-provision profit'],['IMPAIR_TOTAL','Impairment charges'],['IMPAIR_FIN','of which credit losses on financing'],['NI_ATTR','Net profit attributable'],['TA','Total assets (period-end)'],['LOANS','Net financing (period-end)'],['DEPOSITS','Customer deposits (period-end)'],['EQ_ATTR','Equity attributable incl. Tier 1 (period-end)'],['T1_SUKUK','Tier 1 sukuk (period-end)'],['T1_COST','Tier 1 sukuk distributions']];
+  const same = s.REV && s.REV_M && ALLP.every(p=>!s.REV_M[p] || !s.REV[p] || Math.abs(s.REV_M[p].v-s.REV[p].v)<0.5);
+  return rows.filter(([m])=>s[m]).filter(([m])=>!(same && (m==='REV_M'||m==='OIRS')));
 }
 function companyTable(S,t){
-  const c=D.sectors[S].companies[t], s=c.series, cfg=D.sectors[S].config;
-  const rows = S==='Energy'
-   ? [['REV','Revenue'],['OIRS','Other income related to sales'],['REV_M','Revenue incl. other income related to sales (margin base)'],['GP','Gross profit'],['OPINC','Operating income'],['EBITDA_C','EBITDA (calculated)'],['EBITDA_U','EBITDA excl. identified one-offs'],['NI_ATTR','Net profit attributable'],['CFO','Operating cash flow'],['CAPEX','Capex'],['FCF','Free cash flow'],['TA','Total assets (period-end)'],['EQ_ATTR','Equity attributable (period-end)']]
-   : [['TOI','Total operating income'],['NSCI','Net special commission income'],['FEES_NET','Net fees & commissions'],['OTHER_OI','Other operating income'],['OPEX_PRE','Operating expenses (pre-impairment)'],['PPOP','Pre-provision profit'],['IMPAIR_TOTAL','Impairment charges'],['IMPAIR_FIN','of which ECL on financing'],['NI_ATTR','Net profit attributable'],['TA','Total assets'],['LOANS','Net financing'],['DEPOSITS','Customer deposits'],['EQ_ATTR','Equity attributable (incl. Tier 1)'],['T1_SUKUK','Tier 1 sukuk'],['T1_COST','Tier 1 sukuk distributions']];
-  let h=periodHead();
-  rows.forEach(([m,lab])=>{ if(!s[m]) return; const g=c.growth[m]||{};
-    h+=`<tr><td>${esc(lab)}</td>${FY.map(p=>`<td>${s[m][p]?figBtn(t,p,m,s[m][p].v):'–'}</td>`).join('')}<td>${fg(g.CAGR_2022_2025)}</td><td class="gap"></td>${YTD.map(p=>`<td class="ytd">${s[m][p]?figBtn(t,p,m,s[m][p].v):'–'}</td>`).join('')}<td class="ytd">${fg(g['9M2026/9M2025'])}</td></tr>`;
-    if (m===cfg.top_line||m==='NI_ATTR') h+=`<tr class="sub"><td>growth</td>${FY.map((p,i)=>`<td>${i?fg(g[PAIRS[i-1]]):''}</td>`).join('')}<td></td><td class="gap"></td><td class="ytd"></td><td class="ytd"></td><td class="ytd"></td></tr>`; });
-  h+=`<tr class="grp"><td colspan="9">Ratios (calculated; balance-sheet ratios use average balances; 9M annualised)</td></tr>`;
-  Object.entries(cfg.ratios).forEach(([k,spec])=>{ h+=`<tr><td>${esc(spec[2])}</td>${FY.map(p=>`<td>${fp(c.ratios[k][p])}</td>`).join('')}<td></td><td class="gap"></td>${YTD.map(p=>`<td class="ytd">${fp(c.ratios[k][p])}</td>`).join('')}<td class="ytd"></td></tr>`; });
-  return `<div class="scroller"><table>${h}</table></div>`;
+  const c=D.sectors[S].companies[t], s=c.series, cfg=D.sectors[S].config; const head=periodHead(); let h=`<thead>${head}</thead><tbody>`; const nc=nCols(head);
+  companyRows(S,c).forEach(([m,lab])=>{ const g=c.growth[m]||{};
+    h+=`<tr><td>${esc(lab)}</td>${FY.map(p=>`<td class="fy">${s[m][p]?figBtn(t,p,m,s[m][p].v,lab):'–'}</td>`).join('')}<td class="fy">${fg(g.CAGR_2022_2025)}</td><td class="gap"></td>${YTD.map(p=>`<td class="ytd">${s[m][p]?figBtn(t,p,m,s[m][p].v,lab):'–'}</td>`).join('')}<td class="ytd">${fg(g['9M2026/9M2025'])}</td></tr>`;
+    if (m===cfg.top_line||m==='NI_ATTR') h+=`<tr class="sub"><td>growth</td>${FY.map((p,i)=>`<td class="fy">${i?fg(g[PAIRS[i-1]]):''}</td>`).join('')}<td class="fy"></td><td class="gap"></td><td class="ytd"></td><td class="ytd"></td><td class="ytd"></td></tr>`; });
+  h+=`<tr class="grp"><td colspan="${nc}">Ratios (calculated; balance-sheet ratios use average balances; 9M annualised)</td></tr>`;
+  Object.entries(cfg.ratios).forEach(([k,spec])=>{ h+=`<tr><td>${esc(spec[2])}</td>${FY.map(p=>`<td class="fy">${fr(k)(c.ratios[k][p])}</td>`).join('')}<td class="fy"></td><td class="gap"></td>${YTD.map(p=>`<td class="ytd">${fr(k)(c.ratios[k][p])}</td>`).join('')}<td class="ytd"></td></tr>`; });
+  return `<div class="scroller"><table class="ptable">${h}</tbody></table></div>`;
 }
+const STEPS=[['perimeter','Perimeter (acquisitions and disposals)','perimeter'],['fx','FX translation','FX'],['hyperinflation','Hyperinflation','hyperinflation'],['accounting_other','Accounting / other','accounting'],['new_capacity','New capacity','new capacity']];
+const PRE=['perimeter','fx','hyperinflation','accounting_other'];
 function bridgeFor(S,t,pair){
   const c=D.sectors[S].companies[t], top=D.sectors[S].config.top_line; const rep=c.growth[top][pair];
   const [cur,pri]=pair.split('/'); const prior=((c.series[top]||{})[pri]||{}).v;
   const adj=D.adjustments.filter(a=>a.ticker===t && a.comparison===pair);
-  const steps=[['perimeter','Perimeter'],['fx','FX'],['hyperinflation','Hyperinflation'],['accounting_other','Accounting / other'],['new_capacity','New capacity']];
   const val={}, nd={}, basis={};
-  steps.forEach(([k])=>{ const xs=adj.filter(a=>a.bridge_step===k); nd[k]=xs.some(a=>a.basis==='not determinable'); val[k]=xs.reduce((s,a)=>s+(parseFloat(a.amount_sar_m)||0),0)/(prior||NaN); basis[k]=xs; });
-  const preND=['perimeter','fx','hyperinflation','accounting_other'].some(k=>nd[k]);
-  const org = (!isNum(rep)||preND)?null: rep-['perimeter','fx','hyperinflation','accounting_other'].reduce((s,k)=>s+(isNum(val[k])?val[k]:0),0);
+  STEPS.forEach(([k])=>{ const xs=adj.filter(a=>a.bridge_step===k); nd[k]=xs.some(a=>a.basis==='not determinable'); val[k]=xs.reduce((s,a)=>s+(parseFloat(a.amount_sar_m)||0),0)/(prior||NaN); basis[k]=xs; });
+  const preND=PRE.some(k=>nd[k]);
+  const org = (!isNum(rep)||preND)?null: rep-PRE.reduce((s,k)=>s+(isNum(val[k])?val[k]:0),0);
   const lfl = (org==null||nd.new_capacity)?null: org-(isNum(val.new_capacity)?val.new_capacity:0);
-  return {rep, org, lfl, val, nd, basis, adj, preND};
+  return {rep, org, lfl, val, nd, basis, adj, preND, cur:((c.series[top]||{})[cur]||{}).v, prior};
 }
 function viewCompany(t){
   const S=coSector(t), sc=D.sectors[S], c=sc.companies[t], N=D.narr[t]||{}, cfg=sc.config, top=cfg.top_line;
-  const s=c.series;
+  const s=c.series; const v=(m,p)=>(s[m]||{})[p]&&s[m][p].v;
+  const g9=(m)=>{ const x=c.growth[m]['9M2026/9M2025']; return isNum(x)?`${fg(x)} vs 9M 2025`:`change n.m. (${nmReason(v(m,'9M2026'),v(m,'9M2025'))})`; };
   let h=`<div class="crumbs"><a href="#overview">Overview</a> › <a href="#${S.toLowerCase()}">${S}</a> › <span>${esc(c.name)}</span></div>
   <h1>${esc(c.name)} <span class="src" style="font-size:16px">${t}</span></h1>
-  <p class="lede">${esc(c.sub_industry)} · Legal name in filings: ${esc(c.legal_name)} · Year-end 31 Dec · SAR m. ${esc(N.headline||'')}</p>
-  <div class="controls"><label for="cosel">Switch company in ${S}</label><select id="cosel">${sc.tickers.map(x=>`<option value="${x}" ${x===t?'selected':''}>${esc(coName(x))}</option>`).join('')}</select><a href="#${S.toLowerCase()}">◀ Back to ${S} sector</a></div>
+  <p class="lede">${esc((sc.config.constituents[t]||{}).sub_industry||c.sub_industry)} · Legal name in filings: ${esc(c.legal_name)} · Year-end 31 Dec · SAR m. ${esc(N.headline||'')}</p>
+  <nav class="toc" aria-label="On this page"><a href="#c-wim" data-jump="c-wim">What it means</a><a href="#c-fig" data-jump="c-fig">Figures</a><a href="#c-lfl" data-jump="c-lfl">Reported vs like-for-like</a><a href="#c-pm" data-jump="c-pm">Profit and margin</a><a href="#c-dev" data-jump="c-dev">Developments</a>${(N.data_notes||[]).length?'<a href="#c-notes" data-jump="c-notes">Data notes</a>':''}${(D.policy_impacts||[]).some(x=>x.ticker===t)?'<a href="#c-pol" data-jump="c-pol">Budget exposure</a>':''}<a href="#${S.toLowerCase()}">Back to ${S}</a></nav>
   <div class="tiles">
-   <div class="tile"><div class="k">${esc(cfg.top_line_name)} FY2025</div><div class="v">${s[top]&&s[top].FY2025?figBtn(t,'FY2025',top,s[top].FY2025.v):'–'}</div><div class="s">SAR m · CAGR 22–25 ${fg(c.growth[top].CAGR_2022_2025)}</div></div>
-   <div class="tile"><div class="k">Net profit FY2025</div><div class="v">${s.NI_ATTR&&s.NI_ATTR.FY2025?figBtn(t,'FY2025','NI_ATTR',s.NI_ATTR.FY2025.v):'–'}</div><div class="s">SAR m · vs FY2024 ${fg(c.growth.NI_ATTR['FY2025/FY2024'])}</div></div>
-   <div class="tile ytd"><div class="k">${esc(cfg.top_line_name)} 9M 2026</div><div class="v">${fg(c.growth[top]['9M2026/9M2025'])}</div><div class="s">vs 9M 2025 · partial year</div></div>
-   <div class="tile ytd"><div class="k">Net profit 9M 2026</div><div class="v">${fg(c.growth.NI_ATTR['9M2026/9M2025'])}</div><div class="s">vs 9M 2025 · partial year</div></div>
+   <div class="tile"><div class="k">${esc(cfg.top_line_name)} FY2025</div><div class="v">${v(top,'FY2025')!=null?figBtn(t,'FY2025',top,v(top,'FY2025'),cfg.top_line_name):'–'}</div><div class="s">SAR m · vs FY2024 ${fg(c.growth[top]['FY2025/FY2024'])} · CAGR 22–25 ${fg(c.growth[top].CAGR_2022_2025)}</div></div>
+   <div class="tile"><div class="k">Net profit FY2025</div><div class="v">${v('NI_ATTR','FY2025')!=null?figBtn(t,'FY2025','NI_ATTR',v('NI_ATTR','FY2025'),'Net profit attributable'):'–'}</div><div class="s">SAR m · vs FY2024 ${fg(c.growth.NI_ATTR['FY2025/FY2024'])} · CAGR 22–25 ${fg(c.growth.NI_ATTR.CAGR_2022_2025)}</div></div>
+   <div class="tile ytd"><div class="k">${esc(cfg.top_line_name)} 9M 2026</div><div class="v">${v(top,'9M2026')!=null?figBtn(t,'9M2026',top,v(top,'9M2026'),cfg.top_line_name):'–'}</div><div class="s">SAR m · ${g9(top)}</div></div>
+   <div class="tile ytd"><div class="k">Net profit 9M 2026</div><div class="v">${v('NI_ATTR','9M2026')!=null?figBtn(t,'9M2026','NI_ATTR',v('NI_ATTR','9M2026'),'Net profit attributable'):'–'}</div><div class="s">SAR m · ${g9('NI_ATTR')}</div></div>
   </div>`;
   const wim=N.what_it_means||{};
-  if (Object.keys(wim).length) h+=`<div class="callout"><b>What it means.</b> ${['improved','weakened','why','uncertain'].filter(k=>wim[k]).map(k=>`<div><b>${k[0].toUpperCase()+k.slice(1)}:</b> ${esc(wim[k])}</div>`).join('')}${N.confidence_overall?`<div class="note">Confidence: ${esc(N.confidence_overall)}</div>`:''}</div>`;
-  h+=`<h2>Annual trends and 9M 2026</h2>${companyTable(S,t)}<p class="note">Click a figure for its source file and page. Chips: <span class="chip R">R</span> restated comparative used · <span class="chip C">C</span> calculated · <span class="chip O">PDF</span> taken from the PDF because the XBRL file was missing or mis-tagged.</p>
-  <div class="grid2"><div class="card"><h3>${esc(cfg.top_line_name)}, SAR m</h3>${cols({cats:[...FY,...YTD].map(p=>PL[p]),vals:[...FY,...YTD].map(p=>(s[top]||{})[p]&&s[top][p].v),ytdFrom:4})}</div>
-  <div class="card"><h3>Net profit attributable, SAR m</h3>${cols({cats:[...FY,...YTD].map(p=>PL[p]),vals:[...FY,...YTD].map(p=>(s.NI_ATTR||{})[p]&&s.NI_ATTR[p].v),ytdFrom:4})}</div></div>`;
-  // bridge
-  const pairOpts = PAIRS; const curPair = window.__bridgePair && window.__bridgePair[t] || 'FY2025/FY2024';
+  h+=`<h2 id="c-wim" style="margin-top:20px">What it means</h2>`;
+  if (Object.keys(wim).length) h+=`<div class="callout">${['improved','weakened','why','uncertain'].filter(k=>wim[k]).map(k=>`<div><b>${k[0].toUpperCase()+k.slice(1)}:</b> ${esc(wim[k])}</div>`).join('')}${N.confidence_overall?`<div class="note">Confidence: ${esc(N.confidence_overall)}</div>`:''}</div>`; else h+='<p class="note">Pending.</p>';
+  h+=`<h2 id="c-fig">Annual trends and 9M 2026</h2><div class="controls">${pvSwitch()}</div>${companyTable(S,t)}${CHIP_LEGEND}
+  <div class="grid2"><div class="card"><h3>${esc(cfg.top_line_name)}</h3>${cols({cats:ALLP.map(p=>PL[p]),vals:ALLP.map(p=>v(top,p)),ytdFrom:4,figs:ALLP.map(p=>{ if(v(top,p)==null) return null; const id='f'+(figN++); FIGS[id]={t,p,m:top,label:cfg.top_line_name}; return id; }),title:cfg.top_line_name})}</div>
+  <div class="card"><h3>Net profit attributable</h3>${cols({cats:ALLP.map(p=>PL[p]),vals:ALLP.map(p=>v('NI_ATTR',p)),ytdFrom:4,figs:ALLP.map(p=>{ if(v('NI_ATTR',p)==null) return null; const id='f'+(figN++); FIGS[id]={t,p,m:'NI_ATTR',label:'Net profit attributable'}; return id; }),title:'Net profit attributable'})}</div></div>`;
+  const curPair = (window.__bridgePair && window.__bridgePair[t]) || 'FY2025/FY2024';
   const b=bridgeFor(S,t,curPair);
-  h+=`<h2>Reported vs like-for-like growth</h2><div class="controls"><label for="brsel">Comparison</label><select id="brsel" data-t="${t}">${pairOpts.map(p=>`<option value="${p}" ${p===curPair?'selected':''}>${PAIRL[p]}</option>`).join('')}</select></div><div class="grid2"><div class="card">`;
+  h+=`<h2 id="c-lfl">Reported vs like-for-like growth of ${esc(cfg.top_line_name.toLowerCase())}</h2><div class="controls"><label for="brsel">Comparison</label><select id="brsel" data-t="${t}">${PAIRS.map(p=>`<option value="${p}" ${p===curPair?'selected':''}>${PAIRL[p]}</option>`).join('')}</select></div>
+  <p class="note">Each effect is the part of reported growth explained by that item (+ means it added to growth). The chart removes each effect in turn, so an effect of +2.0 pp appears as a −2.0 pp step.</p><div class="grid2"><div class="card">`;
   if (isNum(b.rep)){
     const st=[{name:'Reported growth',v:b.rep,kind:'total'}];
-    [['perimeter','Perimeter'],['fx','FX'],['hyperinflation','Hyperinflation'],['accounting_other','Accounting other'],['new_capacity','New capacity']].forEach(([k,n])=>{ if(isNum(b.val[k]) && Math.abs(b.val[k])>1e-9 && !b.nd[k]) st.push({name:'less '+n,v:-b.val[k]}); });
+    STEPS.forEach(([k,,sh])=>{ if(isNum(b.val[k]) && Math.abs(b.val[k])>1e-9 && !b.nd[k] && (k!=='new_capacity'||b.lfl!=null)) st.push({name:'Remove '+sh,v:-b.val[k]}); });
     if (b.lfl!=null) st.push({name:'Like-for-like growth',v:b.lfl,kind:'total'}); else if (b.org!=null) st.push({name:'Organic growth',v:b.org,kind:'total'});
     h+=waterfall(st);
-  } else h+=`<p class="note">Reported growth is not meaningful for this comparison (zero or negative base).</p>`;
-  h+=`</div><div class="card"><div class="scroller"><table><tr><th>Step</th><th>pp of prior ${esc(cfg.top_line_name.toLowerCase())}</th></tr>
+  } else h+=`<p class="note">Reported growth is not meaningful for this comparison (${nmReason(b.cur,b.prior)}).</p>`;
+  h+=`</div><div class="card"><div class="scroller"><table><thead><tr><th>Step</th><th>pp of prior ${esc(cfg.top_line_name.toLowerCase())}</th></tr></thead><tbody>
    <tr><td>Reported growth</td><td>${fg(b.rep)}</td></tr>
-   ${[['perimeter','Perimeter (M&A)'],['fx','FX translation'],['hyperinflation','Hyperinflation'],['accounting_other','Accounting / other'],['new_capacity','New capacity']].map(([k,n])=>`<tr><td>less: ${n}</td><td>${b.nd[k]?'not determinable':(b.basis[k].length?fpp(b.val[k]):'none identified')}</td></tr>`).join('')}
-   <tr><td><b>Organic growth</b></td><td><b>${b.preND?'not determinable':fg(b.org)}</b></td></tr>
-   <tr><td><b>Like-for-like growth</b></td><td><b>${b.lfl==null?'not determinable':fg(b.lfl)}</b></td></tr></table></div>
-   ${b.adj.length?`<details><summary>Adjustment basis (${b.adj.length})</summary><ul class="clean">${b.adj.map(a=>`<li><b>${esc(a.bridge_step)}</b>: ${esc(a.method)} <span class="conf ${esc((a.confidence||'').split(' ')[0])}">${esc(a.confidence)}</span> <span class="src">${esc(a.basis)} · ${esc(a.source)}${a.page?' p.'+esc(a.page):''}</span></li>`).join('')}</ul></details>`:''}</div></div>`;
+   ${STEPS.filter(([k])=>k!=='new_capacity').map(([k,n])=>`<tr><td>Effect of ${n.replace(/^([A-Z])([a-z])/,(m,x,y)=>x.toLowerCase()+y)}</td><td>${b.nd[k]?'not determinable':(b.basis[k].length?fpp(b.val[k]):'none identified')}</td></tr>`).join('')}
+   <tr><td><b>Organic growth</b> = reported − effects above</td><td><b>${b.preND?'not determinable':fg(b.org)}</b></td></tr>
+   <tr><td>Effect of new capacity</td><td>${b.nd.new_capacity?'not determinable':(b.basis.new_capacity.length?fpp(b.val.new_capacity):'none identified')}</td></tr>
+   <tr><td><b>Like-for-like growth</b> = organic − new capacity</td><td><b>${b.lfl==null?'not determinable':fg(b.lfl)}</b></td></tr></tbody></table></div>
+   ${b.adj.length?`<details><summary>Adjustment basis (${b.adj.length})</summary><ul class="clean">${b.adj.map(a=>`<li><b>${esc(a.bridge_step.replace('_',' / '))}</b>: ${esc(a.method)} <span class="conf ${esc((a.confidence||'').split(' ')[0])}">${esc(a.confidence)}</span> <span class="src">${esc(a.basis)} · ${esc(a.source)}${a.page?' p.'+esc(a.page):''}</span></li>`).join('')}</ul></details>`:''}</div></div>`;
   const lb=N.lfl_basis||{};
-  h+=`<dl class="kv"><dt>LFL definition</dt><dd>${esc(lb.definition_used||'pending')}</dd><dt>Price / volume</dt><dd>${esc(lb.price_volume_support||'–')}</dd><dt>FX exposure</dt><dd>${esc(lb.fx_exposure||'–')}</dd><dt>Confidence</dt><dd>${esc(lb.confidence||'–')}</dd></dl>`;
+  h+=`<dl class="kv" style="margin-top:12px"><dt>LFL definition</dt><dd>${esc(lb.definition_used||'pending')}</dd><dt>Price / volume</dt><dd>${esc(lb.price_volume_support||'–')}</dd><dt>FX exposure</dt><dd>${esc(lb.fx_exposure||'–')}</dd><dt>Confidence</dt><dd>${esc(lb.confidence||'–')}</dd></dl>`;
   if ((N.price_volume||[]).length) h+=`<h3>Price, volume and rate effects</h3><ul class="clean">${N.price_volume.map(x=>`<li><b>${esc(x.period)}</b>: ${esc(x.text)} <span class="src">${esc(x.basis||'')} · confidence ${esc(x.confidence||'')} · ${esc(x.source||'')}</span> ${refsHtml(x.refs)}</li>`).join('')}</ul>`;
-  // profit drivers
   const pm=N.profit_and_margin||{};
-  h+=`<h2>Profit and margin changes</h2>`;
+  h+=`<h2 id="c-pm">Profit and margin changes</h2>`;
   if((pm.drivers||[]).length) h+=`<ul class="clean">${pm.drivers.map(d=>`<li><b>${esc(d.period)}</b>: ${esc(d.driver)} <span class="src">${esc(d.source||'')}</span> ${refsHtml(d.refs)}</li>`).join('')}</ul>`; else h+='<p class="note">Pending.</p>';
-  if((pm.one_offs||[]).length) h+=`<h3>Material one-offs</h3><div class="scroller"><table><tr><th>Item</th><th>Period</th><th>SAR m</th><th>Line</th><th>Source</th></tr>${pm.one_offs.map(o=>`<tr><td>${esc(o.item)}</td><td>${esc(o.period)}</td><td>${fm(o.amount_sar_m)}</td><td style="white-space:normal">${esc(o.line||'')}</td><td style="white-space:normal" class="src">${esc(o.source||'')}</td></tr>`).join('')}</table></div>`;
-  h+=`<h2>Key developments</h2>`;
-  if((N.developments||[]).length) h+=`<div class="scroller"><table><tr><th>Development</th><th>Date</th><th>Type</th><th>Source</th></tr>${N.developments.map(d=>`<tr><td style="white-space:normal;min-width:260px">${esc(d.text)}</td><td>${esc(d.date)}</td><td>${esc(d.category)}</td><td style="white-space:normal" class="src">${esc(d.source)}</td></tr>`).join('')}</table></div>`; else h+='<p class="note">Pending.</p>';
-  if((N.data_notes||[]).length) h+=`<h2>Data quality notes</h2><ul class="clean">${N.data_notes.map(x=>`<li>${esc(x)}</li>`).join('')}</ul>`;
+  if((pm.one_offs||[]).length) h+=`<h3>Material one-offs</h3><div class="scroller"><table class="stack"><thead><tr><th>Item</th><th>Period</th><th>SAR m</th><th class="t">Line</th><th class="t">Source</th></tr></thead><tbody>${pm.one_offs.map(o=>`<tr><td data-l="Item">${esc(o.item)}</td><td data-l="Period">${esc(o.period)}</td><td data-l="SAR m">${fm(o.amount_sar_m)}</td><td class="t" data-l="Line">${esc(o.line||'')}</td><td class="t src" data-l="Source">${esc(o.source||'')}</td></tr>`).join('')}</tbody></table></div>`;
+  h+=`<h2 id="c-dev">Key developments</h2>`;
+  if((N.developments||[]).length) h+=`<div class="scroller"><table class="stack"><thead><tr><th>Development</th><th class="t">Date</th><th class="t">Type</th><th class="t">Source</th></tr></thead><tbody>${N.developments.map(d=>`<tr><td class="w" data-l="Development">${esc(d.text)}</td><td class="t" data-l="Date">${esc(d.date)}</td><td class="t" data-l="Type">${esc(d.category)}</td><td class="t src" data-l="Source">${esc(d.source)}</td></tr>`).join('')}</tbody></table></div>`; else h+='<p class="note">Pending.</p>';
+  if((N.data_notes||[]).length) h+=`<h2 id="c-notes">Data quality notes</h2><ul class="clean">${N.data_notes.map(x=>`<li>${esc(x)}</li>`).join('')}</ul>`;
   const pol=(D.policy_impacts||[]).filter(x=>x.ticker===t);
-  if (pol.length) h+=`<h2>Budget and policy exposure</h2><p class="note">Forward-looking interpretation, kept separate from the historical figures above. <a href="#budget">Full budget &amp; policy section</a></p>${impactTable(pol)}`;
+  if (pol.length) h+=`<h2 id="c-pol">Budget and policy exposure</h2><p class="note">Forward-looking interpretation, kept separate from the historical figures above. <a href="#budget">Full budget and policy section</a></p>${impactTable(pol)}`;
   h+=`<p style="margin-top:28px"><a href="#${S.toLowerCase()}">◀ Back to ${S} sector</a> · <a href="#overview">Overview</a></p>`;
-  return h;
+  return {html:h, title:c.name};
 }
+function dirClass(d){ const s=(d||'').toLowerCase(); const p=/positive|benefit|support/.test(s), n=/negative|hurt|pressure/.test(s);
+  if (/^mixed|^conditional/.test(s) || (p&&n && !/^negative[^;]*partly offset/.test(s))) return 'mixed'; if (/^positive/.test(s)) return 'up'; if (/^negative/.test(s)) return 'down'; return /^neutral|^not determinable/.test(s)?'neutral':'mixed'; }
 function impactTable(rows){
-  return `<div class="scroller"><table><tr><th>Who</th><th>Channel</th><th>Direction</th><th>Timing</th><th>Significance</th><th>Confidence</th><th>Reasoning and evidence</th></tr>${rows.map(r=>`<tr><td>${esc(r.ticker?coName(r.ticker):r.sector)}</td><td style="white-space:normal;min-width:120px">${esc(r.channel)}</td><td class="dir-${/^pos|^up/i.test(r.direction)?'up':/^neg|^down/i.test(r.direction)?'down':'mixed'}">${esc(r.direction)}</td><td>${esc(r.timing)}</td><td>${esc(r.significance)}</td><td><span class="conf ${esc((r.confidence||'').split(' ')[0])}">${esc(r.confidence)}</span></td><td style="white-space:normal;min-width:320px">${esc(r.rationale)} ${refsHtml((r.evidence_item_ids||'').split(/[;, ]+/).filter(Boolean))}${r.depends_on_execution?`<div class="note">Depends on: ${esc(r.depends_on_execution)}</div>`:''}</td></tr>`).join('')}</table></div>`;
+  return `<div class="scroller"><table class="stack"><thead><tr><th>Impact</th><th class="t">Who</th><th class="t">Channel</th><th class="t">Direction</th><th class="t">Timing</th><th class="t">Significance</th><th class="t">Confidence</th><th class="t">Reasoning and evidence</th></tr></thead><tbody>${rows.map(r=>`<tr><td data-l="Impact">${esc(r.impact_id)}</td><td class="t" data-l="Who">${esc(r.ticker?coName(r.ticker):r.sector)}</td><td class="t" data-l="Channel" style="min-width:130px">${esc(r.channel)}</td><td class="t dir-${dirClass(r.direction)}" data-l="Direction" style="min-width:120px">${esc(r.direction)}</td><td class="t" data-l="Timing">${esc(r.timing)}</td><td class="t" data-l="Significance">${esc(r.significance)}</td><td class="t" data-l="Confidence"><span class="conf ${esc((r.confidence||'').split(' ')[0])}">${esc(r.confidence)}</span></td><td class="t w" data-l="Reasoning and evidence" style="min-width:340px">${esc(r.rationale)} ${refsHtml(splitRefs(r.evidence_item_ids))}${r.depends_on_execution?`<div class="note">Depends on: ${esc(r.depends_on_execution)}</div>`:''}</td></tr>`).join('')}</tbody></table></div>`;
 }
+// ---------------------------------------------------------------- budget view
 function viewBudget(){
-  const P=D.policy_narr||{}; let h=`<div class="crumbs"><a href="#overview">Overview</a> › <span>Budget &amp; policy</span></div><h1>Budget and policy implications</h1>
-  <p class="lede">${esc(P.intro||'Forward-looking assessment, kept separate from the historical results and like-for-like calculations.')}</p>`;
-  if ((P.documents||[]).length) h+=`<h2>Which documents this rests on</h2><div class="scroller"><table><tr><th>Document</th><th>Status</th><th>Date</th><th>Source</th></tr>${P.documents.map(d=>`<tr><td style="white-space:normal">${esc(d.name)}</td><td><span class="pill">${esc(d.status)}</span></td><td>${esc(d.date)}</td><td style="white-space:normal"><a href="${esc(d.url)}" target="_blank" rel="noopener">link</a></td></tr>`).join('')}</table></div>`;
-  (P.sections||[]).forEach(sct=>{ h+=`<h2>${esc(sct.heading)}</h2>`; (sct.paras||[]).forEach(p=>{ h+=`<p style="max-width:80ch">${esc(p.text||p)} ${refsHtml(p.refs)}</p>`; }); });
+  const P=D.policy_narr||{}; const secs=P.sections||[]; const has=S=>(D.policy_impacts||[]).some(x=>x.sector===S);
+  let h=`<div class="crumbs"><a href="#overview">Overview</a> › <span>Budget &amp; policy</span></div><h1>Budget and policy implications</h1>
+  <p class="lede">${esc(P.intro||'Forward-looking assessment, kept separate from the historical results and like-for-like calculations.')}</p>
+  ${P.headline?`<div class="callout">${esc(P.headline)}</div>`:''}
+  <nav class="toc" aria-label="On this page"><a href="#b-docs" data-jump="b-docs">Documents</a>${secs.map((s,i)=>`<a href="#b-s${i}" data-jump="b-s${i}">${esc(s.heading.replace(/^(\d+)\.\s*/,'$1. ').split('(')[0].trim())}</a>`).join('')}${['Energy','Banks','All'].filter(has).map(S=>`<a href="#b-i-${S}" data-jump="b-i-${S}">${S==='All'?'Cross-sector':S} impacts</a>`).join('')}<a href="#b-facts" data-jump="b-facts">Fact base</a></nav>
+  <p class="note">Reference chips show the status of each source: <span class="refs"><button class="k-conf" tabindex="-1">Final / Regulation</button><button class="k-prel" tabindex="-1">Prelim / Quarterly</button><button class="k-stmt" tabindex="-1">Statement / OPEC+ / Company</button><button class="k-data" tabindex="-1">Market / Event / Analyst</button></span></p>`;
+  if ((P.documents||[]).length) h+=`<h2 id="b-docs">Which documents this rests on</h2><div class="scroller"><table class="stack"><thead><tr><th>Document</th><th class="t">Status</th><th class="t">Date</th><th class="t">Source</th></tr></thead><tbody>${P.documents.map(d=>`<tr><td data-l="Document">${esc(d.name)}</td><td class="t" data-l="Status"><span class="pill">${esc(d.status)}</span></td><td class="t" data-l="Date">${esc(d.date)}</td><td class="t" data-l="Source"><a href="${esc(d.url)}" target="_blank" rel="noopener">${esc((d.url||'').replace(/^https?:\/\//,'').split('/')[0])}</a></td></tr>`).join('')}</tbody></table></div>`;
+  secs.forEach((sct,i)=>{ h+=`<h2 id="b-s${i}">${esc(sct.heading)}</h2>`; (sct.paras||[]).forEach(p=>{ h+=`<p style="max-width:80ch">${esc(p.text||p)} ${refsHtml(p.refs)}</p>`; }); });
   ['Energy','Banks','All'].forEach(S=>{ const rows=(D.policy_impacts||[]).filter(x=>x.sector===S); if(!rows.length) return;
-    h+=`<h2>${S==='All'?'Cross-sector':S}: impact by company</h2>${impactTable(rows)}`;
-    const sn=(P.sector_notes||{})[S]; if(sn) h+=`<div class="grid2">${['opportunities','risks','indicators'].filter(k=>sn[k]).map(k=>`<div class="card"><h3>${k[0].toUpperCase()+k.slice(1)}${k==='indicators'?' to watch':''}</h3><ul class="clean">${sn[k].map(x=>`<li>${esc(x)}</li>`).join('')}</ul></div>`).join('')}</div>`; });
+    h+=`<h2 id="b-i-${S}">${S==='All'?'Cross-sector':S}: impact by company</h2>${impactTable(rows)}`;
+    const sn=(P.sector_notes||{})[S]; if(sn) h+=`<div class="grid2" style="margin-top:12px">${['opportunities','risks','indicators'].filter(k=>sn[k]).map(k=>`<div class="card"><h3>${k[0].toUpperCase()+k.slice(1)}${k==='indicators'?' to watch':''}</h3><ul class="clean">${sn[k].map(x=>`<li>${esc(x)}</li>`).join('')}</ul></div>`).join('')}</div>`; });
   const items=D.policy_items||[];
   if (items.length){
     const cls=[...new Set(items.map(i=>i.item_class))];
-    h+=`<h2>Fact base (${items.length} dated items)</h2><div class="controls"><label for="clsf">Filter</label><select id="clsf"><option value="">All types</option>${cls.map(c=>`<option>${esc(c)}</option>`).join('')}</select><label for="secf">Sector</label><select id="secf"><option value="">All</option><option>Energy</option><option>Banks</option></select></div><div class="scroller"><table id="itbl"><tr><th>Id</th><th>Type</th><th>Date</th><th>Fact or statement</th><th>Speaker</th><th>Source</th></tr>${items.map(i=>`<tr data-cls="${esc(i.item_class)}" data-sec="${esc(i.sector)}"><td>${esc(i.item_id)}</td><td>${esc(i.item_class.replace(/_/g,' ').toLowerCase())}</td><td>${esc(i.pub_date)}</td><td style="white-space:normal;min-width:300px">${esc(i.fact_or_quote)}${i.value?` <b>${esc(i.value)}</b> ${esc(i.unit)}`:''}</td><td style="white-space:normal">${esc(i.speaker)}</td><td style="white-space:normal">${i.url?`<a href="${esc(i.url)}" target="_blank" rel="noopener">${esc(i.primary_secondary)}</a>`:esc(i.primary_secondary)}${i.read_primary==='N'?' <span class="src">(extract only)</span>':''}</td></tr>`).join('')}</table></div>`;
+    const opts=Object.entries(GROUPS).map(([g,lab])=>{ const cs=cls.filter(c=>itemCls({item_class:c})[1]===g); return cs.length?`<optgroup label="${esc(lab)}"><option value="g:${g}">All in this group</option>${cs.map(c=>`<option value="${esc(c)}">${esc(itemCls({item_class:c})[2])}</option>`).join('')}</optgroup>`:''; }).join('');
+    h+=`<h2 id="b-facts">Fact base (${items.length} dated items)</h2><div class="controls"><label for="clsf">Type</label><select id="clsf"><option value="">All types</option>${opts}</select><label for="secf">Sector</label><select id="secf"><option value="">All</option><option>Energy</option><option>Banks</option></select></div><div class="scroller"><table class="stack" id="itbl"><thead><tr><th>Id</th><th class="t">Type</th><th class="t">Date</th><th class="t">Fact or statement</th><th class="t">Speaker</th><th class="t">Source</th></tr></thead><tbody>${items.map(i=>{ const c=itemCls(i); return `<tr data-cls="${esc(i.item_class)}" data-grp="${c[1]}" data-sec="${esc(i.sector)}"><td data-l="Id">${esc(i.item_id)}</td><td class="t" data-l="Type">${esc(c[2])}</td><td class="t" data-l="Date">${esc(i.pub_date)}</td><td class="t w" data-l="Fact or statement">${esc(i.fact_or_quote)}${i.value?` <b>${esc(i.value)}</b> ${esc(i.unit)}`:''}</td><td class="t" data-l="Speaker">${esc(i.speaker)}</td><td class="t" data-l="Source">${i.url?`<a href="${esc(i.url)}" target="_blank" rel="noopener">${esc(i.primary_secondary)}</a>`:esc(i.primary_secondary)}${i.read_primary==='N'?' <span class="src">(extract only)</span>':''}</td></tr>`; }).join('')}</tbody></table></div>`;
   }
-  return h;
+  return {html:h, title:'Budget and policy'};
 }
+// ---------------------------------------------------------------- overview, method, data
 function viewOverview(){
-  const G=D.guide||{}; let h=`<h1>Energy and Banks: financial analysis 2022–2026</h1><p class="lede">${esc(G.intro||'')}</p>`;
-  h+=`<div class="grid2">`;
+  const G=D.guide||{}; let h=`<h1>Energy and Banks: financial analysis 2022–2026</h1><p class="lede">${esc(G.intro||'')}</p><div class="grid2">`;
   ['Energy','Banks'].forEach(S=>{ const sc=D.sectors[S], top=sc.config.top_line, a=sc.sector.all; const N=D.sector_narr[S]||{};
     h+=`<div class="card"><h2 style="margin-top:0"><a href="#${S.toLowerCase()}">${S}</a> <span class="src">${sc.tickers.length} companies</span></h2><p>${esc(N.headline||'')}</p>
-    <dl class="kv"><dt>${esc(sc.config.top_line_name)} FY2025</dt><dd>SAR ${fm(a[top].totals.FY2025.v)} m · CAGR 22–25 ${fg(a[top].growth.CAGR_2022_2025.cagr)}</dd>
-    <dt>Net profit FY2025</dt><dd>SAR ${fm(a.NI_ATTR.totals.FY2025.v)} m · CAGR 22–25 ${fg(a.NI_ATTR.growth.CAGR_2022_2025.cagr)}</dd>
+    <dl class="kv"><dt>${esc(sc.config.top_line_name)} FY2025</dt><dd>SAR ${sumFig(S,'all',top,'FY2025',a[top].totals.FY2025.v,sc.config.top_line_name)} m · CAGR 22–25 ${fg(a[top].growth.CAGR_2022_2025.cagr)}</dd>
+    <dt>Net profit FY2025</dt><dd>SAR ${sumFig(S,'all','NI_ATTR','FY2025',a.NI_ATTR.totals.FY2025.v,'Net profit attributable')} m · CAGR 22–25 ${fg(a.NI_ATTR.growth.CAGR_2022_2025.cagr)}</dd>
     <dt>9M 2026 vs 9M 2025</dt><dd>${esc(sc.config.top_line_name)} ${fg(a[top].growth['9M2026/9M2025'].growth)} · profit ${fg(a.NI_ATTR.growth['9M2026/9M2025'].growth)}</dd></dl>
     <p><a href="#${S.toLowerCase()}">Open ${S} ›</a></p><p class="note">Companies: ${sc.tickers.map(t=>`<a href="#co-${t}">${esc(coName(t))}</a>`).join(' · ')}</p></div>`; });
   h+=`</div>`;
   const RS=D.review_summary||{};
-  if (RS.summary) h+=`<h2>Review status</h2><div class="callout">${esc(RS.summary)} <a href="#data">Details</a></div>`;
+  h+=`<h2>Review status</h2><div class="callout">${RS.summary?esc(RS.summary):'The independent review summary has not been embedded in this build.'} <a href="#data">Details</a></div>`;
   h+=`<h2>Budget and policy</h2><p>${esc((D.policy_narr||{}).headline||'')} <a href="#budget">Open the assessment ›</a></p>`;
   (G.sections||[]).slice(0,1).forEach(sct=>{ h+=`<h2>${esc(sct.heading)}</h2><ul class="clean">${sct.lines.map(l=>`<li>${esc(l)}</li>`).join('')}</ul>`; });
   h+=`<p class="note">As of ${esc(D.as_of)}. <a href="#method">How to read this analysis</a></p>`;
-  return h;
+  return {html:h, title:'Overview'};
 }
 function viewMethod(){
   const G=D.guide||{}; let h=`<div class="crumbs"><a href="#overview">Overview</a> › <span>How to read</span></div><h1>How to read this analysis</h1>`;
-  (G.sections||[]).forEach(sct=>{ h+=`<h2>${esc(sct.heading)}</h2><ul class="clean">${sct.lines.map(l=>`<li>${esc(l)}</li>`).join('')}</ul>`; });
-  h+=`<h2>Definitions</h2><div class="scroller"><table><tr><th>Code</th><th>Metric</th><th>Unit</th><th>Definition</th></tr>${Object.entries(D.metrics).map(([k,m])=>`<tr><td>${esc(k)}</td><td style="white-space:normal">${esc(m.name)}</td><td>${esc(m.unit)}</td><td style="white-space:normal;min-width:300px">${esc(m.def)}</td></tr>`).join('')}</table></div>`;
-  return h;
+  (G.sections||[]).filter(s=>!s.technical).forEach(sct=>{ h+=`<h2>${esc(sct.heading)}</h2><ul class="clean">${sct.lines.map(l=>`<li>${esc(l)}</li>`).join('')}</ul>`; });
+  h+=`<h2>Definitions</h2><div class="scroller"><table class="stack"><thead><tr><th>Code</th><th class="t">Metric</th><th class="t">Unit</th><th class="t">Definition</th></tr></thead><tbody>${Object.entries(D.metrics).map(([k,m])=>`<tr><td data-l="Code">${esc(k)}</td><td class="t" data-l="Metric">${esc(m.name)}</td><td class="t" data-l="Unit">${esc(m.unit)}</td><td class="t w" data-l="Definition">${esc(m.def)}</td></tr>`).join('')}</tbody></table></div>`;
+  (G.sections||[]).filter(s=>s.technical).forEach(sct=>{ h+=`<details style="margin-top:24px"><summary>${esc(sct.heading)}</summary><ul class="clean">${sct.lines.map(l=>`<li>${esc(l)}</li>`).join('')}</ul></details>`; });
+  return {html:h, title:'How to read'};
 }
 function viewData(){
-  let h=`<div class="crumbs"><a href="#overview">Overview</a> › <span>Sources &amp; review</span></div><h1>Coverage, sources and review</h1>`;
+  let h=`<div class="crumbs"><a href="#overview">Overview</a> › <span>Sources &amp; review</span></div><h1>Coverage, sources and review</h1>
+  <nav class="toc" aria-label="On this page"><a href="#d-rev" data-jump="d-rev">Review summary</a><a href="#d-trace" data-jump="d-trace">Traceability</a><a href="#d-cov" data-jump="d-cov">Coverage</a><a href="#d-log" data-jump="d-log">Review log</a><a href="#d-tpl" data-jump="d-tpl">Template changes</a><a href="#d-files" data-jump="d-files">Flagged files</a></nav>`;
   const RS=D.review_summary||{};
-  if (RS.summary) h+=`<h2>Independent review summary</h2><div class="callout">${esc(RS.summary)}</div>${['checked','fixed','unresolved'].filter(k=>RS[k]).map(k=>`<h3>${k==='checked'?'What was checked':k==='fixed'?'What was fixed':'Still unresolved'}</h3><ul class="clean">${RS[k].map(x=>`<li>${esc(x)}</li>`).join('')}</ul>`).join('')}`;
-  h+=`<h2>Coverage by company and period</h2><div class="controls"><label for="covf">Sector</label><select id="covf"><option value="">Both</option><option>Energy</option><option>Banks</option></select></div><div class="scroller"><table id="covt"><tr><th>Company</th>${['FY2022','FY2023','FY2024','FY2025','9M2025','9M2026'].map(p=>`<th>${PL[p]}</th>`).join('')}<th>Flags</th></tr>${D.coverage.map(r=>`<tr data-sec="${esc(r.sector)}"><td><a href="#co-${esc(r.ticker)}">${esc(r.company)}</a></td>${['FY2022','FY2023','FY2024','FY2025','9M2025','9M2026'].map(p=>`<td style="white-space:normal;min-width:150px;text-align:left" class="${/^MISSING/.test(r[p])?'neg':''}">${esc(r[p])}</td>`).join('')}<td style="white-space:normal;min-width:240px;text-align:left">${esc(r.flags)}</td></tr>`).join('')}</table></div>`;
-  if ((D.review||[]).length) h+=`<h2>Review log (${D.review.length} issues)</h2><div class="scroller"><table><tr>${Object.keys(D.review[0]).map(k=>`<th>${esc(k)}</th>`).join('')}</tr>${D.review.map(r=>`<tr>${Object.values(r).map(v=>`<td style="white-space:normal;text-align:left;min-width:90px">${esc(v)}</td>`).join('')}</tr>`).join('')}</table></div>`;
-  if ((D.template_changes||[]).length) h+=`<h2>Template improvements from the pilots</h2><ul class="clean">${D.template_changes.map(r=>`<li><b>${esc(r.change)}</b> ${esc(r.reason||'')}</li>`).join('')}</ul>`;
+  h+=`<h2 id="d-rev">Independent review summary</h2>`;
+  if (RS.summary) h+=`<div class="callout">${esc(RS.summary)}</div>${['checked','fixed','unresolved'].filter(k=>RS[k]).map(k=>`<h3>${k==='checked'?'What was checked':k==='fixed'?'What was fixed':'Still unresolved'}</h3><ul class="clean">${RS[k].map(x=>`<li>${esc(x)}</li>`).join('')}</ul>`).join('')}`;
+  else h+=`<p class="note">The review summary has not been embedded in this build.</p>`;
+  const T=D.trace||{}; const pc=(a,b)=>b?Math.round(a/b*100)+'%':'–';
+  h+=`<h2 id="d-trace">Traceability of figures</h2><p>Company tables show ${T.figures} figures: ${T.disclosed} taken from filings and ${T.calculated} calculated from them. Every disclosed figure names its archive file and XBRL section and row (or PDF page). The PDF page was located by text search for ${T.with_page} of ${T.disclosed} (${pc(T.with_page,T.disclosed)}); the rest sit on scanned pages or differ by rounding. A saudiexchange.sa link is available for ${T.with_link} (${pc(T.with_link,T.disclosed)}), because the archive's manifests list the exchange address only for each company's most recent filings.</p>`;
+  h+=`<h2 id="d-cov">Coverage by company and period</h2><div class="controls"><label for="covf">Sector</label><select id="covf"><option value="">Both</option><option>Energy</option><option>Banks</option></select></div><div class="scroller"><table class="stack" id="covt"><thead><tr><th>Company</th>${['FY2022','FY2023','FY2024','FY2025','9M2025','9M2026'].map(p=>`<th class="t">${PL[p]}</th>`).join('')}<th class="t">Flags</th></tr></thead><tbody>${D.coverage.map(r=>`<tr data-sec="${esc(r.sector)}"><td data-l="Company"><a href="#co-${esc(r.ticker)}">${esc(r.company)}</a></td>${['FY2022','FY2023','FY2024','FY2025','9M2025','9M2026'].map(p=>`<td class="t ${/^MISSING/.test(r[p])?'neg':''}" data-l="${PL[p]}" style="min-width:150px">${esc(r[p])}</td>`).join('')}<td class="t" data-l="Flags" style="min-width:240px">${esc(r.flags)}</td></tr>`).join('')}</tbody></table></div>`;
+  const R=D.review||[];
+  h+=`<h2 id="d-log">Review log (${R.length} issues)</h2>`;
+  if (R.length){ const groups=[...new Set(R.map(r=>r.review))];
+    groups.forEach(g=>{ const rs=R.filter(r=>r.review===g); const cnt={}; rs.forEach(r=>{ const k=(r.status||'').split(/[ (;:]/)[0]||'open'; cnt[k]=(cnt[k]||0)+1; });
+      h+=`<details><summary>${esc(g)} · ${rs.length} issues (${Object.entries(cnt).map(([k,v])=>`${v} ${esc(k)}`).join(', ')})</summary><div class="scroller"><table class="stack"><thead><tr><th>Issue</th><th class="t">Severity</th><th class="t">Where</th><th class="t">Finding</th><th class="t">Status</th><th class="t">Fix</th><th class="t">Recheck</th></tr></thead><tbody>${rs.map(r=>`<tr><td data-l="Issue">${esc(r.issue_id)}</td><td class="t" data-l="Severity">${esc(r.severity)}</td><td class="t" data-l="Where" style="min-width:140px">${esc(r.where)}</td><td class="t w" data-l="Finding">${esc(r.finding)}</td><td class="t" data-l="Status">${esc(r.status)}</td><td class="t w" data-l="Fix">${esc(r.fix)}</td><td class="t" data-l="Recheck" style="min-width:160px">${esc(r.recheck)}</td></tr>`).join('')}</tbody></table></div></details>`; });
+  } else h+=`<p class="note">The review log has not been embedded in this build.</p>`;
+  if ((D.template_changes||[]).length) h+=`<h2 id="d-tpl">Template improvements from the pilots</h2><ul class="clean">${D.template_changes.map(r=>`<li><b>${esc(r.change)}</b> ${esc(r.reason||'')}</li>`).join('')}</ul>`;
   const bad=Object.entries(D.sources).filter(([k,v])=>v.status!=='used');
-  h+=`<h2>Files with flags (${bad.length} of ${Object.keys(D.sources).length})</h2><div class="scroller"><table><tr><th>File</th><th>Status</th><th>Reason</th></tr>${bad.map(([k,v])=>`<tr><td>${v.url?`<a href="${esc(v.url)}" target="_blank" rel="noopener">${esc(k)}</a>`:esc(k)}</td><td>${esc(v.status)}</td><td style="white-space:normal;text-align:left">${esc(v.reason)}</td></tr>`).join('')}</table></div>`;
-  return h;
+  h+=`<h2 id="d-files">Files with flags (${bad.length} of ${Object.keys(D.sources).length})</h2><div class="scroller"><table class="stack"><thead><tr><th>File</th><th class="t">Status</th><th class="t">Reason</th></tr></thead><tbody>${bad.map(([k,v])=>`<tr><td data-l="File">${v.url?`<a href="${esc(v.url)}" target="_blank" rel="noopener">${esc(k)}</a>`:esc(k)}</td><td class="t" data-l="Status">${esc(v.status)}</td><td class="t w" data-l="Reason">${esc(v.reason)}</td></tr>`).join('')}</tbody></table></div>`;
+  return {html:h, title:'Sources and review'};
+}
+// ---------------------------------------------------------------- post-render: n.m. explanations
+function postRender(root){
+  const w=document.createTreeWalker(root, NodeFilter.SHOW_TEXT, {acceptNode:n=> (n.nodeValue.indexOf('n.m.')>=0 && !n.parentNode.closest('abbr,button[data-ref],script,option,.tip,svg')) ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_REJECT});
+  const nodes=[]; while(w.nextNode()) nodes.push(w.currentNode);
+  nodes.forEach(n=>{ const parts=n.nodeValue.split('n.m.'); const frag=document.createDocumentFragment();
+    parts.forEach((p,i)=>{ if(p) frag.appendChild(document.createTextNode(p)); if(i<parts.length-1){ const a=document.createElement('abbr'); a.title=NM_TITLE; a.textContent='n.m.'; frag.appendChild(a); } });
+    n.parentNode.replaceChild(frag,n); });
 }
 // ---------------------------------------------------------------- router
 const jump = $('#jumpco');
 jump.innerHTML = `<option value="">Go to a company…</option>` + ['Energy','Banks'].map(S=>`<optgroup label="${S}">${D.sectors[S].tickers.map(t=>`<option value="${t}">${esc(coName(t))}</option>`).join('')}</optgroup>`).join('');
 jump.addEventListener('change', ()=>{ if (jump.value) location.hash='co-'+jump.value; });
+function route(){
+  const v=(location.hash||'#overview').slice(1)||'overview'; const m=v.match(/^(energy|banks)(?:\/(ex))?$/);
+  if (m) return {kind:'sector', key:m[1], scope:m[2]?'ex_largest':'all', nav:m[1]};
+  if (/^co-\d{4}$/.test(v) && coInfo(v.slice(3))) return {kind:'company', t:v.slice(3), nav:coSector(v.slice(3)).toLowerCase()};
+  if (['budget','method','data'].includes(v)) return {kind:v, nav:v};
+  return {kind:'overview', nav:'overview'};
+}
 function render(){
-  FIGS={}; figN=0; closeDrawer();
-  const v=(location.hash||'#overview').slice(1)||'overview'; let html='', nav=v;
-  if (v==='energy'||v==='banks') html=viewSector(v);
-  else if (/^co-\d{4}$/.test(v) && (D.sectors.Energy.companies[v.slice(3)]||D.sectors.Banks.companies[v.slice(3)])) { html=viewCompany(v.slice(3)); nav=coSector(v.slice(3)).toLowerCase(); }
-  else if (v==='budget') html=viewBudget(); else if (v==='method') html=viewMethod(); else if (v==='data') html=viewData();
-  else { html=viewOverview(); nav='overview'; }
-  $('#main').innerHTML=html;
-  document.querySelectorAll('nav.main a').forEach(a=>a.toggleAttribute('aria-current', a.dataset.v===nav) || (a.dataset.v===nav && a.setAttribute('aria-current','page')));
-  document.querySelectorAll('nav.main a').forEach(a=>{ if(a.dataset.v===nav) a.setAttribute('aria-current','page'); else a.removeAttribute('aria-current'); });
-  jump.value = /^co-/.test(v) ? v.slice(3) : '';
-  document.title = 'Saudi Sector Financials';
-  wire(v);
+  FIGS={}; figN=0; hideDrawer(); drawerPushed=false; CW=colW();
+  const r=route(); let out;
+  if (r.kind==='sector') out=viewSector(r.key, r.scope); else if (r.kind==='company') out=viewCompany(r.t);
+  else if (r.kind==='budget') out=viewBudget(); else if (r.kind==='method') out=viewMethod(); else if (r.kind==='data') out=viewData(); else out=viewOverview();
+  $('#main').innerHTML=out.html; postRender($('#main'));
+  document.querySelectorAll('nav.main a').forEach(a=>{ if(a.dataset.v===r.nav) a.setAttribute('aria-current','page'); else a.removeAttribute('aria-current'); });
+  jump.value = r.kind==='company' ? r.t : '';
+  document.title = out.title + ' · Saudi Sector Financials';
+  wire(r);
 }
-function wire(v){
-  document.querySelectorAll('[data-scope]').forEach(b=>b.addEventListener('click', ()=>{ const S=SECT[v]; scopeState[S]=b.dataset.scope; const y=window.scrollY; render(); window.scrollTo(0,y); }));
-  const ps=$('#pairsel'); if(ps) ps.addEventListener('change', ()=>{ pairState[SECT[v]]=ps.value; const y=window.scrollY; render(); window.scrollTo(0,y); });
-  const cs=$('#cosel'); if(cs) cs.addEventListener('change', ()=>{ location.hash='co-'+cs.value; });
-  const bs=$('#brsel'); if(bs) bs.addEventListener('change', ()=>{ window.__bridgePair=window.__bridgePair||{}; window.__bridgePair[bs.dataset.t]=bs.value; const y=window.scrollY; render(); window.scrollTo(0,y); });
-  const cf=$('#clsf'), sf=$('#secf'); const ff=()=>{ document.querySelectorAll('#itbl tr[data-cls]').forEach(r=>{ r.hidden = (cf.value && r.dataset.cls!==cf.value) || (sf.value && r.dataset.sec!==sf.value && r.dataset.sec!=='All'); }); };
+function rerender(){
+  const y=window.scrollY, a=document.activeElement; let key=null;
+  if (a && a!==document.body){ if (a.id) key='#'+a.id; else if (a.dataset && a.dataset.scope) key=`[data-scope="${a.dataset.scope}"]`; }
+  render(); window.scrollTo(0,y); if(key){ const el=document.querySelector(key); if(el) el.focus({preventScroll:true}); }
+}
+function wire(r){
+  document.querySelectorAll('[data-scope]').forEach(b=>b.addEventListener('click', ()=>{ history.replaceState(null,'','#'+r.key+(b.dataset.scope==='all'?'':'/ex')); rerender(); }));
+  const ps=$('#pairsel'); if(ps) ps.addEventListener('change', ()=>{ pairState[SECT[r.key]]=ps.value; rerender(); });
+  const bs=$('#brsel'); if(bs) bs.addEventListener('change', ()=>{ window.__bridgePair=window.__bridgePair||{}; window.__bridgePair[bs.dataset.t]=bs.value; rerender(); });
+  const cf=$('#clsf'), sf=$('#secf'); const ff=()=>{ document.querySelectorAll('#itbl tr[data-cls]').forEach(x=>{ const cv=cf.value; const okc=!cv || (cv.startsWith('g:')? x.dataset.grp===cv.slice(2) : x.dataset.cls===cv); x.hidden = !okc || (sf.value && x.dataset.sec!==sf.value && x.dataset.sec!=='All'); }); };
   if(cf){ cf.addEventListener('change',ff); sf.addEventListener('change',ff); }
-  const cv=$('#covf'); if(cv) cv.addEventListener('change', ()=>{ document.querySelectorAll('#covt tr[data-sec]').forEach(r=>{ r.hidden = cv.value && r.dataset.sec!==cv.value; }); });
+  const cv=$('#covf'); if(cv) cv.addEventListener('change', ()=>{ document.querySelectorAll('#covt tr[data-sec]').forEach(x=>{ x.hidden = cv.value && x.dataset.sec!==cv.value; }); });
 }
+let rz=null; window.addEventListener('resize', ()=>{ clearTimeout(rz); rz=setTimeout(()=>{ if(Math.abs(colW()-CW)>24) rerender(); }, 200); });
 window.addEventListener('hashchange', ()=>{ render(); window.scrollTo(0,0); $('#main').focus({preventScroll:true}); });
+setPV('fy');
 render();
 })();
 </script>

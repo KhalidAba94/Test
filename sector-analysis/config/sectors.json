@@ -6,27 +6,33 @@
   "constituents": {
    "2222": {
     "name": "Saudi Aramco",
-    "sub_industry": "Integrated oil & gas"
+    "sub_industry": "Integrated oil & gas",
+    "short": "Aramco"
    },
    "4030": {
     "name": "Bahri (National Shipping Co.)",
-    "sub_industry": "Energy shipping & logistics"
+    "sub_industry": "Energy shipping & logistics",
+    "short": "Bahri"
    },
    "2380": {
     "name": "Petro Rabigh",
-    "sub_industry": "Refining & petrochemicals"
+    "sub_industry": "Refining & petrochemicals",
+    "short": "Petro Rabigh"
    },
    "2382": {
     "name": "ADES Holding",
-    "sub_industry": "Offshore & onshore drilling"
+    "sub_industry": "Offshore & onshore drilling",
+    "short": "ADES"
    },
    "2381": {
     "name": "Arabian Drilling",
-    "sub_industry": "Onshore & offshore drilling"
+    "sub_industry": "Onshore & offshore drilling",
+    "short": "Arabian Drilling"
    },
    "2030": {
     "name": "SARCO (Saudi Arabia Refineries)",
-    "sub_industry": "Investment holding (refining-related)"
+    "sub_industry": "Investment holding (refining-related)",
+    "short": "SARCO"
    }
   },
   "table_metrics": [
@@ -86,43 +92,53 @@
   "constituents": {
    "1120": {
     "name": "Al Rajhi Bank",
-    "sub_industry": "Islamic bank"
+    "sub_industry": "Islamic bank",
+    "short": "Al Rajhi"
    },
    "1180": {
     "name": "Saudi National Bank (SNB)",
-    "sub_industry": "Conventional bank"
+    "sub_industry": "Conventional bank",
+    "short": "SNB"
    },
    "1010": {
     "name": "Riyad Bank",
-    "sub_industry": "Conventional bank"
+    "sub_industry": "Conventional bank",
+    "short": "Riyad Bank"
    },
    "1060": {
     "name": "Saudi Awwal Bank (SAB)",
-    "sub_industry": "Conventional bank"
+    "sub_industry": "Conventional bank",
+    "short": "SAB"
    },
    "1150": {
     "name": "Alinma Bank",
-    "sub_industry": "Islamic bank"
+    "sub_industry": "Islamic bank",
+    "short": "Alinma"
    },
    "1050": {
     "name": "Banque Saudi Fransi (BSF)",
-    "sub_industry": "Conventional bank"
+    "sub_industry": "Conventional bank",
+    "short": "BSF"
    },
    "1080": {
     "name": "Arab National Bank (ANB)",
-    "sub_industry": "Conventional bank"
+    "sub_industry": "Conventional bank",
+    "short": "ANB"
    },
    "1140": {
     "name": "Bank Albilad",
-    "sub_industry": "Islamic bank"
+    "sub_industry": "Islamic bank",
+    "short": "Albilad"
    },
    "1030": {
     "name": "Saudi Investment Bank (SAIB)",
-    "sub_industry": "Conventional bank"
+    "sub_industry": "Conventional bank",
+    "short": "SAIB"
    },
    "1020": {
     "name": "Bank Aljazira (BJAZ)",
-    "sub_industry": "Islamic bank"
+    "sub_industry": "Islamic bank",
+    "short": "Aljazira"
    }
   },
   "table_metrics": [

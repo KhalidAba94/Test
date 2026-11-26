@@ -57,8 +57,8 @@ what_it_means:
   uncertain: "Results depend on Saudi share-price movements, and the new businesses (manufacturing, green ammonia, storage) and the proposed SAR 300m rights issue are too recent to assess."
 confidence_overall: "High"
 data_notes:
-  - "SARCO has no revenue before Q3 2026, so revenue-based ratios are blank for FY2022-FY2025 and not meaningful for 9M 2026 (dataset EBITDA margin -2,221.0%, net margin -2,544.4%, capex/revenue 3,352.5%, all on SAR 1.1m of revenue)."
-  - "Operating income (OPINC) for SARCO is PBT + finance costs - finance income with investment results (dividends, associates, FVTPL gains and losses) kept inside, so it is close to PBT. The XBRL 'Operating profit' kept as OPINC_REP for 9M (-SAR 9.1m and -SAR 7.3m) is gross profit less G&A only; the company's own '(loss)/profit from operations' line is -SAR 24.9m (9M 2026) and -SAR 16.5m (9M 2025)."
-  - "The dataset shows attributable profit growth FY2024/FY2023 of -794.5% and CFO and FCF growth FY2025/FY2024 of -245.3% and -255.3%; each changes sign, so under METHODOLOGY s.1 they should read n.m. Capex growth rates (e.g. 7,288.1% for 9M 2026) rest on near-zero bases."
+  - "SARCO has no revenue before Q3 2026 (SAR 1.1m in 9M 2026), so revenue-based ratios are blank for FY2022-FY2025 and shown as n.m. for 9M 2026 under the SAR 10m materiality rule."
+  - "Operating income (OPINC) for SARCO is PBT + finance costs - finance income with investment results (dividends, associates, FVTPL gains and losses) kept inside, so it is close to PBT. The XBRL 'Operating profit' tag for 9M (-SAR 9.1m and -SAR 7.3m, not used) is gross profit less G&A only; the company's own '(loss)/profit from operations' line is -SAR 24.9m (9M 2026) and -SAR 16.5m (9M 2025)."
+  - "Growth rates that cross from profit to loss, or start from a base below SAR 10m (e.g. capex, which was under SAR 1m a year until 2025), are shown as n.m. under METHODOLOGY s.1."
   - "FY2024 G&A was re-presented in the FY2025 AFS to include right-of-use depreciation (SAR 0.1m); net loss unchanged. The FY2023 AFS is fully scanned; FY2023 figures were taken from the FY2024 AFS comparatives."
   - "Net loss (SAR 27.5m) and attributable loss (SAR 27.4m) differ in 9M 2026 by the 15% non-controlling interest in Lawazem."

@@ -48,13 +48,19 @@ def pdf_check(path, ticker, year, label):
     pages = re.search(r"Pages:\s+(\d+)", info)
     n_pages = int(pages.group(1)) if pages else None
     img = [i + 1 for i, pg in enumerate(full[: (n_pages or len(full))]) if len(pg.strip()) < 80]
-    stmt_text = any(re.search(r"statement of (financial position|profit|income|comprehensive)|balance sheet|income statement", pg, re.I)
-                    and re.search(r"\d{1,3},\d{3}", pg) for pg in full[:20])
+    def is_statement_page(pg):
+        # a primary statement has its title in the page heading (not "notes to ...") and many amounts
+        head = " ".join([ln for ln in pg.splitlines() if ln.strip()][:6])
+        return (re.search(r"statement of (financial position|profit|income|comprehensive)|balance sheet|income statement", head, re.I)
+                and not re.search(r"notes to", head, re.I) and len(re.findall(r"\d{1,3},\d{3}", pg)) >= 10)
+    stmt_text = any(is_statement_page(pg) for pg in full[:20])
     early = [i for i in img if i <= 15] if not stmt_text else []
     scan_note = (f"{len(img)} of {n_pages} pages have no text layer" + (f" (incl. pages {','.join(map(str, early[:8]))} where the primary statements usually sit)" if early else "")
                  + "; figures on those pages were taken from the XBRL file and checked visually where audited") if img else ""
-    if len(flat.strip()) < 200:
+    if len(flat.strip()) < 200 and not stmt_text:
         return n_pages, "", "", "scanned: " + scan_note
+    if len(flat.strip()) < 200:   # cover/auditor pages are images but the statements have text: search further
+        flat = re.sub(r"\s+", " ", "\n".join(full[:14]))
     name_ok = any(k.lower() in flat.lower() for k in NAME_KEYS.get(ticker, []))
     mo, dd = PERIOD_END[label]
     date_ok = any(p.lower() in flat.lower() for p in date_patterns(int(year), mo, dd))

@@ -10,7 +10,8 @@ import math
 from dataclasses import dataclass, field
 from typing import Iterable
 
-NM = "n.m."   # not meaningful (non-positive base or sign change)
+NM = "n.m."   # not meaningful (non-positive or immaterial base, or sign change)
+MIN_BASE = 10.0   # SAR m: growth, CAGR and revenue-based ratios on a smaller base are not meaningful
 NA = None     # missing input
 
 
@@ -19,18 +20,19 @@ def _ok(x) -> bool:
 
 
 def growth(cur, prior):
-    """YoY growth as a fraction; n.m. if prior <= 0 or the sign changes; None if either side is missing."""
+    """YoY growth as a fraction; n.m. if prior is below MIN_BASE (zero, negative or immaterial) or the
+    sign changes; None if either side is missing."""
     if not (_ok(cur) and _ok(prior)):
         return NA
-    if prior <= 0 or cur < 0:
-        return NM   # non-positive base or a change of sign (profit to loss) is not meaningful
+    if prior < MIN_BASE or cur < 0:
+        return NM   # non-positive or immaterial base, or a change of sign (profit to loss)
     return cur / prior - 1.0
 
 
 def cagr(end, start, years: int):
     if not (_ok(end) and _ok(start)):
         return NA
-    if start <= 0 or end <= 0:
+    if start < MIN_BASE or end <= 0:
         return NM
     return (end / start) ** (1.0 / years) - 1.0
 
@@ -104,7 +106,7 @@ def matched_growth(facts: Facts, tickers, cur_p, prior_p, metric):
     pri = sum(facts.get(t, prior_p, metric) for t in sample) if sample else NA
     g = growth(cur, pri)
     contrib = {}
-    if _ok(pri) and pri > 0:
+    if _ok(pri) and pri >= MIN_BASE:
         for t in sample:
             contrib[t] = (facts.get(t, cur_p, metric) - facts.get(t, prior_p, metric)) / pri
     return {"growth": g, "cur": cur, "prior": pri, "sample": sample,

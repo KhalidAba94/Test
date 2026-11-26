@@ -1,30 +1,30 @@
 ticker,period,metric_code,reason,source
 2380,FY2024,REV,"IFRS 15 reassessment: marketer charge-backs (shipping, handling, insurance, customs) now netted against revenue instead of selling expenses (FY2024 restated by -686.9m); FY2022-FY2023 remain on the gross basis.",2380_PETRO_RABIGH/2025_Annual_filed2026-03-12.pdf p.44
-2380,FY2024,GP,"Same IFRS 15 netting of marketer charge-backs.",2380_PETRO_RABIGH/2025_Annual_filed2026-03-12.pdf p.44
-2380,9M2024,REV,"Same IFRS 15 netting of marketer charge-backs.",2380_PETRO_RABIGH/2025_Q3 interim
-2222,FY2024,DA_CF,"Impairment losses previously within depreciation re-presented on a separate 'impairment and held for sale remeasurement losses' line; EBITDA unaffected.",2222_SAUDI_ARAMCO/2025_Annual_filed2026-03-10.pdf p.24
-2222,9M2025,DA_CF,"Same re-presentation of impairment out of depreciation.",2222_SAUDI_ARAMCO/2026_Q3_filed2026-11-03.pdf
+2380,FY2024,GP,Same IFRS 15 netting of marketer charge-backs.,2380_PETRO_RABIGH/2025_Annual_filed2026-03-12.pdf p.44
+2380,9M2024,REV,Same IFRS 15 netting of marketer charge-backs.,2380_PETRO_RABIGH/2025_Q3 interim
+2222,FY2024,DA_CF,Impairment losses previously within depreciation re-presented on a separate 'impairment and held for sale remeasurement losses' line; EBITDA unaffected.,2222_SAUDI_ARAMCO/2025_Annual_filed2026-03-10.pdf p.24
+2222,9M2025,DA_CF,Same re-presentation of impairment out of depreciation.,2222_SAUDI_ARAMCO/2026_Q3_filed2026-11-03.pdf
 4030,9M2025,COGS,"Reclassification of SAR 112.3m from cost of sales into G&A, a new marketing line and other expenses.",4030_BAHRI/2026_Q3_filed2026-11-03.pdf
-4030,9M2025,GP,"Same reclassification out of cost of sales.",4030_BAHRI/2026_Q3_filed2026-11-03.pdf
+4030,9M2025,GP,Same reclassification out of cost of sales.,4030_BAHRI/2026_Q3_filed2026-11-03.pdf
 4030,FY2022,CFO,"FY2023 AFS reclassified SAR 14.2m between working capital and lease payments; the XBRL comparative was not updated, so the PDF value is used.",4030_BAHRI/2023_Annual_filed2024-03-21.pdf p.10
 1010,FY2024,EQ_ATTR,"IAS 8 correction of a prior-period error: unlisted FVOCI equity stake (incl. SIMAH) carried at cost instead of fair value; +451.5m to investments and reserves, no profit effect.",1010_RIBL/2025_Q3 interim
-1020,FY2024,EQ_ATTR,"IAS 8 correction: unlisted FVOCI equity investments revalued to fair value (+212.6m); no profit effect.",1020_BJAZ/2025_Q3 interim
+1020,FY2024,EQ_ATTR,IAS 8 correction: unlisted FVOCI equity investments revalued to fair value (+212.6m); no profit effect.,1020_BJAZ/2025_Q3 interim
 1030,FY2024,EQ_ATTR,"IAS 8 correction: unlisted FVOCI equity investments revalued (+402.7m: 361.7m opening equity, 41.0m 2024 OCI); no profit effect.",1030_SAIB/2025_Q3 interim
-1050,FY2024,EQ_ATTR,"IAS 8 correction: unlisted FVOCI equity investments revalued (+530.9m); no profit effect.",1050_BSF/2025_Q3 interim
+1050,FY2024,EQ_ATTR,IAS 8 correction: unlisted FVOCI equity investments revalued (+530.9m); no profit effect.,1050_BSF/2025_Q3 interim
 1060,FY2024,EQ_ATTR,"IAS 8 correction: unlisted FVOCI equity investments revalued (+918.5m) plus a previously unrecorded investment (+242.1m) = +1,160.6m; no profit effect.",1060_SAB/2025_Q3 interim
-1080,FY2024,EQ_ATTR,"IAS 8 correction: unlisted FVOCI equity investments carried at cost revalued (+604.5m; net +532.7m after a -71.8m deferred-tax correction in the FY2025 AFS); no profit effect.",1080_ANB/2025_Q3 interim p.25; 2025 AFS p.89
-1060,FY2022,NI_ATTR,"Purchase price allocation for the HSBC Saudi Arabia businesses finalised; FY2022 net income reduced by 46.6m.",1060_SAB/2023_Annual AFS
-1050,FY2023,EQ_ATTR,"Restated +282.8m for previously unrecorded equity investments (sold in Q4 2024 for a 296m gain).",1050_BSF/2024_Annual AFS
-1120,FY2024,DEPOSITS,"Funding re-presentation: part of 'due to banks' reclassified into customer deposits (628.2bn -> 655.0bn).",1120_ALRAJHI/2025_Annual_filed2026-02-04.pdf
+1080,FY2024,EQ_ATTR,IAS 8 correction: unlisted FVOCI equity investments carried at cost revalued (+604.5m; net +532.7m after a -71.8m deferred-tax correction in the FY2025 AFS); no profit effect.,1080_ANB/2025_Q3 interim p.25; 2025 AFS p.89
+1060,FY2022,NI_ATTR,Purchase price allocation for the HSBC Saudi Arabia businesses finalised; FY2022 net income reduced by 46.6m.,1060_SAB/2023_Annual AFS
+1050,FY2023,EQ_ATTR,Restated +282.8m for previously unrecorded equity investments (sold in Q4 2024 for a 296m gain).,1050_BSF/2024_Annual AFS
+1120,FY2024,DEPOSITS,Funding re-presentation: part of 'due to banks' reclassified into customer deposits (628.2bn -> 655.0bn).,1120_ALRAJHI/2025_Annual_filed2026-02-04.pdf
 2382,FY2024,CAPEX,"NOT A RESTATEMENT: the FY2024 XBRL capex tag included the SAR 712.1m acquisition outflow; both AFS PDFs show capex of SAR 2,376.3m (PP&E 2,375.1 + intangibles 1.2).",2382_ADES/2024_Annual_filed2025-03-04.pdf p.12
 2381,FY2024,CAPEX,"NOT A RESTATEMENT: PP&E additions are SAR 1,859.7m in both AFS; the later figure adds intangible additions (SAR 1,910.3m in total).",2381_ARABIAN_DRILLING/2024_Annual_filed2025-03-12.pdf p.12
-2381,FY2022,IMPAIR_CF,"NOT A RESTATEMENT: XBRL tagging of impairment add-backs differs between filings; immaterial.",XBRL
-2381,FY2023,IMPAIR_CF,"NOT A RESTATEMENT: XBRL tagging of impairment add-backs differs between filings; immaterial.",XBRL
-2030,9M2025,SHARE_JV,"NOT A RESTATEMENT: SARCO's XBRL subtotal for investment results was re-tagged in the 2026 filing.",XBRL
-2381,FY2025,TA,"2026 interim comparatives show 31 Dec 2025 total assets of SAR 10,177.2m vs 10,089.4m in the FY2025 AFS; the interims give no reason. Latest figure used.",2381_ARABIAN_DRILLING/2026_Q2 and Q3 interims
-4030,FY2023,CFO,"FY2024 AFS cash-flow comparative (SAR 3,560.6m) differs from the FY2023 AFS (3,642.9m); a reclassification within the cash-flow statement, reason not stated. Latest figure used.",4030_BAHRI/2024_Annual_filed2025-03-26.pdf
+2381,FY2022,IMPAIR_CF,NOT A RESTATEMENT: XBRL tagging of impairment add-backs differs between filings; immaterial.,XBRL
+2381,FY2023,IMPAIR_CF,NOT A RESTATEMENT: XBRL tagging of impairment add-backs differs between filings; immaterial.,XBRL
+2030,9M2025,SHARE_JV,NOT A RESTATEMENT: SARCO's XBRL subtotal for investment results was re-tagged in the 2026 filing.,XBRL
+2381,FY2025,TA,"Reclassification: the 2026 interims gross up mobilisation cost (SAR 87.8m, now shown as an asset) against mobilisation revenue (liability), per note 16 of the 9M 2026 interim; 31 Dec 2025 total assets SAR 10,177.2m vs 10,089.4m in the FY2025 AFS. No profit or cash-flow effect. Latest figure used.",2381_ARABIAN_DRILLING/2026_Q3 interim p.23 (note 16)
+4030,FY2023,CFO,"Reclassification: from FY2024 Bahri classifies finance income received as investing cash flow (accounting policy 4.13); the FY2023 comparative moved SAR 82.3m out of operating cash flow (3,642.9m -> 3,560.6m). Latest figure used.",4030_BAHRI/2024_Annual_filed2025-03-26.pdf p.22 (policy 4.13); cash-flow statement p.11 (image page)
 1120,FY2023,FEES_NET,"NOT A RESTATEMENT: the FY2023 XBRL tag added exchange income to fees; the AFS shows net fees of SAR 4,225.7m.",1120_ALRAJHI/2023_Annual_filed2024-02-08.pdf p.57
-1120,FY2023,OTHER_OI,"NOT A RESTATEMENT: follows the FY2023 fee tag correction.",1120_ALRAJHI/2023_Annual_filed2024-02-08.pdf p.10
+1120,FY2023,OTHER_OI,NOT A RESTATEMENT: follows the FY2023 fee tag correction.,1120_ALRAJHI/2023_Annual_filed2024-02-08.pdf p.10
 1050,FY2021,EQ_ATTR,"NOT A RESTATEMENT: the original XBRL value excluded Tier 1 sukuk; the figure used includes them, consistently with other periods.",1050_BSF/2023_Annual_filed2024-02-13.pdf p.13
 1120,FY2024,DEPOSITS,"Series break: SAR 26,750m moved from 'due to banks' into customer deposits at 31 Dec 2024 (note 43); FY2022-FY2023 not re-presented (like-for-like FY2024 deposit growth 9.6%).",1120_ALRAJHI/2025_Annual_filed2026-02-04.pdf p.109
 1060,FY2023,DEPOSITS,"Restated in the FY2024 AFS (240,940m -> 253,457m); FY2022 not re-presented (like-for-like FY2023 deposit growth 12.4%).",1060_SAB/2024_Annual AFS

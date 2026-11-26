@@ -11,4 +11,5 @@ python3 "$HERE/coverage.py" "$ROOT"
 (cd "$HERE" && python3 build_workbook.py "$ROOT" "$ROOT/output/Saudi_Sector_Analysis_Energy_Banks.xlsx")
 python3 "$RECALC" "$ROOT/output/Saudi_Sector_Analysis_Energy_Banks.xlsx" 300 | head -5
 python3 "$HERE/check_workbook.py" "$ROOT" "$ROOT/output/Saudi_Sector_Analysis_Energy_Banks.xlsx" | tail -3
-python3 "$HERE/build_web.py" "$ROOT" "$ROOT/output/index.html"
+python3 "$HERE/review_log.py" "$ROOT" | tail -1
+python3 "$HERE/build_web.py" "$ROOT" "$ROOT/output/index.html" ${ARTIFACT_OUT:-}
