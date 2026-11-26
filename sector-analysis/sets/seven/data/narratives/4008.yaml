@@ -1,0 +1,130 @@
+ticker: '4008'
+headline: SACO moved from a SAR 143m loss in FY2022 to a SAR 45.6m profit in FY2025, but almost all of the FY2025 profit came from a SAR 42.2m gain on selling a warehouse; in 9M 2026 revenue fell 11.3% with 32 stores and it returned to a SAR 15.5m loss.
+lfl_basis:
+  definition_used: Standard bridge on IFRS revenue. SACO made no acquisitions or disposals of businesses from FY2022 to 9M 2026 (its only subsidiary, Medscan, a logistics company, was bought in 2016), and all revenue is earned in Saudi Arabia, so perimeter and FX effects are nil and organic growth equals reported growth. The filings give period-end store counts (33 in 2021-2022, 32 from 2023) but not openings, closures or like-for-like sales, so the new-capacity step and like-for-like growth are not determinable.
+  perimeter_changes:
+  - event: No business combinations or disposals; Medscan (logistics) owned since 2016
+    date: FY2022-9M2026
+    effect: nil
+    source: 4008_SACO/2022_Annual_filed2023-03-26.pdf p.36; 4008_SACO/2025_Annual_filed2026-03-10.pdf p.12
+  capacity_changes:
+  - event: Leased stores 33 to 32
+    date: '2023'
+    effect: not determinable (revenue of the closed store not disclosed)
+    source: 4008_SACO/2023_Annual_filed2024-03-12.pdf p.13
+  - event: 32 leased stores at every period end from 31 Dec 2023 to 30 Sep 2026, plus one franchisee store in Tabuk
+    date: 2023-2026
+    effect: not determinable (openings and closures within periods not disclosed)
+    source: 4008_SACO/2025_Annual_filed2026-03-10.pdf p.12; 4008_SACO/2026_Q3_filed2026-11-12.pdf p.9
+  fx_exposure: All revenue is earned in Saudi Arabia; no FX effect.
+  price_volume_support: Not determinable. Revenue is split only into sales and services and logistics; no prices, volumes, transactions or sales per store are disclosed.
+  confidence: Medium (perimeter and FX nil with High confidence; new capacity not determinable)
+price_volume:
+- period: FY2025 vs FY2024
+  text: Revenue rose SAR 73.5m (+7.4%). Sales and services revenue rose 8.0% (SAR 951m to SAR 1,027m) with 32 stores at both year-ends, while external logistics revenue fell 5.2% (SAR 42.4m to SAR 40.1m). Prices and volumes are not disclosed.
+  basis: disclosed (segment revenue, store counts); split not determinable
+  confidence: High for the amounts
+  source: 4008_SACO/2025_Annual_filed2026-03-10.pdf p.44-45, p.12
+  refs:
+  - 4008-FY2025-REV
+  - 4008-FY2024-REV
+- period: 9M2026 vs 9M2025
+  text: 'Revenue fell SAR 87.7m (-11.3%) with 32 stores in both periods: sales and services fell 10.0% (SAR 744m to SAR 670m) and external logistics revenue fell 41.6% (SAR 32.0m to SAR 18.7m). The interim gives no reason.'
+  basis: disclosed (segment revenue, store counts); split not determinable
+  confidence: High for the amounts
+  source: 4008_SACO/2026_Q3_filed2026-11-12.pdf p.20-21, p.9
+  refs:
+  - 4008-9M2026-REV
+  - 4008-9M2025-REV
+profit_and_margin:
+  drivers:
+  - period: FY2023
+    driver: Revenue fell 18.2% to SAR 930m as stores fell from 33 to 32, but gross profit rose 54.0% to SAR 104m (gross margin 11.2% vs 5.9%, we calculate). Inventory provisions swung from SAR 43.9m of charges in FY2022 to a SAR 10.6m net release (we calculate from the cash-flow add-backs), and the impairment of stores fell to SAR 8.2m (SAR 29.7m). The operating loss narrowed to SAR 40.1m and the attributable loss to SAR 69.0m (SAR 143m). Net margin -7.4%.
+    source: 4008_SACO/2024_Annual_filed2025-03-12.pdf p.9; 4008_SACO/2023_Annual_filed2024-03-12.pdf p.9, p.11
+    refs:
+    - 4008-FY2023-REV
+    - 4008-FY2023-GP
+    - 4008-FY2023-IMPAIR_CF
+    - 4008-FY2023-OPINC
+    - 4008-FY2023-NI_ATTR
+  - period: FY2024
+    driver: Revenue +6.8% to SAR 994m; external logistics revenue doubled (SAR 20.9m to SAR 42.4m) and sales and services rose 4.6%. Gross profit rose 35.9% to SAR 141m (14.2% of revenue) and operating income turned positive at SAR 17.9m, but finance cost of SAR 29.7m left an attributable loss of SAR 14.1m. Operating cash flow was -SAR 17.7m as inventories rose SAR 137m, and borrowings rose to SAR 148m.
+    source: 4008_SACO/2025_Annual_filed2026-03-10.pdf p.9, p.11, p.45
+    refs:
+    - 4008-FY2024-REV
+    - 4008-FY2024-GP
+    - 4008-FY2024-OPINC
+    - 4008-FY2024-FIN_COST
+    - 4008-FY2024-NI_ATTR
+    - 4008-FY2024-CFO
+    - 4008-FY2024-DEBT
+  - period: FY2025
+    driver: Revenue +7.4% to SAR 1,067m and gross profit +14.3% to SAR 162m (15.2%). Operating income was SAR 69.7m, of which SAR 42.2m was the gain on selling the Al-Mashael warehouse (SAR 27.5m before it, as printed). Attributable profit was SAR 45.6m; net margin 4.3% and ROE 13.1%. The SAR 140.4m sale proceeds repaid all borrowings (SAR 148m), cutting net debt to SAR 224m (lease liabilities less cash).
+    source: 4008_SACO/2025_Annual_filed2026-03-10.pdf p.9, p.11, p.32
+    refs:
+    - 4008-FY2025-REV
+    - 4008-FY2025-GP
+    - 4008-FY2025-OPINC
+    - 4008-FY2025-NI_ATTR
+    - 4008-FY2025-DEBT
+    - 4008-FY2025-NET_DEBT
+  - period: 9M2026
+    driver: 'Revenue -11.3% to SAR 688m and gross profit -21.2% to SAR 95.6m (gross margin 13.9% vs 15.6%, we calculate). Without the 9M 2025 property gain, operating income fell from SAR 69.3m to -SAR 2.3m; finance cost fell to SAR 11.1m (SAR 19.3m) after the debt repayment. Attributable loss SAR 15.5m (9M 2025: profit SAR 49.5m); net margin -2.3%.'
+    source: 4008_SACO/2026_Q3_filed2026-11-12.pdf p.6
+    refs:
+    - 4008-9M2026-REV
+    - 4008-9M2026-GP
+    - 4008-9M2026-OPINC
+    - 4008-9M2025-OPINC
+    - 4008-9M2026-FIN_COST
+    - 4008-9M2026-NI_ATTR
+  - period: FY2023
+    driver: 'Store-related accounting items recur: a SAR 14.0m gain on lease modifications and a SAR 6.0m loss on disposal of property and equipment in FY2023 (SAR 6.2m and SAR 3.0m in FY2022). They come with store changes and are treated as part of normal operations, not as one-offs.'
+    source: 4008_SACO/2023_Annual_filed2024-03-12.pdf p.11
+    refs:
+    - 4008-FY2023-OPINC
+    - 4008-FY2022-OPINC
+  one_offs:
+  - item: Gain on sale of investment property (Al-Mashael warehouse, Riyadh), net (removed for EBITDA excluding one-offs)
+    period: FY2025
+    amount_sar_m: 42.2
+    line: Gain on sale of investment property, net (below operating income, inside our operating income)
+    source: 4008_SACO/2025_Annual_filed2026-03-10.pdf p.9, p.32
+    tax_nci: 'Zakat effect not disclosed (total zakat SAR 0.4m); no non-controlling interests: after-tax effect not determinable, profit kept as reported'
+  - item: Same gain, recognised in Q3 2025
+    period: 9M2025
+    amount_sar_m: 42.2
+    line: Gain on sale of investment property, net
+    source: 4008_SACO/2026_Q3_filed2026-11-12.pdf p.6
+    tax_nci: 'Zakat effect not disclosed; no non-controlling interests: after-tax effect not determinable, profit kept as reported'
+developments:
+- date: '2023'
+  category: capacity
+  text: Leased stores fell from 33 to 32; the count has stayed at 32 since, plus one franchisee store in Tabuk.
+  source: 4008_SACO/2023_Annual_filed2024-03-12.pdf p.13; 4008_SACO/2026_Q3_filed2026-11-12.pdf p.9
+- date: '2024'
+  category: strategy
+  text: Transferred the Al-Mashael warehouse (SAR 96.8m) from property and equipment to investment property and bought back shares for SAR 4.1m.
+  source: 4008_SACO/2024_Annual_filed2025-03-12.pdf p.11
+- date: '2025-07-14'
+  category: financing
+  text: Sold the Al-Mashael warehouse in Riyadh for SAR 140.43m (gain SAR 42.2m) and repaid all short- and long-term borrowings during 2025.
+  source: 4008_SACO/2025_Annual_filed2026-03-10.pdf p.32, p.11
+- date: 2026 (9M)
+  category: financing
+  text: Paid a cash dividend of SAR 8.95m and bought back 224,448 shares.
+  source: 4008_SACO/2026_Q3_filed2026-11-12.pdf p.21, p.9
+what_it_means:
+  improved: Gross margin rose from 5.9% (FY2022) to 15.2% (FY2025) and the company became debt-free in 2025, cutting finance cost to SAR 11.1m in 9M 2026 (SAR 19.3m).
+  weakened: Revenue is lower than in FY2022 (CAGR -2.1% to FY2025) and fell 11.3% in 9M 2026, returning the company to an attributable loss of SAR 15.5m and a net margin of -2.3%.
+  why: The FY2025 profit of SAR 45.6m rests on the SAR 42.2m warehouse gain; operating income before that gain was SAR 27.5m, and in 9M 2026 lower sales from the same 32 stores cut gross profit by 21.2%.
+  uncertain: The filings do not explain the 9M 2026 sales fall or give like-for-like sales, so trading momentum per store is not determinable.
+confidence_overall: Medium
+data_notes:
+- Primary statements are scanned images; stage A read them by OCR and checked values to printed subtotals.
+- Gross profit in FY2022 and FY2023 is after a separate "impairment loss on non-financial assets" line shown above gross profit (SAR 29.7m and SAR 8.2m), so COGS + GP does not equal revenue in those years; the impairment is in IMPAIR_CF and added back in EBITDA.
+- FY2023 operating cash flow (SAR 115m) is the FY2024 annual comparative, after lease interest paid (SAR 19.6m) was moved into operating activities; the FY2023 annual printed SAR 134m. FY2022 CFO (SAR 206m) is on the earlier basis, before lease interest paid.
+- D&A includes right-of-use depreciation and capex includes intangible assets (both corrected in stage A); COGS and GP for FY2023-FY2025 were added from the PDFs.
+- 'SACO has had no borrowings since 2025: DEBT is recorded as nil and net debt is lease liabilities less cash.'
+- The 31 Dec 2025 total assets (SAR 1,075m) are the 9M 2026 interim comparative, SAR 1.0m lower than the FY2025 annual after a netting (0.09%).
+- There is no finance income line; operating income includes "other income" (SAR 20.3m in FY2025, not analysed in the notes).
