@@ -1,0 +1,207 @@
+ticker: '1820'
+headline: >-
+  Baan's revenue fell from SAR 742m (FY2023) to SAR 649m (FY2025) and SAR 449m in 9M 2026 (-9.9%) as hotel and entertainment revenue
+  shrank, and it lost money in three of four years, including SAR 202m in FY2025; the 9M 2026 profit of SAR 60.9m came from a SAR 69.5m
+  joint-venture sale gain and SAR 21.1m of insurance income, while a May 2026 share issue for three hotels and 86 apartments (SAR 830m)
+  lifted equity to SAR 897m.
+lfl_basis:
+  definition_used: >-
+    Standard bridge on IFRS revenue (hospitality, entertainment and others, including rent from a commercial centre). Two hotels moved
+    in 2023 from leases to management agreements with the ultimate parent, so their revenue left reported revenue; their earlier revenue
+    is not disclosed, so organic growth is not determinable for FY2023 and FY2024. FY2025 has no perimeter change. In 9M 2026 the hotels
+    acquired for shares on 7 May 2026 add revenue that is not disclosed. The UAE and Egyptian subsidiaries are small (UAE dirham pegged;
+    Egypt SAR 1m). No site counts or same-site revenue are given, so like-for-like growth is not determinable.
+  perimeter_changes:
+  - event: Two hotels leased from the ultimate parent switched to management agreements; revenue waived to the parent
+    date: '2023'
+    effect: revenue left REV (waived SR 21.18m in 2023, SR 27.73m in 2024, SR 26.8m in 2025); FY2022 amount not disclosed
+    source: 1820_BAAN/2024_Annual_filed2025-04-06.pdf p.42; 1820_BAAN/2025_Annual_filed2026-04-08.pdf p.45
+  - event: 48.5% joint venture sold for SR 118.8m
+    date: '2026-01-29'
+    effect: equity-accounted; no revenue effect; gain SR 69.5m
+    source: 1820_BAAN/2026_Q3_filed2026-11-19.pdf p.15
+  - event: Three hotels and 86 residential units acquired for 305m new shares (fair value SR 830.1m)
+    date: '2026-05-07'
+    effect: revenue contribution not disclosed (not determinable)
+    source: 1820_BAAN/2026_Q3_filed2026-11-19.pdf p.17
+  capacity_changes:
+  - event: Lease terminations every year (nine in 2025) and one entertainment centre under construction
+    date: FY2022-9M2026
+    effect: not determinable
+    source: 1820_BAAN/2025_Annual_filed2026-04-08.pdf p.33-34; 1820_BAAN/2026_Q3_filed2026-11-19.pdf p.15
+  fx_exposure: 'Small: UAE revenue SAR 27.4m in 9M 2026 (dirham pegged to the US dollar) and Egypt SAR 1.0m; no IAS 29.'
+  price_volume_support: 'Not determinable: no occupancy, room rates, visitor numbers or site counts in the filings.'
+  confidence: Low (perimeter effects in FY2023, FY2024 and 9M 2026 and all new-capacity effects are not determinable)
+price_volume:
+- period: 9M 2026 vs 9M 2025
+  text: >-
+    Revenue fell SAR 49m (-9.9%). Hospitality fell 17.2% (SAR 221m to SAR 183m) and entertainment 17.9% (SAR 205m to SAR 168m), while
+    others rose 36.2% (SAR 71.3m to SAR 97.2m). Occupancy, visitors and prices are not disclosed.
+  basis: disclosed (segment revenue); split not determinable
+  confidence: High for the amounts
+  source: 1820_BAAN/2026_Q3_filed2026-11-19.pdf p.21-22
+  refs:
+  - 1820-9M2026-REV
+  - 1820-9M2025-REV
+- period: FY2025 vs FY2024
+  text: >-
+    Revenue fell SAR 30m (-4.4%): hospitality -7.8% (SAR 325m to SAR 300m), entertainment -15.4% (SAR 297m to SAR 251m), others +73.2%
+    (SAR 56.4m to SAR 97.6m). Nine leases ended in 2025.
+  basis: disclosed (segment revenue); split not determinable
+  confidence: High for the amounts
+  source: 1820_BAAN/2025_Annual_filed2026-04-08.pdf p.8, p.34
+  refs:
+  - 1820-FY2025-REV
+  - 1820-FY2024-REV
+profit_and_margin:
+  drivers:
+  - period: FY2023
+    driver: >-
+      Revenue +2.9% to SAR 742m and gross profit +37.9% to SAR 188m (gross margin 25.3% vs 18.9%), but a SAR 35.4m credit-loss provision
+      on trade and related-party receivables and smaller lease-termination gains (SAR 6.2m vs SAR 39.3m) left an attributable loss of
+      SAR 89.7m. EBITDA margin 26.7% (FY2022: 27.8%); net margin -12.1%; ROE -36.3%.
+    source: 1820_BAAN/2024_Annual_filed2025-04-06.pdf p.8 (P&L); 1820_BAAN/2023_Annual_filed2024-04-14.pdf p.9
+    refs:
+    - 1820-FY2023-REV
+    - 1820-FY2023-GP
+    - 1820-FY2023-NI_ATTR
+    - 1820-FY2023-EBITDA_C
+  - period: FY2024
+    driver: >-
+      Revenue -8.5% to SAR 679m (hospitality -10.8%, entertainment -12.1%) and gross profit -1.3%, but G&A fell to SAR 113m (SAR 127m),
+      credit losses reversed (SAR 6.9m) and insurance compensation of SAR 24.8m was booked, giving an attributable profit of SAR 5.3m.
+      EBITDA margin 37.7%, including the insurance income; net margin 0.8%; ROE 2.5%.
+    source: 1820_BAAN/2025_Annual_filed2026-04-08.pdf p.8; 1820_BAAN/2024_Annual_filed2025-04-06.pdf p.8, p.47
+    refs:
+    - 1820-FY2024-REV
+    - 1820-FY2024-GP
+    - 1820-FY2024-NI_ATTR
+    - 1820-FY2024-EBITDA_C
+  - period: FY2025
+    driver: >-
+      Revenue -4.4% to SAR 649m while direct costs rose 8.8% (SAR 494m to SAR 537m), so gross profit fell 39.4% to SAR 112m (gross margin
+      17.3%). G&A rose to SAR 141m, PP&E and right-of-use assets were impaired by SAR 43.1m and disposals lost SAR 28.2m, so the attributable
+      loss was SAR 202m. EBITDA margin 15.2%; net margin -31.1%. ROE was -173.1% as attributable equity fell to SAR 16.6m (restated).
+    source: 1820_BAAN/2025_Annual_filed2026-04-08.pdf p.8 (P&L), p.10 (cash flow), p.33
+    refs:
+    - 1820-FY2025-REV
+    - 1820-FY2025-GP
+    - 1820-FY2025-NI_ATTR
+    - 1820-FY2025-EBITDA_C
+    - 1820-FY2025-EQ_ATTR
+  - period: 9M2026
+    driver: >-
+      Revenue -9.9% to SAR 449m and gross profit -19.4% to SAR 90.4m (gross margin 20.1% vs 22.5%), but the SAR 69.5m joint-venture
+      gain, SAR 21.1m insurance income and SAR 8.3m of lease-termination gains turned the result into an attributable profit of SAR
+      60.9m (loss of SAR 40.4m). EBITDA margin 47.9% (25.8%); we calculate EBITDA excluding the joint-venture gain and insurance at
+      SAR 124m (9M 2025: SAR 128m). Net margin 13.6%; ROE 17.8% (annualised).
+    source: 1820_BAAN/2026_Q3_filed2026-11-19.pdf p.5 (P&L), p.15, p.20-21
+    refs:
+    - 1820-9M2026-REV
+    - 1820-9M2026-GP
+    - 1820-9M2026-NI_ATTR
+    - 1820-9M2026-EBITDA_C
+    - 1820-9M2025-EBITDA_C
+  - period: 9M2026
+    driver: >-
+      Operating cash flow fell 65.4% to SAR 51.3m (SAR 148m) as trade payables were paid down by SAR 49.2m. The share issue for hotels
+      raised attributable equity to SAR 897m and total assets to SAR 2,295m without cash; borrowings were SAR 378m and net debt with
+      leases SAR 1,021m (net debt / EBITDA 3.6x annualised, flattered by the one-offs).
+    source: 1820_BAAN/2026_Q3_filed2026-11-19.pdf p.4 (balance sheet), p.7 (cash flow), p.17
+    refs:
+    - 1820-9M2026-CFO
+    - 1820-9M2026-EQ_ATTR
+    - 1820-9M2026-DEBT
+    - 1820-9M2026-NET_DEBT
+  - period: FY2022-FY2025
+    driver: >-
+      Lease-termination gains (SAR 39.3m in FY2022, SAR 1.6m-7.2m later) and PP&E disposal results recur every year as sites are closed
+      or refitted, so they are not treated as one-offs. Free cash flow stayed positive (SAR 50.3m to SAR 217m) as capex fell from SAR
+      120m (FY2023) to SAR 25.2m (FY2025).
+    source: 1820_BAAN/2025_Annual_filed2026-04-08.pdf p.8, p.10; 1820_BAAN/2023_Annual_filed2024-04-14.pdf p.9
+    refs:
+    - 1820-FY2022-FCF
+    - 1820-FY2024-FCF
+    - 1820-FY2025-FCF
+    - 1820-FY2025-CAPEX
+    - 1820-FY2023-CAPEX
+  one_offs:
+  - item: Rent concession (lease relief)
+    period: FY2022
+    amount_sar_m: 6.4
+    line: not named on the face (note 16; cash-flow add-back)
+    source: 1820_BAAN/2022_Annual_filed2023-04-10.pdf p.10
+    tax_nci: 'Zakat effect and minority share not disclosed: not determinable, profit kept as reported'
+  - item: Insurance compensation (hotel fire SR 22m; entertainment shutdown SR 2.8m)
+    period: FY2024
+    amount_sar_m: 24.8
+    line: Other non-operating income
+    source: 1820_BAAN/2024_Annual_filed2025-04-06.pdf p.8, p.47
+    tax_nci: 'Zakat effect and minority share not disclosed: not determinable, profit kept as reported'
+  - item: Gain on sale of the 48.5% joint venture
+    period: 9M2026
+    amount_sar_m: 69.5
+    line: Gain on sale of equity-accounted investee
+    source: 1820_BAAN/2026_Q3_filed2026-11-19.pdf p.5, p.15
+    tax_nci: 'No minority interest in 9M 2026; zakat effect not disclosed: not determinable, profit kept as reported'
+  - item: Insurance settlement for damage at two entertainment locations
+    period: 9M2026
+    amount_sar_m: 21.1
+    line: Other non-operating income
+    source: 1820_BAAN/2026_Q3_filed2026-11-19.pdf p.5, p.20
+    tax_nci: 'No minority interest in 9M 2026; zakat effect not disclosed: not determinable, profit kept as reported'
+developments:
+- date: '2023'
+  category: strategy
+  text: Ended the leases of two hotels owned by the ultimate parent and now runs them under 8-10 year management agreements for a fee,
+    waiving their revenue to the parent.
+  source: 1820_BAAN/2024_Annual_filed2025-04-06.pdf p.42
+- date: '2024-11-05'
+  category: strategy
+  text: Renamed BAAN Holding Group Company (formerly Abdulmohsen Al-Hokair Group for Tourism and Development).
+  source: 1820_BAAN/2024_Annual_filed2025-04-06.pdf p.12
+- date: '2024-12-29'
+  category: M&A
+  text: Signed agreements to acquire three hotels from Al Hokair Holding (SR 651.62m) and 86 residential units in Al Khobar (SR 178.5m)
+    for new shares.
+  source: 1820_BAAN/2024_Annual_filed2025-04-06.pdf p.57
+- date: '2026-01-29'
+  category: M&A
+  text: Sold its 48.5% stake in Real Estate and Tourism Development Company for SR 118.8m, a gain of SR 69.53m.
+  source: 1820_BAAN/2026_Q3_filed2026-11-19.pdf p.15
+- date: '2026-05-07'
+  category: M&A
+  text: 'Completed the capital increase in kind: 304,966,936 new shares; assets recognised at SR 830.1m; share premium SR 525.1m, of
+    which SR 263.6m later used to cancel accumulated losses.'
+  source: 1820_BAAN/2026_Q3_filed2026-11-19.pdf p.17
+- date: 2026 (9M)
+  category: event
+  text: Agreed a SR 21.09m insurance settlement for damage at two entertainment locations.
+  source: 1820_BAAN/2026_Q3_filed2026-11-19.pdf p.20
+what_it_means:
+  improved: The May 2026 share issue for hotels and apartments raised attributable equity from SAR 16.6m (end-2025, restated) to SAR
+    897m, and borrowings fell from SAR 509m (FY2022) to SAR 378m (Sep 2026).
+  weakened: Revenue fell in FY2024 (-8.5%), FY2025 (-4.4%) and 9M 2026 (-9.9%), the gross margin fell to 17.3% in FY2025, and the company
+    lost SAR 202m in FY2025; auditors flagged a material going-concern uncertainty for FY2022, FY2023 and FY2025.
+  why: 'Hotel and entertainment revenue shrank (9M 2026: -17.2% and -17.9%) as leases ended and two hotels moved to fee-based management,
+    while direct costs did not fall; the 9M 2026 profit rests on SAR 90.6m of one-off gains.'
+  uncertain: The filings do not disclose the revenue of the hotels acquired in May 2026 or site counts, so the underlying trend after
+    the acquisition is not determinable.
+confidence_overall: Medium
+data_notes:
+- 'Restatement 1 (FY2022 annual, note 33): lease terms extended for reasonably certain renewals; FY2021 TA, TE and lease liabilities
+  restated (R).'
+- 'Restatement 2 (2026 Q3 interim, note 15, SOCPA Q&A 179): non-enforceable renewal periods removed; 31 Dec 2025, 1 Jan 2025 and 9M
+  2025 restated. We use the restated balance sheets for FY2024 (1 Jan 2025 column: TA SR 1,800m, equity attributable SR 216.6m, leases
+  SR 804m) and FY2025 (TA SR 1,483m, equity SR 16.6m, leases SR 674m). Originally reported: FY2024 TA 1,924, equity 206.6, leases 937;
+  FY2025 TA 1,622, equity 2.8, leases 826. The FY2025 income statement is not yet restated, so FY2025 profit and the restated FY2025
+  balance sheet are on different lease bases.'
+- Restated 30 Sep 2025 total assets and lease liabilities come only from the 2026 Q3 XBRL file (not printed in the PDF); 9M 2025 equity
+  (SR 177.4m) is printed in the statement of changes in equity.
+- FY2023 is the FY2024 annual comparative (revenue 742.1 vs 741.9 first reported; NCI of SR 1.7m moved into equity, note 34).
+- 'Stage A overrides: D&A for EBITDA includes depreciation of right-of-use assets, which the XBRL omitted in every period (e.g. FY2025
+  SR 185m vs SR 112m); FY2025 impairment add-back SR 43.1m added; 9M 2025 attributable loss and NCI corrected.'
+- 'Our operating income includes items below the company operating profit: the joint-venture sale gain, insurance income and lease-termination
+  gains (9M 2026 company operating profit SR 8.1m vs our SR 98.7m). EBITDA margin 47.9% in 9M 2026 is inflated by the one-offs.'
+- Zakat and income tax were credits in FY2025 (SR 2.3m) and 9M 2025 (SR 1.8m). Finance income is interest on lease receivables (subleases).
+- Primary statements of the FY2023 and FY2025 annuals and the 2026 Q3 interim are scanned and were read visually.

@@ -1,4 +1,8 @@
 oneoff_id,ticker,period,item,amount_sar_m,in_metric,direction,source,page,notes
+O-1820-01,1820,FY2022,Rent concession (lease relief) credited to profit or loss,6.368,OPINC,gain,1820_BAAN/2022_Annual_filed2023-04-10.pdf,10,Line not named on the face; cash-flow add-back (note 16). 7.8% of the FY2022 loss
+O-1820-02,1820,FY2024,Insurance compensation (hotel fire SR 22m; entertainment centre shutdown SR 2.8m),24.804,OPINC,gain,1820_BAAN/2024_Annual_filed2025-04-06.pdf,8,"Other non-operating income, note 25 p.47; attributable profit was SAR 5.3m"
+O-1820-03,1820,9M2026,Gain on sale of the 48.5% joint venture (Real Estate and Tourism Development Company),69.529,OPINC,gain,1820_BAAN/2026_Q3_filed2026-11-19.pdf,5,"Separate line, inside our operating income; note 5 p.15"
+O-1820-04,1820,9M2026,Insurance settlement for damage at two entertainment locations,21.094,OPINC,gain,1820_BAAN/2026_Q3_filed2026-11-19.pdf,5,"Other non-operating income, note 11 p.20"
 O-1830-01,1830,FY2024,Gain on disposal of property and equipment (mainly a Riyadh land plot: gain SR 91.79m),92.158,OPINC,gain,1830_LEEJAM_SPORTS/2025_Annual_filed2026-02-24.pdf,7,20.2% of attributable profit; below the company operating profit line but inside our operating income. Note: FY2024 annual p.39
 O-1830-02,1830,9M2026,Gain on disposal of property and equipment,22.681,OPINC,gain,1830_LEEJAM_SPORTS/2026_Q3_filed2026-11-05.pdf,4,12.2% of attributable profit
 O-1830-03,1830,9M2026,Liquidation expenses relating to investment in an associate,4.289,OPINC,loss,1830_LEEJAM_SPORTS/2026_Q3_filed2026-11-05.pdf,4,Outside normal operations (winding up of an associate); 2.3% of attributable profit

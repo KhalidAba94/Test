@@ -1,0 +1,347 @@
+# Evidence from BAAN Holding Group filings (archive: 1820_BAAN). Facts only; page = physical PDF page. Units: SAR '000 as presented.
+# Primary statements in the FY2023 and FY2025 annuals and the 2026 Q3 interim are scanned (read visually); FY2022 and FY2024 annuals have text.
+ticker: '1820'
+company: BAAN Holding Group Company (formerly Abdulmohsen Al-Hokair Group for Tourism and Development)
+perimeter_changes:
+- event: 'Two hotels leased from the ultimate parent: leases terminated in 2023 and replaced by 8-10 year management agreements; hotel
+    revenue is waived to the parent and only fees are recognised'
+  type: deconsolidation
+  date: '2023'
+  consideration: null
+  revenue_contribution: -21180
+  profit_contribution: null
+  pro_forma_revenue: null
+  period: FY2023
+  unit: SAR '000
+  source: 1820_BAAN/2024_Annual_filed2025-04-06.pdf
+  page: 42
+  quote: 'the Group waived the two hotels revenue of SR 27.73 million (31 December 2023: SR 21.18 million)'
+  note: 'Revenue waived: FY2024 27.73m, FY2025 26.8m, 9M2025 19.31m, 9M2026 14.44m (2026 Q3 p.18). FY2022 revenue of the two hotels
+    not disclosed.'
+- event: 48.5% joint venture Real Estate and Tourism Development Company (equity-accounted) classified as held for sale at end-2025
+    and sold on 29 Jan 2026 for SR 118.8m
+  type: disposal
+  date: '2026-01-29'
+  consideration: 118800
+  revenue_contribution: null
+  profit_contribution: 69529
+  pro_forma_revenue: null
+  period: 9M2026
+  unit: SAR '000
+  source: 1820_BAAN/2026_Q3_filed2026-11-19.pdf
+  page: 15
+  quote: On January 29, 2026, the Group disposed of its entire 48.5% stake for a total consideration of ⃀ 118.8
+  note: 'Equity-accounted: no revenue effect. Gain on disposal SR 69.53m.'
+- event: 'Capital increase in kind: 304,966,936 new shares issued for three hotels (Riyadh, Jeddah) from Abdul Mohsen Al Hokair Holding
+    and 86 residential units in the Ajdan Waterfront tower, Al Khobar; assets at fair value SR 830.1m'
+  type: acquisition
+  date: '2026-05-07'
+  consideration: 830100
+  revenue_contribution: null
+  profit_contribution: null
+  pro_forma_revenue: null
+  period: 9M2026
+  unit: SAR '000
+  source: 1820_BAAN/2026_Q3_filed2026-11-19.pdf
+  page: 17
+  quote: Accordingly, the Group recognized acquired assets at a fair value of ⃀ 830.1 million.
+  note: Asset acquisition; revenue of the acquired hotels after 7 May 2026 not disclosed. The 86 units are still in projects under construction
+    (p.15).
+- event: 'Subsidiaries outside Saudi Arabia: Sparky’s Land (UAE) and Asateer (Egypt); stated as not material'
+  type: new_subsidiary
+  status: no change
+  date: null
+  consideration: null
+  revenue_contribution: 27392
+  profit_contribution: null
+  pro_forma_revenue: null
+  period: 9M2026
+  unit: SAR '000
+  source: 1820_BAAN/2026_Q3_filed2026-11-19.pdf
+  page: 21
+  quote: However, the total assets, liabilities, commitments and results of operations of those subsidiaries are
+  note: '9M2026 revenue: UAE 27,392; Egypt 1,038 (p.22). 9M2025: UAE 30,722; Egypt 1,155 (p.23).'
+segments:
+- period: FY2023
+  segment: Hospitality
+  basis: operating
+  revenue: 364943
+  profit: null
+  unit: SAR '000
+  source: 1820_BAAN/2024_Annual_filed2025-04-06.pdf
+  page: 8
+- period: FY2023
+  segment: Entertainment
+  basis: operating
+  revenue: 337804
+  profit: null
+  unit: SAR '000
+  source: 1820_BAAN/2024_Annual_filed2025-04-06.pdf
+  page: 8
+- period: FY2023
+  segment: Others
+  basis: operating
+  revenue: 39392
+  profit: null
+  unit: SAR '000
+  source: 1820_BAAN/2024_Annual_filed2025-04-06.pdf
+  page: 8
+- period: FY2024
+  segment: Hospitality
+  basis: operating
+  revenue: 325389
+  profit: null
+  unit: SAR '000
+  source: 1820_BAAN/2025_Annual_filed2026-04-08.pdf
+  page: 8
+- period: FY2024
+  segment: Entertainment
+  basis: operating
+  revenue: 296945
+  profit: null
+  unit: SAR '000
+  source: 1820_BAAN/2025_Annual_filed2026-04-08.pdf
+  page: 8
+- period: FY2024
+  segment: Others
+  basis: operating
+  revenue: 56362
+  profit: null
+  unit: SAR '000
+  source: 1820_BAAN/2025_Annual_filed2026-04-08.pdf
+  page: 8
+- period: FY2025
+  segment: Hospitality
+  basis: operating
+  revenue: 300127
+  profit: null
+  unit: SAR '000
+  source: 1820_BAAN/2025_Annual_filed2026-04-08.pdf
+  page: 8
+- period: FY2025
+  segment: Entertainment
+  basis: operating
+  revenue: 251268
+  profit: null
+  unit: SAR '000
+  source: 1820_BAAN/2025_Annual_filed2026-04-08.pdf
+  page: 8
+- period: FY2025
+  segment: Others
+  basis: operating
+  revenue: 97645
+  profit: null
+  unit: SAR '000
+  source: 1820_BAAN/2025_Annual_filed2026-04-08.pdf
+  page: 8
+- period: 9M2026
+  segment: Hospitality
+  basis: operating
+  revenue: 183147
+  profit: 2137
+  unit: SAR '000
+  source: 1820_BAAN/2026_Q3_filed2026-11-19.pdf
+  page: 21
+- period: 9M2026
+  segment: Entertainment
+  basis: operating
+  revenue: 168396
+  profit: -8868
+  unit: SAR '000
+  source: 1820_BAAN/2026_Q3_filed2026-11-19.pdf
+  page: 21
+- period: 9M2026
+  segment: Others (head office, commercial centre)
+  basis: operating
+  revenue: 97169
+  profit: 67600
+  unit: SAR '000
+  source: 1820_BAAN/2026_Q3_filed2026-11-19.pdf
+  page: 21
+- period: 9M2025
+  segment: Hospitality
+  basis: operating
+  revenue: 221271
+  profit: 3956
+  unit: SAR '000
+  source: 1820_BAAN/2026_Q3_filed2026-11-19.pdf
+  page: 22
+- period: 9M2025
+  segment: Entertainment
+  basis: operating
+  revenue: 205203
+  profit: -21044
+  unit: SAR '000
+  source: 1820_BAAN/2026_Q3_filed2026-11-19.pdf
+  page: 22
+- period: 9M2025
+  segment: Others
+  basis: operating
+  revenue: 71344
+  profit: -23387
+  unit: SAR '000
+  source: 1820_BAAN/2026_Q3_filed2026-11-19.pdf
+  page: 22
+revenue_drivers:
+- period: FY2025
+  driver: Nine lease agreements terminated in 2025 (maturity or early termination); net gain SR 7.2m in other income
+  value: 9
+  unit: count
+  source: 1820_BAAN/2025_Annual_filed2026-04-08.pdf
+  page: 34
+  quote: During the year ended 31 December 2025, nine lease agreements were terminated, either upon their
+- period: 9M2026
+  driver: 'Rent paid for 23 properties leased from the principal shareholder, related parties and directors (9M2025: 24)'
+  value: 23
+  unit: count
+  source: 1820_BAAN/2026_Q3_filed2026-11-19.pdf
+  page: 18
+  quote: 'This amount represents rent payments for 23 properties (September 30, 2025: 24 properties) that'
+- period: 9M2026
+  driver: 'Two parent-owned hotels operated under management agreements: revenue waived 14.44m (9M2025: 19.31m)'
+  value: 14440
+  unit: SAR '000
+  source: 1820_BAAN/2026_Q3_filed2026-11-19.pdf
+  page: 18
+  quote: 'waived the two hotels'' revenue of ⃀ 14.44 million (September 30, 2025: ⃀ 19.31 million), and'
+one_offs:
+- period: FY2022
+  item: Rent concession (lease relief)
+  amount: 6368
+  unit: SAR '000
+  pnl_line: not named on the face (cash-flow add-back, note 16)
+  recurring: false
+  source: 1820_BAAN/2022_Annual_filed2023-04-10.pdf
+  page: 10
+  quote: Rent concession 16 (6,368) (18,862)
+- period: FY2024
+  item: 'Insurance compensation: SR 22m final settlement for a 2023 hotel fire and SR 2.8m for an entertainment centre shutdown'
+  amount: 24804
+  unit: SAR '000
+  pnl_line: Other non-operating income
+  recurring: false
+  source: 1820_BAAN/2024_Annual_filed2025-04-06.pdf
+  page: 47
+  quote: would be compensated with an amount of SR 22 million as a final settlement regarding this fire
+- period: 9M2026
+  item: Gain on sale of the 48.5% joint venture
+  amount: 69529
+  unit: SAR '000
+  pnl_line: Gain on sale of equity-accounted investee
+  recurring: false
+  source: 1820_BAAN/2026_Q3_filed2026-11-19.pdf
+  page: 15
+  quote: resulting in a gain on disposal of
+- period: 9M2026
+  item: Insurance settlement for damage at two entertainment locations (SAR 20.80m property, SAR 0.29m business interruption)
+  amount: 21094
+  unit: SAR '000
+  pnl_line: Other non-operating income
+  recurring: false
+  source: 1820_BAAN/2026_Q3_filed2026-11-19.pdf
+  page: 20
+  quote: with the insurance companies on a final settlement amounting to 21.09 million, comprising SAR
+- period: FY2022-9M2026
+  item: 'Gains from lease terminations recur every year (39,348; 6,221; 1,550; 7,194; 840; 8,316) and PP&E disposal results every year
+    (FY2025 loss 28,154; 9M2025 gain 8,714): treated as recurring, not one-offs'
+  amount: null
+  unit: SAR '000
+  pnl_line: Gain from lease termination; (Loss)/gain on disposal of PP&E
+  recurring: true
+  source: 1820_BAAN/2025_Annual_filed2026-04-08.pdf
+  page: 8
+  quote: (Loss) / Gain on disposal of property and equipment
+- period: FY2025
+  item: Impairment of PP&E and right-of-use assets (outside EBITDA)
+  amount: 43146
+  unit: SAR '000
+  pnl_line: (Provision for) / reversal of impairment loss on property and equipment and right-of-use assets
+  recurring: false
+  source: 1820_BAAN/2025_Annual_filed2026-04-08.pdf
+  page: 33
+  quote: the Group has recorded an impairment loss of SR 2.81
+restatements:
+- period_restated: FY2021 (and 1 Jan 2021)
+  item: Right-of-use assets, lease liabilities, equity
+  from: 2081394
+  to: 2158149
+  unit: SAR '000
+  reason: 'FY2022 annual note 33: lease terms reassessed to include reasonably certain extensions (and other corrections)'
+  source: 1820_BAAN/2022_Annual_filed2023-04-10.pdf
+  page: 70
+  quote: Impact on statement of financial position As originally presented Restatement (1) Restatement (2) Restatement (7) Restatement
+    (8)
+- period_restated: FY2023 (in FY2024 annual)
+  item: Revenue 741,905 to 742,139; non-controlling interest (1,728) moved into equity
+  from: 203433
+  to: 201705
+  unit: SAR '000
+  reason: FY2024 annual note 34 (comparative figures); table on p.58
+  source: 1820_BAAN/2024_Annual_filed2025-04-06.pdf
+  page: 57
+  quote: 'Note 1: Reclassified the non-controlling interest from prepayments and other current assets to a separate'
+- period_restated: 1 Jan 2025, 31 Dec 2025, 9M2025
+  item: Right-of-use assets, lease liabilities, finance cost, depreciation
+  from: 1621539
+  to: 1483321
+  unit: SAR '000
+  reason: '2026 Q3 note 15: lease terms reassessed under SOCPA Q&A 179 (non-enforceable renewals removed)'
+  source: 1820_BAAN/2026_Q3_filed2026-11-19.pdf
+  page: 23
+  quote: the lease terms previously applied to certain contracts included renewal periods that were not enforceable
+significant_events:
+- date: '2024-11-05'
+  event: Renamed from Abdul Mohsen Al Hokair Tourism and Development Company to BAAN Holding Group Company
+  financial_effect: null
+  source: 1820_BAAN/2024_Annual_filed2025-04-06.pdf
+  page: 12
+  quote: change the name of the company from Abdul Mohsen Al Hokair Tourism and Development Company to
+- date: '2026-06-28'
+  event: SR 263.644m of share premium used to extinguish accumulated losses
+  financial_effect: Equity unchanged
+  source: 1820_BAAN/2026_Q3_filed2026-11-19.pdf
+  page: 17
+  quote: transfer of ⃀ 263.644 million from the share premium reserve to the accumulated losses account for
+audit_opinion:
+- period: FY2022
+  opinion: Unmodified (PricewaterhouseCoopers)
+  emphasis_of_matter: Material uncertainty related to going concern (note 2)
+  source: 1820_BAAN/2022_Annual_filed2023-04-10.pdf
+  page: 3
+- period: FY2023
+  opinion: Unmodified (BDO Dr. Mohamed Al-Amri & Co.)
+  emphasis_of_matter: 'Material uncertainty related to going concern: net loss SR 89.6m; current liabilities exceed current assets by
+    SR 309.5m'
+  source: 1820_BAAN/2023_Annual_filed2024-04-14.pdf
+  page: 3
+- period: FY2024
+  opinion: Unmodified (BDO)
+  emphasis_of_matter: null
+  source: 1820_BAAN/2024_Annual_filed2025-04-06.pdf
+  page: 3
+- period: FY2025
+  opinion: Unmodified (BDO)
+  emphasis_of_matter: 'Material uncertainty related to going concern: net loss SR 201.9m; accumulated losses SR 312.7m; current liabilities
+    exceed current assets by SR 404.8m'
+  source: 1820_BAAN/2025_Annual_filed2026-04-08.pdf
+  page: 3
+kpis_in_filings:
+- period: FY2022-9M2026
+  kpi: Number of hotels, rooms, occupancy, entertainment centres, visitors
+  value: null
+  unit: count
+  source: 1820_BAAN/2026_Q3_filed2026-11-19.pdf
+  page: 21
+  status: not found
+special_extractions:
+- item: Restated 30 Sep 2025 total assets (1,722,074) and lease liabilities (754,135) appear only in the 2026 Q3 XBRL file; the PDF
+    prints only restated 31 Dec 2025 and 1 Jan 2025 balances
+  source: 1820_BAAN/2026_Q3_filed2026-11-19.pdf
+  page: 4
+open_questions:
+- Revenue of the three hotels acquired on 7 May 2026 is not disclosed; rent paid to the ultimate parent fell from SR 34.3m to SR 23.0m
+  (9M), which suggests some of them were already leased and operated by Baan, but the filing does not say so.
+- FY2022 revenue of the two hotels moved to management agreements in 2023 is not disclosed, so the FY2023 and FY2024 perimeter effects
+  are not determinable.
+- The FY2025 full-year income statement has not yet been restated for note 15 (only the balance sheets and 9M 2025 are); the FY2026
+  annual will restate it.
