@@ -32,7 +32,7 @@ def close(a, b, tol):
     return ok
 
 
-for sector in ("Energy", "Banks"):
+for sector in list(ds.keys()):
     ws = wb[f"{sector}_Sector"]
     d = ds[sector]
     cfg = d["config"]

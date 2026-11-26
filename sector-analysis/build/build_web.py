@@ -70,9 +70,12 @@ def main(root, out, body_out=None):
     ds = json.load(open(os.path.join(root, "data", "dataset.json")))
     metrics = {m["metric_code"]: {"name": m["name"], "def": m["definition"], "unit": m["unit"], "formula": m.get("formula", "")}
                for m in load_csv(os.path.join(root, "config", "metrics.csv"))}
+    import sectors
+    SEC = [s for s in sectors.load(root) if s["key"] in ds]
     srcs = {}
-    for s in ("energy", "banks"):
-        for r in load_csv(os.path.join(root, "data", s, "sources.csv")):
+    for s in [x["slug"] for x in SEC]:
+        sp = os.path.join(root, "data", s, "sources.csv")
+        for r in (load_csv(sp) if os.path.exists(sp) else []):
             srcs[r["source_id"]] = {"url": r.get("exchange_url", ""), "type": r.get("doc_type", ""),
                                    "assurance": r.get("assurance", ""), "status": r.get("status", ""),
                                    "reason": r.get("status_reason", ""), "pages": r.get("pages", ""),
@@ -128,9 +131,9 @@ def main(root, out, body_out=None):
                     st["with_link"] += any(srcs.get(i, {}).get("url") for i in ids)
 
     narr = {}
-    for t in [t for S in ("Energy", "Banks") for t in ds[S]["tickers"]]:
+    for t in [t for S in ds for t in ds[S]["tickers"]]:
         narr[t] = load_yaml(os.path.join(root, "data", "narratives", f"{t}.yaml"))
-    sector_narr = {S: load_yaml(os.path.join(root, "data", "narratives", f"sector_{S.lower()}.yaml")) for S in ("Energy", "Banks")}
+    sector_narr = {s["key"]: load_yaml(os.path.join(root, "data", "narratives", f"sector_{s['slug']}.yaml")) for s in SEC}
     guide = load_yaml(os.path.join(root, "data", "narratives", "guide.yaml"))
     web = {
         "as_of": guide.get("as_of", ""), "guide": guide,

@@ -34,7 +34,8 @@ from datetime import date
 from functools import lru_cache
 
 STATEMENT_WORDS = re.compile(r"statement of (profit|income|financial position|cash flows|comprehensive)|balance sheet|income statement", re.I)
-SECTOR_DIR = {"Energy": "Energy", "Banks": "Banks"}
+import sectors as _sectors
+SECTOR_DIR = {}   # sector key -> archive folder, filled in main() from config/sectors.json
 HOLDING = {"2030"}   # investment holding: investment results kept in operating income (derive.py)
 
 
@@ -142,15 +143,18 @@ def period_bounds(period, end):
 
 
 def main(root, arch, parsed, cache):
+    SECTOR_DIR.update({s["key"]: s["archive"] for s in _sectors.load(root)})
     xbrl = defaultdict(list)   # (company_dir, file, label) -> rows
-    for s in ("energy", "banks"):
+    for s in [x["slug"] for x in _sectors.load(root)]:
         p = os.path.join(parsed, f"{s}_xbrl.csv")
+        if not os.path.exists(p):
+            continue
         for r in csv.DictReader(open(p, encoding="utf-8")):
             if r["value"] not in ("", None):
                 xbrl[(r["company_dir"], r["file"], r["label"].strip())].append(r)
     facts = []
-    for sector, f in (("Energy", "energy"), ("Banks", "banks")):
-        for r in csv.DictReader(open(os.path.join(root, "data", f, "facts.csv"), encoding="utf-8")):
+    for sector, fp in _sectors.facts_paths(root):
+        for r in csv.DictReader(open(fp, encoding="utf-8")):
             r["_sector"] = sector
             facts.append(r)
     idx = {(r["ticker"], r["period"], r["metric_code"]): r for r in facts}

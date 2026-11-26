@@ -12,6 +12,8 @@ from __future__ import annotations
 
 import csv
 import os
+
+import sectors
 import sys
 
 PERIODS = ["FY2021", "FY2022", "FY2023", "FY2024", "FY2025", "9M2025", "9M2026"]
@@ -29,6 +31,7 @@ HOLDING = {"2030"}   # investment-holding companies (no operating revenue)
 
 def main(sector, facts_csv, overrides_csv, out_csv):
     root = os.path.dirname(os.path.dirname(os.path.abspath(overrides_csv)))
+    tpl = sectors.template(root, sector)
     oneoffs = [o for o in load(os.path.join(root, "data", "one_offs.csv"))] if os.path.exists(os.path.join(root, "data", "one_offs.csv")) else []
     reasons = {(r["ticker"], r["period"], r["metric_code"]): r for r in load(os.path.join(root, "data", "restatement_reasons.csv"))} if os.path.exists(os.path.join(root, "data", "restatement_reasons.csv")) else {}
     rows = load(facts_csv)
@@ -57,7 +60,7 @@ def main(sector, facts_csv, overrides_csv, out_csv):
         }
     # 2b. bank ECL on loans and financing from the credit-risk notes (comparable cost-of-risk numerator)
     ecl_path = os.path.join(os.path.dirname(os.path.abspath(out_csv)), "ecl_loans.csv")
-    if sector == "Banks" and os.path.exists(ecl_path):
+    if tpl == "bank" and os.path.exists(ecl_path):
         for e in load(ecl_path):
             if e["value_sar_m"] in ("", None):
                 continue
@@ -95,7 +98,7 @@ def main(sector, facts_csv, overrides_csv, out_csv):
                 facts[(t, p, "NI_ATTR")]["provenance"] = facts[(t, p, "NI")]["provenance"]
             if val(t, p, "EQ_ATTR") is None and val(t, p, "TE") is not None and val(t, p, "NI_NCI") is None:
                 add(t, p, "EQ_ATTR", val(t, p, "TE"), "Total equity (no non-controlling interests reported)", [(p, "TE")])
-            if sector == "Energy":
+            if tpl == "corporate":
                 # One operating-income definition for every company (METHODOLOGY s.6):
                 # PBT + finance costs - finance income - share of results of JVs/associates.
                 # Investment-holding companies (no revenue) keep investment results inside operating income.
@@ -122,7 +125,7 @@ def main(sector, facts_csv, overrides_csv, out_csv):
                         [(p, "REV"), (p, "OIRS")])
                 if val(t, p, "CFO") is not None and val(t, p, "CAPEX") is not None:
                     add(t, p, "FCF", val(t, p, "CFO") - val(t, p, "CAPEX"), "CFO - capex", [(p, "CFO"), (p, "CAPEX")])
-            if sector == "Banks":
+            if tpl == "bank":
                 if val(t, p, "TOI") is not None and val(t, p, "OPEX_PRE") is not None:
                     add(t, p, "PPOP", val(t, p, "TOI") - val(t, p, "OPEX_PRE"), "TOI - OPEX_PRE", [(p, "TOI"), (p, "OPEX_PRE")])
                 if val(t, p, "EQ_ATTR") is not None:
@@ -168,7 +171,7 @@ def main(sector, facts_csv, overrides_csv, out_csv):
             # the reviewer's page is the one checked by eye (often the primary statement where the search found a note), so it is cited
             if v["outcome"] in ("confirmed", "confirmed_components") and v.get("page") and v.get("pdf_checked"):
                 r["pdf_pages"] = v["page"]
-                r["pdf_file"] = v["pdf_checked"].split("/", 1)[1] if v["pdf_checked"].split("/")[0] in ("Banks", "Energy") else v["pdf_checked"]
+                r["pdf_file"] = v["pdf_checked"].split("/", 1)[1] if v["pdf_checked"].count("/") >= 2 else v["pdf_checked"]
                 r["pdf_status"] = "manual_confirmed"
     for k, r in facts.items():
         rr = reasons.get(k)

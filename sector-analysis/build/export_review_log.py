@@ -118,8 +118,10 @@ def main(root, out):
     tp = os.path.join(root, "data", "trace", "full_trace.csv")
     if os.path.exists(tp):
         tr = []
-        for s in ("energy", "banks"):
-            for r in csv.DictReader(open(os.path.join(root, "data", s, "facts.csv"), encoding="utf-8")):
+        sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+        import sectors
+        for _, fp in sectors.facts_paths(root):
+            for r in csv.DictReader(open(fp, encoding="utf-8")):
                 st, rv = r.get("trace_status", ""), r.get("review", "")
                 if rv.startswith(("confirmed", "confirmed_components")) and st in ("not_found", "too_small", ""):
                     st = "manual_confirmed"

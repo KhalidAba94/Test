@@ -18,8 +18,11 @@ if os.path.exists(sp):
         if r["statement_pages"]:
             scanned[r["pdf"]] = r["statement_pages"]
 out = []
-for sector in ("Energy", "Banks"):
-    s = sector.lower()
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import sectors as _sectors
+_SLUG = {x["key"]: x["slug"] for x in _sectors.load(root)}
+for sector in [k for k in _SLUG if k in ds]:
+    s = _SLUG[sector]
     src = list(csv.DictReader(open(os.path.join(root, "data", s, "sources.csv"), encoding="utf-8")))
     facts = list(csv.DictReader(open(os.path.join(root, "data", s, "facts.csv"), encoding="utf-8")))
     docs = defaultdict(dict)

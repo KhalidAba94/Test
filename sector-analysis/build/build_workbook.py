@@ -144,8 +144,12 @@ def build_data(wb, facts):
     return ws
 
 
+TPL = {}   # sector key -> template, from config/sectors.json (set in main)
+ORDER = []
+
+
 def company_rows(sector):
-    if sector == "Energy":
+    if TPL.get(sector) == "corporate":
         rows = [("REV", "Revenue", "val"), ("REV", "  growth YoY", "growth"), ("OIRS", "Other income related to sales*", "val"),
                 ("REV_M", "Revenue incl. other income related to sales (margin base)*", "val"), ("GP", "Gross profit", "val"),
                 ("OPINC", "Operating income (calculated, one definition)", "val"), ("EBITDA_C", "EBITDA (calculated)", "val"),
@@ -314,7 +318,7 @@ def build_company(wb, sector, t, cfg, ds, narr, adj_rows, facts_idx, sheetname, 
     r += 1
     step_rows = {}
     for key, label in steps:
-        if key == "new_capacity" and sector == "Banks":
+        if key == "new_capacity" and TPL.get(sector) == "bank":
             label = "New capacity: not applicable to banks (like-for-like = organic)"
         ws.cell(row=r, column=1, value=f"  less: {label}").font = f(size=9)
         step_rows[key] = r
@@ -420,7 +424,7 @@ def build_company(wb, sector, t, cfg, ds, narr, adj_rows, facts_idx, sheetname, 
 
 def build_sector(wb, sector, cfg, ds, narr, comp_sheets):
     sname = f"{sector}_Sector"
-    ws = wb.create_sheet(sname, 4 if sector == "Energy" else 5)
+    ws = wb.create_sheet(sname, 4 + ORDER.index(sector))
     tickers = ds["tickers"]
     top, prof = cfg["top_line"], cfg["profit"]
     largest = ds["sector"]["largest_by_top_line_FY2025"]
@@ -440,7 +444,7 @@ def build_sector(wb, sector, cfg, ds, narr, comp_sheets):
         for part in (spec[0], spec[1].replace("avg:", "")):
             for m in part.split("-"):
                 needed.add(m)
-    needed |= {"EBITDA_C", "EBITDA_U", "OPINC", "CAPEX", "FCF", "REV_M"} if sector == "Energy" else {"NSCI", "FEES_NET", "OPEX_PRE", "IMPAIR_TOTAL", "PPOP"}
+    needed |= {"EBITDA_C", "EBITDA_U", "OPINC", "CAPEX", "FCF", "REV_M"} if TPL.get(sector) == "corporate" else {"NSCI", "FEES_NET", "OPEX_PRE", "IMPAIR_TOTAL", "PPOP"}
     needed = [m for m in needed if m]
     base = 200
     mat = {}
@@ -686,7 +690,11 @@ def simple_table(wb, name, heading, sub, rows, cols, widths=None, index=None, bl
 def main(root, out):
     ds = json.load(open(os.path.join(root, "data", "dataset.json")))
     cfg_all = json.load(open(os.path.join(root, "config", "sectors.json")))
-    facts = load_csv(os.path.join(root, "data", "energy", "facts.csv")) + load_csv(os.path.join(root, "data", "banks", "facts.csv"))
+    import sectors
+    SEC = [s for s in sectors.load(root) if s["key"] in ds]
+    TPL.update({s["key"]: s["template"] for s in SEC})
+    ORDER[:] = [s["key"] for s in SEC]
+    facts = [x for _, fp in sectors.facts_paths(root) for x in load_csv(fp)]
     facts_idx = {(x["ticker"], x["period"], x["metric_code"]): x for x in facts}
     adj = load_csv(os.path.join(root, "data", "adjustments.csv"))
     wb = Workbook()
@@ -701,13 +709,14 @@ def main(root, out):
                  "(positive = added growth). basis: disclosed | calculated | estimated | not determinable. Blue = input.",
                  adj, adj_cols, [9, 7, 14, 16, 10, 12, 14, 50, 40, 40, 8, 10, 40], blue_cols=("amount_sar_m",))
     comp_sheets = {}
-    for sector in ("Energy", "Banks"):
+    for sector in ORDER:
         for t in ds[sector]["tickers"]:
             short = ds[sector]["companies"][t]["name"].split(" (")[0].replace(" ", "")[:14]
             comp_sheets[t] = f"{sector[0]}_{t}_{short}"
-    for sector in ("Energy", "Banks"):
+    for s in SEC:
+        sector = s["key"]
         cfg = cfg_all[sector]
-        sec_narr = load_yaml(os.path.join(root, "data", "narratives", f"sector_{sector.lower()}.yaml"))
+        sec_narr = load_yaml(os.path.join(root, "data", "narratives", f"sector_{s['slug']}.yaml"))
         _, sname = build_sector(wb, sector, cfg, ds[sector], sec_narr, comp_sheets)
         for t in ds[sector]["tickers"]:
             narr = load_yaml(os.path.join(root, "data", "narratives", f"{t}.yaml"))
@@ -718,7 +727,7 @@ def main(root, out):
         simple_table(wb, "Coverage", "Coverage: available filings and gaps by company and period",
                      "File-level checks (company name, period, units, assurance) were done inside every file - see Sources. Individual values were matched to PDF text where it exists (Data: PDF match status); figures on scanned pages rest on the XBRL file, with a sample checked visually by the independent auditors.",
                      cov, list(cov[0].keys()), [10, 8, 28] + [16] * (len(cov[0]) - 3), index=2)
-    src = load_csv(os.path.join(root, "data", "energy", "sources.csv")) + load_csv(os.path.join(root, "data", "banks", "sources.csv"))
+    src = [x for s in SEC if os.path.exists(os.path.join(root, "data", s["slug"], "sources.csv")) for x in load_csv(os.path.join(root, "data", s["slug"], "sources.csv"))]
     if src:
         simple_table(wb, "Sources", "Source register: every archive file reviewed",
                      "Checks were done inside the files, never from filenames alone. Status: used | used-with-flag | unreadable | excluded.",

@@ -74,8 +74,9 @@ def lines_with(text, n, ocr=False):
 def main(root, arch, cache):
     tr = list(csv.DictReader(open(os.path.join(root, "data", "trace", "full_trace.csv"), encoding="utf-8")))
     facts = {}
-    for s in ("energy", "banks"):
-        for r in csv.DictReader(open(os.path.join(root, "data", s, "facts.csv"), encoding="utf-8")):
+    import sectors
+    for _, fp in sectors.facts_paths(root):
+        for r in csv.DictReader(open(fp, encoding="utf-8")):
             facts[r["fact_id"]] = r
     names = {r["metric_code"]: r.get("name", "") for r in csv.DictReader(open(os.path.join(root, "config", "metrics.csv"), encoding="utf-8"))}
     out = []
