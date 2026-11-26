@@ -73,9 +73,10 @@ LEASE_LIAB,Corporate,Lease liabilities,Balance sheet,SAR m,sum,IFRS 16 lease lia
 CASH,All,Cash and cash equivalents,Balance sheet,SAR m,sum,Cash and cash equivalents (bank balances and cash) at period end.,
 ND_EBITDA,Corporate,Net debt / EBITDA,Ratio,x,ratio of totals,Net debt at period end divided by EBITDA (calculated); 9M EBITDA annualised. Sector ratio = summed net debt / summed EBITDA.,NET_DEBT / EBITDA_C
 GP_M,Corporate,Gross margin,Ratio,%,ratio of totals,Gross profit ÷ revenue. Shown only where the income statement presents gross profit (function-of-expense layout).,GP / REV_M
-FFO,REIT,Funds from operations,P&L,SAR m,sum,"Net income plus depreciation and impairment of investment properties (non-cash items), as calculated; where the fund reports its own FFO, the reported figure and its definition are used and labelled.",NI + DA_CF + IMPAIR_CF
+FFO,REIT,Funds from operations,P&L,SAR m,sum,"Net income plus depreciation and impairment of investment properties (non-cash) less gains on property disposals, as calculated; where the fund reports its own FFO, the reported figure and its definition are used and labelled.",NI + DA_CF + IMPAIR_CF - GAIN_DISP
 DIST,REIT,Distributions declared,Equity,SAR m,sum,Cash distributions to unitholders declared for the period (statement of changes in net assets or fund report).,
 NAV_FV,REIT,Net assets at fair value,Balance sheet,SAR m,sum,Net asset value with investment properties at fair value (the fund reports properties at cost less depreciation and impairment in its statements and discloses the fair-value NAV in a note).,
 FFO_M,REIT,FFO margin,Ratio,%,ratio of totals,Funds from operations ÷ revenue.,FFO / REV
 LTV,REIT,Loan to value (book),Ratio,%,ratio of totals,Borrowings ÷ total assets at period end (book values).,DEBT / TA
 PAYOUT,REIT,Distributions / FFO,Ratio,%,ratio of totals,Distributions declared ÷ funds from operations.,DIST / FFO
+GAIN_DISP,REIT,Gain on disposal of properties,P&L,SAR m,sum,Gain (loss) on sale of investment properties included in net income; excluded from revenue and deducted in FFO.,

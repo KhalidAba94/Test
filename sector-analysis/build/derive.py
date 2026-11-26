@@ -136,9 +136,9 @@ def main(sector, facts_csv, overrides_csv, out_csv):
                 if val(t, p, "REV") is not None:
                     add(t, p, "REV_M", val(t, p, "REV"), "Revenue (margin base)", [(p, "REV")])
                 if val(t, p, "FFO") is None and val(t, p, "NI") is not None and val(t, p, "DA_CF") is not None:
-                    add(t, p, "FFO", val(t, p, "NI") + val(t, p, "DA_CF") + (val(t, p, "IMPAIR_CF") or 0.0),
-                        "NI + depreciation + impairment of investment properties (funds from operations, calculated)",
-                        [(p, "NI"), (p, "DA_CF"), (p, "IMPAIR_CF")])
+                    add(t, p, "FFO", val(t, p, "NI") + val(t, p, "DA_CF") + (val(t, p, "IMPAIR_CF") or 0.0) - (val(t, p, "GAIN_DISP") or 0.0),
+                        "NI + depreciation + impairment of investment properties - gains on property disposals (funds from operations, calculated)",
+                        [(p, "NI"), (p, "DA_CF"), (p, "IMPAIR_CF"), (p, "GAIN_DISP")])
                 if val(t, p, "DEBT") is not None and val(t, p, "CASH") is not None:
                     add(t, p, "NET_DEBT", val(t, p, "DEBT") - val(t, p, "CASH"), "DEBT - CASH", [(p, "DEBT"), (p, "CASH")])
             if tpl == "bank":
