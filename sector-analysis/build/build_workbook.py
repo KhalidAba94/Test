@@ -720,6 +720,13 @@ def main(root, out):
             gs.row_dimensions[r].height = max(14, 13 * (len(line) // 170 + 1))
             r += 1
         r += 1
+    # final sheet order: guidance first, then each sector followed by its companies, then registers
+    order = ["Contents", "How_to_read", "Definitions", "Coverage", "Energy_Sector"]
+    order += [n for n in wb.sheetnames if n.startswith("E_")]
+    order += ["Banks_Sector"] + [n for n in wb.sheetnames if n.startswith("B_") and n not in order]
+    order += ["Budget_Policy_Impact", "Budget_Policy_Facts", "Adjustments", "Data", "Sources", "Review_Log", "Template_Changes"]
+    order = [n for n in order if n in wb.sheetnames] + [n for n in wb.sheetnames if n not in order]
+    wb._sheets = [wb[n] for n in order]
     # contents
     title(contents, "Saudi sector & company financial analysis 2022–2026: pilot sectors Energy and Banks",
           f"Built from the 'Tadawul Financials' archive. Figures in SAR million unless stated. As of {guide.get('as_of', '')}.")
