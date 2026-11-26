@@ -165,7 +165,7 @@ significant_events:
     financial_effect: "Tax claim charges USD 22,534k in FY2022"
     source: "6015_AMERICANA/2023_Annual_filed2024-02-14.pdf"
     page: 49
-    quote: "In August 2022, the Group has entered into settlement agreements with the tax authorities to settle the tax claims for the period from 2005 to 2017"
+    quote: "the Group has entered into settlement agreements with the tax authorities to settle the tax claims for the period from 2005 to 2017"
   - date: "2023"
     event: "REEF Technology cloud-kitchen arrangement (25% stake for non-recourse loan notes of USD 28.5m): derivative revalued to nil and management intends to exit"
     financial_effect: "FV loss USD 11,331k; deferred gain USD 7,512k released; working capital loan USD 1,000k fully impaired"

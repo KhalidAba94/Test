@@ -1,0 +1,69 @@
+ticker: "4346"
+headline: >-
+  MEFIC REIT's rental and hotel revenue stayed between SAR 60.5m and SAR 64.5m in FY2022-FY2025 while it sold two properties; net profit
+  fell to SAR 0.4m in FY2025 and to a loss of SAR 9.5m in 9M 2026, the fund has paid no distribution since February 2024, and LTV was
+  33.5% at end-2025 (34.4% at 30 Sep 2026).
+lfl_basis:
+  definition_used: >-
+    Revenue is rental and hotel revenue (note 19); the 'Total revenue' line in the FY2025 statements also includes other income and disposal
+    gains, which are excluded. The fund discloses revenue by property, so the perimeter step is calculated as the change in revenue of the
+    properties sold (The Pad in October 2024, the Jeddah building in July 2025). The two Makkah hotels, idle in 2023, started earning hotel
+    revenue in 2024 under a management contract; we treat FY2024 hotel revenue as new capacity.
+  perimeter_changes:
+    - {event: "The Pad (Dubai) exchanged for SAR 63.9m of preferred shares in Downtown Bay Development Limited", date: "2024-10-23", effect: "-SAR 2.4m in FY2024 and -SAR 1.6m in FY2025 (calculated from revenue by property); gain SAR 4.4m outside revenue", source: "4346_MEFIC_REIT/2024_Annual_filed2025-10-07_t15-48-52.pdf p.28; 4346_MEFIC_REIT/2025_Annual_filed2026-04-05_t13-08-55.pdf p.39"}
+    - {event: "Commercial and administrative building in Jeddah sold for SAR 40.0m", date: "2025-07-24", effect: "-SAR 0.6m in FY2025 (calculated); gain SAR 1.6m outside revenue", source: "4346_MEFIC_REIT/2025_Annual_filed2026-04-05_t13-08-55.pdf p.27, p.39"}
+  capacity_changes:
+    - {event: "Drnef Ajyad and Drnef Kudai hotels in Makkah (non-rented in 2023) operated under a management contract signed in 2023", date: "2024", effect: "hotel revenue SAR 4.3m in FY2024 and SAR 5.5m in FY2025", source: "4346_MEFIC_REIT/2023_Annual_filed2025-10-07_t15-46-01.pdf p.28; 4346_MEFIC_REIT/2025_Annual_filed2026-04-05_t13-08-55.pdf p.39"}
+  fx_exposure: "The Pad (Dubai, AED pegged to the US dollar) until October 2024; no FX effect."
+  price_volume_support: "Partly. Revenue is disclosed by property and occupancy is reported, but not rents per square metre or hotel room rates and nights."
+  confidence: "Medium (perimeter calculated from disclosed property revenue; hotel effect in FY2025 not determinable)"
+price_volume:
+  - period: "FY2025 vs FY2024"
+    text: >-
+      Revenue fell SAR 3.5m. We calculate that the two sales removed SAR 2.2m and the hotels added SAR 1.2m; the remaining properties lost
+      SAR 2.4m, mainly Dhiyafa (SAR 14.5m to SAR 12.3m), with the Riyadh mall slightly up (SAR 29.9m to SAR 30.2m). The company reports total
+      occupancy of 80% for 2025; rents and room rates are not disclosed, so price and volume are not determinable.
+    basis: "calculated from disclosed revenue by property; price/volume split not determinable"
+    confidence: "High for the amounts; split not determinable"
+    source: "4346_MEFIC_REIT/2025_Annual_filed2026-04-05_t13-08-55.pdf p.39; 4346_MEFIC_REIT/2025_Annual_filed2026-04-05_t13-14-48.pdf p.4"
+    refs: ["4346-FY2025-REV", "4346-FY2024-REV"]
+  - period: "FY2024 vs FY2023"
+    text: >-
+      Revenue rose SAR 4.0m: the hotels added SAR 4.3m and The Pad's sale removed SAR 2.4m, so we calculate like-for-like growth of SAR 2.1m
+      (3.4 percentage points), led by the Riyadh mall (SAR 26.6m to SAR 29.9m).
+    basis: "calculated from disclosed revenue by property"
+    confidence: "High for the amounts; treating the hotels as new capacity is our classification"
+    source: "4346_MEFIC_REIT/2025_Annual_filed2026-04-05_t13-08-55.pdf p.39; 4346_MEFIC_REIT/2023_Annual_filed2025-10-07_t15-46-01.pdf p.37"
+    refs: ["4346-FY2024-REV", "4346-FY2023-REV"]
+profit_and_margin:
+  drivers:
+    - {period: "FY2023", driver: "Revenue fell 4.2% to SAR 60.5m (Riyadh mall SAR 29.8m to SAR 26.6m) and the fund made a net loss of SAR 11.5m (net margin -19.0%; ROE -2.2%) after expected credit losses of SAR 20.4m, against a profit of SAR 13.7m in FY2022 that included SAR 11.1m of one-off other income and SAR 25.0m of impairment reversals. A SAR 7.4m gain on remeasuring a lease supported the result. We calculate FFO down 57.7% to SAR 7.9m; no distribution was declared in 2023.", source: "4346_MEFIC_REIT/2024_Annual_filed2025-10-07_t15-48-52.pdf p.9-11; 4346_MEFIC_REIT/2023_Annual_filed2025-10-07_t15-46-01.pdf p.9, p.37-38", refs: ["4346-FY2023-REV", "4346-FY2023-NI_ATTR", "4346-FY2023-FFO", "4346-FY2023-DIST", "4346-FY2022-NI_ATTR"]}
+    - {period: "FY2024", driver: "Revenue rose 6.6% to SAR 64.5m as the Makkah hotels earned SAR 4.3m. Net profit was SAR 8.1m (net margin 12.6%; ROE 1.6%), including a SAR 13.2m impairment reversal and a SAR 4.4m gain on The Pad, both outside FFO, and a SAR 3.4m lease remeasurement gain; finance cost rose to SAR 32.8m after the loan was refinanced with SAB. We calculate FFO at SAR 13.6m; the SAR 5.9m distribution (for 2023) was 43.0% of FFO. LTV 35.6%.", source: "4346_MEFIC_REIT/2025_Annual_filed2026-04-05_t13-08-55.pdf p.8-11, p.40; 4346_MEFIC_REIT/2024_Annual_filed2025-10-07_t15-48-52.pdf p.36", refs: ["4346-FY2024-REV", "4346-FY2024-NI_ATTR", "4346-FY2024-FFO", "4346-FY2024-GAIN_DISP", "4346-FY2024-DIST"]}
+    - {period: "FY2025", driver: "Revenue fell 5.4% to SAR 61.0m and net profit to SAR 0.4m (net margin 0.6%; ROE 0.1%), after a net impairment of SAR 3.8m; finance cost fell to SAR 25.6m as borrowings were cut to SAR 312m. Other income of SAR 7.8m included a SAR 3.8m dividend on the preferred shares and a SAR 3.7m lease remeasurement gain (such gains appeared in each of FY2023-FY2025). We calculate FFO up 79.3% to SAR 24.5m (FFO margin 40.1%); no distribution. LTV 33.5%; NAV at fair value SAR 573m.", source: "4346_MEFIC_REIT/2025_Annual_filed2026-04-05_t13-08-55.pdf p.8-11, p.34, p.38, p.40", refs: ["4346-FY2025-REV", "4346-FY2025-NI_ATTR", "4346-FY2025-FFO", "4346-FY2025-DEBT", "4346-FY2025-NAV_FV", "4346-FY2025-IMPAIR_CF"]}
+    - {period: "9M2026", driver: "Only fact-sheet figures are printed: no revenue. The company reports a net loss of SAR 9.5m for January-September 2026 against a profit of SAR 8.7m in 9M 2025 (annualised ROE -2.5% vs 2.2%). Book NAV fell to SAR 506m, we calculate NAV at fair value at SAR 570m (SAR 593m a year earlier) and LTV at 34.4% (35.4%). Occupancy was 66%, with the Kuddai hotel empty. No distribution was declared.", source: "4346_MEFIC_REIT/2026_Q3_filed2026-10-13.pdf p.1, p.3-4; 4346_MEFIC_REIT/2025_Q3_filed2025-11-13.pdf p.1, p.4", refs: ["4346-9M2026-NI_ATTR", "4346-9M2025-NI_ATTR", "4346-9M2026-EQ_ATTR", "4346-9M2026-NAV_FV", "4346-9M2026-DEBT", "4346-9M2026-TA", "4346-9M2026-DIST"]}
+  one_offs:
+    - {item: "Other income from Al-Rukn Al-Mateen (unitholder of Al-Qannas Fund): SAR 10.0m plus SAR 1.1m distributions; inside FFO", period: "FY2022", amount_sar_m: 11.1, line: "Other income (note 19)", source: "4346_MEFIC_REIT/2023_Annual_filed2025-10-07_t15-46-01.pdf p.38", tax_nci: "Funds are not subject to zakat and there are no minority interests. Listed only: net profit and FFO kept as reported."}
+    - {item: "Write-off of balances no longer in use; inside FFO", period: "FY2025", amount_sar_m: 0.3, line: "Other income (note 21)", source: "4346_MEFIC_REIT/2025_Annual_filed2026-04-05_t13-08-55.pdf p.40", tax_nci: "No zakat or minority interests. Listed only (88% of net profit of SAR 0.4m): profit kept as reported."}
+    - {item: "Gain on disposal of The Pad; outside revenue and FFO (GAIN_DISP)", period: "FY2024", amount_sar_m: 4.4, line: "Gain on disposal of investment properties (other income in the FY2024 statements)", source: "4346_MEFIC_REIT/2025_Annual_filed2026-04-05_t13-08-55.pdf p.9", tax_nci: "No zakat or minority interests. Listed only: net profit kept as reported; FFO excludes it."}
+    - {item: "Gain on disposal of the Jeddah building; outside revenue and FFO (GAIN_DISP)", period: "FY2025", amount_sar_m: 1.6, line: "Gain on disposal of investment properties", source: "4346_MEFIC_REIT/2025_Annual_filed2026-04-05_t13-08-55.pdf p.9", tax_nci: "No zakat or minority interests. Listed only: net profit kept as reported; FFO excludes it."}
+developments:
+  - {date: "2023", category: "operations", text: "Signed a contract to manage and operate the Drnef Ajyad (203 rooms, 11 suites) and Drnef Kudai (75 rooms, 11 suites) hotels in Makkah, which earned no revenue in 2023; hotel revenue was SAR 4.3m in 2024 and SAR 5.5m in 2025.", source: "4346_MEFIC_REIT/2023_Annual_filed2025-10-07_t15-46-01.pdf p.28; 4346_MEFIC_REIT/2024_Annual_filed2025-10-07_t15-48-52.pdf p.29; 4346_MEFIC_REIT/2025_Annual_filed2026-04-05_t13-08-55.pdf p.39"}
+  - {date: "2024-02-01", category: "financing", text: "Approved the last distribution to date, SAR 0.08 per unit (SAR 5.9m) for 2023; the FY2025 statements report no distribution approved, and none was paid to 30 Sep 2026.", source: "4346_MEFIC_REIT/2025_Annual_filed2026-04-05_t13-08-55.pdf p.41; 4346_MEFIC_REIT/2026_Q3_filed2026-10-13.pdf p.3"}
+  - {date: "2024", category: "financing", text: "Refinanced the Riyad Bank loan with a SAR 400m SAB facility at SAIBOR + 2% (SAR 347.5m drawn); borrowings fell to SAR 312m at end-2025.", source: "4346_MEFIC_REIT/2024_Annual_filed2025-10-07_t15-48-52.pdf p.36; 4346_MEFIC_REIT/2025_Annual_filed2026-04-05_t13-08-55.pdf p.38"}
+  - {date: "2024-10-23", category: "M&A", text: "Exchanged the 30 apartments in The Pad, Dubai, for SAR 63.9m of preferred shares in Downtown Bay Development Limited (gain SAR 4.4m); the shares paid a SAR 3.8m dividend in 2025.", source: "4346_MEFIC_REIT/2024_Annual_filed2025-10-07_t15-48-52.pdf p.28; 4346_MEFIC_REIT/2025_Annual_filed2026-04-05_t13-08-55.pdf p.40"}
+  - {date: "2025-07-24", category: "M&A", text: "Sold the commercial and administrative building in Jeddah for SAR 40.0m (gain SAR 1.6m).", source: "4346_MEFIC_REIT/2025_Annual_filed2026-04-05_t13-08-55.pdf p.27"}
+  - {date: "2025-10", category: "event", text: "The audited FY2023 and FY2024 statements appear in the archive with October 2025 filing dates (approved by the fund board on 27 March 2024 and, as printed, '27 march 2024' for FY2024).", source: "4346_MEFIC_REIT/2023_Annual_filed2025-10-07_t15-46-01.pdf p.46; 4346_MEFIC_REIT/2024_Annual_filed2025-10-07_t15-48-52.pdf p.46"}
+what_it_means:
+  improved: "Borrowings fell from SAR 354m (FY2022) to SAR 312m (FY2025) after two sales, finance cost fell to SAR 25.6m in FY2025, and we calculate FFO up 79.3% to SAR 24.5m."
+  weakened: "Revenue was flat at SAR 60.5m-64.5m, net profit fell to SAR 0.4m in FY2025 (net margin 0.6%) and to a SAR 9.5m loss in 9M 2026, occupancy was 66% at 30 Sep 2026, and there has been no distribution since February 2024."
+  why: "Large receivable losses (SAR 20.4m in FY2023), idle or slowly recovering Makkah hotels and lower Dhiyafa rent held back income, while results were moved by non-cash items: impairment changes, lease remeasurement gains each year and disposal gains."
+  uncertain: "The 9M 2026 loss is not explained in the quarterly report and no 9M revenue is printed; FFO is small relative to the lease, right-of-benefit and hotel depreciation it adds back, and the fund's statements carry several presentation errors."
+confidence_overall: "Medium"
+data_notes:
+  - "Restatements: FY2022 borrowings reclassified to include accrued financing costs (FY2023 note 27: 347.2m to 354.0m, R). FY2024 hotel part of a dual-use property moved from investment properties to property and equipment (FY2025 note 28): investment-property depreciation and impairment were split, but our all-real-estate DA_CF and IMPAIR_CF totals are unchanged. FY2024 NAV at fair value corrected from 546.2m to 579.2m (FY2024 note 9 used 866.6m instead of its own 899.6m total valuation; R). FY2024 net profit changed by SAR 2,002 to 8.1m (arithmetic correction; R)."
+  - "Revenue (REV) is 'Rental and hotel revenues'; the FY2025 'Total revenue' line (70.4m) also includes other income and disposal gains. Disposal gains are in GAIN_DISP (FY2024 4.4m, FY2025 1.6m) and FFO deducts them."
+  - "DA_CF covers depreciation of investment properties and the hotel (property and equipment), amortisation of right-of-benefit assets and depreciation of right-of-use assets; IMPAIR_CF covers investment properties, property and equipment and right of benefit (FY2022 reversal 8.9m)."
+  - "Lease remeasurement gains (7.4m in FY2023, 3.4m in FY2024, 3.7m in FY2025) recur each year and are kept in FFO, not treated as one-offs; the FY2024 statements showed 3.0m for 2024, the FY2025 comparative 3.4m."
+  - "Borrowings include accrued financing costs (4.0m in FY2025). Loans from and repayments to the Fund Manager (trade payables 14.2m at end-2025) are not in DEBT."
+  - "9M figures come from the quarterly reports (unaudited) and are partial: net profit (Jan-Sep), book NAV and total assets are printed; borrowings (debt-to-asset ratio x total assets) and NAV at fair value (book NAV plus the gap between average fair value and book value of the properties) are calculated (C). No revenue is printed."
+  - "The FY2024 cash-flow statement has misaligned labels; FY2023 and FY2024 add-backs were taken from the correctly labelled columns and checked against the income statements. FY2021 total assets and fair-value NAV are not in the archive."

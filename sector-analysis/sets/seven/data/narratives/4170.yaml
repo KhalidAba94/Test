@@ -1,0 +1,165 @@
+ticker: '4170'
+headline: >-
+  TECO's single resort earned about SAR 10m a year (SAR 10.2m in FY2022, SAR 9.3m in FY2025) at a gross loss every year, so its results
+  depend on interest from the cash raised in the 2022 rights issue: it made a profit only in FY2024 (SAR 6.4m, with SAR 31.0m of deposit
+  income) and lost SAR 11.5m in FY2025 and SAR 10.1m in 9M 2026 (9M 2025: SAR 3.4m) as deposit income fell after SAR 249m was moved
+  into a hotel fund.
+lfl_basis:
+  definition_used: >-
+    Standard bridge on IFRS revenue. TECO is a single entity running one resort (Palm Beach Resort) on land leased to May 2029; it has
+    no subsidiaries and made no acquisitions, so perimeter, FX and new-capacity steps are nil and organic growth equals reported growth.
+    Revenue is below SAR 10m from FY2023, so growth after FY2023 is n.m. Interest on deposits, investment gains and losses, and the
+    real estate fund are outside revenue.
+  perimeter_changes:
+  - event: None (single entity); SR 249.4m investment in a SEDCO Capital real estate fund (Fairmont Al Khobar) is a financial asset
+      at fair value through OCI
+    date: '2024'
+    effect: no revenue effect
+    source: 4170_TECO/2025_Annual_filed2026-04-07.pdf p.12, p.24
+  capacity_changes:
+  - event: No new rooms or sites disclosed; capex SR 0.4m-7.6m a year
+    date: FY2022-9M2026
+    effect: nil
+    source: 4170_TECO/2025_Annual_filed2026-04-07.pdf p.11; 4170_TECO/2026_Q3_filed2026-11-09.pdf p.7
+  fx_exposure: 'None: all revenue is in Saudi Arabia.'
+  price_volume_support: 'Not determinable: revenue is split into rooms, chalets/services, and food and beverages, but occupancy, room
+    nights and rates are not disclosed.'
+  confidence: High (perimeter, FX and capacity nil); growth n.m. from FY2024 because revenue is below SAR 10m
+price_volume:
+- period: 9M 2026 vs 9M 2025
+  text: >-
+    Revenue rose SAR 0.4m to SAR 6.8m. Rooms revenue fell 6.3% (SAR 3.99m to SAR 3.74m) and food and beverages 20.9% (SAR 1.49m to SAR
+    1.18m), while service fees and other revenue nearly doubled (+94.3%, SAR 0.98m to SAR 1.91m). Occupancy and rates are not disclosed.
+  basis: disclosed (revenue by type); split not determinable
+  confidence: High for the amounts
+  source: 4170_TECO/2026_Q3_filed2026-11-09.pdf p.15
+  refs:
+  - 4170-9M2026-REV
+  - 4170-9M2025-REV
+profit_and_margin:
+  drivers:
+  - period: FY2023
+    driver: >-
+      Revenue -5.4% to SAR 9.6m while cost of revenue rose to SAR 13.8m (SAR 10.6m), a gross loss of SAR 4.2m. The company impaired
+      the resort by SAR 38.8m and booked SAR 4.5m of credit-loss provisions. Interest on the rights-issue cash rose to SAR 29.2m (SAR
+      0.6m), but zakat was SAR 13.5m and the net loss SAR 44.2m. ROE -8.4%. Margins are n.m. because revenue is below SAR 10m.
+    source: 4170_TECO/2024_Annual_filed2025-04-06.pdf p.9 (P&L), p.11 (cash flow)
+    refs:
+    - 4170-FY2023-REV
+    - 4170-FY2023-GP
+    - 4170-FY2023-NI_ATTR
+    - 4170-FY2023-IMPAIR_CF
+    - 4170-FY2023-FIN_INC
+  - period: FY2024
+    driver: >-
+      Revenue SAR 10.0m and a gross loss of SAR 1.9m (as re-presented in the FY2025 annual). Deposit income of SAR 31.0m, three times
+      revenue, produced a profit before zakat of SAR 16.5m and a net profit of SAR 6.4m after zakat of SAR 10.2m and a SAR 1.3m fair-value
+      loss on FVTPL investments. ROE 1.3%. Cash fell from SAR 517m to SAR 255m as SAR 249m went into the hotel fund and SAR 24m into
+      FVTPL assets.
+    source: 4170_TECO/2025_Annual_filed2026-04-07.pdf p.9, p.11, p.35; 4170_TECO/2024_Annual_filed2025-04-06.pdf p.11
+    refs:
+    - 4170-FY2024-REV
+    - 4170-FY2024-NI_ATTR
+    - 4170-FY2024-FIN_INC
+    - 4170-FY2024-CASH
+    - 4170-FY2024-PBT
+  - period: FY2025
+    driver: >-
+      Revenue SAR 9.3m: rooms +5.1% and food and beverages up to SAR 1.1m, but chalet rent and other revenue fell 38.3% (SAR 4.0m to
+      SAR 2.5m); the gross loss widened to SAR 4.6m. Deposit income halved to SAR 14.9m, the FVTPL loss was SAR 2.7m and zakat SAR 9.8m,
+      so the net loss was SAR 11.5m. ROE -2.3%. The fund lost a further SAR 6.6m in OCI.
+    source: 4170_TECO/2025_Annual_filed2026-04-07.pdf p.9 (P&L), p.24 (fund), p.29 (revenue)
+    refs:
+    - 4170-FY2025-REV
+    - 4170-FY2025-GP
+    - 4170-FY2025-NI_ATTR
+    - 4170-FY2025-FIN_INC
+  - period: 9M2026
+    driver: >-
+      Revenue SAR 6.8m (SAR 6.5m) and a smaller gross loss (SAR 2.7m vs SAR 3.7m), but G&A rose to SAR 8.3m (SAR 6.2m), deposit income
+      fell to SAR 9.6m (SAR 11.2m) and FVTPL investments lost SAR 3.5m (a SAR 0.5m gain in 9M 2025). Zakat was SAR 6.75m (SAR 5.0m)
+      and the net loss SAR 10.1m (SAR 3.4m). ROE -2.8% (annualised). Operating cash flow was -SAR 18.7m after zakat payments of SAR
+      18.1m.
+    source: 4170_TECO/2026_Q3_filed2026-11-09.pdf p.5 (P&L), p.7 (cash flow), p.13 (investments)
+    refs:
+    - 4170-9M2026-REV
+    - 4170-9M2026-NI_ATTR
+    - 4170-9M2026-FIN_INC
+    - 4170-9M2026-CFO
+    - 4170-9M2025-NI_ATTR
+  one_offs:
+  - item: Fair value loss on FVTPL investments
+    period: FY2024
+    amount_sar_m: -1.3
+    line: Fair value loss on financial assets at FVTPL
+    source: 4170_TECO/2025_Annual_filed2026-04-07.pdf p.9
+    tax_nci: 'No minority interests (single entity); zakat effect not disclosed: not determinable, profit kept as reported'
+  - item: Fair value loss on FVTPL investments
+    period: FY2025
+    amount_sar_m: -2.7
+    line: Fair value loss on financial assets at FVTPL
+    source: 4170_TECO/2025_Annual_filed2026-04-07.pdf p.9
+    tax_nci: 'No minority interests; zakat effect not disclosed: not determinable, profit kept as reported'
+  - item: Fair value gain on FVTPL investments
+    period: 9M2025
+    amount_sar_m: 0.5
+    line: Unrealised gain on financial assets at FVTPL
+    source: 4170_TECO/2026_Q3_filed2026-11-09.pdf p.5
+    tax_nci: 'No minority interests; zakat effect not disclosed: not determinable, profit kept as reported'
+  - item: Realised (SAR 3.19m) and unrealised (SAR 0.28m) losses on FVTPL investments
+    period: 9M2026
+    amount_sar_m: -3.5
+    line: Realised and unrealised loss from financial assets at FVTPL
+    source: 4170_TECO/2026_Q3_filed2026-11-09.pdf p.5, p.13
+    tax_nci: 'No minority interests; zakat effect not disclosed: not determinable, profit kept as reported'
+  - item: Dividend income from FVTPL investments
+    period: 9M2026
+    amount_sar_m: 0.6
+    line: Dividend income from financial assets carried at FVTPL
+    source: 4170_TECO/2026_Q3_filed2026-11-09.pdf p.5
+    tax_nci: 'No minority interests; zakat effect not disclosed: not determinable, profit kept as reported'
+developments:
+- date: '2022'
+  category: financing
+  text: Rights issue raised net proceeds of SR 502.4m; share capital rose from SR 52.6m to SR 578.2m.
+  source: 4170_TECO/2023_Annual_filed2024-04-04.pdf p.11; 4170_TECO/2022_Annual_filed2023-04-04.pdf p.8
+- date: '2023'
+  category: event
+  text: Impaired the Palm Beach Resort by SR 38.8m after a value-in-use test.
+  source: 4170_TECO/2025_Annual_filed2026-04-07.pdf p.23
+- date: '2024'
+  category: strategy
+  text: Invested SR 243.8m (plus SR 5.6m costs) in a SEDCO Capital fund developing a Fairmont hotel on the Al Khobar corniche, and SR
+    24.0m in FVTPL assets.
+  source: 4170_TECO/2025_Annual_filed2026-04-07.pdf p.24; 4170_TECO/2024_Annual_filed2025-04-06.pdf p.11
+- date: '2025-10-16'
+  category: financing
+  text: Changed the nominal value of shares from SR 0.5 to SR 10 (57.8m shares).
+  source: 4170_TECO/2026_Q3_filed2026-11-09.pdf p.14
+- date: 2026 (9M)
+  category: event
+  text: Sold FVTPL investments at a realised loss of SR 3.2m.
+  source: 4170_TECO/2026_Q3_filed2026-11-09.pdf p.13
+what_it_means:
+  improved: FY2024 was the only profitable year (net profit SAR 6.4m), and equity was still SAR 475m at 30 Sep 2026, mostly cash (SAR
+    230m) and the hotel fund.
+  weakened: The resort made a gross loss every year (SAR 4.6m in FY2025), and the net loss widened to SAR 10.1m in 9M 2026 from SAR
+    3.4m, with operating cash flow of -SAR 18.7m.
+  why: Revenue stayed near SAR 10m while resort costs were higher, so profit depended on deposit interest (SAR 31.0m in FY2024); moving
+    SAR 249m into the hotel fund cut that income to SAR 14.9m in FY2025, and the fund earns nothing in profit or loss.
+  uncertain: The resort land lease ends in May 2029 without a stated renewal right, and the fund is valued with Level 3 inputs (SAR
+    15.7m of cumulative fair-value losses in OCI).
+confidence_overall: High
+data_notes:
+- Revenue is below SAR 10m from FY2023, so revenue growth from FY2024 and all margins from FY2023 are n.m.; net debt / EBITDA is n.m.
+  (no borrowings, negative EBITDA).
+- 'Stage A overrides: finance cost set to 0 for FY2023 and FY2024 (the XBRL had mapped the provision for legal claims); there is no
+  finance-cost line on the face. Lease interest (SR 14,707 FY2024; SR 9,659 FY2025) and employee-benefit interest (SR 64,598; SR 71,360)
+  sit inside operating expenses.'
+- 'Stage A overrides: impairment add-back is SR 38.8m in FY2023 and nil in all other periods (the XBRL mixed credit-loss, claims and
+  FVTPL items); FY2022 depreciation corrected to SR 6.4m.'
+- FY2024 cost of revenue and gross profit are re-presented in the FY2025 annual, note 27 (SR 2.9m moved from S&M and G&A into cost of
+  revenue; no profit effect). The 9M 2025 finance income in the 2025 Q3 XBRL (SR 0.5m) was a tagging error; both PDFs show SR 11.2m.
+- Finance income = interest on time deposits only. FVTPL fair-value results and dividends sit inside our operating income and are listed
+  as one-offs; fair-value changes on the hotel fund go to OCI.
+- Primary statements in the FY2022-FY2024 annuals and the 2026 Q3 interim are scanned and were read visually.

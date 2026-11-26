@@ -91,8 +91,9 @@ profit_and_margin:
   - period: 9M2026
     driver: >-
       Revenue rose 21.1% to SAR 175m and gross profit 15.2%, though gross margin eased to 35.5% (37.3%). The EBITDA margin rose to 22.4%
-      (20.2%), helped by SAR 2.4m of portfolio gains and dividends and an SAR 1.1m disposal gain; time-deposit income fell to SAR 0.8m
-      (SAR 2.5m). Attributable profit rose 51.2% to SAR 18.0m, a net margin of 10.3%; annualised ROE 8.7%.
+      (20.2%), helped by SAR 2.4m of portfolio gains and dividends and an SAR 1.1m gain on selling equipment (disposal gains recur most
+      years); time-deposit income fell to SAR 0.8m (SAR 2.5m). Attributable profit rose 51.2% to SAR 18.0m, a net margin of 10.3%; annualised
+      ROE 8.7%.
     source: 2282_NAQI/2026_Q3_filed2026-11-16.pdf p.5, p.17
     refs:
     - 2282-9M2026-REV
@@ -134,23 +135,23 @@ profit_and_margin:
     source: 2282_NAQI/2025_Annual_filed2026-04-08.pdf p.8, p.41
     tax_nci: >-
       Zakat effect not disclosed; no non-controlling interests: after-zakat effect not determinable, profit kept as reported
-  - item: Dividends (SAR 2.0m) and realised gain on FVTPL shares, disposal gain (SAR 0.8m) and FX gains (SAR 1.3m)
+  - item: Dividends (SAR 2.0m) and realised gain on FVTPL shares
     period: FY2025
-    amount_sar_m: 4.2
-    line: Below operating profit / other income
-    source: 2282_NAQI/2025_Annual_filed2026-04-08.pdf p.8, p.48
+    amount_sar_m: 2.0
+    line: Below operating profit, above profit before zakat
+    source: 2282_NAQI/2025_Annual_filed2026-04-08.pdf p.8
+    tax_nci: >-
+      Zakat effect not disclosed; no non-controlling interests: after-zakat effect not determinable, profit kept as reported
+  - item: Foreign exchange gains
+    period: FY2025
+    amount_sar_m: 1.3
+    line: Other income (note 27)
+    source: 2282_NAQI/2025_Annual_filed2026-04-08.pdf p.48
     tax_nci: >-
       Zakat effect not disclosed; no non-controlling interests: after-zakat effect not determinable, profit kept as reported
   - item: 'FVTPL portfolio: revaluation gain, dividends and realised loss (9M 2025: SAR +0.5m net)'
     period: 9M2026
     amount_sar_m: 2.4
-    line: Below operating profit, above profit before zakat
-    source: 2282_NAQI/2026_Q3_filed2026-11-16.pdf p.5
-    tax_nci: >-
-      Zakat effect not disclosed; no non-controlling interests: after-zakat effect not determinable, profit kept as reported
-  - item: Gain on disposal of property, plant and equipment
-    period: 9M2026
-    amount_sar_m: 1.1
     line: Below operating profit, above profit before zakat
     source: 2282_NAQI/2026_Q3_filed2026-11-16.pdf p.5
     tax_nci: >-
@@ -194,8 +195,8 @@ what_it_means:
     Wholesale bottled water fell from SAR 128.9m (FY2022) to SAR 34.3m (FY2025) while retail grew only slowly; in FY2025 a SAR 13.7m
     unrealised loss on listed shares added to the fall in operating profit.
   uncertain: >-
-    The filings do not explain the wholesale decline or give volumes and prices, and part of 2026 profit came from portfolio gains (SAR
-    2.4m) and a disposal gain (SAR 1.1m).
+    The filings do not explain the wholesale decline or give volumes and prices, and part of 9M 2026 profit came from portfolio gains
+    (SAR 2.4m) and a disposal gain (SAR 1.1m).
 confidence_overall: Medium
 data_notes:
 - >-
@@ -210,7 +211,8 @@ data_notes:
 - >-
   Our operating income (PBT + finance cost - time-deposit income) includes the listed-share portfolio results (revaluation, dividends,
   realised gains) and disposal gains shown below Naqi's "profit from operation"; EBITDA excluding one-offs removes the portfolio results
-  in every period from FY2024.
+  in every period from FY2024, the FY2022 IPO costs, the FY2024 SAR 3.7m disposal gain and the FY2025 FX gain; smaller disposal gains
+  (FY2025 SAR 0.8m, 9M 2026 SAR 1.1m) recur most years and stay in EBITDA.
 - 'Capex excludes purchases of biological assets (breeder hens: SAR 2.6m in FY2025, SAR 7.4m in 9M 2026).'
 - >-
   Primary statements in all annuals and the 2026 Q3 interim are image pages, read by OCR and checked against printed subtotals.

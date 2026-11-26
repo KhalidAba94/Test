@@ -150,11 +150,12 @@ one_offs:
   quote: >-
     Gain / (loss) on revaluation of investments at fair value through profit or loss 9 (764,120) (283,468) 1,135,323 (1,500,265)
 - period: 9M2026
-  item: Gain on disposal of property, plant and equipment
+  item: >-
+    Gain on disposal of property, plant and equipment (disposal gains recur most years: FY2023 0.1m, FY2024 3.7m, FY2025 0.8m)
   amount: 1113504
   unit: SAR
   pnl_line: below operating profit, above PBT
-  recurring: false
+  recurring: true
   source: 2282_NAQI/2026_Q3_filed2026-11-16.pdf
   page: 5
   quote: Gain on disposal of property, plant and equipment 1,024,808 - 1,113,504 -

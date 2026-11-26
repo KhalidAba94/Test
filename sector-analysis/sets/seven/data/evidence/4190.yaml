@@ -353,6 +353,15 @@ one_offs:
   page: 13
   quote: Gain on disposal of property and equipment (10,454) (67)
   note: 1.0% of FY2025 profit; booked in 9M 2025 (SAR 10.9m, 2026 Q3 p.8).
+- period: 9M2025
+  item: Gain on sale of property and equipment (proceeds SAR 45.5m)
+  amount: 10868
+  unit: SAR '000
+  pnl_line: Other income, net
+  recurring: false
+  source: 4190_JARIR/2026_Q3_filed2026-11-09.pdf
+  page: 8
+  quote: Gain on sale of property and equipment (166) (10,868)
 restatements:
 - period_restated: FY2024
   item: Revenue and cost of revenue re-presented on a net (agent) basis for certain service-provider and vendor arrangements (revenue 10,830,921 -> 10,619,263)

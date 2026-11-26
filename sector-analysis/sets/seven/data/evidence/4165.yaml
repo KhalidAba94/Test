@@ -1,0 +1,336 @@
+# Evidence from Al Majed for Oud (archive 4165_ALMAJED_OUD). Facts only; page = physical PDF page (1-based).
+# FY2024 annual is an image file (read by OCR); other filings have text layers.
+ticker: '4165'
+company: Al Majed for Oud Co.
+perimeter_changes:
+- event: >-
+    FY2022-FY2023: company accounts only (no subsidiaries); Gulf sales made through branches in Kuwait, UAE, Bahrain and Oman
+  type: acquisition
+  status: not found
+  period: FY2022-FY2023
+  source: 4165_ALMAJED_OUD/2023_Annual_filed2024-10-01.pdf
+  page: 9
+  quote: >-
+    The accompanying financial statements include the Company's branches in Saudi Arabia, Kuwait, the United Arab Emirates, Bahrain,
+    and Oman
+- event: >-
+    Al Majed for Oud (Single-Member LLC), Qatar, 100% owned, first consolidated in FY2024 (FY2024 = first consolidated statements);
+    whether it was set up or acquired, and its revenue, are not disclosed
+  type: new_subsidiary
+  date: '2024'
+  consideration: null
+  revenue_contribution: null
+  profit_contribution: null
+  pro_forma_revenue: null
+  period: FY2024
+  unit: SAR
+  source: 4165_ALMAJED_OUD/2024_Annual_filed2025-03-18.pdf
+  page: 12
+  quote: Al Majed for Oud (Single-Member Limited Liability Company) 100% - merchandise. Qatar 206543
+- event: >-
+    Al Majed for Oud Global Limited (UAE, 10 Jun 2026) and Al Majed for Oud USA LLC (20 Jul 2026) established; no significant operations
+    at 30 Sep 2026; UK subsidiary established 26 Oct 2026 (after the period)
+  type: new_subsidiary
+  date: 2026-06 to 2026-10
+  consideration: null
+  revenue_contribution: null
+  profit_contribution: null
+  pro_forma_revenue: null
+  period: 9M2026
+  unit: SAR
+  source: 4165_ALMAJED_OUD/2026_Q3_filed2026-11-07.pdf
+  page: 9
+  quote: Neither subsidiary had commenced significant operations as of 30 September 2026.
+- event: >-
+    MoU to acquire the whole share capital of Al-Safa Pharmaceuticals and Medical Supplies Group (signed 30 Dec 2025; no completion
+    reported by 30 Sep 2026)
+  type: acquisition
+  date: '2025-12-30'
+  consideration: null
+  revenue_contribution: null
+  profit_contribution: null
+  pro_forma_revenue: null
+  period: FY2025
+  unit: SAR
+  source: 4165_ALMAJED_OUD/2025_Annual_filed2026-02-11.pdf
+  page: 52
+  quote: Memorandum of understanding with Mr. Othman Abdullah Othman Al- Suwaih
+segments:
+- period: FY2023
+  segment: Kingdom of Saudi Arabia (regions)
+  basis: geographic
+  revenue: 692254651
+  profit: 157057732
+  unit: SAR
+  source: 4165_ALMAJED_OUD/2024_Annual_filed2025-03-18.pdf
+  page: 53
+- period: FY2023
+  segment: GCC
+  basis: geographic
+  revenue: 80202515
+  profit: -8380479
+  unit: SAR
+  source: 4165_ALMAJED_OUD/2024_Annual_filed2025-03-18.pdf
+  page: 53
+- period: FY2024
+  segment: Kingdom of Saudi Arabia (regions)
+  basis: geographic
+  revenue: 780955240
+  profit: 136700718
+  unit: SAR
+  source: 4165_ALMAJED_OUD/2024_Annual_filed2025-03-18.pdf
+  page: 53
+  note: FY2024 annual basis; the FY2025 annual shows 776,322,952
+- period: FY2024
+  segment: GCC
+  basis: geographic
+  revenue: 145046764
+  profit: 20257811
+  unit: SAR
+  source: 4165_ALMAJED_OUD/2024_Annual_filed2025-03-18.pdf
+  page: 53
+  note: FY2025 annual shows 149,679,052
+- period: FY2025
+  segment: Kingdom of Saudi Arabia
+  basis: geographic
+  revenue: 875837405
+  profit: 173372582
+  unit: SAR
+  source: 4165_ALMAJED_OUD/2025_Annual_filed2026-02-11.pdf
+  page: 52
+- period: FY2025
+  segment: GCC
+  basis: geographic
+  revenue: 227664752
+  profit: 44232924
+  unit: SAR
+  source: 4165_ALMAJED_OUD/2025_Annual_filed2026-02-11.pdf
+  page: 52
+- period: 9M2025
+  segment: Kingdom of Saudi Arabia
+  basis: geographic
+  revenue: 715198159
+  profit: null
+  unit: SAR
+  source: 4165_ALMAJED_OUD/2026_Q3_filed2026-11-07.pdf
+  page: 18
+- period: 9M2025
+  segment: GCC
+  basis: geographic
+  revenue: 136073746
+  profit: null
+  unit: SAR
+  source: 4165_ALMAJED_OUD/2026_Q3_filed2026-11-07.pdf
+  page: 18
+- period: 9M2026
+  segment: Kingdom of Saudi Arabia
+  basis: geographic
+  revenue: 736116420
+  profit: null
+  unit: SAR
+  source: 4165_ALMAJED_OUD/2026_Q3_filed2026-11-07.pdf
+  page: 18
+- period: 9M2026
+  segment: GCC
+  basis: geographic
+  revenue: 212482898
+  profit: null
+  unit: SAR
+  source: 4165_ALMAJED_OUD/2026_Q3_filed2026-11-07.pdf
+  page: 18
+revenue_drivers:
+- period: FY2024
+  driver: >-
+    Sales by region: Central 228.1m, Western 208.9m, Southern 112.8m, Eastern 81.5m, Northern 41.9m, Qassim 34.8m, e-commerce and other
+    channels 73.0m (FY2023 40.5m), GCC 145.0m (80.2m)
+  value: 72984317
+  unit: SAR
+  source: 4165_ALMAJED_OUD/2024_Annual_filed2025-03-18.pdf
+  page: 53
+  quote: E-Commerce and other channels 72,984,317 40,528,121
+- period: FY2025
+  driver: >-
+    Gross sales 2,159.5m less sales discounts 1,065.1m plus services 9.2m = revenue 1,103.5m (FY2024: 1,691.3m, 777.2m, 11.9m)
+  value: 1065138923
+  unit: SAR
+  source: 4165_ALMAJED_OUD/2025_Annual_filed2026-02-11.pdf
+  page: 45
+  quote: Sales discount (1,065,138,923) (777,182,307)
+- period: FY2025
+  driver: GCC 20.6% of revenue; Saudi Arabia 875.8m (+12.8%), GCC 227.7m (+52.1%)
+  value: 227664752
+  unit: SAR
+  source: 4165_ALMAJED_OUD/2025_Annual_filed2026-02-11.pdf
+  page: 52
+  quote: GCC 227,664,752 149,679,052
+- period: 9M2026
+  driver: Saudi Arabia 736.1m (9M2025 715.2m), GCC 212.5m (136.1m)
+  value: 212482898
+  unit: SAR
+  source: 4165_ALMAJED_OUD/2026_Q3_filed2026-11-07.pdf
+  page: 18
+  quote: GCC 212,482,898 136,073,746
+- period: 9M2026
+  driver: 'Seasonality: revenue peaks in Ramadan, Hajj, National Day and year-end seasons'
+  value: null
+  unit: SAR
+  source: 4165_ALMAJED_OUD/2026_Q3_filed2026-11-07.pdf
+  page: 17
+  quote: revenues typically rising during the Ramadan, Hajj, National Day and year-end seasons of every year
+one_offs:
+- period: FY2024
+  item: >-
+    Listing costs charged to profit or loss (IPO cost share; the selling shareholders reimbursed 9.6m through equity)
+  amount: -5034167
+  unit: SAR
+  pnl_line: General and administrative expenses
+  recurring: false
+  source: 4165_ALMAJED_OUD/2025_Annual_filed2026-02-11.pdf
+  page: 46
+  quote: Listing costs (Note 26) - 5,034,167
+- period: FY2025
+  item: Murabaha deposit and investment funds interest income (finance income inside other income; recurring)
+  amount: 4834672
+  unit: SAR
+  pnl_line: Other income/expenses
+  recurring: true
+  source: 4165_ALMAJED_OUD/2025_Annual_filed2026-02-11.pdf
+  page: 47
+  quote: Murabaha deposit and investment funds interest income 4,834,672 819,375
+- period: FY2025
+  item: Lease concessions (recurring each year)
+  amount: 1385451
+  unit: SAR
+  pnl_line: Other income/expenses
+  recurring: true
+  source: 4165_ALMAJED_OUD/2025_Annual_filed2026-02-11.pdf
+  page: 47
+  quote: Lease concessions (Note 6.2) 1,385,451 1,475,000
+- period: 9M2026
+  item: >-
+    Returns on short-term murabaha deposits and call accounts (9M2025: 2,640,467) inside other income (recurring finance income)
+  amount: 9385530
+  unit: SAR
+  pnl_line: Other income / expenses
+  recurring: true
+  source: 4165_ALMAJED_OUD/2026_Q3_filed2026-11-07.pdf
+  page: 7
+  quote: Returns on short-term Islamic Murabaha deposits and bank call accounts 16 (9,385,530) (2,640,467)
+restatements:
+- period_restated: FY2023
+  item: Revenue +5,434,069, cost of sales +3,206,297, selling -1,863,892, other income -4,091,664
+  from: 767023097
+  to: 772457166
+  unit: SAR
+  reason: Reclassification of comparative figures (FY2024 annual note 35)
+  source: 4165_ALMAJED_OUD/2024_Annual_filed2025-03-18.pdf
+  page: 54
+  quote: Sales 767,023,097 5,434,069 772,457,166
+- period_restated: FY2023
+  item: 'Total equity: SAR 50m dividend approved 28 Dec 2023 recognised as a liability'
+  from: 427260776
+  to: 377260776
+  unit: SAR
+  reason: Restatement (FY2024 annual note 34)
+  source: 4165_ALMAJED_OUD/2024_Annual_filed2025-03-18.pdf
+  page: 53
+  quote: dividend distribution approved by the Board of Directors on December 28, 2023, amounting to SAR 50,000,000
+- period_restated: FY2022
+  item: Cash at bank +877,968 from prepayments
+  from: 21879717
+  to: 22757685
+  unit: SAR
+  reason: Reclassification (FY2023 annual note 32)
+  source: 4165_ALMAJED_OUD/2023_Annual_filed2024-10-01.pdf
+  page: 37
+  quote: Cash at bank 21,879,717 877,968 22,757,685
+- period_restated: 9M2025
+  item: Cost of revenue -26,472,903 moved to selling and marketing
+  from: -290252049
+  to: -263779146
+  unit: SAR
+  reason: Reclassification (2026 Q3 note 22); no effect on profit
+  source: 4165_ALMAJED_OUD/2026_Q3_filed2026-11-07.pdf
+  page: 19
+  quote: Cost of Revenue (290,252,049) 26,472,903 (263,779,146)
+significant_events:
+- date: '2023-03-21'
+  event: Converted from a limited liability company to a joint stock company
+  financial_effect: null
+  source: 4165_ALMAJED_OUD/2023_Annual_filed2024-10-01.pdf
+  page: 9
+  quote: >-
+    the shareholders unanimously resolved to convert the Company from a Limited Liability Company to an unlisted Saudi joint stock Company
+- date: '2024-10-07'
+  event: Listing of 7.5m shares (30%) on the Saudi Exchange completed; CMA approval 3 Jun 2024
+  financial_effect: Listing costs 5.0m in FY2024 profit or loss; 9.6m reimbursed by selling shareholders through equity
+  source: 4165_ALMAJED_OUD/2025_Annual_filed2026-02-11.pdf
+  page: 47
+  quote: On 7 October 2024, the process of listing the Group's shares in the Capital Market was completed
+- date: '2025-12-30'
+  event: MoU for the potential acquisition of Al-Safa Pharmaceuticals and Medical Supplies Group
+  financial_effect: none recorded
+  source: 4165_ALMAJED_OUD/2025_Annual_filed2026-02-11.pdf
+  page: 52
+  quote: >-
+    for the potential acquisition of the entire share capital of Al-safa pharmaceuticals and Medical Supplies Group Limited.
+- date: '2026-05-11'
+  event: 'SAR 100m dividend for FY2025 approved and paid (FY2024: SAR 100m paid in 2025)'
+  financial_effect: cash outflow 100m in 9M2026
+  source: 4165_ALMAJED_OUD/2026_Q3_filed2026-11-07.pdf
+  page: 19
+  quote: >-
+    to distribute cash dividends to the shareholders from a portion of the annual profits for 2025 for a total amount of ⃁ 100 million
+- date: 2026-06 to 2026-10
+  event: Holding company in the UAE and subsidiaries in the USA and the UK established
+  financial_effect: no significant operations at 30 Sep 2026
+  source: 4165_ALMAJED_OUD/2026_Q3_filed2026-11-07.pdf
+  page: 9
+  quote: the Group established Al Majed for Oud Global Limited in the United Arab Emirates on 10 June 2026
+audit_opinion:
+- period: FY2022
+  opinion: unmodified (BDO Dr. Mohamed Al-Amri & Co.)
+  emphasis_of_matter: none
+  source: 4165_ALMAJED_OUD/2022_Annual_filed2024-10-01.pdf
+  page: 3
+- period: FY2023
+  opinion: unmodified (BDO Dr. Mohamed Al-Amri & Co.)
+  emphasis_of_matter: none
+  source: 4165_ALMAJED_OUD/2023_Annual_filed2024-10-01.pdf
+  page: 3
+- period: FY2024
+  opinion: unmodified (BDO Dr. Mohamed Al-Amri & Co.)
+  emphasis_of_matter: none
+  source: 4165_ALMAJED_OUD/2024_Annual_filed2025-03-18.pdf
+  page: 3
+- period: FY2025
+  opinion: unmodified (BDO Dr. Mohamed Al-Amri & Co.)
+  emphasis_of_matter: none
+  source: 4165_ALMAJED_OUD/2025_Annual_filed2026-02-11.pdf
+  page: 3
+kpis_in_filings:
+- period: FY2024
+  kpi: E-commerce and other channels revenue
+  value: 72984317
+  unit: SAR
+  source: 4165_ALMAJED_OUD/2024_Annual_filed2025-03-18.pdf
+  page: 53
+- period: FY2022-9M2026
+  kpi: Store (showroom) count, openings, same-store sales
+  value: null
+  unit: count
+  source: 4165_ALMAJED_OUD/2025_Annual_filed2026-02-11.pdf
+  page: null
+  status: not found
+special_extractions:
+- item: Stage A
+  detail: >-
+    FY2021-FY2022 figures added from the PDFs (listed 2024; no XBRL); D&A includes right-of-use amortisation; receivable ECL removed
+    from IMPAIR_CF; DEBT = 0 where no loans.
+open_questions:
+- >-
+  Whether the Qatar subsidiary (first consolidated in FY2024) was acquired or newly set up, and its revenue, are not disclosed.
+- No store count or same-store sales are given, so new-store revenue cannot be separated.
+- >-
+  The FY2025 annual cost of revenue (SAR 380.3m) appears to be on the basis before the 9M 2026 reclassification (note 22), so FY2025
+  gross margin is not comparable with the 9M figures.
