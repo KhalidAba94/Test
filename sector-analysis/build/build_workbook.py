@@ -209,6 +209,7 @@ OPENING = {"FY2022": "FY2021", "FY2023": "FY2022", "FY2024": "FY2023", "FY2025":
 
 
 RK_OF = {}
+UNIT = ["sector"]   # "group" for sets whose groups are not exchange sectors (guide: group_word)
 
 
 def build_overview(wb, ds, comp_sheets):
@@ -267,7 +268,7 @@ def build_company(wb, sector, t, cfg, ds, narr, adj_rows, facts_idx, sheetname, 
     title(ws, f'{cinfo["name"]} ({t}) · {cfg.get("name", sector)} · {cinfo["sub_industry"]}',
           f'Legal name in filings: {cinfo["legal_name"]} · Year-end {fye_txt} · SAR million unless stated · '
           f'{ytd_txt}, never compared with full years.')
-    c = ws["C3"]; c.value = f"◀ {sector} sector"; c.hyperlink = f"#'{sector_sheet}'!A1"; c.font = f(color="0563C1", underline="single", size=9)
+    c = ws["C3"]; c.value = f"◀ {sector} {UNIT[0]}"; c.hyperlink = f"#'{sector_sheet}'!A1"; c.font = f(color="0563C1", underline="single", size=9)
     ws.column_dimensions["A"].width = 46
     for col in "BCDEFGIJK":
         ws.column_dimensions[col].width = 12
@@ -431,6 +432,10 @@ def build_company(wb, sector, t, cfg, ds, narr, adj_rows, facts_idx, sheetname, 
     rep_row = r
     sfy = ds["sector"].get("short_fy", {})
     short_col = [f"{t}|{a}" in sfy or f"{t}|{b}" in sfy for a, b in PAIRS]   # a comparison across a short year: not meaningful
+    def _has(p):
+        x = facts_idx.get((t, p, top))
+        return bool(x) and x.get("value_sar_m") not in ("", None)
+    nodata_col = [not (_has(a) and _has(b)) for a, b in PAIRS]   # no top line in one of the periods: nothing to bridge
     ws.cell(row=r, column=1, value="Reported growth").font = f(True, size=9)
     for i, (cc, pc) in enumerate(colpairs):
         if short_col[i]:
@@ -454,6 +459,8 @@ def build_company(wb, sector, t, cfg, ds, narr, adj_rows, facts_idx, sheetname, 
                 ws.cell(row=r, column=2 + i, value="n.m.")
                 continue
             mine = [a for a in adj_rows if a.get("ticker") == t and a.get("comparison") == comp and a.get("bridge_step") == key]
+            if not mine and nodata_col[i]:
+                continue   # no revenue in one of the two periods (e.g. a REIT fact sheet, a company not yet formed): left blank
             if not mine:
                 ws.cell(row=r, column=2 + i, value="not assessed")   # no register entry: never shown as a zero
                 bases.append(f"{SHORTC[comp]}: not assessed")
@@ -566,15 +573,15 @@ def build_company(wb, sector, t, cfg, ds, narr, adj_rows, facts_idx, sheetname, 
 
 
 def build_sector(wb, sector, cfg, ds, narr, comp_sheets):
-    sname = f"{sector}_Sector"
+    sname = f"{sector}_{UNIT[0].capitalize()}"
     ws = wb.create_sheet(sname, 4 + ORDER.index(sector))
     tickers = ds["tickers"]
     top, prof = cfg["top_line"], cfg["profit"]
     largest = ds["sector"]["largest_by_top_line_FY2025"]
     yl, ym = cfg.get("ytd_label", "9M"), int(cfg.get("ytd_months", 9))
     title(ws, f"{cfg.get('name', sector)} summary, FY2022–FY2025 and {yl} 2026",
-          f"SAR million. Sector ratios are calculated from summed numerators and denominators, never averaged. "
-          f"Sector growth uses a matched sample (companies with data in both periods). 9M columns are partial-year and "
+          f"SAR million. {UNIT[0].capitalize()} ratios are calculated from summed numerators and denominators, never averaged. "
+          f"{UNIT[0].capitalize()} growth uses a matched sample (companies with data in both periods). 9M columns are partial-year and "
           f"compared only with {yl} 2025. Constituents: {len(tickers)} companies. {cfg.get('classification_note', '')}")
     ws.column_dimensions["A"].width = 42
     for col in "BCDEFGHIJKL":
@@ -791,15 +798,15 @@ def build_sector(wb, sector, cfg, ds, narr, comp_sheets):
             r += 1
         return r + 1, out
 
-    r, sec_rows = totals_block(r, f"1. Sector totals: all {len(tickers)} companies")
+    r, sec_rows = totals_block(r, f"1. {UNIT[0].capitalize()} totals: all {len(tickers)} companies")
     lname = ds["companies"][largest]["name"]
     if len(tickers) > 1:   # a one-company group has no "excluding the largest" view
         r, _ = totals_block(r, f"2. Excluding the largest company ({lname}, largest by FY2025 {cfg['top_line_name'].lower()})", excl=largest)
 
     # 3. company contributions
-    r = section(ws, r, "3. Company contribution: share of sector and contribution to sector growth")
+    r = section(ws, r, f"3. Company contribution: share of {UNIT[0]} and contribution to {UNIT[0]} growth")
     for m, lab in ((top, cfg["top_line_name"]), (prof, "Net profit attributable")):
-        header_row(ws, r, [f"{lab}: share of sector", "FY2022", "FY2023", "FY2024", "FY2025", "", "", f"{yl} 2025", f"{yl} 2026"])
+        header_row(ws, r, [f"{lab}: share of {UNIT[0]}", "FY2022", "FY2023", "FY2024", "FY2025", "", "", f"{yl} 2025", f"{yl} 2026"])
         r += 1
         for t in tickers:
             nm = ds["companies"][t]["name"]
@@ -811,7 +818,7 @@ def build_sector(wb, sector, cfg, ds, narr, comp_sheets):
                 ws[f"{col}{r}"] = f'=IF(ISNUMBER({pc[p]}{i}),{pc[p]}{i}/SUM({rng(m, p)}),"")'
                 ws[f"{col}{r}"].number_format = PCT
             r += 1
-        header_row(ws, r, [f"{lab}: contribution to sector growth (pp)", "FY23 vs FY22", "FY24 vs FY23", "FY25 vs FY24", "", "", "", "", f"{yl}26 vs {yl}25"])
+        header_row(ws, r, [f"{lab}: contribution to {UNIT[0]} growth (pp)", "FY23 vs FY22", "FY24 vs FY23", "FY25 vs FY24", "", "", "", "", f"{yl}26 vs {yl}25"])
         r += 1
         for t in tickers:
             ws.cell(row=r, column=1, value=ds["companies"][t]["name"]).font = f(size=9)
@@ -934,6 +941,8 @@ def main(root, out):
     facts = [x for _, fp in sectors.facts_paths(root) for x in load_csv(fp)]
     facts_idx = {(x["ticker"], x["period"], x["metric_code"]): x for x in facts}
     adj = load_csv(os.path.join(root, "data", "adjustments.csv"))
+    guide0 = load_yaml(os.path.join(root, "data", "narratives", "guide.yaml"))
+    UNIT[0] = guide0.get("group_word", "sector")
     wb = Workbook()
     wb.remove(wb.active)
     contents = wb.create_sheet("Contents")
@@ -965,7 +974,7 @@ def main(root, out):
     build_overview(wb, ds, comp_sheets)
     # coverage, sources, policy, review, template changes, methodology, metrics
     cov = load_csv(os.path.join(root, "data", "coverage.csv"))
-    guide0 = load_yaml(os.path.join(root, "data", "narratives", "guide.yaml"))
+
     if cov:
         simple_table(wb, "Coverage", "Coverage: available filings and gaps by company and period",
                      guide0.get("coverage_note", "File-level checks (company name, period, units, assurance) were done inside every file - see Sources. Individual values were matched to PDF text where it exists (Data: PDF match status); figures on scanned pages rest on the XBRL file, with a sample checked visually by the independent auditors."),
@@ -1027,7 +1036,7 @@ def main(root, out):
     # final sheet order: guidance first, then each sector followed by its companies, then registers
     order = ["Contents", "How_to_read", "Overview", "Definitions", "Coverage"]
     for sector in ORDER:   # each sector (or group) sheet followed by its companies, in configured order
-        order += [f"{sector}_Sector"] + [comp_sheets[t] for t in ds[sector]["tickers"]]
+        order += [f"{sector}_{UNIT[0].capitalize()}"] + [comp_sheets[t] for t in ds[sector]["tickers"]]
     order += ["Budget_Policy_Impact", "Budget_Policy_Facts", "Adjustments", "One_offs", "Restatements", "Cross_holdings", "Data", "Sources", "Review_Log", "Template_Changes"]
     order = [n for n in order if n in wb.sheetnames] + [n for n in wb.sheetnames if n not in order]
     wb._sheets = [wb[n] for n in order]

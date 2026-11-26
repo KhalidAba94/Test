@@ -87,7 +87,7 @@ sections:
     below.'
   - 'Accepted limitations: SADAFCO''s year to 31 March 2023 and its 31 March 2022 balance sheet exist in the archive only as XBRL files (no PDF); the restated 30 September 2025 balance sheets of Baan, Armah
     and Cenomi Retail appear only in the 2026 Q3 XBRL files; REIT nine-month figures come from unaudited fact sheets.'
-  - Calculated figures (operating income, EBITDA, free cash flow, net debt, FFO, ratios) are recomputed from their inputs; group totals and ratios in the sector sheets are live Excel formulas over the company
+  - Calculated figures (operating income, EBITDA, free cash flow, net debt, FFO, ratios) are recomputed from their inputs; group totals and ratios on the group sheets are live Excel formulas over the company
     figures and were checked against an independent calculation.
 - heading: Confidence
   lines:
@@ -98,3 +98,4 @@ sections:
 workbook_title: 'SEVEN priority companies: financial analysis 2022–2026 (47 Saudi Main Market companies)'
 coverage_note: 'File-level checks (company name, period, units, assurance) were done inside every file - see Sources. Every core figure was compared with the PDF statements by an analyst, and every disclosed
   figure was then searched for on its PDF page (Data sheet: PDF match status and manual check).'
+group_word: group

@@ -35,7 +35,7 @@ def close(a, b, tol):
 
 
 for sector in list(ds.keys()):
-    ws = wb[f"{sector}_Sector"]
+    ws = wb[f"{sector}_Sector"] if f"{sector}_Sector" in wb.sheetnames else wb[f"{sector}_Group"]
     d = ds[sector]
     cfg = d["config"]
     # locate block rows by label
@@ -43,7 +43,7 @@ for sector in list(ds.keys()):
     block = None
     for r in range(1, 400):
         v = ws.cell(row=r, column=1).value
-        if isinstance(v, str) and v.startswith("1. Sector totals"):
+        if isinstance(v, str) and (v.startswith("1. Sector totals") or v.startswith("1. Group totals")):
             block = "all"
         elif isinstance(v, str) and v.startswith("2. Excluding"):
             block = "ex_largest"
