@@ -1,0 +1,90 @@
+ticker: "4072"
+headline: >-
+  Revenue rose 28.5% to SAR 5,391m in FY2025 but attributable profit fell 4.4% to SAR 383m, and in both FY2024 and FY2025 profit
+  leaned on gains from the ACSC stake (SAR 171m and SAR 179m); in 9M 2026 revenue fell 22.8% to SAR 2,964m and a SAR 575m
+  fair-value loss on ACSC turned the result into an attributable loss of SAR 510m. FY2023 is a short first period, so growth
+  across it is n.m.
+lfl_basis:
+  definition_used: >-
+    Standard bridge on IFRS revenue, which MBC presents as two lines: revenue from contracts with customers and 'other operating
+    revenues' (Saudi government funding for media and entertainment initiatives, treated as government grants, note 5). Both are
+    in our revenue. FY2023 is MBC Group's first statutory period (20 April 2023 to 31 December 2023, with the Group entities
+    consolidated from 30 June 2023), so FY2023/FY2022 and FY2024/FY2023 growth is n.m. (short period). From FY2024 there were no
+    acquisitions or disposals of subsidiaries; the ACSC stake and the MBC Game Studio joint venture are outside revenue. Egyptian
+    revenue (9.8% of revenue from contracts in FY2025, we calculate) carries a currency effect that cannot be measured, and MBC
+    gives no capacity or subscriber measures, so like-for-like growth is not determinable; organic growth before FX equals reported
+    growth.
+  perimeter_changes:
+    - {event: "Reorganisation under common control: new Saudi holding company (incorporated 20 April 2023) took over the MBC Group entities for nil consideration; consolidated prospectively from 30 June 2023", date: "2023-06-30", effect: "FY2023 holds about six months of operations; no FY2022 statutory figures (pro-forma 12-month 2023 revenue SAR 3,703.9m in note 30(b), not used)", source: "4072_MBC_GROUP/2023_Annual_filed2024-07-02.pdf p.16, p.71"}
+    - {event: "Sale of 4.9% of ACSC (associate) for SAR 416.5m", date: "2024", effect: "no revenue effect; realised gain SAR 171m", source: "4072_MBC_GROUP/2024_Annual_filed2025-03-27.pdf p.52"}
+    - {event: "ACSC reclassified from associate to an investment at fair value through profit or loss after loss of significant influence", date: "2025-05-15", effect: "no revenue effect; gain SAR 264m on reclassification, then fair-value losses", source: "4072_MBC_GROUP/2025_Annual_filed2026-03-27.pdf p.52"}
+    - {event: "Further investment in the MBC Game Studio joint venture (SAR 138.8m in FY2025, SAR 96.8m in 9M 2026)", date: "2025-2026", effect: "equity-accounted; no revenue effect", source: "4072_MBC_GROUP/2026_Q3_filed2026-11-15.pdf p.22"}
+  capacity_changes:
+    - {event: "No capacity, channel or subscriber figures in the statements", date: "FY2024-9M2026", effect: "not determinable", source: "4072_MBC_GROUP/2025_Annual_filed2026-03-27.pdf p.33"}
+  fx_exposure: >-
+    UAE and Saudi revenue is in pegged currencies. Revenue from contracts earned in Egypt was SAR 416.3m in FY2025 (SAR 267.8m in
+    FY2024); the Egyptian pound weakened, but no constant-currency figures are given, so the FX step is not determinable.
+  price_volume_support: >-
+    Not determinable. The notes split revenue by type (advertising, broadcast and technical services, digital, distribution,
+    programme, interactivity) and by segment, but give no rates, airtime, audience or subscriber numbers.
+  confidence: "Not determinable for like-for-like; High that there was no perimeter effect on revenue in FY2025 and 9M 2026"
+price_volume:
+  - period: "FY2025 vs FY2024"
+    text: >-
+      Revenue rose SAR 1,194m. Revenue from contracts rose 20.0% (SAR 3,537m to SAR 4,244m): advertising +4.5%, broadcast and
+      technical services +26.3% and digital +25.7%. Government-funded other operating revenues rose 73.9% (SAR 659m to SAR 1,147m),
+      mainly production-related initiatives (SAR 308m to SAR 775m). By segment, MBC Shahid revenue rose 28.2% (SAR 1,079m to
+      SAR 1,383m). No prices or volumes are disclosed.
+    basis: "disclosed (revenue by type and segment); price/volume split not determinable"
+    confidence: "High for the amounts; the split is not determinable"
+    source: "4072_MBC_GROUP/2025_Annual_filed2026-03-27.pdf p.34-37"
+    refs: ["4072-FY2025-REV", "4072-FY2024-REV"]
+  - period: "9M 2026 vs 9M 2025"
+    text: >-
+      Revenue fell SAR 877m. Revenue from contracts fell 19.1% (SAR 3,178m to SAR 2,571m): broadcast and technical services fell
+      53.1% (SAR 858m to SAR 403m) and advertising 21.1% (SAR 1,124m to SAR 886m), while digital revenue rose 14.8% (SAR 728m to
+      SAR 836m). Other operating revenues fell 40.7% (SAR 663m to SAR 394m) as production-related funding dropped from SAR 386m to
+      SAR 50.3m. MBC Shahid segment revenue rose 15.9% (SAR 1,017m to SAR 1,179m).
+    basis: "disclosed (revenue by type and segment); price/volume split not determinable"
+    confidence: "High for the amounts; the split is not determinable"
+    source: "4072_MBC_GROUP/2026_Q3_filed2026-11-15.pdf p.16, p.19"
+    refs: ["4072-9M2026-REV", "4072-9M2025-REV"]
+profit_and_margin:
+  drivers:
+    - {period: "FY2023", driver: "Short first period (20 April to 31 December 2023, operations consolidated from 30 June 2023): revenue SAR 1,712m and attributable profit SAR 19.0m (net margin 1.1%). We calculate an operating loss of SAR 10.4m and EBITDA of SAR 25.2m (margin 1.5%); other income included SAR 54.4m of compensation for loss of business, and the Shahid segment lost SAR 126m before tax.", source: "4072_MBC_GROUP/2024_Annual_filed2025-03-27.pdf p.8, p.35, p.42", refs: ["4072-FY2023-REV", "4072-FY2023-NI_ATTR", "4072-FY2023-OPINC", "4072-FY2023-EBITDA_C"]}
+    - {period: "FY2024", driver: "First full year as a listed group (not comparable with FY2023). Attributable profit SAR 400m, net margin 9.5% and ROE 10.1%. Our operating income of SAR 367m (margin 8.7%) and EBITDA of SAR 466m (margin 11.1%) include the SAR 171m gain on selling 4.9% of ACSC and SAR 67.7m of compensation income, together SAR 238m (we calculate). Gross margin 28.7%; operating cash flow SAR 567m.", source: "4072_MBC_GROUP/2025_Annual_filed2026-03-27.pdf p.8, p.10, p.41; 4072_MBC_GROUP/2024_Annual_filed2025-03-27.pdf p.52", refs: ["4072-FY2024-NI_ATTR", "4072-FY2024-OPINC", "4072-FY2024-EBITDA_C", "4072-FY2024-CFO", "4072-FY2024-GP"]}
+    - {period: "FY2025", driver: "Revenue +28.5% but gross profit only +5.0%: direct costs rose 37.9% (we calculate), and the gross margin fell from 28.7% to 23.5%, as government-funded production revenue carries its costs in direct costs. Operating income rose 9.8% to SAR 403m (margin 7.5%), helped by a SAR 179m net fair-value gain (ACSC reclassification gain SAR 264m less later fair-value losses); EBITDA SAR 526m (margin 9.8%). Attributable profit fell 4.4% to SAR 383m (net margin 7.1%, ROE 8.8%). Operating cash flow fell 69.1% to SAR 175m as deferred revenue fell by SAR 495m and receivables rose by SAR 550m; free cash flow was -SAR 80.6m.", source: "4072_MBC_GROUP/2025_Annual_filed2026-03-27.pdf p.8, p.10, p.34, p.52", refs: ["4072-FY2025-REV", "4072-FY2025-GP", "4072-FY2025-OPINC", "4072-FY2025-NI_ATTR", "4072-FY2025-CFO", "4072-FY2025-FCF"]}
+    - {period: "9M2026", driver: "Revenue -22.8% to SAR 2,964m with the gross margin unchanged at 28.9%. A net fair-value loss of SAR 575m (ACSC marked from SAR 960m to SAR 385m) and joint-venture losses of SAR 99.1m (MBC Game Studio, offset in revenue by SAR 96.0m of gaming-initiative funding) turned the result negative: we calculate an operating loss of SAR 428m (margin -14.4%) and EBITDA of -SAR 353m (margin -11.9%). Attributable loss SAR 510m (net margin -17.2%; annualised ROE -15.8%) against a profit of SAR 403m in 9M 2025, which included a SAR 52.4m fair-value gain. Operating cash flow was SAR 197m (9M 2025: -SAR 58.0m).", source: "4072_MBC_GROUP/2026_Q3_filed2026-11-15.pdf p.4, p.6, p.16, p.19, p.22-24", refs: ["4072-9M2026-REV", "4072-9M2026-OPINC", "4072-9M2026-EBITDA_C", "4072-9M2026-NI_ATTR", "4072-9M2025-NI_ATTR", "4072-9M2026-CFO", "4072-9M2025-CFO"]}
+  one_offs:
+    - {item: "Compensation for loss of business (TV channel), recognised from amounts received in earlier years", period: "FY2023", amount_sar_m: 54.4, line: "Other income (inside our operating income)", source: "4072_MBC_GROUP/2024_Annual_filed2025-03-27.pdf p.42", tax_nci: "Tax/zakat effect not disclosed; minority share not disclosed: after-tax effect not determinable, profit kept as reported"}
+    - {item: "Net fair-value result on the Anghami investment and call options", period: "FY2023", amount_sar_m: 2.1, line: "FVTPL and derivative lines (inside our operating income)", source: "4072_MBC_GROUP/2024_Annual_filed2025-03-27.pdf p.8", tax_nci: "Tax/zakat effect not disclosed; minority share not disclosed: after-tax effect not determinable, profit kept as reported"}
+    - {item: "Realised gain on sale of 4.9% of ACSC", period: "FY2024", amount_sar_m: 170.7, line: "Realized gain on sale of investment in an associate (inside our operating income)", source: "4072_MBC_GROUP/2024_Annual_filed2025-03-27.pdf p.52", tax_nci: "Tax/zakat effect not disclosed; minority share not disclosed: after-tax effect not determinable, profit kept as reported"}
+    - {item: "Compensation for loss of business (TV channel)", period: "FY2024", amount_sar_m: 67.7, line: "Other income (inside our operating income)", source: "4072_MBC_GROUP/2025_Annual_filed2026-03-27.pdf p.41", tax_nci: "Tax/zakat effect not disclosed; minority share not disclosed: after-tax effect not determinable, profit kept as reported"}
+    - {item: "Net fair-value loss on the Anghami investment and call options", period: "FY2024", amount_sar_m: -9.1, line: "FVTPL and derivative lines (inside our operating income)", source: "4072_MBC_GROUP/2025_Annual_filed2026-03-27.pdf p.8", tax_nci: "Under 5% of attributable profit: tax effect not checked; profit kept as reported"}
+    - {item: "Net fair-value gain: ACSC reclassification gain SAR 263.9m less ACSC fair-value loss SAR 79.7m and Anghami SAR 6.8m, plus call options SAR 1.9m", period: "FY2025", amount_sar_m: 179.2, line: "Gain on investment in financial assets at FVTPL and derivatives (inside our operating income)", source: "4072_MBC_GROUP/2025_Annual_filed2026-03-27.pdf p.8, p.34, p.52", tax_nci: "Tax/zakat effect not disclosed; minority share not disclosed: after-tax effect not determinable, profit kept as reported"}
+    - {item: "Net fair-value gain (ACSC net gain SAR 60.4m, Anghami loss SAR 8.1m)", period: "9M2025", amount_sar_m: 52.4, line: "Gain on investment in financial assets at FVTPL and derivatives (inside our operating income)", source: "4072_MBC_GROUP/2026_Q3_filed2026-11-15.pdf p.4; 4072_MBC_GROUP/2025_Q3_filed2025-11-12.pdf p.22", tax_nci: "Tax/zakat effect not disclosed; minority share not disclosed: after-tax effect not determinable, profit kept as reported"}
+    - {item: "Unrealised fair-value loss on ACSC (SAR 575.6m) and Anghami, less a call-option gain", period: "9M2026", amount_sar_m: -575.0, line: "(Loss) on investment in financial assets at FVTPL and derivatives (inside our operating income)", source: "4072_MBC_GROUP/2026_Q3_filed2026-11-15.pdf p.4, p.24", tax_nci: "Tax/zakat effect not disclosed; minority share not disclosed: after-tax effect not determinable, profit kept as reported"}
+developments:
+  - {date: "2023-04-20", category: "strategy", text: "MBC Group Company incorporated in Riyadh as the new holding company; the Group entities were transferred from MBC Group Holdings Limited for nil consideration (legal transfer completed 22 June 2023) and consolidated from 30 June 2023.", source: "4072_MBC_GROUP/2023_Annual_filed2024-07-02.pdf p.12, p.16"}
+  - {date: "2024-01-08", category: "financing", text: "Shares started trading on the Saudi Exchange after an IPO of 33.25 million new shares at SAR 25; net proceeds of SAR 763.75m were received in 2024.", source: "4072_MBC_GROUP/2024_Annual_filed2025-03-27.pdf p.12, p.58"}
+  - {date: "2024", category: "financing", text: "Repaid the interest-free SAR 497.25m shareholder loan (used in 2022 to raise the ACSC stake) and SAR 187.5m of bank borrowings; no borrowings since 31 December 2024.", source: "4072_MBC_GROUP/2024_Annual_filed2025-03-27.pdf p.9, p.10, p.52"}
+  - {date: "2024", category: "M&A", text: "Sold 4.9% of ACSC to investors for SAR 416.5m, a gain of SAR 170.7m.", source: "4072_MBC_GROUP/2024_Annual_filed2025-03-27.pdf p.52"}
+  - {date: "2025-05-15", category: "M&A", text: "Ceased to have significant influence over ACSC and reclassified it to an investment at fair value through profit or loss (fair value SAR 1,039.8m vs carrying amount SAR 775.9m); its fair value was SAR 384.5m at 30 September 2026.", source: "4072_MBC_GROUP/2025_Annual_filed2026-03-27.pdf p.52; 4072_MBC_GROUP/2026_Q3_filed2026-11-15.pdf p.24"}
+  - {date: "2025-09-18", category: "event", text: "The Public Investment Fund acquired Istedamah's stake and became the parent company.", source: "4072_MBC_GROUP/2025_Annual_filed2026-03-27.pdf p.12"}
+  - {date: "2025-2026", category: "strategy", text: "Invested a further SAR 138.8m (FY2025) and SAR 96.8m (9M 2026) in the MBC Game Studio joint venture, whose losses are funded by the government gaming initiative.", source: "4072_MBC_GROUP/2026_Q3_filed2026-11-15.pdf p.19, p.22"}
+what_it_means:
+  improved: "Revenue rose 28.5% in FY2025 to SAR 5,391m, with MBC Shahid segment revenue up 28.2% and digital revenue up 25.7%; digital revenue still grew 14.8% in 9M 2026."
+  weakened: "The gross margin fell from 28.7% to 23.5% in FY2025 and operating cash flow fell 69.1% to SAR 175m; in 9M 2026 revenue fell 22.8% and the attributable result was a loss of SAR 510m (net margin -17.2%)."
+  why: "Reported profit has leaned on the ACSC stake (a SAR 171m sale gain in FY2024, a SAR 179m net fair-value gain in FY2025 and a SAR 575m fair-value loss in 9M 2026, all inside our operating income), while revenue swings with government-funded production (SAR 775m in FY2025, SAR 50.3m in 9M 2026) and with broadcast and technical services."
+  uncertain: "The filings do not explain the 53.1% fall in broadcast and technical services revenue or say how much government funding is committed, and the remaining ACSC stake (SAR 385m at 30 September 2026) is still marked to market through profit."
+confidence_overall: "Medium"
+data_notes:
+  - "Short year: FY2023 is the first statutory period (20 April-31 December 2023, subsidiaries consolidated from 30 June 2023, about six months of operations). There are no FY2022 or FY2021 statutory figures; the XBRL zeros for 31 December 2022 (total assets, equity) were removed by override. Note 30(b) pro-forma figures are not used."
+  - "Revenue = revenue from contracts with customers + other operating revenues (government funding treated as government grants, note 5). No total line is printed; the two lines are summed (FY2025: SAR 4,244.1m + SAR 1,146.8m)."
+  - "Restatements: FY2023 revenue and direct costs were each raised by SAR 7.9m in the FY2024 AFS (note 31), so FY2023 direct costs carry an R chip (SAR 1,231.2m first reported); FY2024 direct costs moved SAR 1.8m to G&A in the FY2025 AFS (note 30, under 0.5%)."
+  - "Finance costs and income are one net line on the face ('Finance income - net'), captured in FIN_INC (FY2023: a net cost, in FIN_COST). Note 9 split: FY2025 income SAR 62.1m, costs SAR 4.1m; FY2024 SAR 60.4m and SAR 4.1m; FY2023 SAR 3.1m and SAR 6.2m. The XBRL FY2024 finance-cost value (-56.3), which double-counted the net line, was removed by override."
+  - "Our operating income (PBT + finance cost - finance income - share of associates) includes other income, the ACSC sale and fair-value results and call-option results, so it differs from the printed 'Operating profit' (FY2025 SAR 197.9m; FY2024 SAR 117.2m)."
+  - "FY2023 capex corrected to SAR 60.9m (PP&E SAR 40.2m + intangibles SAR 20.7m); the XBRL netted the two lines. FY2024 capex provenance set to D: the FY2024 AFS prints the same lines; the XBRL comparative had a sign error."
+  - "Borrowings exclude the interest-free shareholder loan (SAR 497.3m at end-2023, repaid 2024) and the interest-free loan from a related party (SAR 63.8m). Borrowings are nil from 31 December 2024 (nil rows added for FY2025, 9M 2025 and 9M 2026)."
+  - "Primary statements in every PDF are scanned images and were read visually; the 30 September 2025 balance sheet comes from the 2025 Q3 interim (the 2026 Q3 interim shows 31 December 2025 only)."
+  - "Year-end 31 December. Main Market listing from 8 January 2024 (no Nomu period)."

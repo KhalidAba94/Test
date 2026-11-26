@@ -1,0 +1,67 @@
+ticker: "4320"
+headline: >-
+  Revenue edged up from SAR 216m (FY2022) to SAR 237m (FY2025) and jumped 24.4% in 9M 2026, but attributable results swung from a SAR 66.8m
+  profit (FY2022) to losses in FY2024 and FY2025 as finance costs rose with borrowings and the associates, led by West Jeddah Hospital, made
+  losses; 9M 2026 returned to a SAR 27.2m profit.
+lfl_basis:
+  definition_used: >-
+    Standard bridge on IFRS revenue (rent from malls, neighbourhood centres and office towers, plus the Al-Andalus Mall hotel). Perimeter =
+    properties or subsidiaries bought or sold: Yassmin Al-Andalus Tower (bought 2023) and Manafea Al-Andalus (70%, sold effective 1 Jan 2025).
+    Neither's revenue is disclosed, so perimeter effects and like-for-like growth are not determinable for FY2023-FY2025. In 9M 2026 the perimeter
+    is unchanged, so organic growth equals reported growth (+24.4%), but the filings do not say whether new space (the mall expansion) or the
+    renovated hotel contributed, so like-for-like growth is still not determinable. FX is nil.
+  perimeter_changes:
+    - {event: "Yassmin Al-Andalus Tower (office, Riyadh) bought", date: "2023", effect: "revenue not disclosed", source: "4320_ALANDALUS/2023_Annual_filed2024-03-10.pdf p.29"}
+    - {event: "70% of Manafea Al-Andalus sold to Saudi Tourism Development Company for SAR 15m (gain SAR 3.96m)", date: "2025-02-27, effective 1 Jan 2025", effect: "FY2025 excludes its revenue; FY2024 revenue not disclosed", source: "4320_ALANDALUS/2025_Annual_filed2026-03-12.pdf p.50"}
+    - {event: "Mawared Al-Tamayuz (2022) and two 2026 subsidiaries set up; none operating", date: "2022; 2026-01/02", effect: "no revenue effect", source: "4320_ALANDALUS/2025_Annual_filed2026-03-12.pdf p.15; 4320_ALANDALUS/2026_Q3_filed2026-11-04.pdf p.9"}
+  capacity_changes:
+    - {event: "Al-Andalus Mall expansion and Malqa Al-Andalus Tower under construction; no completion disclosed", date: "FY2023-9M2026", effect: "not determinable", source: "4320_ALANDALUS/2025_Annual_filed2026-03-12.pdf p.30"}
+    - {event: "Al-Andalus Mall hotel under renovation (impairments SAR 8m in FY2024 and SAR 3m in FY2025)", date: "2025", effect: "hospitality revenue -19.9% in FY2025, +62.3% in 9M 2026 (we calculate); cause not stated", source: "4320_ALANDALUS/2025_Annual_filed2026-03-12.pdf p.29"}
+  fx_exposure: "All segments operate in Saudi Arabia; no FX or hyperinflation effect."
+  price_volume_support: >-
+    Not determinable. The filings give revenue by segment (retail, hospitality, office) but no leasable area, occupancy, hotel occupancy or
+    room rates; occupancy appears only as a valuation input (Alandalus Mall 99%, Yassmin tower 100% at end-2025).
+  confidence: "Not determinable (perimeter revenue undisclosed); High for the nil FX effect"
+price_volume:
+  - period: "9M 2026 vs 9M 2025"
+    text: >-
+      Revenue rose SAR 41.7m (+24.4%). Retail rose SAR 21.4m (+18.5%), hospitality SAR 6.6m (+62.3%) and office SAR 13.6m (+30.6%), as we
+      calculate from the segment note. The interim gives no reason and no rent, occupancy or room data, so the split between price and volume is
+      not determinable.
+    basis: "disclosed (segment revenue); split not determinable"
+    confidence: "High for the amounts; the split is not determinable"
+    source: "4320_ALANDALUS/2026_Q3_filed2026-11-04.pdf p.18, p.19"
+    refs: ["4320-9M2026-REV", "4320-9M2025-REV"]
+profit_and_margin:
+  drivers:
+    - {period: "FY2023", driver: "Revenue -0.4% to SAR 215m: retail -1.4%, hospitality +8.4%, office unchanged at SAR 45.8m. Finance cost rose to SAR 52.2m (SAR 32.8m) as Islamic financing grew to SAR 804m with the Yassmin tower purchase, and the receivable impairment was SAR 11.0m. EBITDA -11.9% to SAR 117m (margin 54.3%). Attributable profit -45.5% to SAR 36.4m; net margin 16.9%; ROE 3.4%.", source: "4320_ALANDALUS/2024_Annual_filed2025-03-23.pdf p.7, p.8, p.42", refs: ["4320-FY2023-REV", "4320-FY2023-FIN_COST", "4320-FY2023-DEBT", "4320-FY2023-EBITDA_C", "4320-FY2023-NI_ATTR"]}
+    - {period: "FY2024", driver: "Revenue +9.6% to SAR 236m: office +26.0% after the Yassmin tower purchase, retail +3.4%, hospitality +22.8%. EBITDA +11.1% to SAR 130m (margin 55.1%). The share of associates' results swung to a SAR 33.9m loss (FY2023: SAR 24.1m profit), mainly West Jeddah Hospital (group share -SAR 48.2m), and finance cost rose to SAR 68.2m. The hotel was impaired by SAR 8.0m. Attributable loss SAR 31.6m; net margin -13.4%; ROE -3.0%.", source: "4320_ALANDALUS/2025_Annual_filed2026-03-12.pdf p.10, p.35, p.43", refs: ["4320-FY2024-REV", "4320-FY2024-EBITDA_C", "4320-FY2024-SHARE_JV", "4320-FY2024-FIN_COST", "4320-FY2024-IMPAIR_CF", "4320-FY2024-NI_ATTR"]}
+    - {period: "FY2025", driver: "Revenue +0.5% to SAR 237m although Manafea Al-Andalus was sold from 1 Jan 2025: office +6.7%, retail +0.7%, hospitality -19.9% with the hotel under renovation. General and administrative expenses rose 17.8% to SAR 67.5m and the receivable impairment to SAR 9.8m (SAR 1.9m), so EBITDA fell 15.8% to SAR 109m (margin 46.1%). Share of associates -SAR 11.5m, finance cost SAR 66.7m, hotel impairment SAR 3.0m and a SAR 3.96m gain on the subsidiary sale. Attributable loss SAR 18.3m; net margin -7.7%; ROE -1.9%.", source: "4320_ALANDALUS/2025_Annual_filed2026-03-12.pdf p.10, p.42, p.50", refs: ["4320-FY2025-REV", "4320-FY2025-EBITDA_C", "4320-FY2025-SHARE_JV", "4320-FY2025-FIN_COST", "4320-FY2025-NI_ATTR"]}
+    - {period: "9M2026", driver: "Revenue +24.4% to SAR 212m (SAR 171m), with all three segments up. Gross margin rose to 65.7% (59.8%), EBITDA +29.5% to SAR 108m (margin 50.7% vs 48.7%), the associates turned to a SAR 13.3m profit (-SAR 8.5m) and finance cost fell to SAR 46.2m (SAR 50.1m). Attributable profit SAR 27.2m (9M 2025: loss SAR 10.4m); net margin 12.8%; annualised ROE 3.8%.", source: "4320_ALANDALUS/2026_Q3_filed2026-11-04.pdf p.5, p.18", refs: ["4320-9M2026-REV", "4320-9M2026-GP", "4320-9M2026-EBITDA_C", "4320-9M2026-SHARE_JV", "4320-9M2026-FIN_COST", "4320-9M2026-NI_ATTR"]}
+    - {period: "FY2022-FY2025", driver: "Borrowings rose from SAR 589m (FY2022) to SAR 880m (FY2025) and SAR 900m at 30 Sep 2026; net debt was SAR 874m at end-2025, 8.0x EBITDA (4.3x in FY2022). Spending on investment properties peaked at SAR 273m in FY2023, the year of the Yassmin tower purchase.", source: "4320_ALANDALUS/2025_Annual_filed2026-03-12.pdf p.9, p.12; 4320_ALANDALUS/2024_Annual_filed2025-03-23.pdf p.10", refs: ["4320-FY2022-DEBT", "4320-FY2025-DEBT", "4320-9M2026-DEBT", "4320-FY2025-NET_DEBT", "4320-FY2023-IP_CAPEX"]}
+  one_offs:
+    - {item: "Gain on disposal of a subsidiary (70% of Manafea Al-Andalus)", period: "FY2025", amount_sar_m: 4.0, line: "Separate line below the company's operating profit, inside our operating income", source: "4320_ALANDALUS/2025_Annual_filed2026-03-12.pdf p.50, p.10", tax_nci: "Zakat effect not disclosed; minority share not disclosed: not determinable, profit kept as reported (checked in note 33)"}
+    - {item: "Gain on disposal of a subsidiary (Manafea Al-Andalus)", period: "9M2025", amount_sar_m: 4.0, line: "Separate line below operating profit", source: "4320_ALANDALUS/2026_Q3_filed2026-11-04.pdf p.5", tax_nci: "Zakat effect not disclosed; minority share not disclosed: not determinable, profit kept as reported"}
+    - {item: "Gains on Murabaha funds at FVTPL (FY2022 SAR 1.1m, FY2023 SAR 3.8m, FY2024 SAR 0.9m) inside other income", period: "FY2022-FY2024", amount_sar_m: null, line: "Other income", source: "4320_ALANDALUS/2023_Annual_filed2024-03-10.pdf p.11, p.39; 4320_ALANDALUS/2025_Annual_filed2026-03-12.pdf p.40", tax_nci: "Zakat effect and minority share not disclosed: not determinable, profit kept as reported"}
+    - {item: "Reversal of provisions no longer required (FY2023 SAR 2.3m, FY2024 SAR 2.7m)", period: "FY2023-FY2024", amount_sar_m: null, line: "Other income", source: "4320_ALANDALUS/2023_Annual_filed2024-03-10.pdf p.39; 4320_ALANDALUS/2025_Annual_filed2026-03-12.pdf p.40", tax_nci: "Zakat effect and minority share not disclosed: not determinable, profit kept as reported"}
+developments:
+  - {date: "2022-06-26", category: "capacity", text: "Set up Mawared Al-Tamayuz to hold the land lease for the Malqa Al-Andalus Tower project in Riyadh.", source: "4320_ALANDALUS/2025_Annual_filed2026-03-12.pdf p.15"}
+  - {date: "2023", category: "M&A", text: "Bought Yassmin Al-Andalus Tower, an office tower in Riyadh (carrying amount SAR 202.9m), financed by a Saudi Awwal Bank facility.", source: "4320_ALANDALUS/2023_Annual_filed2024-03-10.pdf p.29, p.38"}
+  - {date: "2024-2025", category: "operations", text: "The Al-Andalus Mall hotel was impaired by SAR 8m (2024) and SAR 3m (2025) and was under renovation in 2025.", source: "4320_ALANDALUS/2025_Annual_filed2026-03-12.pdf p.29"}
+  - {date: "2024", category: "event", text: "The associate West Jeddah Hospital Company made losses (group share -SAR 48.2m in FY2024); the group guarantees up to SAR 766.5m of its bank facilities.", source: "4320_ALANDALUS/2025_Annual_filed2026-03-12.pdf p.33, p.35"}
+  - {date: "2025-02-27", category: "M&A", text: "Sold its 70% stake in Manafea Al-Andalus to Saudi Tourism Development Company for SAR 15m, effective 1 Jan 2025; gain SAR 3.96m.", source: "4320_ALANDALUS/2025_Annual_filed2026-03-12.pdf p.50"}
+  - {date: "2026-01/02", category: "strategy", text: "Set up two subsidiaries for building and logistics projects; one bought land in Riyadh on 19 Oct 2026.", source: "4320_ALANDALUS/2026_Q3_filed2026-11-04.pdf p.9, p.22"}
+what_it_means:
+  improved: "In 9M 2026 revenue rose 24.4% across all three segments, EBITDA rose 29.5% and the group returned to an attributable profit of SAR 27.2m."
+  weakened: "Between FY2022 and FY2025 EBITDA fell from SAR 133m to SAR 109m and the attributable result turned into losses in FY2024 and FY2025, as associates' losses, higher finance costs and hotel impairments outweighed flat revenue."
+  why: "Borrowings rose from SAR 589m to SAR 880m to buy the Yassmin tower and fund projects, and the West Jeddah Hospital associate was loss-making; the 2025 sale of Manafea Al-Andalus and the hotel renovation also weighed on revenue."
+  uncertain: "The filings do not explain the 9M 2026 revenue jump or give revenue for the properties bought and sold, and the group guarantees up to SAR 766.5m of the hospital associate's debt."
+confidence_overall: "Medium"
+data_notes:
+  - "Al-Ahli REIT Fund 1, which owns Alandalus Mall, the Al-Andalus Mall hotel, Salama Tower and QBIC Plaza, is a 68.73% subsidiary and fully consolidated; the same fund is the listed REIT 4338 in the SEVEN REIT group. Adding Alandalus and Alahli REIT 1 double-counts these properties."
+  - "Stage A overrides: borrowings now add the current portion of Islamic finance facilities (FY2023 SAR 803.8m, FY2024 SAR 853.4m, FY2025 SAR 880.1m, 9M2025 SAR 869.5m, 9M2026 SAR 900.1m incl. a SAR 6.1m short-term facility), where the XBRL had taken one line only; lease liabilities FY2021 and FY2022 likewise; FY2024 depreciation corrected to SAR 40.5m; IMPAIR_CF added for the hotel (FY2024 SAR 8.0m, FY2025 SAR 3.0m) and the FY2022 investment-property impairment reversal (-SAR 1.8m)."
+  - "The 9M2025 depreciation 'R' flag is not a restatement: the XBRL original added interest on lease liabilities; both interims print SAR 28.9m."
+  - "Share of associates' results sits inside the company's operating profit on the face; our operating income removes it. The gain on the subsidiary sale sits below the company's operating profit but inside our operating income."
+  - "There is no finance-income line on the face: deposit commission and Murabaha fund gains sit in other income (FY2022 SAR 5.3m, FY2023 SAR 5.0m, FY2024 SAR 4.5m, FY2025 SAR 2.9m) and therefore inside our operating income; the FVTPL parts are listed as one-offs."
+  - "Operating cash flow is before interest on Islamic facilities and leases, which is paid in financing activities (FY2025 FS p.12). Investment properties are at cost (fair value SAR 2.35bn at end-2025 is a note disclosure only)."
+  - "Primary statements are scanned images (FY2022 annual entirely), read by OCR and checked visually; the FY2023 segment note is a sideways scan."

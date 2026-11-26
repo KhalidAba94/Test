@@ -1,0 +1,148 @@
+# Evidence extracted from SEDCO Capital REIT Fund filings (archive: SEVEN_REIT/4344_SEDCO_CAPITAL_REIT). Facts only; page = physical PDF page (1-based).
+# Units: SAR (actuals). Audited statements: FY2023 (2023_Annual_filed2024-04-01.pdf), FY2024 (2024_Annual_filed2025-08-10_t15-21-03.pdf; same figures as the
+# statements inside the annual report filed 2025-03-27), FY2025 (2025_Annual_filed2026-03-31_t15-59-14.pdf). Fund annual reports and quarterly statements are unaudited.
+ticker: "4344"
+company: "SEDCO Capital REIT Fund (managed by SEDCO Capital)"
+
+perimeter_changes:
+  - event: "Acquisition of Ajdan Entertainment (Al Khobar)"
+    type: acquisition
+    date: "2022"
+    consideration: "cost 178,400,907 at 1 Jan 2023 (note 5.1); 2022 payments for investment properties 178,454,796"
+    revenue_contribution: null
+    profit_contribution: null
+    pro_forma_revenue: null
+    period: "FY2022"
+    unit: "SAR"
+    source: "4344_SEDCO_CAPITAL_REIT/2023_Annual_filed2024-04-01.pdf"
+    page: 10
+    quote: "Payments made for the acquisition of investment properties (532,083,968) (178,454,796)"
+  - event: "Acquisition of Atelier La Vie (Jeddah), financed by the 2023 capital increase; in the portfolio from Q2 2023"
+    type: acquisition
+    date: "2023-Q2"
+    consideration: 531284375
+    revenue_contribution: "not disclosed in the statements; the FY2023 fund report gives its annual income as SAR 35,088,763 (20.29% of total rent)"
+    profit_contribution: null
+    pro_forma_revenue: null
+    period: "FY2023"
+    unit: "SAR"
+    source: "4344_SEDCO_CAPITAL_REIT/2023_Q2_filed2023-07-13.pdf"
+    page: 5
+    quote: "by issuing additional units for the purpose of acquiring new real estate assets (Atelier La Vie – Jeddah)"
+    note: "Cost addition 531,284,375 in note 5.1 (FY2023 statements p.20); annual income from the FY2023 fund report p.10."
+  - event: "Acquisition of Dunecrest American School (Dubai)"
+    type: acquisition
+    date: "2025-05-13"
+    consideration: "total acquisition cost SAR 169.2 million"
+    revenue_contribution: "not disclosed; FY2025 fund report gives annual income SAR 12,546,000"
+    profit_contribution: null
+    pro_forma_revenue: null
+    period: "FY2025"
+    unit: "SAR"
+    source: "4344_SEDCO_CAPITAL_REIT/2025_Annual_filed2026-03-31_t15-59-14.pdf"
+    page: 21
+    quote: "On 13 May 2025, the Fund acquired Dunecrest American School, an educational complex located in Dubai, United Arab Emirates."
+  - event: "Acquisition of Palm View office complex (Ad Diriyah, Riyadh)"
+    type: acquisition
+    date: "2025-06-01"
+    consideration: "purchase price SAR 650 million; cost SAR 703.63 million including RETT and fees; SAR 55 million unpaid at year-end"
+    revenue_contribution: "not disclosed; FY2025 fund report gives annual income SAR 55,550,660 (22.25% of total rent)"
+    profit_contribution: null
+    pro_forma_revenue: null
+    period: "FY2025"
+    unit: "SAR"
+    source: "4344_SEDCO_CAPITAL_REIT/2025_Annual_filed2026-03-31_t15-59-14.pdf"
+    page: 22
+    quote: "On 1 June 2025, the Fund signed a sale and purchase agreement to acquire Palm View"
+  - event: "Acquisition of an office property in Riyadh (Office Complex - Al Yasmin)"
+    type: acquisition
+    date: "2025-07-06"
+    consideration: "SAR 146.14 million"
+    revenue_contribution: "not disclosed; FY2025 fund report gives annual income SAR 11,761,400 for Office Complex - Al Yasmin"
+    profit_contribution: null
+    pro_forma_revenue: null
+    period: "FY2025"
+    unit: "SAR"
+    source: "4344_SEDCO_CAPITAL_REIT/2025_Annual_filed2026-03-31_t15-59-14.pdf"
+    page: 22
+    quote: "On 6 July 2025, the Fund completed the acquisition of an office property in Riyadh"
+  - event: "Acquisition of Office Complex - Anas Bin Malik Road (Al Yasmin, Riyadh), financed by the facility and the Al Jazirah sale proceeds"
+    type: acquisition
+    date: "2026-01-19"
+    consideration: "SAR 125,775,000 excluding fees"
+    revenue_contribution: null
+    profit_contribution: null
+    pro_forma_revenue: null
+    period: "9M2026"
+    unit: "SAR"
+    source: "4344_SEDCO_CAPITAL_REIT/2026_Q1_filed2026-04-14.pdf"
+    page: 7
+    quote: "Acquisition value: SAR 125,775,000 million (excluding any acquisition-related fees)."
+    note: "Board approval 19 Jan 2026 (p.5); listed as asset 24 in the Q3 2026 statement (p.3)."
+  - event: "Al Jazirah Residential Complex (Riyadh) classified as held for sale; sale agreed for SAR 100.75 million, completed after year-end"
+    type: disposal
+    date: "2025-12-30"
+    consideration: 100750000
+    revenue_contribution: null
+    profit_contribution: "no gain recognised in FY2025; asset held for sale 63,539,399"
+    pro_forma_revenue: null
+    period: "FY2025"
+    unit: "SAR"
+    source: "4344_SEDCO_CAPITAL_REIT/2025_Annual_filed2026-03-31_t15-59-14.pdf"
+    page: 21
+    quote: "On 30 December 2025, the Fund announced the execution of a sale agreement for Al Jazirah Residential Complex in Riyadh."
+    note: "The SAR 100.75m cheque is inside FY2025 cash and cash equivalents (note 7, p.23)."
+  - event: "No acquisitions in FY2024 (additions 1,151,292 and work in progress 514,740 only)"
+    type: acquisition
+    status: "not found"
+    period: "FY2024"
+    source: "4344_SEDCO_CAPITAL_REIT/2025_Annual_filed2026-03-31_t15-59-14.pdf"
+    page: 10
+    quote: "Payments made for the additions to investment properties (963,918,305) (1,151,292)"
+
+segments:
+  - {period: "FY2022-FY2025", segment: "none reported", basis: operating, revenue: null, profit: null, unit: "SAR", source: "4344_SEDCO_CAPITAL_REIT/2025_Annual_filed2026-03-31_t15-59-14.pdf", page: null, status: "not found"}
+
+revenue_drivers:
+  - {period: "FY2025", driver: "Palm View annual income (acquired June 2025)", value: 55550660, unit: "SAR", source: "4344_SEDCO_CAPITAL_REIT/2025_Annual_filed2026-03-31_t15-55-45.pdf", page: 9, quote: "Annual Income SAR 55,550,660 | represents 22.25% of the total rent"}
+  - {period: "FY2025", driver: "Dunecrest American School annual income", value: 12546000, unit: "SAR", source: "4344_SEDCO_CAPITAL_REIT/2025_Annual_filed2026-03-31_t15-55-45.pdf", page: 9, quote: "Annual Income SAR 12,546,000 | represents 5.03% of the total rent"}
+  - {period: "FY2025", driver: "Office Complex - Al Yasmin annual income", value: 11761400, unit: "SAR", source: "4344_SEDCO_CAPITAL_REIT/2025_Annual_filed2026-03-31_t15-55-45.pdf", page: 9, quote: "Annual Income SAR 11,761,400 | represents 4.71% of the total rent"}
+  - {period: "FY2023", driver: "Atelier La Vie annual income (acquired Q2 2023)", value: 35088763, unit: "SAR", source: "4344_SEDCO_CAPITAL_REIT/2023_Annual_filed2024-03-31.pdf", page: 10, quote: "Annual Income SAR 35,088,763 | represents 20.29%of the total rent"}
+
+one_offs:
+  - {period: "FY2022", item: "Gain on commission-rate swaps at fair value (swaps matured October 2023)", amount: 21199241, unit: "SAR", pnl_line: "Net (loss) / gain on derivative instruments at FVTIS (inside FFO)", recurring: false, source: "4344_SEDCO_CAPITAL_REIT/2023_Annual_filed2024-04-01.pdf", page: 8, quote: "Net (loss) / gain on derivative instruments at FVTIS (3,111,034) 21,199,241"}
+  - {period: "FY2023", item: "Loss on commission-rate swaps at fair value", amount: -3111034, unit: "SAR", pnl_line: "Net (loss) / gain on derivative instruments at FVTIS (inside FFO)", recurring: false, source: "4344_SEDCO_CAPITAL_REIT/2023_Annual_filed2024-04-01.pdf", page: 23, quote: "The two CRSs matured on 15 October 2023 and 16 October 2023, respectively."}
+  - {period: "FY2023", item: "Capital-increase costs in operating and other expenses: lead manager 1,400,066, receiving banks 1,840,000, legal advisor 258,750", amount: -3498816, unit: "SAR", pnl_line: "Operating and other expenses (note 15; inside FFO)", recurring: false, source: "4344_SEDCO_CAPITAL_REIT/2023_Annual_filed2024-04-01.pdf", page: 26, quote: "Al Jazeera Capital (Lead Manager) 1,400,066"}
+  - {period: "FY2025", item: "Non-refundable deposit kept after the Atelier La Vie sale (SAR 515m) lapsed", amount: 5000000, unit: "SAR", pnl_line: "Other income (note 5.4; inside FFO)", recurring: false, source: "4344_SEDCO_CAPITAL_REIT/2025_Annual_filed2026-03-31_t15-59-14.pdf", page: 21, quote: "The agreement was not extended further, accordingly, the Fund realized other income of"}
+  - {period: "FY2022", item: "Impairment on investment properties, mainly capitalised RETT and fees on a new acquisition (outside FFO via IMPAIR_CF)", amount: 26839816, unit: "SAR", pnl_line: "Impairment charge on investment properties", recurring: false, source: "4344_SEDCO_CAPITAL_REIT/2023_Annual_filed2024-04-01.pdf", page: 22, quote: "During 2022, the impairment of the new property acquired by the Fund was also due to capitalizing the additional acquisition costs incurred"}
+  - {period: "FY2025", item: "Reversal of impairment on investment properties (FY2024: charge 24,003,263); outside FFO via IMPAIR_CF", amount: 33974343, unit: "SAR", pnl_line: "Impairment (reversal) / charge on investment properties", recurring: false, source: "4344_SEDCO_CAPITAL_REIT/2025_Annual_filed2026-03-31_t15-59-14.pdf", page: 10, quote: "(Reversal of)/ impairment charge on investment properties 5 (33,974,343) 24,003,263"}
+
+restatements:
+  - {period_restated: "FY2022-FY2024", item: "none found: comparatives in the FY2023, FY2024 and FY2025 statements equal the figures first reported", from: null, to: null, unit: "SAR", reason: "no restatement or reclassification note", source: "4344_SEDCO_CAPITAL_REIT/2025_Annual_filed2026-03-31_t15-59-14.pdf", page: 7, quote: "NET ASSETS ATTRIBUTABLE TO THE UNITHOLDERS 1,459,798,262 1,454,156,186"}
+
+significant_events:
+  - {date: "2023-07", event: "Capital increase: 69,444,444 new units at SAR 8.64, net proceeds SAR 600 million, units 117.5m to 186.9m", financial_effect: "net assets 997.4m to 1,533.2m", source: "4344_SEDCO_CAPITAL_REIT/2023_Annual_filed2024-04-01.pdf", page: 26, quote: "issued additional 69,444,444 units at a discounted price of SR 8.64 per unit. Net proceeds from the capital increase amounted to SR 600 million."}
+  - {date: "2025", event: "Bank facility limit raised from SAR 1,716m to SAR 1,869m to buy new assets; SAR 56.3m undrawn at end-2025; bullet repayment 16 Oct 2028", financial_effect: "financing 965.6m (FY2024) to 1,820.2m (FY2025)", source: "4344_SEDCO_CAPITAL_REIT/2025_Annual_filed2026-03-31_t15-59-14.pdf", page: 23, quote: "During the current year, the facility limit increased from"}
+  - {date: "2025-07-27", event: "Agreement to sell Atelier La Vie for SAR 515m; not completed, SAR 5m deposit kept", financial_effect: "other income 5.0m", source: "4344_SEDCO_CAPITAL_REIT/2025_Annual_filed2026-03-31_t15-59-14.pdf", page: 21, quote: "On 27 July 2025, the Fund signed sale and purchase agreement for the sale of “Atelier Lavie” property"}
+  - {date: "2026-01", event: "Q4 2025 distribution of SAR 26,873,264 (SAR 0.14375/unit) announced, eligibility 15 Jan 2026; outside the FY2025 statement of changes", financial_effect: "in 9M2026 DIST", source: "4344_SEDCO_CAPITAL_REIT/2025_Q4_filed2026-01-14.pdf", page: 5, quote: "26,873,264, equivalent to SAR 0.14375 per unit."}
+  - {date: "2026-06-28", event: "Board approved an MoU to buy an office tower in Al Yasmin, Riyadh (about SAR 707m, three-year leaseback, about SAR 69m rent), subject to a capital increase and approvals", financial_effect: "not completed at 30 Sep 2026", source: "4344_SEDCO_CAPITAL_REIT/2026_Q2_filed2026-07-14.pdf", page: 5, quote: "The approval was granted on June 28, 2026. The expected transaction value is approximately SAR 707 million"}
+
+audit_opinion:
+  - {period: "FY2023", opinion: "unqualified", emphasis_of_matter: "none", source: "4344_SEDCO_CAPITAL_REIT/2023_Annual_filed2024-04-01.pdf", page: 3}
+  - {period: "FY2024", opinion: "unqualified", emphasis_of_matter: "none", source: "4344_SEDCO_CAPITAL_REIT/2024_Annual_filed2025-08-10_t15-21-03.pdf", page: 3}
+  - {period: "FY2025", opinion: "unqualified", emphasis_of_matter: "none", source: "4344_SEDCO_CAPITAL_REIT/2025_Annual_filed2026-03-31_t15-59-14.pdf", page: 3}
+
+kpis_in_filings:
+  - {period: "FY2025", kpi: "Average occupancy 97.9% (FY2024 97.2%, FY2023 97.0%)", value: 97.9, unit: "%", source: "4344_SEDCO_CAPITAL_REIT/2025_Annual_filed2026-03-31_t15-55-45.pdf", page: 4}
+  - {period: "FY2025", kpi: "Weighted average lease expiry 5.7 years (FY2024 5.6, FY2023 7.1)", value: 5.7, unit: "years", source: "4344_SEDCO_CAPITAL_REIT/2025_Annual_filed2026-03-31_t15-55-45.pdf", page: 3}
+  - {period: "FY2025", kpi: "Income-generating assets", value: 24, unit: "count", source: "4344_SEDCO_CAPITAL_REIT/2025_Annual_filed2026-03-31_t15-55-45.pdf", page: 3}
+  - {period: "FY2025", kpi: "Distributions declared for the 2025 financial period, SAR 0.54 per unit (fund report basis, 'for the period')", value: 100482639, unit: "SAR", source: "4344_SEDCO_CAPITAL_REIT/2025_Annual_filed2026-03-31_t15-55-45.pdf", page: 3}
+  - {period: "9M2026", kpi: "Occupancy at Q3 2026: Al Khalidiya Business Center 49%, Atelier La Vie 81%, other assets 96-100%", value: null, unit: "%", source: "4344_SEDCO_CAPITAL_REIT/2026_Q3_filed2026-10-14.pdf", page: 3}
+
+special_extractions:
+  - {item: "9M fact-sheet figures used", note: "Book NAV 1,420,440,968 (9M2025, 2025_Q3 p.5) and 1,448,822,851 (9M2026, 2026_Q3 p.5); NAV at fair value 1,554,112,906 and 1,697,889,744. 'Fund's Total Assets Value' (3,516.6m; 3,685.1m) appears to be on a fair-value basis and borrowing is given only as '50%', so TA and DEBT are not taken. No revenue or net income printed."}
+
+open_questions:
+  - "FY2025 related-party note lists 'Financing from Fund Manager 5,000,000' (p.24); its balance is not shown separately from 'due to a related party' (24.2m) and it is not in DEBT."
+  - "The Q3 2026 statement's fair-value NAV footnote says valuations 'as of 30 June 2025', apparently a typo for 30 June 2026."
+  - "Distributions exceeded FFO in FY2023 and FY2024 (payout 140.0% and 128.7%); the fund report's 'for the period' basis (SAR 100.5m for 2025) differs from the statement-of-changes basis used in the tables (SAR 73.6m)."

@@ -1,0 +1,764 @@
+# Evidence from Savola Group Company filings (archive 2050_SAVOLA_GROUP). Facts only; page = physical PDF page (1-based).
+# Units SAR '000 as presented. Statements are scanned in the FY2024 and FY2025 annuals and the 2025 Q3 / 2026 Q3 interims (segment pages 28-29 sideways).
+ticker: '2050'
+company: Savola Group Company
+perimeter_changes:
+- event: Sale of investments in Knowledge Economic City Company and KEC Developers (non-core)
+  type: disposal
+  date: '2022-12-29'
+  consideration: 459256
+  revenue_contribution: null
+  profit_contribution: 41871
+  pro_forma_revenue: null
+  period: FY2022
+  unit: SAR '000
+  source: 2050_SAVOLA_GROUP/2022_Annual_filed2023-03-30.pdf
+  page: 59
+  quote: generated cash proceeds amounting to SR 459 million, resulting in a gain of SR 39 million (related to KEC)
+  note: 'Investments, not subsidiaries: no revenue effect. SR 41.9m gain in profit or loss (KECD).'
+- event: Disposal of Savola Morocco Company (held for sale at end-2022)
+  type: disposal
+  date: '2023'
+  consideration: 41400
+  revenue_contribution: null
+  profit_contribution: 18677
+  pro_forma_revenue: null
+  period: FY2023
+  unit: SAR '000
+  source: 2050_SAVOLA_GROUP/2023_Annual_filed2024-03-26.pdf
+  page: 66
+  quote: the net consideration of SR 41.4 million was received against net carrying amount and transaction charges of SR 22.9 million
+- event: Sale of the Central Asian (Iran) subsidiaries; presented as discontinued operations with FY2023 re-presented
+  type: discontinued
+  date: '2024-12-31'
+  consideration: 705000
+  revenue_contribution: 2519894
+  profit_contribution: -1121572
+  pro_forma_revenue: null
+  period: FY2024
+  unit: SAR '000
+  source: 2050_SAVOLA_GROUP/2024_Annual_filed2025-03-15.pdf
+  page: 76
+  quote: the Company entered into a non-cancellable Sell Purchase Agreement (SPA) and Handover Agreement on December 31, 2024
+  note: revenue_contribution = FY2023 revenue of the discontinued Iran operations (note 21.2); FY2024 revenue to disposal 1,275,562; loss on sale after tax 1,219,646.
+- event: Abandonment of Savola Sudan (civil war); presented as discontinued operations
+  type: discontinued
+  date: '2024-12-31'
+  consideration: null
+  revenue_contribution: 148900
+  profit_contribution: -260418
+  pro_forma_revenue: null
+  period: FY2024
+  unit: SAR '000
+  source: 2050_SAVOLA_GROUP/2024_Annual_filed2025-03-15.pdf
+  page: 78
+  quote: to abandon the operations of its subsidiary (Savola Sudan) due to ongoing civil war
+  note: 'revenue_contribution = FY2023 revenue (FY2024: 61,953); CTR of SR 202.6m recycled to profit or loss.'
+- event: Control of United Sugar Company Egypt (USCE) obtained by amending the shareholder agreement; step acquisition, consolidated from 31 Dec 2024
+  type: acquisition
+  date: '2024-12-31'
+  consideration: 59900
+  revenue_contribution: null
+  profit_contribution: -139001
+  pro_forma_revenue: null
+  period: FY2024
+  unit: SAR '000
+  source: 2050_SAVOLA_GROUP/2024_Annual_filed2025-03-15.pdf
+  page: 67
+  quote: Following this transaction, USCE is fully consolidated in the Group’s financial statements from December 31, 2024.
+  note: Previously a 33.82% associate. Loss on derecognition of the associate SR 139.0m. USCE revenue for FY2025 is not disclosed.
+- event: In-kind distribution of the entire Almarai stake (34.52% associate) with a capital reduction
+  type: disposal
+  date: '2024-12-12'
+  consideration: null
+  revenue_contribution: null
+  profit_contribution: 11554662
+  pro_forma_revenue: null
+  period: FY2024
+  unit: SAR '000
+  source: 2050_SAVOLA_GROUP/2024_Annual_filed2025-03-15.pdf
+  page: 58
+  quote: The difference between the fair value of the distributed shares and their carrying amount ... resulting in a gain of SR 11.55 billion.
+  note: 'Equity-accounted: no revenue effect; share of results falls from SAR 808.6m (FY2024) to SAR 51.8m (FY2025).'
+- event: Disposal of KUGU (Turkey) through a share swap for 15% of Tiryaki Anadolu Holding; discontinued, FY2024 re-presented
+  type: discontinued
+  date: '2025'
+  consideration: 274600
+  revenue_contribution: 941081
+  profit_contribution: -14787
+  pro_forma_revenue: null
+  period: FY2025
+  unit: SAR '000
+  source: 2050_SAVOLA_GROUP/2025_Annual_filed2026-03-09.pdf
+  page: 77
+  quote: The transaction was based on an agreed equity valuation of SR 274.6 million.
+  note: 'revenue_contribution = FY2024 Turkey revenue removed by the re-presentation (FY2025 to disposal: 1,061,229); FY2023 Turkey revenue not disclosed.'
+- event: Disposal of the Sudan operations
+  type: disposal
+  date: '2026'
+  consideration: 52500
+  revenue_contribution: null
+  profit_contribution: 42600
+  pro_forma_revenue: null
+  period: 9M2026
+  unit: SAR '000
+  source: 2050_SAVOLA_GROUP/2026_Q3_filed2026-11-09.pdf
+  page: 16
+  quote: the Group disposed of its operations in Sudan following the execution of a binding Sale and Purchase Agreement
+- event: Acquisition of Al Mehbaj Al Shamiya for Trading (spices and nuts, a related party) by Bayara
+  type: acquisition
+  date: '2026-07-12'
+  consideration: 11400
+  revenue_contribution: null
+  profit_contribution: null
+  pro_forma_revenue: null
+  period: 9M2026
+  unit: SAR '000
+  source: 2050_SAVOLA_GROUP/2026_Q3_filed2026-11-09.pdf
+  page: 33
+  quote: The aggregate contractual consideration for the acquisition amounted to 11.4 million
+segments:
+- period: FY2022
+  segment: Food Processing
+  basis: operating
+  revenue: 16105768
+  unit: SAR '000
+  source: 2050_SAVOLA_GROUP/2023_Annual_filed2024-03-26.pdf
+  page: 78
+  note: external revenue; profit = segment net profit attributable (after zakat and tax)
+- period: FY2022
+  segment: Retail (Panda)
+  basis: operating
+  revenue: 10109087
+  unit: SAR '000
+  source: 2050_SAVOLA_GROUP/2023_Annual_filed2024-03-26.pdf
+  page: 78
+  note: external revenue; profit = segment net profit attributable (after zakat and tax)
+- period: FY2022
+  segment: Food Services (Herfy)
+  basis: operating
+  revenue: 1213400
+  unit: SAR '000
+  source: 2050_SAVOLA_GROUP/2023_Annual_filed2024-03-26.pdf
+  page: 78
+  note: external revenue; profit = segment net profit attributable (after zakat and tax)
+- period: FY2022
+  segment: Frozen Food (Good Food Co.)
+  basis: operating
+  revenue: 626448
+  unit: SAR '000
+  source: 2050_SAVOLA_GROUP/2023_Annual_filed2024-03-26.pdf
+  page: 78
+  note: external revenue; profit = segment net profit attributable (after zakat and tax)
+- period: FY2022
+  segment: Total (incl. Iran and Sudan)
+  basis: operating
+  revenue: 28054703
+  profit: 742752
+  unit: SAR '000
+  source: 2050_SAVOLA_GROUP/2023_Annual_filed2024-03-26.pdf
+  page: 78
+  note: external revenue; profit = segment net profit attributable (after zakat and tax)
+- period: FY2023
+  segment: Food Processing (re-presented, excl. Iran and Sudan)
+  basis: operating
+  revenue: 12000168
+  unit: SAR '000
+  source: 2050_SAVOLA_GROUP/2024_Annual_filed2025-03-15.pdf
+  page: 93
+  note: external revenue; profit = segment net profit attributable (after zakat and tax)
+- period: FY2023
+  segment: Retail (Panda)
+  basis: operating
+  revenue: 10326447
+  profit: 46662
+  unit: SAR '000
+  source: 2050_SAVOLA_GROUP/2024_Annual_filed2025-03-15.pdf
+  page: 93
+  note: external revenue; profit = segment net profit attributable (after zakat and tax)
+- period: FY2023
+  segment: Food Services (Herfy)
+  basis: operating
+  revenue: 1148043
+  profit: 8386
+  unit: SAR '000
+  source: 2050_SAVOLA_GROUP/2024_Annual_filed2025-03-15.pdf
+  page: 93
+  note: external revenue; profit = segment net profit attributable (after zakat and tax)
+- period: FY2023
+  segment: Frozen Food (Good Food Co.)
+  basis: operating
+  revenue: 674863
+  profit: 58150
+  unit: SAR '000
+  source: 2050_SAVOLA_GROUP/2024_Annual_filed2025-03-15.pdf
+  page: 93
+  note: external revenue; profit = segment net profit attributable (after zakat and tax)
+- period: FY2023
+  segment: Total
+  basis: operating
+  revenue: 24149521
+  profit: 899185
+  unit: SAR '000
+  source: 2050_SAVOLA_GROUP/2024_Annual_filed2025-03-15.pdf
+  page: 93
+  note: external revenue; profit = segment net profit attributable (after zakat and tax)
+- period: FY2024
+  segment: Food Processing (re-presented, excl. Turkey)
+  basis: operating
+  revenue: 10605717
+  unit: SAR '000
+  source: 2050_SAVOLA_GROUP/2025_Annual_filed2026-03-09.pdf
+  page: 91
+  note: external revenue; profit = segment net profit attributable (after zakat and tax)
+- period: FY2024
+  segment: Retail (Panda)
+  basis: operating
+  revenue: 10619890
+  profit: 154174
+  unit: SAR '000
+  source: 2050_SAVOLA_GROUP/2025_Annual_filed2026-03-09.pdf
+  page: 91
+  note: external revenue; profit = segment net profit attributable (after zakat and tax)
+- period: FY2024
+  segment: Food Services (Herfy)
+  basis: operating
+  revenue: 1101814
+  profit: -116524
+  unit: SAR '000
+  source: 2050_SAVOLA_GROUP/2025_Annual_filed2026-03-09.pdf
+  page: 91
+  note: external revenue; profit = segment net profit attributable (after zakat and tax)
+- period: FY2024
+  segment: Frozen Food (Good Food Co.)
+  basis: operating
+  revenue: 718153
+  profit: -33046
+  unit: SAR '000
+  source: 2050_SAVOLA_GROUP/2025_Annual_filed2026-03-09.pdf
+  page: 91
+  note: external revenue; profit = segment net profit attributable (after zakat and tax)
+- period: FY2024
+  segment: Total
+  basis: operating
+  revenue: 23045574
+  profit: 9974266
+  unit: SAR '000
+  source: 2050_SAVOLA_GROUP/2025_Annual_filed2026-03-09.pdf
+  page: 91
+  note: external revenue; profit = segment net profit attributable (after zakat and tax)
+- period: FY2025
+  segment: Food Processing
+  basis: operating
+  revenue: 12943321
+  profit: 480856
+  unit: SAR '000
+  source: 2050_SAVOLA_GROUP/2025_Annual_filed2026-03-09.pdf
+  page: 90
+  note: external revenue; profit = segment net profit attributable (after zakat and tax)
+- period: FY2025
+  segment: Retail (Panda)
+  basis: operating
+  revenue: 11323231
+  profit: 114963
+  unit: SAR '000
+  source: 2050_SAVOLA_GROUP/2025_Annual_filed2026-03-09.pdf
+  page: 90
+  note: external revenue; profit = segment net profit attributable (after zakat and tax)
+- period: FY2025
+  segment: Food Services (Herfy)
+  basis: operating
+  revenue: 1056653
+  profit: -77478
+  unit: SAR '000
+  source: 2050_SAVOLA_GROUP/2025_Annual_filed2026-03-09.pdf
+  page: 90
+  note: external revenue; profit = segment net profit attributable (after zakat and tax)
+- period: FY2025
+  segment: Frozen Food (Good Food Co.)
+  basis: operating
+  revenue: 757848
+  profit: 45686
+  unit: SAR '000
+  source: 2050_SAVOLA_GROUP/2025_Annual_filed2026-03-09.pdf
+  page: 90
+  note: external revenue; profit = segment net profit attributable (after zakat and tax)
+- period: FY2025
+  segment: Investments
+  basis: operating
+  revenue: 0
+  profit: 282178
+  unit: SAR '000
+  source: 2050_SAVOLA_GROUP/2025_Annual_filed2026-03-09.pdf
+  page: 90
+  note: external revenue; profit = segment net profit attributable (after zakat and tax)
+- period: FY2025
+  segment: Total
+  basis: operating
+  revenue: 26081053
+  profit: 874462
+  unit: SAR '000
+  source: 2050_SAVOLA_GROUP/2025_Annual_filed2026-03-09.pdf
+  page: 90
+  note: external revenue; profit = segment net profit attributable (after zakat and tax)
+- period: 9M2025
+  segment: Food Processing (re-presented)
+  basis: operating
+  revenue: 9603945
+  profit: 273611
+  unit: SAR '000
+  source: 2050_SAVOLA_GROUP/2026_Q3_filed2026-11-09.pdf
+  page: 29
+  note: external revenue; profit = segment net profit attributable (after zakat and tax)
+- period: 9M2025
+  segment: Retail (Panda)
+  basis: operating
+  revenue: 8561627
+  profit: 72202
+  unit: SAR '000
+  source: 2050_SAVOLA_GROUP/2026_Q3_filed2026-11-09.pdf
+  page: 29
+  note: external revenue; profit = segment net profit attributable (after zakat and tax)
+- period: 9M2025
+  segment: Food Services (Herfy)
+  basis: operating
+  revenue: 799913
+  profit: -65822
+  unit: SAR '000
+  source: 2050_SAVOLA_GROUP/2026_Q3_filed2026-11-09.pdf
+  page: 29
+  note: external revenue; profit = segment net profit attributable (after zakat and tax)
+- period: 9M2025
+  segment: Frozen Food (Good Food Co.)
+  basis: operating
+  revenue: 562487
+  profit: 37899
+  unit: SAR '000
+  source: 2050_SAVOLA_GROUP/2026_Q3_filed2026-11-09.pdf
+  page: 29
+  note: external revenue; profit = segment net profit attributable (after zakat and tax)
+- period: 9M2025
+  segment: Total
+  basis: operating
+  revenue: 19527972
+  profit: 680420
+  unit: SAR '000
+  source: 2050_SAVOLA_GROUP/2026_Q3_filed2026-11-09.pdf
+  page: 29
+  note: external revenue; profit = segment net profit attributable (after zakat and tax)
+- period: 9M2026
+  segment: Food Processing
+  basis: operating
+  revenue: 10272245
+  profit: 454006
+  unit: SAR '000
+  source: 2050_SAVOLA_GROUP/2026_Q3_filed2026-11-09.pdf
+  page: 28
+  note: external revenue; profit = segment net profit attributable (after zakat and tax)
+- period: 9M2026
+  segment: Retail (Panda)
+  basis: operating
+  revenue: 8534231
+  profit: 15460
+  unit: SAR '000
+  source: 2050_SAVOLA_GROUP/2026_Q3_filed2026-11-09.pdf
+  page: 28
+  note: external revenue; profit = segment net profit attributable (after zakat and tax)
+- period: 9M2026
+  segment: Food Services (Herfy)
+  basis: operating
+  revenue: 762156
+  profit: 2075
+  unit: SAR '000
+  source: 2050_SAVOLA_GROUP/2026_Q3_filed2026-11-09.pdf
+  page: 28
+  note: external revenue; profit = segment net profit attributable (after zakat and tax)
+- period: 9M2026
+  segment: Frozen Food (Good Food Co.)
+  basis: operating
+  revenue: 565355
+  profit: 44823
+  unit: SAR '000
+  source: 2050_SAVOLA_GROUP/2026_Q3_filed2026-11-09.pdf
+  page: 28
+  note: external revenue; profit = segment net profit attributable (after zakat and tax)
+- period: 9M2026
+  segment: Total
+  basis: operating
+  revenue: 20133987
+  profit: 529553
+  unit: SAR '000
+  source: 2050_SAVOLA_GROUP/2026_Q3_filed2026-11-09.pdf
+  page: 28
+  note: external revenue; profit = segment net profit attributable (after zakat and tax)
+- period: FY2022
+  segment: Arabia (GCC and Levant)
+  basis: geographic
+  revenue: 18.5
+  unit: SAR bn
+  source: 2050_SAVOLA_GROUP/2023_Annual_filed2024-03-26.pdf
+  page: 79
+  note: rounded SR bn as printed in the segment note; on the perimeter of that filing
+- period: FY2022
+  segment: Egypt
+  basis: geographic
+  revenue: 3.9
+  unit: SAR bn
+  source: 2050_SAVOLA_GROUP/2023_Annual_filed2024-03-26.pdf
+  page: 79
+  note: rounded SR bn as printed in the segment note; on the perimeter of that filing
+- period: FY2022
+  segment: Other geographical locations
+  basis: geographic
+  revenue: 5.7
+  unit: SAR bn
+  source: 2050_SAVOLA_GROUP/2023_Annual_filed2024-03-26.pdf
+  page: 79
+  note: rounded SR bn as printed in the segment note; on the perimeter of that filing
+- period: FY2023
+  segment: Arabia (GCC and Levant)
+  basis: geographic
+  revenue: 18.3
+  unit: SAR bn
+  source: 2050_SAVOLA_GROUP/2024_Annual_filed2025-03-15.pdf
+  page: 93
+  note: rounded SR bn as printed in the segment note; on the perimeter of that filing
+- period: FY2023
+  segment: Egypt
+  basis: geographic
+  revenue: 4.2
+  unit: SAR bn
+  source: 2050_SAVOLA_GROUP/2024_Annual_filed2025-03-15.pdf
+  page: 93
+  note: rounded SR bn as printed in the segment note; on the perimeter of that filing
+- period: FY2023
+  segment: Other geographical locations
+  basis: geographic
+  revenue: 1.6
+  unit: SAR bn
+  source: 2050_SAVOLA_GROUP/2024_Annual_filed2025-03-15.pdf
+  page: 93
+  note: rounded SR bn as printed in the segment note; on the perimeter of that filing
+- period: FY2024
+  segment: Arabia (GCC and Levant)
+  basis: geographic
+  revenue: 18.6
+  unit: SAR bn
+  source: 2050_SAVOLA_GROUP/2025_Annual_filed2026-03-09.pdf
+  page: 91
+  note: rounded SR bn as printed in the segment note; on the perimeter of that filing
+- period: FY2024
+  segment: Egypt
+  basis: geographic
+  revenue: 3.8
+  unit: SAR bn
+  source: 2050_SAVOLA_GROUP/2025_Annual_filed2026-03-09.pdf
+  page: 91
+  note: rounded SR bn as printed in the segment note; on the perimeter of that filing
+- period: FY2024
+  segment: Other geographical locations
+  basis: geographic
+  revenue: 0.6
+  unit: SAR bn
+  source: 2050_SAVOLA_GROUP/2025_Annual_filed2026-03-09.pdf
+  page: 91
+  note: rounded SR bn as printed in the segment note; on the perimeter of that filing
+- period: FY2025
+  segment: Arabia (GCC and Levant)
+  basis: geographic
+  revenue: 19.7
+  unit: SAR bn
+  source: 2050_SAVOLA_GROUP/2025_Annual_filed2026-03-09.pdf
+  page: 91
+  note: rounded SR bn as printed in the segment note; on the perimeter of that filing
+- period: FY2025
+  segment: Egypt
+  basis: geographic
+  revenue: 5.7
+  unit: SAR bn
+  source: 2050_SAVOLA_GROUP/2025_Annual_filed2026-03-09.pdf
+  page: 91
+  note: rounded SR bn as printed in the segment note; on the perimeter of that filing
+- period: FY2025
+  segment: Other geographical locations
+  basis: geographic
+  revenue: 0.7
+  unit: SAR bn
+  source: 2050_SAVOLA_GROUP/2025_Annual_filed2026-03-09.pdf
+  page: 91
+  note: rounded SR bn as printed in the segment note; on the perimeter of that filing
+revenue_drivers:
+- period: FY2022-9M2026
+  driver: Store, restaurant or outlet counts, like-for-like sales, volumes
+  value: null
+  unit: null
+  status: not found
+  source: 2050_SAVOLA_GROUP/2025_Annual_filed2026-03-09.pdf
+  page: null
+  quote: The financial statements give segment and regional revenue only; no Panda store or Herfy restaurant counts.
+- period: FY2024
+  driver: Hyperinflation (IAS 29) effect on revenue, by country
+  value:
+    Iran: -687359
+    Sudan: -11131
+    Turkey: 91642
+  unit: SAR '000
+  source: 2050_SAVOLA_GROUP/2024_Annual_filed2025-03-15.pdf
+  page: 96
+  quote: Revenue increased / (decreased) by (687,359) (11,131) 91,642 (606,848)
+- period: FY2023
+  driver: Hyperinflation (IAS 29) effect on revenue, by country
+  value:
+    Iran: 78904
+    Sudan: -107540
+    Turkey: 37610
+  unit: SAR '000
+  source: 2050_SAVOLA_GROUP/2024_Annual_filed2025-03-15.pdf
+  page: 96
+  quote: Revenue increased / (decreased) by 78,904 (107,540) 37,610 8,974
+- period: FY2022
+  driver: Hyperinflation (IAS 29) effect on revenue, by country
+  value:
+    Iran: 123693
+    Sudan: 230542
+    Turkey: 69400
+  unit: SAR '000
+  source: 2050_SAVOLA_GROUP/2023_Annual_filed2024-03-26.pdf
+  page: 82
+  quote: Revenue increased by 123,693 230,542 69,400 423,635
+- period: FY2025
+  driver: Hyperinflation effect now only in discontinued Turkey
+  value:
+    Turkey: 52533
+  unit: SAR '000
+  source: 2050_SAVOLA_GROUP/2025_Annual_filed2026-03-09.pdf
+  page: 94
+  quote: (Note 22), Sudan (Note 22) and Turkey (Note 22) were subject to hyperinflation
+one_offs:
+- period: FY2022
+  item: Gain on disposal of investments (KECD)
+  amount: 41871
+  unit: SAR '000
+  pnl_line: Gain on sale of investments (below net finance cost)
+  recurring: false
+  source: 2050_SAVOLA_GROUP/2023_Annual_filed2024-03-26.pdf
+  page: 9
+  quote: Gain on sale of investments 9 -- 41,871
+- period: FY2023
+  item: Gain on sale of assets and liabilities held for sale (Savola Morocco)
+  amount: 18677
+  unit: SAR '000
+  pnl_line: Gain on sale of assets and liabilities classified as held for sale
+  recurring: false
+  source: 2050_SAVOLA_GROUP/2024_Annual_filed2025-03-15.pdf
+  page: 10
+  quote: Gain on sale of assets and liabilities classified as held for sale -- 18,677
+- period: FY2024
+  item: Gain on distribution of investment in equity-accounted investee (Almarai)
+  amount: 11554662
+  unit: SAR '000
+  pnl_line: Gain on distribution of investment in equity-accounted investee
+  recurring: false
+  source: 2050_SAVOLA_GROUP/2025_Annual_filed2026-03-09.pdf
+  page: 11
+  quote: Gain on distribution of investment in equity-accounted investee 16 - 11,554,662
+- period: FY2024
+  item: Loss on derecognition of investment in equity-accounted investee (USCE step acquisition)
+  amount: -139001
+  unit: SAR '000
+  pnl_line: Loss on derecognition of investment in equity-accounted investee
+  recurring: false
+  source: 2050_SAVOLA_GROUP/2025_Annual_filed2026-03-09.pdf
+  page: 11
+  quote: Loss on derecognition of investment in equity-accounted investee 1 - (139,001)
+- period: FY2024
+  item: Impairment of PP&E, right-of-use assets and goodwill (continuing SR 386.4m)
+  amount: -390409
+  unit: SAR '000
+  pnl_line: Impairment charge, net
+  recurring: false
+  source: 2050_SAVOLA_GROUP/2025_Annual_filed2026-03-09.pdf
+  page: 95
+  quote: Intangible assets and goodwill (100) (254,265)
+  note: 'Impairment: already outside EBITDA.'
+- period: FY2024
+  item: Loss from discontinued operations (Iran sale incl. FCTR recycling; Sudan abandonment; Turkey)
+  amount: -1440202
+  unit: SAR '000
+  pnl_line: Loss from discontinued operations
+  recurring: false
+  source: 2050_SAVOLA_GROUP/2025_Annual_filed2026-03-09.pdf
+  page: 77
+  quote: Total (7,585) (1,440,202)
+  note: Below operating income; attributable to owners SR 1,383.0m (FY2025 annual p12).
+- period: FY2025
+  item: Reversal of prior-year zakat accruals after the ZATCA final assessment for 2024 (Company level)
+  amount: 247300
+  unit: SAR '000
+  pnl_line: Zakat reversal / (expense), net
+  recurring: false
+  source: 2050_SAVOLA_GROUP/2025_Annual_filed2026-03-09.pdf
+  page: 87
+  quote: reversal of prior year zakat accruals, net of related expenses, amounting to SR 247.3 million.
+- period: 9M2025
+  item: Same zakat reversal (247.3m) recognised in 2025 Q1-Q3
+  amount: 247300
+  unit: SAR '000
+  pnl_line: Zakat (expense) / reversal, net
+  recurring: false
+  source: 2050_SAVOLA_GROUP/2025_Q3_filed2025-11-05.pdf
+  page: 26
+  quote: resulting in reversal of prior year zakat accruals, net of related expenses, amounting to SR 247.3
+- period: FY2025
+  item: Reversal of accruals no longer expected to be paid (inside other operating income)
+  amount: 69505
+  unit: SAR '000
+  pnl_line: Other operating income / (expense), net
+  recurring: null
+  source: 2050_SAVOLA_GROUP/2025_Annual_filed2026-03-09.pdf
+  page: 93
+  quote: This include reversal of certain accruals as the related obligations are no longer expected to result in an outflow.
+  note: 'Accrual release: treated as an ordinary provision movement, not removed (cross-set rule).'
+- period: 9M2026
+  item: Gain on disposal of the Sudan operations (inside profit from discontinued operations)
+  amount: 42600
+  unit: SAR '000
+  pnl_line: Profit from discontinued operations
+  recurring: false
+  source: 2050_SAVOLA_GROUP/2026_Q3_filed2026-11-09.pdf
+  page: 16
+  quote: for a total consideration of 52.5 million, resulting in gain of 42.6 million.
+restatements:
+- period_restated: FY2022
+  item: Finance cost / CFO
+  from: 785,247 / 1,104,571
+  to: 751,527 / 1,029,420
+  unit: SAR '000
+  reason: comparatives reclassified (33.7m to selling expenses; finance income received moved to investing)
+  source: 2050_SAVOLA_GROUP/2023_Annual_filed2024-03-26.pdf
+  page: 23
+  quote: Certain comparative amounts have been reclassified to conform to the current year’s presentation.
+- period_restated: FY2022
+  item: Cash and cash equivalents
+  from: 1435552
+  to: 812478
+  unit: SAR '000
+  reason: '"Cash and bank balances" split into term deposits (623,074) and cash and cash equivalents'
+  source: 2050_SAVOLA_GROUP/2023_Annual_filed2024-03-26.pdf
+  page: 61
+  quote: Cash and cash equivalents presented in statement of financial position 1,213,193 812,478
+- period_restated: FY2023
+  item: Income statement (continuing operations)
+  from: 26818317
+  to: 24149521
+  unit: SAR '000
+  reason: Iran and Sudan discontinued (note 21)
+  source: 2050_SAVOLA_GROUP/2024_Annual_filed2025-03-15.pdf
+  page: 24
+  quote: '-   impact of discontinued operations (Note 21)'
+- period_restated: FY2023
+  item: Equity attributable to owners
+  from: 8451422
+  to: 8397145
+  unit: SAR '000
+  reason: SR 60m NCI transaction re-allocated between owners and NCI in the statement of changes in equity
+  source: 2050_SAVOLA_GROUP/2024_Annual_filed2025-03-15.pdf
+  page: 12
+  quote: Transaction with non-controlling interest without change in control (Note 1) (87,138) 27,138 (60,000)
+- period_restated: FY2023
+  item: Loans and borrowings (current)
+  from: 3887714
+  to: 3944497
+  unit: SAR '000
+  reason: accrued financial charges (56,783) included in loans and borrowings
+  source: 2050_SAVOLA_GROUP/2024_Annual_filed2025-03-15.pdf
+  page: 73
+  quote: Accrued Financial Charges (Note 20.5) 26,906 56,783
+- period_restated: FY2024
+  item: Income statement (continuing operations)
+  from: 23986655
+  to: 23045574
+  unit: SAR '000
+  reason: KUGU (Turkey) discontinued (note 22)
+  source: 2050_SAVOLA_GROUP/2025_Annual_filed2026-03-09.pdf
+  page: 25
+  quote: The significant reclassifications pertain to the impact of discontinued operations (Note 22).
+- period_restated: FY2024
+  item: Non-controlling interests / total equity
+  from: 5579063
+  to: 5568637
+  unit: SAR '000
+  reason: NCI reduced by 10,426 (also at 1 Jan 2024) with an offset in accrued liabilities; not explained in a note
+  source: 2050_SAVOLA_GROUP/2025_Annual_filed2026-03-09.pdf
+  page: 14
+  quote: December 31, 2024 ... 4,620,330 948,307 5,568,637
+- period_restated: 9M2025
+  item: Income statement (continuing operations)
+  from: 20284404
+  to: 19527972
+  unit: SAR '000
+  reason: Turkey (and Sudan) discontinued
+  source: 2050_SAVOLA_GROUP/2026_Q3_filed2026-11-09.pdf
+  page: 18
+  quote: significant reclassifications pertain to impact of discontinued operations.
+significant_events:
+- date: '2024-12-12'
+  event: EGM approved capital reduction (SR 11.3bn to SR 3bn) and in-kind distribution of the Almarai stake; SR 6bn rights issue in 2024
+  financial_effect: gain SR 11.55bn; equity and total assets fall
+  source: 2050_SAVOLA_GROUP/2024_Annual_filed2025-03-15.pdf
+  page: 58
+  quote: the Extraordinary General Assembly (EGM) approved the capital reduction through the cancellation of 833,980,684 ordinary shares at par value.
+- date: '2024'
+  event: Buy-back of the entire SR 1bn sukuk due 2026
+  financial_effect: borrowings
+  source: 2050_SAVOLA_GROUP/2024_Annual_filed2025-03-15.pdf
+  page: 75
+  quote: the Company completed the buy-back of its entire SR 1 billion Sukuk
+- date: '2025'
+  event: ZATCA final assessments for 2019-2024; prior-year zakat accruals reversed
+  financial_effect: zakat credit SR 247.3m
+  source: 2050_SAVOLA_GROUP/2025_Annual_filed2026-03-09.pdf
+  page: 87
+  quote: ZATCA has finalized the assessment on the Company's accounts for the years 2019 to 2024.
+- date: '2025'
+  event: Investment of SR 524m in government sukuk at amortised cost
+  financial_effect: investments
+  source: 2050_SAVOLA_GROUP/2025_Annual_filed2026-03-09.pdf
+  page: 63
+  quote: Investments carried at amortized cost (Note 11.5) 524,808 -
+audit_opinion:
+- period: FY2022
+  opinion: unmodified (KPMG)
+  emphasis_of_matter: none
+  source: 2050_SAVOLA_GROUP/2022_Annual_filed2023-03-30.pdf
+  page: 3
+- period: FY2023
+  opinion: unmodified (KPMG)
+  emphasis_of_matter: none
+  source: 2050_SAVOLA_GROUP/2023_Annual_filed2024-03-26.pdf
+  page: 3
+- period: FY2024
+  opinion: unmodified (KPMG); key audit matter on the capital restructuring and Almarai distribution
+  emphasis_of_matter: none
+  source: 2050_SAVOLA_GROUP/2024_Annual_filed2025-03-15.pdf
+  page: 3
+- period: FY2025
+  opinion: unmodified (Deloitte)
+  emphasis_of_matter: none
+  source: 2050_SAVOLA_GROUP/2025_Annual_filed2026-03-09.pdf
+  page: 3
+kpis_in_filings:
+- period: FY2022-9M2026
+  kpi: stores, restaurants, like-for-like sales, volumes
+  value: null
+  unit: null
+  source: 2050_SAVOLA_GROUP/2025_Annual_filed2026-03-09.pdf
+  page: null
+  status: not found
+special_extractions: []
+open_questions:
+- FY2022 revenue of the Iran and Sudan operations (removed from FY2023 by re-presentation) is not disclosed, so the FY2023/FY2022 perimeter effect cannot be measured.
+- 'FY2023 revenue of KUGU (Turkey), removed from FY2024 by the FY2025 re-presentation, is not disclosed (FY2024: SR 941.1m).'
+- USCE revenue since consolidation on 31 Dec 2024 is not disclosed; Egypt revenue rose from SR 3.8bn to SR 5.7bn in FY2025.
+- The FY2025 annual restates FY2024 non-controlling interests by SR 10.4m (also at 1 Jan 2024) without an explanatory note.
+- Composition of 9M2025 other operating income (SR 122.8m) is not given in the interim text pages.

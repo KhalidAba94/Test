@@ -1,0 +1,71 @@
+ticker: "4336"
+headline: >-
+  Revenue rose from SAR 96.0m (FY2022) to SAR 125m (FY2025) as the Aljada hotel complex (bought in February 2022) and the Al-Maather
+  tower (July 2024) were added, but impairments kept net profit negative in three of four years (FY2025: a SAR 28.4m loss after a
+  SAR 40.7m impairment); funds from operations (FFO, we calculate) recovered to SAR 30.0m in FY2025 while LTV rose to 48.7%.
+lfl_basis:
+  definition_used: >-
+    Revenue is the audited 'Total revenues' line (rental income, hotel operating revenue, Murabaha commission and other revenue).
+    In FY2025 we exclude the SAR 4.9m gain on the Al Yasmin sale printed inside total revenues. Perimeter = properties bought or sold:
+    Aljada (Feb 2022), Al-Maather (24 Jul 2024), Al Yasmin (sold 30 Jan 2025) and Dammam land (Q3 2025, no revenue). The notes do not
+    give the revenue of the acquired or sold properties for the part-years, so perimeter effects, organic and like-for-like growth are
+    not determinable. 9M figures are sums of quarterly 'rental income' from unaudited unitholder statements, a different basis.
+  perimeter_changes:
+    - {event: "Aljada Complex and Aljada Hotel Company acquired (SAR 349.4m additions)", date: "2022-02", effect: "hotel revenue SAR 25.8m in FY2022 and SAR 36.3m in FY2023; part-year effect not disclosed", source: "4336_MULKIA_REIT/2023_Annual_filed2024-04-01.pdf p.13, p.30, p.35"}
+    - {event: "Second phase of Aljada paid through the 2023 unit issue (3,556,911 units in kind, rest cash)", date: "2023", effect: "no new property; units 68.1m to 103.8m", source: "4336_MULKIA_REIT/2023_Annual_filed2024-04-01.pdf p.13, p.33"}
+    - {event: "Al-Maather tower acquired for SAR 200m", date: "2024-07-24", effect: "FY2024 revenue not disclosed; 2025 revenue SAR 20.0m (fund report)", source: "4336_MULKIA_REIT/2024_Annual_filed2025-04-03.pdf p.18; 4336_MULKIA_REIT/2025_Annual_filed2026-03-31_t16-59-15.pdf p.9"}
+    - {event: "Al Yasmin building sold for SAR 22.5m (gain SAR 4.9m)", date: "2025-01-30", effect: "annual rent SAR 1.3m removed; January 2025 revenue not disclosed", source: "4336_MULKIA_REIT/2025_Annual_filed2026-03-31_t16-55-39.pdf p.33"}
+    - {event: "Dammam commercial land bought for SAR 33.4m", date: "2025-Q3", effect: "no revenue", source: "4336_MULKIA_REIT/2025_Q3_filed2025-10-14.pdf p.8"}
+  capacity_changes:
+    - {event: "Al-Sheraa building A (Jeddah) completed and leased from 6 Mar 2025", date: "2025-03-06", effect: "2025 revenue SAR 0.65m (fund report)", source: "4336_MULKIA_REIT/2024_Annual_filed2025-04-03.pdf p.9; 4336_MULKIA_REIT/2025_Annual_filed2026-03-31_t16-59-15.pdf p.9"}
+  fx_exposure: "All properties are in Saudi Arabia and revenue is in SAR; no FX effect."
+  price_volume_support: >-
+    Not determinable. The statements split revenue into rental income and hotel revenue, and the quarterly statements give occupancy by
+    property, but no rents per square metre, room rates or hotel occupancy are disclosed.
+  confidence: "Low (perimeter effects not determinable in every comparison)"
+price_volume:
+  - period: "FY2025 vs FY2024"
+    text: >-
+      Rental income rose 13.6% (SAR 78.6m to SAR 89.3m, we calculate), mostly from a full year of the Al-Maather tower, whose 2025 revenue
+      the fund report gives as SAR 20.0m against about five months in FY2024. Hotel revenue fell 13.8% (SAR 40.7m to SAR 35.1m); room
+      rates and hotel occupancy are not disclosed. Occupancy at The Elite fell from 100% (end-2024) to 74.07% (30 Sep 2025).
+    basis: "disclosed (revenue lines, occupancy); split not determinable"
+    confidence: "Medium for the amounts; the split is not determinable"
+    source: "4336_MULKIA_REIT/2025_Annual_filed2026-03-31_t16-55-39.pdf p.10; 4336_MULKIA_REIT/2025_Annual_filed2026-03-31_t16-59-15.pdf p.9; 4336_MULKIA_REIT/2025_Q3_filed2025-10-14.pdf p.7"
+    refs: ["4336-FY2025-REV", "4336-FY2024-REV"]
+profit_and_margin:
+  drivers:
+    - {period: "FY2023", driver: "Revenue +19.5% to SAR 115m: hotel revenue +40.8% in the first full year of the Aljada hotel and rental income +10.1% (we calculate). The net loss widened to SAR 11.8m as financing charges rose to SAR 37.5m (SAR 22.3m), expected credit losses to SAR 15.3m (SAR 8.4m) and impairment to SAR 9.1m (SAR 7.2m). FFO fell 36.0% to SAR 16.0m; net margin -10.3%. The SAR 238.2m unit issue at SAR 6.68 lifted net assets to SAR 791m and funded SAR 148.5m of loan repayments, so borrowings fell to SAR 477m and LTV to 36.4%.", source: "4336_MULKIA_REIT/2024_Annual_filed2025-03-27.pdf p.9; 4336_MULKIA_REIT/2023_Annual_filed2024-04-01.pdf p.9-12, p.13", refs: ["4336-FY2023-REV", "4336-FY2023-NI_ATTR", "4336-FY2023-FFO", "4336-FY2023-EQ_ATTR", "4336-FY2023-DEBT"]}
+    - {period: "FY2024", driver: "Revenue +4.5% to SAR 120m (rental +1.9%, hotel +12.2%) with Al-Maather from 24 July. Net profit of SAR 15.1m included a SAR 14.3m impairment reversal; expected credit losses fell to SAR 6.4m, while financing charges rose to SAR 41.3m and the Al-Maather purchase brought dealing fees of SAR 2.3m and financing-structuring fees of SAR 2.4m. FFO rose 34.4% to SAR 21.5m; net margin 12.6%; ROE 1.9%. Borrowings rose to SAR 698m (LTV 45.8%).", source: "4336_MULKIA_REIT/2025_Annual_filed2026-03-31_t16-55-39.pdf p.10 (FY2024 column); 4336_MULKIA_REIT/2024_Annual_filed2025-03-27.pdf p.9", refs: ["4336-FY2024-REV", "4336-FY2024-NI_ATTR", "4336-FY2024-FFO", "4336-FY2024-IMPAIR_CF", "4336-FY2024-DEBT"]}
+    - {period: "FY2025", driver: "Revenue +4.5% to SAR 125m (excluding the SAR 4.9m Al Yasmin gain): rental income +13.6%, hotel -13.8%. A SAR 40.7m impairment turned the result into a SAR 28.4m loss (net margin -22.6%, ROE -3.8%). FFO, which excludes the impairment and the disposal gain, rose 39.5% to SAR 30.0m (FFO margin 24.0%). Distributions of SAR 33.2m were 110.5% of FFO. NAV at fair value fell 7.1% to SAR 829m and LTV rose to 48.7%.", source: "4336_MULKIA_REIT/2025_Annual_filed2026-03-31_t16-55-39.pdf p.9-12, p.39", refs: ["4336-FY2025-REV", "4336-FY2025-NI_ATTR", "4336-FY2025-FFO", "4336-FY2025-GAIN_DISP", "4336-FY2025-IMPAIR_CF", "4336-FY2025-NAV_FV", "4336-FY2025-DIST"]}
+    - {period: "9M2026", driver: "Quarterly statements only (unaudited; no profit or book balance sheet printed): summed quarterly rental income SAR 75.8m against SAR 74.4m (+1.9%); a SAR 7.3m impairment reversal in Q2 2026 against a SAR 17.1m impairment in Q2 2025; distributions unchanged at SAR 24.9m (SAR 0.08 per unit a quarter); NAV at fair value SAR 825m against SAR 874m (-5.6%). FFO, margins, ROE and LTV cannot be calculated for 9M.", source: "4336_MULKIA_REIT/2026_Q3_filed2026-10-14.pdf p.4-5, p.9; 4336_MULKIA_REIT/2026_Q2_filed2026-07-16.pdf p.9; 4336_MULKIA_REIT/2025_Q2_filed2025-07-15.pdf p.9", refs: ["4336-9M2026-REV", "4336-9M2025-REV", "4336-9M2026-IMPAIR_CF", "4336-9M2025-IMPAIR_CF", "4336-9M2026-NAV_FV", "4336-9M2026-DIST"]}
+  one_offs:
+    - {item: "Dealing fees to the fund manager on the Aljada acquisition", period: "FY2022", amount_sar_m: -2.1, line: "Dealing fees", source: "4336_MULKIA_REIT/2023_Annual_filed2024-04-01.pdf p.9", tax_nci: "Zakat effect not disclosed (hotel subsidiary pays zakat); no non-controlling interests: not determinable, profit and FFO kept as reported"}
+    - {item: "Finance structuring fees on new drawdowns", period: "FY2022", amount_sar_m: -2.3, line: "Finance structure fees", source: "4336_MULKIA_REIT/2023_Annual_filed2024-04-01.pdf p.9", tax_nci: "Zakat effect not disclosed; no non-controlling interests: not determinable, profit and FFO kept as reported"}
+    - {item: "Dealing fees on the Al-Maather acquisition", period: "FY2024", amount_sar_m: -2.3, line: "Dealing fees", source: "4336_MULKIA_REIT/2025_Annual_filed2026-03-31_t16-55-39.pdf p.10", tax_nci: "Zakat effect not disclosed; no non-controlling interests: not determinable, profit and FFO kept as reported"}
+    - {item: "Finance structuring fees (facility raised to SAR 750m)", period: "FY2024", amount_sar_m: -2.4, line: "Finance structure fees", source: "4336_MULKIA_REIT/2025_Annual_filed2026-03-31_t16-55-39.pdf p.10", tax_nci: "Zakat effect not disclosed; no non-controlling interests: not determinable, profit and FFO kept as reported"}
+    - {item: "Gain on sale of Al Yasmin property (excluded from REV and deducted in FFO)", period: "FY2025", amount_sar_m: 4.9, line: "Capital gains from the sale of investment properties (inside total revenues)", source: "4336_MULKIA_REIT/2025_Annual_filed2026-03-31_t16-55-39.pdf p.10, p.33", tax_nci: "Zakat effect not disclosed; no non-controlling interests: net profit kept as reported (a pre-tax gain is never subtracted from net profit); FFO excludes it"}
+    - {item: "Impairment of investment properties (excluded from FFO)", period: "FY2025", amount_sar_m: -40.7, line: "(Impairment) / impairment reversal of investment properties", source: "4336_MULKIA_REIT/2025_Annual_filed2026-03-31_t16-55-39.pdf p.10", tax_nci: "Zakat effect not disclosed; no non-controlling interests: net profit kept as reported; FFO excludes it"}
+    - {item: "Reversal of impairment of investment properties (excluded from FFO)", period: "FY2024", amount_sar_m: 14.3, line: "Reversal /(Impairment) of investment properties", source: "4336_MULKIA_REIT/2024_Annual_filed2025-03-27.pdf p.9", tax_nci: "Zakat effect not disclosed; no non-controlling interests: net profit kept as reported; FFO excludes it"}
+developments:
+  - {date: "2022-02", category: "M&A", text: "Bought the Aljada Complex in Riyadh (Radisson Blu hotel with 104 rooms and 16 villas, 24 showrooms, 5 offices) and its hotel operator, Aljada Hotel Company.", source: "4336_MULKIA_REIT/2023_Annual_filed2024-04-01.pdf p.13, p.31"}
+  - {date: "2023", category: "financing", text: "Issued 35,657,343 units at SAR 6.68 (SAR 238.2m, in kind and cash), raising units from 68.1m to 103.8m; part settled the second phase of the Aljada purchase and SAR 148.5m of bank financing was repaid.", source: "4336_MULKIA_REIT/2023_Annual_filed2024-04-01.pdf p.13, p.33, p.12"}
+  - {date: "2024-07-24", category: "M&A", text: "Completed the purchase of the Al-Maather residential and commercial tower in Riyadh for SAR 200m; the bank facility limit was raised to SAR 750m.", source: "4336_MULKIA_REIT/2024_Annual_filed2025-04-03.pdf p.18"}
+  - {date: "2025-01-30", category: "M&A", text: "Sold the Al Yasmin residential building for SAR 22.5m, a gain of SAR 4.9m; the proceeds repaid part of the fund's obligations.", source: "4336_MULKIA_REIT/2025_Annual_filed2026-03-31_t16-55-39.pdf p.33; 4336_MULKIA_REIT/2025_Q1_filed2025-04-16.pdf p.7"}
+  - {date: "2025-Q3", category: "capacity", text: "Bought 11,138 sq m of commercial land in Al Faisaliah, Dammam, for SAR 33.4m to support an expansion of West Avenue Mall.", source: "4336_MULKIA_REIT/2025_Q3_filed2025-10-14.pdf p.8"}
+  - {date: "2025-09-18", category: "strategy", text: "The board recommended selling part of the Al-Taqnia complex, the Al-Jadah property and the hotel apartment building; no sale was reported by 30 Sep 2026.", source: "4336_MULKIA_REIT/2025_Annual_filed2026-03-31_t16-55-39.pdf p.49"}
+  - {date: "2026-01-29", category: "financing", text: "Declared SAR 8,301,280 (SAR 0.08 per unit) for Q4 2025; the quarterly dividend has been SAR 0.08 per unit since Q1 2024.", source: "4336_MULKIA_REIT/2025_Annual_filed2026-03-31_t16-55-39.pdf p.49; 4336_MULKIA_REIT/2026_Q3_filed2026-10-14.pdf p.5"}
+what_it_means:
+  improved: "Revenue grew 9.3% a year from FY2022 to FY2025 as acquisitions were added, and FFO rose from SAR 16.0m in FY2023 to SAR 30.0m in FY2025, lifting the FFO margin from 14.0% to 24.0%."
+  weakened: "Impairments left net profit negative in FY2022, FY2023 and FY2025 (net margin -22.6% in FY2025), distributions exceeded FFO every year (110.5% in FY2025), and LTV rose from 36.4% to 48.7% between FY2023 and FY2025."
+  why: "Hotel revenue fell 13.8% in FY2025 while debt-funded purchases (Al-Maather for SAR 200m) raised financing charges to SAR 45.7m, and property values were written down by SAR 40.7m."
+  uncertain: "The part-year revenue of the properties bought and sold is not disclosed, so like-for-like growth cannot be measured, and the quarterly statements behind 9M 2026 give no profit and use a revenue measure that does not reconcile with the audited figures."
+confidence_overall: "Medium"
+data_notes:
+  - "9M 2025 and 9M 2026 are partial: the archive holds quarterly unitholder statements only. 9M revenue sums the statements' 'Rental income for current quarter' (the four 2025 quarters total SAR 101.5m against audited rental plus hotel revenue of SAR 124.4m), 9M depreciation and impairment sum the quarterly expense tables (2025 depreciation is combined with credit-loss provisions and is not used), and NAV is at fair value. No profit, cash, borrowings or book net assets are printed, so 9M FFO, margins, ROE and LTV are blank."
+  - "FY2025 revenue excludes the SAR 4,935,587 capital gain on the Al Yasmin sale that the statements print inside 'Total revenues' (override, provenance C); the gain is recorded as GAIN_DISP and deducted in FFO."
+  - "The FY2025 annual (note 28) reclassified the hotel part of a dual-use property from investment property to property and equipment as a correction of a prior-period error; FY2024 depreciation was split (16.8m + 3.9m) with no change in total depreciation, revenue, profit, total assets or net assets. DA_CF includes both parts."
+  - "Murabaha commission income (FY2023 SAR 1.2m, FY2024 SAR 0.5m, FY2025 SAR 0.8m) is printed inside total revenues and is kept in REV."
+  - "No FY2022 annual is in the archive: FY2022 is the FY2023 annual's comparative column. FY2021 net assets and cash come from its 2022 column; FY2021 NAV at fair value (SAR 675m) comes from the unaudited fund annual report; FY2021 total assets and borrowings are not printed."
+  - "Distributions are those declared in the year (statement of changes in net assets): from FY2024 four quarterly dividends of SAR 0.08 per unit, the Q4 dividend being declared the following January."
+  - "The statements are consolidated (Aljada Hotel Company); there are no non-controlling interests, so NI_ATTR equals net profit. Auditor's report pages are scanned images (read by OCR); opinions unmodified with no emphasis of matter."

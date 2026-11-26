@@ -1,0 +1,139 @@
+# Evidence extracted from Alamar Foods Company filings (archive folder SEVEN_FNB/6014_ALAMAR). Facts only; page = physical PDF page (1-based).
+# Units: SAR (actual riyals) as presented. Text PDFs except the FY2023 AFS balance sheet (p.8) and the 2026 Q3 balance sheet (p.4), which are scanned.
+# The XBRL files in the archive are mislabelled by year and hold nothing after FY2024; FY2025, 9M 2025 and 9M 2026 figures were read from the PDFs.
+ticker: "6014"
+company: "Alamar Foods Company"
+
+perimeter_changes:
+  - event: "Acquisition of all assets, lease rights, licences and employees of 29 Domino's Pizza branches in Makkah and Taif from a sub-franchisee (IFRS 3 business)"
+    type: acquisition
+    date: "2025-10-01"
+    consideration: 39454326
+    revenue_contribution: null
+    profit_contribution: null
+    pro_forma_revenue: null
+    period: "FY2025"
+    unit: "SAR"
+    source: "6014_ALAMAR/2025_Annual_filed2026-04-01.pdf"
+    page: 32
+    quote: "Operational and financial control transferred to the Group on 1 October 2025, which represents the acquisition date, and the transaction qualifies as business"
+    note: "Goodwill 33,544,904; consideration = cash 6,682,496 + receivable settled 11,683,304 + deferred 21,088,526 (p.33), deferred part paid in 9M 2026 (2026 Q3 p.11). Revenue contribution not disclosed (searched notes 9 and 30)."
+  - event: "Acquisition of 100% of Al Shaghaf Arabia Company Limited (Cravia Arabia; exclusive Five Guys franchisee in KSA, 13 restaurants)"
+    type: acquisition
+    date: "2026-04-29"
+    consideration: 84810420
+    revenue_contribution: 46927845
+    profit_contribution: null
+    pro_forma_revenue: null
+    period: "9M2026"
+    unit: "SAR"
+    source: "6014_ALAMAR/2026_Q3_filed2026-11-08.pdf"
+    page: 18
+    quote: "Five Guys 46,927,845 - - 46,927,845"
+    note: "Revenue = Five Guys brand line in the segment note (all post-acquisition: no Five Guys revenue in 9M 2025 or FY2025). Goodwill 63,583,178 provisional; net cash outflow 76,481,314 (p.12); financed partly by an SAR 85m facility (p.15)."
+  - event: "Business combinations FY2022-FY2024"
+    type: acquisition
+    status: "not found"
+    period: "FY2022-FY2024"
+    source: "6014_ALAMAR/2024_Annual_filed2025-03-27.pdf"
+    page: 12
+    quote: "No business combination note in the FY2022, FY2023 or FY2024 AFS; subsidiaries (UAE, Jordan, Egypt, Qatar, Bahrain, Lebanon, Morocco) unchanged since 2020."
+  - event: "Advances to start-up food ventures (5,462,618 in 2023), reclassified to notes receivable in 2024; equity-accounted associates (Alamar Foods for Restaurants Management 40%, Kasual+)"
+    type: acquisition
+    date: "2023-2024"
+    consideration: 5462618
+    revenue_contribution: null
+    profit_contribution: null
+    pro_forma_revenue: null
+    period: "FY2023-FY2024"
+    unit: "SAR"
+    source: "6014_ALAMAR/2025_Annual_filed2026-04-01.pdf"
+    page: 14
+    quote: "In the year 2023, Company has made advances for certain ventures in the food sector which are under startup phase."
+    note: "No revenue effect."
+
+segments:
+  # Geographic operating segments; revenue = external revenue; profit = segment profit before zakat and income tax.
+  - {period: "FY2022", segment: "Kingdom of Saudi Arabia", basis: geographic, revenue: 714314619, profit: null, unit: "SAR", source: "6014_ALAMAR/2023_Annual_filed2024-03-31.pdf", page: 53}
+  - {period: "FY2022", segment: "Other GCC and Levant", basis: geographic, revenue: 225056431, profit: null, unit: "SAR", source: "6014_ALAMAR/2023_Annual_filed2024-03-31.pdf", page: 53}
+  - {period: "FY2022", segment: "North Africa", basis: geographic, revenue: 136521323, profit: null, unit: "SAR", source: "6014_ALAMAR/2023_Annual_filed2024-03-31.pdf", page: 53}
+  - {period: "FY2023", segment: "Kingdom of Saudi Arabia", basis: geographic, revenue: 663477112, profit: 65893014, unit: "SAR", source: "6014_ALAMAR/2024_Annual_filed2025-03-27.pdf", page: 53}
+  - {period: "FY2023", segment: "Other GCC and Levant", basis: geographic, revenue: 214248592, profit: 2087235, unit: "SAR", source: "6014_ALAMAR/2024_Annual_filed2025-03-27.pdf", page: 53}
+  - {period: "FY2023", segment: "North Africa", basis: geographic, revenue: 113929311, profit: -5201386, unit: "SAR", source: "6014_ALAMAR/2024_Annual_filed2025-03-27.pdf", page: 53}
+  - {period: "FY2024", segment: "Kingdom of Saudi Arabia", basis: geographic, revenue: 605683632, profit: 44920643, unit: "SAR", source: "6014_ALAMAR/2025_Annual_filed2026-04-01.pdf", page: 46}
+  - {period: "FY2024", segment: "Other GCC and Levant", basis: geographic, revenue: 196243776, profit: 3965318, unit: "SAR", source: "6014_ALAMAR/2025_Annual_filed2026-04-01.pdf", page: 46}
+  - {period: "FY2024", segment: "North Africa", basis: geographic, revenue: 89637858, profit: -8784407, unit: "SAR", source: "6014_ALAMAR/2025_Annual_filed2026-04-01.pdf", page: 46}
+  - {period: "FY2025", segment: "Kingdom of Saudi Arabia", basis: geographic, revenue: 618748474, profit: 58683782, unit: "SAR", source: "6014_ALAMAR/2025_Annual_filed2026-04-01.pdf", page: 45}
+  - {period: "FY2025", segment: "Other GCC and Levant", basis: geographic, revenue: 220471500, profit: -1389389, unit: "SAR", source: "6014_ALAMAR/2025_Annual_filed2026-04-01.pdf", page: 45}
+  - {period: "FY2025", segment: "North Africa", basis: geographic, revenue: 106671617, profit: -4406614, unit: "SAR", source: "6014_ALAMAR/2025_Annual_filed2026-04-01.pdf", page: 45}
+  - {period: "9M2025", segment: "Kingdom of Saudi Arabia", basis: geographic, revenue: 453702087, profit: 39509050, unit: "SAR", source: "6014_ALAMAR/2026_Q3_filed2026-11-08.pdf", page: 19}
+  - {period: "9M2025", segment: "Other GCC and Levant", basis: geographic, revenue: 153574692, profit: -2720741, unit: "SAR", source: "6014_ALAMAR/2026_Q3_filed2026-11-08.pdf", page: 19}
+  - {period: "9M2025", segment: "North Africa", basis: geographic, revenue: 77235040, profit: -3325008, unit: "SAR", source: "6014_ALAMAR/2026_Q3_filed2026-11-08.pdf", page: 19}
+  - {period: "9M2026", segment: "Kingdom of Saudi Arabia", basis: geographic, revenue: 532266108, profit: 29372306, unit: "SAR", source: "6014_ALAMAR/2026_Q3_filed2026-11-08.pdf", page: 18}
+  - {period: "9M2026", segment: "Other GCC and Levant", basis: geographic, revenue: 181129512, profit: 10741442, unit: "SAR", source: "6014_ALAMAR/2026_Q3_filed2026-11-08.pdf", page: 18}
+  - {period: "9M2026", segment: "North Africa", basis: geographic, revenue: 96071505, profit: 1261676, unit: "SAR", source: "6014_ALAMAR/2026_Q3_filed2026-11-08.pdf", page: 18}
+  # Revenue by brand
+  - {period: "FY2022", segment: "Domino's Pizza / Dunkin Donuts", basis: product, revenue: "976,254,221 / 82,353,660", profit: null, unit: "SAR", source: "6014_ALAMAR/2023_Annual_filed2024-03-31.pdf", page: 53}
+  - {period: "FY2023", segment: "Domino's Pizza / Dunkin Donuts", basis: product, revenue: "910,759,686 / 64,720,289", profit: null, unit: "SAR", source: "6014_ALAMAR/2024_Annual_filed2025-03-27.pdf", page: 53}
+  - {period: "FY2024", segment: "Domino's Pizza / Dunkin Donuts / Other", basis: product, revenue: "832,540,799 / 43,955,612 / 15,068,855", profit: null, unit: "SAR", source: "6014_ALAMAR/2025_Annual_filed2026-04-01.pdf", page: 46}
+  - {period: "FY2025", segment: "Domino's Pizza / Dunkin Donuts / Other", basis: product, revenue: "869,299,666 / 56,169,195 / 20,422,730", profit: null, unit: "SAR", source: "6014_ALAMAR/2025_Annual_filed2026-04-01.pdf", page: 45}
+  - {period: "9M2025", segment: "Domino's Pizza / Dunkin Donuts / Others", basis: product, revenue: "627,303,558 / 40,443,870 / 16,764,391", profit: null, unit: "SAR", source: "6014_ALAMAR/2026_Q3_filed2026-11-08.pdf", page: 19}
+  - {period: "9M2026", segment: "Domino's Pizza / Dunkin Donuts / Five Guys / Others", basis: product, revenue: "697,612,757 / 52,740,058 / 46,927,845 / 12,186,465", profit: null, unit: "SAR", source: "6014_ALAMAR/2026_Q3_filed2026-11-08.pdf", page: 18}
+
+revenue_drivers:
+  - {period: "FY2022", driver: "Domino's restaurants 439 (end-2021: 383); Dunkin 56 (44)", value: 439, unit: "count", source: "6014_ALAMAR/2022_Annual_filed2023-03-30.pdf", page: 12, quote: "Administration and operation of 439 restaurants (31 December 2021: 383"}
+  - {period: "FY2023", driver: "Domino's restaurants 460 (end-2022: 439); Dunkin 61 (56)", value: 460, unit: "count", source: "6014_ALAMAR/2023_Annual_filed2024-03-31.pdf", page: 12, quote: "Administration and operation of 460 restaurants (31 December 2022: 439)"}
+  - {period: "FY2024", driver: "Domino's restaurants 472 (end-2023: 460); Dunkin 65 (61)", value: 472, unit: "count", source: "6014_ALAMAR/2024_Annual_filed2025-03-27.pdf", page: 12, quote: "Administration and operation of 472 restaurants (31 December 2023: 460) under a Domino's"}
+  - {period: "9M2025", driver: "Domino's restaurants 488 at 30 Sep 2025 (end-2024: 472); Dunkin 72 (65)", value: 488, unit: "count", source: "6014_ALAMAR/2025_Q3_filed2025-11-10.pdf", page: 8, quote: "Administration and operation of 488 restaurants (31 December 2024: 472) under a Domino's franchise agreement"}
+  - {period: "FY2025", driver: "Domino's restaurants 523 (end-2024: 472), including 29 acquired on 1 Oct 2025; Dunkin 72 (65)", value: 523, unit: "count", source: "6014_ALAMAR/2025_Annual_filed2026-04-01.pdf", page: 14, quote: "Administration and operation of 523 restaurants (31 December 2024: 472) under a Domino's franchise agreement"}
+  - {period: "9M2026", driver: "Domino's 535 (end-2025: 523); Dunkin 74 (72); Five Guys 13 (nil)", value: 535, unit: "count", source: "6014_ALAMAR/2026_Q3_filed2026-11-08.pdf", page: 8, quote: "Administration and operation of 13 restaurants (31 December 2025: Nil) under the Five Guys' franchisee agreement."}
+  - {period: "FY2025", driver: "Royalty and advertising income from sub-franchisees in other income fell (FY2024: 10,697,820)", value: 6589855, unit: "SAR", source: "6014_ALAMAR/2025_Annual_filed2026-04-01.pdf", page: 44, quote: "Royalty and advertising 6,589,855 10,697,820"}
+  - {period: "FY2022-9M2026", driver: "Same-store (like-for-like) sales growth, transactions or average ticket", value: null, unit: "%", source: "6014_ALAMAR/2025_Annual_filed2026-04-01.pdf", page: 45, quote: "not found: no same-store sales measure in the annual or interim statements"}
+
+one_offs:
+  - {period: "FY2022", item: "Employee share plan expense (awards vesting on the August 2022 listing and its first two anniversaries); separate line on the face", amount: -16043333, unit: "SAR", pnl_line: "Employees share plan compensation expense", recurring: false, source: "6014_ALAMAR/2022_Annual_filed2023-03-30.pdf", page: 45, quote: "25% of the awards have vested upon listing in the Tadawul, 35% of the awards will vest on the first anniversary of listing"}
+  - {period: "FY2023", item: "Employee share plan expense (listing awards)", amount: -6768217, unit: "SAR", pnl_line: "Employees share plan compensation expense", recurring: false, source: "6014_ALAMAR/2024_Annual_filed2025-03-27.pdf", page: 9, quote: "Employees share plan compensation expense 17 (710,250) (6,768,217)"}
+  - {period: "FY2024", item: "Employee share plan expense (listing awards)", amount: -710250, unit: "SAR", pnl_line: "Employees share plan compensation expense", recurring: false, source: "6014_ALAMAR/2024_Annual_filed2025-03-27.pdf", page: 9, quote: "Employees share plan compensation expense 17 (710,250) (6,768,217)"}
+  - {period: "FY2025", item: "Employee share plan compensation reversal", amount: 476900, unit: "SAR", pnl_line: "Employees share plan compensation reversal / (expense)", recurring: false, source: "6014_ALAMAR/2025_Annual_filed2026-04-01.pdf", page: 11, quote: "Employees share plan compensation reversal / (expense) 476,900 (710,250)"}
+  - {period: "9M2025", item: "Employee share plan compensation reversal", amount: 476900, unit: "SAR", pnl_line: "Employees share plan compensation reversal", recurring: false, source: "6014_ALAMAR/2026_Q3_filed2026-11-08.pdf", page: 5, quote: "Employees share plan compensation reversal - 193,500 - 476,900"}
+  - {period: "FY2024", item: "Gain on modification of lease liabilities (non-cash; P&L line not named)", amount: 5828347, unit: "SAR", pnl_line: "not named (cash-flow add-back)", recurring: false, source: "6014_ALAMAR/2025_Annual_filed2026-04-01.pdf", page: 13, quote: "Loss / (gain) on lease contract modification 3,466,246 (5,828,347)"}
+  - {period: "FY2025", item: "Loss on lease contract modification (non-cash; P&L line not named)", amount: -3466246, unit: "SAR", pnl_line: "not named (cash-flow add-back)", recurring: false, source: "6014_ALAMAR/2025_Annual_filed2026-04-01.pdf", page: 13, quote: "Loss / (gain) on lease contract modification 3,466,246 (5,828,347)"}
+  - {period: "9M2026", item: "Loss on disposal of property and equipment (P&L line not named)", amount: -2273473, unit: "SAR", pnl_line: "not named (cash-flow add-back)", recurring: false, source: "6014_ALAMAR/2026_Q3_filed2026-11-08.pdf", page: 7, quote: "Loss / (gain) on disposal of property and equipment 2,273,473 (286,975)"}
+  - {period: "FY2023", item: "Impairment loss on property and equipment (impairment, already outside EBITDA)", amount: -1026722, unit: "SAR", pnl_line: "Impairment loss on property and equipment", recurring: false, source: "6014_ALAMAR/2024_Annual_filed2025-03-27.pdf", page: 9, quote: "Impairment loss on property and equipment 6 (800,000) (1,026,722)"}
+  - {period: "FY2024", item: "Reversal of impairment loss on trade receivables (ordinary provision, not removed)", amount: 3446000, unit: "SAR", pnl_line: "Reversal of impairment loss on trade and other receivables", recurring: true, source: "6014_ALAMAR/2024_Annual_filed2025-03-27.pdf", page: 9, quote: "Reversal of impairment loss on trade and other receivables 12 3,446,000 528,373"}
+
+restatements:
+  - {period_restated: "FY2023", item: "Net cash from operating activities", from: 190417437, to: 185735928, unit: "SAR", reason: "Re-presentation in the FY2024 AFS without a note: finance income received moved to financing and loan interest paid moved to financing", source: "6014_ALAMAR/2024_Annual_filed2025-03-27.pdf", page: 11, quote: "Net cash generated from operating activities 97,021,445 185,735,928"}
+  - {period_restated: "FY2023", item: "Acquisition of property and equipment (capex)", from: 47956741, to: 44483039, unit: "SAR", reason: "FY2024 AFS netted the 2023 capital-advance refund (3,473,702, a separate line in the FY2023 AFS) into the PP&E line", source: "6014_ALAMAR/2024_Annual_filed2025-03-27.pdf", page: 11, quote: "Acquisition of property and equipment 6 (18,441,836) (44,483,039)"}
+  - {period_restated: "FY2024", item: "Net cash from operating activities", from: 97021445, to: 96684795, unit: "SAR", reason: "FY2025 AFS keeps loan interest paid (336,650) in operating cash flow instead of financing", source: "6014_ALAMAR/2025_Annual_filed2026-04-01.pdf", page: 13, quote: "Net cash generated from operating activities 130,016,919 96,684,795"}
+
+significant_events:
+  - {date: "2022-08-09", event: "IPO: 10.6 million shares (42.2%) offered; trading on Tadawul from 9 August 2022", financial_effect: "listing-linked employee share awards expensed FY2022-FY2024", source: "6014_ALAMAR/2025_Annual_filed2026-04-01.pdf", page: 14, quote: "On 9 August 2022, the Company's shares started trading on Tadawul as a Joint Stock Company."}
+  - {date: "2023-2024", event: "Egyptian pound devaluation (2023 and March 2024) affected translation of the Egypt subsidiary", financial_effect: "translation loss in OCI (FY2024: 14,474,767); North Africa revenue fell 21.3% in FY2024 (we calculate)", source: "6014_ALAMAR/2024_Annual_filed2025-03-27.pdf", page: 45, quote: "During March 2024, Egyptian pound has further devalued which impacted the translation of the results of the Egypt subsidiary."}
+  - {date: "2026", event: "SAR 85m facility drawn to finance the Five Guys acquisition", financial_effect: "loans and borrowings 102,914,735 at 30 Sep 2026 (31 Dec 2025: 3,164,465); facility purpose stated in note 16 (p.15)", source: "6014_ALAMAR/2026_Q3_filed2026-11-08.pdf", page: 7, quote: "Proceeds from long term loan 16 85,000,000 -"}
+
+audit_opinion:
+  - {period: "FY2022", opinion: "Unmodified (KPMG)", emphasis_of_matter: null, source: "6014_ALAMAR/2022_Annual_filed2023-03-30.pdf", page: 3}
+  - {period: "FY2023", opinion: "Unmodified (KPMG)", emphasis_of_matter: null, source: "6014_ALAMAR/2023_Annual_filed2024-03-31.pdf", page: 3}
+  - {period: "FY2024", opinion: "Unmodified (KPMG)", emphasis_of_matter: null, source: "6014_ALAMAR/2024_Annual_filed2025-03-27.pdf", page: 3}
+  - {period: "FY2025", opinion: "Unmodified (Dr. Mohamed Al-Amri & Co., BDO)", emphasis_of_matter: null, source: "6014_ALAMAR/2025_Annual_filed2026-04-01.pdf", page: 3}
+  - {period: "9M2026", opinion: "Unmodified review conclusion (Dr. Mohamed Al-Amri & Co., BDO), IAS 34", emphasis_of_matter: null, source: "6014_ALAMAR/2026_Q3_filed2026-11-08.pdf", page: 3}
+
+kpis_in_filings:
+  - {period: "FY2021", kpi: "Domino's / Dunkin restaurants at period end", value: "383 / 44", unit: "count", source: "6014_ALAMAR/2022_Annual_filed2023-03-30.pdf", page: 12}
+  - {period: "FY2022", kpi: "Domino's / Dunkin restaurants at period end", value: "439 / 56", unit: "count", source: "6014_ALAMAR/2022_Annual_filed2023-03-30.pdf", page: 12}
+  - {period: "FY2023", kpi: "Domino's / Dunkin restaurants at period end", value: "460 / 61", unit: "count", source: "6014_ALAMAR/2023_Annual_filed2024-03-31.pdf", page: 12}
+  - {period: "FY2024", kpi: "Domino's / Dunkin restaurants at period end", value: "472 / 65", unit: "count", source: "6014_ALAMAR/2024_Annual_filed2025-03-27.pdf", page: 12}
+  - {period: "9M2025", kpi: "Domino's / Dunkin restaurants at 30 Sep 2025", value: "488 / 72", unit: "count", source: "6014_ALAMAR/2025_Q3_filed2025-11-10.pdf", page: 8}
+  - {period: "FY2025", kpi: "Domino's / Dunkin restaurants at period end (Domino's includes 29 acquired)", value: "523 / 72", unit: "count", source: "6014_ALAMAR/2025_Annual_filed2026-04-01.pdf", page: 14}
+  - {period: "9M2026", kpi: "Domino's / Dunkin / Five Guys restaurants at 30 Sep 2026", value: "535 / 74 / 13", unit: "count", source: "6014_ALAMAR/2026_Q3_filed2026-11-08.pdf", page: 8}
+
+special_extractions:
+  - {item: "Finance costs line includes bank charges", detail: "FY2025: bank charges and finance cost on loans 4,665,793 + lease interest 11,002,119 = 15,667,912 (FY2024: 4,785,732 + 9,815,621), FY2025 AFS p.44.", unit: "SAR"}
+  - {item: "Capital advances (paid ahead of capex) shown separately in investing cash flow and excluded from CAPEX", detail: "FY2025 (3,489,970); 9M2025 (4,748,840); 9M2026 (6,670,052); FY2022 (7,387,255).", unit: "SAR"}
+
+open_questions:
+  - "Revenue of the 29 Makkah and Taif branches (from 1 October 2025) is not disclosed, so the perimeter effect in FY2025 and 9M 2026 is not determinable."
+  - "Other income 'Others' rose to 12,202,615 in FY2025 from 5,294,139; the note does not say what it contains (the 2026 Q3 interim mentions supplier volume rebates)."
+  - "Lebanon is a hyperinflationary economy but the filings show no IAS 29 restatement for the Lebanese subsidiary; its size is not disclosed."
+  - "The lease-modification and PP&E-disposal results are added back in the cash-flow statement, but the income-statement line that holds them is not named."

@@ -1,0 +1,194 @@
+ticker: '2284'
+headline: Revenue rose from SAR 978m (FY2022) to SAR 1,047m (FY2025) but attributable profit slipped from SAR 233m to SAR 224m as the EBITDA margin
+  fell from 33.5% to 30.6%; in 9M 2026 revenue grew 17.2% and profit 5.9%, while capex for a new feed plant cut free cash flow.
+lfl_basis:
+  definition_used: Standard bridge on IFRS revenue. Modern Mills made no acquisitions or disposals in FY2022-9M2026 (the 2021 merger with its
+    former parent brought loans, not revenue), so perimeter effects are nil. FY2024 revenue was re-presented gross of freight (SAR 14.7m) while
+    FY2023 was not, so FY2024 growth includes a presentation step. No volumes, capacity or same-store measure are disclosed, so the effect of
+    new capacity is not determinable and organic growth is the closest measure.
+  perimeter_changes:
+  - event: Merger with former parent Mada Al Ghurair (holding company)
+    date: '2021-12-27'
+    effect: no revenue; borrowings of SAR 692.3m at end-2021
+    source: 2284_MODERN_MILLS/2022_Annual_filed2024-03-27.pdf p.68, p.7
+  - event: No business combinations FY2022-9M2026; Hasad Al-Arabia (100%) consolidated throughout
+    date: 2022 to 2026
+    effect: none
+    source: 2284_MODERN_MILLS/2025_Annual_filed2026-03-08.pdf p.12
+  capacity_changes:
+  - event: Al Jumum expansion (2024) and new Al Jumum feed plant (from 2025, under construction at 30 Sep 2026)
+    date: 2024 to 2026
+    effect: not determinable
+    source: 2284_MODERN_MILLS/2024_Annual_filed2025-03-10.pdf p.29; 2284_MODERN_MILLS/2025_Annual_filed2026-03-08.pdf p.28; 2284_MODERN_MILLS/2026_Q3_filed2026-11-01.pdf
+      p.20
+  fx_exposure: 'None: all revenue is earned in Saudi Arabia in riyals.'
+  price_volume_support: Not determinable. Revenue is split by customer type and region only (by product only for FY2022); no tonnes or prices
+    are disclosed. GFSA sets prices only for flour in 45kg bags and bulk, and subsidised wheat costs SAR 180 a tonne, unchanged since 2017.
+  confidence: Medium (perimeter nil with High confidence; new-capacity effect not determinable)
+price_volume:
+- period: 9M 2026 vs 9M 2025
+  text: Revenue rose SAR 133m. Khamis Mushait grew 17.8%, Al Jumum 11.4% and Al Jowf 26.6%; corporate customers 17.4% and individuals 14.6%. No
+    volumes or prices are disclosed, so price and volume cannot be separated.
+  basis: disclosed (segment and customer revenue); split not determinable
+  confidence: High for the amounts; the split is not determinable
+  source: 2284_MODERN_MILLS/2026_Q3_filed2026-11-01.pdf p.17 (segments), p.23 (customers)
+  refs:
+  - 2284-9M2026-REV
+  - 2284-9M2025-REV
+- period: FY2025 vs FY2024
+  text: Corporate sales rose 6.1% and sales to individuals fell 21.7%. Al Jowf grew 31.3%, Khamis Mushait 0.9% and Al Jumum fell 2.0%. Volumes
+    and prices are not disclosed.
+  basis: disclosed; split not determinable
+  confidence: High for the amounts; the split is not determinable
+  source: 2284_MODERN_MILLS/2025_Annual_filed2026-03-08.pdf p.38 (customers), p.23 (segments)
+  refs:
+  - 2284-FY2025-REV
+  - 2284-FY2024-REV
+profit_and_margin:
+  drivers:
+  - period: FY2023
+    driver: 'Revenue fell 4.0%: sales to corporate customers fell 7.3% while sales to individuals rose 33.3%. Attributable profit fell 13.4% to
+      SAR 202m: finance costs rose to SAR 48.2m (SAR 35.8m), zakat to SAR 7.5m (SAR 2.6m) and G&A included SAR 7.3m of IPO costs, partly offset
+      by a SAR 2.0m net release of GFSA penalties. EBITDA margin 33.2% (we calculate).'
+    source: 2284_MODERN_MILLS/2024_Annual_filed2025-03-10.pdf p.8 (P&L); 2284_MODERN_MILLS/2023_Annual_filed2024-04-02.pdf p.42 (customers), p.44
+      (G&A)
+    refs:
+    - 2284-FY2023-REV
+    - 2284-FY2023-NI_ATTR
+    - 2284-FY2023-FIN_COST
+    - 2284-FY2023-ZAKAT_TAX
+  - period: FY2024
+    driver: Revenue rose 8.1% to SAR 1,015m; on the net-of-freight basis first reported it rose 6.6% (we calculate). Gross margin 38.2%. Finance
+      cost rose to SAR 54.9m, including SAR 8.9m of loan costs written off when Alinma loans were refinanced with SNB, while zakat fell to SAR
+      3.0m. Attributable profit +3.4% to SAR 209m; net margin 20.6%.
+    source: 2284_MODERN_MILLS/2025_Annual_filed2026-03-08.pdf p.8 (P&L, re-presented), p.39; 2284_MODERN_MILLS/2024_Annual_filed2025-03-10.pdf
+      p.35 (refinancing), p.40
+    refs:
+    - 2284-FY2024-REV
+    - 2284-FY2024-GP
+    - 2284-FY2024-NI_ATTR
+    - 2284-FY2024-FIN_COST
+  - period: FY2025
+    driver: Revenue +3.1% to SAR 1,047m. Gross margin eased to 37.4% and selling costs rose to SAR 82.4m (SAR 63.5m), mainly freight (SAR 44.9m
+      vs SAR 32.1m), so operating income was flat; G&A fell to SAR 50.0m (SAR 65.3m) and finance cost to SAR 33.1m (SAR 54.9m) after the refinancing
+      and SAR 8.7m of borrowing costs capitalised on projects. Attributable profit +7.2% to SAR 224m; EBITDA margin 30.6% (we calculate).
+    source: 2284_MODERN_MILLS/2025_Annual_filed2026-03-08.pdf p.8 (P&L), p.39-40 (expenses), p.28 (capitalised interest)
+    refs:
+    - 2284-FY2025-REV
+    - 2284-FY2025-GP
+    - 2284-FY2025-OPINC
+    - 2284-FY2025-FIN_COST
+    - 2284-FY2025-NI_ATTR
+  - period: 9M2026
+    driver: Revenue +17.2% to SAR 907m, but gross margin fell to 36.2% (37.8%) and selling costs rose to SAR 72.5m (SAR 57.2m). Finance costs
+      rose to SAR 26.3m (SAR 21.7m) and finance income fell to SAR 0.6m (SAR 2.9m). Attributable profit +5.9% to SAR 182m; net margin 20.0% (22.2%).
+    source: 2284_MODERN_MILLS/2026_Q3_filed2026-11-01.pdf p.6 (P&L), p.17 (segments)
+    refs:
+    - 2284-9M2026-REV
+    - 2284-9M2026-GP
+    - 2284-9M2026-NI_ATTR
+    - 2284-9M2026-FIN_COST
+    - 2284-9M2026-FIN_INC
+  - period: FY2022-9M2026
+    driver: Capex rose from SAR 34.0m (FY2022) to SAR 140m (FY2025) and SAR 102m in 9M 2026, so free cash flow fell from SAR 319m to SAR 123m
+      (we calculate). Dividends of SAR 162.0m were paid in each of 2024, 2025 and 9M 2026. Equity is small after the 2021 merger, so ROE is high
+      (76.4% in FY2025); net debt to EBITDA was 2.31x at end-2025.
+    source: cash-flow statements (FY2023-FY2025 annuals p.10; 2026 Q3 p.8)
+    refs:
+    - 2284-FY2022-CAPEX
+    - 2284-FY2025-CAPEX
+    - 2284-9M2026-CAPEX
+    - 2284-FY2022-FCF
+    - 2284-FY2025-FCF
+    - 2284-FY2025-EQ_ATTR
+  one_offs:
+  - item: Fines and penalties, mainly a SAR 6.42m provision for a GFSA claim
+    period: FY2022
+    amount_sar_m: -6.83
+    line: General and administrative expenses
+    source: 2284_MODERN_MILLS/2023_Annual_filed2024-04-02.pdf p.44
+    tax_nci: 'Under 5% of attributable profit; zakat effect not disclosed, no minority interests: after-tax effect not determinable, profit kept
+      as reported'
+  - item: Initial public offering costs (recovered from shareholders through equity)
+    period: FY2023
+    amount_sar_m: -7.27
+    line: General and administrative expenses
+    source: 2284_MODERN_MILLS/2023_Annual_filed2024-04-02.pdf p.44
+    tax_nci: 'Under 5% of attributable profit; zakat effect not disclosed, no minority interests: profit kept as reported'
+  - item: Net release of the GFSA penalty provision after settlement
+    period: FY2023
+    amount_sar_m: 1.96
+    line: General and administrative expenses
+    source: 2284_MODERN_MILLS/2023_Annual_filed2024-04-02.pdf p.44
+    tax_nci: 'Under 5% of attributable profit; zakat effect not disclosed, no minority interests: profit kept as reported'
+  - item: GFSA penalty
+    period: FY2024
+    amount_sar_m: -3.0
+    line: General and administrative expenses
+    source: 2284_MODERN_MILLS/2024_Annual_filed2025-03-10.pdf p.39, p.42
+    tax_nci: 'Under 5% of attributable profit; zakat effect not disclosed, no minority interests: profit kept as reported'
+  - item: Initial public offering costs
+    period: FY2024
+    amount_sar_m: -0.75
+    line: General and administrative expenses
+    source: 2284_MODERN_MILLS/2024_Annual_filed2025-03-10.pdf p.42
+    tax_nci: 'Under 5% of attributable profit; zakat effect not disclosed, no minority interests: profit kept as reported'
+developments:
+- date: '2021-12-27'
+  category: M&A
+  text: Merged with its former parent Mada Al Ghurair, which had bought the company from the state in December 2020; the acquisition loans moved
+    onto Modern Mills' balance sheet.
+  source: 2284_MODERN_MILLS/2022_Annual_filed2024-03-27.pdf p.68
+- date: '2023-03-19'
+  category: regulation
+  text: GFSA claimed fines of SAR 21m plus recoveries of SAR 43.2m over customer approvals and sale quantities; the company provided SAR 6.42m
+    in FY2022 and settled for SAR 4.4m in December 2023.
+  source: 2284_MODERN_MILLS/2022_Annual_filed2024-03-27.pdf p.74; 2284_MODERN_MILLS/2023_Annual_filed2024-04-02.pdf p.44
+- date: '2024-03-27'
+  category: event
+  text: Listed on the Saudi Exchange.
+  source: 2284_MODERN_MILLS/2025_Annual_filed2026-03-08.pdf p.12
+- date: '2024-10-08'
+  category: financing
+  text: Refinanced SAR 643m of Alinma Bank loans with SAR 751m of SNB Murabaha facilities repayable to 2038-2039, plus a SAR 275m revolving facility.
+  source: 2284_MODERN_MILLS/2024_Annual_filed2025-03-10.pdf p.35
+- date: '2024'
+  category: regulation
+  text: Paid a further GFSA penalty of SAR 3m (FY2024).
+  source: 2284_MODERN_MILLS/2024_Annual_filed2025-03-10.pdf p.39
+- date: 2025 to 2026
+  category: capacity
+  text: 'Building a new feed plant at Al Jumum: capital commitments of SAR 140m at end-2025 and SAR 108.9m at 30 Sep 2026; borrowing costs of
+    SAR 8.7m were capitalised in FY2025.'
+  source: 2284_MODERN_MILLS/2025_Annual_filed2026-03-08.pdf p.28; 2284_MODERN_MILLS/2026_Q3_filed2026-11-01.pdf p.20
+- date: 2024 to 2026
+  category: financing
+  text: Paid dividends of SAR 162.0m in each of 2024 and 2025 and in 9M 2026 (SAR 1 per share twice a year).
+  source: 2284_MODERN_MILLS/2025_Annual_filed2026-03-08.pdf p.10; 2284_MODERN_MILLS/2026_Q3_filed2026-11-01.pdf p.8, p.23
+what_it_means:
+  improved: Revenue reached SAR 1,047m in FY2025 and grew 17.2% in 9M 2026, with all three regions growing; the 2024 refinancing cut finance cost
+    from SAR 54.9m to SAR 33.1m in FY2025.
+  weakened: 'Margins fell: the EBITDA margin went from 33.5% (FY2022) to 29.4% in 9M 2026 as selling and freight costs grew faster than revenue,
+    and capex for the new feed plant cut free cash flow from SAR 319m to SAR 123m.'
+  why: Sales grew mainly with corporate customers; costs of delivering them (freight, selling staff) and investment in feed capacity rose faster.
+  uncertain: No volumes, prices or capacity are disclosed, and revenue by product is given only for FY2022, so whether growth came from new capacity,
+    mix or prices is not determinable.
+confidence_overall: Medium
+data_notes:
+- 'No XBRL file exists for Modern Mills: every figure FY2021-9M2026 was read from the PDFs (stage A overrides). Primary statements in the FY2024
+  and FY2025 annuals and the interims are scanned images, read by OCR and visually; totals were cross-checked.'
+- FY2021 balance sheet is the restated column of the FY2022 annual (note 36, correction of errors including the 27 Dec 2021 merger with Mada Al
+  Ghurair); auditor emphasis of matter.
+- FY2023 operating cash flow was re-presented in the FY2024 annual (SAR 235.7m to SAR 238.8m, R).
+- 'FY2024 revenue and gross profit were re-presented in the FY2025 annual (note 24.1): freight of SAR 14.7m moved from a revenue deduction to
+  selling expenses (revenue SAR 1,000.2m to SAR 1,015.0m, R). FY2023 was not re-presented, so FY2024/FY2023 growth (8.1%) includes 1.6 points
+  of presentation change. 9M 2025 was re-presented the same way in the 2026 Q3 interim (+SAR 18.8m, note 12.1).'
+- Gross profit is after freight only up to FY2023; from FY2024 freight sits in selling expenses, which lifts the gross margin compared with earlier
+  years.
+- Operating cash flow is after interest paid (finance costs paid are in operating activities), unlike Arabian Mills and Fourth Milling.
+- Borrowing costs capitalised on projects (SAR 6.0m in FY2024, SAR 8.7m in FY2025, SAR 2.2m in 9M 2026) are not in finance costs.
+- ROE is very high (FY2022 168.7%) because equity was only SAR 97.8m at end-2021 after the merger and large dividends; it is not comparable with
+  the other mills.
+- Treasury shares of SAR 39.3m are deducted from equity from 2024.
+- IMPAIR_CF FY2022 is the write-off of intangible assets (SAR 4.0m); no other impairments.
+- Listed on 27 Mar 2024; the archive holds statements from FY2022 (with FY2021 comparatives).

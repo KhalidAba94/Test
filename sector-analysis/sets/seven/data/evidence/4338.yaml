@@ -1,0 +1,181 @@
+# Evidence extracted from AlAhli REIT Fund (1) filings (archive: SEVEN_REIT/4338_ALAHLI_REIT_1). Facts only; page = physical PDF page (1-based).
+# Units: SAR '000 as presented in the audited statements; fact sheets in SAR. FY2025 annual: primary statements (pp.9-12) are scanned images,
+# read visually and by OCR; notes are text. No FY2022 annual and no interim financial statements in the archive: 9M figures come from the
+# quarterly fact sheets (unaudited, year-to-date income statement and balance sheet, no comparative column).
+ticker: "4338"
+company: "AlAhli REIT Fund (1) (managed by SNB Capital Company)"
+
+perimeter_changes:
+  - event: "No property acquired or sold from FY2022 to 9M 2026; the last acquisition was Qbic Plaza in June 2020 (land next to AlAndalus Mall bought in November 2020 for its expansion)"
+    type: acquisition
+    status: "not found"
+    date: "FY2022-9M2026"
+    consideration: null
+    revenue_contribution: null
+    profit_contribution: null
+    pro_forma_revenue: null
+    period: "FY2022-FY2025"
+    unit: "SAR '000"
+    source: "4338_ALAHLI_REIT_1/2025_Annual_filed2026-09-14.pdf"
+    page: 26
+    quote: "The Fund acquired Qbic Plaza on 22 June 2020 against cash consideration of SR 250 million"
+  - event: "Fact sheets confirm no property sale"
+    type: disposal
+    status: "not found"
+    date: "to 30 Sep 2026"
+    consideration: null
+    revenue_contribution: null
+    profit_contribution: null
+    pro_forma_revenue: null
+    period: "9M2026"
+    unit: "SAR"
+    source: "4338_ALAHLI_REIT_1/2026_Q3_filed2026-10-13.pdf"
+    page: 1
+    quote: "There was no sale of any real estate asset. All distributions were made from rental revenue."
+
+segments:
+  - {period: "FY2022", segment: "Retail (AlAndalus Mall)", basis: operating, revenue: 125266, profit: 81024, unit: "SAR '000", source: "4338_ALAHLI_REIT_1/2023_Annual_filed2026-09-14.pdf", page: 31}
+  - {period: "FY2022", segment: "Hospitality (AlAndalus Mall Hotel)", basis: operating, revenue: 14469, profit: -4488, unit: "SAR '000", source: "4338_ALAHLI_REIT_1/2023_Annual_filed2026-09-14.pdf", page: 31}
+  - {period: "FY2022", segment: "Offices (Salama Tower, Qbic Plaza)", basis: operating, revenue: 45385, profit: 14186, unit: "SAR '000", source: "4338_ALAHLI_REIT_1/2023_Annual_filed2026-09-14.pdf", page: 31}
+  - {period: "FY2023", segment: "Retail (AlAndalus Mall)", basis: operating, revenue: 121944, profit: 70108, unit: "SAR '000", source: "4338_ALAHLI_REIT_1/2024_Annual_filed2026-09-14.pdf", page: 33}
+  - {period: "FY2023", segment: "Hospitality (AlAndalus Mall Hotel)", basis: operating, revenue: 15734, profit: -4192, unit: "SAR '000", source: "4338_ALAHLI_REIT_1/2024_Annual_filed2026-09-14.pdf", page: 33}
+  - {period: "FY2023", segment: "Offices (Salama Tower, Qbic Plaza)", basis: operating, revenue: 45385, profit: -2079, unit: "SAR '000", source: "4338_ALAHLI_REIT_1/2024_Annual_filed2026-09-14.pdf", page: 33}
+  - {period: "FY2024", segment: "Retail (AlAndalus Mall)", basis: operating, revenue: 125035, profit: 69151, unit: "SAR '000", source: "4338_ALAHLI_REIT_1/2025_Annual_filed2026-09-14.pdf", page: 35}
+  - {period: "FY2024", segment: "Hospitality (AlAndalus Mall Hotel)", basis: operating, revenue: 19185, profit: -12598, unit: "SAR '000", source: "4338_ALAHLI_REIT_1/2025_Annual_filed2026-09-14.pdf", page: 35}
+  - {period: "FY2024", segment: "Offices (Salama Tower, Qbic Plaza)", basis: operating, revenue: 43427, profit: -6856, unit: "SAR '000", source: "4338_ALAHLI_REIT_1/2025_Annual_filed2026-09-14.pdf", page: 35}
+  - {period: "FY2025", segment: "Retail (AlAndalus Mall)", basis: operating, revenue: 137629, profit: 58358, unit: "SAR '000", source: "4338_ALAHLI_REIT_1/2025_Annual_filed2026-09-14.pdf", page: 35}
+  - {period: "FY2025", segment: "Hospitality (AlAndalus Mall Hotel)", basis: operating, revenue: 15398, profit: -10320, unit: "SAR '000", source: "4338_ALAHLI_REIT_1/2025_Annual_filed2026-09-14.pdf", page: 35}
+  - {period: "FY2025", segment: "Offices (Salama Tower, Qbic Plaza)", basis: operating, revenue: 43688, profit: -5679, unit: "SAR '000", source: "4338_ALAHLI_REIT_1/2025_Annual_filed2026-09-14.pdf", page: 35}
+
+revenue_drivers:
+  - period: "FY2024"
+    driver: "AlAndalus Mall expansion completed: construction in progress of SAR 163.8m transferred to buildings in 2024 (revenue from the expansion not disclosed)"
+    value: 163776
+    unit: "SAR '000"
+    source: "4338_ALAHLI_REIT_1/2024_Annual_filed2026-09-14.pdf"
+    page: 24
+    quote: "*The construction in progress relates to construction works at Al-Andalus Mall."
+  - period: "FY2025"
+    driver: "New expansion works at AlAndalus Mall under construction at end-2025 (construction in progress SAR 20.9m)"
+    value: 20897
+    unit: "SAR '000"
+    source: "4338_ALAHLI_REIT_1/2025_Annual_filed2026-09-14.pdf"
+    page: 27
+    quote: "* The project under construction represents the expansion works for Al-Andalus Mall."
+  - period: "FY2025"
+    driver: "Salama Tower moved from a five-year net lease to the seller (SAR 23.1m a year) to third-party management from 19 Feb 2025"
+    value: 23.1
+    unit: "SAR m"
+    source: "4338_ALAHLI_REIT_1/2025_Annual_filed2026-09-14.pdf"
+    page: 26
+    quote: "In previous years, Salama Tower was leased to the seller for a net lease amount of SR 23.1 million per annum"
+  - period: "FY2025"
+    driver: "Qbic Plaza net lease (SAR 21.6m a year) extended for five years from 10 Dec 2025"
+    value: 21.6
+    unit: "SAR m"
+    source: "4338_ALAHLI_REIT_1/2025_Annual_filed2026-09-14.pdf"
+    page: 26
+    quote: "The lease agreement has been extended for a period of 5 years effective from 10"
+  - period: "FY2025"
+    driver: "Revenue by type: rental revenue SAR 181.3m (FY2024: 168.5m); hospitality services SAR 13.1m (16.3m); food and beverage sales SAR 2.3m (2.9m)"
+    value: 196715
+    unit: "SAR '000"
+    source: "4338_ALAHLI_REIT_1/2025_Annual_filed2026-09-14.pdf"
+    page: 36
+    quote: "Rental revenue on investment properties – over time 181,317 168,462"
+
+one_offs:
+  - {period: "FY2024", item: "Impairment loss on property and equipment (hotel)", amount: -8000, unit: "SAR '000", pnl_line: "Impairment loss on property and equipment", recurring: false, source: "4338_ALAHLI_REIT_1/2024_Annual_filed2026-09-14.pdf", page: 8, quote: "Impairment loss on property and equipment 10 (8,000) -", note: "Excluded from FFO (impairment add-back)"}
+  - {period: "FY2025", item: "Impairment loss on property and equipment (hotel)", amount: -3000, unit: "SAR '000", pnl_line: "Impairment loss on property and equipment", recurring: false, source: "4338_ALAHLI_REIT_1/2025_Annual_filed2026-09-14.pdf", page: 12, quote: "Impairment loss on property and equipment 10 3,000 8,000", note: "Cash-flow page is a scanned image (OCR); excluded from FFO"}
+  - {period: "FY2023", item: "Impairment loss on receivables from operating leases (ECL)", amount: -8500, unit: "SAR '000", pnl_line: "Impairment loss on receivables from operating leases", recurring: true, source: "4338_ALAHLI_REIT_1/2023_Annual_filed2026-09-14.pdf", page: 8, quote: "Impairment loss on receivables from operating leases 7 (8,500) (4,000)", note: "Ordinary operating provision; kept in FFO, not a one-off"}
+  - {period: "FY2025", item: "Allowance for expected credit loss on receivables from operating leases", amount: -8677, unit: "SAR '000", pnl_line: "Allowance for expected credit loss", recurring: true, source: "4338_ALAHLI_REIT_1/2025_Annual_filed2026-09-14.pdf", page: 35, quote: "operating leases (8,677) - - - (8,677) (850) (462) - - (1,312)", note: "Retail segment; ordinary operating provision kept in FFO"}
+
+restatements:
+  - period_restated: "FY2023"
+    item: "Hotel property reclassified from investment properties to property and equipment (investment properties 1,903,261 -> 1,764,589; property and equipment 138,672)"
+    from: 1903261
+    to: 1764589
+    unit: "SAR '000"
+    reason: "Reclassification to conform with FY2024 presentation; no effect on net income or net assets (note 27)"
+    source: "4338_ALAHLI_REIT_1/2024_Annual_filed2026-09-14.pdf"
+    page: 40
+    quote: "During the year ended 31 December 2024, certain figures have been reclassified as listed below"
+  - period_restated: "FY2023"
+    item: "Net assets at fair value (NAV_FV): fair-value uplift now on investment properties only"
+    from: 1413557
+    to: 1406634
+    unit: "SAR '000"
+    reason: "Note 21 of the FY2024 annual compares fair value with the carrying value of investment properties only (hotel now at cost in property and equipment)"
+    source: "4338_ALAHLI_REIT_1/2024_Annual_filed2026-09-14.pdf"
+    page: 35
+    quote: "Net assets (equity) attributable to unitholders after fair value adjustment 1,381,523 1,406,634"
+  - period_restated: "FY2024"
+    item: "Total assets (prepayments and other receivables 3,454 -> 9,979; unearned rentals 30,925 -> 37,450)"
+    from: 1986484
+    to: 1993009
+    unit: "SAR '000"
+    reason: "Comparative figures reclassified (note 28, FY2025 annual)"
+    source: "4338_ALAHLI_REIT_1/2025_Annual_filed2026-09-14.pdf"
+    page: 42
+    quote: "Certain comparative figures have been reclassified to conform with the presentation of the current period"
+
+significant_events:
+  - date: "2023-04-06"
+    event: "SNB facility amended from Ijarah to Murabaha; whole balance due July 2026"
+    financial_effect: "Borrowings shown as non-current"
+    source: "4338_ALAHLI_REIT_1/2023_Annual_filed2026-09-14.pdf"
+    page: 28
+    quote: "been revised and now the whole outstanding balance will be due in July 2026. Accordingly, the"
+  - date: "2023-10-05"
+    event: "Facility limit raised from SAR 650m to SAR 760m; unused SAR 17m at end-2025"
+    financial_effect: "Borrowings rose from SAR 589m (FY2022) to SAR 743m (FY2025)"
+    source: "4338_ALAHLI_REIT_1/2025_Annual_filed2026-09-14.pdf"
+    page: 32
+    quote: "amendment of its agreement of Islamic financing facility wherein facility amount has been increased to SR 760"
+  - date: "2025-12"
+    event: "Facility tenure revised: outstanding balance now payable in July 2029"
+    financial_effect: "Removes the July 2026 bullet maturity"
+    source: "4338_ALAHLI_REIT_1/2025_Annual_filed2026-09-14.pdf"
+    page: 32
+    quote: "payable in July 2029. Accordingly, the whole balance is disclosed as non-current."
+  - date: "2026-09"
+    event: "The FY2023-FY2025 annual statements and most 2023-2026 fact sheets in the archive were filed on 13-17 September 2026 (late refiling)"
+    financial_effect: "none"
+    source: "4338_ALAHLI_REIT_1/manifest_part.json"
+    page: null
+    quote: null
+
+audit_opinion:
+  - {period: "FY2023", opinion: "unmodified", emphasis_of_matter: "none", source: "4338_ALAHLI_REIT_1/2023_Annual_filed2026-09-14.pdf", page: 3}
+  - {period: "FY2024", opinion: "unmodified", emphasis_of_matter: "none", source: "4338_ALAHLI_REIT_1/2024_Annual_filed2026-09-14.pdf", page: 3}
+  - {period: "FY2025", opinion: "unmodified (Ernst & Young); Other Matter: FY2024 audited by another auditor (unmodified)", emphasis_of_matter: "none", source: "4338_ALAHLI_REIT_1/2025_Annual_filed2026-09-14.pdf", page: 6}
+
+kpis_in_filings:
+  - {period: "FY2022", kpi: "Occupancy, AlAndalus Mall (valuer 1)", value: 94, unit: "%", source: "4338_ALAHLI_REIT_1/2023_Annual_filed2026-09-14.pdf", page: 26}
+  - {period: "FY2022", kpi: "Occupancy, AlAndalus Mall Hotel", value: 44, unit: "%", source: "4338_ALAHLI_REIT_1/2023_Annual_filed2026-09-14.pdf", page: 26}
+  - {period: "FY2023", kpi: "Occupancy, AlAndalus Mall (valuer 1)", value: 94, unit: "%", source: "4338_ALAHLI_REIT_1/2023_Annual_filed2026-09-14.pdf", page: 26}
+  - {period: "FY2023", kpi: "Occupancy, AlAndalus Mall Hotel", value: 60, unit: "%", source: "4338_ALAHLI_REIT_1/2023_Annual_filed2026-09-14.pdf", page: 26}
+  - {period: "FY2024", kpi: "Occupancy, AlAndalus Mall (valuer 1)", value: 86, unit: "%", source: "4338_ALAHLI_REIT_1/2024_Annual_filed2026-09-14.pdf", page: 26}
+  - {period: "FY2024", kpi: "Occupancy, hotel", value: 65, unit: "%", source: "4338_ALAHLI_REIT_1/2024_Annual_filed2026-09-14.pdf", page: 27}
+  - {period: "FY2025", kpi: "Occupancy, AlAndalus Mall (valuer 1: 99.02%; valuer 2: 89%)", value: 99.02, unit: "%", source: "4338_ALAHLI_REIT_1/2025_Annual_filed2026-09-14.pdf", page: 29}
+  - {period: "FY2025", kpi: "Occupancy, hotel", value: 65, unit: "%", source: "4338_ALAHLI_REIT_1/2025_Annual_filed2026-09-14.pdf", page: 30}
+  - {period: "9M2025", kpi: "Occupancy at 30 Sep 2025 (fact sheet chart): mall 97%, hotel 47%, Salama Tower 94%, Qbic Plaza 100%", value: null, unit: "%", source: "4338_ALAHLI_REIT_1/2025_Q3_filed2026-09-13.pdf", page: 1}
+  - {period: "9M2026", kpi: "Occupancy at 30 Sep 2026 (fact sheet chart): mall 99%, hotel 73%, Salama Tower 86%, Qbic Plaza 100%", value: null, unit: "%", source: "4338_ALAHLI_REIT_1/2026_Q3_filed2026-10-13.pdf", page: 1}
+  - {period: "9M2026", kpi: "Depreciation included in 9M direct expenses", value: 21.9, unit: "SAR m", source: "4338_ALAHLI_REIT_1/2026_Q3_filed2026-10-13.pdf", page: 1}
+
+special_extractions:
+  - item: "Fact-sheet year-to-date figures versus the audited statements"
+    detail: "The Q4 2025 fact sheet shows FY2025 direct revenues SAR 190,036,266 and net profit SAR 23,383,989; the audited FY2025 statements show revenue from properties SAR 196.7m and profit SAR 18.4m. FY2024 fact sheet: direct revenues SAR 177,939,703, net profit SAR 26,691,333 (audited 187.6m and 26.7m). Fact-sheet figures are preliminary and not comparable with audited full years."
+    source: "4338_ALAHLI_REIT_1/2025_Q4_filed2026-09-13.pdf; 4338_ALAHLI_REIT_1/2024_Q4_filed2026-09-17.pdf"
+    page: 1
+    quote: "Direct Revenues 190,036,266"
+  - item: "Year-to-date direct revenues by quarter (fact sheets)"
+    detail: "2025: Q1 46.4m, H1 92.2m, 9M 140.4m, FY 190.0m. 2026: Q1 59.7m, H1 116.3m, 9M 173.2m."
+    source: "4338_ALAHLI_REIT_1/2026_Q1_filed2026-09-13.pdf; 4338_ALAHLI_REIT_1/2026_Q2_filed2026-09-13.pdf"
+    page: 1
+    quote: "Direct Revenues 59,702,668"
+
+open_questions:
+  - "The 9M 2026 fact sheet shows direct revenues up 23.4% and net profit up 169.0% on 9M 2025, but gives no explanation and no property split; hotel occupancy rose from 47% to 73% and mall occupancy from 97% to 99% (charts). The driver cannot be confirmed until audited or reviewed statements are filed."
+  - "Fact-sheet full-year figures differ from the audited statements (FY2025 net profit 23.4m vs 18.4m), so the 9M figures may also be revised."
+  - "Revenue from the AlAndalus Mall expansion completed in 2024 is not disclosed."

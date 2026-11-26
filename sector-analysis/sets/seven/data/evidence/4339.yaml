@@ -1,0 +1,93 @@
+# Evidence extracted from Derayah REIT Fund filings (archive: SEVEN_REIT/4339_DERAYAH_REIT). Facts only; page = physical PDF page (1-based).
+# Units: SAR (actuals). Audited statements: FY2023 (2023_Annual_filed2024-04-01.pdf; audit report pp.3-7 are images, read by OCR),
+# FY2024 (2024_Annual_filed2025-03-27.pdf), FY2025 (2025_Annual_filed2026-03-30.pdf). Fund annual reports (2023_Annual_filed2024-03-31.pdf,
+# 2024_Annual_filed2025-03-26.pdf, 2025_Annual_filed2026-04-01.pdf) and quarterly statements are unaudited.
+ticker: "4339"
+company: "Derayah REIT Fund (managed by Derayah Financial)"
+
+perimeter_changes:
+  - event: "Sale of Al-Sharq Warehouse Complex (Riyadh)"
+    type: disposal
+    date: "2023-07-31"
+    consideration: 158139535
+    revenue_contribution: null
+    profit_contribution: "capital gain 21,752,657 (GAIN_DISP)"
+    pro_forma_revenue: null
+    period: "FY2023"
+    unit: "SAR"
+    source: "4339_DERAYAH_REIT/2023_Annual_filed2024-04-01.pdf"
+    page: 24
+    quote: "On July 31, 2023, Al-Sharq Warehouse Complex was sold for 158,139,535 riyals"
+    note: "Revenue of the property is not disclosed. Portfolio 25 properties in the FY2023 fund report (p.6)."
+  - event: "Sale of Dammam Labor Housing (1)"
+    type: disposal
+    date: "2024-08-01"
+    consideration: 5100000
+    revenue_contribution: null
+    profit_contribution: "capital loss 128,649 (GAIN_DISP)"
+    pro_forma_revenue: null
+    period: "FY2024"
+    unit: "SAR"
+    source: "4339_DERAYAH_REIT/2024_Annual_filed2025-03-27.pdf"
+    page: 24
+    quote: "On August 01, 2024, Dammam Labor Housing was sold for SAR 5.1 million"
+  - event: "No acquisitions FY2022-FY2025 (no purchases of investment properties in FY2024 or FY2025; 307,530 in FY2023)"
+    type: acquisition
+    status: "not found"
+    period: "FY2022-FY2025"
+    source: "4339_DERAYAH_REIT/2024_Annual_filed2025-03-27.pdf"
+    page: 11
+    quote: "Purchase investment properties 11 - )307,530("
+  - event: "No new properties in 2026 to 30 Sep"
+    type: acquisition
+    status: "not found"
+    period: "9M2026"
+    source: "4339_DERAYAH_REIT/2026_Q3_filed2026-10-19.pdf"
+    page: 2
+    quote: "Fundamental and Non-Fundamental Changes affecting Fund Assets (New Properties) None."
+
+segments:
+  - {period: "FY2023-FY2025", segment: "single segment (25 then 23 properties in Saudi Arabia, no segment information)", basis: operating, revenue: null, profit: null, unit: "SAR", source: "4339_DERAYAH_REIT/2025_Annual_filed2026-03-30.pdf", page: 34}
+
+revenue_drivers:
+  - {period: "FY2025", driver: "Leasable area occupied 92% (FY2024 95%, FY2023 96%)", value: 92, unit: "%", source: "4339_DERAYAH_REIT/2025_Annual_filed2026-04-01.pdf", page: 7, quote: "A total of 92% of Derayah REIT leasable Area is occupied."}
+  - {period: "FY2024", driver: "Leasable area occupied", value: 95, unit: "%", source: "4339_DERAYAH_REIT/2024_Annual_filed2025-03-26.pdf", page: 7, quote: "A total of 95% of Derayah REIT leasable Area is occupied."}
+  - {period: "FY2023", driver: "Leasable area occupied", value: 96, unit: "%", source: "4339_DERAYAH_REIT/2023_Annual_filed2024-03-31.pdf", page: 7, quote: "A total of 96% of Derayah REIT leasable Area is occupied."}
+  - {period: "FY2024", driver: "Smart Tower tenant default: unpaid rent SAR 46 million when the lawsuit was filed (Smart Tower about 17% of annual rent)", value: 46, unit: "SAR m", source: "4339_DERAYAH_REIT/2024_Annual_filed2025-03-26.pdf", page: 11, quote: "due to their failure to pay the due rent, which amounted to 46 million riyals at the time the lawsuit was filed."}
+
+one_offs:
+  - {period: "FY2023", item: "Capital gain on sale of Al-Sharq Warehouse Complex (outside revenue; in GAIN_DISP)", amount: 21752657, unit: "SAR", pnl_line: "Capital gains from investments properties sale", recurring: false, source: "4339_DERAYAH_REIT/2023_Annual_filed2024-04-01.pdf", page: 9, quote: "Capital gains from investments properties sale 21,752,657"}
+  - {period: "FY2023", item: "Other income 6,165,549, not explained in the notes; the cash flow shows a reversal of the zakat provision of 5,964,130 the same year (funds exempt from zakat)", amount: 6165549, unit: "SAR", pnl_line: "Other income (inside FFO)", recurring: false, source: "4339_DERAYAH_REIT/2023_Annual_filed2024-04-01.pdf", page: 11, quote: "Reversal of zakat provision )5,964,130( -"}
+  - {period: "FY2024", item: "Capital loss on sale of Dammam Labor Housing (in GAIN_DISP)", amount: -128649, unit: "SAR", pnl_line: "Capital (loss)/gain from investments properties sale", recurring: false, source: "4339_DERAYAH_REIT/2024_Annual_filed2025-03-27.pdf", page: 9, quote: "Capital (loss)/gain from investments properties sale (128,649) 21,752,657"}
+  - {period: "FY2023", item: "Expected credit loss expense (Smart Tower and Motoon Tower arrears); ordinary provision, not removed", amount: 16652621, unit: "SAR", pnl_line: "Expected credit loss expense (inside FFO)", recurring: true, source: "4339_DERAYAH_REIT/2023_Annual_filed2024-04-01.pdf", page: 9, quote: "Expected credit loss expense 8 )16,652,621( (4,069,413)"}
+  - {period: "FY2025", item: "Expected credit loss expense; ordinary provision, not removed", amount: 8844033, unit: "SAR", pnl_line: "Expected credit loss expense (inside FFO)", recurring: true, source: "4339_DERAYAH_REIT/2025_Annual_filed2026-03-30.pdf", page: 9, quote: "Expected credit loss expense 8 (8,844,033) (5,800,223)"}
+
+restatements:
+  - {period_restated: "FY2024", item: "Cash-flow comparatives for FVTPL investments reclassified (note 25); no effect on the figures in the tables", from: null, to: null, unit: "SAR", reason: "conform to current-year presentation", source: "4339_DERAYAH_REIT/2025_Annual_filed2026-03-30.pdf", page: 34, quote: "Certain comparative figures in cashflow statement related to the investments have been reclassified to conform to the current year's presentation."}
+
+significant_events:
+  - {date: "2025-07-23", event: "Preliminary court ruling ordering the Smart Tower main tenant to pay SAR 36m of overdue rent; lease termination ordered 9 Sep 2025", financial_effect: "recovery not recognised; ECL 8.8m in FY2025", source: "4339_DERAYAH_REIT/2025_Annual_filed2026-03-30.pdf", page: 34, quote: "ordering the main tenant of the Smart Tower property to pay a portion of the overdue rent"}
+  - {date: "2025-05-04", event: "Kuwait court made enforceable a judgment requiring the former Motoon Tower tenant to pay SAR 13,759,116", financial_effect: "recovery not recognised", source: "4339_DERAYAH_REIT/2025_Annual_filed2026-04-01.pdf", page: 11, quote: "Issuance of a court judgment in the State of Kuwait dated May 4, 2025, against the former tenant of Motoon Tower"}
+  - {date: "2025", event: "New five-year financing agreement with Alinma Bank of SAR 750m; borrowings refinanced at SAR 610m (602.9m repaid)", financial_effect: "DEBT 602.9m to 610.0m; due April 2030", source: "4339_DERAYAH_REIT/2025_Annual_filed2026-04-01.pdf", page: 11, quote: "Signing a financing facilities agreement with Alinma Bank with a total value of SAR 750 million for a period of five years."}
+  - {date: "FY2024-FY2025", event: "Accrued finance expenses shown on a separate line, outside long-term borrowings", financial_effect: "9,720,345 (FY2024) and 9,409,671 (FY2025) not in DEBT", source: "4339_DERAYAH_REIT/2025_Annual_filed2026-03-30.pdf", page: 8, quote: "Accrued finance expenses 16 9,409,671 9,720,345"}
+  - {date: "FY2023", event: "Distribution policy based on cash from operations (net income plus depreciation and impairment)", financial_effect: "policy statement; no FFO figure reported", source: "4339_DERAYAH_REIT/2023_Annual_filed2024-04-01.pdf", page: 32, quote: "The fund manager distributes profits on the basis of the cash generated from operations"}
+
+audit_opinion:
+  - {period: "FY2023", opinion: "unqualified", emphasis_of_matter: "none (audit report pages are images; read by OCR)", source: "4339_DERAYAH_REIT/2023_Annual_filed2024-04-01.pdf", page: 3}
+  - {period: "FY2024", opinion: "unqualified", emphasis_of_matter: "none", source: "4339_DERAYAH_REIT/2024_Annual_filed2025-03-27.pdf", page: 3}
+  - {period: "FY2025", opinion: "unqualified", emphasis_of_matter: "none", source: "4339_DERAYAH_REIT/2025_Annual_filed2026-03-30.pdf", page: 3}
+
+kpis_in_filings:
+  - {period: "FY2025", kpi: "Income-generating properties (fund report; the FY2025 statements say 23)", value: 24, unit: "count", source: "4339_DERAYAH_REIT/2025_Annual_filed2026-04-01.pdf", page: 6}
+  - {period: "FY2023", kpi: "Income-generating properties", value: 25, unit: "count", source: "4339_DERAYAH_REIT/2023_Annual_filed2024-03-31.pdf", page: 6}
+  - {period: "FY2025", kpi: "Smart Tower share of annual rent 17.16%; Sulay Warehouses 21.50%", value: null, unit: "%", source: "4339_DERAYAH_REIT/2025_Annual_filed2026-04-01.pdf", page: 6}
+  - {period: "9M2026", kpi: "Smart Tower occupancy 87%; The Valley Commercial Center 43%", value: null, unit: "%", source: "4339_DERAYAH_REIT/2026_Q3_filed2026-10-19.pdf", page: 2}
+
+special_extractions:
+  - {item: "9M fact-sheet figures used", note: "NAV at fair value 1,028,638,741 (30 Sep 2025, 2025_Q3 p.2) and 1,030,607,827 (2026_Q3 p.2, footnote dated 30/06/2026); banking facility 610,000,000. Book NAV, total assets, revenue and net income are not printed."}
+
+open_questions:
+  - "The FY2025 fund report counts 24 properties while the FY2025 statements (note 24) say 23."
+  - "The Q3 2026 statement footnote dates the fair-value NAV at 30/06/2026, but the figure differs from the Q2 2026 statement's 30/06/2026 value (1,031,572,604)."
+  - "Nature of FY2023 other income (6,165,549) is not given; it is close to the zakat provision reversal (5,964,130)."
+  - "Distributions exceeded FFO in every year FY2022-FY2025 (payout 114.4%, 141.4%, 101.4%, 118.8%)."

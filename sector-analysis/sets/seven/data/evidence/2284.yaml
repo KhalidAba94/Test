@@ -1,0 +1,445 @@
+ticker: '2284'
+company: Modern Mills Company (Modern Mills for Food Products)
+perimeter_changes:
+- event: Legal merger with the former ultimate parent Mada Al Ghurair on 27 Dec 2021 (prospective, book values); it brought the acquisition loans
+    (SAR 692.3m at end-2021) but no operating revenue
+  type: acquisition
+  date: '2021-12-27'
+  consideration: null
+  revenue_contribution: null
+  profit_contribution: null
+  pro_forma_revenue: null
+  period: FY2021
+  unit: SAR m
+  source: 2284_MODERN_MILLS/2022_Annual_filed2024-03-27.pdf
+  page: 68
+  quote: On 27 December 2021, a merger took place between the ultimate Parent Company and the Company.
+- event: Subsidiary Hasad Al-Arabia for Trading (flour wholesale and retail, 100%) set up in 2022; a start-up, not an acquisition; consolidated
+    in all periods FY2022-9M2026
+  type: new_subsidiary
+  date: '2022'
+  consideration: null
+  revenue_contribution: null
+  profit_contribution: null
+  pro_forma_revenue: null
+  period: FY2022
+  unit: SAR m
+  source: 2284_MODERN_MILLS/2022_Annual_filed2024-03-27.pdf
+  page: 12
+  quote: Hasad Al-Arabia Saudi Arabia Distribution 100 --
+- event: Acquisitions or disposals of businesses FY2023-9M2026
+  type: acquisition
+  status: not found
+  period: FY2023-9M2026
+  unit: SAR m
+  source: 2284_MODERN_MILLS/2025_Annual_filed2026-03-08.pdf
+  page: 12
+  quote: ''
+  note: No business-combination note in the FY2023-FY2025 annuals or the 2026 Q3 interim; the subsidiary list is unchanged (Hasad Al-Arabia, 100%).
+segments:
+- period: FY2023
+  segment: Khamis Mushait
+  basis: geographic
+  revenue: 598.73
+  profit: null
+  unit: SAR m
+  source: 2284_MODERN_MILLS/2024_Annual_filed2025-03-10.pdf
+  page: 24
+- period: FY2023
+  segment: Al Jumum
+  basis: geographic
+  revenue: 255.27
+  profit: null
+  unit: SAR m
+  source: 2284_MODERN_MILLS/2024_Annual_filed2025-03-10.pdf
+  page: 24
+- period: FY2023
+  segment: Al Jowf
+  basis: geographic
+  revenue: 84.62
+  profit: null
+  unit: SAR m
+  source: 2284_MODERN_MILLS/2024_Annual_filed2025-03-10.pdf
+  page: 24
+- period: FY2024 (FY2024 annual basis)
+  segment: Khamis Mushait
+  basis: geographic
+  revenue: 631.89
+  profit: null
+  unit: SAR m
+  source: 2284_MODERN_MILLS/2024_Annual_filed2025-03-10.pdf
+  page: 24
+- period: FY2024 (FY2024 annual basis)
+  segment: Al Jumum
+  basis: geographic
+  revenue: 274.09
+  profit: null
+  unit: SAR m
+  source: 2284_MODERN_MILLS/2024_Annual_filed2025-03-10.pdf
+  page: 24
+- period: FY2024 (FY2024 annual basis)
+  segment: Al Jowf
+  basis: geographic
+  revenue: 94.27
+  profit: null
+  unit: SAR m
+  source: 2284_MODERN_MILLS/2024_Annual_filed2025-03-10.pdf
+  page: 24
+- period: FY2024
+  segment: Khamis Mushait
+  basis: geographic
+  revenue: 638.28
+  profit: null
+  unit: SAR m
+  source: 2284_MODERN_MILLS/2025_Annual_filed2026-03-08.pdf
+  page: 23
+- period: FY2024
+  segment: Al Jumum
+  basis: geographic
+  revenue: 276.36
+  profit: null
+  unit: SAR m
+  source: 2284_MODERN_MILLS/2025_Annual_filed2026-03-08.pdf
+  page: 23
+- period: FY2024
+  segment: Al Jowf
+  basis: geographic
+  revenue: 100.34
+  profit: null
+  unit: SAR m
+  source: 2284_MODERN_MILLS/2025_Annual_filed2026-03-08.pdf
+  page: 23
+- period: FY2025
+  segment: Khamis Mushait
+  basis: geographic
+  revenue: 644.02
+  profit: null
+  unit: SAR m
+  source: 2284_MODERN_MILLS/2025_Annual_filed2026-03-08.pdf
+  page: 23
+- period: FY2025
+  segment: Al Jumum
+  basis: geographic
+  revenue: 270.87
+  profit: null
+  unit: SAR m
+  source: 2284_MODERN_MILLS/2025_Annual_filed2026-03-08.pdf
+  page: 23
+- period: FY2025
+  segment: Al Jowf
+  basis: geographic
+  revenue: 131.74
+  profit: null
+  unit: SAR m
+  source: 2284_MODERN_MILLS/2025_Annual_filed2026-03-08.pdf
+  page: 23
+- period: 9M2025
+  segment: Khamis Mushait
+  basis: geographic
+  revenue: 478.67
+  profit: null
+  unit: SAR m
+  source: 2284_MODERN_MILLS/2026_Q3_filed2026-11-01.pdf
+  page: 17
+- period: 9M2025
+  segment: Al Jumum
+  basis: geographic
+  revenue: 201.86
+  profit: null
+  unit: SAR m
+  source: 2284_MODERN_MILLS/2026_Q3_filed2026-11-01.pdf
+  page: 17
+- period: 9M2025
+  segment: Al Jowf
+  basis: geographic
+  revenue: 93.07
+  profit: null
+  unit: SAR m
+  source: 2284_MODERN_MILLS/2026_Q3_filed2026-11-01.pdf
+  page: 17
+- period: 9M2026
+  segment: Khamis Mushait
+  basis: geographic
+  revenue: 563.87
+  profit: null
+  unit: SAR m
+  source: 2284_MODERN_MILLS/2026_Q3_filed2026-11-01.pdf
+  page: 17
+- period: 9M2026
+  segment: Al Jumum
+  basis: geographic
+  revenue: 224.94
+  profit: null
+  unit: SAR m
+  source: 2284_MODERN_MILLS/2026_Q3_filed2026-11-01.pdf
+  page: 17
+- period: 9M2026
+  segment: Al Jowf
+  basis: geographic
+  revenue: 117.85
+  profit: null
+  unit: SAR m
+  source: 2284_MODERN_MILLS/2026_Q3_filed2026-11-01.pdf
+  page: 17
+revenue_drivers:
+- period: FY2022
+  driver: 'Revenue by type of goods (only year with a product split): flour 402.0, feed 399.9, bran 176.1 (FY2021: 279.2, 198.4, 77.5)'
+  value: 978.0
+  unit: SAR m
+  source: 2284_MODERN_MILLS/2022_Annual_filed2024-03-27.pdf
+  page: 50
+  quote: Flour 402,045,526 279,156,301
+- period: FY2023
+  driver: 'Revenue by customer type: corporate 834.1 (899.6), individuals 104.5 (78.4)'
+  value: 938.62
+  unit: SAR m
+  source: 2284_MODERN_MILLS/2023_Annual_filed2024-04-02.pdf
+  page: 42
+  quote: Corporate sector 834,083,145 899,589,181
+- period: FY2024
+  driver: 'Revenue by customer type on the FY2024 annual basis: corporate 893.2, individuals 107.1 (total 1,000.2)'
+  value: 1000.25
+  unit: SAR m
+  source: 2284_MODERN_MILLS/2024_Annual_filed2025-03-10.pdf
+  page: 40
+  quote: Corporate sector 893,178,419 834,083,145
+- period: FY2025
+  driver: 'Revenue by customer type: corporate 961.9 (906.8 re-presented), individuals 84.7 (108.1)'
+  value: 1046.62
+  unit: SAR m
+  source: 2284_MODERN_MILLS/2025_Annual_filed2026-03-08.pdf
+  page: 38
+  quote: Corporate sector 961,929,538 906,835,519
+- period: 9M2026
+  driver: 'Nine-month revenue by customer type: corporate 837.0 (712.8), individuals 69.7 (60.8)'
+  value: 906.66
+  unit: SAR m
+  source: 2284_MODERN_MILLS/2026_Q3_filed2026-11-01.pdf
+  page: 23
+  quote: Corporate sector 304,182,930 240,284,497 836,972,170 712,816,346
+- period: FY2025
+  driver: 'Freight and shipment costs in selling and distribution expenses: 44.9 (32.1); freight now presented as a selling cost, not a revenue
+    deduction'
+  value: 44.94
+  unit: SAR m
+  source: 2284_MODERN_MILLS/2025_Annual_filed2026-03-08.pdf
+  page: 39
+  quote: Freight and shipment 24.1 44,943,858 32,068,035
+- period: FY2025
+  driver: 'Regulated prices: GFSA sets the selling price only of flour in bags of 45kg and bulk'
+  value: null
+  unit: SAR m
+  source: 2284_MODERN_MILLS/2025_Annual_filed2026-03-08.pdf
+  page: 11
+  quote: only the flour products weighing 45 KG and bulk quantities are determined by the GFSA.
+- period: FY2025
+  driver: Subsidised wheat from GFSA at SAR 180 per tonne, unchanged since 2017 (same wording in the 2026 Q3 interim)
+  value: 180
+  unit: SAR per tonne
+  source: 2284_MODERN_MILLS/2025_Annual_filed2026-03-08.pdf
+  page: 11
+  quote: SR 180 per metric ton since 2017
+- period: FY2022-9M2026
+  driver: Volumes, capacity and product revenue after FY2022
+  status: not found
+  value: null
+  unit: count
+  source: 2284_MODERN_MILLS/2025_Annual_filed2026-03-08.pdf
+  page: 38
+  quote: ''
+  note: From FY2023 revenue is split only by customer type and region; no tonnes, prices or capacity are disclosed.
+one_offs:
+- period: FY2022
+  item: Fines and penalties, including a SAR 6.42m provision for a GFSA claim (customer approvals and sale quantities)
+  amount: 6.83
+  unit: SAR m
+  pnl_line: General and administrative expenses
+  recurring: false
+  source: 2284_MODERN_MILLS/2023_Annual_filed2024-04-02.pdf
+  page: 44
+  quote: Fines and penalties 26.2 (1,963,156) 6,831,283
+- period: FY2022
+  item: Write-off of intangible assets (in IMPAIR_CF, so already outside EBITDA)
+  amount: 3.99
+  unit: SAR m
+  pnl_line: not named (cash-flow add-back)
+  recurring: false
+  source: 2284_MODERN_MILLS/2022_Annual_filed2024-03-27.pdf
+  page: 10
+  quote: Write off of intangible assets 9.1 3,988,014
+- period: FY2023
+  item: Initial public offering costs (recoverable from shareholders, booked as a shareholder contribution)
+  amount: 7.27
+  unit: SAR m
+  pnl_line: General and administrative expenses
+  recurring: false
+  source: 2284_MODERN_MILLS/2023_Annual_filed2024-04-02.pdf
+  page: 44
+  quote: Initial public offering (IPO) costs 26.1 7,274,198 --
+- period: FY2023
+  item: 'Net reversal of fines and penalties: SAR 4.4m paid to GFSA and SAR 2.07m of the 2022 provision reversed'
+  amount: 1.96
+  unit: SAR m
+  pnl_line: General and administrative expenses (credit)
+  recurring: false
+  source: 2284_MODERN_MILLS/2023_Annual_filed2024-04-02.pdf
+  page: 44
+  quote: the Group paid an amount of SR 4.4 million on 12 December 2023 (corresponding 28 Jumada Al-Awal 1445H) to the GFSA
+- period: FY2024
+  item: GFSA penalty
+  amount: 3.0
+  unit: SAR m
+  pnl_line: General and administrative expenses
+  recurring: false
+  source: 2284_MODERN_MILLS/2024_Annual_filed2025-03-10.pdf
+  page: 39
+  quote: Other includes the penalty imposed by GFSA amounting to SR 3 million
+- period: FY2024
+  item: Initial public offering costs (listing on 27 Mar 2024)
+  amount: 0.75
+  unit: SAR m
+  pnl_line: General and administrative expenses
+  recurring: false
+  source: 2284_MODERN_MILLS/2025_Annual_filed2026-03-08.pdf
+  page: 40
+  quote: Initial public offering (IPO) costs -- 750,452
+- period: FY2024
+  item: Unamortised loan costs written off on refinancing with SNB (in finance costs, outside operating income)
+  amount: 8.89
+  unit: SAR m
+  pnl_line: Finance cost
+  recurring: false
+  source: 2284_MODERN_MILLS/2024_Annual_filed2025-03-10.pdf
+  page: 35
+  quote: unamortized loan transaction cost was charged to consolidated statement of profit or loss and other comprehensive income
+restatements:
+- period_restated: FY2021
+  item: Balance sheet at 31 Dec 2021 (total assets SAR 1,172.1m; borrowings SAR 692.3m; lease liabilities SAR 256.7m)
+  from: null
+  to: 1172.13
+  unit: SAR m
+  reason: 'Correction of errors in the FY2022 annual (note 36): spare parts moved to PP&E, GFSA lease modification, leasehold depreciation, merger
+    accounting; auditor emphasis of matter'
+  source: 2284_MODERN_MILLS/2022_Annual_filed2024-03-27.pdf
+  page: 67
+  quote: During the year 2022, the Group restated certain amounts and balances included in the prior periods
+- period_restated: FY2023
+  item: Net cash from operating activities
+  from: 235.75
+  to: 238.77
+  unit: SAR m
+  reason: 'Re-presented in the FY2024 annual cash-flow statement (image page 10): change in amounts due from related parties moved to financing;
+    finance costs paid shown within operating activities'
+  source: 2284_MODERN_MILLS/2024_Annual_filed2025-03-10.pdf
+  page: 13
+  quote: Corresponding figures have been rearranged and reclassified, wherever necessary, for the purpose of comparison.
+- period_restated: FY2024
+  item: Revenue (gross profit rises by the same SAR 14.7m)
+  from: 1000.25
+  to: 1014.98
+  unit: SAR m
+  reason: 'Re-presented in the FY2025 annual (note 24.1): freight and shipment costs moved from a deduction of revenue to selling and distribution
+    expenses'
+  source: 2284_MODERN_MILLS/2025_Annual_filed2026-03-08.pdf
+  page: 39
+  quote: reclassified from revenue from contracts with customers to selling and distribution expenses
+- period_restated: 9M2025
+  item: Revenue (gross profit rises by the same SAR 18.8m)
+  from: 754.85
+  to: 773.61
+  unit: SAR m
+  reason: Re-presented in the 2026 Q3 interim (note 12.1), same freight reclassification
+  source: 2284_MODERN_MILLS/2026_Q3_filed2026-11-01.pdf
+  page: 23
+  quote: The comparative figures have been adjusted accordingly to reflect this reclassification.
+significant_events:
+- date: '2024-03-27'
+  event: Listed on the Saudi Exchange main market (30% of shares offered by existing shareholders)
+  financial_effect: IPO costs of SAR 7.3m (FY2023) and SAR 0.75m (FY2024) charged to G&A and recovered from shareholders
+  source: 2284_MODERN_MILLS/2025_Annual_filed2026-03-08.pdf
+  page: 12
+  quote: Company was successfully listed on the Saudi Exchange on 27 March 2024
+- date: '2024-10-08'
+  event: Refinanced Alinma Bank loans of SAR 643m with SAR 751m of SNB Murabaha facilities repayable to 2038-2039; SAR 8.9m of unamortised costs
+    expensed
+  financial_effect: Finance cost fell from SAR 54.9m (FY2024) to SAR 33.1m (FY2025)
+  source: 2284_MODERN_MILLS/2024_Annual_filed2025-03-10.pdf
+  page: 35
+  quote: the Company entered into Murabaha financing agreements with Saudi National Bank (“SNB”) on more favourable terms
+- date: '2024'
+  event: Bought back shares held as treasury shares (SAR 39.3m including shares contributed by pre-listing shareholders) for employee programmes
+  financial_effect: Equity reduced by SAR 39.3m
+  source: 2284_MODERN_MILLS/2024_Annual_filed2025-03-10.pdf
+  page: 33
+  quote: Treasury shares (Note 31) 1 818,320 818,320
+- date: '2025-12-31'
+  event: New feed plant under construction at Al Jumum; capital commitments SAR 140m (SAR 108.9m at 30 Sep 2026); borrowing costs of SAR 8.7m
+    capitalised in FY2025
+  financial_effect: Capex SAR 139.6m in FY2025 and SAR 102.4m in 9M 2026
+  source: 2284_MODERN_MILLS/2025_Annual_filed2026-03-08.pdf
+  page: 28
+  quote: capital work in progress mainly relates to the construction of new feed plant which is under progress at Al-Jumum Branch
+audit_opinion:
+- period: FY2022
+  opinion: unmodified
+  emphasis_of_matter: Comparatives for 2021 and 2020 restated (note 36)
+  source: 2284_MODERN_MILLS/2022_Annual_filed2024-03-27.pdf
+  page: 4
+- period: FY2023
+  opinion: unmodified
+  emphasis_of_matter: null
+  source: 2284_MODERN_MILLS/2023_Annual_filed2024-04-02.pdf
+  page: 3
+- period: FY2024
+  opinion: unmodified
+  emphasis_of_matter: null
+  source: 2284_MODERN_MILLS/2024_Annual_filed2025-03-10.pdf
+  page: 3
+- period: FY2025
+  opinion: unmodified
+  emphasis_of_matter: null
+  source: 2284_MODERN_MILLS/2025_Annual_filed2026-03-08.pdf
+  page: 3
+kpis_in_filings:
+- period: FY2017-9M2026
+  kpi: Subsidised wheat purchase price from GFSA
+  value: 180
+  unit: SAR per tonne
+  source: 2284_MODERN_MILLS/2025_Annual_filed2026-03-08.pdf
+  page: 11
+- period: FY2025
+  kpi: Capital commitments on capital work in progress
+  value: 140
+  unit: SAR m
+  source: 2284_MODERN_MILLS/2025_Annual_filed2026-03-08.pdf
+  page: 28
+- period: 9M2026
+  kpi: Capital commitments on capital work in progress
+  value: 108.9
+  unit: SAR m
+  source: 2284_MODERN_MILLS/2026_Q3_filed2026-11-01.pdf
+  page: 20
+- period: FY2025
+  kpi: Borrowing costs capitalised
+  value: 8.7
+  unit: SAR m
+  source: 2284_MODERN_MILLS/2025_Annual_filed2026-03-08.pdf
+  page: 28
+- period: FY2024
+  kpi: Borrowing costs capitalised
+  value: 6.0
+  unit: SAR m
+  source: 2284_MODERN_MILLS/2024_Annual_filed2025-03-10.pdf
+  page: 29
+special_extractions:
+- item: 'No XBRL file for Modern Mills: every core figure for FY2021-9M2026 was read from the PDFs (115 override rows, stage A)'
+  source: 2284_MODERN_MILLS/2025_Annual_filed2026-03-08.pdf
+  page: 7
+  quote: ''
+  note: Primary statements of the FY2024 and FY2025 annuals and both Q3 interims are scanned images; totals were cross-checked and depreciation
+    and additions matched to the text notes.
+open_questions:
+- Revenue by product (flour, feed, bran) is disclosed only for FY2022, so mix changes after FY2022 cannot be shown.
+- Al Jowf revenue rose 31.3% in FY2025 and 26.6% in 9M 2026; the filings do not say whether new capacity or prices drove it.
+- Capital work in progress was SAR 46.9m at end-2025 after SAR 137.1m of PP&E additions in FY2025, so some projects (including the Al Jumum expansion)
+  were brought into use in 2025, but no capacity or start date is given.

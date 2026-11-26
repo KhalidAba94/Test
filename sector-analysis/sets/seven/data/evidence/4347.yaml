@@ -1,0 +1,138 @@
+# Evidence extracted from Bonyan REIT Fund filings (archive: SEVEN_REIT/4347_BONYAN_REIT). Facts only; page = physical PDF page (1-based).
+# Units: SAR (actuals) as presented. Audited statements: FY2023 (2023_Annual_filed2024-03-31.pdf), FY2024 (2024_Annual_filed2025-03-26.pdf),
+# FY2025 (2025_Annual_filed2026-03-31_t15-42-31.pdf). Fund annual reports and quarterly unitholder statements (fact sheets) are unaudited.
+# No interim financial statements are in the archive; 9M figures come from the quarterly unitholder statements.
+ticker: "4347"
+company: "Bonyan REIT Fund (managed by Saudi Fransi Capital)"
+
+perimeter_changes:
+  - event: "Disposal of the Citywalk residential building (Dubai): units sold in 2023, fully disposed in 2024"
+    type: disposal
+    date: "2023-2024"
+    consideration: "proceeds from sale of investment properties 212,840,368 (FY2023) and 63,629,233 (FY2024)"
+    revenue_contribution: null
+    profit_contribution: "capital gain 26,100,204 (FY2023) and 7,870,923 (FY2024), recorded in GAIN_DISP"
+    pro_forma_revenue: null
+    period: "FY2023-FY2024"
+    unit: "SAR"
+    source: "4347_BONYAN_REIT/2024_Annual_filed2025-03-26.pdf"
+    page: 28
+    quote: "This property has been fully disposed off during the year ended 31 December 2024."
+    note: "Proceeds: FY2023 statements p.10 and FY2024 statements p.10. Gains: FY2024 statements note 16 p.31. Revenue of the property is not disclosed in the statements; the FY2024 fund report gives its 2024 rent as 567,767 (p.4)."
+  - event: "Acquisition of 1991 Centre (Hittin, Riyadh)"
+    type: acquisition
+    date: "2024-05"
+    consideration: "part of payments for acquisition of investment properties 455,436,636 in FY2024 (not split by property)"
+    revenue_contribution: "2024 rent 1,932,911 per the FY2024 fund report (unaudited)"
+    profit_contribution: null
+    pro_forma_revenue: null
+    period: "FY2024"
+    unit: "SAR"
+    source: "4347_BONYAN_REIT/2024_Annual_filed2025-03-26.pdf"
+    page: 28
+    quote: "The 1991 Centre, a freehold property acquired by the Fund in May 2024 located in Hittin District in Riyadh"
+  - event: "Acquisition of Al Olaya Tower (Sahafa, Riyadh)"
+    type: acquisition
+    date: "2024-08"
+    consideration: "part of payments for acquisition of investment properties 455,436,636 in FY2024"
+    revenue_contribution: null
+    profit_contribution: null
+    pro_forma_revenue: null
+    period: "FY2024"
+    unit: "SAR"
+    source: "4347_BONYAN_REIT/2024_Annual_filed2025-03-26.pdf"
+    page: 28
+    quote: "The Al Olaya Tower, a freehold property acquired by the Fund in August 2024 located in Al- Sahafa District on Olaya Street in Riyadh"
+    note: "Not listed in the FY2024 fund report's 2024 rent table (p.4)."
+  - event: "Payments for acquisition of investment properties (cash flow)"
+    type: acquisition
+    date: "FY2024"
+    consideration: 455436636
+    revenue_contribution: null
+    profit_contribution: null
+    pro_forma_revenue: null
+    period: "FY2024"
+    unit: "SAR"
+    source: "4347_BONYAN_REIT/2024_Annual_filed2025-03-26.pdf"
+    page: 10
+    quote: "Payments for acquisition of investment properties 12 (455,436,636) (16,808,231)"
+  - event: "No acquisitions or disposals in 2025 or 9M 2026: thirteen properties at 30 Sep 2025 and at 30 Sep 2026"
+    type: acquisition
+    status: "not found"
+    period: "FY2025-9M2026"
+    source: "4347_BONYAN_REIT/2026_Q3_filed2026-11-04.pdf"
+    page: 2
+    quote: "There were no fundamental or non-fundamental changes that affected Fund’s function and operation during the quarter."
+    note: "FY2025 cash flow shows no proceeds from sale of investment properties and only 1,418,160 of property purchases (FY2025 statements p.9)."
+
+segments:
+  # Operating segments, 'Total income' by segment (includes the disposal gain in Residential in FY2023-FY2024) and net income by segment.
+  - {period: "FY2022", segment: "Commercial centres", basis: operating, revenue: 171711057, profit: 92431101, unit: "SAR", source: "4347_BONYAN_REIT/2023_Annual_filed2024-03-31.pdf", page: 37}
+  - {period: "FY2022", segment: "Residential", basis: operating, revenue: 30381871, profit: 20721797, unit: "SAR", source: "4347_BONYAN_REIT/2023_Annual_filed2024-03-31.pdf", page: 37}
+  - {period: "FY2022", segment: "Hospitality", basis: operating, revenue: 33339216, profit: 2765023, unit: "SAR", source: "4347_BONYAN_REIT/2023_Annual_filed2024-03-31.pdf", page: 37}
+  - {period: "FY2022", segment: "Office", basis: operating, revenue: 11592306, profit: 7510273, unit: "SAR", source: "4347_BONYAN_REIT/2023_Annual_filed2024-03-31.pdf", page: 37}
+  - {period: "FY2022", segment: "Total", basis: operating, revenue: 247217427, profit: 97579682, unit: "SAR", source: "4347_BONYAN_REIT/2023_Annual_filed2024-03-31.pdf", page: 37}
+  - {period: "FY2023", segment: "Commercial centres", basis: operating, revenue: 168863612, profit: 86161230, unit: "SAR", source: "4347_BONYAN_REIT/2024_Annual_filed2025-03-26.pdf", page: 39}
+  - {period: "FY2023", segment: "Residential", basis: operating, revenue: 50870538, profit: 33523803, unit: "SAR", source: "4347_BONYAN_REIT/2024_Annual_filed2025-03-26.pdf", page: 39}
+  - {period: "FY2023", segment: "Hospitality", basis: operating, revenue: 38931700, profit: 15476938, unit: "SAR", source: "4347_BONYAN_REIT/2024_Annual_filed2025-03-26.pdf", page: 39}
+  - {period: "FY2023", segment: "Office", basis: operating, revenue: 12103126, profit: 6607796, unit: "SAR", source: "4347_BONYAN_REIT/2024_Annual_filed2025-03-26.pdf", page: 39}
+  - {period: "FY2023", segment: "Total", basis: operating, revenue: 272372807, profit: 110901375, unit: "SAR", source: "4347_BONYAN_REIT/2024_Annual_filed2025-03-26.pdf", page: 39}
+  - {period: "FY2024", segment: "Commercial centres", basis: operating, revenue: 171494774, profit: 82144738, unit: "SAR", source: "4347_BONYAN_REIT/2025_Annual_filed2026-03-31_t15-42-31.pdf", page: 39}
+  - {period: "FY2024", segment: "Residential", basis: operating, revenue: 35670588, profit: 28193264, unit: "SAR", source: "4347_BONYAN_REIT/2025_Annual_filed2026-03-31_t15-42-31.pdf", page: 39}
+  - {period: "FY2024", segment: "Hospitality", basis: operating, revenue: 36354141, profit: 11326825, unit: "SAR", source: "4347_BONYAN_REIT/2025_Annual_filed2026-03-31_t15-42-31.pdf", page: 39}
+  - {period: "FY2024", segment: "Office", basis: operating, revenue: 15660618, profit: 6879920, unit: "SAR", source: "4347_BONYAN_REIT/2025_Annual_filed2026-03-31_t15-42-31.pdf", page: 39}
+  - {period: "FY2024", segment: "Total", basis: operating, revenue: 261455998, profit: 88436872, unit: "SAR", source: "4347_BONYAN_REIT/2025_Annual_filed2026-03-31_t15-42-31.pdf", page: 39}
+  - {period: "FY2025", segment: "Commercial centres", basis: operating, revenue: 179197516, profit: 87091269, unit: "SAR", source: "4347_BONYAN_REIT/2025_Annual_filed2026-03-31_t15-42-31.pdf", page: 38}
+  - {period: "FY2025", segment: "Residential", basis: operating, revenue: 22315195, profit: 12489453, unit: "SAR", source: "4347_BONYAN_REIT/2025_Annual_filed2026-03-31_t15-42-31.pdf", page: 38}
+  - {period: "FY2025", segment: "Hospitality", basis: operating, revenue: 29831587, profit: 5256586, unit: "SAR", source: "4347_BONYAN_REIT/2025_Annual_filed2026-03-31_t15-42-31.pdf", page: 38}
+  - {period: "FY2025", segment: "Office", basis: operating, revenue: 49286601, profit: 38583587, unit: "SAR", source: "4347_BONYAN_REIT/2025_Annual_filed2026-03-31_t15-42-31.pdf", page: 38}
+  - {period: "FY2025", segment: "Total", basis: operating, revenue: 288735285, profit: 103694624, unit: "SAR", source: "4347_BONYAN_REIT/2025_Annual_filed2026-03-31_t15-42-31.pdf", page: 38}
+
+revenue_drivers:
+  - {period: "FY2025", driver: "Lease rental income on investment properties excluding hotels", value: 241547724, unit: "SAR", source: "4347_BONYAN_REIT/2025_Annual_filed2026-03-31_t15-42-31.pdf", page: 30, quote: "Lease rental income on investment properties excluding hotels 241,547,724 191,401,896"}
+  - {period: "FY2025", driver: "Hotel rooms revenue (FY2024: 27,820,197)", value: 23761235, unit: "SAR", source: "4347_BONYAN_REIT/2025_Annual_filed2026-03-31_t15-42-31.pdf", page: 30, quote: "Rooms revenue 23,761,235 27,820,197"}
+  - {period: "FY2023", driver: "Lease rental income excluding hotels (FY2022: 201,750,436)", value: 191414918, unit: "SAR", source: "4347_BONYAN_REIT/2023_Annual_filed2024-03-31.pdf", page: 29, quote: "Lease rental income on investment properties excluding hotels 191,414,918 201,750,436"}
+  - {period: "FY2025", driver: "Office segment total income (FY2024: 15,660,618; FY2023: 12,103,126) after the 2024 office acquisitions", value: 49286601, unit: "SAR", source: "4347_BONYAN_REIT/2025_Annual_filed2026-03-31_t15-42-31.pdf", page: 38, quote: "Office: This includes rental of office space, which is related to Al Ghadeer, Al Sahafa, 1991 Centre & Al Olaya office buildings"}
+
+one_offs:
+  - {period: "FY2023", item: "Capital gain on disposal of investment properties (Citywalk, Dubai), inside 'Income from properties'", amount: 26100204, unit: "SAR", pnl_line: "Income from properties (note 16); excluded from REV and held in GAIN_DISP", recurring: false, source: "4347_BONYAN_REIT/2024_Annual_filed2025-03-26.pdf", page: 31, quote: "Capital gain on disposal of investment properties 7,870,923 26,100,204"}
+  - {period: "FY2024", item: "Capital gain on disposal of investment properties (Citywalk, Dubai)", amount: 7870923, unit: "SAR", pnl_line: "Income from properties (note 16); excluded from REV and held in GAIN_DISP", recurring: false, source: "4347_BONYAN_REIT/2025_Annual_filed2026-03-31_t15-42-31.pdf", page: 30, quote: "Capital gain on disposal of investment properties - 7,870,923"}
+  - {period: "FY2024", item: "Net gain on sale of property and equipment (cash-flow adjustment; immaterial, left inside FFO)", amount: 161032, unit: "SAR", pnl_line: "not separately shown on the income statement", recurring: false, source: "4347_BONYAN_REIT/2025_Annual_filed2026-03-31_t15-42-31.pdf", page: 9, quote: "Net gain on sale of property and equipment 11 - (161,032)"}
+  - {period: "FY2023", item: "Reversal of impairment on investment properties 12,689,278 and on property and equipment 8,380,574 (outside FFO via IMPAIR_CF)", amount: 21069852, unit: "SAR", pnl_line: "Expenses", recurring: false, source: "4347_BONYAN_REIT/2024_Annual_filed2025-03-26.pdf", page: 10, quote: "Reversal of impairment loss on investment properties 12 (4,753,220) (12,689,278)"}
+
+restatements:
+  - {period_restated: "FY2022", item: "Depreciation of investment properties (hotels reclassified to property and equipment)", from: 44217203, to: 40791435, unit: "SAR", reason: "Correction of error, IAS 40/IAS 16 (note 24)", source: "4347_BONYAN_REIT/2023_Annual_filed2024-03-31.pdf", page: 38, quote: "As a result, prior period financial statements have been restated by reclassifying the Hotels from Investment properties to property and equipment."}
+  - {period_restated: "FY2022", item: "Reversal of impairment on investment properties", from: 19292450, to: 16033347, unit: "SAR", reason: "Same reclassification (note 24); the combined real-estate total is unchanged", source: "4347_BONYAN_REIT/2023_Annual_filed2024-03-31.pdf", page: 38, quote: "Reversal of impairment loss on investment properties 19,292,450 (3,259,103) 16,033,347"}
+  - {period_restated: "FY2022", item: "Fair-value NAV (note 22, column labelled restated)", from: "11.0865 per unit (fund annual report)", to: 1755913627, unit: "SAR", reason: "Surplus now deducts accrued rental receivables and adds deferred rental income", source: "4347_BONYAN_REIT/2023_Annual_filed2024-03-31.pdf", page: 35, quote: "Equity based on fair valuation of investment properties and property and equipment 2,066,425,683 1,755,913,627"}
+  - {period_restated: "FY2023", item: "Fair-value NAV", from: 2066425683, to: 2063627265, unit: "SAR", reason: "Re-presented in FY2024 note 22 (surplus no longer adjusted for deferred rental income and receivables)", source: "4347_BONYAN_REIT/2024_Annual_filed2025-03-26.pdf", page: 37, quote: "Equity based on fair valuation of investment properties and property and equipment 2,162,393,024 2,063,627,265"}
+  - {period_restated: "FY2023-FY2024", item: "Cash and cash equivalents (Murabaha deposits of three months or less reclassified into cash equivalents)", from: "55,801,228 (FY2023); 70,383,023 (FY2024)", to: "86,484,907 (FY2023); 108,178,706 (FY2024)", unit: "SAR", reason: "FY2025 statements note 27 (comparative figures)", source: "4347_BONYAN_REIT/2025_Annual_filed2026-03-31_t15-42-31.pdf", page: 40, quote: "Murabaha deposits with original maturities of three months or less amounting to ⃀ 37,795,683 were previously presented separately under investing activities"}
+  - {period_restated: "FY2024", item: "Fair-value NAV", from: 2162393024, to: 2181549534, unit: "SAR", reason: "FY2025 note 23 excludes capital work in progress from the book value of property and equipment", source: "4347_BONYAN_REIT/2025_Annual_filed2026-03-31_t15-42-31.pdf", page: 37, quote: "Net Assets based on fair valuation of investment properties and property and equipment 2,144,552,657 2,181,549,534"}
+
+significant_events:
+  - {date: "2024", event: "Bank borrowings refinanced and increased: 850,001,303 drawn and 453,260,000 repaid; principal due April 2025 to March 2031", financial_effect: "borrowings 240.4m (FY2023) to 638.3m (FY2024)", source: "4347_BONYAN_REIT/2024_Annual_filed2025-03-26.pdf", page: 29, quote: "the principal is due for payment from April 2025 to March 2031."}
+  - {date: "2023", event: "Fund exercised its option to buy Al Rashid Mall - Abha (held under a 20-year usufruct) for SR 110 million; liability not recorded pending title transfer", financial_effect: "SR 110m not yet recognised", source: "4347_BONYAN_REIT/2024_Annual_filed2025-03-26.pdf", page: 28, quote: "The Fund exercised this right during 2023. The amount will be paid upon transfer of tittle deed which is underway"}
+  - {date: "2026-03", event: "Non-adjusting subsequent event: regional geopolitical tensions; effect cannot yet be estimated", financial_effect: "not quantified", source: "4347_BONYAN_REIT/2025_Annual_filed2026-03-31_t15-42-31.pdf", page: 40, quote: "the financial impact of these developments cannot currently be reliably estimated."}
+
+audit_opinion:
+  - {period: "FY2023", opinion: "unqualified", emphasis_of_matter: "none; key audit matter on investment property impairment", source: "4347_BONYAN_REIT/2023_Annual_filed2024-03-31.pdf", page: 3}
+  - {period: "FY2024", opinion: "unqualified", emphasis_of_matter: "none", source: "4347_BONYAN_REIT/2024_Annual_filed2025-03-26.pdf", page: 3}
+  - {period: "FY2025", opinion: "unqualified", emphasis_of_matter: "none (page is an image; read by OCR)", source: "4347_BONYAN_REIT/2025_Annual_filed2026-03-31_t15-42-31.pdf", page: 3}
+
+kpis_in_filings:
+  - {period: "FY2025", kpi: "Occupancy: commercial centres 94%, hospitality 48.7%, office 88.1%, residential 100%", value: null, unit: "%", source: "4347_BONYAN_REIT/2025_Annual_filed2026-03-31_t15-38-38.pdf", page: 4}
+  - {period: "FY2024", kpi: "Occupancy: commercial centres 91%, hospitality 52%, office 67%, residential 100%", value: null, unit: "%", source: "4347_BONYAN_REIT/2024_Annual_filed2025-06-23.pdf", page: 4}
+  - {period: "FY2023", kpi: "Occupancy: commercial centres 79%, hospitality 55%, residential 82.33%, office 100%", value: null, unit: "%", source: "4347_BONYAN_REIT/2023_Annual_filed2025-03-27.pdf", page: 5}
+  - {period: "FY2025", kpi: "Number of leasable mall units (FY2023: 852)", value: 860, unit: "count", source: "4347_BONYAN_REIT/2025_Annual_filed2026-03-31_t15-38-38.pdf", page: 4}
+  - {period: "FY2025", kpi: "Hotel room capacity", value: 274, unit: "count", source: "4347_BONYAN_REIT/2025_Annual_filed2026-03-31_t15-38-38.pdf", page: 4}
+  - {period: "9M2026", kpi: "Number of properties (twelve freehold, one leasehold)", value: 13, unit: "count", source: "4347_BONYAN_REIT/2026_Q3_filed2026-11-04.pdf", page: 2}
+  - {period: "9M2026", kpi: "Occupancy at 30 Sep 2026: Al Rashid Mall Abha 95%, Mega Mall Madinah 94%, Jazan mall 93%, Al Olaya Tower 76%, hotels 32-48%", value: null, unit: "%", source: "4347_BONYAN_REIT/2026_Q3_filed2026-11-04.pdf", page: 2}
+  - {period: "9M2026", kpi: "Year-to-date depreciation and amortisation (all assets)", value: 35321693, unit: "SAR", source: "4347_BONYAN_REIT/2026_Q3_filed2026-11-04.pdf", page: 3}
+
+special_extractions:
+  - {item: "9M fact-sheet figures used", note: "9M2025: book total assets 2,125,345,778, book NAV 1,382,249,809, fair value per unit 13.4376, borrowing ratio 29.97% (2025_Q3 p.1); 9M2026: NAV at fair value 2,217,820,789, total assets on a fair-value basis 2,955,711,992, borrowing ratio 21.59% (2026_Q3 p.2), book NAV per unit 8.34 (p.3). No revenue or net income is printed."}
+
+open_questions:
+  - "Other income of 9,362,002 in FY2024 (FY2023: 585,563; FY2025: 6,288,147) is not explained in the notes; it is kept inside FFO."
+  - "The basis of the fair-value NAV changed in each annual report (FY2023, FY2024 and FY2025 notes), so NAV_FV is not on one basis across years; FY2021 is only available per unit as first reported."
+  - "The SR 110m purchase of Al Rashid Mall - Abha (option exercised 2023) was still unrecorded at end-2024; the Q3 2026 statement still lists the mall as leasehold."
+  - "The 9M2026 impairment line reads '(further)/reversal' but is added into total expenses; we treat it as a charge."

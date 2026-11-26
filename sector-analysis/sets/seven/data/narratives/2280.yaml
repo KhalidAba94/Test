@@ -1,0 +1,182 @@
+ticker: '2280'
+headline: Revenue grew every year, from SAR 18,722m (FY2022) to SAR 22,065m (FY2025), a 5.6% annual rate, and attributable profit rose faster (11.8% a year) to SAR 2,456m; in 9M 2026
+  revenue rose 9.7% but attributable profit was flat (-0.3%) as margins narrowed and capex of SAR 4,385m in FY2025 cut free cash flow.
+lfl_basis:
+  definition_used: 'Standard bridge on IFRS revenue. Almarai made one material acquisition in the window: Pure Beverages Industry Co. (bottled water) from 31 July 2025, whose revenue
+    is not disclosed, so organic growth for FY2025/FY2024 and 9M2026/9M2025 is not determinable. FY2023 and FY2024 had no business combinations. About 13% of revenue is earned outside
+    the GCC (Egypt and Jordan through IDJ, exports, arable farms) without constant-currency figures, so the FX effect is not determinable in any year; no entity applies hyperinflation
+    accounting. No volumes, prices or like-for-like sales are disclosed, so new-capacity and like-for-like growth are not determinable.'
+  perimeter_changes:
+  - event: Bakemart (UAE, Bahrain frozen bakery) acquired
+    date: '2022-01-12'
+    effect: in both FY2022 and FY2023; no bridge effect
+    source: 2280_ALMARAI/2022_Annual_filed2023-01-22.pdf p.17
+  - event: Warehouse facilities bought for SAR 187.9m (asset acquisition, not a business)
+    date: '2024'
+    effect: no acquired revenue
+    source: 2280_ALMARAI/2024_Annual_filed2025-01-20.pdf p.15
+  - event: Hammoudeh Food Industries (Jordan) purchase for SAR 263m cancelled
+    date: '2025-03-17'
+    effect: none
+    source: 2280_ALMARAI/2025_Annual_filed2026-01-20.pdf p.16
+  - event: 49% associate Maria Fondomonte (Romania) sold
+    date: '2025-04-30'
+    effect: equity-accounted; no revenue effect; gain SAR 75.4m
+    source: 2280_ALMARAI/2025_Annual_filed2026-01-20.pdf p.39, p.48
+  - event: Pure Beverages Industry Co. acquired for SAR 1,012m (goodwill SAR 328m)
+    date: '2025-07-31'
+    effect: revenue contribution not disclosed; perimeter effect not determinable for FY2025/FY2024 and 9M2026/9M2025
+    source: 2280_ALMARAI/2025_Annual_filed2026-01-20.pdf p.15, p.39-40
+  capacity_changes:
+  - event: Capex programme (capex SAR 2,530m FY2023 to SAR 4,385m FY2025); capital commitments SAR 4.4bn at end-2024 and SAR 2.6bn at end-2025, mainly poultry expansion
+    date: 2023 to 2026
+    effect: revenue from new capacity not disclosed
+    source: 2280_ALMARAI/2025_Annual_filed2026-01-20.pdf p.51; 2280_ALMARAI/2024_Annual_filed2025-01-20.pdf p.54
+  fx_exposure: Saudi Arabia was 66.1% of FY2025 third-party revenue and other GCC 20.6% (pegged currencies); Other Countries 13.3% (Egyptian pound and Jordanian dinar businesses, exports
+    and arable farms). No constant-currency disclosure.
+  price_volume_support: 'Not determinable: revenue is given by segment and region only, with no volumes, prices or outlet counts.'
+  confidence: Low (organic and like-for-like growth not determinable; perimeter nil with High confidence for FY2023 and FY2024)
+price_volume:
+- period: 9M 2026 vs 9M 2025
+  text: Revenue rose SAR 1,608m (9.7%). By segment (third-party revenue, as re-presented in 2026 Q3), Dairy and Juice rose 6.4% (SAR 11,189m to 11,906m), Bakery 8.4% (SAR 2,030m to 2,201m),
+    Protein 12.0% (SAR 3,017m to 3,380m) and Other Activities 95.9% (SAR 372m to 729m), the last including bottled water from Pure Beverages for nine months against two. By region, Saudi
+    Arabia rose 8.7% and Other Countries 20.9%. Prices and volumes are not disclosed, so the split is not determinable.
+  basis: disclosed (segment and regional revenue); price/volume split not determinable
+  confidence: High for the amounts; split not determinable
+  source: 2280_ALMARAI/2026_Q3_filed2026-10-05.pdf p.15-16
+  refs:
+  - 2280-9M2026-REV
+  - 2280-9M2025-REV
+- period: FY2025 vs FY2024
+  text: Dairy and Juice third-party revenue rose 4.5% (SAR 14,007m to 14,633m), Bakery 4.8%, Poultry 3.5% and Other Activities 38.6% (SAR 516m to 715m, including water from 31 July 2025).
+    Saudi Arabia rose 4.8%, other GCC 6.2% and Other Countries 5.2%. No volumes or prices are disclosed.
+  basis: disclosed (segment and regional revenue); split not determinable
+  confidence: High for the amounts; split not determinable
+  source: 2280_ALMARAI/2025_Annual_filed2026-01-20.pdf p.50
+  refs:
+  - 2280-FY2025-REV
+  - 2280-FY2024-REV
+profit_and_margin:
+  drivers:
+  - period: FY2023
+    driver: Revenue +4.6% and attributable profit +16.4%. Poultry revenue rose 16.8% (SAR 3,013m to 3,518m) and its profit from SAR 302m to 430m; Dairy and Juice revenue rose 3.2%. Gross
+      margin rose to 30.9% (30.0%). Other expenses, net fell to SAR 64.5m from SAR 153.4m, which had included the SAR 82.9m impairment of the Romanian associate; finance cost, net rose
+      to SAR 527m (SAR 428m). We calculate an EBITDA margin of 26.3% and a net margin of 10.5%.
+    source: 2280_ALMARAI/2024_Annual_filed2025-01-20.pdf p.9, p.53; 2280_ALMARAI/2023_Annual_filed2024-01-21.pdf p.9, p.52
+    refs:
+    - 2280-FY2023-REV
+    - 2280-FY2023-NI_ATTR
+    - 2280-FY2023-GP
+    - 2280-FY2023-EBITDA_C
+  - period: FY2024
+    driver: Revenue +7.2% and attributable profit +12.9%. Dairy and Juice revenue rose 8.6% (SAR 12,903m to 14,007m) and Poultry 7.8%; gross margin reached 31.8%. Impairment of receivables
+      rose to SAR 103.5m (SAR 34.2m). Operating cash flow rose 34.5% to SAR 6,028m as inventories fell SAR 348m. We calculate an EBITDA margin of 25.9% and ROE of 12.6%.
+    source: 2280_ALMARAI/2025_Annual_filed2026-01-20.pdf p.10, p.14, p.50
+    refs:
+    - 2280-FY2024-REV
+    - 2280-FY2024-NI_ATTR
+    - 2280-FY2024-CFO
+    - 2280-FY2024-EBITDA_C
+  - period: FY2025
+    driver: Revenue +5.2% and attributable profit +6.2%. Gross margin eased to 31.2% and selling and distribution costs rose 7.9% (SAR 2,994m to 3,231m), so our operating income grew
+      only 2.2%. Lower finance cost, net (SAR 463m vs 530m) and a SAR 75.4m gain on selling the Romanian associate supported profit. We calculate an EBITDA margin of 25.2% and a net
+      margin of 11.1%.
+    source: 2280_ALMARAI/2025_Annual_filed2026-01-20.pdf p.10, p.48-50
+    refs:
+    - 2280-FY2025-REV
+    - 2280-FY2025-NI_ATTR
+    - 2280-FY2025-OPINC
+    - 2280-FY2025-GP
+  - period: FY2022-FY2025
+    driver: Capex rose from SAR 1,334m (FY2022) to SAR 4,385m (FY2025), so free cash flow fell from SAR 2,496m to SAR 1,078m and borrowings (incl. overdrafts) rose to SAR 12,489m; we
+      calculate net debt at 2.25x EBITDA at end-2025. Capex here excludes additions to biological assets (SAR 1,042m in FY2025).
+    source: 2280_ALMARAI/2025_Annual_filed2026-01-20.pdf p.14
+    refs:
+    - 2280-FY2022-CAPEX
+    - 2280-FY2025-CAPEX
+    - 2280-FY2025-FCF
+    - 2280-FY2025-DEBT
+    - 2280-FY2025-NET_DEBT
+  - period: 9M2026
+    driver: Revenue +9.7% but attributable profit -0.3%. Gross margin fell to 30.3% (31.5%); selling and distribution costs rose 7.6%, other expenses, net were SAR 87.4m (SAR 29.8m,
+      which included the SAR 43.6m associate gain) and finance cost, net rose to SAR 379m (SAR 343m). We calculate an EBITDA margin of 24.1% (25.6%) and a net margin of 10.9% (12.0%).
+      Operating cash flow fell 9.7% as receivables rose SAR 1,486m.
+    source: 2280_ALMARAI/2026_Q3_filed2026-10-05.pdf p.6, p.9
+    refs:
+    - 2280-9M2026-REV
+    - 2280-9M2026-NI_ATTR
+    - 2280-9M2026-GP
+    - 2280-9M2026-CFO
+    - 2280-9M2025-NI_ATTR
+  one_offs:
+  - item: Impairment of the 49% associate Maria Fondomonte (Romania)
+    period: FY2022
+    amount_sar_m: -82.9
+    line: Other Expenses, net
+    source: 2280_ALMARAI/2023_Annual_filed2024-01-21.pdf p.52
+    tax_nci: 'Impairment: outside our EBITDA already; tax/zakat effect not disclosed: not determinable, profit kept as reported'
+  - item: Gain on disposal of the associate stake (net of recovery costs)
+    period: 9M2025
+    amount_sar_m: 43.6
+    line: Other Expenses, net
+    source: 2280_ALMARAI/2025_Q3_filed2025-10-05.pdf p.13
+    tax_nci: 'Zakat effect not disclosed; minority share nil in substance but not stated: not determinable, profit kept as reported'
+  - item: Gain on disposal of investment in associate
+    period: FY2025
+    amount_sar_m: 75.4
+    line: Other Expenses, net
+    source: 2280_ALMARAI/2025_Annual_filed2026-01-20.pdf p.48
+    tax_nci: 'Zakat effect not disclosed; minority share not stated: not determinable, profit kept as reported'
+developments:
+- date: '2022-01-12'
+  category: M&A
+  text: Completed the purchase of Bakemart (frozen bakery, UAE and Bahrain) for SAR 68.6m.
+  source: 2280_ALMARAI/2022_Annual_filed2023-01-22.pdf p.17, p.15
+- date: '2023-07-25'
+  category: financing
+  text: Issued a USD 750m international sukuk (Series II) at 5.2%.
+  source: 2280_ALMARAI/2025_Annual_filed2026-01-20.pdf p.44
+- date: '2024'
+  category: capacity
+  text: Bought warehouse facilities for SAR 187.9m to expand frozen-products distribution (asset acquisition).
+  source: 2280_ALMARAI/2024_Annual_filed2025-01-20.pdf p.15
+- date: '2025-04-30'
+  category: M&A
+  text: Sold its 49% stake in Maria Fondomonte (Romania) under a settlement, recovering SAR 99.2m; gain SAR 75.4m.
+  source: 2280_ALMARAI/2025_Annual_filed2026-01-20.pdf p.39
+- date: '2025-07-31'
+  category: M&A
+  text: Acquired Pure Beverages Industry Co. (Oska and Ival bottled water) for SAR 1,012m, entering bottled water.
+  source: 2280_ALMARAI/2025_Annual_filed2026-01-20.pdf p.15, p.39-40
+- date: '2025-09-24'
+  category: financing
+  text: Issued a USD 500m international sukuk (Series III) at 4.5%.
+  source: 2280_ALMARAI/2025_Annual_filed2026-01-20.pdf p.44
+- date: 2026-Q1
+  category: strategy
+  text: 'Re-organised segments: poultry, seafood and value-added meat now reported as Protein.'
+  source: 2280_ALMARAI/2026_Q3_filed2026-10-05.pdf p.16
+what_it_means:
+  improved: Revenue grew 5.6% a year from FY2022 to FY2025 and attributable profit 11.8% a year, with the net margin up from 9.4% to 11.1% and ROE from 10.7% to 12.5%.
+  weakened: Capex more than tripled to SAR 4,385m, free cash flow fell to SAR 1,078m in FY2025 and borrowings rose to SAR 14,018m by 30 Sep 2026; in 9M 2026 the EBITDA margin slipped
+    to 24.1% from 25.6%.
+  why: Growth came from all four segments, led by poultry (revenue +16.8% in FY2023) and dairy and juice (+8.6% in FY2024); the company does not split this into price and volume. Profit
+    growth slowed in FY2025 and stopped in 9M 2026 as gross margin and distribution costs moved against it.
+  uncertain: How much of FY2025 and 9M 2026 growth came from the Pure Beverages acquisition is not disclosed, and the effect of the Egyptian pound on the 13% of revenue earned outside
+    the GCC cannot be measured.
+confidence_overall: Medium
+data_notes:
+- CASH corrected in stage A in every period to the balance-sheet 'Cash and Cash Equivalents' (the XBRL value was a sub-line of the cash note); e.g. FY2025 SAR 523.0m (was 464.8m).
+- DEBT includes bank overdrafts (IDJ Egypt and Jordan facilities; FY2025 SAR 16.9m, FY2022 SAR 87.1m) in addition to loans and borrowings (stage A override).
+- D&A for EBITDA includes depreciation of right-of-use assets and of biological assets (dairy herd and poultry flock carried at cost less depreciation; FY2025 SAR 635.3m). FY2022 D&A
+  was corrected to include biological-asset depreciation (SAR 480.5m) omitted by XBRL.
+- 'IMPAIR_CF: the XBRL value was the fair-value change of crops (a remeasurement, not an impairment); set to nil in FY2023-9M2026, and FY2022 holds the SAR 82.9m associate impairment
+  that sits inside the Other Expenses, net add-back.'
+- CAPEX = additions to PP&E and intangibles; it excludes additions to biological assets (FY2025 SAR 1,042m, FY2024 SAR 1,073m), so FCF on this basis is higher than cash after herd and
+  flock investment. FY2024 capex includes the SAR 187.9m warehouse asset acquisition.
+- The income statement shows only 'Finance Cost, net'. FIN_COST and FIN_INC are split from note 31 for full years; the interims give no split, so the 9M figures are XBRL values that
+  agree with the net line. Our operating income equals the printed Operating Profit.
+- FY2022 operating cash flow uses the FY2023 annual comparative (SAR 3,829.6m, R) vs SAR 3,829.3m first reported (dividend from equity investment moved into operating activities).
+- 9M2025 segment revenue was re-presented in the 2026 Q3 interim for the new Protein segment (seafood and value-added meat moved out of Other Activities).
+- Primary statements are scanned images in the FY2023 and FY2025 annuals and the 2025 Q3 and 2026 Q3 interims; values were read visually and checked by OCR.
+- EBITDA excluding one-offs removes the associate disposal gains (9M2025 SAR 43.6m, FY2025 SAR 75.4m) once the dataset is rebuilt with this one-offs file.

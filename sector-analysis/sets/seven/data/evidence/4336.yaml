@@ -1,0 +1,168 @@
+# Evidence extracted from Mulkia Gulf Real Estate REIT Fund filings (archive: SEVEN_REIT/4336_MULKIA_REIT). Facts only; page = physical PDF page (1-based).
+# Units: SAR (consolidated statements, amounts in SAR). Auditor's report pages (pp.3-7/8) are scanned images; statements and notes are text.
+# No FY2022 annual and no interim financial statements in the archive: 9M figures come from the quarterly unitholder statements, which give
+# quarterly rental income, quarterly expenses and fair-value total assets and NAV only (no profit, no book balance sheet).
+ticker: "4336"
+company: "Mulkia Gulf Real Estate REIT Fund (managed by Mulkia Investment Company)"
+
+perimeter_changes:
+  - event: "Aljada Complex (Radisson Blu hotel, villas, showrooms, offices; Riyadh) acquired with its hotel operator Aljada Hotel Company; investment property additions SAR 349.4m in 2022"
+    type: acquisition
+    date: "2022-02"
+    consideration: 349355054
+    revenue_contribution: null
+    profit_contribution: null
+    pro_forma_revenue: null
+    period: "FY2022"
+    unit: "SAR"
+    source: "4336_MULKIA_REIT/2023_Annual_filed2024-04-01.pdf"
+    page: 13
+    quote: "During the month of February 2022, the Fund acquired Aljada Hotel Company"
+    note: "Revenue for the months not owned in 2022 not disclosed; hotel segment revenue SAR 25.8m in FY2022 and SAR 36.3m in FY2023 (p.45-46)."
+  - event: "Second phase of the Aljada acquisition settled in 2023 through the capital increase: 3,556,911 units in kind at SAR 6.68 (SAR 23.8m) plus cash from the unit offering (payable of SAR 121.9m at end-2022)"
+    type: acquisition
+    date: "2023"
+    consideration: 121893507
+    revenue_contribution: null
+    profit_contribution: null
+    pro_forma_revenue: null
+    period: "FY2023"
+    unit: "SAR"
+    source: "4336_MULKIA_REIT/2023_Annual_filed2024-04-01.pdf"
+    page: 33
+    quote: "During the year 2023, the second phase of the acquisition of Aljada complex was paid, and this was done by"
+    note: "Not a new property: the Aljada complex was already consolidated from 2022."
+  - event: "Al-Maather (Malathak Tower 2) residential and commercial tower, Riyadh, acquired for SAR 200m; ownership transfer completed 24 Jul 2024"
+    type: acquisition
+    date: "2024-07-24"
+    consideration: 200000000
+    revenue_contribution: null
+    profit_contribution: null
+    pro_forma_revenue: null
+    period: "FY2024"
+    unit: "SAR"
+    source: "4336_MULKIA_REIT/2024_Annual_filed2025-04-03.pdf"
+    page: 18
+    quote: "On July 24, 2024, would like to announce finalizing the Process of ownership transfer for the Al-Mathar residential and commercial"
+    note: "FY2024 revenue contribution not disclosed. The 2025 fund report gives its 2025 IFRS revenue as SAR 20,000,000 (p.9)."
+  - event: "Al Yasmin residential building sold on 30 Jan 2025 for SAR 22.5m, gain SAR 4.9m (excluded from revenue and from FFO)"
+    type: disposal
+    date: "2025-01-30"
+    consideration: 22500004
+    revenue_contribution: null
+    profit_contribution: 4935587
+    pro_forma_revenue: null
+    period: "FY2025"
+    unit: "SAR"
+    source: "4336_MULKIA_REIT/2025_Annual_filed2026-03-31_t16-55-39.pdf"
+    page: 33
+    quote: "During 2025, the Group sold the Al Yasmin building for SAR 22,500,004, realizing a profit of SAR 4,935,587"
+    note: "Annual rent SAR 1,300,000 in the 2024 fund report (p.9); January 2025 revenue not disclosed."
+  - event: "Commercial land in Al Faisaliah, Dammam (11,138 sq m) bought in Q3 2025 for SAR 33.4m to support the expansion of West Avenue Mall; no revenue"
+    type: acquisition
+    date: "2025-Q3"
+    consideration: 33414330
+    revenue_contribution: 0
+    profit_contribution: null
+    pro_forma_revenue: null
+    period: "FY2025"
+    unit: "SAR"
+    source: "4336_MULKIA_REIT/2025_Q3_filed2025-10-14.pdf"
+    page: 8
+    quote: "SAR 33,414,330, excluding the Real Estate"
+  - event: "Board recommended selling part of the Al-Taqnia complex (halls 24 and 25), Al-Jadah property and the hotel apartment building"
+    type: disposal
+    date: "2025-09-18"
+    consideration: null
+    revenue_contribution: null
+    profit_contribution: null
+    pro_forma_revenue: null
+    period: "FY2025"
+    unit: "SAR"
+    source: "4336_MULKIA_REIT/2025_Annual_filed2026-03-31_t16-55-39.pdf"
+    page: 49
+    quote: "On 18 September 2025, the Fund’s Board of Directors recommended the sale of part of the commercial section (Halls"
+    note: "Not completed by 30 Sep 2026 per the Q3 2026 statement (properties still listed)."
+
+segments:
+  - {period: "FY2022", segment: "Rent", basis: operating, revenue: 70072132, profit: -7705141, unit: "SAR", source: "4336_MULKIA_REIT/2023_Annual_filed2024-04-01.pdf", page: 45}
+  - {period: "FY2022", segment: "Hotel", basis: operating, revenue: 25942831, profit: 7599099, unit: "SAR", source: "4336_MULKIA_REIT/2023_Annual_filed2024-04-01.pdf", page: 45}
+  - {period: "FY2023", segment: "Rent", basis: operating, revenue: 78471092, profit: -25328614, unit: "SAR", source: "4336_MULKIA_REIT/2023_Annual_filed2024-04-01.pdf", page: 44}
+  - {period: "FY2023", segment: "Hotel", basis: operating, revenue: 36292721, profit: 13522008, unit: "SAR", source: "4336_MULKIA_REIT/2023_Annual_filed2024-04-01.pdf", page: 44}
+  - {period: "FY2024", segment: "Rent", basis: operating, revenue: 79200156, profit: 1601101, unit: "SAR", source: "4336_MULKIA_REIT/2025_Annual_filed2026-03-31_t16-55-39.pdf", page: 47}
+  - {period: "FY2024", segment: "Hotel", basis: operating, revenue: 40770414, profit: 13537399, unit: "SAR", source: "4336_MULKIA_REIT/2025_Annual_filed2026-03-31_t16-55-39.pdf", page: 47}
+  - {period: "FY2025", segment: "Rent (incl. capital gain 4,935,587)", basis: operating, revenue: 95057235, profit: -38514408, unit: "SAR", source: "4336_MULKIA_REIT/2025_Annual_filed2026-03-31_t16-55-39.pdf", page: 46}
+  - {period: "FY2025", segment: "Hotel", basis: operating, revenue: 35195025, profit: 10152431, unit: "SAR", source: "4336_MULKIA_REIT/2025_Annual_filed2026-03-31_t16-55-39.pdf", page: 46}
+
+revenue_drivers:
+  - {period: "FY2022", driver: "Investment property rental income 70,072,132; hotel operation revenues 25,775,910", value: 95848042, unit: "SAR", source: "4336_MULKIA_REIT/2023_Annual_filed2024-04-01.pdf", page: 35, quote: "hotel operation Revenues 36,292,721 25,775,910"}
+  - {period: "FY2023", driver: "Investment property rental income 77,177,266; hotel operation revenues 36,292,721", value: 113469987, unit: "SAR", source: "4336_MULKIA_REIT/2024_Annual_filed2025-03-27.pdf", page: 36, quote: "Investment property rental income 78,635,053 77,177,266"}
+  - {period: "FY2025", driver: "Rental income 89,337,176 (FY2024: 78,635,053); hotel operating revenue 35,105,878 (40,707,155)", value: 124443054, unit: "SAR", source: "4336_MULKIA_REIT/2025_Annual_filed2026-03-31_t16-55-39.pdf", page: 10, quote: "Hotel operating revenue 35,105,878 40,707,155"}
+  - {period: "FY2025", driver: "Property revenues for 2025 (IFRS, fund report): Al-Maather SAR 20.0m, Aljada SAR 23.9m, West Avenue SAR 15.4m, Elite Mall SAR 12.5m, Vivienda SAR 12.1m, Teqnia SAR 8.9m, Dinar SAR 5.4m, hotel apartments SAR 3.8m", value: 20000000, unit: "SAR", source: "4336_MULKIA_REIT/2025_Annual_filed2026-03-31_t16-59-15.pdf", page: 9, quote: "* The revenues of properties for 2025 according to IFRS."}
+  - {period: "FY2025", driver: "Al Sheraa building A (Jeddah, restaurants) leased from 6 Mar 2025 after completion; 2025 revenue SAR 650,000 per the 2025 fund report", value: 650000, unit: "SAR", source: "4336_MULKIA_REIT/2024_Annual_filed2025-04-03.pdf", page: 9, quote: "Building A Al Sheraa Property was rented on March 6, 2025"}
+
+one_offs:
+  - {period: "FY2022", item: "Dealing fees to the fund manager (up to 1% of acquisition or sale value; Aljada acquisition year)", amount: -2131065, unit: "SAR", pnl_line: "Dealing fees", recurring: false, source: "4336_MULKIA_REIT/2023_Annual_filed2024-04-01.pdf", page: 9, quote: "Dealing fees - (2,131,065)"}
+  - {period: "FY2022", item: "Finance structuring fees (up to 1% of bank facilities drawn)", amount: -2290895, unit: "SAR", pnl_line: "Finance structure fees", recurring: false, source: "4336_MULKIA_REIT/2023_Annual_filed2024-04-01.pdf", page: 9, quote: "Finance structure fees - (2,290,895)"}
+  - {period: "FY2024", item: "Dealing fees (Al-Maather acquisition year)", amount: -2262500, unit: "SAR", pnl_line: "Dealing fees", recurring: false, source: "4336_MULKIA_REIT/2025_Annual_filed2026-03-31_t16-55-39.pdf", page: 10, quote: "Dealing fees )592,893( )2,262,500("}
+  - {period: "FY2024", item: "Finance structuring fees (facility raised to SAR 750m; SAR 215m drawn)", amount: -2432188, unit: "SAR", pnl_line: "Finance structure fees", recurring: false, source: "4336_MULKIA_REIT/2025_Annual_filed2026-03-31_t16-55-39.pdf", page: 10, quote: "Finance structure fees )352,102( )2,432,188("}
+  - {period: "FY2025", item: "Capital gain on sale of Al Yasmin property (inside 'Total revenues'; excluded from REV and deducted in FFO)", amount: 4935587, unit: "SAR", pnl_line: "Capital Gains from the sale of investment properties", recurring: false, source: "4336_MULKIA_REIT/2025_Annual_filed2026-03-31_t16-55-39.pdf", page: 33, quote: "During 2025, the Group sold the Al Yasmin building for SAR 22,500,004, realizing a profit of SAR 4,935,587"}
+  - {period: "FY2025", item: "Impairment of investment properties (excluded from FFO)", amount: -40716809, unit: "SAR", pnl_line: "(Impairment) / impairment reversal of investment properties", recurring: false, source: "4336_MULKIA_REIT/2025_Annual_filed2026-03-31_t16-55-39.pdf", page: 12, quote: "Impairment / (Reversal) of investment properties 9 40,716,809 )14,267,154("}
+  - {period: "FY2024", item: "Reversal of impairment of investment properties (excluded from FFO)", amount: 14267154, unit: "SAR", pnl_line: "Reversal /(Impairment) of investment properties", recurring: false, source: "4336_MULKIA_REIT/2024_Annual_filed2025-03-27.pdf", page: 9, quote: "Reversal /(Impairment) of investment properties 10 14,267,154 (9,135,331)"}
+  - {period: "FY2023", item: "Provision for expected credit losses (ordinary operating provision, kept in FFO)", amount: -15318819, unit: "SAR", pnl_line: "Provision for expected credit losses", recurring: true, source: "4336_MULKIA_REIT/2023_Annual_filed2024-04-01.pdf", page: 9, quote: "Provision for expected credit losses 7 )15,318,819( (8,411,030)"}
+
+restatements:
+  - period_restated: "FY2024"
+    item: "Hotel part of a dual-use property moved from investment properties to property and equipment (196,993,569); depreciation split 16,778,350 + 3,894,994; rental and hotel revenue shown separately"
+    from: 1456346294
+    to: 1259352725
+    unit: "SAR"
+    reason: "Correction of a prior-period error under IAS 16/IAS 40; no effect on net profit, total assets or net assets (note 28)"
+    source: "4336_MULKIA_REIT/2025_Annual_filed2026-03-31_t16-55-39.pdf"
+    page: 49
+    quote: "This reclassification represents a correction of a prior period error,"
+
+significant_events:
+  - date: "2023"
+    event: "Capital increase: 35,657,343 new units at SAR 6.68 (in kind and cash), total SAR 238.2m; units 68.1m to 103.8m"
+    financial_effect: "Net assets SAR 600m to SAR 791m; SAR 148.5m of bank financing repaid in 2023 (cash flow p.12)"
+    source: "4336_MULKIA_REIT/2023_Annual_filed2024-04-01.pdf"
+    page: 13
+    quote: "During 2023, additional units were issued for in-kind and cash subscriptions, as the number of issued units reached"
+  - date: "2024"
+    event: "Bank facility limit raised to SAR 750m from SAR 600m"
+    financial_effect: "SAR 215m drawn in 2024; long-term financing SAR 477m to SAR 698m"
+    source: "4336_MULKIA_REIT/2024_Annual_filed2025-04-03.pdf"
+    page: 18
+    quote: "Raising the limit of bank facilities to 750 million Saudi riyals instead of 600 million Saudi riyals."
+  - date: "2026-01-29"
+    event: "Dividend of SAR 8,301,280 announced for Q4 2025 (SAR 0.08 per unit each quarter since Q1 2024)"
+    financial_effect: "9M 2026 distributions declared SAR 24.9m, as in 9M 2025"
+    source: "4336_MULKIA_REIT/2025_Annual_filed2026-03-31_t16-55-39.pdf"
+    page: 49
+    quote: "On 29 January 2026, the Fund Manager announced a cash dividend distribution to the unitholders of Mulkia Gulf Real"
+
+audit_opinion:
+  - {period: "FY2023", opinion: "unmodified (PKF Al Bassam)", emphasis_of_matter: "none", source: "4336_MULKIA_REIT/2023_Annual_filed2024-04-01.pdf", page: 3}
+  - {period: "FY2024", opinion: "unmodified", emphasis_of_matter: "none", source: "4336_MULKIA_REIT/2024_Annual_filed2025-03-27.pdf", page: 3}
+  - {period: "FY2025", opinion: "unmodified (PKF Al Bassam)", emphasis_of_matter: "none", source: "4336_MULKIA_REIT/2025_Annual_filed2026-03-31_t16-55-39.pdf", page: 3}
+
+kpis_in_filings:
+  - {period: "FY2024", kpi: "Occupancy 31 Dec 2024: West Avenue Mall 87.84%, The Elite 100%, Dinar 58.01%, Aljada commercial/offices 89.10%, Al Shiraa 50%", value: null, unit: "%", source: "4336_MULKIA_REIT/2024_Q4_filed2025-01-14.pdf", page: 7}
+  - {period: "9M2025", kpi: "Occupancy 30 Sep 2025: West Avenue Mall 84.73%, The Elite 74.07%, Dinar 61.75%, Aljada commercial/offices 93.64%, Khamis Mushait 0%", value: null, unit: "%", source: "4336_MULKIA_REIT/2025_Q3_filed2025-10-14.pdf", page: 7}
+  - {period: "9M2026", kpi: "Occupancy 30 Sep 2026: West Avenue Mall 83.65%, The Elite 87.19%, Dinar 78.56%, Aljada commercial/offices 100%, Obhur restaurant 0%", value: null, unit: "%", source: "4336_MULKIA_REIT/2026_Q3_filed2026-10-14.pdf", page: 7}
+  - {period: "9M2026", kpi: "Quarterly rental income: Q1 25,901,979.93; Q2 23,999,346.57; Q3 25,887,848", value: 75789174.5, unit: "SAR", source: "4336_MULKIA_REIT/2026_Q3_filed2026-10-14.pdf", page: 4}
+  - {period: "9M2025", kpi: "Quarterly rental income: Q1 24,236,096.77; Q2 24,843,864.42; Q3 25,288,467", value: 74368428.19, unit: "SAR", source: "4336_MULKIA_REIT/2025_Q3_filed2025-10-14.pdf", page: 4}
+  - {period: "FY2025", kpi: "Building area: Al-Maather 41,000 sq m; Aljada 33,106 sq m; West Avenue 57,998 sq m (fund report property table)", value: null, unit: "sq m", source: "4336_MULKIA_REIT/2025_Annual_filed2026-03-31_t16-59-15.pdf", page: 9}
+
+special_extractions:
+  - item: "Quarterly statements vs audited revenue"
+    detail: "The four 2025 quarterly statements give rental income of 24.2m + 24.8m + 25.3m + 27.2m = SAR 101.5m, against audited rental plus hotel revenue of SAR 124.4m; the quarterly figure is on a different (undefined) basis. Quarterly NAV and total assets are at fair value."
+    source: "4336_MULKIA_REIT/2025_Q4_filed2026-01-14.pdf"
+    page: 4
+    quote: "All numbers shown in the factsheet are based on total fair value"
+
+open_questions:
+  - "The quarterly 'rental income' measure does not reconcile with audited revenue (2025: SAR 101.5m vs SAR 124.4m), so 9M revenue growth (+1.9%) is on the statements' own basis only."
+  - "The FY2024 revenue of Al-Maather (from 24 Jul 2024) and the January 2025 revenue of Al Yasmin are not disclosed, so the perimeter effects cannot be measured."
+  - "The fund report's property revenues for 2025 (sum about SAR 103m) do not reconcile with audited revenue of SAR 124.4m; the hotel appears to be shown net."

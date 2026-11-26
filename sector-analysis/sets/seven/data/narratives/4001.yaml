@@ -1,0 +1,190 @@
+ticker: '4001'
+headline: Revenue rose every year from SAR 9,550m (FY2022) to SAR 11,089m (FY2025), but attributable profit fell from SAR 1,080m to SAR 250m as large disposal gains fell away and the retail margin narrowed;
+  in 9M 2026 revenue fell 3.3% and the company made an attributable loss of SAR 92.7m after SAR 153.8m of inventory provisions.
+lfl_basis:
+  definition_used: 'Standard bridge on IFRS revenue (net sales). Net rental income from stores and malls is shown below gross profit and is not in revenue. Othaim made no business combinations from FY2022
+    to 9M 2026: the stakes it sold (Abdullah Al-Othaim for Investment Company in 2022, Riyadh Food Industries in 2026) were equity-accounted, and the subsidiaries it wound up were dormant, so perimeter
+    effects are nil. Two presentation changes break the revenue series: restated FY2023 includes a SAR 29.9m reclassification not applied to FY2022, and FY2024 was re-presented by SAR 47.2m (mainly the
+    Mueen IFRS 15 change) without re-presenting FY2023. Store openings and like-for-like sales are not disclosed, so new capacity and like-for-like growth are not determinable; organic growth is the closest
+    measure.'
+  perimeter_changes:
+  - event: Sale of the 13.653% associate stake in Abdullah Al-Othaim for Investment Company to Al-Othaim Holding Company for SAR 846.5m
+    date: '2022-09-27'
+    effect: equity-accounted, no revenue effect; gain SAR 608.5m
+    source: 4001_A_OTHAIM_MARKET/2023_Annual_filed2024-04-14.pdf p.38, p.55
+  - event: Discontinued maintenance activity of Mueen Business Company for Maintenance and Operation
+    date: 2021-2022
+    effect: shown below continuing profit (loss SAR 0.2m in FY2022); not in revenue
+    source: 4001_A_OTHAIM_MARKET/2023_Annual_filed2024-04-14.pdf p.44
+  - event: Dormant subsidiaries transferred into branches and liquidated (Thamarat Al Qassim, Shurofat Al Jazeerah, Marafeq Al Tashgheel, Seven Services)
+    date: 2022-2025
+    effect: no activity, no revenue effect
+    source: 4001_A_OTHAIM_MARKET/2025_Annual_filed2026-03-30.pdf p.15-16
+  - event: Sale of the 55% associate stake in Riyadh Food Industries Company for SAR 55m
+    date: '2026-08-31'
+    effect: equity-accounted, no revenue effect; gain SAR 10.1m
+    source: 4001_A_OTHAIM_MARKET/2026_Q3_filed2026-11-17.pdf p.18
+  capacity_changes:
+  - event: Store openings and closures
+    date: FY2022-9M2026
+    effect: not disclosed in the statements; not determinable
+    source: 4001_A_OTHAIM_MARKET/2025_Annual_filed2026-03-30.pdf p.49
+  fx_exposure: 'The Egypt subsidiary (about 2% of retail and wholesale sales: SAR 230.3m in FY2025, SAR 186.8m in 9M 2026) reports in Egyptian pounds; the translation effect is not disclosed and is not
+    determinable. All other business is in riyals.'
+  price_volume_support: Not determinable. The statements give segment revenue (retail and wholesale, Mueen labour services, rental) and an Egypt split, but no store count, sales area, traffic, basket or
+    like-for-like figures.
+  confidence: Medium (perimeter nil with High confidence; the accounting step is disclosed; new capacity is not determinable)
+price_volume:
+- period: 9M 2026 vs 9M 2025
+  text: Revenue fell SAR 275m. Retail and wholesale sales to outside customers fell 6.0% (SAR 8,012m to SAR 7,533m), while Mueen labour-services sales rose 50.1% (SAR 405m to SAR 607m). Prices, volumes
+    and store numbers are not disclosed, so the retail decline cannot be split.
+  basis: disclosed (segment revenue); price/volume split not determinable
+  confidence: High for the segment amounts; split not determinable
+  source: 4001_A_OTHAIM_MARKET/2026_Q3_filed2026-11-17.pdf p.23-24 (segments)
+  refs:
+  - 4001-9M2026-REV
+  - 4001-9M2025-REV
+- period: FY2025 vs FY2024
+  text: Revenue rose SAR 326m. Retail and wholesale sales rose 1.1% (SAR 10,396m to SAR 10,507m) and Mueen sales 58.6% (SAR 367m to SAR 582m), so Mueen gave about two thirds of the growth (we calculate).
+  basis: disclosed (segment revenue); split not determinable
+  confidence: High for the amounts
+  source: 4001_A_OTHAIM_MARKET/2025_Annual_filed2026-03-30.pdf p.50 (segments)
+  refs:
+  - 4001-FY2025-REV
+  - 4001-FY2024-REV
+profit_and_margin:
+  drivers:
+  - period: FY2023
+    driver: Revenue rose 7.2% (6.8% on a consistent basis, we calculate, after a SAR 29.9m reclassification) and the gross margin was 22.2% (21.8%). Attributable profit fell 55.3% to SAR 482m because FY2022
+      included a SAR 608.5m gain on selling the stake in Abdullah Al-Othaim for Investment Company and a SAR 110.6m land-sale gain, against a SAR 99.5m land-sale gain in FY2023. Finance costs rose to SAR
+      113m (SAR 83.5m). Operating margin fell from 12.0% to 5.5%.
+    source: 4001_A_OTHAIM_MARKET/2024_Annual_filed2025-04-08.pdf p.9 (P&L, restated), p.57 (note 37); 4001_A_OTHAIM_MARKET/2023_Annual_filed2024-04-14.pdf p.10, p.55 (note 33)
+    refs:
+    - 4001-FY2023-REV
+    - 4001-FY2023-NI_ATTR
+    - 4001-FY2022-NI_ATTR
+    - 4001-FY2023-OPINC
+  - period: FY2024
+    driver: 'Revenue rose 5.2%: retail and wholesale sales +4.0% and Mueen labour services +53.8% (SAR 33.5m of it from the IFRS 15 change). Our operating income fell 17.3% to SAR 465m as selling costs
+      grew and finance costs rose to SAR 160m with short-term loans of SAR 315m. Attributable profit still rose 6.0% to SAR 511m because the share of joint-venture profit jumped to SAR 198m (SAR 32.3m),
+      of which SAR 161.3m was Othaim''s share of the capital gain from the Fourth Milling IPO at Gulf Flour Milling, and because a SAR 17.7m prior-year zakat reversal gave a small net zakat credit. Net
+      margin 4.7%.'
+    source: 4001_A_OTHAIM_MARKET/2025_Annual_filed2026-03-30.pdf p.9 (P&L), p.50 (segments), p.56 (note 36); 4001_A_OTHAIM_MARKET/2024_Annual_filed2025-04-08.pdf p.37 (JV note)
+    refs:
+    - 4001-FY2024-REV
+    - 4001-FY2024-OPINC
+    - 4001-FY2024-SHARE_JV
+    - 4001-FY2024-NI_ATTR
+    - 4001-FY2024-ZAKAT_TAX
+  - period: FY2025
+    driver: Revenue rose 3.0% but operating income fell 19.7% to SAR 374m. Retail and wholesale sales grew only 1.1% and that segment's operating profit fell to SAR 225m (SAR 351m); the inventory shrinkage
+      and slow-moving provision charge rose to SAR 61.9m (SAR 0.6m) and selling and marketing costs rose 8.7%. The share of joint-venture profit returned to SAR 51.4m. Attributable profit fell 51.1% to
+      SAR 250m. Net margin 2.3%, EBITDA margin 7.4%, ROE 19.2%.
+    source: 4001_A_OTHAIM_MARKET/2025_Annual_filed2026-03-30.pdf p.9 (P&L), p.12 (cash flow), p.50 (segments)
+    refs:
+    - 4001-FY2025-REV
+    - 4001-FY2025-OPINC
+    - 4001-FY2025-NI_ATTR
+    - 4001-FY2025-SHARE_JV
+    - 4001-FY2025-EBITDA_C
+  - period: 9M2026
+    driver: Revenue fell 3.3% to SAR 8,141m and the gross margin fell to 19.9% (21.1%). Inventory provisions of SAR 153.8m (SAR 30.0m) included SAR 123.7m for shrinkage after a physical count found net
+      shrinkage of SAR 124.6m; the retail and wholesale segment made an operating loss of SAR 141m (profit SAR 131m). Our operating income was -SAR 18.1m, including a SAR 10.1m gain on selling Riyadh Food
+      Industries. The attributable loss was SAR 92.7m (profit SAR 135m). Operating cash flow fell 31.7% to SAR 396m.
+    source: 4001_A_OTHAIM_MARKET/2026_Q3_filed2026-11-17.pdf p.5 (P&L), p.8 (cash flow), p.19 (inventories), p.23-24 (segments)
+    refs:
+    - 4001-9M2026-REV
+    - 4001-9M2026-GP
+    - 4001-9M2026-OPINC
+    - 4001-9M2026-NI_ATTR
+    - 4001-9M2026-CFO
+  - period: FY2022-9M2026
+    driver: 'Borrowing replaced cash: short-term loans rose from nil (end-2023) to SAR 665m at 30 Sep 2026 while dividends of SAR 540m (FY2024) and SAR 414m (FY2025) exceeded profit. Net debt including
+      SAR 2,347m of lease liabilities reached SAR 2,893m, or 6.8 times annualised EBITDA (we calculate), and equity attributable fell to SAR 1,049m.'
+    source: 4001_A_OTHAIM_MARKET/2026_Q3_filed2026-11-17.pdf p.4 (balance sheet), p.9 (cash flow); 4001_A_OTHAIM_MARKET/2025_Annual_filed2026-03-30.pdf p.12
+    refs:
+    - 4001-9M2026-DEBT
+    - 4001-9M2026-LEASE_LIAB
+    - 4001-9M2026-NET_DEBT
+    - 4001-9M2026-EQ_ATTR
+  one_offs:
+  - item: Gain on sale of investment in associate (Abdullah Al-Othaim for Investment Company)
+    period: FY2022
+    amount_sar_m: 608.5
+    line: Gain on sale of investment in associate (inside our operating income)
+    source: 4001_A_OTHAIM_MARKET/2023_Annual_filed2024-04-14.pdf p.10, p.55
+    tax_nci: 'Zakat SAR 15.2m disclosed (net SAR 593.3m); minority share not disclosed: not determinable, profit kept as reported'
+  - item: Gain on sale of Madinah land (investment property) to a related party
+    period: FY2022
+    amount_sar_m: 110.6
+    line: Gain on sale of investment property, net (inside our operating income)
+    source: 4001_A_OTHAIM_MARKET/2022_Annual_filed2023-04-10.pdf p.36; 4001_A_OTHAIM_MARKET/2023_Annual_filed2024-04-14.pdf p.55
+    tax_nci: 'Zakat SAR 2.8m disclosed (net SAR 107.9m); minority share not disclosed: not determinable, profit kept as reported'
+  - item: Gain on sale of Al-Mahra land, Riyadh (investment property) to a related party
+    period: FY2023
+    amount_sar_m: 99.5
+    line: Gain on sale of investment property, net (inside our operating income)
+    source: 4001_A_OTHAIM_MARKET/2024_Annual_filed2025-04-08.pdf p.9; 4001_A_OTHAIM_MARKET/2023_Annual_filed2024-04-14.pdf p.55
+    tax_nci: 'Zakat SAR 2.5m disclosed (net SAR 97.0m); minority share not disclosed: not determinable, profit kept as reported'
+  - item: Share of the Gulf Flour Milling joint venture's capital gain on the Fourth Milling IPO (outside our operating income and EBITDA; affects attributable profit only)
+    period: FY2024
+    amount_sar_m: 161.3
+    line: Share in profit or loss of associates and joint venture
+    source: 4001_A_OTHAIM_MARKET/2024_Annual_filed2025-04-08.pdf p.37
+    tax_nci: Tax effect inside the joint venture not disclosed; not determinable, profit kept as reported
+  - item: Gain on sale of Riyadh Food Industries Company (associate)
+    period: 9M2026
+    amount_sar_m: 10.1
+    line: Gains from the sale of an associate company (inside our operating income)
+    source: 4001_A_OTHAIM_MARKET/2026_Q3_filed2026-11-17.pdf p.5, p.18
+    tax_nci: 'Zakat effect and minority share not disclosed: not determinable, loss kept as reported'
+developments:
+- date: '2022-09-27'
+  category: M&A
+  text: Sold its 13.653% stake in Abdullah Al-Othaim for Investment Company to the founding shareholder for SAR 846.5m, booking a SAR 608.5m gain.
+  source: 4001_A_OTHAIM_MARKET/2023_Annual_filed2024-04-14.pdf p.38, p.55
+- date: 2022-08 / 2023-06
+  category: M&A
+  text: 'Sold two plots of land to the related Abdullah Al-Othaim Investment Company: Madinah for SAR 211.3m (2022) and Al-Mahra, Riyadh, for SAR 186.6m (2023).'
+  source: 4001_A_OTHAIM_MARKET/2022_Annual_filed2023-04-10.pdf p.36; 4001_A_OTHAIM_MARKET/2023_Annual_filed2024-04-14.pdf p.37, p.55
+- date: 2025-03 (FY2024 annual)
+  category: event
+  text: 'Restated FY2023 and the 1 January 2023 balance sheet for an error: a related-party sublease is now a finance lease; FY2023 attributable profit fell by SAR 8.7m and equity rose by SAR 54.3m.'
+  source: 4001_A_OTHAIM_MARKET/2024_Annual_filed2025-04-08.pdf p.54-57
+- date: '2025'
+  category: mix
+  text: Mueen Human Resources (68% owned) changed its revenue accounting under IFRS 15 so recoverable manpower costs are now in revenue and cost of revenue; Mueen sales reached SAR 582m in FY2025.
+  source: 4001_A_OTHAIM_MARKET/2025_Annual_filed2026-03-30.pdf p.50, p.56
+- date: 2024-2026
+  category: financing
+  text: Short-term loans and Murabaha rose from nil at end-2023 to SAR 665m at 30 Sep 2026; dividends paid fell to SAR 108m in 9M 2026 (SAR 306m in 9M 2025).
+  source: 4001_A_OTHAIM_MARKET/2026_Q3_filed2026-11-17.pdf p.4, p.9; 4001_A_OTHAIM_MARKET/2024_Annual_filed2025-04-08.pdf p.8
+- date: '2026-08-31'
+  category: M&A
+  text: Sold its 55% associate stake in Riyadh Food Industries for SAR 55m (gain SAR 10.1m).
+  source: 4001_A_OTHAIM_MARKET/2026_Q3_filed2026-11-17.pdf p.18
+- date: 2026 (9M)
+  category: operations
+  text: A physical inventory count found net shrinkage of SAR 124.6m; SAR 131.7m of stock was written off against the provision. Three plots of land (SAR 85.8m) were moved to assets held for sale.
+  source: 4001_A_OTHAIM_MARKET/2026_Q3_filed2026-11-17.pdf p.19, p.26
+what_it_means:
+  improved: Revenue grew every year (5.1% a year from FY2022 to FY2025, we calculate), helped by the Mueen labour-services business, whose sales rose from SAR 240m in FY2022 to SAR 582m in FY2025.
+  weakened: 'Profitability fell steadily: the operating margin fell from 12.0% to 3.4% between FY2022 and FY2025, attributable profit fell to SAR 250m, and 9M 2026 brought an attributable loss of SAR 92.7m
+    while net debt including leases rose to SAR 2,893m.'
+  why: FY2022 and FY2023 profit was lifted by SAR 818.7m of disposal gains and FY2024 by a SAR 161.3m joint-venture gain; underneath, retail and wholesale sales grew slowly and then fell 6.0% in 9M 2026,
+    while shrinkage provisions and finance costs rose.
+  uncertain: The filings do not give store numbers or like-for-like sales, and they do not say whether the 2026 shrinkage charge will recur; how much of the retail decline is price, traffic or store closures
+    is not determinable.
+confidence_overall: Medium
+data_notes:
+- 'FY2023 is restated (FY2024 annual note 37: a related-party sublease corrected from operating to finance lease, plus reclassifications); the 31 Dec 2022 balance sheet is taken from the restated 1 January
+  2023 column of the FY2024 annual (stage A override).'
+- 'FY2024 is re-presented in the FY2025 annual (note 36: reclassifications and the Mueen IFRS 15 change, revenue +SAR 47.2m, CFO SAR 910.3m to SAR 909.3m) and 9M 2025 in the 2026 Q3 interim (note 23, revenue
+  +SAR 31.9m); FY2022 and FY2023 revenue are not on this basis, so FY2023/FY2022 and FY2024/FY2023 growth include presentation steps (see bridge).'
+- Rental income (FY2025 SAR 128.5m gross, SAR 93.6m net) is shown below gross profit and is not in revenue; it is inside our operating income.
+- 'Zakat and tax (ZAKAT_TAX) is net of prior-year zakat reversals: FY2024 is a net credit of SAR 0.6m (reversal SAR 17.7m) and FY2023 includes a SAR 0.8m reversal (stage A override).'
+- 'Capex is PP&E plus intangibles; cash spent on investment property is kept out of capex and deducted separately in free cash flow (IP_CAPEX: SAR 93.1m FY2022, SAR 224.2m FY2023, SAR 49.7m FY2024, SAR
+  15.7m FY2025, SAR 6.5m 9M 2025, SAR 0.65m 9M 2026).'
+- Operating cash flow is after zakat paid and before finance costs paid on leases, which are in financing activities (9M 2026 shows lease interest separately in financing).
+- 'There is no XBRL file for the 2026 Q3 interim: all 9M 2026 figures were read from the PDF (scanned pages, OCR checked against totals). Primary statements in several filings are scanned images.'
+- FY2022 profit includes a SAR 0.2m loss from discontinued operations; our PBT is continuing operations only.

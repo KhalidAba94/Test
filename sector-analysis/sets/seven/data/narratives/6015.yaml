@@ -1,0 +1,105 @@
+ticker: "6015"
+headline: >-
+  Revenue fell 9.0% in FY2024 and recovered 14.2% in FY2025 to SAR 9,408m (1.8% a year since FY2022) while the restaurant estate grew
+  from 2,183 to 2,749; attributable profit of SAR 822m in FY2025 was still below the SAR 972m of FY2022, but in 9M 2026 revenue rose
+  12.9% and attributable profit 60.4% to SAR 814m.
+lfl_basis:
+  definition_used: >-
+    Standard bridge on IFRS revenue. Americana reports in US dollars; our tables convert at the peg of 3.75 SAR per USD, so the SAR/USD
+    conversion itself adds no FX effect. Reported growth less acquisitions, currency translation, hyperinflation and presentation changes
+    gives organic growth; organic growth less revenue from restaurants opened in the period gives like-for-like growth. Americana reports no
+    like-for-like or same-store sales growth in any annual or interim statement in the archive, gives restaurant counts only at year-end
+    (directors' report) and does not disclose the revenue of acquired businesses or the currency effect on revenue. Only the hyperinflation
+    step can be calculated (Lebanon, IAS 29: +SAR 4.7m in FY2023, -SAR 18.0m in FY2024, +SAR 0.8m in FY2025). Organic and like-for-like
+    growth are therefore not determinable; reported growth is the only measure available.
+  perimeter_changes:
+    - {event: "No business combinations in FY2022-FY2024; the 27 June 2022 transfer of the restaurant business from Kuwait Food Company into the Group was a common-control reorganisation of the same business", date: "2022-2024", effect: "none identified", source: "6015_AMERICANA/2025_Annual_filed2026-02-08.pdf p.13; 6015_AMERICANA/2023_Annual_filed2024-02-14.pdf p.4, p.15"}
+    - {event: "Pizza Hut business in Oman acquired (100% of Fast Food & Restaurants Company SPC) for USD 10.7m (SAR 40.0m)", date: "2025-01-23", effect: "revenue contribution not disclosed (Lower Gulf segment)", source: "6015_AMERICANA/2025_Annual_filed2026-02-08.pdf p.59-60"}
+    - {event: "Malak Al Tawouk acquired in the UAE (USD 19.3m, goodwill USD 1.9m) and in KSA (USD 0.9m, bargain purchase gain USD 0.9m)", date: "2026-02-26 and 2026-07-08", effect: "revenue contribution not disclosed", source: "6015_AMERICANA/2026_Q3_filed2026-10-27.pdf p.36-37"}
+  capacity_changes:
+    - {event: "Restaurants operated rose from 2,183 to 2,435 (12 brands); Peet's Coffee launched in Dubai and Riyadh", date: "2023", effect: "revenue of new restaurants not disclosed", source: "6015_AMERICANA/2022_Annual_filed2023-04-09.pdf p.3; 6015_AMERICANA/2023_Annual_filed2024-02-14.pdf p.3"}
+    - {event: "Restaurants operated rose from 2,435 to 2,590", date: "2024", effect: "revenue of new restaurants not disclosed", source: "6015_AMERICANA/2024_Annual_filed2025-02-12.pdf p.3"}
+    - {event: "Restaurants operated rose from 2,590 to 2,749 (includes the acquired Pizza Hut Oman estate)", date: "2025", effect: "revenue of new restaurants not disclosed", source: "6015_AMERICANA/2025_Annual_filed2026-02-08.pdf p.3"}
+    - {event: "No restaurant count in the 2026 interims", date: "2026 (9M)", effect: "not determinable", source: "6015_AMERICANA/2026_Q3_filed2026-10-27.pdf p.10"}
+  fx_exposure: >-
+    Revenue comes from 12 countries and is presented in USD. The company names its main exposures as the Kuwaiti dinar, Saudi riyal, UAE
+    dirham and Egyptian pound and calls the risk between the first three limited (FY2025 annual note 3, p.27). Egypt revenue in USD fell
+    24.5% in FY2023 and 31.6% in FY2024 and rose 29.4% in FY2025, but no constant-currency revenue is disclosed, so the FX step is not
+    determinable. Egypt is not treated as hyperinflationary; only Lebanon is (IAS 29 since September 2020).
+  price_volume_support: >-
+    Not determinable. The filings give no transactions, average ticket or like-for-like sales. Year-end restaurant counts allow a revenue
+    per average restaurant calculation (below), which separates estate growth from revenue per restaurant but not price from volume.
+  confidence: "Low (only the small hyperinflation step is quantified; perimeter, FX and new-capacity steps are not determinable)"
+price_volume:
+  - period: "FY2025 vs FY2024"
+    text: >-
+      We calculate that the average estate (mean of year-end counts) grew 6.2% (2,512.5 to 2,669.5 restaurants) while revenue rose 14.2%,
+      so revenue per average restaurant rose 7.5% (SAR 3.28m to SAR 3.52m). This includes the Pizza Hut Oman acquisition. The split between
+      menu prices and customer numbers is not disclosed.
+    basis: "calculated"
+    confidence: "Medium (assumes openings spread evenly through the year)"
+    source: "6015_AMERICANA/2025_Annual_filed2026-02-08.pdf p.3; 6015_AMERICANA/2024_Annual_filed2025-02-12.pdf p.3"
+    refs: ["6015-FY2025-REV", "6015-FY2024-REV"]
+  - period: "FY2024 vs FY2023"
+    text: >-
+      We calculate that the average estate grew 8.8% (2,309 to 2,512.5 restaurants) while revenue fell 9.0%, so revenue per average
+      restaurant fell 16.3% (SAR 3.92m to SAR 3.28m). All four segments fell, Lower Gulf (-29.6%) and North Africa (-26.5%) the most.
+      The filings do not explain the fall or show how much came from the Egyptian pound.
+    basis: "calculated"
+    confidence: "Medium (assumes openings spread evenly through the year)"
+    source: "6015_AMERICANA/2024_Annual_filed2025-02-12.pdf p.3, p.61; 6015_AMERICANA/2023_Annual_filed2024-02-14.pdf p.3"
+    refs: ["6015-FY2024-REV", "6015-FY2023-REV"]
+  - period: "9M 2026 vs 9M 2025"
+    text: >-
+      Revenue rose 12.9%: Major GCC +10.9% (SAR 5,010m to SAR 5,557m), Lower Gulf +23.6%, North Africa +16.7% and Others +14.2%
+      (segment revenue converted at 3.75). No restaurant count is given for 30 September, so estate growth and revenue per restaurant cannot be
+      separated.
+    basis: "disclosed (segment revenue); split not determinable"
+    confidence: "High for the segment amounts; the split is not determinable"
+    source: "6015_AMERICANA/2026_Q3_filed2026-10-27.pdf p.33"
+    refs: ["6015-9M2026-REV", "6015-9M2025-REV"]
+profit_and_margin:
+  drivers:
+    - {period: "FY2023", driver: "Revenue +1.5% to SAR 9,049m and attributable profit +0.1% to SAR 973m. Major GCC revenue rose 5.0% and Others 14.5%, while North Africa fell 19.3% (Egypt -24.5% in USD). We calculate EBITDA up 6.2%, giving an EBITDA margin of 22.6% (FY2022: 21.5%). FY2022 had included tax claim charges of SAR 84.5m; FY2023 included a SAR 42.5m write-down of the REEF derivative, partly offset by a SAR 28.2m release of deferred gain. Finance income rose to SAR 57.4m (SAR 13.6m) as cash moved into term deposits. Net margin 10.8%.", source: "6015_AMERICANA/2024_Annual_filed2025-02-12.pdf p.12 (P&L), p.61-62 (segments); 6015_AMERICANA/2023_Annual_filed2024-02-14.pdf p.48-49 (note 16)", refs: ["6015-FY2023-REV", "6015-FY2023-NI_ATTR", "6015-FY2023-EBITDA_C", "6015-FY2022-EBITDA_C", "6015-FY2023-FIN_INC"]}
+    - {period: "FY2024", driver: "Revenue fell 9.0% to SAR 8,238m. All segments fell: Lower Gulf -29.6%, North Africa -26.5%, Others -14.0% and Major GCC -2.8% (in USD: KSA -1.9%, UAE -0.3%, Kuwait -9.8%, Egypt -31.6%); the filings give no reason. Selling and marketing expenses rose 0.9% to SAR 2,943m, 35.7% of revenue (FY2023: 32.2%), and impairment of non-financial assets rose to SAR 47.4m (SAR 2.4m). Attributable profit fell 38.8% to SAR 595m; non-controlling interests bore a SAR 27.6m loss. We calculate EBITDA down 11.3% and an EBITDA margin of 22.0%; operating margin 8.7%, net margin 7.2%.", source: "6015_AMERICANA/2025_Annual_filed2026-02-08.pdf p.10 (P&L), p.57-58 (segments)", refs: ["6015-FY2024-REV", "6015-FY2024-NI_ATTR", "6015-FY2024-EBITDA_C", "6015-FY2024-IMPAIR_CF", "6015-FY2024-NI_NCI", "6015-FY2024-OPINC"]}
+    - {period: "FY2025", driver: "Revenue rose 14.2% to SAR 9,408m and every segment grew: Major GCC +11.2%, Lower Gulf +33.0% (including Pizza Hut Oman from 23 January 2025, revenue not disclosed), North Africa +27.8% and Others +11.1%; restaurants reached 2,749. Gross profit rose 16.9% (gross margin 54.4% vs 53.1%). Attributable profit rose 38.0% to SAR 822m. Income tax and zakat rose to SAR 134m (SAR 77.7m), including the first Pillar Two domestic minimum top-up tax of SAR 52.6m (USD 14.0m). We calculate an EBITDA margin of 23.7%; net margin 8.7%.", source: "6015_AMERICANA/2025_Annual_filed2026-02-08.pdf p.10 (P&L), p.51-52 (tax note), p.57 (segments), p.3 (restaurants)", refs: ["6015-FY2025-REV", "6015-FY2025-GP", "6015-FY2025-NI_ATTR", "6015-FY2025-ZAKAT_TAX", "6015-FY2025-EBITDA_C"]}
+    - {period: "9M2026", driver: "Revenue +12.9% to SAR 7,788m, with growth in all segments; the Malak Al Tawouk businesses are included from 26 February (UAE) and 8 July 2026 (KSA) without disclosed revenue. Gross profit rose 17.5% (gross margin 55.9% vs 53.7%) while selling and marketing expenses rose 11.0%. Major GCC profit before tax rose to SAR 776m (SAR 532m). Attributable profit +60.4% to SAR 814m despite income tax and zakat of SAR 140m (SAR 96.0m). We calculate EBITDA up 26.3%, an EBITDA margin of 25.1% (9M 2025: 22.4%) and an annualised ROE of 64.8%; net margin 10.5% (7.4%).", source: "6015_AMERICANA/2026_Q3_filed2026-10-27.pdf p.6 (P&L), p.33 (segments), p.36-37 (acquisitions)", refs: ["6015-9M2026-REV", "6015-9M2026-GP", "6015-9M2026-NI_ATTR", "6015-9M2026-EBITDA_C", "6015-9M2025-EBITDA_C", "6015-9M2026-ZAKAT_TAX"]}
+    - {period: "FY2022-9M2026", driver: "Cash generation rose: operating cash flow went from SAR 1,702m (FY2022) to SAR 2,209m (FY2025) while capex fell from SAR 481m to SAR 402m, so free cash flow rose from SAR 1,221m to SAR 1,807m; in 9M 2026 free cash flow was SAR 1,637m (SAR 1,168m). Lease liabilities grew 13.6% a year to SAR 2,390m and are almost all of net debt (SAR 1,812m at end-2025, 0.81 times EBITDA, we calculate). Dividends paid in 9M 2026 were SAR 1,134m (USD 302.4m).", source: "6015_AMERICANA/2025_Annual_filed2026-02-08.pdf p.13 (cash flows); 6015_AMERICANA/2026_Q3_filed2026-10-27.pdf p.9", refs: ["6015-FY2022-CFO", "6015-FY2025-CFO", "6015-FY2025-CAPEX", "6015-FY2025-FCF", "6015-9M2026-FCF", "6015-FY2025-LEASE_LIAB", "6015-FY2025-NET_DEBT"]}
+  one_offs:
+    - {item: "Tax claim charges: non-recurring provision to settle an indirect tax claim for 2000-2017 (USD 22.5m)", period: "FY2022", amount_sar_m: -84.5, line: "Fair value losses and tax claims (inside operating profit)", source: "6015_AMERICANA/2023_Annual_filed2024-02-14.pdf p.48-49", tax_nci: "Tax effect not disclosed; minority share not disclosed: after-tax effect not determinable, profit kept as reported"}
+    - {item: "Fair value gain on the REEF Technology derivative (USD 1.9m)", period: "FY2022", amount_sar_m: 7.3, line: "Fair value losses and tax claims", source: "6015_AMERICANA/2023_Annual_filed2024-02-14.pdf p.48", tax_nci: "Tax effect not disclosed; minority share not disclosed: after-tax effect not determinable, profit kept as reported"}
+    - {item: "Release of deferred gain on the REEF derivative (USD 1.9m)", period: "FY2022", amount_sar_m: 7.0, line: "Other income", source: "6015_AMERICANA/2023_Annual_filed2024-02-14.pdf p.15", tax_nci: "Tax effect not disclosed; minority share not disclosed: after-tax effect not determinable, profit kept as reported"}
+    - {item: "Gain on COVID-19 rent concessions (USD 0.7m)", period: "FY2022", amount_sar_m: 2.5, line: "Other income", source: "6015_AMERICANA/2023_Annual_filed2024-02-14.pdf p.15", tax_nci: "Under 5% of attributable profit: tax effect not checked; profit kept as reported"}
+    - {item: "REEF derivative written down to nil as management plans to exit the arrangement (USD 11.3m)", period: "FY2023", amount_sar_m: -42.5, line: "Fair value losses on derivative assets (inside operating profit)", source: "6015_AMERICANA/2024_Annual_filed2025-02-12.pdf p.12; 6015_AMERICANA/2023_Annual_filed2024-02-14.pdf p.43", tax_nci: "Tax effect not disclosed; minority share not disclosed: after-tax effect not determinable, profit kept as reported"}
+    - {item: "Release of the remaining deferred gain on the REEF derivative (USD 7.5m)", period: "FY2023", amount_sar_m: 28.2, line: "Other income", source: "6015_AMERICANA/2024_Annual_filed2025-02-12.pdf p.15", tax_nci: "Tax effect not disclosed; minority share not disclosed: after-tax effect not determinable, profit kept as reported"}
+    - {item: "Gain on bargain purchase, Malak Al Tawouk KSA (USD 0.9m)", period: "9M2026", amount_sar_m: 3.4, line: "Other income", source: "6015_AMERICANA/2026_Q3_filed2026-10-27.pdf p.37", tax_nci: "Under 5% of attributable profit: tax effect not checked; profit kept as reported"}
+    - {item: "Not treated as one-offs in operating income: impairments of non-financial assets (already outside EBITDA; SAR 47.4m in FY2024) and the Pillar Two top-up tax (SAR 52.6m in FY2025, in the tax line)", period: "FY2024-FY2025", amount_sar_m: null, line: "Impairment losses on non-financial assets; income tax and zakat", source: "6015_AMERICANA/2025_Annual_filed2026-02-08.pdf p.10, p.52", tax_nci: "Not adjusted; profit kept as reported"}
+developments:
+  - {date: "2022-06-27", category: "strategy", text: "The restaurant business was transferred from Kuwait Food Company (Americana) K.S.C.C. into the Group; FY2022 combines carve-out figures up to that date with the new group afterwards (auditor emphasis of matter).", source: "6015_AMERICANA/2023_Annual_filed2024-02-14.pdf p.4"}
+  - {date: "2022-08", category: "regulation", text: "Settlement agreements with tax authorities for indirect tax claims for 2005-2017; a non-recurring charge of USD 22.5m (SAR 84.5m) was booked in FY2022.", source: "6015_AMERICANA/2023_Annual_filed2024-02-14.pdf p.49"}
+  - {date: "2022-12-12", category: "financing", text: "Shares started trading on the Abu Dhabi Securities Exchange and the Saudi Exchange in a concurrent dual listing.", source: "6015_AMERICANA/2024_Annual_filed2025-02-12.pdf p.16"}
+  - {date: "2023", category: "strategy", text: "The REEF Technology cloud-kitchen derivative was written down to nil and management stated its intention to exit the arrangement.", source: "6015_AMERICANA/2023_Annual_filed2024-02-14.pdf p.43"}
+  - {date: "2024-04-24", category: "financing", text: "Shareholders approved buying 25,000,000 own shares for a long-term incentive plan; USD 16.7m (SAR 62.8m) was paid in 2024.", source: "6015_AMERICANA/2025_Annual_filed2026-02-08.pdf p.59"}
+  - {date: "2025-01-23", category: "M&A", text: "Acquired the Pizza Hut business in Oman for USD 10.7m (SAR 40.0m).", source: "6015_AMERICANA/2025_Annual_filed2026-02-08.pdf p.59-60"}
+  - {date: "2025", category: "regulation", text: "Domestic minimum top-up taxes under Pillar Two took effect in the UAE, Kuwait, Qatar, Bahrain and Oman; the company booked USD 14.0m (SAR 52.6m) in FY2025 and its effective tax rate rose to 14% (FY2024: 11%).", source: "6015_AMERICANA/2025_Annual_filed2026-02-08.pdf p.52"}
+  - {date: "2025", category: "financing", text: "Deloitte replaced PwC as auditor for FY2025. At end-2025 the group held USD 263.1m of term deposits outside cash and cash equivalents (USD 145.2m due within a year and USD 117.8m longer).", source: "6015_AMERICANA/2025_Annual_filed2026-02-08.pdf p.6, p.42"}
+  - {date: "2026-02-26 and 2026-07-08", category: "M&A", text: "Acquired Malak Al Tawouk in the UAE (USD 19.3m, goodwill USD 1.9m) and in KSA (USD 0.9m, with a USD 0.9m bargain purchase gain); purchase price allocations are provisional.", source: "6015_AMERICANA/2026_Q3_filed2026-10-27.pdf p.36-37"}
+  - {date: "2026", category: "financing", text: "Paid the FY2025 dividend of USD 201.6m and declared an H1 2026 interim dividend of USD 100.8m; dividends paid in 9M 2026 were USD 302.4m (SAR 1,134m).", source: "6015_AMERICANA/2026_Q3_filed2026-10-27.pdf p.9, p.35"}
+  - {date: "2026 (9M)", category: "event", text: "The company reports escalating geopolitical tensions in the Middle East but no major disruption to operations as of the reporting date.", source: "6015_AMERICANA/2026_Q3_filed2026-10-27.pdf p.38"}
+what_it_means:
+  improved: "Revenue recovered 14.2% in FY2025 and 12.9% in 9M 2026, and we calculate that the EBITDA margin rose from 22.0% in FY2024 to 23.7% in FY2025 and 25.1% in 9M 2026; free cash flow reached SAR 1,807m in FY2025."
+  weakened: "FY2024 revenue fell 9.0% in every segment and attributable profit 38.8%; FY2025 attributable profit (SAR 822m) was still below FY2022 (SAR 972m), partly because income tax and zakat rose to SAR 134m with the new Pillar Two top-up tax."
+  why: "The estate kept growing (2,183 restaurants at end-2022 to 2,749 at end-2025), so FY2024 revenue per average restaurant fell 16.3% before rising 7.5% in FY2025 (we calculate); the largest swings were in Lower Gulf and North Africa, where Egypt revenue in USD fell 31.6% in FY2024."
+  uncertain: "The filings give no like-for-like sales, no currency effect and no revenue for the acquired businesses, and management gives no reason for the FY2024 fall, so the split between existing restaurants, new restaurants and the Egyptian pound cannot be told."
+confidence_overall: "Medium"
+data_notes:
+  - "Americana reports in US dollars. Every figure in our tables is the printed USD amount x 3.75 (the SAR/USD peg); value_original and unit_original keep the USD figure. Because of the peg, the conversion itself adds no FX effect."
+  - "Stage A overrides: capex excludes payments for key money (USD 0.5m-3.9m a year), which the company carries as a category of right-of-use assets (FY2025 annual note 11, p.43); the impairment add-back (IMPAIR_CF) is the non-financial-asset line only (the XBRL value also included receivable ECL); borrowings (DEBT) are the bank overdrafts shown as 'Bank facilities' (FY2021 USD 7.1m, FY2022 USD 18.6m, FY2023 USD 4.4m, 30 Sep 2025 USD 0.2m, nil otherwise)."
+  - "FY2022 combines carve-out figures for the restaurant business up to 27 June 2022 with the new group afterwards; FY2021 equity is 'net parent investment' (SAR 482m), so the FY2022 ROE in the tables (125.5%) is not comparable with later years."
+  - "The FY2023 annual re-presented FY2022 lines below gross profit (tax claim charges and derivative fair value gain combined into 'Fair value losses and tax claims'); revenue, operating profit and net profit were unchanged. No restatement of revenue or profit was found for FY2022-9M2025."
+  - "Operating income (OPINC = PBT + finance costs - finance income) equals the printed 'Operating profit' (FY2025 USD 282.7m = SAR 1,060m). Finance costs include interest on lease liabilities (FY2025 USD 40.9m)."
+  - "Cash and cash equivalents exclude term deposits (end-2025: USD 145.2m short-term and USD 117.8m long-term), so our net debt is higher than the company's own net debt reconciliation."
+  - "Only Lebanon is accounted for as hyperinflationary (IAS 29 since September 2020); the 2026 Q3 interim does not give the revenue effect for 9M 2026."
+  - "Restaurant counts are year-end figures from the directors' report on page 3 of each annual (image pages); the interims give none. The FY2022 annual is a scanned PDF."
+  - "One-offs listed here (FY2022 net loss of SAR 67.7m, FY2023 net loss of SAR 14.3m, 9M 2026 gain of SAR 3.4m) will change EBITDA excluding one-offs at the next rebuild; EBITDA margins quoted above are before that adjustment."
+  - "Year-end 31 December. Listed on the Main Market (and ADX) since 12 December 2022; not a Nomu company."

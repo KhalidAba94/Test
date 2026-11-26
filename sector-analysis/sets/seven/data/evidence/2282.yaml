@@ -1,0 +1,281 @@
+# Evidence from Naqi Water (archive 2282_NAQI). Facts only; page = physical PDF page (1-based).
+# Primary statements are image pages in all annuals and in the 2026 Q3 interim (read by OCR, checked against subtotals); notes are text except the 2026 Q3.
+ticker: '2282'
+company: Naqi Water Co.
+perimeter_changes:
+- event: Single legal entity with branches; no subsidiaries, acquisitions or disposals FY2022-9M2026
+  type: acquisition
+  status: not found
+  period: FY2022-9M2026
+  source: 2282_NAQI/2025_Annual_filed2026-04-08.pdf
+  page: 12
+  quote: >-
+    The Company operates through its branches in cities within the Kingdom, and these branches operate under the following commercial
+    registrations
+  note: >-
+    New branch registrations: Jeddah (Jan 2023), Jazan (Nov 2023), Dammam (Dec 2023), Hail (Jun 2024), Tabuk (Oct 2024).
+segments:
+- period: FY2022-9M2026
+  segment: No operating segments reported (single business; revenue disaggregated by product and channel)
+  basis: product
+  revenue: null
+  profit: null
+  unit: SAR
+  source: 2282_NAQI/2025_Annual_filed2026-04-08.pdf
+  page: 46
+  status: not found
+revenue_drivers:
+- period: FY2022
+  driver: >-
+    Bottled water: wholesale 128,875,378, retail 141,134,886, export 4,639,281; logistics 9,640,631 (re-presented in the FY2023 annual)
+  value: 284290176
+  unit: SAR
+  source: 2282_NAQI/2023_Annual_filed2024-03-07.pdf
+  page: 43
+  quote: Local Wholesale Sales - Bottled Water 104,402,605 128,875,378
+- period: FY2023
+  driver: >-
+    Bottled water: wholesale 104,402,605, retail 120,717,709, export 5,054,303; eggs 1,412,371; logistics 7,235,639
+  value: 238822627
+  unit: SAR
+  source: 2282_NAQI/2024_Annual_filed2025-04-10.pdf
+  page: 43
+  quote: Local Wholesale Sales - Bottled Water 67,700,988 104,402,605
+- period: FY2024
+  driver: 'Bottled water: retail 133,409,049, wholesale 67,700,988, export 3,187,189; eggs 9,303,451; logistics 5,739,456'
+  value: 219340133
+  unit: SAR
+  source: 2282_NAQI/2025_Annual_filed2026-04-08.pdf
+  page: 46
+  quote: Local retail sales - bottled water 143,300,518 133,409,049
+- period: FY2025
+  driver: 'Bottled water: retail 143,300,518, wholesale 34,348,972, export 3,059,402; eggs 1,942,500; logistics 4,293,695'
+  value: 186945087
+  unit: SAR
+  source: 2282_NAQI/2025_Annual_filed2026-04-08.pdf
+  page: 46
+  quote: Local wholesale sales - bottled water 34,348,972 67,700,988
+- period: 9M2026
+  driver: >-
+    9M2026 (9M2025): retail water 139,965,020 (106,221,704), wholesale water 14,866,996 (30,162,817), export 2,472,349 (2,335,221),
+    table eggs 16,063,931 (1,994,762), logistics 1,482,147 (3,699,690)
+  value: 174850443
+  unit: SAR
+  source: 2282_NAQI/2026_Q3_filed2026-11-16.pdf
+  page: 17
+  quote: Domestic retail sales – bottled water 47,190,041 38,205,679 139,965,020 106,221,704
+- period: 9M2026
+  driver: >-
+    Two new bottling lines (52,000 and 120,000 bottles per hour) and a Riyadh plant (SAR 19.0m, due Q1 2027) under construction with
+    related-party contractors
+  value: null
+  unit: SAR
+  source: 2282_NAQI/2026_Q3_filed2026-11-16.pdf
+  page: 13
+  quote: >-
+    The Company contracted with a related party to construct two production lines for water bottles (200 ml, 300 ml, 600 ml).
+one_offs:
+- period: FY2022
+  item: Initial public offering costs and first year expenses
+  amount: -3195886
+  unit: SAR
+  pnl_line: within operating profit
+  recurring: false
+  source: 2282_NAQI/2023_Annual_filed2024-03-07.pdf
+  page: 9
+  quote: Initial public offering costs and first year expenses - (3,195,886)
+- period: FY2024
+  item: >-
+    Capital gains from disposal of property, plant and equipment (re-presented in other income in the FY2025 annual)
+  amount: 3701796
+  unit: SAR
+  pnl_line: Other income / (expenses), net
+  recurring: false
+  source: 2282_NAQI/2025_Annual_filed2026-04-08.pdf
+  page: 48
+  quote: equipment 802,393 3,701,796
+- period: FY2024
+  item: Unrealised gain on FVTPL shares 431,304 and dividends 213,780
+  amount: 645084
+  unit: SAR
+  pnl_line: below operating profit, above PBT
+  recurring: false
+  source: 2282_NAQI/2025_Annual_filed2026-04-08.pdf
+  page: 8
+  quote: value through profit or loss 2,012,925 213,780
+- period: FY2025
+  item: Unrealised loss on FVTPL shares (listed Saudi equities)
+  amount: -13735896
+  unit: SAR
+  pnl_line: below operating profit, above PBT
+  recurring: false
+  source: 2282_NAQI/2025_Annual_filed2026-04-08.pdf
+  page: 41
+  quote: Revaluation (loss) / profit (Unrealized) (13,735,896) 431,304
+- period: FY2025
+  item: Dividends 2,012,925 and realised gain 32,100 on FVTPL shares
+  amount: 2045025
+  unit: SAR
+  pnl_line: below operating profit, above PBT
+  recurring: false
+  source: 2282_NAQI/2025_Annual_filed2026-04-08.pdf
+  page: 8
+  quote: value through profit or loss 2,012,925 213,780
+- period: FY2025
+  item: Capital gains from disposal of PP&E 802,393 and FX gains 1,320,391
+  amount: 2122784
+  unit: SAR
+  pnl_line: Other income / (expenses), net
+  recurring: false
+  source: 2282_NAQI/2025_Annual_filed2026-04-08.pdf
+  page: 48
+  quote: Gains / (losses) from foreign exchange 1,320,391 (97,829)
+- period: 9M2025
+  item: FVTPL revaluation loss (1,500,265), dividends 2,012,925, realised gain 32,100
+  amount: 544760
+  unit: SAR
+  pnl_line: below operating profit, above PBT
+  recurring: false
+  source: 2282_NAQI/2026_Q3_filed2026-11-16.pdf
+  page: 5
+  quote: Dividend income from investments at fair value through profit or loss - 823,424 1,339,206 2,012,925
+- period: 9M2026
+  item: FVTPL revaluation gain 1,135,323, dividends 1,339,206, realised loss (26,674)
+  amount: 2447855
+  unit: SAR
+  pnl_line: below operating profit, above PBT
+  recurring: false
+  source: 2282_NAQI/2026_Q3_filed2026-11-16.pdf
+  page: 5
+  quote: >-
+    Gain / (loss) on revaluation of investments at fair value through profit or loss 9 (764,120) (283,468) 1,135,323 (1,500,265)
+- period: 9M2026
+  item: Gain on disposal of property, plant and equipment
+  amount: 1113504
+  unit: SAR
+  pnl_line: below operating profit, above PBT
+  recurring: false
+  source: 2282_NAQI/2026_Q3_filed2026-11-16.pdf
+  page: 5
+  quote: Gain on disposal of property, plant and equipment 1,024,808 - 1,113,504 -
+restatements:
+- period_restated: FY2022
+  item: Revenue (transportation revenue reclassified from other income; cost into cost of sales)
+  from: 274649545
+  to: 284290176
+  unit: SAR
+  reason: Comparative figures reclassified (FY2023 annual note 31; described in FY2024 annual note 31)
+  source: 2282_NAQI/2023_Annual_filed2024-03-07.pdf
+  page: 9
+  quote: Revenues 20 238,822,627 284,290,176
+- period_restated: FY2023
+  item: Advance payments for PP&E (8,440,314) moved into property, plant and equipment
+  from: 137183701
+  to: 145624015
+  unit: SAR
+  reason: FY2024 annual note 31
+  source: 2282_NAQI/2024_Annual_filed2025-04-10.pdf
+  page: 49
+  quote: Property, plant and equipment, net 137,183,701 8,440,314 145,624,015
+- period_restated: FY2024
+  item: Capital gains on disposal (3,565,390) moved into other income
+  from: 139880
+  to: 3705270
+  unit: SAR
+  reason: FY2025 annual note 34; no effect on profit
+  source: 2282_NAQI/2025_Annual_filed2026-04-08.pdf
+  page: 53
+  quote: Other income 139,880 3,565,390 3,705,270
+significant_events:
+- date: '2022-08-15'
+  event: >-
+    Listing of 30% of the shares on the Saudi Exchange (Tadawul) approved; CMA approved the offering on 25 May 2022
+  financial_effect: IPO costs and first-year expenses 3.2m in FY2022
+  source: 2282_NAQI/2025_Annual_filed2026-04-08.pdf
+  page: 12
+  quote: >-
+    The Saudi Capital Market Authority approved the company’s listing on the Saudi Stock Exchange (Tadawul) on 17 Muharram 1444 H, corresponding
+    to 15 August , 2022.
+- date: 2024-2025
+  event: >-
+    Started an equity trading portfolio (FVTPL); board raised the limit to SAR 50m (27 Mar 2025) and SAR 70m (19 Nov 2025)
+  financial_effect: Portfolio 53.4m at end-2025; unrealised loss 13.7m in FY2025
+  source: 2282_NAQI/2025_Annual_filed2026-04-08.pdf
+  page: 41
+  quote: >-
+    the Board of Directors approved increasing the maximum limit of the Company’s investment portfolio to SAR 50 million
+- date: 2026 (9M)
+  event: Sold most of the portfolio (disposals 52.1m); balance 6.4m at 30 Sep 2026
+  financial_effect: revaluation gain 1.1m in 9M2026
+  source: 2282_NAQI/2026_Q3_filed2026-11-16.pdf
+  page: 16
+  quote: Disposals during the period / year (52,069,833) (827,277)
+- date: '2026-03-03'
+  event: >-
+    EGM approved a dividend policy of SAR 2, 3 and 4 per share for 2026-2028; shareholders holding 70% waived 50-60% of their entitlements
+  financial_effect: Dividends paid 13.0m in 9M2026
+  source: 2282_NAQI/2025_Annual_filed2026-04-08.pdf
+  page: 53
+  quote: >-
+    the Extraordinary General Assembly, with an attendance rate of 71%, approved the Company’s dividend distribution policy for the
+    financial years 2026, 2027, and 2028
+- date: 2026 (9M)
+  event: >-
+    Advance payments to the main shareholder and raw-material supplier Saqa United Group raised amounts due from it to 34.5m (end-2025:
+    7.3m)
+  financial_effect: operating cash flow -9.8m in 9M2026
+  source: 2282_NAQI/2026_Q3_filed2026-11-16.pdf
+  page: 16
+  quote: Saqa United Group (formerly Al-Sad Al-Haditha 34,461,278 7,291,105
+audit_opinion:
+- period: FY2022
+  opinion: unmodified (BDO Dr. Mohamed Al-Amri & Co.)
+  emphasis_of_matter: none
+  source: 2282_NAQI/2022_Annual_filed2023-04-04.pdf
+  page: 3
+- period: FY2023
+  opinion: unmodified (Ibrahim Ahmed Al-Bassam & Co.)
+  emphasis_of_matter: 'none; other matter: FY2022 audited by another auditor'
+  source: 2282_NAQI/2023_Annual_filed2024-03-07.pdf
+  page: 3
+- period: FY2024
+  opinion: unmodified (PKF Al Bassam)
+  emphasis_of_matter: none
+  source: 2282_NAQI/2024_Annual_filed2025-04-10.pdf
+  page: 3
+- period: FY2025
+  opinion: unmodified (PKF Al Bassam)
+  emphasis_of_matter: none
+  source: 2282_NAQI/2025_Annual_filed2026-04-08.pdf
+  page: 3
+- period: 9M2026
+  opinion: review conclusion unmodified
+  emphasis_of_matter: none
+  source: 2282_NAQI/2026_Q3_filed2026-11-16.pdf
+  page: 3
+kpis_in_filings:
+- period: FY2025
+  kpi: 'Commercial registrations (head office and branches: Unaizah, Riyadh, Jeddah, Dammam, Hail, Jazan, Tabuk)'
+  value: 10
+  unit: count
+  source: 2282_NAQI/2025_Annual_filed2026-04-08.pdf
+  page: 12
+- period: FY2022-9M2026
+  kpi: Volumes (litres or bottles), prices, plant utilisation
+  value: null
+  unit: count
+  source: 2282_NAQI/2025_Annual_filed2026-04-08.pdf
+  page: null
+  status: not found
+special_extractions:
+- item: Stage A overrides
+  detail: >-
+    Cash restated to include short-term time deposits; capex includes intangible purchases; D&A includes right-of-use and biological-asset
+    amortisation; finance income (murabaha/time deposits) added; FY2022 IPO-cost add-back removed from IMPAIR_CF.
+open_questions:
+- >-
+  The filings do not explain the fall in wholesale bottled-water sales (SAR 128.9m in FY2022 to SAR 34.3m in FY2025) or give volumes
+  and prices.
+- >-
+  Egg revenue rose from SAR 2.0m (9M2025) to SAR 16.1m (9M2026) after breeder-hen purchases (SAR 7.4m); whether this is new capacity
+  is not disclosed.

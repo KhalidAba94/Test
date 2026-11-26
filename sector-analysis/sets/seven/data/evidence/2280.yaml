@@ -1,0 +1,648 @@
+# Evidence from Almarai Company filings (archive 2280_ALMARAI). Facts only; page = physical PDF page (1-based).
+# Units SAR '000 as presented. Primary statements are scanned images in the FY2023 and FY2025 annuals and the 2025 Q3 / 2026 Q3 interims.
+ticker: '2280'
+company: Almarai Company
+perimeter_changes:
+- event: Acquisition of 100% of Bakemart (UAE and Bahrain frozen bakery); control on 12 January 2022
+  type: acquisition
+  date: '2022-01-12'
+  consideration: 68595
+  revenue_contribution: null
+  profit_contribution: null
+  pro_forma_revenue: null
+  period: FY2022
+  unit: SAR '000
+  source: 2280_ALMARAI/2022_Annual_filed2023-01-22.pdf
+  page: 17
+  quote: On 12 January 2022, the Group obtained the required substantive regulatory approvals and settled the consideration.
+  note: Consideration = cash outflow "Acquisition of Subsidiary" (68,595), FY2022 CF p15. Owned for all but 11 days of FY2022, so no FY2023/FY2022 perimeter effect.
+- event: Purchase of warehouse facilities in Saudi Arabia (SAR 187.9m), accounted for as an asset acquisition, not a business
+  type: acquisition
+  date: '2024'
+  consideration: 187870
+  revenue_contribution: null
+  profit_contribution: null
+  pro_forma_revenue: null
+  period: FY2024
+  unit: SAR '000
+  source: 2280_ALMARAI/2024_Annual_filed2025-01-20.pdf
+  page: 15
+  quote: the arrangement did not meet the definition of a business combination under IFRS 3. Accordingly, the transaction was accounted for as an asset acquisition
+- event: Agreement to buy Hammoudeh Food Industries (Jordan) for SAR 263m, cancelled on 17 March 2025
+  type: acquisition
+  date: '2025-03-17'
+  consideration: null
+  revenue_contribution: null
+  profit_contribution: null
+  pro_forma_revenue: null
+  period: FY2025
+  unit: SAR '000
+  source: 2280_ALMARAI/2025_Annual_filed2026-01-20.pdf
+  page: 16
+  quote: as the seller was unable to meet certain critical conditions, the transaction has been discontinued on 17 Ramadan 1446 A.H (17 March 2025).
+- event: Disposal of the 49% stake in the associate Maria Fondomonte S.A. (Romania) under a settlement agreement
+  type: disposal
+  date: '2025-04-30'
+  consideration: 99200
+  revenue_contribution: null
+  profit_contribution: 75422
+  pro_forma_revenue: null
+  period: FY2025
+  unit: SAR '000
+  source: 2280_ALMARAI/2025_Annual_filed2026-01-20.pdf
+  page: 39
+  quote: the Group entered into a settlement agreement and recovered its investment of 99.2 million by disposing of its entire stake in the Associate
+  note: Equity-accounted, so no revenue effect. Gain 75,422 in Other Expenses, net (note 30, p48).
+- event: Acquisition of 100% of Pure Beverages Industry Company Limited (bottled water, Oska and Ival brands); control on 31 July 2025
+  type: acquisition
+  date: '2025-07-31'
+  consideration: 1012223
+  revenue_contribution: null
+  profit_contribution: null
+  pro_forma_revenue: null
+  period: FY2025
+  unit: SAR '000
+  source: 2280_ALMARAI/2025_Annual_filed2026-01-20.pdf
+  page: 15
+  quote: the Group has completed the acquisition and settled the consideration amounting to 1,012 million.
+  note: Goodwill 328,108; net cash outflow 1,010,094 (note 13, p40). Post-acquisition revenue and pro-forma revenue are not disclosed (searched note 13 and the 2025 Q3 and 2026 Q3 interims).
+- event: Purchase price allocation for Pure Beverages finalised without changes
+  type: acquisition
+  date: '2026'
+  consideration: null
+  revenue_contribution: null
+  profit_contribution: null
+  pro_forma_revenue: null
+  period: 9M2026
+  unit: SAR '000
+  source: 2280_ALMARAI/2026_Q3_filed2026-10-05.pdf
+  page: 13
+  quote: The finalisation of the PPA did not result in any measurement period adjustments
+- event: Business combinations in FY2023 and FY2024
+  type: acquisition
+  status: not found
+  period: FY2023-FY2024
+  source: 2280_ALMARAI/2024_Annual_filed2025-01-20.pdf
+  page: null
+  quote: No business combination note in the FY2023 or FY2024 annual statements; the only FY2024 purchase (warehouses) was an asset acquisition.
+segments:
+- period: FY2022
+  segment: Dairy and Juice
+  basis: operating
+  revenue: 12504123
+  profit: 1261552
+  unit: SAR '000
+  source: 2280_ALMARAI/2023_Annual_filed2024-01-21.pdf
+  page: 53
+  note: third-party revenue; profit = profit for the year by segment
+- period: FY2022
+  segment: Bakery
+  basis: operating
+  revenue: 2439300
+  profit: 334070
+  unit: SAR '000
+  source: 2280_ALMARAI/2023_Annual_filed2024-01-21.pdf
+  page: 53
+  note: third-party revenue; profit = profit for the year by segment
+- period: FY2022
+  segment: Poultry
+  basis: operating
+  revenue: 3013435
+  profit: 302422
+  unit: SAR '000
+  source: 2280_ALMARAI/2023_Annual_filed2024-01-21.pdf
+  page: 53
+  note: third-party revenue; profit = profit for the year by segment
+- period: FY2022
+  segment: Other Activities
+  basis: operating
+  revenue: 765400
+  profit: -119906
+  unit: SAR '000
+  source: 2280_ALMARAI/2023_Annual_filed2024-01-21.pdf
+  page: 53
+  note: third-party revenue; profit = profit for the year by segment
+- period: FY2022
+  segment: Total
+  basis: operating
+  revenue: 18722258
+  profit: 1778138
+  unit: SAR '000
+  source: 2280_ALMARAI/2023_Annual_filed2024-01-21.pdf
+  page: 53
+  note: third-party revenue; profit = profit for the year by segment
+- period: FY2023
+  segment: Dairy and Juice
+  basis: operating
+  revenue: 12902558
+  profit: 1298813
+  unit: SAR '000
+  source: 2280_ALMARAI/2024_Annual_filed2025-01-20.pdf
+  page: 53
+  note: third-party revenue; profit = profit for the year by segment
+- period: FY2023
+  segment: Bakery
+  basis: operating
+  revenue: 2584458
+  profit: 384417
+  unit: SAR '000
+  source: 2280_ALMARAI/2024_Annual_filed2025-01-20.pdf
+  page: 53
+  note: third-party revenue; profit = profit for the year by segment
+- period: FY2023
+  segment: Poultry
+  basis: operating
+  revenue: 3518336
+  profit: 429854
+  unit: SAR '000
+  source: 2280_ALMARAI/2024_Annual_filed2025-01-20.pdf
+  page: 53
+  note: third-party revenue; profit = profit for the year by segment
+- period: FY2023
+  segment: Other Activities
+  basis: operating
+  revenue: 570233
+  profit: -61555
+  unit: SAR '000
+  source: 2280_ALMARAI/2024_Annual_filed2025-01-20.pdf
+  page: 53
+  note: third-party revenue; profit = profit for the year by segment
+- period: FY2023
+  segment: Total
+  basis: operating
+  revenue: 19575585
+  profit: 2051529
+  unit: SAR '000
+  source: 2280_ALMARAI/2024_Annual_filed2025-01-20.pdf
+  page: 53
+  note: third-party revenue; profit = profit for the year by segment
+- period: FY2024
+  segment: Dairy and Juice
+  basis: operating
+  revenue: 14007348
+  profit: 1489538
+  unit: SAR '000
+  source: 2280_ALMARAI/2025_Annual_filed2026-01-20.pdf
+  page: 50
+  note: third-party revenue; profit = profit for the year by segment
+- period: FY2024
+  segment: Bakery
+  basis: operating
+  revenue: 2661579
+  profit: 403325
+  unit: SAR '000
+  source: 2280_ALMARAI/2025_Annual_filed2026-01-20.pdf
+  page: 50
+  note: third-party revenue; profit = profit for the year by segment
+- period: FY2024
+  segment: Poultry
+  basis: operating
+  revenue: 3794209
+  profit: 485782
+  unit: SAR '000
+  source: 2280_ALMARAI/2025_Annual_filed2026-01-20.pdf
+  page: 50
+  note: third-party revenue; profit = profit for the year by segment
+- period: FY2024
+  segment: Other Activities
+  basis: operating
+  revenue: 516376
+  profit: -64978
+  unit: SAR '000
+  source: 2280_ALMARAI/2025_Annual_filed2026-01-20.pdf
+  page: 50
+  note: third-party revenue; profit = profit for the year by segment
+- period: FY2024
+  segment: Total
+  basis: operating
+  revenue: 20979512
+  profit: 2313667
+  unit: SAR '000
+  source: 2280_ALMARAI/2025_Annual_filed2026-01-20.pdf
+  page: 50
+  note: third-party revenue; profit = profit for the year by segment
+- period: FY2025
+  segment: Dairy and Juice
+  basis: operating
+  revenue: 14632844
+  profit: 1537705
+  unit: SAR '000
+  source: 2280_ALMARAI/2025_Annual_filed2026-01-20.pdf
+  page: 50
+  note: third-party revenue; profit = profit for the year by segment
+- period: FY2025
+  segment: Bakery
+  basis: operating
+  revenue: 2789339
+  profit: 452073
+  unit: SAR '000
+  source: 2280_ALMARAI/2025_Annual_filed2026-01-20.pdf
+  page: 50
+  note: third-party revenue; profit = profit for the year by segment
+- period: FY2025
+  segment: Poultry
+  basis: operating
+  revenue: 3927229
+  profit: 489600
+  unit: SAR '000
+  source: 2280_ALMARAI/2025_Annual_filed2026-01-20.pdf
+  page: 50
+  note: third-party revenue; profit = profit for the year by segment
+- period: FY2025
+  segment: Other Activities
+  basis: operating
+  revenue: 715464
+  profit: -22705
+  unit: SAR '000
+  source: 2280_ALMARAI/2025_Annual_filed2026-01-20.pdf
+  page: 50
+  note: third-party revenue; profit = profit for the year by segment
+- period: FY2025
+  segment: Total
+  basis: operating
+  revenue: 22064876
+  profit: 2456673
+  unit: SAR '000
+  source: 2280_ALMARAI/2025_Annual_filed2026-01-20.pdf
+  page: 50
+  note: third-party revenue; profit = profit for the year by segment
+- period: 9M2025
+  segment: Dairy and Juice
+  basis: operating
+  revenue: 11189163
+  unit: SAR '000
+  source: 2280_ALMARAI/2026_Q3_filed2026-10-05.pdf
+  page: 15
+  note: third-party revenue; profit = profit for the year by segment
+- period: 9M2025
+  segment: Bakery
+  basis: operating
+  revenue: 2029927
+  unit: SAR '000
+  source: 2280_ALMARAI/2026_Q3_filed2026-10-05.pdf
+  page: 15
+  note: third-party revenue; profit = profit for the year by segment
+- period: 9M2025
+  segment: Protein (re-presented)
+  basis: operating
+  revenue: 3017038
+  unit: SAR '000
+  source: 2280_ALMARAI/2026_Q3_filed2026-10-05.pdf
+  page: 15
+  note: third-party revenue; profit = profit for the year by segment
+- period: 9M2025
+  segment: Other Activities (re-presented)
+  basis: operating
+  revenue: 371963
+  unit: SAR '000
+  source: 2280_ALMARAI/2026_Q3_filed2026-10-05.pdf
+  page: 15
+  note: third-party revenue; profit = profit for the year by segment
+- period: 9M2025
+  segment: Total
+  basis: operating
+  revenue: 16608091
+  unit: SAR '000
+  source: 2280_ALMARAI/2026_Q3_filed2026-10-05.pdf
+  page: 15
+  note: third-party revenue; profit = profit for the year by segment
+- period: 9M2026
+  segment: Dairy and Juice
+  basis: operating
+  revenue: 11905675
+  unit: SAR '000
+  source: 2280_ALMARAI/2026_Q3_filed2026-10-05.pdf
+  page: 15
+  note: third-party revenue; profit = profit for the year by segment
+- period: 9M2026
+  segment: Bakery
+  basis: operating
+  revenue: 2201091
+  unit: SAR '000
+  source: 2280_ALMARAI/2026_Q3_filed2026-10-05.pdf
+  page: 15
+  note: third-party revenue; profit = profit for the year by segment
+- period: 9M2026
+  segment: Protein
+  basis: operating
+  revenue: 3380226
+  unit: SAR '000
+  source: 2280_ALMARAI/2026_Q3_filed2026-10-05.pdf
+  page: 15
+  note: third-party revenue; profit = profit for the year by segment
+- period: 9M2026
+  segment: Other Activities
+  basis: operating
+  revenue: 728664
+  unit: SAR '000
+  source: 2280_ALMARAI/2026_Q3_filed2026-10-05.pdf
+  page: 15
+  note: third-party revenue; profit = profit for the year by segment
+- period: 9M2026
+  segment: Total
+  basis: operating
+  revenue: 18215656
+  unit: SAR '000
+  source: 2280_ALMARAI/2026_Q3_filed2026-10-05.pdf
+  page: 15
+  note: third-party revenue; profit = profit for the year by segment
+- period: FY2022
+  segment: Saudi Arabia
+  basis: geographic
+  revenue: 12099752
+  unit: SAR '000
+  source: 2280_ALMARAI/2023_Annual_filed2024-01-21.pdf
+  page: 54
+- period: FY2022
+  segment: Other GCC Countries
+  basis: geographic
+  revenue: 3642590
+  unit: SAR '000
+  source: 2280_ALMARAI/2023_Annual_filed2024-01-21.pdf
+  page: 54
+- period: FY2022
+  segment: Other Countries (Egypt, Jordan, exports, arable farms)
+  basis: geographic
+  revenue: 2979916
+  unit: SAR '000
+  source: 2280_ALMARAI/2023_Annual_filed2024-01-21.pdf
+  page: 54
+- period: FY2023
+  segment: Saudi Arabia
+  basis: geographic
+  revenue: 13188218
+  unit: SAR '000
+  source: 2280_ALMARAI/2024_Annual_filed2025-01-20.pdf
+  page: 53
+- period: FY2023
+  segment: Other GCC Countries
+  basis: geographic
+  revenue: 3865769
+  unit: SAR '000
+  source: 2280_ALMARAI/2024_Annual_filed2025-01-20.pdf
+  page: 53
+- period: FY2023
+  segment: Other Countries (Egypt, Jordan, exports, arable farms)
+  basis: geographic
+  revenue: 2521598
+  unit: SAR '000
+  source: 2280_ALMARAI/2024_Annual_filed2025-01-20.pdf
+  page: 53
+- period: FY2024
+  segment: Saudi Arabia
+  basis: geographic
+  revenue: 13904171
+  unit: SAR '000
+  source: 2280_ALMARAI/2025_Annual_filed2026-01-20.pdf
+  page: 50
+- period: FY2024
+  segment: Other GCC Countries
+  basis: geographic
+  revenue: 4282610
+  unit: SAR '000
+  source: 2280_ALMARAI/2025_Annual_filed2026-01-20.pdf
+  page: 50
+- period: FY2024
+  segment: Other Countries (Egypt, Jordan, exports, arable farms)
+  basis: geographic
+  revenue: 2792731
+  unit: SAR '000
+  source: 2280_ALMARAI/2025_Annual_filed2026-01-20.pdf
+  page: 50
+- period: FY2025
+  segment: Saudi Arabia
+  basis: geographic
+  revenue: 14578333
+  unit: SAR '000
+  source: 2280_ALMARAI/2025_Annual_filed2026-01-20.pdf
+  page: 50
+- period: FY2025
+  segment: Other GCC Countries
+  basis: geographic
+  revenue: 4547824
+  unit: SAR '000
+  source: 2280_ALMARAI/2025_Annual_filed2026-01-20.pdf
+  page: 50
+- period: FY2025
+  segment: Other Countries (Egypt, Jordan, exports, arable farms)
+  basis: geographic
+  revenue: 2938719
+  unit: SAR '000
+  source: 2280_ALMARAI/2025_Annual_filed2026-01-20.pdf
+  page: 50
+- period: 9M2025
+  segment: Saudi Arabia
+  basis: geographic
+  revenue: 11022803
+  unit: SAR '000
+  source: 2280_ALMARAI/2026_Q3_filed2026-10-05.pdf
+  page: 16
+- period: 9M2025
+  segment: Other GCC Countries
+  basis: geographic
+  revenue: 3432716
+  unit: SAR '000
+  source: 2280_ALMARAI/2026_Q3_filed2026-10-05.pdf
+  page: 16
+- period: 9M2025
+  segment: Other Countries (Egypt, Jordan, exports, arable farms)
+  basis: geographic
+  revenue: 2152572
+  unit: SAR '000
+  source: 2280_ALMARAI/2026_Q3_filed2026-10-05.pdf
+  page: 16
+- period: 9M2026
+  segment: Saudi Arabia
+  basis: geographic
+  revenue: 11980460
+  unit: SAR '000
+  source: 2280_ALMARAI/2026_Q3_filed2026-10-05.pdf
+  page: 16
+- period: 9M2026
+  segment: Other GCC Countries
+  basis: geographic
+  revenue: 3632611
+  unit: SAR '000
+  source: 2280_ALMARAI/2026_Q3_filed2026-10-05.pdf
+  page: 16
+- period: 9M2026
+  segment: Other Countries (Egypt, Jordan, exports, arable farms)
+  basis: geographic
+  revenue: 2602585
+  unit: SAR '000
+  source: 2280_ALMARAI/2026_Q3_filed2026-10-05.pdf
+  page: 16
+revenue_drivers:
+- period: 9M2026
+  driver: 'Segment change: seafood and value-added meat moved from Other Activities into a new Protein segment; 9M2025 re-presented'
+  value: null
+  unit: SAR '000
+  source: 2280_ALMARAI/2026_Q3_filed2026-10-05.pdf
+  page: 16
+  quote: Effective Q1 2026, the Group has expanded its 'Poultry' operating segment to a broader 'Protein' segment.
+- period: FY2025
+  driver: Water (Pure Beverages) added to Other Activities from 31 July 2025
+  value: null
+  unit: SAR '000
+  source: 2280_ALMARAI/2025_Annual_filed2026-01-20.pdf
+  page: 49
+  quote: Other Activities Arable, horticulture, infant nutrition, seafood, value added meat products and water.
+- period: FY2024
+  driver: Sales to Panda Retail (Savola group), a related party until 15 Dec 2024
+  value: 967764
+  unit: SAR '000
+  source: 2280_ALMARAI/2025_Annual_filed2026-01-20.pdf
+  page: 52
+  quote: Effective from 15 December 2024, the relationships with Savola Group companies no longer qualify as related party relationships
+- period: FY2022-9M2026
+  driver: Volumes, prices, outlet or route counts
+  value: null
+  unit: null
+  status: not found
+  source: 2280_ALMARAI/2025_Annual_filed2026-01-20.pdf
+  page: null
+  quote: The financial statements give revenue by segment and region only; no volumes, prices or point-of-sale counts.
+one_offs:
+- period: FY2022
+  item: Impairment of investment in associate (Maria Fondomonte)
+  amount: -82921
+  unit: SAR '000
+  pnl_line: Other Expenses, net
+  recurring: false
+  source: 2280_ALMARAI/2023_Annual_filed2024-01-21.pdf
+  page: 52
+  quote: Impairment on Investment in Associate (Refer note 12.2) - 82,921
+  note: 'Impairment: already outside EBITDA (IMPAIR_CF).'
+- period: 9M2025
+  item: Gain on disposal of the associate stake (net of recovery costs)
+  amount: 43600
+  unit: SAR '000
+  pnl_line: Other Expenses, net
+  recurring: false
+  source: 2280_ALMARAI/2025_Q3_filed2025-10-05.pdf
+  page: 13
+  quote: resulted in a gain on disposal of 43.6 million, determined after deducting the associated recovery costs
+- period: FY2025
+  item: Gain on disposal of investment (associate)
+  amount: 75422
+  unit: SAR '000
+  pnl_line: Other Expenses, net
+  recurring: false
+  source: 2280_ALMARAI/2025_Annual_filed2026-01-20.pdf
+  page: 48
+  quote: Gain on Disposal of Investment (Refer note 12.2) (75,422)
+- period: FY2022-FY2025
+  item: Loss on disposal of biological assets (dairy herd culls)
+  amount: null
+  unit: SAR '000
+  pnl_line: Other Expenses, net
+  recurring: true
+  source: 2280_ALMARAI/2025_Annual_filed2026-01-20.pdf
+  page: 48
+  quote: Loss on Disposal of Biological Assets (Refer note 30.1) 127,686 123,142
+  note: Recurring part of herd management (85.6m FY2022 to 127.7m FY2025); not treated as a one-off.
+restatements:
+- period_restated: FY2022
+  item: CFO
+  from: 3829349
+  to: 3829649
+  unit: SAR '000
+  reason: FY2023 annual moved the dividend from equity investment (300) into operating activities and reclassified provision and working-capital lines
+  source: 2280_ALMARAI/2023_Annual_filed2024-01-21.pdf
+  page: 13
+  quote: Net Cash Generated from Operating Activities 4,482,626 3,829,649
+- period_restated: 9M2025
+  item: Segment revenue
+  from: null
+  to: null
+  unit: SAR '000
+  reason: Seafood and value-added meat moved from Other Activities to Protein
+  source: 2280_ALMARAI/2026_Q3_filed2026-10-05.pdf
+  page: 16
+  quote: month period ended 30 September 2025 have been reclassified to align with this revised segment composition.
+significant_events:
+- date: '2023-07-25'
+  event: International Sukuk Series II, USD 750m at 5.2%
+  financial_effect: borrowings
+  source: 2280_ALMARAI/2025_Annual_filed2026-01-20.pdf
+  page: 44
+  quote: the Group issued its International Sukuk – Series II amounting to USD 750.0 million
+- date: '2025-09-24'
+  event: International Sukuk Series III, USD 500m (SAR 1,876.3m) at 4.5%
+  financial_effect: borrowings
+  source: 2280_ALMARAI/2025_Annual_filed2026-01-20.pdf
+  page: 44
+  quote: the Group issued its International Sukuk – Series III amounting to USD 500.0 million
+- date: '2025-12-31'
+  event: 'Capital commitments SAR 2.6bn (2024: SAR 4.4bn), mainly poultry expansion'
+  financial_effect: capex
+  source: 2280_ALMARAI/2025_Annual_filed2026-01-20.pdf
+  page: 51
+  quote: The majority of the capital commitments are for poultry business expansion, updating the existing production facilities
+- date: '2025'
+  event: Overdraft facilities in Egypt and Jordan at average rates of 25.0% and 8.8%
+  financial_effect: finance cost
+  source: 2280_ALMARAI/2025_Annual_filed2026-01-20.pdf
+  page: 51
+  quote: The average rate on overdrafts facility during 2025 was 25.0% and 8.8% per annum for Egypt and Jordan respectively.
+- date: '2026'
+  event: Regional geopolitical developments monitored; supply-chain conditions
+  financial_effect: not quantified
+  source: 2280_ALMARAI/2026_Q3_filed2026-10-05.pdf
+  page: 11
+  quote: The Group continues to monitor regional geopolitical developments and related supply chain conditions.
+- date: 2026-01
+  event: Board proposed a FY2025 dividend of SAR 1.15bn
+  financial_effect: dividend
+  source: 2280_ALMARAI/2025_Annual_filed2026-01-20.pdf
+  page: 58
+  quote: The Board of Directors have proposed, for shareholders’ approval at the General Assembly Meeting, a dividend of 1.15 billion
+audit_opinion:
+- period: FY2022
+  opinion: unmodified (PricewaterhouseCoopers)
+  emphasis_of_matter: none
+  source: 2280_ALMARAI/2022_Annual_filed2023-01-22.pdf
+  page: 3
+- period: FY2023
+  opinion: unmodified (KPMG)
+  emphasis_of_matter: none
+  source: 2280_ALMARAI/2023_Annual_filed2024-01-21.pdf
+  page: 3
+- period: FY2024
+  opinion: unmodified (KPMG)
+  emphasis_of_matter: none
+  source: 2280_ALMARAI/2024_Annual_filed2025-01-20.pdf
+  page: 3
+- period: FY2025
+  opinion: unmodified (KPMG); page has a broken font layer, read by OCR
+  emphasis_of_matter: none
+  source: 2280_ALMARAI/2025_Annual_filed2026-01-20.pdf
+  page: 3
+- period: 9M2026
+  opinion: review conclusion unmodified (KPMG)
+  emphasis_of_matter: none
+  source: 2280_ALMARAI/2026_Q3_filed2026-10-05.pdf
+  page: 4
+kpis_in_filings:
+- period: FY2022-9M2026
+  kpi: outlets, volumes, like-for-like sales
+  value: null
+  unit: null
+  source: 2280_ALMARAI/2025_Annual_filed2026-01-20.pdf
+  page: null
+  status: not found
+special_extractions:
+- item: Finance cost, net split (note 31)
+  FY2025:
+    interest_income: 10946
+    net: 463346
+  FY2024:
+    interest_income: 31593
+    net: 530260
+  unit: SAR '000
+  source: 2280_ALMARAI/2025_Annual_filed2026-01-20.pdf
+  page: 49
+open_questions:
+- Revenue of Pure Beverages since 31 July 2025 (and pro-forma) is not disclosed, so the FY2025 and 9M2026 perimeter effects cannot be measured.
+- No constant-currency revenue is given for Egypt and Jordan (IDJ); the FX effect of Egyptian pound devaluations cannot be measured.
+- The 9M2025 associate gain (43.6m, 2025 Q3) and the FY2025 gain (75.4m) are measured differently (recovery costs); the 2026 Q3 interim does not restate the 9M2025 amount.

@@ -1,0 +1,243 @@
+# Evidence extracted from Americana Restaurants International PLC filings (archive: SEVEN_FNB/6015_AMERICANA). Facts only; page = physical PDF page (1-based).
+# The company reports in US dollars (USD '000 as presented). Our tables convert at the SAR/USD peg of 3.75; amounts below are in USD m (USD '000 / 1,000) unless stated.
+# Scanned pages: the FY2022 annual (2022_Annual_filed2023-04-09.pdf) has no text layer (read from page images and OCR); the balance-sheet pages and the directors' reports of later annuals are images too.
+ticker: "6015"
+company: "Americana Restaurants International PLC"
+
+perimeter_changes:
+  - event: "Acquisition of the Pizza Hut business in Oman: 100% of Fast Food & Restaurants Company SPC (formerly Khimji International LLC)"
+    type: acquisition
+    date: "2025-01-23"
+    consideration: 10.664
+    revenue_contribution: null
+    profit_contribution: null
+    pro_forma_revenue: null
+    period: "FY2025"
+    unit: "USD m"
+    source: "6015_AMERICANA/2025_Annual_filed2026-02-08.pdf"
+    page: 59
+    quote: "On 23 January 2025, the Group acquired Pizza Hut business in Oman, through one of its subsidiaries, International Tourism Restaurants Company LLC"
+    note: "Consideration USD 10,664k, net cash outflow USD 10,565k, no goodwill (p60). Revenue and profit contributed since acquisition are not disclosed in the FY2025 annual or the 2025 interims. Oman sits in the Lower Gulf segment."
+  - event: "Acquisition of 100% of Americana Arabic Cuisine L.L.C (formerly Yummy Junction International Investment LLC), operator of Malak Al Tawouk restaurants in the UAE"
+    type: acquisition
+    date: "2026-02-26"
+    consideration: 19.294
+    revenue_contribution: null
+    profit_contribution: null
+    pro_forma_revenue: null
+    period: "9M2026"
+    unit: "USD m"
+    source: "6015_AMERICANA/2026_Q3_filed2026-10-27.pdf"
+    page: 36
+    quote: "On 26 February 2026, the Group acquired 100% of the shares in Americana Arabic Cuisine L.L.C"
+    note: "Goodwill USD 1,851k; intangible assets USD 17,556k; provisional purchase price allocation (p37). Revenue contribution not disclosed."
+  - event: "Acquisition of 100% of Rock Star International Restaurants For Meals Serving LLC, operator of Malak Al Tawouk restaurants in KSA"
+    type: acquisition
+    date: "2026-07-08"
+    consideration: 0.911
+    revenue_contribution: null
+    profit_contribution: null
+    pro_forma_revenue: null
+    period: "9M2026"
+    unit: "USD m"
+    source: "6015_AMERICANA/2026_Q3_filed2026-10-27.pdf"
+    page: 37
+    quote: "On 8 July 2026, the Group acquired 100% of the shares in Rock Star International Restaurants For Meals Serving LLC"
+    note: "Fair value of net assets USD 1,822k against consideration USD 911k: bargain purchase gain USD 911k in other income (p37). Total net cash outflow on acquisitions in 9M 2026 USD 19,138k. Revenue contribution not disclosed."
+  - event: "Business combinations in FY2022, FY2023 and FY2024"
+    type: acquisition
+    status: "not found"
+    period: "FY2022-FY2024"
+    source: "6015_AMERICANA/2025_Annual_filed2026-02-08.pdf"
+    page: 13
+    quote: "Acquisition of a subsidiary 36 (10,565) -"
+    note: "The FY2025 cash-flow statement shows no acquisition of a subsidiary in 2024; the FY2023 and FY2024 annuals (cash flows p15) have no acquisition line and no business-combination note. Purchases of additional shares from non-controlling interests (USD 54k in 2023, USD 4,623k in 2025) change ownership, not the perimeter."
+  - event: "Transfer of the restaurant business from Kuwait Food Company (Americana) K.S.C.C. into the Group (common-control reorganisation); FY2022 combines carve-out figures to 27 June 2022 with the new group thereafter"
+    type: new_subsidiary
+    date: "2022-06-27"
+    consideration: null
+    revenue_contribution: null
+    profit_contribution: null
+    pro_forma_revenue: null
+    period: "FY2022"
+    unit: "USD m"
+    source: "6015_AMERICANA/2023_Annual_filed2024-02-14.pdf"
+    page: 4
+    quote: "did not operate as a separate group for the period up to 27 June 2022, being the date of transfer of the Americana Restaurants’ business"
+    note: "Same restaurant business before and after the transfer; not a revenue perimeter change. Explains the 'Net Parent Investment attributable to Former Parent Company' wording for FY2021-FY2022 profit and equity."
+
+segments:
+  # Geographic operating segments. Revenue = total after intercompany eliminations (eliminations sit in Lower Gulf). Profit = segment net profit before income tax, zakat and unallocated FX losses (annual); profit before income tax and zakat (9M).
+  - {period: "FY2022", segment: "Major GCC (KSA, Kuwait, UAE)", basis: geographic, revenue: 1604.514, profit: 251.268, unit: "USD m", source: "6015_AMERICANA/2023_Annual_filed2024-02-14.pdf", page: 59}
+  - {period: "FY2022", segment: "Lower Gulf (Qatar, Oman, Bahrain), after eliminations of 52.761", basis: geographic, revenue: 261.665, profit: 22.360, unit: "USD m", source: "6015_AMERICANA/2023_Annual_filed2024-02-14.pdf", page: 59}
+  - {period: "FY2022", segment: "North Africa (Egypt, Morocco)", basis: geographic, revenue: 294.661, profit: -26.217, unit: "USD m", source: "6015_AMERICANA/2023_Annual_filed2024-02-14.pdf", page: 59}
+  - {period: "FY2022", segment: "Others (Kazakhstan, Iraq, Lebanon, Jordan)", basis: geographic, revenue: 217.707, profit: 28.014, unit: "USD m", source: "6015_AMERICANA/2023_Annual_filed2024-02-14.pdf", page: 59}
+  - {period: "FY2022", segment: "Total", basis: geographic, revenue: 2378.547, profit: 275.425, unit: "USD m", source: "6015_AMERICANA/2023_Annual_filed2024-02-14.pdf", page: 59}
+  - {period: "FY2023", segment: "Major GCC", basis: geographic, revenue: 1684.671, profit: 214.504, unit: "USD m", source: "6015_AMERICANA/2024_Annual_filed2025-02-12.pdf", page: 61}
+  - {period: "FY2023", segment: "Lower Gulf, after eliminations of 36.706", basis: geographic, revenue: 241.375, profit: 13.148, unit: "USD m", source: "6015_AMERICANA/2024_Annual_filed2025-02-12.pdf", page: 61}
+  - {period: "FY2023", segment: "North Africa", basis: geographic, revenue: 237.824, profit: 12.341, unit: "USD m", source: "6015_AMERICANA/2024_Annual_filed2025-02-12.pdf", page: 61}
+  - {period: "FY2023", segment: "Others", basis: geographic, revenue: 249.264, profit: 36.346, unit: "USD m", source: "6015_AMERICANA/2024_Annual_filed2025-02-12.pdf", page: 61}
+  - {period: "FY2023", segment: "Total", basis: geographic, revenue: 2413.134, profit: 276.339, unit: "USD m", source: "6015_AMERICANA/2024_Annual_filed2025-02-12.pdf", page: 61}
+  - {period: "FY2024", segment: "Major GCC", basis: geographic, revenue: 1637.748, profit: 179.832, unit: "USD m", source: "6015_AMERICANA/2025_Annual_filed2026-02-08.pdf", page: 57}
+  - {period: "FY2024", segment: "Lower Gulf, after eliminations of 24.236", basis: geographic, revenue: 169.965, profit: -9.242, unit: "USD m", source: "6015_AMERICANA/2025_Annual_filed2026-02-08.pdf", page: 57}
+  - {period: "FY2024", segment: "North Africa", basis: geographic, revenue: 174.723, profit: -0.596, unit: "USD m", source: "6015_AMERICANA/2025_Annual_filed2026-02-08.pdf", page: 57}
+  - {period: "FY2024", segment: "Others", basis: geographic, revenue: 214.315, profit: 6.288, unit: "USD m", source: "6015_AMERICANA/2025_Annual_filed2026-02-08.pdf", page: 57}
+  - {period: "FY2024", segment: "Total", basis: geographic, revenue: 2196.751, profit: 176.282, unit: "USD m", source: "6015_AMERICANA/2025_Annual_filed2026-02-08.pdf", page: 57}
+  - {period: "FY2025", segment: "Major GCC", basis: geographic, revenue: 1821.532, profit: 214.977, unit: "USD m", source: "6015_AMERICANA/2025_Annual_filed2026-02-08.pdf", page: 57}
+  - {period: "FY2025", segment: "Lower Gulf, after eliminations of 31.923", basis: geographic, revenue: 225.978, profit: 9.255, unit: "USD m", source: "6015_AMERICANA/2025_Annual_filed2026-02-08.pdf", page: 57}
+  - {period: "FY2025", segment: "North Africa", basis: geographic, revenue: 223.236, profit: 6.028, unit: "USD m", source: "6015_AMERICANA/2025_Annual_filed2026-02-08.pdf", page: 57}
+  - {period: "FY2025", segment: "Others", basis: geographic, revenue: 238.075, profit: 25.088, unit: "USD m", source: "6015_AMERICANA/2025_Annual_filed2026-02-08.pdf", page: 57}
+  - {period: "FY2025", segment: "Total", basis: geographic, revenue: 2508.821, profit: 255.348, unit: "USD m", source: "6015_AMERICANA/2025_Annual_filed2026-02-08.pdf", page: 57}
+  - {period: "9M2025", segment: "Major GCC (profit = profit before income tax and zakat)", basis: geographic, revenue: 1335.958, profit: 141.738, unit: "USD m", source: "6015_AMERICANA/2026_Q3_filed2026-10-27.pdf", page: 33}
+  - {period: "9M2025", segment: "Lower Gulf, after eliminations of 21.093", basis: geographic, revenue: 164.188, profit: 2.675, unit: "USD m", source: "6015_AMERICANA/2026_Q3_filed2026-10-27.pdf", page: 33}
+  - {period: "9M2025", segment: "North Africa", basis: geographic, revenue: 164.927, profit: 4.788, unit: "USD m", source: "6015_AMERICANA/2026_Q3_filed2026-10-27.pdf", page: 33}
+  - {period: "9M2025", segment: "Others", basis: geographic, revenue: 174.628, profit: 11.260, unit: "USD m", source: "6015_AMERICANA/2026_Q3_filed2026-10-27.pdf", page: 33}
+  - {period: "9M2025", segment: "Total", basis: geographic, revenue: 1839.701, profit: 160.461, unit: "USD m", source: "6015_AMERICANA/2026_Q3_filed2026-10-27.pdf", page: 33}
+  - {period: "9M2026", segment: "Major GCC (profit = profit before income tax and zakat)", basis: geographic, revenue: 1481.979, profit: 207.046, unit: "USD m", source: "6015_AMERICANA/2026_Q3_filed2026-10-27.pdf", page: 33}
+  - {period: "9M2026", segment: "Lower Gulf, after eliminations of 20.361", basis: geographic, revenue: 202.880, profit: 23.396, unit: "USD m", source: "6015_AMERICANA/2026_Q3_filed2026-10-27.pdf", page: 33}
+  - {period: "9M2026", segment: "North Africa", basis: geographic, revenue: 192.549, profit: 11.008, unit: "USD m", source: "6015_AMERICANA/2026_Q3_filed2026-10-27.pdf", page: 33}
+  - {period: "9M2026", segment: "Others", basis: geographic, revenue: 199.461, profit: 13.363, unit: "USD m", source: "6015_AMERICANA/2026_Q3_filed2026-10-27.pdf", page: 33}
+  - {period: "9M2026", segment: "Total", basis: geographic, revenue: 2076.869, profit: 254.813, unit: "USD m", source: "6015_AMERICANA/2026_Q3_filed2026-10-27.pdf", page: 33}
+  # Revenue (before eliminations) of the four largest countries
+  - {period: "FY2022", segment: "UAE / KSA / Kuwait / Egypt", basis: geographic, revenue: {UAE: 703.648, KSA: 527.585, Kuwait: 373.281, Egypt: 258.424}, profit: null, unit: "USD m", source: "6015_AMERICANA/2023_Annual_filed2024-02-14.pdf", page: 59}
+  - {period: "FY2023", segment: "UAE / KSA / Kuwait / Egypt", basis: geographic, revenue: {UAE: 750.972, KSA: 594.518, Kuwait: 339.181, Egypt: 195.018}, profit: null, unit: "USD m", source: "6015_AMERICANA/2024_Annual_filed2025-02-12.pdf", page: 62}
+  - {period: "FY2024", segment: "UAE / KSA / Kuwait / Egypt", basis: geographic, revenue: {UAE: 748.814, KSA: 582.984, Kuwait: 305.950, Egypt: 133.371}, profit: null, unit: "USD m", source: "6015_AMERICANA/2025_Annual_filed2026-02-08.pdf", page: 58}
+  - {period: "FY2025", segment: "UAE / KSA / Kuwait / Egypt", basis: geographic, revenue: {UAE: 844.653, KSA: 629.910, Kuwait: 346.969, Egypt: 172.557}, profit: null, unit: "USD m", source: "6015_AMERICANA/2025_Annual_filed2026-02-08.pdf", page: 58}
+
+revenue_drivers:
+  - {period: "FY2022", driver: "Restaurants operated (12 brands)", value: 2183, unit: "count", source: "6015_AMERICANA/2022_Annual_filed2023-04-09.pdf", page: 3, quote: "The Group operates 2,183 restaurants under a portfolio of 12 brands across key consumer verticals and occasions"}
+  - {period: "FY2023", driver: "Restaurants operated (12 brands, 12 countries)", value: 2435, unit: "count", source: "6015_AMERICANA/2023_Annual_filed2024-02-14.pdf", page: 3, quote: "The Group operates 2,435 restaurants under a portfolio of 12 brands"}
+  - {period: "FY2024", driver: "Restaurants operated", value: 2590, unit: "count", source: "6015_AMERICANA/2024_Annual_filed2025-02-12.pdf", page: 3, quote: "The Group operates 2,590 restaurants under a portfolio of 12 brands across key consumer verticals and occasions"}
+  - {period: "FY2025", driver: "Restaurants operated", value: 2749, unit: "count", source: "6015_AMERICANA/2025_Annual_filed2026-02-08.pdf", page: 3, quote: "The Group operates 2,749 restaurants under a portfolio of 12 brands across key consumer verticals and occasions"}
+  - {period: "FY2025", driver: "Food and beverage revenue (FY2024: 2,189.958); investment property rental 2.257 (1.843); other 5.948 (4.950)", value: 2500.616, unit: "USD m", source: "6015_AMERICANA/2025_Annual_filed2026-02-08.pdf", page: 49, quote: "Food and beverage 2,500,616 2,189,958"}
+  - {period: "FY2022", driver: "Hyperinflation (IAS 29, Lebanon) increase in revenue", value: 4.223, unit: "USD m", source: "6015_AMERICANA/2023_Annual_filed2024-02-14.pdf", page: 33, quote: "Increase in revenue 5,488 4,223"}
+  - {period: "FY2023", driver: "Hyperinflation (IAS 29, Lebanon) increase in revenue", value: 5.488, unit: "USD m", source: "6015_AMERICANA/2024_Annual_filed2025-02-12.pdf", page: 33, quote: "Increase in revenue 700 5,488"}
+  - {period: "FY2024", driver: "Hyperinflation (IAS 29, Lebanon) increase in revenue", value: 0.700, unit: "USD m", source: "6015_AMERICANA/2025_Annual_filed2026-02-08.pdf", page: 31, quote: "Increase in revenue 921 700"}
+  - {period: "FY2025", driver: "Hyperinflation (IAS 29, Lebanon) increase in revenue", value: 0.921, unit: "USD m", source: "6015_AMERICANA/2025_Annual_filed2026-02-08.pdf", page: 31, quote: "Increase in revenue 921 700"}
+  - {period: "9M2025", driver: "Hyperinflation (IAS 29, Lebanon) increase in revenues (9M2024: 266)", value: 0.310, unit: "USD m", source: "6015_AMERICANA/2025_Q3_filed2025-10-30.pdf", page: 15, quote: "Increase in revenues 310 266"}
+  - {period: "9M2026", driver: "Hyperinflation increase in revenues", value: null, unit: "USD m", status: "not found", source: "6015_AMERICANA/2026_Q3_filed2026-10-27.pdf", page: 13, quote: "The economy of Lebanon was assessed to be hyperinflationary effective September 2020, and hyperinflation accounting has been applied since."}
+  - {period: "FY2022-9M2026", driver: "Hyperinflationary economies: Lebanon only (no other country, including Egypt, is treated as hyperinflationary)", value: null, unit: "%", source: "6015_AMERICANA/2025_Annual_filed2026-02-08.pdf", page: 31, quote: "the subsidiary of the Group, International Touristic Projects Lebanese Co has been accounted for as entity operating in hyperinflationary economies"}
+  - {period: "FY2022-9M2026", driver: "Like-for-like / same-store sales growth", value: null, unit: "%", status: "not found", source: "6015_AMERICANA/2025_Annual_filed2026-02-08.pdf", page: 3, quote: "Searched all annual and interim PDFs (text and directors' reports): no like-for-like, same-store or constant-currency sales figure."}
+  - {period: "FY2022-9M2026", driver: "FX translation effect on revenue", value: null, unit: "USD m", status: "not found", source: "6015_AMERICANA/2025_Annual_filed2026-02-08.pdf", page: 27, quote: "Kuwaiti Dinar (“KWD”), Saudi Riyal (“SAR”), UAE Dirham (“AED”), and Egyptian Pound (“EGP”)."}
+  - {period: "9M2026", driver: "Restaurant count at 30 Sep", value: null, unit: "count", status: "not found", source: "6015_AMERICANA/2026_Q3_filed2026-10-27.pdf", page: 10, quote: "Interim statements give no restaurant count."}
+
+one_offs:
+  - {period: "FY2022", item: "Tax claim charges: non-recurring provision to settle an indirect tax claim for 2000-2017 (settlement agreements Aug 2022)", amount: -22.534, unit: "USD m", pnl_line: "Fair value losses and tax claims (inside operating profit)", recurring: false, source: "6015_AMERICANA/2023_Annual_filed2024-02-14.pdf", page: 49, quote: "The tax claim charges is a non-recurring provision to settle an indirect tax claim relating to the historical period 2000-2017."}
+  - {period: "FY2022", item: "Fair value gain on the REEF Technology derivative (put/call on a 25% cloud-kitchen stake)", amount: 1.941, unit: "USD m", pnl_line: "Fair value losses and tax claims", recurring: false, source: "6015_AMERICANA/2023_Annual_filed2024-02-14.pdf", page: 48, quote: "Fair value losses/ (gains) on derivative financial instrument (Note 9) 11,331 (1,941)"}
+  - {period: "FY2022", item: "Release of deferred gain on the REEF derivative", amount: 1.878, unit: "USD m", pnl_line: "Other income", recurring: false, source: "6015_AMERICANA/2023_Annual_filed2024-02-14.pdf", page: 15, quote: "Recognition of deferred gain on derivative financial instrument in other income 9 (7,512) (1,878)"}
+  - {period: "FY2022", item: "Gain on COVID-19 rent concessions", amount: 0.667, unit: "USD m", pnl_line: "Other income", recurring: false, source: "6015_AMERICANA/2023_Annual_filed2024-02-14.pdf", page: 15, quote: "Gain on rent concessions - (667)"}
+  - {period: "FY2023", item: "REEF derivative written down to nil (management intends to exit the arrangement)", amount: -11.331, unit: "USD m", pnl_line: "Fair value losses on derivative assets (inside operating profit)", recurring: false, source: "6015_AMERICANA/2024_Annual_filed2025-02-12.pdf", page: 12, quote: "Fair value losses on derivative assets 16 - (11,331)"}
+  - {period: "FY2023", item: "Release of the remaining deferred gain on the REEF derivative", amount: 7.512, unit: "USD m", pnl_line: "Other income", recurring: false, source: "6015_AMERICANA/2024_Annual_filed2025-02-12.pdf", page: 15, quote: "Recognition of deferred gain on derivative financial instrument in other income 16 - (7,512)"}
+  - {period: "FY2024", item: "Impairment losses on non-financial assets (already outside EBITDA; listed for information)", amount: -12.631, unit: "USD m", pnl_line: "Impairment losses on non-financial assets", recurring: false, source: "6015_AMERICANA/2025_Annual_filed2026-02-08.pdf", page: 10, quote: "Impairment losses on non-financial assets 4 (5,559) (12,631)"}
+  - {period: "FY2025", item: "Pillar Two domestic minimum top-up tax (first year; recurring in nature; in the tax line, not operating income)", amount: -14.040, unit: "USD m", pnl_line: "Income tax and zakat", recurring: false, source: "6015_AMERICANA/2025_Annual_filed2026-02-08.pdf", page: 52, quote: "the Group has recognized a Pillar Two current tax expense of USD 14,040 thousand, arising from the application of the DMTT rules"}
+  - {period: "9M2026", item: "Gain on bargain purchase (Malak Al Tawouk KSA)", amount: 0.911, unit: "USD m", pnl_line: "Other income", recurring: false, source: "6015_AMERICANA/2026_Q3_filed2026-10-27.pdf", page: 37, quote: "resulting in a bargain purchase gain of USD 911 thousand, recognised in the condensed consolidated interim statement of profit or loss within ‘Other income’."}
+  - {period: "FY2022-9M2026", item: "Monetary gain/(loss) from hyperinflation (Lebanon): FY2022 -1.521, FY2023 -4.379, FY2024 +0.125, FY2025 -1.052, 9M2025 -0.753, 9M2026 +0.545; recurring IAS 29 effect, not treated as a one-off", amount: -1.052, unit: "USD m", pnl_line: "Monetary (loss)/gain from hyperinflation", recurring: true, source: "6015_AMERICANA/2025_Annual_filed2026-02-08.pdf", page: 10, quote: "Monetary (loss) / gain from hyperinflation 4 (1,052) 125"}
+
+restatements:
+  - period_restated: "FY2022 (in the FY2023 annual)"
+    item: "Re-presentation of income-statement lines: tax claim charges (22,534) and fair value gains on the derivative (1,941) combined into 'Fair value losses and tax claims' (20,593)"
+    from: null
+    to: -20.593
+    unit: "USD m"
+    reason: "Presentation only; revenue, operating profit (292.643), profit before tax and net profit unchanged from the FY2022 annual."
+    source: "6015_AMERICANA/2023_Annual_filed2024-02-14.pdf"
+    page: 12
+    quote: "Fair value losses and tax claims 16 (11,331) (20,593)"
+  - period_restated: "FY2022-FY2025, 9M2025-9M2026"
+    item: "No restatement of revenue or profit found; revenue comparatives equal the first-reported figures (FY2022 2,378.547; FY2023 2,413.134; FY2024 2,196.751; 9M2025 1,839.701)"
+    from: null
+    to: null
+    unit: "USD m"
+    reason: "Checked each later filing's comparative column against the original filing."
+    source: "6015_AMERICANA/2025_Annual_filed2026-02-08.pdf"
+    page: 10
+    quote: "Revenues 20 2,508,821 2,196,751"
+
+significant_events:
+  - date: "2022-12-12"
+    event: "Concurrent listing on the Abu Dhabi Securities Exchange and the Saudi Exchange (Tadawul)"
+    financial_effect: "None on revenue; first audited statements as a listed group are FY2022"
+    source: "6015_AMERICANA/2024_Annual_filed2025-02-12.pdf"
+    page: 16
+    quote: "The trading of the shares commenced on 12 December 2022."
+  - date: "2022-08"
+    event: "Settlement agreements with tax authorities for indirect tax claims for 2005-2017; provided in FY2022"
+    financial_effect: "Tax claim charges USD 22,534k in FY2022"
+    source: "6015_AMERICANA/2023_Annual_filed2024-02-14.pdf"
+    page: 49
+    quote: "In August 2022, the Group has entered into settlement agreements with the tax authorities to settle the tax claims for the period from 2005 to 2017"
+  - date: "2023"
+    event: "REEF Technology cloud-kitchen arrangement (25% stake for non-recourse loan notes of USD 28.5m): derivative revalued to nil and management intends to exit"
+    financial_effect: "FV loss USD 11,331k; deferred gain USD 7,512k released; working capital loan USD 1,000k fully impaired"
+    source: "6015_AMERICANA/2023_Annual_filed2024-02-14.pdf"
+    page: 43
+    quote: "As a result of the significant decline in the valuation of the derivative financial instrument and management’s intention of exiting the arrangement"
+  - date: "2024-04-24"
+    event: "Shareholders approved buying 25,000,000 own shares for a long-term incentive plan"
+    financial_effect: "Treasury shares USD 16,749k (USD 0.67 per share), paid in 2024"
+    source: "6015_AMERICANA/2025_Annual_filed2026-02-08.pdf"
+    page: 59
+    quote: "the Group has 25,000,000 treasury shares against a consideration of USD 16,749 thousand (USD 0.67 per share)"
+  - date: "2025"
+    event: "Pillar Two: domestic minimum top-up tax enacted in the UAE, Kuwait, Qatar, Bahrain and Oman"
+    financial_effect: "Current tax expense USD 14,040k in FY2025; effective tax rate 14% (2024: 11%)"
+    source: "6015_AMERICANA/2025_Annual_filed2026-02-08.pdf"
+    page: 52
+    quote: "Certain jurisdictions in which the Group operates, including the United Arab Emirates, Kuwait, Qatar, Bahrain, and Oman, have enacted Domestic Minimum Top-Up Tax (DMTT) legislation"
+  - date: "2025-12-31"
+    event: "Term deposits of USD 145.2m (3-12 months) and USD 117.8m (over 12 months) held outside cash and cash equivalents"
+    financial_effect: "Cash and cash equivalents USD 154.3m understate liquid funds; our net debt uses cash and cash equivalents only"
+    source: "6015_AMERICANA/2025_Annual_filed2026-02-08.pdf"
+    page: 42
+    quote: "Long term deposits with maturity of more than 12 months 117,838 -"
+  - date: "2026"
+    event: "Dividends: FY2025 final USD 201,567k (approved 29 Apr 2026) and interim USD 100,800k for H1 2026 (approved 28 Jul 2026)"
+    financial_effect: "Dividends paid USD 302,367k in 9M 2026"
+    source: "6015_AMERICANA/2026_Q3_filed2026-10-27.pdf"
+    page: 35
+    quote: "the Board of Directors further approved interim dividends of USD 0.0120 per share amounting to USD 100,800 thousand"
+  - date: "2026 (9M)"
+    event: "Geopolitical tensions in the Middle East escalated; management reports no major disruption to operations"
+    financial_effect: "None quantified"
+    source: "6015_AMERICANA/2026_Q3_filed2026-10-27.pdf"
+    page: 38
+    quote: "However, as of the reporting date, no major disruptions to operations have been identified by the management."
+
+audit_opinion:
+  - {period: "FY2022", opinion: "Unmodified (PwC, ADGM branch)", emphasis_of_matter: "Carve-out basis: the group did not operate as a separate group before 27 June 2022 (note 2)", source: "6015_AMERICANA/2022_Annual_filed2023-04-09.pdf", page: 5}
+  - {period: "FY2023", opinion: "Unmodified (PwC)", emphasis_of_matter: "Carve-out basis of the FY2022 comparative (note 2.1)", source: "6015_AMERICANA/2023_Annual_filed2024-02-14.pdf", page: 4}
+  - {period: "FY2024", opinion: "Unmodified (PwC)", emphasis_of_matter: none, source: "6015_AMERICANA/2024_Annual_filed2025-02-12.pdf", page: 4}
+  - {period: "FY2025", opinion: "Unmodified (Deloitte & Touche (M.E.)); Other Matter: FY2024 audited by another auditor", emphasis_of_matter: none, source: "6015_AMERICANA/2025_Annual_filed2026-02-08.pdf", page: 6}
+  - {period: "9M2026", opinion: "Review conclusion unmodified (Deloitte)", emphasis_of_matter: none, source: "6015_AMERICANA/2026_Q3_filed2026-10-27.pdf", page: 4}
+
+kpis_in_filings:
+  - {period: "31 Dec 2022", kpi: "Restaurants operated (12 brands)", value: 2183, unit: "count", source: "6015_AMERICANA/2022_Annual_filed2023-04-09.pdf", page: 3}
+  - {period: "31 Dec 2023", kpi: "Restaurants operated (12 brands, 12 countries)", value: 2435, unit: "count", source: "6015_AMERICANA/2023_Annual_filed2024-02-14.pdf", page: 3}
+  - {period: "31 Dec 2024", kpi: "Restaurants operated (12 brands, 12 countries)", value: 2590, unit: "count", source: "6015_AMERICANA/2024_Annual_filed2025-02-12.pdf", page: 3}
+  - {period: "31 Dec 2025", kpi: "Restaurants operated (12 brands, 12 countries)", value: 2749, unit: "count", source: "6015_AMERICANA/2025_Annual_filed2026-02-08.pdf", page: 3}
+  - {period: "FY2022", kpi: "Employees (more than)", value: 40000, unit: "count", source: "6015_AMERICANA/2022_Annual_filed2023-04-09.pdf", page: 3}
+
+special_extractions:
+  - name: "Currency conversion"
+    note: "All Americana amounts are printed in USD '000. Our tables convert at 3.75 SAR per USD (the peg); value_original and unit_original keep the USD figure."
+  - name: "Hyperinflation (IAS 29, Lebanon) effect on the income statement"
+    unit: "USD '000"
+    columns: ["FY2022", "FY2023", "FY2024", "FY2025", "9M2025"]
+    increase_in_revenue: [4223, 5488, 700, 921, 310]
+    monetary_gain_loss: [-1521, -4379, 125, -1052, -753]
+    decrease_in_profit_after_tax: [-356, -2985, -129, -1088, -931]
+    sources: "2023_Annual p33 (FY2022-FY2023); 2024_Annual p33 (FY2023-FY2024); 2025_Annual p31 (FY2024-FY2025); 2025_Q3 p15 (9M2025); not given in 2026_Q3"
+  - name: "Unallocated foreign exchange losses (segment note reconciliation)"
+    unit: "USD '000"
+    columns: ["FY2022", "FY2023", "FY2024", "FY2025"]
+    values: [-3727, -967, -4151, -1247]
+    sources: "2023_Annual p59; 2024_Annual p62; 2025_Annual p58"
+  - name: "Stage A data corrections carried into the tables"
+    note: "CAPEX excludes payments for key money (a right-of-use asset category, note 11); IMPAIR_CF is the non-financial-asset line only; DEBT = bank overdrafts ('Bank facilities': FY2021 7,073; FY2022 18,592; FY2023 4,375; 30 Sep 2025 177; nil otherwise)."
+
+open_questions:
+  - "No like-for-like or same-store sales growth appears in any annual or interim PDF in the archive, so new capacity cannot be separated from the existing estate."
+  - "Revenue contributed by Pizza Hut Oman (from 23 Jan 2025) and Malak Al Tawouk (UAE from 26 Feb 2026, KSA from 8 Jul 2026) is not disclosed."
+  - "Egypt revenue in USD fell from 258.4m (FY2022) to 133.4m (FY2024) and rose to 172.6m (FY2025), but the filings do not split currency translation from local-currency growth; the FX step is not determinable."
+  - "Restaurant counts are given only at year-end in the directors' reports; openings and closures are not disclosed."
+  - "FY2022 ROE in the tables (125.5%) uses an FY2021 opening equity of SAR 482m, which is pre-reorganisation 'net parent investment'; it is not comparable with later years."

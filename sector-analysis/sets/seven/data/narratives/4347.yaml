@@ -1,0 +1,64 @@
+ticker: "4347"
+headline: >-
+  Bonyan's rental revenue was flat at about SAR 241-247m in FY2022-FY2024 and rose 15.6% to SAR 278m in FY2025 after two Riyadh office
+  towers were bought in 2024 with new borrowing; we calculate FFO of SAR 147m in FY2025 (+21.5%, FFO margin 52.8%), distributions of
+  SAR 125m (85.4% of FFO) and LTV of 30.3%, against 13.8% at end-2023.
+lfl_basis:
+  definition_used: >-
+    Revenue is rental and hotel income from properties (note 16), excluding the capital gains on property disposals that the fund books inside
+    'Income from properties' (SAR 26.1m in FY2023, SAR 7.9m in FY2024; held in GAIN_DISP). Perimeter = properties bought or sold. The audited
+    notes give revenue only by segment, not by property; the fund annual report gives a 2024 rent-by-property table, used for a partial perimeter
+    step. New capacity = developments opened; the fund reports none in 2025-2026.
+  perimeter_changes:
+    - {event: "Citywalk residential building (Dubai) sold: units in 2023 (proceeds SAR 212.8m), the rest in 2024 (SAR 63.6m)", date: "2023-2024", effect: "revenue removed not disclosed; 2024 rent SAR 0.57m (fund report); gains SAR 26.1m and SAR 7.9m outside revenue", source: "4347_BONYAN_REIT/2024_Annual_filed2025-03-26.pdf p.28, p.31; 4347_BONYAN_REIT/2024_Annual_filed2025-06-23.pdf p.4"}
+    - {event: "1991 Centre (May 2024) and Al Olaya Tower (August 2024) bought in Riyadh; SAR 455.4m paid for properties in 2024", date: "2024", effect: "1991 Centre 2024 rent SAR 1.9m (fund report); Al Olaya Tower not disclosed; office segment income SAR 15.7m (FY2024) and SAR 49.3m (FY2025)", source: "4347_BONYAN_REIT/2024_Annual_filed2025-03-26.pdf p.28, p.10; 4347_BONYAN_REIT/2025_Annual_filed2026-03-31_t15-42-31.pdf p.38-39"}
+  capacity_changes:
+    - {event: "No ongoing development projects (Q4 2025 and Q3 2026 unitholder statements); Al Rashid Strip Mall under renovation", date: "2025-2026", effect: "none identified", source: "4347_BONYAN_REIT/2025_Q4_filed2026-01-15.pdf p.3; 4347_BONYAN_REIT/2026_Q3_filed2026-11-04.pdf p.3, p.2"}
+  fx_exposure: "Only Citywalk (Dubai, AED pegged to the US dollar) was outside Saudi Arabia, and it was sold by 2024; no FX effect."
+  price_volume_support: >-
+    Partly. The fund reports occupancy by segment each year and the split of revenue into lease rental, ancillary and hotel income, but not rents
+    per square metre or room rates, so price and volume cannot be separated.
+  confidence: "Low (perimeter effects only partly disclosed; like-for-like growth not determinable)"
+price_volume:
+  - period: "FY2025 vs FY2024"
+    text: >-
+      Lease rental income excluding hotels rose from SAR 191.4m to SAR 241.5m, while hotel revenue (rooms, food and beverage, other) fell from
+      SAR 33.7m to SAR 27.1m and ancillary service income from SAR 15.6m to SAR 9.4m. The company reports occupancy of 94% in commercial centres
+      (91% in FY2024), 88.1% in offices (67%) and 48.7% in hospitality (52%). The office segment's income rose from SAR 15.7m to SAR 49.3m, mostly
+      from the two towers bought in 2024; their own revenue is not disclosed, so rate and volume are not determinable.
+    basis: "disclosed (revenue lines, segments and occupancy); split not determinable"
+    confidence: "High for the amounts; the split is not determinable"
+    source: "4347_BONYAN_REIT/2025_Annual_filed2026-03-31_t15-42-31.pdf p.30 (note 16), p.38-39 (segments); 4347_BONYAN_REIT/2025_Annual_filed2026-03-31_t15-38-38.pdf p.4; 4347_BONYAN_REIT/2024_Annual_filed2025-06-23.pdf p.4"
+    refs: ["4347-FY2025-REV", "4347-FY2024-REV"]
+profit_and_margin:
+  drivers:
+    - {period: "FY2023", driver: "Revenue fell 1.5% to SAR 243m. Net profit rose 13.7% to SAR 111m (net margin 45.6%), helped by a SAR 26.1m gain on selling Citywalk units and SAR 21.1m of impairment reversals. We calculate FFO, which excludes both, at SAR 110m (-11.7%): finance cost rose from SAR 15.6m to SAR 22.9m and property management expenses from SAR 89.9m to SAR 99.4m. Distributions were SAR 108m (98.1% of FFO); borrowings fell to SAR 240m after SAR 145.5m was repaid, and LTV to 13.8%.", source: "4347_BONYAN_REIT/2024_Annual_filed2025-03-26.pdf p.8, p.10, p.31; 4347_BONYAN_REIT/2023_Annual_filed2024-03-31.pdf p.27", refs: ["4347-FY2023-REV", "4347-FY2023-NI_ATTR", "4347-FY2023-FFO", "4347-FY2023-GAIN_DISP", "4347-FY2023-IMPAIR_CF", "4347-FY2023-DIST", "4347-FY2023-DEBT"]}
+    - {period: "FY2024", driver: "Revenue fell 1.0% to SAR 241m. Net profit fell 20.3% to SAR 88.4m (net margin 36.8%; ROE 6.4%) as the disposal gain shrank to SAR 7.9m, impairment reversals to SAR 10.2m and finance cost rose to SAR 33.8m. We calculate FFO up 10.3% to SAR 121m. Borrowings rose to SAR 638m to fund SAR 455.4m of office purchases; LTV 29.8%.", source: "4347_BONYAN_REIT/2025_Annual_filed2026-03-31_t15-42-31.pdf p.6-7, p.9, p.30; 4347_BONYAN_REIT/2024_Annual_filed2025-03-26.pdf p.10, p.29", refs: ["4347-FY2024-REV", "4347-FY2024-NI_ATTR", "4347-FY2024-FFO", "4347-FY2024-DEBT", "4347-FY2024-TA"]}
+    - {period: "FY2025", driver: "Revenue rose 15.6% to SAR 278m and net profit 17.3% to SAR 104m (net margin 37.3%; ROE 7.7%), with no disposal gain and finance cost up to SAR 43.8m. We calculate FFO at SAR 147m (+21.5%; FFO margin 52.8%). Distributions rose 14.9% to SAR 125m (SAR 0.37 and 0.40 per unit), 85.4% of FFO. LTV 30.3%; NAV at fair value SAR 2,145m (-1.7%).", source: "4347_BONYAN_REIT/2025_Annual_filed2026-03-31_t15-42-31.pdf p.6-8, p.36-37", refs: ["4347-FY2025-REV", "4347-FY2025-NI_ATTR", "4347-FY2025-FFO", "4347-FY2025-DIST", "4347-FY2025-NAV_FV"]}
+    - {period: "9M2026", driver: "Only fact-sheet figures are printed: no revenue or net profit. The H1 2026 distribution was SAR 65.2m (SAR 0.40 per unit), 8.1% above the H1 2025 distribution of SAR 60.3m. NAV at fair value was SAR 2,218m at 30 Sep 2026 (SAR 2,189m a year earlier, we calculate from the per-unit figure) and we calculate LTV at 30.4% (30.0%). Year-to-date depreciation and amortisation was SAR 35.3m, and a further impairment of SAR 2.1m was booked.", source: "4347_BONYAN_REIT/2026_Q3_filed2026-11-04.pdf p.2-3; 4347_BONYAN_REIT/2025_Q3_filed2025-10-13.pdf p.1", refs: ["4347-9M2026-DIST", "4347-9M2025-DIST", "4347-9M2026-NAV_FV", "4347-9M2025-NAV_FV", "4347-9M2026-DEBT", "4347-9M2026-TA", "4347-9M2026-DA_CF"]}
+  one_offs:
+    - {item: "Capital gain on disposal of investment properties (Citywalk, Dubai), inside 'Income from properties'; excluded from revenue and from FFO (GAIN_DISP)", period: "FY2023", amount_sar_m: 26.1, line: "Income from properties (note 16)", source: "4347_BONYAN_REIT/2024_Annual_filed2025-03-26.pdf p.31", tax_nci: "No zakat on the fund from FY2024 and only SAR 22,810 in FY2023; no minority interests. Listed only: net profit kept as reported; FFO already excludes it."}
+    - {item: "Capital gain on disposal of investment properties (Citywalk, Dubai); excluded from revenue and FFO", period: "FY2024", amount_sar_m: 7.9, line: "Income from properties (note 16)", source: "4347_BONYAN_REIT/2025_Annual_filed2026-03-31_t15-42-31.pdf p.30", tax_nci: "No zakat charge in FY2024 and no minority interests. Listed only: net profit kept as reported; FFO already excludes it."}
+    - {item: "Reversals of impairment on investment properties and on hotel property (SAR 12.7m + 8.4m); outside FFO", period: "FY2023", amount_sar_m: 21.1, line: "Expenses (reversal lines)", source: "4347_BONYAN_REIT/2024_Annual_filed2025-03-26.pdf p.8", tax_nci: "Non-cash; no zakat effect disclosed and no minority interests. Net profit kept as reported; FFO excludes it."}
+developments:
+  - {date: "2023", category: "M&A", text: "Sold units in the Citywalk residential building in Dubai for SAR 212.8m (gain SAR 26.1m) and repaid SAR 145.5m of bank borrowings; the rest of the building was sold in 2024 for SAR 63.6m (gain SAR 7.9m).", source: "4347_BONYAN_REIT/2023_Annual_filed2024-03-31.pdf p.10, p.27; 4347_BONYAN_REIT/2024_Annual_filed2025-03-26.pdf p.10, p.28, p.31"}
+  - {date: "2023", category: "M&A", text: "Exercised its option to buy Al Rashid Mall - Abha (held on a 20-year usufruct) for SAR 110m; the company reports the amount will be paid on transfer of the title deed, and it was not recorded at end-2024.", source: "4347_BONYAN_REIT/2024_Annual_filed2025-03-26.pdf p.28"}
+  - {date: "2024-05", category: "M&A", text: "Bought 1991 Centre in Hittin, Riyadh, and in August 2024 Al Olaya Tower in Riyadh; SAR 455.4m was paid for properties in 2024.", source: "4347_BONYAN_REIT/2024_Annual_filed2025-03-26.pdf p.28, p.10"}
+  - {date: "2024", category: "financing", text: "Refinanced and increased bank borrowings (SAR 850.0m drawn, SAR 453.3m repaid), with principal due from April 2025 to March 2031; borrowings SAR 638m at end-2024 and end-2025.", source: "4347_BONYAN_REIT/2024_Annual_filed2025-03-26.pdf p.29; 4347_BONYAN_REIT/2025_Annual_filed2026-03-31_t15-42-31.pdf p.6"}
+  - {date: "2026-03", category: "event", text: "The company reports regional geopolitical tensions after the year-end as a non-adjusting event whose financial effect cannot yet be estimated.", source: "4347_BONYAN_REIT/2025_Annual_filed2026-03-31_t15-42-31.pdf p.40"}
+what_it_means:
+  improved: "FY2025 revenue rose 15.6% to SAR 278m and we calculate FFO up 21.5% to SAR 147m, so distributions rose 14.9% to SAR 125m while staying below FFO (payout 85.4%)."
+  weakened: "Borrowings rose from SAR 240m (FY2023) to SAR 638m (FY2024) and finance cost from SAR 22.9m to SAR 43.8m (FY2025), lifting LTV from 13.8% to 30.3%; hotel revenue fell and hospitality occupancy was 48.7% in FY2025."
+  why: "The 2024 office purchases (1991 Centre and Al Olaya Tower) drove office segment income from SAR 15.7m to SAR 49.3m; earlier profit was flattered by property-sale gains (SAR 26.1m in FY2023) and impairment reversals that FFO excludes."
+  uncertain: "The filings do not give revenue by property, so like-for-like growth is not determinable; 9M 2026 has no revenue or profit figures, and the SR 110m Abha mall purchase was still unrecorded at end-2024."
+confidence_overall: "Medium"
+data_notes:
+  - "Revenue (REV) excludes the capital gains on property disposals that the fund books inside 'Income from properties': FY2023 SAR 243.1m = 269.2m less 26.1m and FY2024 SAR 240.6m = 248.5m less 7.9m (calculated, C). The gains are in GAIN_DISP and FFO deducts them."
+  - "DA_CF and IMPAIR_CF cover all real-estate items (investment properties, hotels carried as property and equipment, and intangibles), per the REIT convention. The FY2022 split between investment properties and hotels was restated in the FY2023 statements (note 24: hotels reclassified from investment properties to property and equipment); the combined totals are unchanged."
+  - "Cash (CASH) follows the FY2025 definition (note 27): Murabaha deposits of three months or less are cash equivalents, so FY2024 is SAR 108.2m (R; 70.4m first reported) and FY2023 SAR 86.5m (R; from the FY2025 cash flow's opening balance; 55.8m first reported)."
+  - "NAV at fair value is the fund's note figure, whose basis changed each year: FY2022 restated in the FY2023 statements (deferred rent and receivables adjustments), FY2023 re-presented in FY2024 (2,063.6m vs 2,066.4m), FY2024 restated in FY2025 (2,181.5m vs 2,162.4m, capital work in progress excluded). FY2021 is per unit (10.1769) times units, as first reported (C)."
+  - "Distributions (DIST) are those declared in the period (statement of changes): two half-yearly distributions per year for six-month periods ending April and October."
+  - "Borrowings include accrued finance cost (e.g. FY2025: principal 637.0m + accrued 1.1m)."
+  - "9M figures come from the quarterly unitholder statements (unaudited) and are partial: no revenue, net profit or cash is printed. 9M2025 total assets and book NAV are printed; 9M2025 NAV at fair value, both 9M borrowing figures (ratio x total assets), 9M2026 book NAV (8.34 per unit x units) and 9M2026 book total assets are calculated (C). 9M2025 depreciation is the sum of three quarters."
+  - "FY2021 balance-sheet items are from the 1 January 2022 column of the FY2023 statements (restated for the hotel reclassification, totals unchanged)."
+  - "Other income of SAR 9.4m in FY2024 is not explained in the notes and is kept in FFO."

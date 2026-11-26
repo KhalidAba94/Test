@@ -1,0 +1,503 @@
+# Evidence from Leejam Sports Company filings (archive: 1830_LEEJAM_SPORTS). Facts only; page = physical PDF page. Units: SR (riyals) as presented.
+# FY2023 annual primary statements are scanned (pp.5-12, read visually); other pages have a text layer.
+ticker: '1830'
+company: Leejam Sports Company (Fitness Time)
+perimeter_changes:
+- event: 'Acquisition of 100% of Altathir Al-Riyadiyeh Company (sports academies: swimming, martial arts)'
+  type: acquisition
+  date: '2023-06-14'
+  consideration: 12000000
+  revenue_contribution: null
+  profit_contribution: null
+  pro_forma_revenue: null
+  period: FY2023
+  unit: SR
+  source: 1830_LEEJAM_SPORTS/2024_Annual_filed2025-02-16.pdf
+  page: 33
+  quote: Al Rasn investment Company acquired a 100% stake in Altathir Al-Riyadiyeh Company
+  note: Post-acquisition revenue not disclosed; consideration (SR 12m) is 1.1% of FY2022 revenue.
+- event: Padel X Sports Company established (51%, with World Wide Padel) to build and operate padel courts
+  type: new_subsidiary
+  date: '2023-07-12'
+  consideration: null
+  revenue_contribution: null
+  profit_contribution: null
+  pro_forma_revenue: null
+  period: FY2023
+  unit: SR
+  source: 1830_LEEJAM_SPORTS/2024_Annual_filed2025-02-16.pdf
+  page: 13
+  quote: the Group established a new Subsidiary “Padel X Sports Company (Limited Liability Company)” with a capital of fifty thousand
+    Saudi Riyals
+- event: Acquisition of 60% of Champs Sports and Fitness Club LLC (Dubai) for SR 8.16m; classified as held for sale in 2024
+  type: acquisition
+  date: '2024-02-01'
+  consideration: 8160000
+  revenue_contribution: null
+  profit_contribution: null
+  pro_forma_revenue: null
+  period: FY2024
+  unit: SR
+  source: 1830_LEEJAM_SPORTS/2024_Annual_filed2025-02-16.pdf
+  page: 31
+  quote: acquired a 60% stake in Champs Sports and Fitness Club LLC Company, having commercial license numbered 865400 issued by the
+    Dubai Economy Department
+- event: Champs Sports and Fitness Club presented as a discontinued operation and disposal group held for sale
+  type: discontinued
+  date: 2024 (reclassified); still held for sale at 30 Sep 2026
+  consideration: null
+  revenue_contribution: null
+  profit_contribution: 75275
+  pro_forma_revenue: null
+  period: FY2025
+  unit: SR
+  source: 1830_LEEJAM_SPORTS/2025_Annual_filed2026-02-24.pdf
+  page: 53
+  quote: Champs Sports and Fitness Club LLC Company was classified as a disposal group held for sale and as a discontinued operation
+  note: 'Profit after tax from discontinued operations: FY2024 2,172,429; FY2025 75,275 (p.7); 9M2026 69,248; 9M2025 (248,116) (2026
+    Q3 p.4). Its revenue is outside reported revenue.'
+- event: Acquisition of 55% of Sports Hub Sports Company (sports events) for SR 2.2m
+  type: acquisition
+  date: '2024-06-01'
+  consideration: 2200000
+  revenue_contribution: null
+  profit_contribution: null
+  pro_forma_revenue: null
+  period: FY2024
+  unit: SR
+  source: 1830_LEEJAM_SPORTS/2024_Annual_filed2025-02-16.pdf
+  page: 31
+  quote: acquired a 55% stake in Sports Hub Sports Company
+  note: 'Consideration 0.17% of FY2023 revenue: below the 0.5% materiality threshold.'
+- event: 'New subsidiaries in 2025: Service Sport Company (maintenance; 65% then 100% via share swap), Kafaat Alisnad (manpower) and
+    Riada Raqmiyah (IT); the last two not yet operating'
+  type: new_subsidiary
+  date: '2025'
+  consideration: null
+  revenue_contribution: null
+  profit_contribution: null
+  pro_forma_revenue: null
+  period: FY2025
+  unit: SR
+  source: 1830_LEEJAM_SPORTS/2025_Annual_filed2026-02-24.pdf
+  page: 13
+  quote: the Group established a new entity in partnership with Service Support Group Limited (UK), named Service Sport Company
+- event: Purchase of the remaining 49% of Padel X Sports Company for SR 2.2m (equity transaction)
+  type: new_subsidiary
+  date: 2026 (9M)
+  consideration: 2200000
+  revenue_contribution: null
+  profit_contribution: null
+  pro_forma_revenue: null
+  period: 9M2026
+  unit: SR
+  source: 1830_LEEJAM_SPORTS/2026_Q3_filed2026-11-05.pdf
+  page: 10
+  quote: acquired the remaining 49% ownership interest in Padel X Sports Company from Padel Bolaget Sports for a cash consideration
+    of 2.2 million
+- event: Partial disposal of Altathir Al-Riyadiyeh (holding now 55%, control retained) for SR 9.06m; gain of SR 5.5m taken to equity
+  type: disposal
+  date: '2026-04-01'
+  consideration: 9055700
+  revenue_contribution: null
+  profit_contribution: null
+  pro_forma_revenue: null
+  period: 9M2026
+  unit: SR
+  source: 1830_LEEJAM_SPORTS/2026_Q3_filed2026-11-05.pdf
+  page: 19
+  quote: the Group partially disposed off its shareholding in Altathir
+  note: Control retained, so no change in consolidated revenue.
+- event: Investment in an associate liquidated; liquidation expenses SR 4.29m in 9M 2026; associate impaired by SR 9.57m in FY2025
+  type: disposal
+  date: 2026 (9M)
+  consideration: null
+  revenue_contribution: null
+  profit_contribution: -4288558
+  pro_forma_revenue: null
+  period: 9M2026
+  unit: SR
+  source: 1830_LEEJAM_SPORTS/2026_Q3_filed2026-11-05.pdf
+  page: 4
+  quote: Liquidation expenses relating to investment in an associate (4,288,558)
+segments:
+- period: FY2024
+  segment: KSA (local region)
+  basis: geographic
+  revenue: 1454786720
+  profit: null
+  unit: SR
+  source: 1830_LEEJAM_SPORTS/2024_Annual_filed2025-02-16.pdf
+  page: 51
+- period: FY2024
+  segment: UAE (international region)
+  basis: geographic
+  revenue: 46579536
+  profit: null
+  unit: SR
+  source: 1830_LEEJAM_SPORTS/2024_Annual_filed2025-02-16.pdf
+  page: 51
+- period: FY2023
+  segment: KSA
+  basis: geographic
+  revenue: 1292966517
+  profit: null
+  unit: SR
+  source: 1830_LEEJAM_SPORTS/2024_Annual_filed2025-02-16.pdf
+  page: 51
+- period: FY2023
+  segment: UAE
+  basis: geographic
+  revenue: 32440621
+  profit: null
+  unit: SR
+  source: 1830_LEEJAM_SPORTS/2024_Annual_filed2025-02-16.pdf
+  page: 51
+- period: FY2025
+  segment: KSA
+  basis: geographic
+  revenue: 1565810914
+  profit: 602657154
+  unit: SR
+  source: 1830_LEEJAM_SPORTS/2025_Annual_filed2026-02-24.pdf
+  page: 48
+- period: FY2025
+  segment: UAE
+  basis: geographic
+  revenue: 48518767
+  profit: 12519755
+  unit: SR
+  source: 1830_LEEJAM_SPORTS/2025_Annual_filed2026-02-24.pdf
+  page: 48
+- period: FY2025
+  segment: Male centres
+  basis: operating
+  revenue: 1171636076
+  profit: 477368221
+  unit: SR
+  source: 1830_LEEJAM_SPORTS/2025_Annual_filed2026-02-24.pdf
+  page: 48
+- period: FY2025
+  segment: Female centres
+  basis: operating
+  revenue: 424017946
+  profit: 141967552
+  unit: SR
+  source: 1830_LEEJAM_SPORTS/2025_Annual_filed2026-02-24.pdf
+  page: 48
+- period: FY2025
+  segment: Other business
+  basis: operating
+  revenue: 18675659
+  profit: -4158864
+  unit: SR
+  source: 1830_LEEJAM_SPORTS/2025_Annual_filed2026-02-24.pdf
+  page: 48
+- period: FY2024
+  segment: Male centres
+  basis: operating
+  revenue: 1092790630
+  profit: 474185770
+  unit: SR
+  source: 1830_LEEJAM_SPORTS/2025_Annual_filed2026-02-24.pdf
+  page: 48
+- period: FY2024
+  segment: Female centres
+  basis: operating
+  revenue: 389124514
+  profit: 148318046
+  unit: SR
+  source: 1830_LEEJAM_SPORTS/2025_Annual_filed2026-02-24.pdf
+  page: 48
+- period: FY2024
+  segment: Other business
+  basis: operating
+  revenue: 19451112
+  profit: 889225
+  unit: SR
+  source: 1830_LEEJAM_SPORTS/2025_Annual_filed2026-02-24.pdf
+  page: 48
+- period: 9M2026
+  segment: Male centres
+  basis: operating
+  revenue: 848098002
+  profit: 317762737
+  unit: SR
+  source: 1830_LEEJAM_SPORTS/2026_Q3_filed2026-11-05.pdf
+  page: 24
+- period: 9M2026
+  segment: Female centres
+  basis: operating
+  revenue: 339649270
+  profit: 93760584
+  unit: SR
+  source: 1830_LEEJAM_SPORTS/2026_Q3_filed2026-11-05.pdf
+  page: 24
+- period: 9M2026
+  segment: Other business
+  basis: operating
+  revenue: 43298243
+  profit: 2999537
+  unit: SR
+  source: 1830_LEEJAM_SPORTS/2026_Q3_filed2026-11-05.pdf
+  page: 24
+- period: 9M2025
+  segment: Male centres
+  basis: operating
+  revenue: 855190974
+  profit: 330729884
+  unit: SR
+  source: 1830_LEEJAM_SPORTS/2026_Q3_filed2026-11-05.pdf
+  page: 24
+- period: 9M2025
+  segment: Female centres
+  basis: operating
+  revenue: 299778097
+  profit: 90445633
+  unit: SR
+  source: 1830_LEEJAM_SPORTS/2026_Q3_filed2026-11-05.pdf
+  page: 24
+- period: 9M2025
+  segment: Other business
+  basis: operating
+  revenue: 28220318
+  profit: 12678172
+  unit: SR
+  source: 1830_LEEJAM_SPORTS/2026_Q3_filed2026-11-05.pdf
+  page: 24
+revenue_drivers:
+- period: FY2023
+  driver: 'Subscriptions and membership revenue (FY2022: 931,945,890)'
+  value: 1152657980
+  unit: SR
+  source: 1830_LEEJAM_SPORTS/2023_Annual_filed2024-03-26.pdf
+  page: 33
+  quote: Subscriptions and membership 1,152,657,980 931,945,890
+- period: FY2023
+  driver: 'Personal training revenue (FY2022: 103,079,984)'
+  value: 147858879
+  unit: SR
+  source: 1830_LEEJAM_SPORTS/2023_Annual_filed2024-03-26.pdf
+  page: 33
+  quote: Personal training 147,858,879 103,079,984
+- period: FY2024
+  driver: 'Subscriptions and membership revenue (FY2023 re-presented: 1,151,767,714)'
+  value: 1268730523
+  unit: SR
+  source: 1830_LEEJAM_SPORTS/2024_Annual_filed2025-02-16.pdf
+  page: 34
+  quote: Subscriptions and membership 1,268,730,523 1,151,767,714
+- period: FY2024
+  driver: 'Personal training revenue (FY2023: 148,070,429)'
+  value: 194564140
+  unit: SR
+  source: 1830_LEEJAM_SPORTS/2024_Annual_filed2025-02-16.pdf
+  page: 34
+  quote: Personal training 194,564,140 148,070,429
+- period: FY2025
+  driver: 'Subscriptions and membership revenue (FY2024: 1,268,730,523)'
+  value: 1363878725
+  unit: SR
+  source: 1830_LEEJAM_SPORTS/2025_Annual_filed2026-02-24.pdf
+  page: 32
+  quote: Subscriptions and membership 1,363,878,725 1,268,730,523
+- period: FY2025
+  driver: 'Personal training revenue (FY2024: 194,564,140)'
+  value: 207089447
+  unit: SR
+  source: 1830_LEEJAM_SPORTS/2025_Annual_filed2026-02-24.pdf
+  page: 32
+  quote: Personal training 207,089,447 194,564,140
+- period: 9M2026
+  driver: 'Subscriptions and membership revenue (9M2025: 996,201,144)'
+  value: 1036019055
+  unit: SR
+  source: 1830_LEEJAM_SPORTS/2026_Q3_filed2026-11-05.pdf
+  page: 16
+  quote: Subscriptions and membership 381,353,600 370,732,410 1,036,019,055 996,201,144
+- period: 9M2026
+  driver: 'Personal training revenue (9M2025: 155,883,835)'
+  value: 147620610
+  unit: SR
+  source: 1830_LEEJAM_SPORTS/2026_Q3_filed2026-11-05.pdf
+  page: 16
+  quote: Personal training 52,909,158 57,305,223 147,620,610 155,883,835
+- period: 9M2026
+  driver: 'Rental income (9M2025: 18,928,902)'
+  value: 29336641
+  unit: SR
+  source: 1830_LEEJAM_SPORTS/2026_Q3_filed2026-11-05.pdf
+  page: 16
+  quote: Rental income 9,548,579 7,188,718 29,336,641 18,928,902
+- period: 9M2026
+  driver: 'Female-centre subscriptions (9M2025: 242,710,743); male-centre subscriptions 750,557,467 (748,120,256)'
+  value: 281369931
+  unit: SR
+  source: 1830_LEEJAM_SPORTS/2026_Q3_filed2026-11-05.pdf
+  page: 17
+  quote: Female centers 281,369,931 242,710,743 55,326,976 54,039,127
+- period: 9M2026
+  driver: 'Deferred revenue (memberships paid in advance) at 30 Sep 2026 (31 Dec 2025: 548,213,256)'
+  value: 739646765
+  unit: SR
+  source: 1830_LEEJAM_SPORTS/2026_Q3_filed2026-11-05.pdf
+  page: 6
+  quote: Deferred revenue 739,646,765 548,213,256
+- period: 9M2026
+  driver: 'Seasonality: Q4 is usually the strongest quarter (National Day offers)'
+  value: null
+  unit: SR
+  source: 1830_LEEJAM_SPORTS/2026_Q3_filed2026-11-05.pdf
+  page: 25
+  quote: The Group’s business performance during fourth quarter of the year is generally better than other quarters of the year
+- period: FY2023
+  driver: Two centres closed in 2023 in areas expropriated for a government project; SR 13.73m written off
+  value: 2
+  unit: count
+  source: 1830_LEEJAM_SPORTS/2024_Annual_filed2025-02-16.pdf
+  page: 39
+  quote: During the prior year, the Group closed two centers covered within the expropriated areas in favor of the Governmental project.
+one_offs:
+- period: FY2024
+  item: Gain on disposal of property and equipment, mainly a Riyadh land plot (book value SR 58.58m, sold for SR 150.37m, gain SR 91.79m)
+  amount: 92158389
+  unit: SR
+  pnl_line: Gain on disposal of property and equipment (below operating profit, inside our operating income)
+  recurring: false
+  source: 1830_LEEJAM_SPORTS/2024_Annual_filed2025-02-16.pdf
+  page: 39
+  quote: the Company has sold a land located in Riyadh with a book value of SR 58.58 million for SR 150.37 million
+- period: FY2024
+  item: Gain on lease modification (8,998,700) and gain on lease termination (5,968,957); each under 5% of attributable profit
+  amount: 14967657
+  unit: SR
+  pnl_line: Separate lines below operating profit
+  recurring: false
+  source: 1830_LEEJAM_SPORTS/2025_Annual_filed2026-02-24.pdf
+  page: 7
+  quote: Gain on lease modification 15 - 8,998,700
+- period: FY2025
+  item: 'Reversal of impairment of non-financial assets 11,457,173; impairment of associate 9,566,398 and of a subsidiary 3,157,413
+    (impairments: outside EBITDA)'
+  amount: -1266638
+  unit: SR
+  pnl_line: Separate impairment lines
+  recurring: false
+  source: 1830_LEEJAM_SPORTS/2025_Annual_filed2026-02-24.pdf
+  page: 7
+  quote: Reversal of impairment of non-financial assets 14 & 15 11,457,173 4,733,842
+- period: 9M2026
+  item: 'Gain on disposal of property and equipment (9M2025: loss 666,958); proceeds SR 58.9m'
+  amount: 22680655
+  unit: SR
+  pnl_line: Gain / (loss) on disposal of property and equipment
+  recurring: false
+  source: 1830_LEEJAM_SPORTS/2026_Q3_filed2026-11-05.pdf
+  page: 4
+  quote: Gain / (loss) on disposal of property and equipment 22,334,959 (666,958) 22,680,655 (666,958)
+- period: 9M2026
+  item: Liquidation expenses relating to investment in an associate
+  amount: -4288558
+  unit: SR
+  pnl_line: Liquidation expenses relating to investment in an associate
+  recurring: false
+  source: 1830_LEEJAM_SPORTS/2026_Q3_filed2026-11-05.pdf
+  page: 4
+  quote: Liquidation expenses relating to investment in an associate (4,288,558)
+- period: 9M2026
+  item: 'Other (expense)/income, net: Q3 2026 charge of 10,112,700 not explained in the notes (not treated as a one-off)'
+  amount: -9569917
+  unit: SR
+  pnl_line: Other (expense) / income, net
+  recurring: null
+  source: 1830_LEEJAM_SPORTS/2026_Q3_filed2026-11-05.pdf
+  page: 4
+  quote: Other (expense) / income, net (10,112,700) 34,041 (9,569,917) (125,364)
+restatements:
+- period_restated: FY2022 and 1 Jan 2022
+  item: Cost of revenue, property and equipment, retained earnings
+  from: 629667673
+  to: 632168482
+  unit: SR
+  reason: 'Note 37: SOCPA clarification (Nov 2023) that depreciation of land right-of-use assets during construction is expensed, not
+    capitalised; PP&E -21,265,334 at 1 Jan 2022 and -23,766,143 at 31 Dec 2022'
+  source: 1830_LEEJAM_SPORTS/2023_Annual_filed2024-03-26.pdf
+  page: 56
+  quote: the Group applied the SOCPA’s clarification retrospectively by restating prior years. Hence, cost of revenue was understated
+    during those years.
+- period_restated: FY2022 (cash flow)
+  item: Net cash from operating activities
+  from: 669173857
+  to: 673400154
+  unit: SR
+  reason: 'Re-presented in the FY2023 annual: impairment provision on advances to suppliers (4,226,297) added back in operations; advances
+    shown gross in investing'
+  source: 1830_LEEJAM_SPORTS/2023_Annual_filed2024-03-26.pdf
+  page: 11
+  quote: Net cash from operating activities 685,965,449 673,400,154
+- period_restated: FY2024 (cash flow, in FY2025 annual)
+  item: Capex line merged with advances to contractors; lease payments split changed
+  from: 585490562
+  to: 583854466
+  unit: SR
+  reason: 'Re-presentation without a note: additions to PP&E and related advances shown as one line'
+  source: 1830_LEEJAM_SPORTS/2025_Annual_filed2026-02-24.pdf
+  page: 11
+  quote: Additions to property, equipment and related advances to suppliers and contractors (371,426,545) (583,854,466)
+significant_events:
+- date: '2024'
+  event: Sale of a land plot in Riyadh for SR 150.37m (gain SR 91.79m)
+  financial_effect: FY2024 profit
+  source: 1830_LEEJAM_SPORTS/2024_Annual_filed2025-02-16.pdf
+  page: 39
+  quote: resulting in a gain of SR 91.79 million recognized under gain on disposal of property and equipment.
+- date: 2025-2026
+  event: 'Share buy-backs: treasury shares SR 22.6m (2024), SR 160.7m (2025) and SR 340.0m at 30 Sep 2026'
+  financial_effect: Equity attributable fell from SR 1,200m (FY2025) to SR 1,095m (Sep 2026)
+  source: 1830_LEEJAM_SPORTS/2026_Q3_filed2026-11-05.pdf
+  page: 6
+  quote: Treasury shares 22 (340,046,832) (160,656,765)
+- date: '2026'
+  event: Management reports no material adverse impact from regional geopolitical developments
+  financial_effect: null
+  source: 1830_LEEJAM_SPORTS/2026_Q3_filed2026-11-05.pdf
+  page: 10
+  quote: management has not identified any material adverse impact on the Group’s interim condensed consolidated financial statements
+audit_opinion:
+- period: FY2022
+  opinion: Unmodified (Ernst & Young)
+  emphasis_of_matter: ZATCA assessment treating part of 2015-2018 profits as subject to income tax (note 29)
+  source: 1830_LEEJAM_SPORTS/2022_Annual_filed2023-03-09.pdf
+  page: 3
+- period: FY2023
+  opinion: Unmodified (Ernst & Young)
+  emphasis_of_matter: null
+  source: 1830_LEEJAM_SPORTS/2023_Annual_filed2024-03-26.pdf
+  page: 3
+- period: FY2024
+  opinion: Unmodified (Ernst & Young)
+  emphasis_of_matter: null
+  source: 1830_LEEJAM_SPORTS/2024_Annual_filed2025-02-16.pdf
+  page: 3
+- period: FY2025
+  opinion: Unmodified (Ernst & Young)
+  emphasis_of_matter: null
+  source: 1830_LEEJAM_SPORTS/2025_Annual_filed2026-02-24.pdf
+  page: 3
+kpis_in_filings:
+- period: FY2022-9M2026
+  kpi: Number of fitness centres, members, same-centre (like-for-like) revenue
+  value: null
+  unit: count
+  source: 1830_LEEJAM_SPORTS/2025_Annual_filed2026-02-24.pdf
+  page: null
+  status: not found
+  note: Not in the financial statements; only revenue by service type and male/female/other segments.
+special_extractions:
+- item: 9M2026 figures read from the PDF (no XBRL file for 2026 Q3); FY2021-FY2023 corrections in stage A
+  source: 1830_LEEJAM_SPORTS/2026_Q3_filed2026-11-05.pdf
+  page: 4
+open_questions:
+- 'Other (expense)/income, net of (10.1m) in Q3 2026 (9M: (9.6m)) is not explained in the notes; it is kept inside operating income.'
+- Revenue of Altathir Al-Riyadiyeh (acquired June 2023) is not disclosed, so the FY2023 and FY2024 perimeter effects are not determinable.
+- Centre openings and closures are not disclosed in the statements, so new capacity cannot be separated from like-for-like growth.

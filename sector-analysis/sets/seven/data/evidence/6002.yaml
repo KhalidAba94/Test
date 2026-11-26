@@ -1,0 +1,184 @@
+# Evidence extracted from Herfy Food Services Company filings (archive: SEVEN_FNB/6002_HERFY_FOODS). Facts only; page = physical PDF page (1-based).
+# Units: Saudi riyals as presented (SAR); segment tables in SAR '000. Herfy is a single entity (no subsidiaries); its statements are stand-alone, not consolidated.
+# Scanned pages: all primary statements (FY2022-FY2025 annuals pp7-12, 2025_Q3 and 2026_Q3 pp4-7) are images without a usable text layer and were read visually.
+ticker: "6002"
+company: "Herfy Food Services Company"
+
+perimeter_changes:
+  - event: "Single entity: the statements cover the head office, restaurants, bakeries, shops and two factory branches; no subsidiaries, associates or business combinations FY2022-9M2026"
+    type: acquisition
+    status: "not found"
+    date: "FY2022-9M2026"
+    consideration: null
+    revenue_contribution: null
+    profit_contribution: null
+    pro_forma_revenue: null
+    period: "FY2022-9M2026"
+    unit: "SAR"
+    source: "6002_HERFY_FOODS/2025_Annual_filed2026-03-11.pdf"
+    page: 13
+    quote: "The accompanying financial statements include the accounts of the Company's head office and aforementioned restaurants, bakeries, shops and factories."
+    note: "Same wording in the FY2023 annual (p.11), FY2024 annual (p.12) and 2026 Q3 interim (p.8). Branches: Herfy Meat Processing Factory and Herfy Factory for Cake & Pastries."
+
+segments:
+  # Operating segments; revenue = net revenue after inter-segment sales; profit = net segment profit/(loss) (after finance cost and zakat allocation as presented).
+  - {period: "FY2022", segment: "Restaurants", basis: operating, revenue: 983970, profit: -63565, unit: "SAR '000", source: "6002_HERFY_FOODS/2023_Annual_filed2024-03-13.pdf", page: 50}
+  - {period: "FY2022", segment: "Meat factory (external)", basis: operating, revenue: 77905, profit: 48644, unit: "SAR '000", source: "6002_HERFY_FOODS/2023_Annual_filed2024-03-13.pdf", page: 50}
+  - {period: "FY2022", segment: "Bakeries", basis: operating, revenue: 181963, profit: 18467, unit: "SAR '000", source: "6002_HERFY_FOODS/2023_Annual_filed2024-03-13.pdf", page: 50}
+  - {period: "FY2022", segment: "Total", basis: operating, revenue: 1243838, profit: 3546, unit: "SAR '000", source: "6002_HERFY_FOODS/2023_Annual_filed2024-03-13.pdf", page: 50}
+  - {period: "FY2023", segment: "Restaurants and catering", basis: operating, revenue: 898192, profit: -48925, gross_profit: 159132, unit: "SAR '000", source: "6002_HERFY_FOODS/2024_Annual_filed2025-03-11.pdf", page: 45}
+  - {period: "FY2023", segment: "Meat factory (external)", basis: operating, revenue: 89241, profit: 45131, gross_profit: 70745, unit: "SAR '000", source: "6002_HERFY_FOODS/2024_Annual_filed2025-03-11.pdf", page: 45}
+  - {period: "FY2023", segment: "Bakeries and other", basis: operating, revenue: 186263, profit: 12180, gross_profit: 54535, unit: "SAR '000", source: "6002_HERFY_FOODS/2024_Annual_filed2025-03-11.pdf", page: 45}
+  - {period: "FY2023", segment: "Total", basis: operating, revenue: 1173696, profit: 8386, gross_profit: 284412, unit: "SAR '000", source: "6002_HERFY_FOODS/2024_Annual_filed2025-03-11.pdf", page: 45}
+  - {period: "FY2024", segment: "Restaurants and catering", basis: operating, revenue: 870240, profit: -158311, gross_profit: 98098, unit: "SAR '000", source: "6002_HERFY_FOODS/2025_Annual_filed2026-03-11.pdf", page: 47}
+  - {period: "FY2024", segment: "Meat factory (external)", basis: operating, revenue: 90590, profit: 52188, gross_profit: 83873, unit: "SAR '000", source: "6002_HERFY_FOODS/2025_Annual_filed2026-03-11.pdf", page: 47}
+  - {period: "FY2024", segment: "Bakeries and other", basis: operating, revenue: 163939, profit: -10401, gross_profit: 35273, unit: "SAR '000", source: "6002_HERFY_FOODS/2025_Annual_filed2026-03-11.pdf", page: 47}
+  - {period: "FY2024", segment: "Total", basis: operating, revenue: 1124769, profit: -116524, gross_profit: 217244, unit: "SAR '000", source: "6002_HERFY_FOODS/2025_Annual_filed2026-03-11.pdf", page: 47}
+  - {period: "FY2025", segment: "Restaurants and catering (incl. impairment -31,177)", basis: operating, revenue: 849058, profit: -107054, gross_profit: 153227, unit: "SAR '000", source: "6002_HERFY_FOODS/2025_Annual_filed2026-03-11.pdf", page: 47}
+  - {period: "FY2025", segment: "Meat factory (external)", basis: operating, revenue: 92994, profit: 40966, gross_profit: 69914, unit: "SAR '000", source: "6002_HERFY_FOODS/2025_Annual_filed2026-03-11.pdf", page: 47}
+  - {period: "FY2025", segment: "Bakeries and other (incl. impairment -3,340)", basis: operating, revenue: 140510, profit: -11390, gross_profit: 35456, unit: "SAR '000", source: "6002_HERFY_FOODS/2025_Annual_filed2026-03-11.pdf", page: 47}
+  - {period: "FY2025", segment: "Total", basis: operating, revenue: 1082562, profit: -77478, gross_profit: 258597, unit: "SAR '000", source: "6002_HERFY_FOODS/2025_Annual_filed2026-03-11.pdf", page: 47}
+  - {period: "9M2025", segment: "Restaurants and catering (incl. impairment -38,333)", basis: operating, revenue: 647830, profit: -90478, gross_profit: 121453, unit: "SAR '000", source: "6002_HERFY_FOODS/2026_Q3_filed2026-11-05.pdf", page: 20}
+  - {period: "9M2025", segment: "Meat factory (external)", basis: operating, revenue: 68370, profit: 32563, gross_profit: 54227, unit: "SAR '000", source: "6002_HERFY_FOODS/2026_Q3_filed2026-11-05.pdf", page: 20}
+  - {period: "9M2025", segment: "Bakeries and other", basis: operating, revenue: 101578, profit: -7907, gross_profit: 24384, unit: "SAR '000", source: "6002_HERFY_FOODS/2026_Q3_filed2026-11-05.pdf", page: 20}
+  - {period: "9M2025", segment: "Total", basis: operating, revenue: 817778, profit: -65822, gross_profit: 200064, unit: "SAR '000", source: "6002_HERFY_FOODS/2026_Q3_filed2026-11-05.pdf", page: 20}
+  - {period: "9M2026", segment: "Restaurants and catering (incl. impairment reversal 2,249)", basis: operating, revenue: 590617, profit: -33130, gross_profit: 132011, unit: "SAR '000", source: "6002_HERFY_FOODS/2026_Q3_filed2026-11-05.pdf", page: 20}
+  - {period: "9M2026", segment: "Meat factory (external)", basis: operating, revenue: 76170, profit: 30039, gross_profit: 50516, unit: "SAR '000", source: "6002_HERFY_FOODS/2026_Q3_filed2026-11-05.pdf", page: 20}
+  - {period: "9M2026", segment: "Bakeries and other", basis: operating, revenue: 117204, profit: 5165, gross_profit: 38927, unit: "SAR '000", source: "6002_HERFY_FOODS/2026_Q3_filed2026-11-05.pdf", page: 20}
+  - {period: "9M2026", segment: "Total", basis: operating, revenue: 783991, profit: 2074, gross_profit: 221454, unit: "SAR '000", source: "6002_HERFY_FOODS/2026_Q3_filed2026-11-05.pdf", page: 20}
+  - {period: "FY2022-9M2026", segment: "Geographic", basis: geographic, status: "not found", note: "All restaurants operate in Saudi Arabia under the HERFY trademark; no geographic segments", source: "6002_HERFY_FOODS/2025_Annual_filed2026-03-11.pdf", page: 13}
+
+revenue_drivers:
+  - {period: "31 Dec 2021 / 31 Dec 2022", driver: "Restaurants owned and leased: 40 + 346 = 386 (2021); 40 + 351 = 391 (2022)", value: 391, unit: "count", source: "6002_HERFY_FOODS/2022_Annual_filed2023-03-29.pdf", page: 11, quote: "the total number of restaurants owned and leased by the Company were 40 and 351 respectively (31 December 2021: 40 owned and 346 leased)"}
+  - {period: "31 Dec 2023", driver: "Restaurants owned and leased: 40 + 353", value: 393, unit: "count", source: "6002_HERFY_FOODS/2023_Annual_filed2024-03-13.pdf", page: 11, quote: "the total number of restaurants owned and leased by the Company were 40 and 353 respectively"}
+  - {period: "31 Dec 2024", driver: "Restaurants owned and leased: 40 + 342", value: 382, unit: "count", source: "6002_HERFY_FOODS/2024_Annual_filed2025-03-11.pdf", page: 12, quote: "the total number of restaurants owned and leased by the Company were 40 and 342"}
+  - {period: "31 Dec 2025", driver: "Restaurants owned and leased: 41 + 331", value: 372, unit: "count", source: "6002_HERFY_FOODS/2025_Annual_filed2026-03-11.pdf", page: 13, quote: "the total number of restaurants owned and leased by the Company were 41 and 331 respectively (31 December 2024: 40 owned and 342 leased)"}
+  - {period: "30 Sep 2025", driver: "Restaurants owned and leased: 41 + 331", value: 372, unit: "count", source: "6002_HERFY_FOODS/2025_Q3_filed2025-11-09.pdf", page: 8, quote: "As at September 30, 2025, the total number of restaurants owned and leased by the Company were 41 and 331"}
+  - {period: "30 Sep 2026", driver: "Restaurants owned and leased: 41 + 329", value: 370, unit: "count", source: "6002_HERFY_FOODS/2026_Q3_filed2026-11-05.pdf", page: 8, quote: "As at September 30, 2026, the total number of restaurants owned and leased by the Company were 41 and 329"}
+  - {period: "FY2022-9M2026", driver: "Bakeries and bakery shops (Herfy Bakeries / Doka): number not disclosed", value: null, unit: "count", status: "not found", source: "6002_HERFY_FOODS/2025_Annual_filed2026-03-11.pdf", page: 13, quote: "The Company also operates bakeries and bakery shops \"Herfy Bakeries / Doka\"."}
+  - {period: "FY2022-9M2026", driver: "Like-for-like / same-store sales growth", value: null, unit: "%", status: "not found", source: "6002_HERFY_FOODS/2025_Annual_filed2026-03-11.pdf", page: 44, quote: "Searched all annual and interim PDFs: no like-for-like or same-store sales figure, and no revenue for restaurants opened or closed."}
+  - {period: "FY2023", driver: "Gross sales to customers (FY2022: 1,350,471,119); discounts 69,665,700, rebates 15,980,732, returns 37,306,837", value: 1270693417, unit: "SAR", source: "6002_HERFY_FOODS/2023_Annual_filed2024-03-13.pdf", page: 47, quote: "Sales to customers 1,270,693,417 1,350,471,119"}
+  - {period: "FY2025", driver: "Gross sales to customers (FY2024: 1,219,432,110); discounts 70,640,767 (74,184,097); returns 13,660,655 (32,149,285)", value: 1154753974, unit: "SAR", source: "6002_HERFY_FOODS/2025_Annual_filed2026-03-11.pdf", page: 44, quote: "Sales to customers 1,154,753,974 1,219,432,110"}
+  - {period: "9M2026", driver: "Gross sales to customers (9M2025: 872,287,599); discounts 41,029,172 (52,911,274)", value: 825892041, unit: "SAR", source: "6002_HERFY_FOODS/2026_Q3_filed2026-11-05.pdf", page: 18, quote: "Sales to customers 825,892,041 872,287,599"}
+  - {period: "FY2022-FY2025", driver: "Rental income in revenue: FY2022 21,813,845; FY2023 25,955,382; FY2024 26,671,584; FY2025 26,830,880", value: 26830880, unit: "SAR", source: "6002_HERFY_FOODS/2025_Annual_filed2026-03-11.pdf", page: 44, quote: "Rental income 26,830,880 26,671,584"}
+  - {period: "9M2026", driver: "Rental income in revenue (9M2025: 19,891,755)", value: 20498975, unit: "SAR", source: "6002_HERFY_FOODS/2026_Q3_filed2026-11-05.pdf", page: 18, quote: "Rental income 20,498,975 19,891,755"}
+  - {period: "FY2022", driver: "Herfy Tower (SR 113.8m) reclassified from PP&E to investment property and let to a third party from 1 March 2022", value: 113837594, unit: "SAR", source: "6002_HERFY_FOODS/2023_Annual_filed2024-03-13.pdf", page: 38, quote: "they agreed to enter into a rent agreement for the Tower with a third party on 1 March 2022"}
+  - {period: "FY2024", driver: "Rent expenses in cost of revenues rose to 21,428,939 (FY2023: 7,347,799); utilities 64,004,041 (56,958,181)", value: 21428939, unit: "SAR", source: "6002_HERFY_FOODS/2024_Annual_filed2025-03-11.pdf", page: 43, quote: "Rent expenses 21,428,939 7,347,799"}
+  - {period: "FY2025", driver: "Employee cost in cost of revenues fell to 202,574,642 (FY2024: 248,991,992)", value: 202574642, unit: "SAR", source: "6002_HERFY_FOODS/2025_Annual_filed2026-03-11.pdf", page: 45, quote: "Employee cost 202,574,642 248,991,992"}
+
+one_offs:
+  - {period: "FY2022", item: "Gains on financial assets held at FVTPL", amount: 537423, unit: "SAR", pnl_line: "Gains on financial assets held at fair value through profit or loss (inside operating profit)", recurring: false, source: "6002_HERFY_FOODS/2023_Annual_filed2024-03-13.pdf", page: 8, quote: "Gains on financial assets held at fair value through profit or loss (FVTPL) 13 664,755 537,423"}
+  - {period: "FY2022", item: "Gain on sale of property, plant and equipment", amount: 733178, unit: "SAR", pnl_line: "Other income, net", recurring: false, source: "6002_HERFY_FOODS/2023_Annual_filed2024-03-13.pdf", page: 47, quote: "Gain on sale of property, plant and equipment 707,931 733,178"}
+  - {period: "FY2022", item: "Rent concessions", amount: 526285, unit: "SAR", pnl_line: "Other income, net", recurring: false, source: "6002_HERFY_FOODS/2023_Annual_filed2024-03-13.pdf", page: 47, quote: "Rent concessions - 526,285"}
+  - {period: "FY2022", item: "Impairment loss on non-financial assets (outside EBITDA; for information)", amount: -17545590, unit: "SAR", pnl_line: "Impairment loss on non-financial assets", recurring: false, source: "6002_HERFY_FOODS/2023_Annual_filed2024-03-13.pdf", page: 8, quote: "Impairment loss on non-financial assets 6 - (17,545,590)"}
+  - {period: "FY2023", item: "Gains on financial assets held at FVTPL (investments sold in 2023)", amount: 664755, unit: "SAR", pnl_line: "Gains on financial assets held at FVTPL (inside operating profit)", recurring: false, source: "6002_HERFY_FOODS/2024_Annual_filed2025-03-11.pdf", page: 9, quote: "Gains on financial assets held at fair value through profit or loss (FVTPL) - 664,755"}
+  - {period: "FY2023", item: "Gain on sale of property, plant and equipment", amount: 707932, unit: "SAR", pnl_line: "Other income, net", recurring: false, source: "6002_HERFY_FOODS/2024_Annual_filed2025-03-11.pdf", page: 43, quote: "(Loss) \\ gain on sale of property, plant and equipment (73,171) 707,932"}
+  - {period: "FY2023", item: "Reversals of provisions: slow-moving inventory 2,000,000 and receivable ECL 1,591,753 (ordinary operating provisions, not treated as one-offs)", amount: 3591753, unit: "SAR", pnl_line: "Cost of revenues; reversal for impairment on financial assets", recurring: true, source: "6002_HERFY_FOODS/2024_Annual_filed2025-03-11.pdf", page: 11, quote: "Provision / (reversal) for slow-moving items 11.1 105,238 (2,000,000)"}
+  - {period: "FY2024", item: "Provision for impairment of trade receivables (ordinary ECL; not called exceptional)", amount: -12457437, unit: "SAR", pnl_line: "(Provision) \\ Reversal for impairment loss on financial assets", recurring: true, source: "6002_HERFY_FOODS/2024_Annual_filed2025-03-11.pdf", page: 37, quote: "Provided during the year 12,457,437 -"}
+  - {period: "FY2024", item: "Zakat adjustment for prior years 2014-2022 after ZATCA assessment (in the zakat line)", amount: -7837616, unit: "SAR", pnl_line: "Zakat", recurring: false, source: "6002_HERFY_FOODS/2024_Annual_filed2025-03-11.pdf", page: 42, quote: "Adjustment for prior years 7,837,616 -"}
+  - {period: "FY2025", item: "Sudair factory: leasehold improvements and right-of-use asset fully impaired (Modon lease breach); net non-financial impairment 35,031,354 (also Bakeries 3.3m loss, Restaurants 4.5m reversal)", amount: -35700000, unit: "SAR", pnl_line: "(Impairment loss)/reversal for impairment loss on non-financial assets", recurring: false, source: "6002_HERFY_FOODS/2025_Annual_filed2026-03-11.pdf", page: 33, quote: "the leasehold improvement and related right of use asset were fully impaired as of 31 December 2025 amounting to SR 35.7 million"}
+  - {period: "FY2025", item: "Loss on sale of property, plant and equipment (3.6% of the net loss; not treated as a one-off)", amount: -2761448, unit: "SAR", pnl_line: "Other income, net", recurring: true, source: "6002_HERFY_FOODS/2025_Annual_filed2026-03-11.pdf", page: 45, quote: "Loss on sale of property, plant and equipment (2,761,448) (73,171)"}
+  - {period: "9M2025", item: "Impairment loss on non-financial assets (Sudair factory recognised in Q3 2025)", amount: -38332555, unit: "SAR", pnl_line: "Reversal of impairment (loss) on non-financial assets", recurring: false, source: "6002_HERFY_FOODS/2025_Q3_filed2025-11-09.pdf", page: 9, quote: "Judgment related to the impairment of the Sudair factory work in progress amounting to SR 35.7 million"}
+  - {period: "9M2026", item: "Reversal of impairment on idle assets redeployed to profitable restaurants (outside EBITDA)", amount: 2249325, unit: "SAR", pnl_line: "Reversal of impairment (loss) on non-financial assets", recurring: false, source: "6002_HERFY_FOODS/2026_Q3_filed2026-11-05.pdf", page: 14, quote: "The reversal primarily relates to previously impaired idle assets that were redeployed for use in certain profitable restaurant branches"}
+  - {period: "9M2026", item: "Gain on disposal of property, plant and equipment (P&L line not named; other income, net in the annual presentation)", amount: 1154494, unit: "SAR", pnl_line: "Other income, net (assumed)", recurring: false, source: "6002_HERFY_FOODS/2026_Q3_filed2026-11-05.pdf", page: 7, quote: "(Gain)/loss on disposal of property, plant and equipment (1,154,494) 935,685"}
+
+restatements:
+  - period_restated: "FY2021 (opening balance sheet, in the FY2022 annual)"
+    item: "Total assets 1,845,397,072 -> 2,000,160,013; lease liabilities 516,554,151 -> 618,811,035; total equity 1,048,208,900 -> 1,043,598,814"
+    from: 1845397072
+    to: 2000160013
+    unit: "SAR"
+    reason: "IAS 8 correction of errors (note 34): IFRS 16 reassessment of lease terms and discount rates since 1 Jan 2019 (adjustment i); gross-up of supplier advances previously netted in payables (ii); rebates moved to cost of revenues (iii); rental income moved from other income to revenue (iv); statutory reserve recalculated (v); presentation changes (vi-viii)."
+    source: "6002_HERFY_FOODS/2022_Annual_filed2023-03-29.pdf"
+    page: 59
+    quote: "management has restated and reclassified certain comparatives to correct the errors (items i-v), and give effect to presentational improvements (items vi-viii)"
+  - period_restated: "FY2022-9M2025"
+    item: "No later restatement found: revenue, profit and balance-sheet comparatives in each later filing equal the first-reported figures"
+    from: null
+    to: null
+    unit: "SAR"
+    reason: "Checked each later filing's comparative column against the original filing."
+    source: "6002_HERFY_FOODS/2026_Q3_filed2026-11-05.pdf"
+    page: 5
+    quote: "Revenues 16 268,395,176 264,668,362 783,990,708 817,778,223"
+
+significant_events:
+  - date: "2022-03-01"
+    event: "Herfy Tower (SR 113.8m) reclassified from PP&E to investment property and let to a third party; a further SR 14m building (former employee housing) reclassified in 2023"
+    financial_effect: "Rental income in revenue rose from SR 21.8m (FY2022) to SR 26.0m (FY2023)"
+    source: "6002_HERFY_FOODS/2023_Annual_filed2024-03-13.pdf"
+    page: 38
+    quote: "they agreed to enter into a rent agreement for the Tower with a third party on 1 March 2022"
+  - date: "2023-12-18"
+    event: "General Assembly removed the statutory reserve requirement under the new Companies Law; reserve of SR 101.8m transferred to retained earnings"
+    financial_effect: "No change in total equity"
+    source: "6002_HERFY_FOODS/2023_Annual_filed2024-03-13.pdf"
+    page: 42
+    quote: "Therefore, the statutory reserve was transferred to retained earnings."
+  - date: "2023"
+    event: "Dividend of SR 32.34m paid (none paid in 2022, 2024, 2025 or 9M 2026)"
+    financial_effect: "Cash outflow SR 32.34m"
+    source: "6002_HERFY_FOODS/2024_Annual_filed2025-03-11.pdf"
+    page: 11
+    quote: "Dividend paid - (32,340,000)"
+  - date: "2024"
+    event: "ZATCA reduced its additional zakat claim for 2014-2022 from SR 21.5m to SR 7.8m on appeal; fully provided in FY2024"
+    financial_effect: "Zakat charge SR 14.9m in FY2024 including SR 7.8m for prior years"
+    source: "6002_HERFY_FOODS/2024_Annual_filed2025-03-11.pdf"
+    page: 42
+    quote: "the ZATCA partially accepted the Company’s appeal and reduced the additional zakat liability to SR 7.8 million for the years from 2014 to 2022"
+  - date: "2024"
+    event: "Murabaha borrowings repaid (SR 33.1m repaid, SR 17.5m drawn); no borrowings at end-2024 or end-2025"
+    financial_effect: "Borrowings fell from SR 15.2m to nil"
+    source: "6002_HERFY_FOODS/2024_Annual_filed2025-03-11.pdf"
+    page: 8
+    quote: "Borrowings 16 - 15,154,504"
+  - date: "2025 (Q3)"
+    event: "Sudair factory built on Modon land not brought into service (lease breach); leasehold improvements and right-of-use asset fully impaired"
+    financial_effect: "Impairment SR 35.7m; lease liability remains on the balance sheet"
+    source: "6002_HERFY_FOODS/2025_Annual_filed2026-03-11.pdf"
+    page: 33
+    quote: "At the reporting date, the lease had not been formally cancelled, so the right of use and associated improvements were not derecognized but rather impaired"
+  - date: "2026 (9M)"
+    event: "Short-term borrowings of SR 10m drawn and repaid in the period"
+    financial_effect: "No borrowings at 30 Sep 2026; finance cost paid SR 0.1m"
+    source: "6002_HERFY_FOODS/2026_Q3_filed2026-11-05.pdf"
+    page: 7
+    quote: "Proceeds from short-term borrowings 13 10,000,000 -"
+  - date: "FY2022-9M2026"
+    event: "Savola Group is the ultimate parent and controlling party with 49% of the share capital"
+    financial_effect: "Related-party transactions (rent, sales); FY2025 impairment of receivables owed by related parties"
+    source: "6002_HERFY_FOODS/2025_Annual_filed2026-03-11.pdf"
+    page: 13
+    quote: "The ultimate parent and the controlling party of the Company is Savola Group Company (“The Ultimate Parent”) that owns 49%"
+
+audit_opinion:
+  - {period: "FY2022", opinion: "Unmodified (PwC); key audit matter: carrying amounts of non-financial assets; no emphasis of matter despite the note 34 restatement", emphasis_of_matter: none, source: "6002_HERFY_FOODS/2022_Annual_filed2023-03-29.pdf", page: 3}
+  - {period: "FY2023", opinion: "Unmodified (PwC); key audit matter: carrying amounts of non-financial assets", emphasis_of_matter: none, source: "6002_HERFY_FOODS/2023_Annual_filed2024-03-13.pdf", page: 3}
+  - {period: "FY2024", opinion: "Unmodified (PwC)", emphasis_of_matter: none, source: "6002_HERFY_FOODS/2024_Annual_filed2025-03-11.pdf", page: 3}
+  - {period: "FY2025", opinion: "Unmodified (PwC); key audit matter: impairment assessment of certain non-financial assets", emphasis_of_matter: none, source: "6002_HERFY_FOODS/2025_Annual_filed2026-03-11.pdf", page: 3}
+  - {period: "9M2026", opinion: "Review conclusion unmodified (PwC)", emphasis_of_matter: none, source: "6002_HERFY_FOODS/2026_Q3_filed2026-11-05.pdf", page: 3}
+
+kpis_in_filings:
+  - {period: "31 Dec 2021", kpi: "Restaurants (40 owned, 346 leased)", value: 386, unit: "count", source: "6002_HERFY_FOODS/2022_Annual_filed2023-03-29.pdf", page: 11}
+  - {period: "31 Dec 2022", kpi: "Restaurants (40 owned, 351 leased)", value: 391, unit: "count", source: "6002_HERFY_FOODS/2022_Annual_filed2023-03-29.pdf", page: 11}
+  - {period: "31 Dec 2023", kpi: "Restaurants (40 owned, 353 leased)", value: 393, unit: "count", source: "6002_HERFY_FOODS/2023_Annual_filed2024-03-13.pdf", page: 11}
+  - {period: "31 Dec 2024", kpi: "Restaurants (40 owned, 342 leased)", value: 382, unit: "count", source: "6002_HERFY_FOODS/2024_Annual_filed2025-03-11.pdf", page: 12}
+  - {period: "31 Dec 2025", kpi: "Restaurants (41 owned, 331 leased)", value: 372, unit: "count", source: "6002_HERFY_FOODS/2025_Annual_filed2026-03-11.pdf", page: 13}
+  - {period: "30 Sep 2025", kpi: "Restaurants (41 owned, 331 leased)", value: 372, unit: "count", source: "6002_HERFY_FOODS/2025_Q3_filed2025-11-09.pdf", page: 8}
+  - {period: "30 Sep 2026", kpi: "Restaurants (41 owned, 329 leased)", value: 370, unit: "count", source: "6002_HERFY_FOODS/2026_Q3_filed2026-11-05.pdf", page: 8}
+
+special_extractions:
+  - name: "Finance income inside 'Other income, net' (interest income on finance lease)"
+    unit: "SAR"
+    columns: ["FY2022", "FY2023", "FY2024", "FY2025", "9M2025", "9M2026"]
+    values: [312586, 260772, 221144, 187995, 139802, 79367]
+    sources: "2023_Annual p47; 2024_Annual p43; 2025_Annual p45; 2026_Q3 p7 (cash-flow 'Interest income')"
+  - name: "Stage A data corrections carried into the tables"
+    note: "DA_CF = the four depreciation/amortisation add-backs only (the XBRL values had netted in the non-financial impairment line); IMPAIR_CF = non-financial impairment (FY2022 17.5m, FY2023 nil, FY2024 -0.3m, FY2025 35.0m, 9M2025 38.3m, 9M2026 -2.2m); FY2022 capex provenance D (not a restatement); DEBT nil for FY2025 and 9M2026."
+
+open_questions:
+  - "No like-for-like or same-store sales growth and no revenue for opened or closed restaurants in any filing; new capacity is not determinable."
+  - "The filings do not explain why gross profit fell 23.6% in FY2024 (restaurants and catering gross profit SR 159.1m to SR 98.1m) or why it recovered in FY2025; the cost note shows rent expenses up SR 14.1m in FY2024 and employee costs in cost of revenues down SR 46.4m in FY2025."
+  - "The 9M 2026 gain on disposal of PP&E (SR 1.15m) is taken from the cash-flow statement; the interim does not break down other income."
+  - "Number of bakeries and Doka shops is not disclosed."
