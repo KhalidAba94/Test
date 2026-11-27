@@ -264,6 +264,7 @@ def client_text(x):
                    lambda m: (lambda nm: nm if nm[:2].isupper() else nm[0].lower() + nm[1:])(METRIC_NAMES[m.group(1)]) if m.group(1) not in ("REV",) else "revenue", x)
     return re.sub(r"\s{2,}", " ", x).strip()
 UNIT = ["sector"]   # "group" for sets whose groups are not exchange sectors (guide: group_word)
+OVERVIEW_NOTE = [""]   # guide: overview_note
 
 
 def build_overview(wb, ds, comp_sheets):
@@ -302,6 +303,12 @@ def build_overview(wb, ds, comp_sheets):
         ws.column_dimensions[get_column_letter(i)].width = w
     ws.freeze_panes = "D6"
     ws.auto_filter.ref = f"A5:{get_column_letter(len(cols))}{r - 1}"
+    if OVERVIEW_NOTE[0]:   # a note under the table (e.g. treatments that affect comparability), one merged row
+        ws.merge_cells(start_row=r + 1, start_column=1, end_row=r + 1, end_column=len(cols))
+        c = ws.cell(row=r + 1, column=1, value=OVERVIEW_NOTE[0])
+        c.alignment = Alignment(wrap_text=True, vertical="top")
+        c.font = f(size=9)
+        ws.row_dimensions[r + 1].height = 43
     return ws
 
 
@@ -1022,6 +1029,7 @@ def main(root, out):
     adj = load_csv(os.path.join(root, "data", "adjustments.csv"))
     guide0 = load_yaml(os.path.join(root, "data", "narratives", "guide.yaml"))
     UNIT[0] = guide0.get("group_word", "sector")
+    OVERVIEW_NOTE[0] = guide0.get("overview_note", "")
     KEEP = {"ROE", "LTV", "FFO", "FCF", "EBITDA", "HHI", "CAGR", "GROWTH", "ORGANIC", "CONTRIB", "SHARE", "NAV", "TOI"}
     METRIC_NAMES.update({m["metric_code"]: m["name"] for m in load_csv(os.path.join(root, "config", "metrics.csv"))
                          if m["metric_code"] not in KEEP and m.get("category") != "Analysis"})
@@ -1105,6 +1113,8 @@ def main(root, out):
     gs = wb.create_sheet("How_to_read", 1)
     title(gs, "How to read this workbook, and the methodology in brief")
     gs.column_dimensions["A"].width = 150
+    gs.page_setup.orientation = "landscape"   # the 150-wide column prints within the page
+    gs.page_setup.scale = 70
     r = 5
     for sec in guide.get("sections", []):
         gs.cell(row=r, column=1, value=sec["heading"]).font = f(True, "1F3864", 11)

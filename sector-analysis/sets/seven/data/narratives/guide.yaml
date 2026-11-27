@@ -107,7 +107,31 @@ sections:
     = no PDF in the archive presents the figure (XBRL only).'
   - 'Sources status: used = the file was read and used; used-with-flag = used, with a note (e.g. scanned pages or a name not found in the text layer); flagged = the exchange''s label or symbol differs from
     the file''s own content, explained in read_note.'
+- heading: Review record (27 November 2026)
+  lines:
+  - 'Left out of group totals or shown as n.a. (all other periods are included): SADAFCO FY2022 (year to 31 March 2023, XBRL only, no PDF) and FY2023 (nine months to December 2023) in the Supporting group;
+    Cenomi Retail FY2022 (nine-month year) in Retailers; MBC FY2023 flows in Media; Cenomi Centers'' nine-month FY2022 makes Malls FY2022 n.a. (coverage below 75%); REIT 9M 2026 and 9M 2025 group figures
+    are n.a. where coverage is below 75%.'
+  - 'Net debt: the baseline deducts cash and bank deposits due within one year. Longer-term deposits are shown only as notes under ARDCO (SAR 600m end-2023, SAR 630m end-2024) and Americana (USD 117.8m
+    end-2025). Within the filings checked, these are the only long-term deposit cases found. They are a sensitivity, not proof the deposits are freely available cash.'
+  - 'Treatments kept and disclosed: short-term deposits in net debt; Nahdi bank charges in finance costs (memo on its page, in the Retailers notes and in the Overview note); extra one-off categories (mill
+    fines, eXtra VAT refunds, Halwani provision release, Entaj payables write-back) with reasons in the One_offs register; Entaj biological fair-value gains kept in EBITDA (memo lines excluding them on
+    its page and in the Overview note).'
+  - 'Corrected in this version: the Entaj note that said fair-value changes were removed from EBITDA excluding one-offs; added ARDCO and Americana long-term deposit sensitivities, the Nahdi and Entaj memos,
+    and a Jahez customer-funds note. No figure, formula or group total was changed.'
+  - 'Group coverage rule: the 75% test of FY2025 revenue uses the same formula in all 3,178 test cells of the eight group sheets, with weights from each group''s own FY2025 revenue block. Group totals (474
+    cells) were reproduced independently.'
+  - 'Checks passed in our review (ours, not the analyst''s): all 17,798 formulas were recalculated with no differences or errors; operating income, EBITDA, net debt, free cash flow, gross profit, profit
+    splits and EBITDA excluding one-offs were rebuilt from the Data sheet; 65 of 65 FY2025 inputs were found in the PDFs for Americana, Almarai, NADEC, Entaj and ARDCO (five companies only), plus targeted
+    checks of Nahdi bank charges, SACO gross profit, SADAFCO periods and Entaj fair value.'
+  - 'Not checked in review: a full re-read of the 5,791 core figures and the 94-figure sample; the PDFs of most other companies beyond targeted checks; deposit lines in scanned filings (Tanmiah, Naqi Q3
+    2026, Alamar Q2 2026, Alsaif Q3 2026 and some REIT annuals); any restriction or pledge over deposits; individual coverage percentages were not recomputed from raw data.'
+  - 'Analyst statements, not verified by us: the figures-checked claims in the analyst''s notes (5,791 core figures compared with the PDFs, 419 corrected, 1,482 added, 94-figure independent sample with
+    93 confirmed, two internal reviews, 0 formula errors) are the analyst''s own statements. Our independent checks are limited to those listed above.'
 workbook_title: 'SEVEN priority companies: financial analysis 2022–2026 (47 Saudi Main Market companies)'
 coverage_note: 'File-level checks (company name, period, units, assurance) were done inside every file - see Sources. Every core figure was compared with the PDF statements by an analyst, and every disclosed
   figure was then searched for on its PDF page (Data sheet: PDF match status and manual check).'
 group_word: group
+overview_note: 'Notes: (1) Nahdi''s EBITDA margin (16.9%) is before SAR 53.8m of bank charges booked in finance costs; about 16.3% on the basis other retailers use. (2) Net debt / EBITDA deducts bank deposits
+  due within one year; long-term deposits are not deducted (Americana FY2025 would be 0.37x instead of 0.57x with its USD 117.8m long-term deposits; ARDCO is net cash either way). (3) Entaj''s EBITDA includes
+  biological fair-value gains (FY2025 SAR 13.0m; 3.5% margin without them against 4.5%). See each company page and How_to_read.'

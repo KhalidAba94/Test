@@ -205,29 +205,27 @@ what_it_means:
     of the margin fall is operational; FY2025 profit also included SAR 33.0m of disposal, fair-value and insurance gains.
 confidence_overall: Medium
 data_notes:
-- >-
-  Fair-value remeasurement of biological assets (broiler and breeder birds, IAS 41) is part of normal poultry operations, so it stays
-  in EBITDA and is not treated as a one-off, as for Almarai and NADEC: FY2023 SAR +2.7m, FY2024 SAR -1.2m, FY2025 SAR +13.0m,
-  9M 2025 SAR +11.4m, 9M 2026 SAR +1.4m (cost of revenue; 2025 annual p.12, 2026 Q3 p.9).
-- >-
-  First period available is FY2023 (comparative in the FY2024 annual); the company converted to a joint stock company on 1 Jan 2024
-  and listed on 17 Mar 2025. FY2021-FY2022 are not available.
-- >-
-  FY2024 was restated in the FY2025 annual for prior-period errors and reclassifications (note 32): revenue SAR 1,244.9m to SAR 1,279.7m,
-  cost of revenue SAR 1,047.1m to SAR 1,092.2m, finance costs SAR 33.7m to SAR 14.6m (SAR 16.4m more interest capitalised), operating
-  cash flow SAR 74.4m to SAR 92.0m; profit unchanged. KPMG added an emphasis of matter on this.
-- >-
-  9M 2025 was restated in the 2026 Q3 interim (note 18): inventory provision SAR 25.3m, unrecorded cost of revenue SAR 37.1m and other
-  corrections turned a SAR 18.9m profit into a SAR 39.2m loss. The 30 Sep 2025 balance sheet exists only on the earlier basis (equity
-  SAR 465m).
-- >-
-  Corrected from the PDF statements: capex is PP&E plus intangibles (the XBRL took biological-asset additions); D&A includes right-of-use depreciation
-  and amortisation of breeder birds (bearer biological assets, kept in D&A: FY2025 SAR 14.5m); FY2025 finance income set to nil (the
-  XBRL took a receivables reversal); receivable allowances are excluded from the impairment add-back; 9M 2026 is read from the 2026 Q3
-  interim.
-- >-
-  Biological fair-value changes sit in cost of revenue since the FY2024 restatement (note 32.2.8); EBITDA excluding one-offs removes
-  them in every period, with the FY2024-FY2025 insurance receipts, the FY2025 and 9M 2025 disposal gain and the 9M 2026 payables write-back.
-- >-
-  Primary statements are image pages read by OCR and checked against printed subtotals; the FY2024 annual income-statement page carries
-  a wrong heading (statement of financial position, 2021) but shows the 2024 and 2023 income statement.
+- 'Fair-value remeasurement of biological assets (broiler and breeder birds, IAS 41) is part of normal poultry operations, so it stays in EBITDA and is
+  not treated as a one-off, as for Almarai and NADEC: FY2023 SAR +2.7m, FY2024 SAR -1.2m, FY2025 SAR +13.0m, 9M 2025 SAR +11.4m, 9M 2026 SAR +1.4m (cost
+  of revenue; 2025 annual p.12, 2026 Q3 p.9).'
+- First period available is FY2023 (comparative in the FY2024 annual); the company converted to a joint stock company on 1 Jan 2024 and listed on 17 Mar
+  2025. FY2021-FY2022 are not available.
+- 'FY2024 was restated in the FY2025 annual for prior-period errors and reclassifications (note 32): revenue SAR 1,244.9m to SAR 1,279.7m, cost of revenue
+  SAR 1,047.1m to SAR 1,092.2m, finance costs SAR 33.7m to SAR 14.6m (SAR 16.4m more interest capitalised), operating cash flow SAR 74.4m to SAR 92.0m;
+  profit unchanged. KPMG added an emphasis of matter on this.'
+- '9M 2025 was restated in the 2026 Q3 interim (note 18): inventory provision SAR 25.3m, unrecorded cost of revenue SAR 37.1m and other corrections turned
+  a SAR 18.9m profit into a SAR 39.2m loss. The 30 Sep 2025 balance sheet exists only on the earlier basis (equity SAR 465m).'
+- 'Corrected from the PDF statements: capex is PP&E plus intangibles (the XBRL took biological-asset additions); D&A includes right-of-use depreciation
+  and amortisation of breeder birds (bearer biological assets, kept in D&A: FY2025 SAR 14.5m); FY2025 finance income set to nil (the XBRL took a receivables
+  reversal); receivable allowances are excluded from the impairment add-back; 9M 2026 is read from the 2026 Q3 interim.'
+- Biological fair-value changes sit in cost of revenue since the FY2024 restatement (note 32.2.8). They are NOT removed from EBITDA excluding one-offs,
+  which removes only the insurance receipts (FY2024 SAR 2.3m, FY2025 SAR 4.2m), the FY2025 and 9M 2025 disposal gain and the 9M 2026 payables write-back.
+  This corrects an earlier sentence that said the fair-value changes were removed. The two memo lines below show EBITDA excluding the fair-value changes.
+- Primary statements are image pages read by OCR and checked against printed subtotals; the FY2024 annual income-statement page carries a wrong heading
+  (statement of financial position, 2021) but shows the 2024 and 2023 income statement.
+- 'Memo A (not in the totals): reported EBITDA excluding the biological fair-value changes, SAR m: FY2023 119.9 (122.6 less 2.7; 10.9% of revenue against
+  11.2% reported), FY2024 115.1 (113.9 plus 1.2; 9.0% against 8.9%), FY2025 47.5 (60.5 less 13.0; 3.5% against 4.5%), 9M 2025 79.7 (91.17 less 11.42), 9M
+  2026 85.1 (86.5 less 1.4). Fair-value figures are the note''s amounts to SAR 0.1m (FY2025 12.99).'
+- 'Memo B (not in the totals): EBITDA excluding both one-offs and the fair-value changes, SAR m: FY2023 119.9, FY2024 112.8, FY2025 27.5 (2.0% of revenue),
+  9M 2025 59.8, 9M 2026 79.5. Almarai carries only crops and produce at fair value (change SAR 8.8m; herd and flock at cost) and NADEC shows a SAR 0.26m
+  loss, so the ''same as Almarai and NADEC'' comparison is directional only.'

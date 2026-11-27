@@ -72,12 +72,23 @@ what_it_means:
   uncertain: "Snoonu's own revenue and profit for 9M 2026 are not disclosed, so organic growth cannot be measured, and the statements do not explain why delivery revenue inside Saudi Arabia fell."
 confidence_overall: "Medium"
 data_notes:
-  - "Listed on Nomu from 5 January 2022 and on the Main Market from 10 December 2024; all periods are audited or reviewed statements. Year-end 31 December."
-  - "D&A (cash-flow 'Depreciation and amortization', which includes right-of-use depreciation) was missing from the XBRL data and was added from the cash-flow statements for FY2022-9M 2026; the FY2025 goodwill impairment of SAR 11.8m was added as an impairment add-back."
-  - "Capex corrected in every period to include payments for intangible assets (the XBRL held only property and equipment): FY2022 SAR 40.1m, FY2023 SAR 36.8m, FY2024 SAR 195m, FY2025 SAR 88.3m, 9M 2025 SAR 39.1m."
-  - "FY2025 borrowings corrected to SAR 165m (long-term SAR 149m + short-term SAR 15.8m; the XBRL added current lease liabilities) and lease liabilities to SAR 290m (the XBRL held only the non-current part). Nil borrowings recorded for FY2021, FY2022 and FY2024."
-  - "Net debt deducts short-term deposits held outside cash: SAR 200m at end-2022 and SAR 108m at end-2023, so net debt was -SAR 974m (FY2022) and -SAR 1,119m (FY2023), -10.9x and -7.1x EBITDA."
-  - "9M 2026 has no XBRL file; every 9M 2026 figure was read from the 2026 Q3 interim PDF. The FY2025 AFS is a fully scanned PDF read visually and by OCR."
-  - "Revenue is net of customer promotions and cash back (segment note). Our operating income includes the unrealised fair-value results on start-up investments, which sit below the printed 'Operating profit' (FY2025 printed SAR 49.4m vs our SAR 38.1m)."
-  - "The FY2024 cash-flow add-back for finance costs (SAR 5.3m) differs from the income-statement line (SAR 4.5m) in both the FY2024 and FY2025 AFS; not a restatement."
-  - "Joint Preparation Company for Meals is treated as consolidated throughout (60% subsidiary before February 2024), despite the acquisition-style table in the FY2024 AFS; open question."
+- Listed on Nomu from 5 January 2022 and on the Main Market from 10 December 2024; all periods are audited or reviewed statements. Year-end 31 December.
+- D&A (cash-flow 'Depreciation and amortization', which includes right-of-use depreciation) was missing from the XBRL data and was added from the cash-flow
+  statements for FY2022-9M 2026; the FY2025 goodwill impairment of SAR 11.8m was added as an impairment add-back.
+- 'Capex corrected in every period to include payments for intangible assets (the XBRL held only property and equipment): FY2022 SAR 40.1m, FY2023 SAR 36.8m,
+  FY2024 SAR 195m, FY2025 SAR 88.3m, 9M 2025 SAR 39.1m.'
+- FY2025 borrowings corrected to SAR 165m (long-term SAR 149m + short-term SAR 15.8m; the XBRL added current lease liabilities) and lease liabilities to
+  SAR 290m (the XBRL held only the non-current part). Nil borrowings recorded for FY2021, FY2022 and FY2024.
+- 'Net debt deducts short-term deposits held outside cash: SAR 200m at end-2022 and SAR 108m at end-2023, so net debt was -SAR 974m (FY2022) and -SAR 1,119m
+  (FY2023), -10.9x and -7.1x EBITDA.'
+- 9M 2026 has no XBRL file; every 9M 2026 figure was read from the 2026 Q3 interim PDF. The FY2025 AFS is a fully scanned PDF read visually and by OCR.
+- Revenue is net of customer promotions and cash back (segment note). Our operating income includes the unrealised fair-value results on start-up investments,
+  which sit below the printed 'Operating profit' (FY2025 printed SAR 49.4m vs our SAR 38.1m).
+- The FY2024 cash-flow add-back for finance costs (SAR 5.3m) differs from the income-statement line (SAR 4.5m) in both the FY2024 and FY2025 AFS; not a
+  restatement.
+- Joint Preparation Company for Meals is treated as consolidated throughout (60% subsidiary before February 2024), despite the acquisition-style table in
+  the FY2024 AFS; open question.
+- Cash includes current accounts with banks of SAR 367.4m at end-2025 (SAR 289.5m at 30 Sep 2026) that, per note 8, include amounts collected on behalf
+  of customers and settled weekly against proceeds due to customers. Net cash is therefore larger than the company's own funds; the matching liability is
+  in payables. Short-term deposits of SAR 47.3m (end-2025) and SAR 11.0m (30 Sep 2026) are inside cash with maturity under three months, so they are not
+  deducted again.

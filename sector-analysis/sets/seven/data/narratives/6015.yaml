@@ -93,13 +93,27 @@ what_it_means:
   uncertain: "The filings give no like-for-like sales, no currency effect and no revenue for the acquired businesses, and management gives no reason for the FY2024 fall, so the split between existing restaurants, new restaurants and the Egyptian pound cannot be told."
 confidence_overall: "Medium"
 data_notes:
-  - "Americana reports in US dollars. Every figure in our tables is the printed USD amount x 3.75 (the SAR/USD peg). Because of the peg, the conversion itself adds no FX effect."
-  - "Corrected from the PDF statements: capex excludes payments for key money (USD 0.5m-3.9m a year), which the company carries as a category of right-of-use assets (FY2025 annual note 11, p.43); the impairment add-back is the non-financial-asset line only (the XBRL value also included expected credit losses on receivables); borrowings are the bank overdrafts shown as 'Bank facilities' (FY2021 USD 7.1m, FY2022 USD 18.6m, FY2023 USD 4.4m, 30 Sep 2025 USD 0.2m, nil otherwise)."
-  - "FY2022 combines carve-out figures for the restaurant business up to 27 June 2022 with the new group afterwards; FY2021 equity is 'net parent investment' (SAR 482m), so the FY2022 ROE in the tables (125.5%) is not comparable with later years."
-  - "The FY2023 annual re-presented FY2022 lines below gross profit (tax claim charges and derivative fair value gain combined into 'Fair value losses and tax claims'); revenue, operating profit and net profit were unchanged. No restatement of revenue or profit was found for FY2022-9M 2025."
-  - "Operating income (PBT + finance costs - finance income) equals the printed 'Operating profit' (FY2025 USD 282.7m = SAR 1,060m). Finance costs include interest on lease liabilities (FY2025 USD 40.9m)."
-  - "Net debt deducts the term deposits due within a year, which sit outside cash and cash equivalents: SAR 1,110m at end-2023, SAR 801m at end-2024, SAR 545m (USD 145.2m) at end-2025 and SAR 692m at 30 Sep 2026. Net debt was therefore SAR 480m (FY2023), SAR 1,064m (FY2024), SAR 1,267m (FY2025) and SAR 1,274m (30 Sep 2026), 0.2x, 0.6x, 0.6x and 0.5x EBITDA (9M annualised). Longer term deposits (USD 117.8m at end-2025) are not deducted."
-  - "Only Lebanon is accounted for as hyperinflationary (IAS 29 since September 2020); the 2026 Q3 interim does not give the revenue effect for 9M 2026."
-  - "Restaurant counts are year-end figures from the directors' report on page 3 of each annual (image pages); the interims give none. The FY2022 annual is a scanned PDF."
-  - "EBITDA excluding one-offs removes the one-offs listed here (FY2022 net loss of SAR 67.7m, FY2023 net loss of SAR 14.3m, 9M 2026 gain of SAR 3.4m), giving margins excluding one-offs of 22.3% (FY2022), 22.7% (FY2023) and 25.1% (9M 2026). The EBITDA margins quoted above are on reported EBITDA."
-  - "Year-end 31 December. Listed on the Main Market (and ADX) since 12 December 2022; not a Nomu company."
+- Americana reports in US dollars. Every figure in our tables is the printed USD amount x 3.75 (the SAR/USD peg). Because of the peg, the conversion itself
+  adds no FX effect.
+- 'Corrected from the PDF statements: capex excludes payments for key money (USD 0.5m-3.9m a year), which the company carries as a category of right-of-use
+  assets (FY2025 annual note 11, p.43); the impairment add-back is the non-financial-asset line only (the XBRL value also included expected credit losses
+  on receivables); borrowings are the bank overdrafts shown as ''Bank facilities'' (FY2021 USD 7.1m, FY2022 USD 18.6m, FY2023 USD 4.4m, 30 Sep 2025 USD
+  0.2m, nil otherwise).'
+- FY2022 combines carve-out figures for the restaurant business up to 27 June 2022 with the new group afterwards; FY2021 equity is 'net parent investment'
+  (SAR 482m), so the FY2022 ROE in the tables (125.5%) is not comparable with later years.
+- The FY2023 annual re-presented FY2022 lines below gross profit (tax claim charges and derivative fair value gain combined into 'Fair value losses and
+  tax claims'); revenue, operating profit and net profit were unchanged. No restatement of revenue or profit was found for FY2022-9M 2025.
+- Operating income (PBT + finance costs - finance income) equals the printed 'Operating profit' (FY2025 USD 282.7m = SAR 1,060m). Finance costs include
+  interest on lease liabilities (FY2025 USD 40.9m).
+- 'Net debt deducts the term deposits due within a year, which sit outside cash and cash equivalents: SAR 1,110m at end-2023, SAR 801m at end-2024, SAR
+  545m (USD 145.2m) at end-2025 and SAR 692m at 30 Sep 2026. Net debt was therefore SAR 480m (FY2023), SAR 1,064m (FY2024), SAR 1,267m (FY2025) and SAR
+  1,274m (30 Sep 2026), 0.2x, 0.6x, 0.6x and 0.5x EBITDA (9M annualised). Longer term deposits (USD 117.8m at end-2025) are not deducted.'
+- Only Lebanon is accounted for as hyperinflationary (IAS 29 since September 2020); the 2026 Q3 interim does not give the revenue effect for 9M 2026.
+- Restaurant counts are year-end figures from the directors' report on page 3 of each annual (image pages); the interims give none. The FY2022 annual is
+  a scanned PDF.
+- EBITDA excluding one-offs removes the one-offs listed here (FY2022 net loss of SAR 67.7m, FY2023 net loss of SAR 14.3m, 9M 2026 gain of SAR 3.4m), giving
+  margins excluding one-offs of 22.3% (FY2022), 22.7% (FY2023) and 25.1% (9M 2026). The EBITDA margins quoted above are on reported EBITDA.
+- Year-end 31 December. Listed on the Main Market (and ADX) since 12 December 2022; not a Nomu company.
+- 'Sensitivity (not in the totals): deducting also the long-term deposits of USD 117.8m (about SAR 442m) at end-2025 would lower net debt from SAR 1,267m
+  to about SAR 825m: 0.37x EBITDA against 0.57x in the table (0.81x with no deposits deducted). The company''s liquidity note says these deposits are expected
+  to readily generate cash inflows; the filings read give no early-withdrawal terms, so the table keeps the within-one-year deposits as the baseline.'
