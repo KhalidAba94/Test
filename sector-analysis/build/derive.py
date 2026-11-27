@@ -207,6 +207,13 @@ def main(sector, facts_csv, overrides_csv, out_csv):
             if rr["reason"].startswith("NOT A RESTATEMENT") and r.get("provenance") == "R":
                 r["provenance"] = "D"
             r["note"] = (r.get("note", "") + " " if r.get("note") else "") + f'Restatement/reclassification note: {rr["reason"]} [{rr["source"]}]'
+    # assurance labels the filing itself contradicts (config constituents[t]["assurance_override"] = {period: label}),
+    # e.g. the comparative of a former half-yearly reporter that was neither audited nor reviewed
+    for t, c in (sectors.raw(root).get(sector, {}).get("constituents", {}) or {}).items():
+        for per, lab in (c.get("assurance_override") or {}).items():
+            for k, r in facts.items():
+                if k[0] == t and k[1] == per:
+                    r["assurance"] = lab
     # Short financial years (config constituents[t]["short_periods"] = {period: months}): e.g. a transition period
     # after a year-end change or a first period after incorporation. Every fact of that company-period carries the
     # true length, so analyze.py keeps it out of sector totals and makes growth across it n.m.

@@ -81,7 +81,8 @@ for sector in [k for k in _SLUG if k in ds]:
         if nr:
             flags.append(f"{nr} restated comparatives used (see Data, provenance R)")
         if no:
-            flags.append(f"{no} figures taken from PDF where XBRL missing/mis-tagged (overrides)")
+            noxbrl = not any(r.get("file_type") == "xls" for r in src if r["ticker"] == t)
+            flags.append(f"{no} figures read from the PDFs (no XBRL filed)" if noxbrl else f"{no} figures taken from the PDFs where the XBRL file was missing or mis-tagged")
         unread = [r["file"] for r in src if r["ticker"] == t and r["status"] == "unreadable"]
         if unread:
             flags.append("unreadable: " + ", ".join(unread))

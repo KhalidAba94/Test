@@ -32,7 +32,10 @@
    "6022": {
     "name": "Armah Sports",
     "sub_industry": "Fitness clubs",
-    "short": "Armah"
+    "short": "Armah",
+    "assurance_override": {
+     "9M2025": "Unaudited and not reviewed (Armah reported half-yearly on Nomu; nine-month comparative in the 2026 Q3 interim)"
+    }
    }
   },
   "table_metrics": [
@@ -729,7 +732,9 @@
     "cell_notes": {
      "ROE|FY2024": "Includes the SAR 11,554.7m gain on the in-kind distribution of Almarai shares to shareholders (one-off).",
      "NET_M|FY2024": "Includes the SAR 11,554.7m Almarai distribution gain (one-off).",
-     "OP_M|FY2024": "Includes the SAR 11,554.7m Almarai distribution gain (one-off)."
+     "OP_M|FY2024": "Includes the SAR 11,554.7m Almarai distribution gain (one-off).",
+     "EBITDA_M|FY2024": "Includes the SAR 11,554.7m gain on the in-kind distribution of Almarai shares (one-off); see EBITDA margin excl. one-offs.",
+     "ND_EBITDA|FY2024": "EBITDA includes the SAR 11,554.7m Almarai distribution gain (one-off), so the multiple is understated."
     }
    },
    "2270": {

@@ -106,6 +106,12 @@ profit_and_margin:
     - 4240-FY2025-IMPAIR_CF
     - 4240-9M2026-IMPAIR_CF
   one_offs:
+  - item: Foreign exchange loss (other operating expense)
+    period: FY2023
+    amount_sar_m: -28.8
+    line: Other operating expense
+    source: 4240_AFG_RETAIL/2024_Annual_filed2025-04-09.pdf p.50
+    tax_nci: 'An FX difference outside normal trading, listed like the FY2025 and 9M 2025 FX losses although it is 2.4% of the FY2023 loss; tax effect and minority share not disclosed: not determinable, profit kept as reported'
   - item: Gain on disposal of subsidiary
     period: FY2022
     amount_sar_m: 13.4
@@ -160,7 +166,7 @@ profit_and_margin:
     line: Other operating expense
     source: 4240_AFG_RETAIL/2025_Annual_filed2026-03-16.pdf p.51, p.56 (note 26, currency exposures)
     tax_nci: 'Listed because it is material (11.7% of the attributable loss of SAR 506m) and not a normal trading item: it arose on revaluing net foreign-currency balances, mainly in euro, which rose
-      from SAR 3.91 to SAR 4.41 in 2025 (FY2024 was a SAR 4.7m FX gain). The FY2023 FX loss of SAR 28.8m, 2.4% of that year''s loss, is under the 5% threshold and not listed. Zakat and tax effect not disclosed; minority (NCI) share not disclosed: after-tax effect not determinable, profit kept as reported'
+      from SAR 3.91 to SAR 4.41 in 2025 (FY2024 was a SAR 4.7m FX gain). The FY2023 FX loss of SAR 28.8m (2.4% of that year''s loss) is listed in the register on the same basis. Zakat and tax effect not disclosed; minority (NCI) share not disclosed: after-tax effect not determinable, profit kept as reported'
   - item: Gain on disposal of brands
     period: 9M2025
     amount_sar_m: 21.9

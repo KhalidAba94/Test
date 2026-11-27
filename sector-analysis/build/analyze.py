@@ -129,16 +129,29 @@ def main(sectors_json, out_json, *facts_csvs):
                        "series": series, "growth": growth, "ratios": ratios}
 
         # ------------------------------------------------------------- sector
+        facts_all = facts
         facts = sfacts   # sector totals, growth and ratios exclude year-to-date periods that are not nine months
         top, prof = sc["top_line"], sc["profit"]
         largest = calc.largest(facts, tickers, "FY2025", top)
         largest_profit = calc.largest(facts, tickers, "FY2025", prof)
         ex = [t for t in tickers if t != largest]
 
+        # coverage rule: a group figure is shown only when the companies behind it make up at least 75% of the
+        # group's FY2025 top line (weights from the full facts, so a short year does not drop a company's weight)
+        COVER = 0.75
+        wts = {t: max(calc.Facts.get(facts_all, t, "FY2025", top) or 0.0, 0.0) for t in tickers}
+
+        def cover(tk, used):
+            tw = sum(wts[t] for t in tk)
+            return (sum(wts[t] for t in used) / tw) if tw else 0.0
+
         def totals(tk, m):
             res = {}
             for p in ALLP:
                 tot, n, miss = calc.sector_total(facts, tk, p, m)
+                used = [t for t in tk if t not in miss]
+                if tot is not None and cover(tk, used) < COVER:
+                    tot = "n.a."
                 res[p] = {"v": tot, "n": n, "missing": miss}
             return res
 
@@ -146,7 +159,10 @@ def main(sectors_json, out_json, *facts_csvs):
             res = {}
             for cur, pri in PAIRS:
                 mg = calc.matched_growth(facts, tk, cur, pri, m)
-                res[f"{cur}/{pri}"] = {"growth": mg["growth"], "cur": mg["cur"], "prior": mg["prior"],
+                gv = mg["growth"]
+                if gv is not None and cover(tk, mg["sample"]) < COVER:
+                    gv = "n.a."
+                res[f"{cur}/{pri}"] = {"growth": gv, "cur": mg["cur"], "prior": mg["prior"],
                                        "sample": mg["sample"], "excluded": mg["excluded"], "contrib": mg["contrib"]}
             # CAGR on matched sample with both FY2022 and FY2025
             # companies with the metric in every year FY2022-FY2025 (a short year is left out of sector facts, which drops
@@ -154,7 +170,10 @@ def main(sectors_json, out_json, *facts_csvs):
             samp = [t for t in tk if all(facts.get(t, y, m) is not None for y in FY)]
             s22 = sum(facts.get(t, "FY2022", m) for t in samp) if samp else None
             s25 = sum(facts.get(t, "FY2025", m) for t in samp) if samp else None
-            res["CAGR_2022_2025"] = {"cagr": calc.cagr(s25, s22, 3), "sample": samp}
+            cg = calc.cagr(s25, s22, 3)
+            if cg is not None and cover(tk, samp) < COVER:
+                cg = "n.a."
+            res["CAGR_2022_2025"] = {"cagr": cg, "sample": samp}
             return res
 
         def sector_ratios(tk):
@@ -188,8 +207,8 @@ def main(sectors_json, out_json, *facts_csvs):
                         val = calc.NM   # multiple of negative or immaterial group EBITDA
                     if val is not None and spec[1].startswith("avg:") and dsum <= 0:
                         val = calc.NM   # return on zero or negative group equity
-                    if used and len(used) < -(-len(tk) // 2):
-                        val = "n.a."   # fewer than half the companies have the inputs: no group ratio
+                    if used and cover(tk, used) < COVER:
+                        val = "n.a."   # the companies with the inputs make up less than 75% of the group: no group ratio
                     res[rk][p] = {"v": val, "n": len(used),
                                   "excluded": [t for t in tk if t not in used]}
             return res

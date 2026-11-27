@@ -133,7 +133,7 @@ developments:
   source: 2270_SADAFCO/2026_Q3_filed2026-11-09.pdf p.15
 what_it_means:
   improved: Over the two comparable calendar years revenue rose 5.0% and ROE was 26.9% in FY2025; the company has no borrowings, only lease liabilities, and held net cash of SAR 534m at end-2025.
-  weakened: Gross margin fell from 36.5% (FY2024) to 31.0% (9M 2026) and 9M 2026 attributable profit fell 44.7%; Poland revenue dropped 43.6% in 9M 2026.
+  weakened: Gross margin fell from 36.5% (FY2024) to 31.1% (FY2025), and from 33.2% to 31.0% in 9M 2026 against 9M 2025, and 9M 2026 attributable profit fell 44.7%; Poland revenue dropped 43.6% in 9M 2026.
   why: FY2025 profit held only because of a SAR 107.4m property-sale gain while gross profit fell 10.3%; in 9M 2026 lower international sales and the absence of that gain cut profit.
   uncertain: FY2022 and the March 2022 balance sheet cannot be checked against filed PDFs, and the split of the Polish decline into volume, price and currency is not disclosed.
 confidence_overall: Medium
@@ -142,7 +142,7 @@ data_notes:
   across FY2023 is n.m. FY2021 opening balances = 31 March 2022. FY2022 is left out of the Supporting group totals.'
 - 'FY2022 figures and the FY2021 balance sheet are from XBRL only: the archive has no PDF of the FY Mar-2023 or Apr-Dec 2023 annual reports, so they could not be checked. In every PDF-checked
   period the XBRL D&A omitted right-of-use depreciation and the XBRL cash line was not balance-sheet cash, so FY2022 D&A, EBITDA and cash are probably understated.'
-- 'The FY2021 "R" flags (TA, TE, EQ_ATTR, CASH, LEASE_LIAB) are not restatements: the first value came from the 31 December 2021 column of a quarterly XBRL file (see the Restatements sheet).'
+- 'The FY2021 balance sheet (31 March 2022) is not a restatement: an earlier automatic read had taken the 31 December 2021 column of a quarterly XBRL file; the figures used are the 31 March 2022 balances.'
 - FY2023 ROE (24.6%) is annualised on the period's true length (nine months of profit × 12/9, over average equity). The 2022–25 CAGRs are n.m. because the span includes the short FY2023.
 - 'Corrected from the PDF statements (FY2025 annual p.7 and p.11; same lines in the other filings): cash is balance-sheet cash and cash equivalents (FY2024 SAR 467.8m against SAR 66.5m in the XBRL;
   FY2025 SAR 464.2m against SAR 47.7m); D&A includes right-of-use depreciation; the impairment add-back holds only non-financial impairments (FY2023 goodwill SAR 15.9m, FY2025 PP&E SAR 16.4m),

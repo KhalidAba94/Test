@@ -137,19 +137,6 @@ profit_and_margin:
     line: Loss on derecognition of investment in equity-accounted investee
     source: 2050_SAVOLA_GROUP/2025_Annual_filed2026-03-09.pdf p.11
     tax_nci: 'A loss on an investment stake (remeasurement on the step acquisition), outside normal operations; tax effect and minority share not disclosed: not determinable, profit kept as reported'
-  - item: Loss from discontinued operations (Iran sale, Sudan abandonment, Turkey)
-    period: FY2024
-    amount_sar_m: -1440.2
-    line: Loss from discontinued operations (after tax)
-    source: 2050_SAVOLA_GROUP/2025_Annual_filed2026-03-09.pdf p.11-12, p.77
-    tax_nci: Disposal and abandonment of businesses, outside normal operations; after tax as presented; attributable share disclosed (SAR -1,383.0m). Below operating income, so not in EBITDA;
-      profit kept as reported
-  - item: Gain on disposal of the Sudan operations (in discontinued operations)
-    period: 9M2026
-    amount_sar_m: 42.6
-    line: Profit from discontinued operations
-    source: 2050_SAVOLA_GROUP/2026_Q3_filed2026-11-09.pdf p.16
-    tax_nci: 'Disposal of a business (8.0% of 9M 2026 attributable profit), in discontinued operations; tax effect and minority share not disclosed: not determinable, profit kept as reported'
 developments:
 - date: '2022-12-29'
   category: M&A
@@ -192,6 +179,11 @@ what_it_means:
   uncertain: How much FY2025 growth came from consolidating United Sugar Egypt is not disclosed, and the changing perimeter leaves organic growth not determinable for FY2023 to FY2025.
 confidence_overall: Medium
 data_notes:
+- >-
+  Discontinued operations are below operating income, so they are not in EBITDA and are not one-offs in the One_offs register; they are
+  shown here for information: FY2024 loss from discontinued operations SAR -1,440.2m after tax (Iran sale, Sudan abandonment, Turkey;
+  attributable share SAR -1,383.0m; 2025 annual p.11-12, p.77) and a 9M 2026 gain of SAR 42.6m on disposing of the Sudan operations
+  (2026 Q3 p.16). Profit is kept as reported.
 - 'Discontinued operations change the perimeter between years: FY2023 (FY2024 annual) excludes Iran and Sudan, FY2024 (FY2025 annual) excludes Turkey, 9M 2025 (2026 Q3 interim) excludes Turkey
   and Sudan; FY2022 includes all three. Reported growth for FY2023/FY2022 (-13.9%) and FY2024/FY2023 (-4.6%) therefore mixes perimeters.'
 - 'Restated figures (R): FY2022 finance cost and CFO (reclassifications, FY2023 annual); FY2023 income statement (Iran and Sudan discontinued), CFO (lease interest paid moved into operating),
@@ -204,7 +196,7 @@ data_notes:
   cash is calculated as cash and bank balances less deposits over three months (C).'
 - 'Net debt deducts deposits with commercial banks held outside cash (original maturities over three months): SAR 623m at end-2022 (FY2023 annual note 13, p.61), SAR 738m at end-2023 (FY2024
   annual note 13, p.67), SAR 547m at end-2024 and SAR 53.5m at end-2025 (FY2025 annual note 11, p.63; the end-2025 line also holds Treasury bills). Net debt was therefore SAR 10,432m, SAR 10,215m,
-  SAR 4,214m and SAR 4,889m, and net debt to EBITDA 5.1x (FY2022), 4.3x (FY2023), 0.3x (FY2024, on EBITDA that includes the Almarai gain) and 2.1x (FY2025).'
+  SAR 4,214m and SAR 4,889m, and net debt to EBITDA 5.1x (FY2022), 4.3x (FY2023), 0.3x (FY2024, on EBITDA that includes the Almarai gain) and 2.1x (FY2025). No deposit is deducted at 30 Sep 2026: the SAR 665.2m of current investments at amortised cost mixes Ministry of Finance sukuk, Treasury bills and term deposits with no split (the cash flow suggests about SAR 144m of deposits).'
 - Share of results of equity-accounted investees is shown inside "results from operating activities" on the face; our operating income removes it. Gains below net finance cost (FY2022
   investments SAR 41.9m, FY2023 Morocco SAR 18.7m, FY2024 Almarai SAR 11,554.7m and USCE -SAR 139.0m) sit inside our operating income and are listed as one-offs; FY2024 operating margin
   (52.0%) and EBITDA are distorted by the Almarai gain, which EBITDA excluding one-offs removes (SAR 2,122m in FY2024).

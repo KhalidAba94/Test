@@ -8,7 +8,7 @@ sections:
   lines:
   - Full years (FY2022–FY2025) and the 2026 year-to-date (9M 2026 = 1 January to 30 September) are always shown apart. 9M 2026 is compared only with 9M 2025, never with a full year.
   - 'Each year uses the latest restated figure: the comparative in the most recent filing that shows that year. Where this differs from what was first reported, the figure is marked R (restated) in the
-    Data sheet and in a cell comment, the original value is shown, and the Restatements sheet gives the reason.'
+    Data sheet and in a cell comment, the originally reported value is shown where the archive holds it, and the Restatements sheet gives the reason.'
   - 'Group totals and ratios are built from summed company figures: a group EBITDA margin is total EBITDA ÷ total revenue, not an average of company margins. Group totals are simple sums of listed companies,
     not consolidated accounts, so where one company owns part of another on the list the same profit can appear twice (see each group''s data notes).'
   - 'Group growth uses a matched sample: only companies with figures in both periods. Each totals block shows how many companies the revenue total covers in each period; a comment names any left out.'
@@ -35,8 +35,9 @@ sections:
   - 'Provenance (Data sheet and comments): D = disclosed as printed; R = restated comparative from a later filing (the original value is shown); C = calculated by us (formula shown). Figures taken from
     a PDF where the XBRL file was missing, unreadable or mis-tagged carry the PDF page.'
   - A blank cell means the figure is not available; missing figures are never filled with zeros or estimates. A true zero (e.g. no borrowings) shows as 0.0. 'n.m.' = not meaningful (see Periods); 'n.a.'
-    = a group ratio is not shown because fewer than half of the group's companies report its inputs; 'not determinable' = the filings do not allow a like-for-like step to be measured; 'not assessed' = no
-    bridge entry was made for that step.
+    = a group figure (total, growth, ratio, share or concentration) is not shown because the companies that report it make up less than 75% of the group's FY2025 revenue (e.g. Malls in FY2022, when Cenomi
+    Centers had a nine-month year; REIT nine-month figures, which only some funds print); 'not determinable' = the filings do not allow a like-for-like step to be measured; 'not assessed' = no bridge entry
+    was made for that step.
   - Amounts are shown with one decimal (SAR m); the commentary rounds amounts above SAR 100m to whole numbers.
   - Yellow cells are partial-year (9M) figures.
 - heading: Reading the group sheets
@@ -68,7 +69,7 @@ sections:
     investments; FX differences on financing balances), are listed in the One_offs register and removed in ''EBITDA excl. identified one-offs''. Small items that recur in normal operations (equipment disposals,
     lease modifications, write-offs) are not one-offs.'
   - Operating cash flow is as reported; companies differ on whether interest paid sits in operating or financing cash flow, and lease payments are financing cash flows under IFRS 16, so free cash flow is
-    before lease payments. Each company page notes its basis.
+    before lease payments. The company's data notes state the basis where the filing makes it clear.
   - Lease-heavy businesses (restaurants, gyms, retailers, malls) report under IFRS 16, so EBITDA is before rent and net debt includes lease liabilities; net debt ÷ EBITDA is on that basis for every company.
     Borrowings and lease liabilities are shown on separate lines, so a borrowings-only view can be read from each company page.
   - 'REITs: rental (and hotel) revenue; net income; funds from operations (FFO), which we calculate as net income + depreciation and impairments of real estate − gains on property disposals; distributions
@@ -95,6 +96,17 @@ sections:
   - 'Medium: disclosed inputs combined with one stated assumption.'
   - 'Low: proxies or management commentary without amounts.'
   - 'Not determinable: disclosure is insufficient, so no number is shown.'
+- heading: Codes used in the Data, Sources and Coverage sheets
+  lines:
+  - 'Provenance: D = disclosed as printed in the filing used; R = restated comparative from a later filing; C = calculated by us (formula in ''location'').'
+  - 'PDF match status / how traced: text_statement or text_other = the value was found on a text page of the PDF (statement page or a note); ocr_statement or ocr_other = found on an image page by OCR; pdf_override_confirmed
+    = the value was taken from the PDF page and found there again; pdf_override_page = taken from the PDF page, not re-found by search (e.g. a sum of printed lines); components_found = a sum whose parts
+    were all found; later_filing = printed as a comparative in a later filing; calculated_ok = a calculated figure recomputed from its inputs; too_small or not_found = not placed by the search (then confirmed
+    by hand, see the next column).'
+  - 'Manual check: confirmed (p. X of file) = the value was compared with that page by an analyst; confirmed_components = the parts were compared; confirmed_nil = the page shows no such item; accepted_limitation
+    = no PDF in the archive presents the figure (XBRL only).'
+  - 'Sources status: used = the file was read and used; used-with-flag = used, with a note (e.g. scanned pages or a name not found in the text layer); flagged = the exchange''s label or symbol differs from
+    the file''s own content, explained in read_note.'
 workbook_title: 'SEVEN priority companies: financial analysis 2022–2026 (47 Saudi Main Market companies)'
 coverage_note: 'File-level checks (company name, period, units, assurance) were done inside every file - see Sources. Every core figure was compared with the PDF statements by an analyst, and every disclosed
   figure was then searched for on its PDF page (Data sheet: PDF match status and manual check).'
