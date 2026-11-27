@@ -132,14 +132,6 @@ profit_and_margin:
     source: 2287_ENTAJ/2025_Annual_filed2026-04-23.pdf p.44
     tax_nci: >-
       A property disposal gain (proceeds SAR 22.3m), 12.9% of the attributable loss; zakat effect not disclosed; no non-controlling interests: after-zakat effect not determinable, loss kept as reported
-  - item: >-
-      Gain on fair value remeasurement of biological assets (FY2023 SAR +2.7m, FY2024 SAR -1.2m, 9M 2025 SAR +11.4m, 9M 2026 SAR +1.4m)
-    period: FY2025
-    amount_sar_m: 13.0
-    line: Cost of revenue
-    source: 2287_ENTAJ/2025_Annual_filed2026-04-23.pdf p.12; 2287_ENTAJ/2026_Q3_filed2026-11-11.pdf p.9
-    tax_nci: >-
-      A valuation result outside normal operations, listed in every period; zakat effect not disclosed; no non-controlling interests: after-zakat effect not determinable, loss kept as reported
   - item: Insurance proceeds
     period: FY2025
     amount_sar_m: 4.2
@@ -213,6 +205,10 @@ what_it_means:
     of the margin fall is operational; FY2025 profit also included SAR 33.0m of disposal, fair-value and insurance gains.
 confidence_overall: Medium
 data_notes:
+- >-
+  Fair-value remeasurement of biological assets (broiler and breeder birds, IAS 41) is part of normal poultry operations, so it stays
+  in EBITDA and is not treated as a one-off, as for Almarai and NADEC: FY2023 SAR +2.7m, FY2024 SAR -1.2m, FY2025 SAR +13.0m,
+  9M 2025 SAR +11.4m, 9M 2026 SAR +1.4m (cost of revenue; 2025 annual p.12, 2026 Q3 p.9).
 - >-
   First period available is FY2023 (comparative in the FY2024 annual); the company converted to a joint stock company on 1 Jan 2024
   and listed on 17 Mar 2025. FY2021-FY2022 are not available.
