@@ -113,19 +113,15 @@ profit_and_margin:
     line: Other income, net
     source: 6022_ARMAH/2022_Annual_filed2023-11-30.pdf p.27
     tax_nci: 'No minority interests; zakat effect not disclosed (no zakat charge in FY2022): not determinable, profit kept as reported'
-  - item: Gain on disposal of lease contracts
-    period: FY2022
-    amount_sar_m: 1.3
-    line: Other income, net
-    source: 6022_ARMAH/2022_Annual_filed2023-11-30.pdf p.27
-    tax_nci: 'No minority interests; zakat effect not disclosed: not determinable, profit kept as reported'
-  - item: Loss on modification of financial liability (loan rescheduling)
+  - item: Loss on modification of financial liability (loan rescheduling; IFRS 9 modification of borrowings, a difference on a financing
+      balance booked outside finance costs)
     period: FY2022
     amount_sar_m: -3.8
-    line: Other income, net
+    line: Other income, net (inside our operating income)
     source: 6022_ARMAH/2022_Annual_filed2023-11-30.pdf p.27
     tax_nci: 'No minority interests; zakat effect not disclosed: not determinable, profit kept as reported'
-  - item: Gain on modification of loans and borrowings
+  - item: Gain on modification of loans and borrowings (IFRS 9 modification of borrowings, a difference on a financing balance booked
+      outside finance costs)
     period: FY2024
     amount_sar_m: 4.5
     line: Gain on modification of loans and borrowings
@@ -195,6 +191,10 @@ data_notes:
   and gross profit; we use the PDF figures.
 - 'Corrected from the PDF statements: D&A for EBITDA includes depreciation of right-of-use assets, which the XBRL omitted (e.g. FY2025 SAR 42.8m vs 34.3m);
   capex includes intangibles; advances to suppliers and contractors (a separate investing line) are excluded from capex.'
+- 'One-offs: the loan-modification loss (FY2022 SAR 3.8m) and gain (FY2024 SAR 4.5m) are IFRS 9 modifications of borrowings, booked in
+  other income or on their own line, not in finance costs, so they sit inside our operating income; they are listed as one-offs as
+  differences on financing balances, like FX on financing balances. Gains and losses on lease contracts (FY2022 SAR 1.3m gain on disposal
+  of lease contracts) are normal lease items and are not one-offs.'
 - Right-of-use depreciation of centres under construction (SAR 5.1m in FY2025) is in other expenses, outside cost of revenue. Finance
   income includes sublease interest and deposit income.
 - 'Net debt deducts short-term bank deposits held outside cash: SAR 62.8m at end-2023, so FY2023 net debt is SAR 287m (8.7x EBITDA).'

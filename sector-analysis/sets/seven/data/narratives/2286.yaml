@@ -88,8 +88,8 @@ profit_and_margin:
     - 2286-9M2026-ZAKAT_TAX
     - 2286-9M2026-NI_ATTR
   - period: FY2022-9M2026
-    driver: The company has no borrowings; net debt is lease liabilities (SAR 376m at end-2025) less cash, and net debt to EBITDA was 1.17x in
-      FY2025 and 0.72x in 9M 2026 (annualised). Capex rose from SAR 10.2m (FY2023) to SAR 85.0m in 9M 2026 for the Al-Kharj expansion, and dividends
+    driver: The company has no borrowings; net debt is lease liabilities (SAR 376m at end-2025) less cash and short-term murabaha deposits, SAR 156m
+      at end-2025, and net debt to EBITDA was 0.6x in FY2025 and 0.6x in 9M 2026 (annualised). Capex rose from SAR 10.2m (FY2023) to SAR 85.0m in 9M 2026 for the Al-Kharj expansion, and dividends
       paid were SAR 140.4m in 9M 2026.
     source: balance sheets and cash-flow statements (FY2024-FY2025 annuals; 2026 Q3 p.6, p.9, p.21)
     refs:
@@ -104,13 +104,13 @@ profit_and_margin:
     amount_sar_m: -4.08
     line: Other expense
     source: 2286_FOURTH_MILLING/2024_Annual_filed2025-03-16.pdf p.46; 2286_FOURTH_MILLING/2023_Annual_filed2024-11-07.pdf p.7
-    tax_nci: 'Under 5% of attributable profit; zakat and tax effect not disclosed, no minority interests: profit kept as reported'
+    tax_nci: 'Under 5% of attributable profit but listed as a regulatory penalty outside normal operations; zakat and tax effect not disclosed, no minority interests: profit kept as reported'
   - item: Provision for a GFSA fine (inspection of 24 Oct 2024), annulled by a final court judgment on 27 Oct 2026
     period: FY2024
     amount_sar_m: -4.0
     line: Other expenses, net
     source: 2286_FOURTH_MILLING/2024_Annual_filed2025-03-16.pdf p.46; 2286_FOURTH_MILLING/2026_Q3_filed2026-11-04.pdf p.22
-    tax_nci: 'Under 5% of attributable profit; zakat and tax effect not disclosed, no minority interests: profit kept as reported'
+    tax_nci: 'Under 5% of attributable profit but listed as a regulatory penalty outside normal operations; zakat and tax effect not disclosed, no minority interests: profit kept as reported'
 developments:
 - date: '2024-01-09'
   category: financing
@@ -146,7 +146,8 @@ what_it_means:
 confidence_overall: Medium
 data_notes:
 - 'No borrowings: the XBRL ''current portion of long-term loans'' was the current portion of lease liabilities, so DEBT is 0 and LEASE_LIAB is
-  the total of current and non-current leases (stage A corrections, FY2023-9M2026). Net debt is leases less cash.'
+  the total of current and non-current leases (corrected from the PDF balance sheets, FY2023 to 9M 2026). Net debt is leases less cash and short-term
+  deposits.'
 - 'FY2022 and 1 Jan 2022 were restated in the FY2023 annual (note 29): leases +SAR 111.8m, PP&E -SAR 16.4m, FY2022 net profit SAR 164.9m to SAR
   163.0m (R).'
 - 'FY2023 revenue was re-presented in the FY2024 annual (note 30): SAR 7.5m of rebates deducted from revenue (SAR 565.6m to SAR 558.1m, R); FY2022
@@ -156,12 +157,15 @@ data_notes:
   on a like basis. 9M 2025 was re-presented the same way (-SAR 10.8m, 2026 Q3 note 27).'
 - FY2025 cash is the 2026 Q3 comparative (SAR 63.75m, R), which includes SAR 0.65m of accrued finance income reclassified from prepayments (note
   27); the FY2025 annual shows SAR 63.10m.
-- Cash excludes short-term murabaha deposits (SAR 74.1m at end-2024, SAR 156.2m at end-2025, SAR 21.1m at 30 Sep 2026), so net debt overstates
-  the company's net lease obligation after deposits.
+- 'Net debt deducts short-term murabaha deposits held outside cash: SAR 74.1m at end-2024 (FY2025 annual note 14, p.32), SAR 156.2m at end-2025 and
+  SAR 21.1m at 30 Sep 2026 (2026 Q3 interim note 14.2, p.20), and SAR 44.4m at 30 Sep 2025 (2025 Q3 interim). Net debt was therefore SAR 197m, SAR 156m,
+  SAR 184m and SAR 207m.'
 - Capex excludes advances to contractors and suppliers for the Al-Kharj expansion (SAR 6.7m FY2024, SAR 43.0m FY2025, SAR 12.6m 9M 2026).
 - Zakat and tax includes current and deferred income tax (part of the shareholding is foreign-owned).
-- IMPAIR_CF FY2024 is the SAR 4.4m write-off of capital work in progress; other years are nil (the XBRL rows were receivable ECL and were set
-  to 0).
+- IMPAIR_CF FY2024 is the SAR 4.4m write-off of capital work in progress; other years are nil (the XBRL rows were receivable credit losses,
+  corrected to nil).
 - Operating cash flow is before lease interest paid (shown in financing); the 2026 Q3 cash-flow statement starts from profit for the period.
 - Primary statements in the FY2022, FY2024 and FY2025 annuals and the interims are scanned images (read by OCR; totals cross-checked).
 - Listed on 27 Oct 2024; the archive holds statements from FY2022 (with FY2021 comparatives); the FY2025 auditor replaced the FY2024 auditor.
+- 'Cross-holding: Fourth Milling is held by Gulf Flour Milling Industrial Co. (100% until the October 2024 IPO, 70% after), a joint venture owned one third by Othaim (Retailers group), so part of
+  its profit is also in Othaim''s: Othaim''s share of the joint venture''s results was SAR 46.0m (FY2022), SAR 30.1m (FY2023), SAR 28.7m (FY2024) and SAR 46.6m (FY2025).'

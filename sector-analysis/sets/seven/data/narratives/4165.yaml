@@ -131,8 +131,8 @@ profit_and_margin:
     line: General and administrative expenses
     source: 4165_ALMAJED_OUD/2025_Annual_filed2026-02-11.pdf p.46-48
     tax_nci: >-
-      Zakat effect not disclosed; no non-controlling interests: after-zakat effect not determinable, profit kept as reported (3.2% of
-      attributable profit)
+      3.2% of attributable profit, listed because listing costs are outside normal operations; zakat effect not disclosed; no
+      non-controlling interests: after-zakat effect not determinable, profit kept as reported
 developments:
 - date: '2023-03-21'
   category: regulation
@@ -194,5 +194,5 @@ data_notes:
   2.6m, 9M 2026 SAR 9.4m), so it is inside our operating income and EBITDA. It is recurring and not treated as a one-off. Lease concessions
   (SAR 1.4m in FY2025) also recur.
 - >-
-  D&A includes amortisation of right-of-use assets (FY2025 SAR 97.9m), added in stage A; the XBRL D&A covered only PP&E and intangibles.
-  Receivable ECL was removed from impairments.
+  D&A includes amortisation of right-of-use assets (FY2025 SAR 97.9m), read from the PDF cash-flow statements; the XBRL D&A covered only
+  PP&E and intangibles. Receivable credit losses are excluded from the impairment add-back.

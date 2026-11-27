@@ -151,5 +151,5 @@ data_notes:
   cash-flow items read from the 2026 Q3 interim (p.9) because the XBRL had none.'
 - 'Borrowings largely fund the consumer-finance receivables, so net debt (SAR 2,045m at end-2025) is not comparable with a pure retailer''s. Net debt deducts a SAR 30.0m Islamic short-term deposit
   placed with a local bank at end-2025 (FY2025 annual note 16, p.47) and at 30 Sep 2025 (2025 Q3 interim note 7, p.24).'
-- The FY2024 NI_ATTR and CAPEX values first reported in our data were XBRL line picks (net profit before minorities; PP&E only), not restatements.
+- The FY2024 attributable profit and capex first read from the XBRL were the wrong lines (net profit before minorities; PP&E only); they were corrected from the PDF and are not restatements.
 - The FY2022 annual is a fully scanned document and the FY2024 annual has an unreliable embedded text layer; figures were read by OCR and checked against totals.

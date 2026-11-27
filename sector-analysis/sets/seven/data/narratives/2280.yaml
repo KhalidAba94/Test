@@ -89,7 +89,7 @@ profit_and_margin:
     - 2280-FY2025-GP
   - period: FY2022-FY2025
     driver: Capex rose from SAR 1,334m (FY2022) to SAR 4,385m (FY2025), so free cash flow fell from SAR 2,496m to SAR 1,078m and borrowings (incl. overdrafts) rose to SAR 12,489m; we
-      calculate net debt at 2.25x EBITDA at end-2025. Capex here excludes additions to biological assets (SAR 1,042m in FY2025).
+      calculate net debt at 2.2x EBITDA at end-2025. Capex here excludes additions to biological assets (SAR 1,042m in FY2025).
     source: 2280_ALMARAI/2025_Annual_filed2026-01-20.pdf p.14
     refs:
     - 2280-FY2022-CAPEX
