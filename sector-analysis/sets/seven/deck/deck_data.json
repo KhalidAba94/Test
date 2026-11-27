@@ -1,0 +1,2747 @@
+{
+ "groups": {
+  "Entertainment": {
+   "label": "Entertainment and leisure",
+   "reit": false,
+   "total": {
+    "name": "Entertainment and leisure: group total",
+    "ticker": "",
+    "total": true,
+    "sub": "5 companies \u00b7 FY2025 revenue SAR 2,874m",
+    "cells": [
+     {
+      "v": 0.16833605040195643,
+      "a": 2427.884615,
+      "b": 2078.070444
+     },
+     {
+      "v": 0.1099890758194042,
+      "a": 2694.9254,
+      "b": 2427.884615
+     },
+     {
+      "v": 0.06639196765891908,
+      "a": 2873.8468,
+      "b": 2694.9254
+     },
+     {
+      "v": 0.02973720419250836,
+      "a": 2185.381715,
+      "b": 2122.2713
+     }
+    ],
+    "cagr": 0.11412635861166409,
+    "margin": {
+     "FY2025": 0.389890996277185,
+     "9M2025": 0.4070380162988587,
+     "9M2026": 0.3976922402318169
+    },
+    "lev": 3.0830513783122098,
+    "payout": null,
+    "line": "Gyms grow (Sport Clubs, Armah); Leejam slows; Baan shrinks and relies on one-offs"
+   },
+   "rows": [
+    {
+     "name": "Leejam Sports",
+     "ticker": "1830",
+     "sub": "FY2025 revenue SAR 1,614m",
+     "cells": [
+      {
+       "v": 0.24359263298694822,
+       "a": 1325.4071,
+       "b": 1065.7888
+      },
+      {
+       "v": 0.13275860677070472,
+       "a": 1501.3663,
+       "b": 1325.4071
+      },
+      {
+       "v": 0.07524039936156823,
+       "a": 1614.3297,
+       "b": 1501.3663
+      },
+      {
+       "v": 0.04044670701072883,
+       "a": 1231.045515,
+       "b": 1183.1894
+      }
+     ],
+     "cagr": 0.1484366092779159,
+     "adj": {
+      "v": "= reported",
+      "label": "9M",
+      "basis": "No acquisitions, FX or accounting effects"
+     },
+     "margin": {
+      "FY2025": 0.47181167514913464,
+      "9M2025": 0.4642365795366321,
+      "9M2026": 0.42890830888571974
+     },
+     "lev": 2.4448220701216137,
+     "payout": null,
+     "ni25": 304.8704,
+     "line": "Growth slowing: 9M revenue +4.0% after 14.8% a year since FY2022; profit \u221218% as costs outpace revenue"
+    },
+    {
+     "name": "TECO (Shams)",
+     "ticker": "4170",
+     "sub": "FY2025 revenue SAR 9m",
+     "cells": [
+      {
+       "v": -0.053779327462915805,
+       "a": 9.6066,
+       "b": 10.1526
+      },
+      {
+       "v": "n.m.",
+       "a": 9.9775,
+       "b": 9.6066
+      },
+      {
+       "v": "n.m.",
+       "a": 9.3351,
+       "b": 9.9775
+      },
+      {
+       "v": "n.m.",
+       "a": 6.8289,
+       "b": 6.4632
+      }
+     ],
+     "cagr": -0.0275948888547356,
+     "adj": {
+      "v": null,
+      "basis": "Not measurable"
+     },
+     "margin": {
+      "FY2025": "n.m.",
+      "9M2025": "n.m.",
+      "9M2026": "n.m."
+     },
+     "lev": "n.m.",
+     "payout": null,
+     "ni25": -11.4846,
+     "line": "Tiny resort (revenue about SAR 10m a year); results depend on deposit income, which is falling"
+    },
+    {
+     "name": "Baan",
+     "ticker": "1820",
+     "sub": "FY2025 revenue SAR 649m",
+     "cells": [
+      {
+       "v": 0.02947178013935492,
+       "a": 742.139,
+       "b": 720.893
+      },
+      {
+       "v": -0.08548668106648483,
+       "a": 678.696,
+       "b": 742.139
+      },
+      {
+       "v": -0.04369555736294317,
+       "a": 649.04,
+       "b": 678.696
+      },
+      {
+       "v": -0.09864247576423513,
+       "a": 448.712,
+       "b": 497.818
+      }
+     ],
+     "cagr": -0.03439341638656668,
+     "adj": {
+      "v": null,
+      "basis": "Not measurable: acquisitions not disclosed"
+     },
+     "margin": {
+      "FY2025": 0.1521647356095156,
+      "9M2025": 0.2576564125845188,
+      "9M2026": 0.2769304141632049
+     },
+     "lev": 10.435688176506918,
+     "payout": null,
+     "ni25": -201.814,
+     "line": "Core shrinking (9M \u22129.9%); the 9M profit rests on a SAR 69.5m JV sale gain and insurance income"
+    },
+    {
+     "name": "Sport Clubs",
+     "ticker": "6018",
+     "sub": "FY2025 revenue SAR 376m",
+     "cells": [
+      {
+       "v": 0.009615877503706072,
+       "a": 270.620715,
+       "b": 268.043244
+      },
+      {
+       "v": 0.20990737904154888,
+       "a": 327.426,
+       "b": 270.620715
+      },
+      {
+       "v": 0.14908101372523874,
+       "a": 376.239,
+       "b": 327.426
+      },
+      {
+       "v": 0.1719747190081733,
+       "a": 318.7572,
+       "b": 271.983
+      }
+     ],
+     "cagr": 0.1196603921342756,
+     "adj": {
+      "v": "= reported",
+      "label": "9M",
+      "basis": "No acquisitions, FX or accounting effects"
+     },
+     "margin": {
+      "FY2025": 0.4146300622742459,
+      "9M2025": 0.4121827467157874,
+      "9M2026": 0.4180423218675531
+     },
+     "lev": 3.0855267138729663,
+     "payout": null,
+     "ni25": 41.1669,
+     "line": "Fastest-growing gym operator: 9M revenue +17.2% and profit +54% at a steady 42% margin"
+    },
+    {
+     "name": "Armah Sports",
+     "ticker": "6022",
+     "sub": "FY2025 revenue SAR 225m",
+     "cells": [
+      {
+       "v": 5.072342489842945,
+       "a": 80.1112,
+       "b": 13.1928
+      },
+      {
+       "v": 1.215165919372073,
+       "a": 177.4596,
+       "b": 80.1112
+      },
+      {
+       "v": 0.2673476103856878,
+       "a": 224.903,
+       "b": 177.4596
+      },
+      {
+       "v": 0.10576491376551811,
+       "a": 180.0381,
+       "b": 162.8177
+      }
+     ],
+     "cagr": 1.5736693861158861,
+     "adj": {
+      "v": "= reported",
+      "label": "9M",
+      "basis": "No acquisitions, FX or accounting effects"
+     },
+     "margin": {
+      "FY2025": 0.5150099909738866,
+      "9M2025": 0.5080854231450266,
+      "9M2026": 0.5115378356025753
+     },
+     "lev": 2.793213193798163,
+     "payout": null,
+     "ni25": 62.0125,
+     "line": "Gyms filling up: revenue from SAR 13m (FY2022) to SAR 225m (FY2025); margin steady at about 51%"
+    }
+   ]
+  },
+  "Media": {
+   "label": "Media",
+   "reit": false,
+   "total": null,
+   "rows": [
+    {
+     "name": "MBC Group",
+     "ticker": "4072",
+     "sub": "FY2025 revenue SAR 5,391m",
+     "cells": [
+      {
+       "v": "n.m.",
+       "a": 1712.062,
+       "b": null
+      },
+      {
+       "v": "n.m.",
+       "a": 4196.373,
+       "b": 1712.062
+      },
+      {
+       "v": 0.28464890990386227,
+       "a": 5390.866,
+       "b": 4196.373
+      },
+      {
+       "v": -0.22838864108683055,
+       "a": 2964.358,
+       "b": 3841.776
+      }
+     ],
+     "cagr": "n.m.",
+     "adj": {
+      "v": null,
+      "basis": "Not measurable: currency, hyperinflation not disclosed"
+     },
+     "margin": {
+      "FY2025": 0.0643649832883993,
+      "9M2025": 0.11211038852863883,
+      "9M2026": 0.0749899303660354
+     },
+     "lev": -2.3931122686526884,
+     "payout": null,
+     "ni25": 382.527,
+     "line": "Revenue \u221222.8% in 9M 2026; a SAR 575m fair-value loss on ACSC turned profit into a SAR 510m loss"
+    }
+   ]
+  },
+  "FnB": {
+   "label": "F&B operators",
+   "reit": false,
+   "total": {
+    "name": "F&B operators: group total",
+    "ticker": "",
+    "total": true,
+    "sub": "5 companies \u00b7 FY2025 revenue SAR 11,917m",
+    "cells": [
+     {
+      "v": 0.0020717916657915225,
+      "a": 11673.029772000002,
+      "b": 11648.895687
+     },
+     {
+      "v": -0.0825780720025393,
+      "a": 10709.093479,
+      "b": 11673.029772000002
+     },
+     {
+      "v": 0.11280139120727894,
+      "a": 11917.094122,
+      "b": 10709.093479
+     },
+     {
+      "v": 0.11592113074393962,
+      "a": 9733.070337,
+      "b": 8722.005587
+     }
+    ],
+    "cagr": 0.007616346432069987,
+    "margin": {
+     "FY2025": 0.2180693270016618,
+     "9M2025": 0.20838649137178086,
+     "9M2026": 0.23437776282454495
+    },
+    "lev": 0.7486501692186924,
+    "payout": null,
+    "line": "Americana leads a recovery; growth at Alamar and Burgerizzr is partly bought"
+   },
+   "rows": [
+    {
+     "name": "Americana Restaurants",
+     "ticker": "6015",
+     "sub": "FY2025 revenue SAR 9,408m",
+     "cells": [
+      {
+       "v": 0.014541224736271285,
+       "a": 9049.2525,
+       "b": 8919.5513
+      },
+      {
+       "v": -0.08966887596516959,
+       "a": 8237.8162,
+       "b": 9049.2525
+      },
+      {
+       "v": 0.1420598094917438,
+       "a": 9408.0788,
+       "b": 8237.8162
+      },
+      {
+       "v": 0.12891661655103448,
+       "a": 7788.2588,
+       "b": 6898.8787
+      }
+     ],
+     "cagr": 0.017933279056426388,
+     "adj": {
+      "v": null,
+      "basis": "Not measurable: currency, hyperinflation, acquisitions not disclosed"
+     },
+     "margin": {
+      "FY2025": 0.2373038850397384,
+      "9M2025": 0.22441472264181134,
+      "9M2026": 0.2505800911495134
+     },
+     "lev": 0.5675524075096022,
+     "payout": null,
+     "ni25": 821.7112,
+     "line": "Recovery: 9M revenue +12.9% and profit +60%; estate up from 2,183 to 2,749 restaurants since FY2022"
+    },
+    {
+     "name": "Herfy Food Services",
+     "ticker": "6002",
+     "sub": "FY2025 revenue SAR 1,083m",
+     "cells": [
+      {
+       "v": -0.056392217541460066,
+       "a": 1173.6955,
+       "b": 1243.8383
+      },
+      {
+       "v": -0.041686110238984386,
+       "a": 1124.7687,
+       "b": 1173.6955
+      },
+      {
+       "v": -0.03752513739046981,
+       "a": 1082.5616,
+       "b": 1124.7687
+      },
+      {
+       "v": -0.04131621508130201,
+       "a": 783.9907,
+       "b": 817.7782
+      }
+     ],
+     "cagr": -0.04523557003137657,
+     "adj": {
+      "v": "= reported",
+      "label": "9M",
+      "basis": "No acquisitions, FX or accounting effects"
+     },
+     "margin": {
+      "FY2025": 0.1497567621094264,
+      "9M2025": 0.15509280878360418,
+      "9M2026": 0.18677645283292266
+     },
+     "lev": 2.737404895062278,
+     "payout": null,
+     "ni25": -77.4783,
+     "line": "Shrinking estate (393 to 370 restaurants): revenue down every year; back to a small 9M profit"
+    },
+    {
+     "name": "Alamar Foods",
+     "ticker": "6014",
+     "sub": "FY2025 revenue SAR 946m",
+     "cells": [
+      {
+       "v": -0.07829537600600212,
+       "a": 991.655,
+       "b": 1075.8924
+      },
+      {
+       "v": -0.10093197735099402,
+       "a": 891.5653,
+       "b": 991.655
+      },
+      {
+       "v": 0.060933608564622155,
+       "a": 945.891591,
+       "b": 891.5653
+      },
+      {
+       "v": 0.18254660114203247,
+       "a": 809.467125,
+       "b": 684.511819
+      }
+     ],
+     "cagr": -0.042017648577757916,
+     "adj": {
+      "v": 0.11398971330252534,
+      "rep": 0.18254660114203247,
+      "label": "9M",
+      "basis": "Excl. Five Guys (Makkah/Taif not split)",
+      "amt": 46.928
+     },
+     "margin": {
+      "FY2025": 0.19003966702987637,
+      "9M2025": 0.1821859119718136,
+      "9M2026": 0.1798171210473804
+     },
+     "lev": 0.7108412881852436,
+     "payout": null,
+     "ni25": 47.572833,
+     "line": "Growth partly bought: 9M +18.3%, about +11% without Five Guys; Makkah/Taif branches not split out"
+    },
+    {
+     "name": "Burgerizzr",
+     "ticker": "6016",
+     "sub": "FY2025 revenue SAR 366m",
+     "cells": [
+      {
+       "v": 0.12225456296465653,
+       "a": 281.053038,
+       "b": 250.436084
+      },
+      {
+       "v": 0.06590386331280285,
+       "a": 299.575519,
+       "b": 281.053038
+      },
+      {
+       "v": 0.22333720800463674,
+       "a": 366.481879,
+       "b": 299.575519
+      },
+      {
+       "v": 0.2746622444803568,
+       "a": 331.589614,
+       "b": 260.139198
+      }
+     ],
+     "cagr": 0.13532064103185348,
+     "adj": {
+      "v": 0.06065374277043767,
+      "rep": 0.2746622444803568,
+      "label": "9M",
+      "basis": "Excl. SHOVEL caf\u00e9 chain",
+      "amt": 55.672
+     },
+     "margin": {
+      "FY2025": 0.11355000720240249,
+      "9M2025": 0.1067877629114548,
+      "9M2026": 0.14553383146674792
+     },
+     "lev": 1.3682605525733877,
+     "payout": null,
+     "ni25": 10.914889,
+     "line": "Growth is bought: 9M +27.5% reported, +6.1% without the SHOVEL caf\u00e9 chain"
+    },
+    {
+     "name": "Raydan Food",
+     "ticker": "6012",
+     "sub": "FY2025 revenue SAR 114m",
+     "cells": [
+      {
+       "v": 0.11431338741795227,
+       "a": 177.373734,
+       "b": 159.177603
+      },
+      {
+       "v": -0.12406557331650925,
+       "a": 155.36776,
+       "b": 177.373734
+      },
+      {
+       "v": -0.2657405114162681,
+       "a": 114.080252,
+       "b": 155.36776
+      },
+      {
+       "v": -0.6743845686333594,
+       "a": 19.764098,
+       "b": 60.69767
+      }
+     ],
+     "cagr": -0.10509657456091648,
+     "adj": {
+      "v": "= reported",
+      "label": "9M",
+      "basis": "No acquisitions, FX or accounting effects"
+     },
+     "margin": {
+      "FY2025": -0.15175999085275513,
+      "9M2025": -0.16444484607069762,
+      "9M2026": -0.5369284244593403
+     },
+     "lev": "n.m.",
+     "payout": null,
+     "ni25": -64.729123,
+     "line": "Winding down: continuing revenue \u221267% in 9M 2026, negative equity and a going-concern doubt"
+    }
+   ]
+  },
+  "Platform": {
+   "label": "Delivery platform",
+   "reit": false,
+   "total": null,
+   "rows": [
+    {
+     "name": "Jahez International",
+     "ticker": "6017",
+     "sub": "FY2025 revenue SAR 2,324m",
+     "cells": [
+      {
+       "v": 0.11374798062599112,
+       "a": 1784.7553,
+       "b": 1602.4768
+      },
+      {
+       "v": 0.2431187065252025,
+       "a": 2218.6627,
+       "b": 1784.7553
+      },
+      {
+       "v": 0.047315394088520035,
+       "a": 2323.6396,
+       "b": 2218.6627
+      },
+      {
+       "v": 0.3752752624801228,
+       "a": 2236.615798,
+       "b": 1626.3041
+      }
+     ],
+     "cagr": 0.1318590286832797,
+     "adj": {
+      "v": -0.05525810660629041,
+      "rep": 0.047315394088520035,
+      "label": "FY25",
+      "basis": "Excl. Snoonu (bought Oct 2025)",
+      "amt": 227.576
+     },
+     "margin": {
+      "FY2025": 0.06479341159446585,
+      "9M2025": 0.08698161063481301,
+      "9M2026": 0.042784062906811325
+     },
+     "lev": 0.1929231615553706,
+     "payout": null,
+     "ni25": 72.9748,
+     "line": "Acquisition masks a shrinking core: 9M +37.5% with Snoonu, while Saudi delivery revenue fell 10%"
+    }
+   ]
+  },
+  "Malls": {
+   "label": "Mall operators",
+   "reit": false,
+   "total": {
+    "name": "Mall operators: group total",
+    "ticker": "",
+    "total": true,
+    "sub": "3 companies \u00b7 FY2025 revenue SAR 2,910m",
+    "cells": [
+     {
+      "v": "n.a.",
+      "a": 2808.014705,
+      "b": null
+     },
+     {
+      "v": 0.033272212867560436,
+      "a": 2901.4435679999997,
+      "b": 2808.014705
+     },
+     {
+      "v": 0.0027872646186171135,
+      "a": 2909.5306590000005,
+      "b": 2901.4435679999997
+     },
+     {
+      "v": 0.009209665494337882,
+      "a": 2225.823177,
+      "b": 2205.511157
+     }
+    ],
+    "cagr": "n.a.",
+    "margin": {
+     "FY2025": 0.5243758337038371,
+     "9M2025": 0.5295409611931516,
+     "9M2026": 0.5812808435860761
+    },
+    "lev": 7.884955486873376,
+    "payout": null,
+    "line": "Flat revenue, debt-funded development; Cenomi Centers is 79% of the group"
+   },
+   "rows": [
+    {
+     "name": "Cenomi Centers",
+     "ticker": "4321",
+     "sub": "FY2025 revenue SAR 2,288m",
+     "cells": [
+      {
+       "v": "n.m.",
+       "a": 2253.6733,
+       "b": 1687.5343
+      },
+      {
+       "v": 0.040096894257033666,
+       "a": 2344.0386,
+       "b": 2253.6733
+      },
+      {
+       "v": -0.023780410442046374,
+       "a": 2288.2964,
+       "b": 2344.0386
+      },
+      {
+       "v": 0.019469340087629572,
+       "a": 1758.1075,
+       "b": 1724.532
+      }
+     ],
+     "cagr": "n.m.",
+     "adj": {
+      "v": null,
+      "basis": "Not measurable: acquisitions not disclosed"
+     },
+     "margin": {
+      "FY2025": 0.557948636374204,
+      "9M2025": 0.5655145703298055,
+      "9M2026": 0.6258854489842061
+     },
+     "lev": 9.865323438327632,
+     "payout": null,
+     "ni25": 1266.8934,
+     "line": "Flat revenue, debt-funded development (net debt 9.9x EBITDA); profit leans on fair-value gains"
+    },
+    {
+     "name": "Alandalus Property",
+     "ticker": "4320",
+     "sub": "FY2025 revenue SAR 237m",
+     "cells": [
+      {
+       "v": -0.004406126190491633,
+       "a": 215.156,
+       "b": 216.1082
+      },
+      {
+       "v": 0.09635566751566293,
+       "a": 235.8875,
+       "b": 215.156
+      },
+      {
+       "v": 0.005042658046738424,
+       "a": 237.077,
+       "b": 235.8875
+      },
+      {
+       "v": 0.24411214690457106,
+       "a": 212.358,
+       "b": 170.6904
+      }
+     ],
+     "cagr": 0.03134996689611458,
+     "adj": {
+      "v": "= reported",
+      "label": "9M",
+      "basis": "No acquisitions, FX or accounting effects"
+     },
+     "margin": {
+      "FY2025": 0.44429044150212804,
+      "9M2025": 0.4640860880283835,
+      "9M2026": 0.5061276429425781
+     },
+     "lev": 7.993728489168879,
+     "payout": null,
+     "ni25": -18.2732,
+     "line": "9M revenue +24.4% after flat years; consolidates Alahli REIT 1, about 80\u201386% of its revenue"
+    },
+    {
+     "name": "ARDCO",
+     "ticker": "4150",
+     "sub": "FY2025 revenue SAR 384m",
+     "cells": [
+      {
+       "v": 0.3101169980958529,
+       "a": 339.185405,
+       "b": 258.897034
+      },
+      {
+       "v": -0.0520893197040716,
+       "a": 321.517468,
+       "b": 339.185405
+      },
+      {
+       "v": 0.1948254674610712,
+       "a": 384.157259,
+       "b": 321.517468
+      },
+      {
+       "v": -0.17703213139623997,
+       "a": 255.357677,
+       "b": 310.288757
+      }
+     ],
+     "cagr": 0.14058412586604252,
+     "adj": {
+      "v": 0.026642956966694192,
+      "rep": -0.17703213139623997,
+      "label": "9M",
+      "basis": "Excl. land sales",
+      "amt": -63.19809
+     },
+     "margin": {
+      "FY2025": 0.37381739023705396,
+      "9M2025": 0.3656126187002,
+      "9M2026": 0.3366815480546527
+     },
+     "lev": -3.8509689322325613,
+     "payout": null,
+     "ni25": 296.062285,
+     "line": "Land sales swing the headline: 9M \u221217.7% reported, +2.7% without land sales; net cash"
+    }
+   ]
+  },
+  "REITs": {
+   "label": "Retail REITs",
+   "reit": true,
+   "total": {
+    "name": "Retail REITs: group total",
+    "ticker": "",
+    "total": true,
+    "sub": "8 companies \u00b7 FY2025 revenue SAR 1,176m",
+    "cells": [
+     {
+      "v": 0.011146834727756572,
+      "a": 1023.725923,
+      "b": 1012.4404169999999
+     },
+     {
+      "v": 0.0441267012831128,
+      "a": 1068.899571,
+      "b": 1023.725923
+     },
+     {
+      "v": 0.10009260261925967,
+      "a": 1175.888511,
+      "b": 1068.899571
+     },
+     {
+      "v": "n.a.",
+      "a": null,
+      "b": null
+     }
+    ],
+    "cagr": 0.05115208890492284,
+    "margin": {
+     "FY2025": 0.36432910517653655,
+     "9M2025": "n.a.",
+     "9M2026": "n.a."
+    },
+    "lev": 0.42801311602632597,
+    "payout": 0.9195397210808666,
+    "line": "Revenue bought with debt; FFO and payouts under pressure; LTV up from 33% to 43%"
+   },
+   "rows": [
+    {
+     "name": "Alahli REIT 1",
+     "ticker": "4338",
+     "sub": "FY2025 revenue SAR 197m",
+     "cells": [
+      {
+       "v": -0.011111711322385531,
+       "a": 183.063,
+       "b": 185.12
+      },
+      {
+       "v": 0.025040559807279372,
+       "a": 187.647,
+       "b": 183.063
+      },
+      {
+       "v": 0.048324780039116,
+       "a": 196.715,
+       "b": 187.647
+      },
+      {
+       "v": 0.23376953900461617,
+       "a": 173.181147,
+       "b": 140.367501
+      }
+     ],
+     "cagr": 0.020457006390321775,
+     "adj": {
+      "v": null,
+      "basis": "Not measurable: accounting not disclosed"
+     },
+     "margin": {
+      "FY2025": 0.2531072871921307,
+      "9M2025": 0.2773377008400256,
+      "9M2026": 0.40490232461620085
+     },
+     "lev": 0.37349842336339084,
+     "payout": 1.2427194215705966,
+     "ni25": 18.387,
+     "line": "FFO roughly halved since FY2022 as finance costs doubled; 9M fact sheet shows revenue +23%"
+    },
+    {
+     "name": "Mulkia REIT",
+     "ticker": "4336",
+     "sub": "FY2025 revenue SAR 124m",
+     "cells": [
+      {
+       "v": 0.18385294714731892,
+       "a": 113.469987,
+       "b": 95.848042
+      },
+      {
+       "v": 0.05175131464499061,
+       "a": 119.342208,
+       "b": 113.469987
+      },
+      {
+       "v": 0.042741340934466354,
+       "a": 124.443054,
+       "b": 119.342208
+      },
+      {
+       "v": 0.019104168774416008,
+       "a": 75.789175,
+       "b": 74.368428
+      }
+     ],
+     "cagr": 0.09092728785213522,
+     "adj": {
+      "v": null,
+      "basis": "Not measurable: accounting, acquisitions not disclosed"
+     },
+     "margin": {
+      "FY2025": 0.2414340699160276,
+      "9M2025": null,
+      "9M2026": null
+     },
+     "lev": 0.4873085051655771,
+     "payout": 1.105187111790053,
+     "ni25": -28.361977,
+     "line": "Growth bought (Aljada, Al-Maather); impairments keep profit negative; LTV 48.7%"
+    },
+    {
+     "name": "Alinma Retail REIT",
+     "ticker": "4345",
+     "sub": "FY2025 revenue SAR 102m",
+     "cells": [
+      {
+       "v": 0.059463834872961474,
+       "a": 51.633469,
+       "b": 48.735471
+      },
+      {
+       "v": 0.5462880481650381,
+       "a": 79.840216,
+       "b": 51.633469
+      },
+      {
+       "v": 0.27386560427141116,
+       "a": 101.705705,
+       "b": 79.840216
+      },
+      {
+       "v": 0.03129964701449994,
+       "a": 81.635833,
+       "b": 79.158209
+      }
+     ],
+     "cagr": 0.2779093537045694,
+     "adj": {
+      "v": null,
+      "basis": "Not measurable: accounting, acquisitions not disclosed"
+     },
+     "margin": {
+      "FY2025": 0.40707126507800134,
+      "9M2025": null,
+      "9M2026": null
+     },
+     "lev": 0.44816221088769437,
+     "payout": 0.9975491208403952,
+     "ni25": -21.006754,
+     "line": "Pivot from malls to Riyadh offices doubled revenue on debt; LTV 44.8% and mall impairments"
+    },
+    {
+     "name": "Musharaka REIT",
+     "ticker": "4335",
+     "sub": "FY2025 revenue SAR 97m",
+     "cells": [
+      {
+       "v": -0.049281816182863425,
+       "a": 106.683124,
+       "b": 112.213194
+      },
+      {
+       "v": -0.005459448300370373,
+       "a": 106.100693,
+       "b": 106.683124
+      },
+      {
+       "v": -0.0842981864406861,
+       "a": 97.156597,
+       "b": 106.100693
+      },
+      {
+       "v": -0.01310049798595303,
+       "a": 74.234772,
+       "b": 75.220194
+      }
+     ],
+     "cagr": -0.04689051782245024,
+     "adj": {
+      "v": null,
+      "basis": "Not measurable: accounting not disclosed"
+     },
+     "margin": {
+      "FY2025": 0.1369704004762538,
+      "9M2025": null,
+      "9M2026": null
+     },
+     "lev": 0.4695155805096987,
+     "payout": 1.5870656553732019,
+     "ni25": -109.894005,
+     "line": "No deals, slow decline: revenue \u22124.7% a year, FFO SAR 48m to 13m; covenant breached at end-2025"
+    },
+    {
+     "name": "Bonyan REIT",
+     "ticker": "4347",
+     "sub": "FY2025 revenue SAR 278m",
+     "cells": [
+      {
+       "v": -0.014608425477148135,
+       "a": 243.078323,
+       "b": 246.681958
+      },
+      {
+       "v": -0.010113843018408564,
+       "a": 240.619867,
+       "b": 243.078323
+      },
+      {
+       "v": 0.1557681851764967,
+       "a": 278.100787,
+       "b": 240.619867
+      },
+      {
+       "v": null,
+       "a": null,
+       "b": null
+      }
+     ],
+     "cagr": 0.04077042747730908,
+     "adj": {
+      "v": null,
+      "basis": "Not measurable"
+     },
+     "margin": {
+      "FY2025": 0.5283039706032906,
+      "9M2025": null,
+      "9M2026": null
+     },
+     "lev": 0.30339803435014134,
+     "payout": 0.8536411184865413,
+     "ni25": 103.694624,
+     "line": "Largest REIT: FY2025 revenue +15.6% on two office towers; FFO margin 52.8%, LTV 30.3%"
+    },
+    {
+     "name": "SEDCO Capital REIT",
+     "ticker": "4344",
+     "sub": "FY2025 revenue SAR 216m",
+     "cells": [
+      {
+       "v": 0.1765730394935474,
+       "a": 161.784997,
+       "b": 137.505273
+      },
+      {
+       "v": 0.07262156082371463,
+       "a": 173.534076,
+       "b": 161.784997
+      },
+      {
+       "v": 0.24718689256166626,
+       "a": 216.429425,
+       "b": 173.534076
+      },
+      {
+       "v": null,
+       "a": null,
+       "b": null
+      }
+     ],
+     "cagr": 0.16323015205516378,
+     "adj": {
+      "v": null,
+      "basis": "Not measurable: acquisitions not disclosed"
+     },
+     "margin": {
+      "FY2025": 0.4204331504369149,
+      "9M2025": null,
+      "9M2026": null
+     },
+     "lev": 0.5154903052251416,
+     "payout": 0.8089466345100047,
+     "ni25": 79.251451,
+     "line": "Growth bought with a rights issue and debt; LTV 51.5%, FFO still below FY2022"
+    },
+    {
+     "name": "Derayah REIT",
+     "ticker": "4339",
+     "sub": "FY2025 revenue SAR 100m",
+     "cells": [
+      {
+       "v": -0.15949502837425666,
+       "a": 103.489386,
+       "b": 123.127631
+      },
+      {
+       "v": -0.05978697177698966,
+       "a": 97.302069,
+       "b": 103.489386
+      },
+      {
+       "v": 0.030864934639776243,
+       "a": 100.305291,
+       "b": 97.302069
+      },
+      {
+       "v": null,
+       "a": null,
+       "b": null
+      }
+     ],
+     "cagr": -0.06605183562712968,
+     "adj": {
+      "v": null,
+      "basis": "Not measurable"
+     },
+     "margin": {
+      "FY2025": 0.31395278041713676,
+      "9M2025": null,
+      "9M2026": null
+     },
+     "lev": 0.40873979326313814,
+     "payout": 1.1880314850612672,
+     "ni25": 8.725238,
+     "line": "Tenant defaults: revenue \u22126.6% a year; distributions above FFO every year (payout 119%)"
+    },
+    {
+     "name": "MEFIC REIT",
+     "ticker": "4346",
+     "sub": "FY2025 revenue SAR 61m",
+     "cells": [
+      {
+       "v": -0.04248156840320838,
+       "a": 60.523637,
+       "b": 63.208848
+      },
+      {
+       "v": 0.06592143495936953,
+       "a": 64.513442,
+       "b": 60.523637
+      },
+      {
+       "v": -0.05395449215064352,
+       "a": 61.032652,
+       "b": 64.513442
+      },
+      {
+       "v": null,
+       "a": null,
+       "b": null
+      }
+     ],
+     "cagr": -0.011610502385877686,
+     "adj": {
+      "v": null,
+      "basis": "Not measurable: acquisitions not disclosed"
+     },
+     "margin": {
+      "FY2025": 0.4007623329230393,
+      "9M2025": null,
+      "9M2026": null
+     },
+     "lev": 0.3352535974892796,
+     "payout": 0.0,
+     "ni25": 0.356829,
+     "line": "Flat revenue, no distribution since February 2024; a SAR 9.5m loss in 9M 2026"
+    }
+   ]
+  },
+  "Retailers": {
+   "label": "Retailers",
+   "reit": false,
+   "total": {
+    "name": "Retailers: group total",
+    "ticker": "",
+    "total": true,
+    "sub": "11 companies \u00b7 FY2025 revenue SAR 64,049m",
+    "cells": [
+     {
+      "v": 0.06281940557177434,
+      "a": 56055.0051,
+      "b": 48346.672662000004
+     },
+     {
+      "v": 0.06014041197545095,
+      "a": 59426.1762,
+      "b": 56055.0051
+     },
+     {
+      "v": 0.07778349534796414,
+      "a": 64048.5519,
+      "b": 59426.1762
+     },
+     {
+      "v": 0.051137644680616434,
+      "a": 50097.079539000006,
+      "b": 47659.866233999994
+     }
+    ],
+    "cagr": 0.06829873104086914,
+    "margin": {
+     "FY2025": 0.11390385886304479,
+     "9M2025": 0.11218978160256665,
+     "9M2026": 0.10338086684211095
+    },
+    "lev": 2.5458734864324537,
+    "payout": null,
+    "line": "Revenue +5% in 9M but profit \u221220%; leverage up from 1.3x to 2.5x EBITDA"
+   },
+   "rows": [
+    {
+     "name": "Abdullah Al Othaim Markets",
+     "ticker": "4001",
+     "sub": "FY2025 revenue SAR 11,089m",
+     "cells": [
+      {
+       "v": 0.07164455776222223,
+       "a": 10233.719,
+       "b": 9549.546
+      },
+      {
+       "v": 0.05171111303720566,
+       "a": 10762.916,
+       "b": 10233.719
+      },
+      {
+       "v": 0.03027813280341518,
+       "a": 11088.797,
+       "b": 10762.916
+      },
+      {
+       "v": -0.032730962510689965,
+       "a": 8140.926352,
+       "b": 8416.403334
+      }
+     ],
+     "cagr": 0.051075474877540605,
+     "adj": {
+      "v": null,
+      "basis": "Not measurable: currency not disclosed"
+     },
+     "margin": {
+      "FY2025": 0.07392470075879286,
+      "9M2025": 0.06752025472737402,
+      "9M2026": 0.037828386560006554
+     },
+     "lev": 3.5552170723257244,
+     "payout": null,
+     "ni25": 250.097,
+     "line": "Revenue \u22123.3% in 9M 2026 and a loss after SAR 154m of inventory provisions"
+    },
+    {
+     "name": "BinDawood Holding",
+     "ticker": "4161",
+     "sub": "FY2025 revenue SAR 6,348m",
+     "cells": [
+      {
+       "v": 0.14414873987222276,
+       "a": 5602.9275,
+       "b": 4897.0272
+      },
+      {
+       "v": 0.013342721282758152,
+       "a": 5677.6858,
+       "b": 5602.9275
+      },
+      {
+       "v": 0.11805387328759887,
+       "a": 6347.9586,
+       "b": 5677.6858
+      },
+      {
+       "v": 0.10526380540051528,
+       "a": 5170.549087,
+       "b": 4678.1131
+      }
+     ],
+     "cagr": 0.09035316817211547,
+     "adj": {
+      "v": 0.039058660132267164,
+      "rep": 0.11805387328759887,
+      "label": "FY25",
+      "basis": "Excl. disclosed acquisitions",
+      "amt": 448.51
+     },
+     "margin": {
+      "FY2025": 0.14734264334994246,
+      "9M2025": 0.13758698993403987,
+      "9M2026": 0.13695621897883745
+     },
+     "lev": 2.7043465105711912,
+     "payout": null,
+     "ni25": 269.9317,
+     "line": "Growth increasingly bought (Zahrat Al Rawdah added SAR 420m in 2025); profit flat near SAR 270m"
+    },
+    {
+     "name": "Jarir Marketing",
+     "ticker": "4190",
+     "sub": "FY2025 revenue SAR 11,365m",
+     "cells": [
+      {
+       "v": 0.12811526434141451,
+       "a": 10594.919,
+       "b": 9391.699
+      },
+      {
+       "v": 0.0022977051547068417,
+       "a": 10619.263,
+       "b": 10594.919
+      },
+      {
+       "v": 0.07023933770168411,
+       "a": 11365.153,
+       "b": 10619.263
+      },
+      {
+       "v": 0.09738744116653808,
+       "a": 8965.527,
+       "b": 8169.883
+      }
+     ],
+     "cagr": 0.0656396563905326,
+     "adj": {
+      "v": 0.022275016920846817,
+      "rep": 0.0022977051547068417,
+      "label": "FY24",
+      "basis": "Same revenue basis (agent sales net)",
+      "amt": -211.658
+     },
+     "margin": {
+      "FY2025": 0.11449903050139315,
+      "9M2025": 0.11332757152091408,
+      "9M2026": 0.11910465497454863
+     },
+     "lev": 0.36079734523191487,
+     "payout": null,
+     "ni25": 1049.192,
+     "line": "Steady compounder: 9M revenue +9.7%, profit +16.7%, online about a third of sales"
+    },
+    {
+     "name": "United Electronics",
+     "ticker": "4003",
+     "sub": "FY2025 revenue SAR 7,446m",
+     "cells": [
+      {
+       "v": 0.028124712944610497,
+       "a": 6200.688,
+       "b": 6031.066
+      },
+      {
+       "v": 0.0936205788776987,
+       "a": 6781.2,
+       "b": 6200.688
+      },
+      {
+       "v": 0.0980527045360704,
+       "a": 7446.115,
+       "b": 6781.2
+      },
+      {
+       "v": 0.054497387977129774,
+       "a": 5966.013,
+       "b": 5657.684
+      }
+     ],
+     "cagr": 0.07278300807019944,
+     "adj": {
+      "v": "= reported",
+      "label": "9M",
+      "basis": "No acquisitions, FX or accounting effects"
+     },
+     "margin": {
+      "FY2025": 0.1068246998602627,
+      "9M2025": 0.09876656243084625,
+      "9M2026": 0.08588935357666838
+     },
+     "lev": 2.571037767041433,
+     "payout": null,
+     "ni25": 497.002,
+     "line": "Revenue up 3\u201310% a year (9M +5.4%); profit down as Tas'heel minorities and credit losses grow"
+    },
+    {
+     "name": "Nahdi Medical",
+     "ticker": "4164",
+     "sub": "FY2025 revenue SAR 10,213m",
+     "cells": [
+      {
+       "v": 0.01131453982467745,
+       "a": 8713.676,
+       "b": 8616.1878
+      },
+      {
+       "v": 0.08409126068033745,
+       "a": 9446.42,
+       "b": 8713.676
+      },
+      {
+       "v": 0.08117555645419117,
+       "a": 10213.2384,
+       "b": 9446.42
+      },
+      {
+       "v": 0.07039401085153041,
+       "a": 8160.6575,
+       "b": 7623.9753
+      }
+     ],
+     "cagr": 0.058317809044225566,
+     "adj": {
+      "v": "= reported",
+      "label": "9M",
+      "basis": "No acquisitions, FX or accounting effects"
+     },
+     "margin": {
+      "FY2025": 0.16853206912314903,
+      "9M2025": 0.1713568117147494,
+      "9M2026": 0.16090188811379474
+     },
+     "lev": 0.7139474484420757,
+     "payout": null,
+     "ni25": 830.7376,
+     "line": "Revenue +7.0% in 9M but profit \u22124.9%; margin slipping on mix and lease costs"
+    },
+    {
+     "name": "Aldawaa Medical Services",
+     "ticker": "4163",
+     "sub": "FY2025 revenue SAR 6,736m",
+     "cells": [
+      {
+       "v": 0.06870903537954587,
+       "a": 5741.3641,
+       "b": 5372.2425
+      },
+      {
+       "v": 0.12418475602339885,
+       "a": 6454.354,
+       "b": 5741.3641
+      },
+      {
+       "v": 0.04366703468697253,
+       "a": 6736.1965,
+       "b": 6454.354
+      },
+      {
+       "v": -0.047336851763369214,
+       "a": 4814.0884,
+       "b": 5053.2955
+      }
+     ],
+     "cagr": 0.07833337328882806,
+     "adj": {
+      "v": 0.049151704415345034,
+      "rep": 0.04366703468697253,
+      "label": "FY25",
+      "basis": "Before the CSR deduction from revenue",
+      "amt": -35.4
+     },
+     "margin": {
+      "FY2025": 0.13091041658300795,
+      "9M2025": 0.1322744755377951,
+      "9M2026": 0.1096606611960013
+     },
+     "lev": 2.5133322346436104,
+     "payout": null,
+     "ni25": 321.7557,
+     "line": "Turned down in 2026: 9M revenue \u22124.7%, profit \u221262%, receivables nearly doubled"
+    },
+    {
+     "name": "Cenomi Retail",
+     "ticker": "4240",
+     "sub": "FY2025 revenue SAR 5,104m",
+     "cells": [
+      {
+       "v": "n.m.",
+       "a": 4671.2232,
+       "b": 4247.6721
+      },
+      {
+       "v": 0.03766041408597198,
+       "a": 4847.1434,
+       "b": 4671.2232
+      },
+      {
+       "v": 0.05296172999544435,
+       "a": 5103.8565,
+       "b": 4847.1434
+      },
+      {
+       "v": 0.06337697228639727,
+       "a": 3904.7145,
+       "b": 3671.9946
+      }
+     ],
+     "cagr": "n.m.",
+     "adj": {
+      "v": null,
+      "basis": "Not measurable: currency, acquisitions not disclosed"
+     },
+     "margin": {
+      "FY2025": 0.09690321661668976,
+      "9M2025": 0.1007796950463925,
+      "9M2026": 0.12015001634562528
+     },
+     "lev": 10.898356427792642,
+     "payout": null,
+     "ni25": -505.507,
+     "line": "Growing again (+6.3% in 9M) but loss-making with negative equity; now AFG International"
+    },
+    {
+     "name": "SACO",
+     "ticker": "4008",
+     "sub": "FY2025 revenue SAR 1,067m",
+     "cells": [
+      {
+       "v": -0.1816205561766423,
+       "a": 930.1195,
+       "b": 1136.5382
+      },
+      {
+       "v": 0.06829283764075478,
+       "a": 993.64,
+       "b": 930.1195
+      },
+      {
+       "v": 0.07393673765146347,
+       "a": 1067.1065,
+       "b": 993.64
+      },
+      {
+       "v": -0.11298361288575232,
+       "a": 688.4167,
+       "b": 776.1037
+      }
+     ],
+     "cagr": -0.020792849902065647,
+     "adj": {
+      "v": "= reported",
+      "label": "9M",
+      "basis": "No acquisitions, FX or accounting effects"
+     },
+     "margin": {
+      "FY2025": 0.13028525456456314,
+      "9M2025": 0.13862536926444236,
+      "9M2026": 0.10025692433085949
+     },
+     "lev": 1.2374308301934858,
+     "payout": null,
+     "ni25": 45.5876,
+     "line": "Decline resumed: 9M revenue \u221211.3% and a loss; FY2025 profit came from a warehouse sale"
+    },
+    {
+     "name": "Alsaif Stores",
+     "ticker": "4192",
+     "sub": "FY2025 revenue SAR 759m",
+     "cells": [
+      {
+       "v": -0.026149910222826867,
+       "a": 719.7801,
+       "b": 739.1077
+      },
+      {
+       "v": 0.016353883637516553,
+       "a": 731.5513,
+       "b": 719.7801
+      },
+      {
+       "v": 0.0373115323559674,
+       "a": 758.8466,
+       "b": 731.5513
+      },
+      {
+       "v": 0.05908107439317134,
+       "a": 604.3267,
+       "b": 570.6142
+      }
+     ],
+     "cagr": 0.008824038011064683,
+     "adj": {
+      "v": "= reported",
+      "label": "9M",
+      "basis": "No acquisitions, FX or accounting effects"
+     },
+     "margin": {
+      "FY2025": 0.1814304379831181,
+      "9M2025": 0.18964040327072126,
+      "9M2026": 0.17325271248151042
+     },
+     "lev": 1.2516980405932423,
+     "payout": null,
+     "ni25": 58.0314,
+     "line": "Revenue flat over three years; 9M +5.9% but profit \u221215% on margin and overheads"
+    },
+    {
+     "name": "Nice One Beauty",
+     "ticker": "4193",
+     "sub": "FY2025 revenue SAR 1,017m",
+     "cells": [
+      {
+       "v": 0.2749594438101748,
+       "a": 782.3551,
+       "b": 613.631362
+      },
+      {
+       "v": 0.28268212222301603,
+       "a": 1003.5129,
+       "b": 782.3551
+      },
+      {
+       "v": 0.013100180376355963,
+       "a": 1016.6591,
+       "b": 1003.5129
+      },
+      {
+       "v": -0.034321150766847164,
+       "a": 741.4291,
+       "b": 767.7802
+      }
+     ],
+     "cagr": 0.18328475203030847,
+     "adj": {
+      "v": "= reported",
+      "label": "9M",
+      "basis": "No acquisitions, FX or accounting effects"
+     },
+     "margin": {
+      "FY2025": 0.028589078679372465,
+      "9M2025": 0.061641860522060866,
+      "9M2026": 0.02218000345548887
+     },
+     "lev": -2.6324853441453837,
+     "payout": null,
+     "ni25": 2.9804,
+     "line": "Growth stalled after the IPO: 9M revenue \u22123.4% and a net loss as costs outgrew sales"
+    },
+    {
+     "name": "Lazurde",
+     "ticker": "4011",
+     "sub": "FY2025 revenue SAR 2,905m",
+     "cells": [
+      {
+       "v": -0.06770928116640162,
+       "a": 1864.2336,
+       "b": 1999.6269
+      },
+      {
+       "v": 0.1310223139417721,
+       "a": 2108.4898,
+       "b": 1864.2336
+      },
+      {
+       "v": 0.377585369395669,
+       "a": 2904.6247,
+       "b": 2108.4898
+      },
+      {
+       "v": 0.2930546367834257,
+       "a": 2940.4312,
+       "b": 2274.0193
+      }
+     ],
+     "cagr": 0.13252296832406918,
+     "adj": {
+      "v": null,
+      "basis": "Not measurable: currency not disclosed"
+     },
+     "margin": {
+      "FY2025": 0.013819394292143837,
+      "9M2025": 0.018614885986235914,
+      "9M2026": 0.028033996510443776
+     },
+     "lev": 48.006500224189466,
+     "payout": null,
+     "ni25": -42.1723,
+     "line": "Gold price does the lifting (9M +29.3%); thin margin and gold-loan debt (48x EBITDA)"
+    }
+   ]
+  },
+  "Supporting": {
+   "label": "Supporting consumer goods",
+   "reit": false,
+   "total": {
+    "name": "Supporting consumer goods: group total",
+    "ticker": "",
+    "total": true,
+    "sub": "13 companies \u00b7 FY2025 revenue SAR 64,722m",
+    "cells": [
+     {
+      "v": -0.03959412313834332,
+      "a": 55331.569294,
+      "b": 56468.022115000014
+     },
+     {
+      "v": 0.027593067655241166,
+      "a": 59715.98902899999,
+      "b": 55331.569294
+     },
+     {
+      "v": 0.08383556778350898,
+      "a": 64722.31287500001,
+      "b": 59715.98902899999
+     },
+     {
+      "v": 0.06706139246512577,
+      "a": 51788.778611,
+      "b": 48534.01967000001
+     }
+    ],
+    "cagr": 0.022532432797434332,
+    "margin": {
+     "FY2025": 0.17376054596071167,
+     "9M2025": 0.17847910762178992,
+     "9M2026": 0.1733214539856606
+    },
+    "lev": 1.8516755920507044,
+    "payout": null,
+    "line": "Food majors grow modestly; the four mills keep 31\u201341% margins; 9M profit \u22129%"
+   },
+   "rows": [
+    {
+     "name": "Almarai",
+     "ticker": "2280",
+     "sub": "FY2025 revenue SAR 22,065m",
+     "cells": [
+      {
+       "v": 0.045578209636893074,
+       "a": 19575.585,
+       "b": 18722.258
+      },
+      {
+       "v": 0.07171826538006387,
+       "a": 20979.512,
+       "b": 19575.585
+      },
+      {
+       "v": 0.05173447313741142,
+       "a": 22064.876,
+       "b": 20979.512
+      },
+      {
+       "v": 0.09679408668943346,
+       "a": 18215.656,
+       "b": 16608.091
+      }
+     ],
+     "cagr": 0.056284941484460616,
+     "adj": {
+      "v": null,
+      "basis": "Not measurable: currency, acquisitions not disclosed"
+     },
+     "margin": {
+      "FY2025": 0.2487599749030994,
+      "9M2025": 0.2530196276019923,
+      "9M2026": 0.24099543820985644
+     },
+     "lev": 2.2493871624001667,
+     "payout": null,
+     "ni25": 2456.093,
+     "line": "Steady growth (9M +9.7%) but flat profit as margins narrow and capex peaks"
+    },
+    {
+     "name": "Savola Group",
+     "ticker": "2050",
+     "sub": "FY2025 revenue SAR 26,081m",
+     "cells": [
+      {
+       "v": -0.13919883593135884,
+       "a": 24149.521,
+       "b": 28054.703
+      },
+      {
+       "v": -0.04571299778575322,
+       "a": 23045.574,
+       "b": 24149.521
+      },
+      {
+       "v": 0.13171635473258325,
+       "a": 26081.053,
+       "b": 23045.574
+      },
+      {
+       "v": 0.031033176409716257,
+       "a": 20133.987,
+       "b": 19527.972
+      }
+     ],
+     "cagr": -0.02402247802359525,
+     "adj": {
+      "v": null,
+      "basis": "Not measurable: currency not disclosed"
+     },
+     "margin": {
+      "FY2025": 0.08851088182674219,
+      "9M2025": 0.09138378526966343,
+      "9M2026": 0.09183759778925057
+     },
+     "lev": 2.1176573789332007,
+     "payout": null,
+     "ni25": 874.462,
+     "line": "Smaller after exits; FY2024 profit was the SAR 11.6bn gain on distributing Almarai shares"
+    },
+    {
+     "name": "SADAFCO",
+     "ticker": "2270",
+     "sub": "FY2025 revenue SAR 2,999m",
+     "cells": [
+      {
+       "v": "n.m.",
+       "a": 2111.48,
+       "b": 2648.013
+      },
+      {
+       "v": "n.m.",
+       "a": 2857.652,
+       "b": 2111.48
+      },
+      {
+       "v": 0.04960296075239401,
+       "a": 2999.4,
+       "b": 2857.652
+      },
+      {
+       "v": -0.06559613140622622,
+       "a": 2166.093,
+       "b": 2318.155
+      }
+     ],
+     "cagr": "n.m.",
+     "adj": {
+      "v": null,
+      "basis": "Not measurable: currency not disclosed"
+     },
+     "margin": {
+      "FY2025": 0.170623124624925,
+      "9M2025": 0.17503661316866212,
+      "9M2026": 0.15481329748999698
+     },
+     "lev": -0.8631731440088891,
+     "payout": null,
+     "ni25": 477.389,
+     "line": "9M revenue \u22126.6% and profit \u221244.7% as Polish sales fell; net cash, no borrowings"
+    },
+    {
+     "name": "NADEC",
+     "ticker": "6010",
+     "sub": "FY2025 revenue SAR 3,527m",
+     "cells": [
+      {
+       "v": 0.18658967399322646,
+       "a": 3196.9665,
+       "b": 2694.2477
+      },
+      {
+       "v": 0.007330042401132442,
+       "a": 3220.4004,
+       "b": 3196.9665
+      },
+      {
+       "v": 0.09519881440829536,
+       "a": 3526.9787,
+       "b": 3220.4004
+      },
+      {
+       "v": 0.006889640341433356,
+       "a": 2704.0271,
+       "b": 2685.5248
+      }
+     ],
+     "cagr": 0.09392724459462953,
+     "adj": {
+      "v": 0.0033149200484016185,
+      "rep": 0.006889640341433356,
+      "label": "9M",
+      "basis": "Excl. AlRaie (from May 2026)",
+      "amt": 9.6
+     },
+     "margin": {
+      "FY2025": 0.1922393075410407,
+      "9M2025": 0.20037855431459803,
+      "9M2026": 0.16673081641822304
+     },
+     "lev": -1.7004597292671761,
+     "payout": null,
+     "ni25": 393.3486,
+     "line": "Flat 9M revenue (+0.7%) and profit \u221242.7% as gross margin fell to 28.6%; net cash"
+    },
+    {
+     "name": "Halwani Bros",
+     "ticker": "6001",
+     "sub": "FY2025 revenue SAR 904m",
+     "cells": [
+      {
+       "v": -0.1382376664199343,
+       "a": 882.7216,
+       "b": 1024.3214
+      },
+      {
+       "v": 0.09780467590234565,
+       "a": 969.0559,
+       "b": 882.7216
+      },
+      {
+       "v": -0.06727186739175728,
+       "a": 903.8657,
+       "b": 969.0559
+      },
+      {
+       "v": 0.033082581010458245,
+       "a": 705.3736,
+       "b": 682.7853
+      }
+     ],
+     "cagr": -0.04084406154274123,
+     "adj": {
+      "v": null,
+      "basis": "Not measurable: currency not disclosed"
+     },
+     "margin": {
+      "FY2025": 0.12795762578445005,
+      "9M2025": 0.13161792294005156,
+      "9M2026": 0.12870083031176668
+     },
+     "lev": 1.2394154210417683,
+     "payout": null,
+     "ni25": 42.6076,
+     "line": "Smaller (Egyptian pound) but profitable again; borrowings cut from SAR 357m to 153m"
+    },
+    {
+     "name": "Tanmiah Food",
+     "ticker": "2281",
+     "sub": "FY2025 revenue SAR 2,653m",
+     "cells": [
+      {
+       "v": 0.2119526702800516,
+       "a": 2093.0928,
+       "b": 1727.0417
+      },
+      {
+       "v": 0.22473509057983487,
+       "a": 2563.4842,
+       "b": 2093.0928
+      },
+      {
+       "v": 0.035107179517626985,
+       "a": 2653.4809,
+       "b": 2563.4842
+      },
+      {
+       "v": 0.18424556624305954,
+       "a": 2298.374321,
+       "b": 1940.792
+      }
+     ],
+     "cagr": 0.1539076360636431,
+     "adj": {
+      "v": null,
+      "basis": "Not measurable: currency not disclosed"
+     },
+     "margin": {
+      "FY2025": 0.11599655192543501,
+      "9M2025": 0.12413962959451606,
+      "9M2026": 0.12671983511949447
+     },
+     "lev": 5.428463680011836,
+     "payout": null,
+     "ni25": -18.835,
+     "line": "Fast, debt-funded growth (15% a year); FY2025 loss, 9M profit recovering"
+    },
+    {
+     "name": "Naqi Water",
+     "ticker": "2282",
+     "sub": "FY2025 revenue SAR 187m",
+     "cells": [
+      {
+       "v": -0.15993375782914787,
+       "a": 238.8226,
+       "b": 284.2902
+      },
+      {
+       "v": -0.081577287911613,
+       "a": 219.3401,
+       "b": 238.8226
+      },
+      {
+       "v": -0.14769301190252038,
+       "a": 186.9451,
+       "b": 219.3401
+      },
+      {
+       "v": 0.2107562829694034,
+       "a": 174.8504,
+       "b": 144.4142
+      }
+     ],
+     "cagr": -0.13040426886890988,
+     "adj": {
+      "v": "= reported",
+      "label": "9M",
+      "basis": "No acquisitions, FX or accounting effects"
+     },
+     "margin": {
+      "FY2025": 0.1694956540717034,
+      "9M2025": 0.19837503514197358,
+      "9M2026": 0.209807029323353
+     },
+     "lev": -0.6499062508004783,
+     "payout": null,
+     "ni25": -2.6878,
+     "line": "Wholesale water collapsed 2022\u201325; 9M 2026 +21% on retail water and eggs"
+    },
+    {
+     "name": "Entaj",
+     "ticker": "2287",
+     "sub": "FY2025 revenue SAR 1,351m",
+     "cells": [
+      {
+       "v": null,
+       "a": 1099.349,
+       "b": null
+      },
+      {
+       "v": 0.16405590945186654,
+       "a": 1279.7037,
+       "b": 1099.349
+      },
+      {
+       "v": 0.055830970872397856,
+       "a": 1351.1508,
+       "b": 1279.7037
+      },
+      {
+       "v": 0.2722063484785684,
+       "a": 1272.367593,
+       "b": 1000.126744
+      }
+     ],
+     "cagr": null,
+     "adj": {
+      "v": 0.13240081175313756,
+      "rep": 0.16405590945186654,
+      "label": "FY24",
+      "basis": "Same revenue basis (reclassification)",
+      "amt": 34.8
+     },
+     "margin": {
+      "FY2025": 0.029957216470581968,
+      "9M2025": 0.07119257976766993,
+      "9M2026": 0.06363898329812302
+     },
+     "lev": 15.055547740794196,
+     "payout": null,
+     "ni25": -123.0519,
+     "line": "Revenue +27% in 9M but losses widen; restated twice; net debt 15x EBITDA"
+    },
+    {
+     "name": "First Milling",
+     "ticker": "2283",
+     "sub": "FY2025 revenue SAR 1,146m",
+     "cells": [
+      {
+       "v": 0.055394638076864844,
+       "a": 964.2611,
+       "b": 913.6498
+      },
+      {
+       "v": 0.08772916588670832,
+       "a": 1048.854922,
+       "b": 964.2611
+      },
+      {
+       "v": 0.09297631536499562,
+       "a": 1146.373588,
+       "b": 1048.854922
+      },
+      {
+       "v": 0.21330869061831037,
+       "a": 979.904698,
+       "b": 807.630165
+      }
+     ],
+     "cagr": 0.07857115803140235,
+     "adj": {
+      "v": 0.09072624249934147,
+      "rep": 0.09297631536499562,
+      "label": "FY25",
+      "basis": "Excl. Al-Kenan (bought Dec 2025)",
+      "amt": 2.36
+     },
+     "margin": {
+      "FY2025": 0.35657006693004867,
+      "9M2025": 0.3641762031015768,
+      "9M2026": 0.3509705828555993
+     },
+     "lev": 2.907281722729058,
+     "payout": null,
+     "ni25": 277.443269,
+     "line": "Mills earn about 35% EBITDA margins; 9M +21.3% led by feed acquisitions"
+    },
+    {
+     "name": "Modern Mills",
+     "ticker": "2284",
+     "sub": "FY2025 revenue SAR 1,047m",
+     "cells": [
+      {
+       "v": -0.04026612390195128,
+       "a": 938.620394,
+       "b": 978.000691
+      },
+      {
+       "v": 0.08135611956456157,
+       "a": 1014.982907,
+       "b": 938.620394
+      },
+      {
+       "v": 0.0311728205290851,
+       "a": 1046.622787,
+       "b": 1014.982907
+      },
+      {
+       "v": 0.171976570083197,
+       "a": 906.656499,
+       "b": 773.613161
+      }
+     ],
+     "cagr": 0.022861914079761902,
+     "adj": {
+      "v": "= reported",
+      "label": "9M",
+      "basis": "No acquisitions, FX or accounting effects"
+     },
+     "margin": {
+      "FY2025": 0.3059225558405504,
+      "9M2025": 0.3090096239973353,
+      "9M2026": 0.29368749277558537
+     },
+     "lev": 2.3079145291012195,
+     "payout": null,
+     "ni25": 223.78568,
+     "line": "9M revenue +17.2%; EBITDA margin down 3.6 points since FY2022 as a feed plant is built"
+    },
+    {
+     "name": "Arabian Mills",
+     "ticker": "2285",
+     "sub": "FY2025 revenue SAR 998m",
+     "cells": [
+      {
+       "v": -0.04510988551829176,
+       "a": 862.082,
+       "b": 902.807545
+      },
+      {
+       "v": 0.12975610208773647,
+       "a": 973.9424,
+       "b": 862.082
+      },
+      {
+       "v": 0.02435031065492166,
+       "a": 997.6582,
+       "b": 973.9424
+      },
+      {
+       "v": 0.0418387525287669,
+       "a": 755.0319,
+       "b": 724.7109
+      }
+     ],
+     "cagr": 0.0338611094137653,
+     "adj": {
+      "v": "= reported",
+      "label": "9M",
+      "basis": "No acquisitions, FX or accounting effects"
+     },
+     "margin": {
+      "FY2025": 0.38986298112920836,
+      "9M2025": 0.39342322573042576,
+      "9M2026": 0.40715665258646694
+     },
+     "lev": 1.847529456663448,
+     "payout": null,
+     "ni25": 237.0379,
+     "line": "Highest-margin mill (about 39%); borrowings cut from SAR 1.7bn to 0.7bn since the merger"
+    },
+    {
+     "name": "Fourth Milling",
+     "ticker": "2286",
+     "sub": "FY2025 revenue SAR 660m",
+     "cells": [
+      {
+       "v": -0.034979357659004395,
+       "a": 558.0901,
+       "b": 578.319339
+      },
+      {
+       "v": 0.10642439276382087,
+       "a": 617.4845,
+       "b": 558.0901
+      },
+      {
+       "v": 0.06951008486852706,
+       "a": 660.4059,
+       "b": 617.4845
+      },
+      {
+       "v": 0.12565710416744413,
+       "a": 527.8572,
+       "b": 468.9325
+      }
+     ],
+     "cagr": 0.04523612143555922,
+     "adj": {
+      "v": "= reported",
+      "label": "9M",
+      "basis": "No acquisitions, FX or accounting effects"
+     },
+     "margin": {
+      "FY2025": 0.4060128778377056,
+      "9M2025": 0.39898578153572206,
+      "9M2026": 0.4050387112272031
+     },
+     "lev": 0.5832174444576634,
+     "payout": null,
+     "ni25": 200.7927,
+     "line": "No borrowings and about 40% margin; 9M revenue +12.6%, capex up for Al-Kharj"
+    },
+    {
+     "name": "Almajed Oud",
+     "ticker": "4165",
+     "sub": "FY2025 revenue SAR 1,104m",
+     "cells": [
+      {
+       "v": 0.3128481641048817,
+       "a": 772.4572,
+       "b": 588.38274
+      },
+      {
+       "v": 0.19877450815397935,
+       "a": 926.002,
+       "b": 772.4572
+      },
+      {
+       "v": 0.19168446720417442,
+       "a": 1103.5022,
+       "b": 926.002
+      },
+      {
+       "v": 0.11433174288966907,
+       "a": 948.5993,
+       "b": 851.2719
+      }
+     ],
+     "cagr": 0.23321204996489664,
+     "adj": {
+      "v": null,
+      "basis": "Not measurable: currency not disclosed"
+     },
+     "margin": {
+      "FY2025": 0.34203186001804076,
+      "9M2025": 0.34733565855985615,
+      "9M2026": 0.3372084493420984
+     },
+     "lev": -0.0717894472954147,
+     "payout": null,
+     "ni25": 217.6055,
+     "line": "Fastest consumer grower (23% a year), Gulf sales leading; 9M profit growth slows to 3.9%"
+    }
+   ]
+  }
+ },
+ "overview": [
+  {
+   "group": "Entertainment",
+   "label": "Entertainment and leisure",
+   "n": 5,
+   "rev25": 2873.8468,
+   "cagr": 0.11412635861166409,
+   "g25": 0.06639196765891908,
+   "g9": 0.02973720419250836,
+   "ni9": 0.24804153316205313,
+   "margin25": 0.389890996277185,
+   "margin_kind": "EBITDA",
+   "lev25": 3.0830513783122098,
+   "lev22": 2.8835774607744424,
+   "lev_kind": "ND/EBITDA",
+   "largest": "Leejam Sports",
+   "share": 0.5617313003602001,
+   "line": "Gyms grow (Sport Clubs, Armah); Leejam slows; Baan shrinks and relies on one-offs",
+   "m": {
+    "FY2022": 0.4116033999086126,
+    "FY2025": 0.389890996277185,
+    "9M2025": 0.4070380162988587,
+    "9M2026": 0.3976922402318169
+   }
+  },
+  {
+   "group": "Media",
+   "label": "Media",
+   "n": 1,
+   "rev25": 5390.866,
+   "cagr": null,
+   "g25": 0.28464890990386227,
+   "g9": -0.22838864108683055,
+   "ni9": "n.m.",
+   "margin25": 0.0643649832883993,
+   "margin_kind": "EBITDA",
+   "lev25": -2.3931122686526884,
+   "lev22": null,
+   "lev_kind": "ND/EBITDA",
+   "largest": "MBC Group",
+   "share": 1.0,
+   "line": "One company (MBC): 9M revenue \u221223% and a loss on its ACSC stake",
+   "m": {
+    "FY2022": null,
+    "FY2025": 0.0643649832883993,
+    "9M2025": 0.11211038852863883,
+    "9M2026": 0.0749899303660354
+   }
+  },
+  {
+   "group": "FnB",
+   "label": "F&B operators",
+   "n": 5,
+   "rev25": 11917.094122,
+   "cagr": 0.007616346432069987,
+   "g25": 0.11280139120727894,
+   "g9": 0.11592113074393962,
+   "ni9": 0.8445549845659486,
+   "margin25": 0.2180693270016618,
+   "margin_kind": "EBITDA",
+   "lev25": 0.7486501692186924,
+   "lev22": 0.5342693760515079,
+   "lev_kind": "ND/EBITDA",
+   "largest": "Americana Restaurants",
+   "share": 0.7894608118124922,
+   "line": "Americana leads a recovery; growth at Alamar and Burgerizzr is partly bought",
+   "m": {
+    "FY2022": 0.21576918400986284,
+    "FY2025": 0.2180693270016618,
+    "9M2025": 0.20838649137178086,
+    "9M2026": 0.23437776282454495
+   }
+  },
+  {
+   "group": "Platform",
+   "label": "Delivery platform",
+   "n": 1,
+   "rev25": 2323.6396,
+   "cagr": 0.1318590286832797,
+   "g25": 0.047315394088520035,
+   "g9": 0.3752752624801228,
+   "ni9": "n.m.",
+   "margin25": 0.06479341159446585,
+   "margin_kind": "EBITDA",
+   "lev25": 0.1929231615553706,
+   "lev22": -10.901386091142724,
+   "lev_kind": "ND/EBITDA",
+   "largest": "Jahez International",
+   "share": 1.0,
+   "line": "One company (Jahez): Snoonu adds revenue while the Saudi core shrinks",
+   "m": {
+    "FY2022": 0.05463444525374721,
+    "FY2025": 0.06479341159446585,
+    "9M2025": 0.08698161063481301,
+    "9M2026": 0.042784062906811325
+   }
+  },
+  {
+   "group": "Malls",
+   "label": "Mall operators",
+   "n": 3,
+   "rev25": 2909.5306590000005,
+   "cagr": "n.a.",
+   "g25": 0.0027872646186171135,
+   "g9": 0.009209665494337882,
+   "ni9": -0.184921996196022,
+   "margin25": 0.5243758337038371,
+   "margin_kind": "EBITDA",
+   "lev25": 7.884955486873376,
+   "lev22": "n.a.",
+   "lev_kind": "ND/EBITDA",
+   "largest": "Cenomi Centers",
+   "share": 0.7864829995592769,
+   "line": "Flat revenue, debt-funded development; Cenomi Centers is 79% of the group",
+   "m": {
+    "FY2022": "n.a.",
+    "FY2025": 0.5243758337038371,
+    "9M2025": 0.5295409611931516,
+    "9M2026": 0.5812808435860761
+   }
+  },
+  {
+   "group": "REITs",
+   "label": "Retail REITs",
+   "n": 8,
+   "rev25": 1175.888511,
+   "cagr": 0.05115208890492284,
+   "g25": 0.10009260261925967,
+   "g9": "n.a.",
+   "ni9": "n.a.",
+   "margin25": 0.36432910517653655,
+   "margin_kind": "FFO",
+   "lev25": 0.42801311602632597,
+   "lev22": 0.3347641846204725,
+   "lev_kind": "LTV",
+   "largest": "Bonyan REIT",
+   "share": 0.2365026823533613,
+   "line": "Revenue bought with debt; FFO and payouts under pressure; LTV up from 33% to 43%",
+   "m": {
+    "FY2022": 0.4716239494022491,
+    "FY2025": 0.36432910517653655,
+    "9M2025": "n.a.",
+    "9M2026": "n.a."
+   }
+  },
+  {
+   "group": "Retailers",
+   "label": "Retailers",
+   "n": 11,
+   "rev25": 64048.5519,
+   "cagr": 0.06829873104086914,
+   "g25": 0.07778349534796414,
+   "g9": 0.051137644680616434,
+   "ni9": -0.19601826337593498,
+   "margin25": 0.11390385886304479,
+   "margin_kind": "EBITDA",
+   "lev25": 2.5458734864324537,
+   "lev22": 1.332568421169963,
+   "lev_kind": "ND/EBITDA",
+   "largest": "Jarir Marketing",
+   "share": 0.17744590100560884,
+   "line": "Revenue +5% in 9M but profit \u221220%; leverage up from 1.3x to 2.5x EBITDA",
+   "m": {
+    "FY2022": 0.12135015187118152,
+    "FY2025": 0.11390385886304479,
+    "9M2025": 0.11218978160256665,
+    "9M2026": 0.10338086684211095
+   }
+  },
+  {
+   "group": "Supporting",
+   "label": "Supporting consumer goods",
+   "n": 13,
+   "rev25": 64722.31287500001,
+   "cagr": 0.022532432797434332,
+   "g25": 0.08383556778350898,
+   "g9": 0.06706139246512577,
+   "ni9": -0.0883520604999346,
+   "margin25": 0.17376054596071167,
+   "margin_kind": "EBITDA",
+   "lev25": 1.8516755920507044,
+   "lev22": 2.8648347091725737,
+   "lev_kind": "ND/EBITDA",
+   "largest": "Savola Group",
+   "share": 0.40296849481215324,
+   "line": "Food majors grow modestly; the four mills keep 31\u201341% margins; 9M profit \u22129%",
+   "m": {
+    "FY2022": 0.1597590491593225,
+    "FY2025": 0.17376054596071167,
+    "9M2025": 0.17847910762178992,
+    "9M2026": 0.1733214539856606
+   }
+  }
+ ],
+ "pairs": [
+  {
+   "label": "Alamar Foods, 9M \u00b7 adj.: Excl. Five Guys (Makkah/Taif not split)",
+   "reported": 0.18254660114203247,
+   "adjusted": 0.11398971330252534,
+   "ticker": "6014"
+  },
+  {
+   "label": "Burgerizzr, 9M \u00b7 adj.: Excl. SHOVEL caf\u00e9 chain",
+   "reported": 0.2746622444803568,
+   "adjusted": 0.06065374277043767,
+   "ticker": "6016"
+  },
+  {
+   "label": "Jahez International, FY25 \u00b7 adj.: Excl. Snoonu (bought Oct 2025)",
+   "reported": 0.047315394088520035,
+   "adjusted": -0.05525810660629041,
+   "ticker": "6017"
+  },
+  {
+   "label": "ARDCO, 9M \u00b7 adj.: Excl. land sales",
+   "reported": -0.17703213139623997,
+   "adjusted": 0.026642956966694192,
+   "ticker": "4150"
+  },
+  {
+   "label": "BinDawood Holding, FY25 \u00b7 adj.: Excl. disclosed acquisitions",
+   "reported": 0.11805387328759887,
+   "adjusted": 0.039058660132267164,
+   "ticker": "4161"
+  },
+  {
+   "label": "Jarir Marketing, FY24 \u00b7 adj.: Same revenue basis (agent sales net)",
+   "reported": 0.0022977051547068417,
+   "adjusted": 0.022275016920846817,
+   "ticker": "4190"
+  },
+  {
+   "label": "Aldawaa Medical Services, FY25 \u00b7 adj.: Before the CSR deduction from revenue",
+   "reported": 0.04366703468697253,
+   "adjusted": 0.049151704415345034,
+   "ticker": "4163"
+  },
+  {
+   "label": "NADEC, 9M \u00b7 adj.: Excl. AlRaie (from May 2026)",
+   "reported": 0.006889640341433356,
+   "adjusted": 0.0033149200484016185,
+   "ticker": "6010"
+  },
+  {
+   "label": "Entaj, FY24 \u00b7 adj.: Same revenue basis (reclassification)",
+   "reported": 0.16405590945186654,
+   "adjusted": 0.13240081175313756,
+   "ticker": "2287"
+  },
+  {
+   "label": "First Milling, FY25 \u00b7 adj.: Excl. Al-Kenan (bought Dec 2025)",
+   "reported": 0.09297631536499562,
+   "adjusted": 0.09072624249934147,
+   "ticker": "2283"
+  }
+ ],
+ "counts": {
+  "rev_n": 42,
+  "rev_up": 31,
+  "ni_n": 41,
+  "ni_up": 19,
+  "m_n": 39,
+  "m_up": 17
+ },
+ "margins": {
+  "down": [
+   {
+    "name": "Raydan Food",
+    "d": -0.37248357838864266,
+    "a": -0.5369284244593403,
+    "b": -0.16444484607069762
+   },
+   {
+    "name": "Jahez International",
+    "d": -0.04419754772800168,
+    "a": 0.042784062906811325,
+    "b": 0.08698161063481301
+   },
+   {
+    "name": "Nice One Beauty",
+    "d": -0.039461857066572,
+    "a": 0.02218000345548887,
+    "b": 0.061641860522060866
+   },
+   {
+    "name": "SACO",
+    "d": -0.038368444933582865,
+    "a": 0.10025692433085949,
+    "b": 0.13862536926444236
+   },
+   {
+    "name": "MBC Group",
+    "d": -0.037120458162603426,
+    "a": 0.0749899303660354,
+    "b": 0.11211038852863883
+   },
+   {
+    "name": "Leejam Sports",
+    "d": -0.035328270650912375,
+    "a": 0.42890830888571974,
+    "b": 0.4642365795366321
+   }
+  ],
+  "up": [
+   {
+    "name": "Cenomi Centers",
+    "d": 0.060370878654400606,
+    "a": 0.6258854489842061,
+    "b": 0.5655145703298055
+   },
+   {
+    "name": "Alandalus Property",
+    "d": 0.042041554914194534,
+    "a": 0.5061276429425781,
+    "b": 0.4640860880283835
+   },
+   {
+    "name": "Burgerizzr",
+    "d": 0.038746068555293126,
+    "a": 0.14553383146674792,
+    "b": 0.1067877629114548
+   },
+   {
+    "name": "Herfy Food Services",
+    "d": 0.03168364404931848,
+    "a": 0.18677645283292266,
+    "b": 0.15509280878360418
+   },
+   {
+    "name": "Americana Restaurants",
+    "d": 0.02616536850770207,
+    "a": 0.2505800911495134,
+    "b": 0.22441472264181134
+   }
+  ]
+ },
+ "leverage": {
+  "top": [
+   {
+    "name": "Lazurde",
+    "v": 48.006500224189466,
+    "group": "Retailers"
+   },
+   {
+    "name": "Entaj",
+    "v": 15.055547740794196,
+    "group": "Supporting"
+   },
+   {
+    "name": "Cenomi Retail",
+    "v": 10.898356427792642,
+    "group": "Retailers"
+   },
+   {
+    "name": "Baan",
+    "v": 10.435688176506918,
+    "group": "Entertainment"
+   },
+   {
+    "name": "Cenomi Centers",
+    "v": 9.865323438327632,
+    "group": "Malls"
+   },
+   {
+    "name": "Alandalus Property",
+    "v": 7.993728489168879,
+    "group": "Malls"
+   },
+   {
+    "name": "Tanmiah Food",
+    "v": 5.428463680011836,
+    "group": "Supporting"
+   },
+   {
+    "name": "Abdullah Al Othaim Markets",
+    "v": 3.5552170723257244,
+    "group": "Retailers"
+   }
+  ],
+  "netcash": [
+   {
+    "name": "Almajed Oud",
+    "v": -0.0717894472954147,
+    "group": "Supporting"
+   },
+   {
+    "name": "Naqi Water",
+    "v": -0.6499062508004783,
+    "group": "Supporting"
+   },
+   {
+    "name": "SADAFCO",
+    "v": -0.8631731440088891,
+    "group": "Supporting"
+   },
+   {
+    "name": "NADEC",
+    "v": -1.7004597292671761,
+    "group": "Supporting"
+   },
+   {
+    "name": "MBC Group",
+    "v": -2.3931122686526884,
+    "group": "Media"
+   },
+   {
+    "name": "Nice One Beauty",
+    "v": -2.6324853441453837,
+    "group": "Retailers"
+   },
+   {
+    "name": "ARDCO",
+    "v": -3.8509689322325613,
+    "group": "Malls"
+   }
+  ]
+ },
+ "oneoffs": [
+  {
+   "ticker": "2050",
+   "name": "Savola Group",
+   "period": "FY2024",
+   "item": "Gain on distribution of investment in equity-accounted investee (in-kind distribution of the Almarai stake)",
+   "amount": 11554.7,
+   "metric": "OPINC"
+  },
+  {
+   "ticker": "4001",
+   "name": "Abdullah Al Othaim Markets",
+   "period": "FY2022",
+   "item": "Gain on sale of investment in associate (13.653% of Abdullah Al-Othaim for Investment Company)",
+   "amount": 608.55,
+   "metric": "OPINC"
+  },
+  {
+   "ticker": "4072",
+   "name": "MBC Group",
+   "period": "9M2026",
+   "item": "Fair-value result: unrealised loss on ACSC (575,550) and Anghami (13), plus call-option gain 541",
+   "amount": -575.022,
+   "metric": "OPINC"
+  },
+  {
+   "ticker": "6010",
+   "name": "NADEC",
+   "period": "FY2024",
+   "item": "Gain from the reclassification of a joint venture (Arabian Mills) to an investment at FVOCI",
+   "amount": 356.513,
+   "metric": "OPINC"
+  },
+  {
+   "ticker": "4321",
+   "name": "Cenomi Centers",
+   "period": "FY2025",
+   "item": "Insurance claim accepted for the May 2022 Mall of Dhahran fire",
+   "amount": 250.0,
+   "metric": "OPINC"
+  },
+  {
+   "ticker": "4321",
+   "name": "Cenomi Centers",
+   "period": "FY2023",
+   "item": "Gain on sale of investment property (part of the Jawharat Riyadh land, net proceeds SAR 644.5m)",
+   "amount": 238.668,
+   "metric": "OPINC"
+  },
+  {
+   "ticker": "4240",
+   "name": "Cenomi Retail",
+   "period": "FY2024",
+   "item": "Gain on disposal of brands",
+   "amount": 210.246,
+   "metric": "OPINC"
+  },
+  {
+   "ticker": "4072",
+   "name": "MBC Group",
+   "period": "FY2025",
+   "item": "Fair-value result: FVTPL gain 177,343 (ACSC reclassification gain 263,901 less ACSC fair-value loss 79,728 and Anghami 6,830) plus call options 1,885",
+   "amount": 179.228,
+   "metric": "OPINC"
+  },
+  {
+   "ticker": "4072",
+   "name": "MBC Group",
+   "period": "FY2024",
+   "item": "Realised gain on sale of 4.9% of ACSC (associate)",
+   "amount": 170.674,
+   "metric": "OPINC"
+  },
+  {
+   "ticker": "2050",
+   "name": "Savola Group",
+   "period": "FY2024",
+   "item": "Loss on derecognition of investment in equity-accounted investee (USCE step acquisition)",
+   "amount": -139.001,
+   "metric": "OPINC"
+  }
+ ]
+}
