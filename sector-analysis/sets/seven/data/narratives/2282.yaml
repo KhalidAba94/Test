@@ -17,10 +17,10 @@ lfl_basis:
     source: 2282_NAQI/2025_Annual_filed2026-04-08.pdf p.12
   capacity_changes:
   - event: >-
-      Egg production (breeder hens) started in 2023, reduced in 2025 and expanded again in 2026 (breeder purchases SAR 7.4m in 9M2026)
+      Egg production (breeder hens) started in 2023, reduced in 2025 and expanded again in 2026 (breeder purchases SAR 7.4m in 9M 2026)
     date: 2023-2026
     effect: >-
-      egg revenue SAR 1.4m (FY2023), SAR 9.3m (FY2024), SAR 1.9m (FY2025), SAR 16.1m (9M2026) vs SAR 2.0m (9M2025), disclosed
+      egg revenue SAR 1.4m (FY2023), SAR 9.3m (FY2024), SAR 1.9m (FY2025), SAR 16.1m (9M 2026) vs SAR 2.0m (9M 2025), disclosed
     source: 2282_NAQI/2025_Annual_filed2026-04-08.pdf p.46; 2282_NAQI/2026_Q3_filed2026-11-16.pdf p.17
   - event: >-
       Two new bottling lines and a Riyadh plant under construction with related-party contractors (Riyadh plant due Q1 2027)
@@ -120,42 +120,56 @@ profit_and_margin:
     line: Within operating profit
     source: 2282_NAQI/2023_Annual_filed2024-03-07.pdf p.9
     tax_nci: >-
-      Zakat effect not disclosed; no non-controlling interests: after-zakat effect not determinable, profit kept as reported
+      IPO costs, 6.6% of attributable profit; zakat effect not disclosed; no non-controlling interests: after-zakat effect not determinable, profit kept as reported
   - item: Capital gains from disposal of property, plant and equipment
     period: FY2024
     amount_sar_m: 3.7
     line: Other income (re-presented in the FY2025 annual)
     source: 2282_NAQI/2025_Annual_filed2026-04-08.pdf p.48
     tax_nci: >-
-      Zakat effect not disclosed; no non-controlling interests: after-zakat effect not determinable, profit kept as reported
+      A property, plant and equipment disposal gain of 12.3% of attributable profit (smaller disposal gains recur and are not listed); zakat effect not disclosed; no non-controlling interests: after-zakat effect not determinable, profit kept as reported
+  - item: 'FVTPL shares: unrealised gain (SAR 0.4m) and dividends (SAR 0.2m)'
+    period: FY2024
+    amount_sar_m: 0.6
+    line: Below operating profit, above profit before zakat
+    source: 2282_NAQI/2025_Annual_filed2026-04-08.pdf p.8
+    tax_nci: >-
+      Under 5% of attributable profit but listed because fair-value results on financial investments are outside normal operations (listed in every period); zakat effect not disclosed; no non-controlling interests: after-zakat effect not determinable, profit kept as reported
   - item: Unrealised loss on listed shares held at fair value through profit or loss
     period: FY2025
     amount_sar_m: -13.7
     line: Below operating profit, above profit before zakat
     source: 2282_NAQI/2025_Annual_filed2026-04-08.pdf p.8, p.41
     tax_nci: >-
-      Zakat effect not disclosed; no non-controlling interests: after-zakat effect not determinable, profit kept as reported
+      A fair-value result on financial investments; it turns the year into a loss; zakat effect not disclosed; no non-controlling interests: after-zakat effect not determinable, profit kept as reported
   - item: Dividends (SAR 2.0m) and realised gain on FVTPL shares
     period: FY2025
     amount_sar_m: 2.0
     line: Below operating profit, above profit before zakat
     source: 2282_NAQI/2025_Annual_filed2026-04-08.pdf p.8
     tax_nci: >-
-      Zakat effect not disclosed; no non-controlling interests: after-zakat effect not determinable, profit kept as reported
+      Results on the listed-share portfolio, listed in every period; zakat effect not disclosed; no non-controlling interests: after-zakat effect not determinable, profit kept as reported
   - item: Foreign exchange gains
     period: FY2025
     amount_sar_m: 1.3
     line: Other income (note 27)
     source: 2282_NAQI/2025_Annual_filed2026-04-08.pdf p.48
     tax_nci: >-
-      Zakat effect not disclosed; no non-controlling interests: after-zakat effect not determinable, profit kept as reported
-  - item: 'FVTPL portfolio: revaluation gain, dividends and realised loss (9M 2025: SAR +0.5m net)'
+      Larger than the FY2025 attributable loss of SAR 2.7m; zakat effect not disclosed; no non-controlling interests: after-zakat effect not determinable, profit kept as reported
+  - item: 'FVTPL portfolio: revaluation loss, dividends and realised gain, net'
+    period: 9M2025
+    amount_sar_m: 0.5
+    line: Below operating profit, above profit before zakat
+    source: 2282_NAQI/2026_Q3_filed2026-11-16.pdf p.5
+    tax_nci: >-
+      4.6% of attributable profit, listed so that 9M 2026 and 9M 2025 compare on the same basis; zakat effect not disclosed; no non-controlling interests: after-zakat effect not determinable, profit kept as reported
+  - item: 'FVTPL portfolio: revaluation gain, dividends and realised loss'
     period: 9M2026
     amount_sar_m: 2.4
     line: Below operating profit, above profit before zakat
     source: 2282_NAQI/2026_Q3_filed2026-11-16.pdf p.5
     tax_nci: >-
-      Zakat effect not disclosed; no non-controlling interests: after-zakat effect not determinable, profit kept as reported
+      13.6% of attributable profit, a fair-value result on financial investments; zakat effect not disclosed; no non-controlling interests: after-zakat effect not determinable, profit kept as reported
 developments:
 - date: '2022-08-15'
   category: financing
@@ -200,7 +214,7 @@ what_it_means:
 confidence_overall: Medium
 data_notes:
 - >-
-  Stage A corrections: cash and cash equivalents include short-term time deposits (the XBRL took only bank balances, e.g. FY2024 SAR
+  Corrected from the PDF statements: cash and cash equivalents include short-term time deposits (the XBRL took only bank balances, e.g. FY2024 SAR
   35.5m vs SAR 77.6m); capex includes intangible purchases (FY2023 SAR 4.1m); D&A includes right-of-use and biological-asset (breeder-hen)
   amortisation, which we keep in D&A (FY2024 SAR 2.2m); finance income (time/murabaha deposits) added for every period; the FY2022 IPO-cost
   add-back was removed from impairments.

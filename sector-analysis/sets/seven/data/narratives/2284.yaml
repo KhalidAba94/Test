@@ -2,7 +2,7 @@ ticker: '2284'
 headline: Revenue rose from SAR 978m (FY2022) to SAR 1,047m (FY2025) but attributable profit slipped from SAR 233m to SAR 224m as the EBITDA margin
   fell from 33.5% to 30.6%; in 9M 2026 revenue grew 17.2% and profit 5.9%, while capex for a new feed plant cut free cash flow.
 lfl_basis:
-  definition_used: Standard bridge on IFRS revenue. Modern Mills made no acquisitions or disposals in FY2022-9M2026 (the 2021 merger with its
+  definition_used: Standard bridge on IFRS revenue. Modern Mills made no acquisitions or disposals from FY2022 to 9M 2026 (the 2021 merger with its
     former parent brought loans, not revenue), so perimeter effects are nil. FY2024 revenue was re-presented gross of freight (SAR 14.7m) while
     FY2023 was not, so FY2024 growth includes a presentation step. No volumes, capacity or same-store measure are disclosed, so the effect of
     new capacity is not determinable and organic growth is the closest measure.
@@ -11,7 +11,7 @@ lfl_basis:
     date: '2021-12-27'
     effect: no revenue; borrowings of SAR 692.3m at end-2021
     source: 2284_MODERN_MILLS/2022_Annual_filed2024-03-27.pdf p.68, p.7
-  - event: No business combinations FY2022-9M2026; Hasad Al-Arabia (100%) consolidated throughout
+  - event: No business combinations from FY2022 to 9M 2026; Hasad Al-Arabia (100%) consolidated throughout
     date: 2022 to 2026
     effect: none
     source: 2284_MODERN_MILLS/2025_Annual_filed2026-03-08.pdf p.12
@@ -92,7 +92,7 @@ profit_and_margin:
   - period: FY2022-9M2026
     driver: Capex rose from SAR 34.0m (FY2022) to SAR 140m (FY2025) and SAR 102m in 9M 2026, so free cash flow fell from SAR 319m to SAR 123m
       (we calculate). Dividends of SAR 162.0m were paid in each of 2024, 2025 and 9M 2026. Equity is small after the 2021 merger, so ROE is high
-      (76.4% in FY2025); net debt to EBITDA was 2.31x at end-2025.
+      (76.4% in FY2025); net debt to EBITDA was 2.3x at end-2025.
     source: cash-flow statements (FY2023-FY2025 annuals p.10; 2026 Q3 p.8)
     refs:
     - 2284-FY2022-CAPEX
@@ -107,32 +107,32 @@ profit_and_margin:
     amount_sar_m: -6.83
     line: General and administrative expenses
     source: 2284_MODERN_MILLS/2023_Annual_filed2024-04-02.pdf p.44
-    tax_nci: 'Under 5% of attributable profit; zakat effect not disclosed, no minority interests: after-tax effect not determinable, profit kept
-      as reported'
+    tax_nci: 'Under 5% of attributable profit but listed as a regulatory penalty outside normal operations; zakat effect not disclosed, no minority
+      interests: after-tax effect not determinable, profit kept as reported'
   - item: Initial public offering costs (recovered from shareholders through equity)
     period: FY2023
     amount_sar_m: -7.27
     line: General and administrative expenses
     source: 2284_MODERN_MILLS/2023_Annual_filed2024-04-02.pdf p.44
-    tax_nci: 'Under 5% of attributable profit; zakat effect not disclosed, no minority interests: profit kept as reported'
+    tax_nci: 'Under 5% of attributable profit but listed because IPO costs are outside normal operations; zakat effect not disclosed, no minority interests: profit kept as reported'
   - item: Net release of the GFSA penalty provision after settlement
     period: FY2023
     amount_sar_m: 1.96
     line: General and administrative expenses
     source: 2284_MODERN_MILLS/2023_Annual_filed2024-04-02.pdf p.44
-    tax_nci: 'Under 5% of attributable profit; zakat effect not disclosed, no minority interests: profit kept as reported'
+    tax_nci: 'Under 5% of attributable profit but listed as the settlement of the FY2022 penalty; zakat effect not disclosed, no minority interests: profit kept as reported'
   - item: GFSA penalty
     period: FY2024
     amount_sar_m: -3.0
     line: General and administrative expenses
     source: 2284_MODERN_MILLS/2024_Annual_filed2025-03-10.pdf p.39, p.42
-    tax_nci: 'Under 5% of attributable profit; zakat effect not disclosed, no minority interests: profit kept as reported'
+    tax_nci: 'Under 5% of attributable profit but listed as a regulatory penalty outside normal operations; zakat effect not disclosed, no minority interests: profit kept as reported'
   - item: Initial public offering costs
     period: FY2024
     amount_sar_m: -0.75
     line: General and administrative expenses
     source: 2284_MODERN_MILLS/2024_Annual_filed2025-03-10.pdf p.42
-    tax_nci: 'Under 5% of attributable profit; zakat effect not disclosed, no minority interests: profit kept as reported'
+    tax_nci: 'Under 5% of attributable profit but listed because IPO costs are outside normal operations; zakat effect not disclosed, no minority interests: profit kept as reported'
 developments:
 - date: '2021-12-27'
   category: M&A
@@ -175,7 +175,7 @@ what_it_means:
     mix or prices is not determinable.
 confidence_overall: Medium
 data_notes:
-- 'No XBRL file exists for Modern Mills: every figure FY2021-9M2026 was read from the PDFs (stage A overrides). Primary statements in the FY2024
+- 'No XBRL file exists for Modern Mills: every figure from FY2021 to 9M 2026 was read from the PDFs. Primary statements in the FY2024
   and FY2025 annuals and the interims are scanned images, read by OCR and visually; totals were cross-checked.'
 - FY2021 balance sheet is the restated column of the FY2022 annual (note 36, correction of errors including the 27 Dec 2021 merger with Mada Al
   Ghurair); auditor emphasis of matter.

@@ -100,36 +100,18 @@ profit_and_margin:
     - 6010-9M2026-CFO
     - 6010-9M2026-FCF
   one_offs:
-  - item: Write-off / impairment of PP&E
-    period: FY2022
-    amount_sar_m: -10.0
-    line: Write off/ impairment losses on PP&E
-    source: 6010_NADEC/2023_Annual_filed2024-02-21.pdf p.10
-    tax_nci: 'Impairment, outside our EBITDA; zakat effect not disclosed: profit kept as reported'
-  - item: Write-off of a juice line, dairy-farm assets and a villa
-    period: FY2023
-    amount_sar_m: -24.0
-    line: Write off/ impairment losses on PP&E
-    source: 6010_NADEC/2024_Annual_filed2025-03-02.pdf p.9
-    tax_nci: 'Impairment, outside our EBITDA; zakat effect not disclosed: profit kept as reported'
-  - item: Zakat reversal related to previous years
-    period: FY2023
-    amount_sar_m: 26.0
-    line: Zakat reversal related to previous years
-    source: 6010_NADEC/2024_Annual_filed2025-03-02.pdf p.9
-    tax_nci: The item is zakat itself and NADEC has no non-controlling interests; we calculate attributable profit excluding it at SAR 276m; tables keep profit as reported
   - item: Gain from reclassifying the Arabian Mills joint venture to FVOCI (SAR 103.2m on shares sold, SAR 253.3m fair-value gain)
     period: FY2024
     amount_sar_m: 356.5
     line: Gain from the reclassification of a joint venture to an investment at FVOCI
     source: 6010_NADEC/2025_Annual_filed2026-02-04.pdf p.9; 6010_NADEC/2024_Annual_filed2025-03-02.pdf p.31
-    tax_nci: 'No non-controlling interests, but the zakat effect is not disclosed: not determinable, profit kept as reported'
+    tax_nci: '46.0% of attributable profit, a gain on an investment stake; no non-controlling interests, but the zakat effect is not disclosed: not determinable, profit kept as reported'
   - item: Recycling of the translation reserve on closing foreign branches
     period: FY2025
     amount_sar_m: 3.6
     line: not named
     source: 6010_NADEC/2025_Annual_filed2026-02-04.pdf p.12
-    tax_nci: 'Under 5% of attributable profit: profit kept as reported'
+    tax_nci: 'Under 5% of attributable profit (0.9%), listed because closing foreign operations is a disposal of businesses, outside normal operations; profit kept as reported'
 developments:
 - date: '2023-10-05'
   category: financing
@@ -160,7 +142,8 @@ developments:
   text: Bought the other 49% of AlRaie for SAR 23.7m and consolidated it (goodwill SAR 6.1m).
   source: 6010_NADEC/2026_Q3_filed2026-10-21.pdf p.19-20
 what_it_means:
-  improved: Revenue grew 9.4% a year from FY2022 to FY2025 and the 2023 rights issue left NADEC with net cash (borrowings SAR 282m against cash of SAR 1,080m at end-2025).
+  improved: Revenue grew 9.4% a year from FY2022 to FY2025 and the 2023 rights issue left NADEC with net cash (SAR 1,159m at end-2025, with borrowings of SAR 282m and leases of SAR 289m against
+    cash of SAR 1,080m and SAR 650m of time deposits).
   weakened: Gross margin fell from 37.0% (FY2024) to 28.6% (9M 2026), attributable profit fell in FY2025 and 9M 2026, and 9M 2026 free cash flow was negative.
   why: FY2024 profit was lifted by the one-off Arabian Mills gain, and dairy revenue has been flat since FY2023 while growth came from the newer Protein and Agriculture lines; in 9M
     2026 margins fell and a SAR 71.0m receivable-impairment reversal only partly offset this.
@@ -170,14 +153,22 @@ data_notes:
 - 'CAPEX basis break: FY2022 and FY2023 capex is the combined cash-flow line "Acquisition of property, plant and equipment and biological assets" plus intangibles, so it includes additions
   to biological assets (dairy herd); from FY2024 the FY2025 annual shows PP&E, long-term prepayments and biological assets separately and capex excludes biological assets (FY2024 SAR
   191.1m vs SAR 284.3m on the old basis; FY2025 biological additions SAR 184.1m). FCF and capex intensity are not comparable across FY2023/FY2024.'
-- The 2023 rights issue (SAR 2bn, Q4 2023) explains the jump in equity attributable from SAR 1,295m (FY2022) to SAR 3,593m (FY2023) flagged by the sanity screen.
+- The 2023 rights issue (SAR 2bn, Q4 2023) explains the jump in equity attributable from SAR 1,295m (FY2022) to SAR 3,593m (FY2023).
 - 'Re-presentations: FY2023 balance sheet and P&L (FY2024 annual note 39: receivables netted with payables, total assets SAR 5,109.8m to 5,052.5m; treasury income shown separately);
   FY2024 balance sheet, cash flow and P&L (FY2025 annual note 43: CFO SAR 670.0m to 763.2m; write-offs moved into other gains/losses; capex split). The FY2024 SHARE_JV "R" flag is not
-  a restatement (XBRL had added the Arabian Mills gain). Reasons in reasons_6010.csv.'
-- 'Stage A overrides: D&A now includes right-of-use and biological-asset depreciation (FY2025 SAR 304.7m, was 184.2m); DEBT = all three Murabaha lines (FY2025 SAR 282.5m, was 193.5m);
-  IMPAIR_CF holds only PP&E write-off/impairment (FY2023 SAR 24.0m) and is nil from FY2024 (receivable ECL excluded).'
-- The FY2024 Arabian Mills gain (SAR 356.5m) sits below financing cost on the face, so it is inside our operating income (SAR 745.9m vs the company's operating profit of SAR 389.4m)
-  until EBITDA excluding one-offs is rebuilt with oneoffs_6010.csv.
+  a restatement (the XBRL had added the Arabian Mills gain). The reasons are given in the Restatements sheet.'
+- 'Corrected from the PDF statements (FY2025 annual p.8 and p.12; FY2024 annual p.12): D&A includes right-of-use and biological-asset depreciation (FY2025 SAR 304.7m, against SAR 184.2m in the
+  XBRL); debt is all three Murabaha lines (FY2025 SAR 282.5m, against SAR 193.5m); the impairment add-back holds only PP&E write-offs and impairments (FY2023 SAR 24.0m) and is nil from FY2024
+  (receivable credit losses excluded).'
+- The FY2024 Arabian Mills gain (SAR 356.5m) sits below financing cost on the face, so it is inside our operating income (SAR 745.9m vs the company's operating profit of SAR 389.4m);
+  EBITDA excluding one-offs removes it (SAR 636m in FY2024).
 - NADEC reports in SAR (not thousands); there are no non-controlling interests, so attributable profit equals net profit. Net debt is negative from FY2023 (net cash), so net debt / EBITDA
   is negative.
+- 'Net debt deducts Murabaha time deposits held outside cash (maturities over three months): SAR 500m at end-2023 (FY2024 annual note 22, p.33), SAR 300m at end-2024 and SAR 650m at end-2025
+  (FY2025 annual note 24, p.34), SAR 250m at 30 Sep 2025 and SAR 50m at 30 Sep 2026 (interim notes 15 and 18). Net cash was therefore SAR 906m, SAR 1,419m, SAR 1,159m, SAR 1,129m and SAR 767m.'
+- 'Not treated as one-offs under the one-off rule (shown for information): PP&E write-offs and impairments of SAR 10.0m (FY2022) and SAR 24.0m (FY2023: a juice line, dairy-farm assets and a villa),
+  which are outside EBITDA, and a SAR 26.0m reversal of prior-year zakat in FY2023 (attributable profit excluding it SAR 276m, we calculate).'
+- 'Cross-holding: NADEC equity-accounted Arabian Mills (10%, then 14.87%) as a joint venture until its October 2024 IPO, so its share of Arabian Mills'' results, SAR 3.3m (FY2022), SAR 21.7m (FY2023)
+  and SAR 24.0m (FY2024), is profit also counted in Arabian Mills'' figures in the Supporting group; the FY2024 gain of SAR 356.5m is a gain on that stake, and since then NADEC has held 10.41% at
+  FVOCI (dividend income of about SAR 3.2m in FY2025).'
 - All primary statements used are scanned images; values were read visually and checked by OCR at high resolution.

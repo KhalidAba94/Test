@@ -15,11 +15,11 @@ lfl_basis:
     effect: nil
     source: 6022_ARMAH/2025_Annual_filed2026-05-07.pdf p.12
   capacity_changes:
-  - event: 'Centre build-out: capex SR 118m (FY2022) and SR 128m (FY2023), falling to SR 41.4m (FY2024)'
+  - event: 'Centre build-out: capex SAR 118m (FY2022) and SAR 128m (FY2023), falling to SAR 41.4m (FY2024)'
     date: FY2022-FY2024
     effect: not determinable
     source: 6022_ARMAH/2023_Annual_filed2024-04-02.pdf p.10; 6022_ARMAH/2025_Annual_filed2026-05-07.pdf p.10
-  - event: 'New leases in 9M 2026: right-of-use assets SR 63.6m added; capex SR 69.6m plus SR 21.7m of advances'
+  - event: 'New leases in 9M 2026: right-of-use assets SAR 63.6m added; capex SAR 69.6m plus SAR 21.7m of advances'
     date: 9M2026
     effect: not determinable
     source: 6022_ARMAH/2026_Q3_filed2026-11-02.pdf p.7
@@ -159,15 +159,15 @@ developments:
 - date: '2022'
   category: financing
   text: Rescheduled its long-term loan twice (grace period extended; non-equal instalments at SAIBOR + 1.6%), a modification loss of
-    SR 9.2m, of which SR 5.5m was capitalised.
+    SAR 9.2m, of which SAR 5.5m was capitalised.
   source: 6022_ARMAH/2022_Annual_filed2023-11-30.pdf p.24, p.21
 - date: '2023'
   category: financing
-  text: Raised SR 109.9m from new shares (capital SR 328.6m, share premium SR 68.9m).
+  text: Raised SAR 109.9m from new shares (capital SAR 328.6m, share premium SAR 68.9m).
   source: 6022_ARMAH/2023_Annual_filed2024-04-02.pdf p.7, p.10
 - date: '2025'
   category: event
-  text: Subleased land at Al Wadi District for about 21 years (total rentals SR 127.6m), recording a SR 9.5m gain.
+  text: Subleased land at Al Wadi District for about 21 years (total rentals SAR 127.6m), recording a SAR 9.5m gain.
   source: 6022_ARMAH/2025_Annual_filed2026-05-07.pdf p.26
 - date: '2026-08-30'
   category: regulation
@@ -192,9 +192,10 @@ data_notes:
   and right-of-use depreciation reversed per CMA/SOCPA; FY2024 profit 37.8m to 38.3m; equity -7.2m) and FY2024 CFO re-presented (finance
   income received moved to investing, 95.8m to 92.9m).'
 - The FY2025 annual PDF used (filed 7 May 2026) differs from the earlier XBRL file (10 Mar 2026) for FY2024 and FY2025 cost of revenue
-  and gross profit; stage A took the PDF figures.
-- 'Stage A overrides: D&A for EBITDA includes depreciation of right-of-use assets, which the XBRL omitted (e.g. FY2025 SR 42.8m vs 34.3m);
+  and gross profit; we use the PDF figures.
+- 'Corrected from the PDF statements: D&A for EBITDA includes depreciation of right-of-use assets, which the XBRL omitted (e.g. FY2025 SAR 42.8m vs 34.3m);
   capex includes intangibles; advances to suppliers and contractors (a separate investing line) are excluded from capex.'
-- Right-of-use depreciation of centres under construction (SR 5.1m in FY2025) is in other expenses, outside cost of revenue. Finance
+- Right-of-use depreciation of centres under construction (SAR 5.1m in FY2025) is in other expenses, outside cost of revenue. Finance
   income includes sublease interest and deposit income.
-- Land is carried at revalued amounts (revaluation surplus SR 117.5m at end-2025); revaluation gains go to OCI, not profit.
+- 'Net debt deducts short-term bank deposits held outside cash: SAR 62.8m at end-2023, so FY2023 net debt is SAR 287m (8.7x EBITDA).'
+- Land is carried at revalued amounts (revaluation surplus SAR 117.5m at end-2025); revaluation gains go to OCI, not profit.

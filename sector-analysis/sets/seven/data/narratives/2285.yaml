@@ -105,7 +105,7 @@ profit_and_margin:
     - 2285-9M2026-FIN_INC
   - period: FY2022-9M2026
     driver: 'Cash went to debt reduction: operating cash flow (before interest paid) reached SAR 430m in FY2025 and borrowings fell from SAR 1,748m
-      (end-2022) to SAR 630m (30 Sep 2026). Net debt to EBITDA fell from 4.13x to 1.85x (FY2025) and 1.36x (9M 2026, annualised). ROE 20.8% in
+      (end-2022) to SAR 630m (30 Sep 2026). Net debt to EBITDA fell from 4.1x to 1.8x (FY2025) and 1.4x (9M 2026, annualised). ROE 20.8% in
       FY2025 (we calculate).'
     source: cash-flow statements and balance sheets (FY2023-FY2025 annuals; 2026 Q3 p.4, p.7)
     refs:
@@ -119,19 +119,19 @@ profit_and_margin:
     amount_sar_m: -10.0
     line: General and administration expenses
     source: 2285_ARABIAN_MILLS/2023_Annual_filed2024-10-07.pdf p.44
-    tax_nci: 'Zakat effect not disclosed; no minority interests: after-tax effect not determinable, profit kept as reported'
+    tax_nci: 'A contract-termination payment outside normal operations, 5.0% of attributable profit; zakat effect not disclosed; no minority interests: after-tax effect not determinable, profit kept as reported'
   - item: Provision for a GFSA fine (inspection of 16 Oct 2024)
     period: FY2024
     amount_sar_m: -5.61
     line: General and administration expenses
     source: 2285_ARABIAN_MILLS/2024_Annual_filed2025-03-24.pdf p.48
-    tax_nci: 'Under 5% of attributable profit; zakat effect not disclosed, no minority interests: profit kept as reported'
+    tax_nci: 'Under 5% of attributable profit but listed as a regulatory penalty outside normal operations; zakat effect not disclosed, no minority interests: profit kept as reported'
   - item: Net release of fines and penalties after GFSA cut its claim to SAR 3.10m
     period: FY2025
     amount_sar_m: 1.47
     line: General and administrative expenses
     source: 2285_ARABIAN_MILLS/2025_Annual_filed2026-03-26.pdf p.41, p.43
-    tax_nci: 'Under 5% of attributable profit; zakat effect not disclosed, no minority interests: profit kept as reported'
+    tax_nci: 'Under 5% of attributable profit but listed as the release of the FY2024 penalty provision; zakat effect not disclosed, no minority interests: profit kept as reported'
 developments:
 - date: '2022-11-30'
   category: M&A
@@ -176,8 +176,8 @@ what_it_means:
     the VAT basis of reported sales to NADEC differs between filings.
 confidence_overall: Medium
 data_notes:
-- XBRL lacked the balance sheet, cost of revenue and gross profit and all of FY2022; these were read from the PDFs (stage A overrides).
-- The XBRL impairment add-back was the expected credit loss on receivables; it was set to 0 for FY2024, FY2025, 9M2025 and 9M2026. FY2023 IMPAIR_CF
+- The XBRL lacked the balance sheet, cost of revenue and gross profit and all of FY2022; these were read from the PDFs.
+- The XBRL impairment add-back was the expected credit loss on receivables; it is corrected to nil from the PDF cash-flow statements for FY2024, FY2025, 9M 2025 and 9M 2026. FY2023 IMPAIR_CF
   is the write-off of intangible assets (SAR 0.2m).
 - 'FY2022 and 1 Jan 2022 were restated in the FY2023 annual (note 32): lease liabilities and right-of-use assets +SAR 107.1m, PP&E and equity
   -SAR 16.5m; total assets FY2022 SAR 2,779.7m (R).'
@@ -188,10 +188,12 @@ data_notes:
   cash flow +SAR 1.11m (R).'
 - Operating cash flow is before interest paid (interest on loans and leases is in financing; interest received in investing), unlike First Milling
   and Modern Mills.
-- 'Borrowings exclude accrued interest shown as a separate line: SAR 16.2m (FY2022), 12.0m (FY2023), 15.0m (9M2025), 10.4m (9M2026).'
-- Cash excludes short-term murabaha deposits of SAR 50m at 30 Sep 2025.
+- 'Borrowings exclude accrued interest shown as a separate line: SAR 16.2m (FY2022), SAR 12.0m (FY2023), SAR 15.0m (9M 2025), SAR 10.4m (9M 2026).'
+- 'Cash excludes short-term murabaha deposits of SAR 50m at 30 Sep 2025 (2025 Q3 interim note 11.2, p.19); net debt deducts them, so it was SAR 813m at that date, 2.1x annualised EBITDA.'
 - Product revenue in the FY2025 annual is net of rebates (FY2024 flour SAR 534.6m) while earlier annuals show products gross with rebates deducted
   in total (FY2024 flour SAR 547.0m); product growth is quoted on matching bases only.
 - Related-party sales to NADEC are shown on different VAT bases in different filings (FY2023 SAR 22.8m vs 26.2m; FY2024 SAR 24.0m vs 20.9m); revenue
   itself is not affected. Relevant for cross-checks with NADEC (6010).
 - Formerly The Second Milling Company; listed on 8 Oct 2024; the archive holds statements from FY2022 (with FY2021 comparatives).
+- 'Cross-holding: NADEC, also in the Supporting group, held 10% and then 14.87% of Arabian Mills as a joint venture until the October 2024 IPO (10.41% at FVOCI since), so its share of Arabian Mills''
+  profit, SAR 3.3m (FY2022), SAR 21.7m (FY2023) and SAR 24.0m (FY2024), is counted twice in the Supporting totals; NADEC''s FY2024 gain of SAR 356.5m is a gain on that stake.'

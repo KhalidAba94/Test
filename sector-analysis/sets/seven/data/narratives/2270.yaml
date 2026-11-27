@@ -3,7 +3,7 @@ headline: SADAFCO moved its year-end from March to December, so FY2023 covers on
   profit slipped 1.3% to SAR 477m despite a SAR 107m property-sale gain, and in 9M 2026 revenue fell 6.6% and attributable profit 44.7% as Polish sales dropped and margins narrowed.
 lfl_basis:
   definition_used: Standard bridge on IFRS revenue from continuing operations. FY2023 is a nine-month period (April-December 2023), so FY2023/FY2022 and FY2024/FY2023 growth is n.m.
-    and only FY2025/FY2024 and 9M2026/9M2025 are bridged. The FY2025 annual and the 2026 Q3 interim re-present the prior period without the Jordan, Kuwait and Bahrain subsidiaries, so
+    and only FY2025 vs FY2024 and 9M 2026 vs 9M 2025 are bridged. The FY2025 annual and the 2026 Q3 interim re-present the prior period without the Jordan, Kuwait and Bahrain subsidiaries, so
     those comparisons share a perimeter except for SADAFCO Qatar (deconsolidated in November 2024, revenue not disclosed). Poland (zloty) is the main currency exposure and is not given
     in constant currency. No volumes or like-for-like sales are disclosed.
   perimeter_changes:
@@ -17,16 +17,16 @@ lfl_basis:
     source: 2270_SADAFCO/2024_Annual_filed2025-03-25.pdf p.32
   - event: Jordan, Kuwait and Bahrain subsidiaries to be liquidated; discontinued
     date: '2025-12-25'
-    effect: removed from FY2024 (SAR 105.2m revenue) and 9M2025 as re-presented; no effect on the bridged comparisons
+    effect: removed from FY2024 (SAR 105.2m revenue) and 9M 2025 as re-presented; no effect on the bridged comparisons
     source: 2270_SADAFCO/2025_Annual_filed2026-02-17.pdf p.49
   capacity_changes:
-  - event: Capex SAR 207m (FY2024), SAR 128m (FY2025), SAR 181m (9M2026)
+  - event: Capex SAR 207m (FY2024), SAR 128m (FY2025), SAR 181m (9M 2026)
     date: 2024 to 2026
     effect: revenue from new capacity not disclosed
     source: 2270_SADAFCO/2025_Annual_filed2026-02-17.pdf p.11; 2270_SADAFCO/2026_Q3_filed2026-11-09.pdf p.8
   fx_exposure: Saudi Arabia was 77.2% of FY2025 revenue, Poland 15.4%, other GCC 3.0% and others 4.3%. Poland revenue is in zloty; no constant-currency figures.
   price_volume_support: 'Not determinable: no volumes or prices are disclosed; revenue is split into drinks and non-drinks and by country only.'
-  confidence: Low (short year; perimeter not determinable for FY2025/FY2024; FX and capacity not determinable)
+  confidence: Low (short year; perimeter not determinable for FY2025 vs FY2024; FX and capacity not determinable)
 price_volume:
 - period: 9M 2026 vs 9M 2025
   text: Drinks revenue fell 3.1% (SAR 1,215m to 1,178m) and non-drinks 10.4% (SAR 1,103m to 988m). By country, Saudi Arabia fell 0.5% and Poland 43.6% (SAR 373m to 210m); the company
@@ -50,7 +50,7 @@ profit_and_margin:
   drivers:
   - period: FY2023
     driver: 'Nine months only (April-December 2023): revenue SAR 2,111m and attributable profit SAR 328m, not comparable with FY2022 (April 2022-March 2023). Gross margin was 35.6%;
-      other expenses of SAR 15.9m were goodwill and disposal-group impairments on the Polish Mlekoma business, whose minority stake was bought out.'
+      other expenses of SAR 15.9m were goodwill and disposal-group impairments on the Polish Mlekoma business, whose minority stake was bought out. ROE, annualised on the nine months, was 24.6%.'
     source: 2270_SADAFCO/2024_Annual_filed2025-03-25.pdf p.8, p.11, p.32
     refs:
     - 2270-FY2023-REV
@@ -88,36 +88,24 @@ profit_and_margin:
     - 2270-9M2026-NI_ATTR
     - 2270-9M2026-CAPEX
   one_offs:
-  - item: Impairment of goodwill (Mlekoma) and remeasurement of a disposal group
-    period: FY2023
-    amount_sar_m: -15.9
-    line: Other expenses
-    source: 2270_SADAFCO/2024_Annual_filed2025-03-25.pdf p.8, p.11
-    tax_nci: 'Impairment, outside our EBITDA; tax effect not disclosed: profit kept as reported'
   - item: Loss on loss of control of SADAFCO Qatar
     period: FY2024
     amount_sar_m: -1.9
     line: not named (cash-flow add-back)
     source: 2270_SADAFCO/2025_Annual_filed2026-02-17.pdf p.11
-    tax_nci: 'Under 5% of attributable profit: tax effect not checked; profit kept as reported'
+    tax_nci: 'Under 5% of attributable profit (0.4%), listed because the disposal of a business is outside normal operations; tax effect not disclosed: profit kept as reported'
   - item: Gain on sale of a former warehouse property (asset held for sale)
     period: 9M2025
     amount_sar_m: 107.4
     line: Other operating income
     source: 2270_SADAFCO/2026_Q3_filed2026-11-09.pdf p.14
-    tax_nci: 'Zakat effect not disclosed; no minority interests at SADAFCO, but without the zakat effect: not determinable, profit kept as reported'
+    tax_nci: '25.1% of 9M 2025 attributable profit; zakat effect not disclosed (no minority interests): not determinable, profit kept as reported'
   - item: Gain on sale of property (former warehouse)
     period: FY2025
     amount_sar_m: 107.4
     line: Other operating income
     source: 2270_SADAFCO/2025_Annual_filed2026-02-17.pdf p.48
-    tax_nci: 'Zakat effect not disclosed (no minority interests): not determinable, profit kept as reported'
-  - item: Impairment on property, plant and equipment
-    period: FY2025
-    amount_sar_m: -16.4
-    line: cost lines (segment note)
-    source: 2270_SADAFCO/2025_Annual_filed2026-02-17.pdf p.11, p.52
-    tax_nci: 'Impairment, outside our EBITDA; zakat effect not disclosed: profit kept as reported'
+    tax_nci: '22.5% of attributable profit; zakat effect not disclosed (no minority interests): not determinable, profit kept as reported'
 developments:
 - date: '2023-08-22'
   category: regulation
@@ -144,22 +132,26 @@ developments:
   text: The company reports lower international sales in 9M 2026 and supply measures (supplier diversification, more inventory, alternative routes) for regional events.
   source: 2270_SADAFCO/2026_Q3_filed2026-11-09.pdf p.15
 what_it_means:
-  improved: Over the two comparable calendar years revenue rose 5.0% and ROE was 26.9% in FY2025; the company has no borrowings, only lease liabilities.
+  improved: Over the two comparable calendar years revenue rose 5.0% and ROE was 26.9% in FY2025; the company has no borrowings, only lease liabilities, and held net cash of SAR 534m at end-2025.
   weakened: Gross margin fell from 36.5% (FY2024) to 31.0% (9M 2026) and 9M 2026 attributable profit fell 44.7%; Poland revenue dropped 43.6% in 9M 2026.
   why: FY2025 profit held only because of a SAR 107.4m property-sale gain while gross profit fell 10.3%; in 9M 2026 lower international sales and the absence of that gain cut profit.
   uncertain: FY2022 and the March 2022 balance sheet cannot be checked against filed PDFs, and the split of the Polish decline into volume, price and currency is not disclosed.
 confidence_overall: Medium
 data_notes:
 - 'Year-end change: FY2022 = April 2022-March 2023; FY2023 = nine months April-December 2023 (emphasis of matter in the FY2024 audit report); FY2024 onward are calendar years. Growth
-  across FY2023 is n.m. FY2021 opening balances = 31 March 2022.'
+  across FY2023 is n.m. FY2021 opening balances = 31 March 2022. FY2022 is left out of the Supporting group totals.'
 - 'FY2022 figures and the FY2021 balance sheet are from XBRL only: the archive has no PDF of the FY Mar-2023 or Apr-Dec 2023 annual reports, so they could not be checked. In every PDF-checked
   period the XBRL D&A omitted right-of-use depreciation and the XBRL cash line was not balance-sheet cash, so FY2022 D&A, EBITDA and cash are probably understated.'
-- 'The FY2021 "R" flags (TA, TE, EQ_ATTR, CASH, LEASE_LIAB) are not restatements: the first value came from the 31 December 2021 column of a quarterly XBRL file (reasons_2270.csv).'
-- The dataset shows FY2023 ROE of 18.4% on nine months of profit (not annualised) and a 2022-2025 revenue CAGR of 4.2% that starts from the April 2022-March 2023 year; neither is quoted.
-- 'Stage A overrides: CASH set to balance-sheet cash and cash equivalents (FY2024 SAR 467.8m, was 66.5m; FY2025 SAR 464.2m, was 47.7m); D&A now includes right-of-use depreciation; IMPAIR_CF
-  holds only non-financial impairments (FY2023 goodwill SAR 15.9m, FY2025 PP&E SAR 16.4m), not receivable ECL.'
-- FY2024 and 9M2025 income statements were re-presented for the discontinued Jordan, Kuwait and Bahrain subsidiaries (FY2024 revenue SAR 2,962.9m to 2,857.7m); FY2023 CFO was re-presented
+- 'The FY2021 "R" flags (TA, TE, EQ_ATTR, CASH, LEASE_LIAB) are not restatements: the first value came from the 31 December 2021 column of a quarterly XBRL file (see the Restatements sheet).'
+- FY2023 ROE (24.6%) is annualised on the period's true length (nine months of profit × 12/9, over average equity). The 2022–25 CAGRs are n.m. because the span includes the short FY2023.
+- 'Corrected from the PDF statements (FY2025 annual p.7 and p.11; same lines in the other filings): cash is balance-sheet cash and cash equivalents (FY2024 SAR 467.8m against SAR 66.5m in the XBRL;
+  FY2025 SAR 464.2m against SAR 47.7m); D&A includes right-of-use depreciation; the impairment add-back holds only non-financial impairments (FY2023 goodwill SAR 15.9m, FY2025 PP&E SAR 16.4m),
+  not receivable credit losses.'
+- FY2024 and 9M 2025 income statements were re-presented for the discontinued Jordan, Kuwait and Bahrain subsidiaries (FY2024 revenue SAR 2,962.9m to 2,857.7m); FY2023 CFO was re-presented
   (finance costs paid moved to financing).
-- 'No borrowings in any period: DEBT = 0 override rows were added in stage B for FY2021-9M2026 (balance-sheet pages; FY2021 and FY2022 from the XBRL comparative columns of the next filings,
-  as no PDF exists). Net debt is therefore lease liabilities less cash, which is negative (net cash) in every period.'
+- 'No borrowings in any period: debt is recorded as nil from FY2021 to 9M 2026 (from the balance sheets; FY2021 and FY2022 from the XBRL comparative columns of the next filings, as no PDF exists).
+  Net debt is lease liabilities less cash and short-term Murabaha deposits, and is negative (net cash) in every period. The deposits were SAR 674m at end-2023 (FY2024 annual note 13, p.41), SAR 223m
+  at end-2024 and SAR 141m at end-2025 (FY2025 annual note 13, p.42) and SAR 337m at 30 Sep 2025 (2025 Q3 interim note 11, p.18), so net cash was SAR 959m, SAR 637m, SAR 534m and SAR 697m.'
 - FY2024 annual primary statements are scanned images (read visually and checked at high resolution).
+- 'Not treated as one-offs under the one-off rule (impairments, already outside EBITDA): the FY2023 goodwill and disposal-group impairment on Mlekoma (SAR 15.9m; FY2024 annual p.8, p.11) and the
+  FY2025 PP&E impairment (SAR 16.4m; FY2025 annual p.11, p.52).'

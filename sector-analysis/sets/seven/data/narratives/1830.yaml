@@ -6,34 +6,34 @@ headline: >-
 lfl_basis:
   definition_used: >-
     Standard bridge on IFRS revenue from continuing operations. Leejam operates Fitness Time centres in Saudi Arabia and a few in the
-    UAE. Small bolt-on deals changed the group: Altathir Al-Riyadiyeh (sports academies, June 2023, SR 12m), Sports Hub (55%, June 2024,
-    SR 2.2m) and Champs Sports in Dubai (60%, February 2024), which was classified at once as held for sale and is a discontinued operation,
+    UAE. Small bolt-on deals changed the group: Altathir Al-Riyadiyeh (sports academies, June 2023, SAR 12m), Sports Hub (55%, June 2024,
+    SAR 2.2m) and Champs Sports in Dubai (60%, February 2024), which was classified at once as held for sale and is a discontinued operation,
     so its revenue is outside reported revenue. Altathir's revenue is not disclosed, so organic growth is not determinable for FY2023
     and FY2024; for FY2025 and 9M 2026 the perimeter effect is nil or immaterial and organic growth equals reported growth. The statements
     give no centre count, openings or same-centre revenue, so like-for-like growth is not determinable in any period.
   perimeter_changes:
-  - event: Altathir Al-Riyadiyeh Company acquired (100%, SR 12m)
+  - event: Altathir Al-Riyadiyeh Company acquired (100%, SAR 12m)
     date: '2023-06-14'
     effect: revenue contribution not disclosed (not determinable)
     source: 1830_LEEJAM_SPORTS/2024_Annual_filed2025-02-16.pdf p.33
-  - event: Champs Sports and Fitness Club LLC, Dubai (60%, SR 8.16m), held for sale and shown as a discontinued operation
+  - event: Champs Sports and Fitness Club LLC, Dubai (60%, SAR 8.16m), held for sale and shown as a discontinued operation
     date: '2024-02-01'
-    effect: outside revenue; profit from discontinued operations SR 2.2m (FY2024), SR 0.08m (FY2025)
+    effect: outside revenue; profit from discontinued operations SAR 2.2m (FY2024), SAR 0.08m (FY2025)
     source: 1830_LEEJAM_SPORTS/2024_Annual_filed2025-02-16.pdf p.31, p.34; 1830_LEEJAM_SPORTS/2025_Annual_filed2026-02-24.pdf p.7, p.53
-  - event: Sports Hub Sports Company acquired (55%, SR 2.2m)
+  - event: Sports Hub Sports Company acquired (55%, SAR 2.2m)
     date: '2024-06-01'
     effect: 'not adjusted: immaterial (0.17% of FY2023 revenue)'
     source: 1830_LEEJAM_SPORTS/2024_Annual_filed2025-02-16.pdf p.31
-  - event: Remaining 49% of Padel X bought (SR 2.2m); 45% of Altathir sold with control kept (SR 9.06m)
+  - event: Remaining 49% of Padel X bought (SAR 2.2m); 45% of Altathir sold with control kept (SAR 9.06m)
     date: 2026 (9M)
     effect: ownership changes only; no revenue effect
     source: 1830_LEEJAM_SPORTS/2026_Q3_filed2026-11-05.pdf p.10, p.19
   capacity_changes:
-  - event: Two centres closed in areas expropriated for a government project (SR 13.73m written off)
+  - event: Two centres closed in areas expropriated for a government project (SAR 13.73m written off)
     date: '2023'
     effect: revenue effect not disclosed
     source: 1830_LEEJAM_SPORTS/2024_Annual_filed2025-02-16.pdf p.39
-  - event: Centre openings (capex SR 309m in FY2023, SR 586m in FY2024, SR 374m in FY2025)
+  - event: Centre openings (capex SAR 309m in FY2023, SAR 586m in FY2024, SAR 374m in FY2025)
     date: FY2023-FY2025
     effect: number of centres and their revenue not disclosed (not determinable)
     source: 1830_LEEJAM_SPORTS/2025_Annual_filed2026-02-24.pdf p.11
@@ -147,14 +147,14 @@ profit_and_margin:
     - 1830-FY2025-FCF
     - 1830-FY2025-NET_DEBT
   one_offs:
-  - item: Gain on disposal of property and equipment, mainly a Riyadh land plot (book value SR 58.58m, sold for SR 150.37m)
+  - item: Gain on disposal of property and equipment, mainly a Riyadh land plot (book value SAR 58.58m, sold for SAR 150.37m)
     period: FY2024
     amount_sar_m: 92.2
     line: Gain on disposal of property and equipment (below the company operating profit, inside our operating income)
     source: 1830_LEEJAM_SPORTS/2025_Annual_filed2026-02-24.pdf p.7; 1830_LEEJAM_SPORTS/2024_Annual_filed2025-02-16.pdf p.39
     tax_nci: Zakat effect not disclosed; the land was sold by the parent (no minority share), but without the zakat effect the after-tax
       amount is not determinable, profit kept as reported
-  - item: Gain on disposal of property and equipment (proceeds SR 58.9m)
+  - item: Gain on disposal of property and equipment (proceeds SAR 58.9m)
     period: 9M2026
     amount_sar_m: 22.7
     line: Gain / (loss) on disposal of property and equipment
@@ -169,28 +169,28 @@ profit_and_margin:
 developments:
 - date: '2023-06-14'
   category: M&A
-  text: Acquired Altathir Al-Riyadiyeh Company (swimming and martial-arts academies) for SR 12m.
+  text: Acquired Altathir Al-Riyadiyeh Company (swimming and martial-arts academies) for SAR 12m.
   source: 1830_LEEJAM_SPORTS/2024_Annual_filed2025-02-16.pdf p.33
 - date: '2023'
   category: capacity
-  text: Closed two centres in areas expropriated for a government project and wrote off SR 13.73m.
+  text: Closed two centres in areas expropriated for a government project and wrote off SAR 13.73m.
   source: 1830_LEEJAM_SPORTS/2024_Annual_filed2025-02-16.pdf p.39
 - date: '2024-02-01'
   category: M&A
-  text: Bought 60% of Champs Sports and Fitness Club in Dubai for SR 8.16m; management decided in 2024 to sell it, so it is held for
+  text: Bought 60% of Champs Sports and Fitness Club in Dubai for SAR 8.16m; management decided in 2024 to sell it, so it is held for
     sale and shown as a discontinued operation (still unsold at 30 Sep 2026).
   source: 1830_LEEJAM_SPORTS/2024_Annual_filed2025-02-16.pdf p.31, p.34; 1830_LEEJAM_SPORTS/2026_Q3_filed2026-11-05.pdf p.10
 - date: '2024'
   category: event
-  text: Sold a land plot in Riyadh for SR 150.37m, a gain of SR 91.79m.
+  text: Sold a land plot in Riyadh for SAR 150.37m, a gain of SAR 91.79m.
   source: 1830_LEEJAM_SPORTS/2024_Annual_filed2025-02-16.pdf p.39
 - date: '2024-06-01'
   category: M&A
-  text: Bought 55% of Sports Hub Sports Company (sports events) for SR 2.2m.
+  text: Bought 55% of Sports Hub Sports Company (sports events) for SAR 2.2m.
   source: 1830_LEEJAM_SPORTS/2024_Annual_filed2025-02-16.pdf p.31
 - date: 2024-2026
   category: financing
-  text: 'Bought back shares: treasury shares rose from SR 22.6m (end-2024) to SR 160.7m (end-2025) and SR 340.0m (30 Sep 2026).'
+  text: 'Bought back shares: treasury shares rose from SAR 22.6m (end-2024) to SAR 160.7m (end-2025) and SAR 340.0m (30 Sep 2026).'
   source: 1830_LEEJAM_SPORTS/2025_Annual_filed2026-02-24.pdf p.9; 1830_LEEJAM_SPORTS/2026_Q3_filed2026-11-05.pdf p.6
 - date: '2025'
   category: strategy
@@ -199,8 +199,8 @@ developments:
   source: 1830_LEEJAM_SPORTS/2025_Annual_filed2026-02-24.pdf p.13-14
 - date: 2026 (9M)
   category: M&A
-  text: Bought the remaining 49% of Padel X (SR 2.2m), sold 45% of Altathir with control kept (SR 9.06m) and liquidated its associate
-    (expenses SR 4.29m).
+  text: Bought the remaining 49% of Padel X (SAR 2.2m), sold 45% of Altathir with control kept (SAR 9.06m) and liquidated its associate
+    (expenses SAR 4.29m).
   source: 1830_LEEJAM_SPORTS/2026_Q3_filed2026-11-05.pdf p.4, p.10, p.19
 what_it_means:
   improved: >-
@@ -219,20 +219,20 @@ what_it_means:
 confidence_overall: Medium
 data_notes:
 - 'Restatement (FY2023 annual, note 37): a SOCPA ruling (Nov 2023) required depreciation of land right-of-use assets during construction
-  to be expensed. FY2022 cost of revenue rose SR 2.5m; PP&E and equity fell SR 21.3m at 1 Jan 2022 and SR 23.8m at 31 Dec 2022. FY2021
-  opening TA/TE and FY2022 PBT, NI, TA and TE carry R.'
-- 'FY2022 operating cash flow was re-presented in the FY2023 annual (SR 669.2m to SR 673.4m): the impairment provision on advances to
+  to be expensed. FY2022 cost of revenue rose SAR 2.5m; PP&E and equity fell SAR 21.3m at 1 Jan 2022 and SAR 23.8m at 31 Dec 2022. FY2021
+  opening total assets and equity and FY2022 PBT, net profit, total assets and equity are shown as restated.'
+- 'FY2022 operating cash flow was re-presented in the FY2023 annual (SAR 669.2m to SAR 673.4m): the impairment provision on advances to
   suppliers is added back in operations. CFO is after zakat and end-of-service benefits paid and before interest paid (finance cost
   and lease interest paid are in financing).'
-- 'Stage A overrides: D&A for EBITDA includes depreciation of right-of-use assets; the XBRL omitted it for FY2022 and FY2023 (corrected
-  to SR 232m and SR 252m). FY2022 capex now includes intangibles; FY2023 impairment add-back corrected to SR 2.1m. All 9M 2026 figures
+- 'Corrected from the PDF statements: D&A for EBITDA includes depreciation of right-of-use assets; the XBRL omitted it for FY2022 and FY2023 (corrected
+  to SAR 232m and SAR 252m). FY2022 capex includes intangibles; FY2023 impairment add-back corrected to SAR 2.1m. All 9M 2026 figures
   come from the PDF (no XBRL file for 2026 Q3).'
 - 'Capex basis break: from FY2024 the PP&E line includes advances to contractors (merged in the FY2025 annual); in FY2022-FY2023 advances
-  (SR 5.4m and SR 66.0m) are a separate line and are excluded, so FY2023 capex is not fully comparable.'
+  (SAR 5.4m and SAR 66.0m) are a separate line and are excluded, so FY2023 capex is not fully comparable.'
 - 'Champs Sports and Fitness Club (Dubai) is a discontinued operation held for sale from 2024: revenue and PBT are continuing operations;
-  net profit and attributable profit include the discontinued result (FY2024 SR 2.2m; FY2025 SR 0.08m; 9M 2026 SR 0.07m; 9M 2025 -SR
+  net profit and attributable profit include the discontinued result (FY2024 SAR 2.2m; FY2025 SAR 0.08m; 9M 2026 SAR 0.07m; 9M 2025 -SAR
   0.25m).'
 - 'Our operating income (PBT + finance cost - Murabaha income - share of associate) includes items the company shows below its operating
-  profit: disposal gains, lease gains, write-offs, impairments and other income. FY2024 company operating profit SR 447.2m vs our SR
-  555.3m (the difference is mainly the SR 92.2m disposal gain).'
+  profit: disposal gains, lease gains, write-offs, impairments and other income. FY2024 company operating profit SAR 447.2m vs our SAR
+  555.3m (the difference is mainly the SAR 92.2m disposal gain).'
 - Murabaha deposit profit is treated as finance income. Lease interest is inside finance cost.

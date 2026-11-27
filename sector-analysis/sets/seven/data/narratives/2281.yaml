@@ -145,13 +145,14 @@ profit_and_margin:
     amount_sar_m: -8.0
     line: Finance costs (outside our operating income)
     source: 2281_TANMIAH/2025_Annual_filed2026-02-19.pdf p.11
-    tax_nci: 'Tax effect and minority share not disclosed: after-tax effect not determinable, profit kept as reported'
+    tax_nci: 'FX on financing balances (inside finance costs), larger than the attributable loss of SAR 18.8m; tax effect and minority share not disclosed: after-tax effect not determinable, profit
+      kept as reported'
   - item: 'Exchange gain inside finance costs (9M 2025: loss SAR 7.5m)'
     period: 9M2026
     amount_sar_m: 2.0
     line: Finance costs (outside our operating income)
     source: 2281_TANMIAH/2026_Q3_filed2026-11-12.pdf p.7
-    tax_nci: 'Tax effect and minority share not disclosed: after-tax effect not determinable, profit kept as reported'
+    tax_nci: 'FX on financing balances (inside finance costs), 8.6% of attributable profit; tax effect and minority share not disclosed: after-tax effect not determinable, profit kept as reported'
 developments:
 - date: '2022-11-02'
   category: M&A
@@ -197,9 +198,10 @@ what_it_means:
 confidence_overall: Medium
 data_notes:
 - >-
-  Stage A corrections: D&A includes depreciation of right-of-use assets (FY2025 SAR 146.0m; the XBRL left it out); receivable ECL removed
-  from impairments (set to 0); borrowings include the non-current portion (FY2025 SAR 1,044m vs SAR 459m in XBRL); lease liabilities
-  added; FY2025 and 9M 2025 cost of revenue added; 9M 2026 read from the PDF (no XBRL file).
+  Corrected from the PDF statements (e.g. FY2025 annual p.7 and p.11): D&A includes depreciation of right-of-use assets (FY2025 SAR 146.0m;
+  the XBRL left it out); receivable credit losses are excluded from the impairment add-back (nil); borrowings include the non-current portion
+  (FY2025 SAR 1,044m vs SAR 459m in the XBRL); lease liabilities and the FY2025 and 9M 2025 cost of revenue are read from the PDFs; 9M 2026
+  is read from the 2026 Q3 interim (no XBRL file).
 - >-
   FY2022 attributable profit (SAR 186.8m) includes SAR 114.3m from the discontinued SFPC operation; PBT and revenue are continuing operations
   only. The FY2021 balance sheet still consolidates SFPC.

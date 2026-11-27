@@ -15,7 +15,7 @@ main_changes:
     refs: ["6017-FY2024-EBITDA_C", "6017-FY2025-EBITDA_C", "6017-9M2026-EBITDA_C", "6017-9M2026-OPINC"]
   - change: "Net cash turned into net debt. Net debt including leases moved from −SAR 982m at end-2024 to SAR 26.9m at end-2025 and SAR 208m at 30 Sep 2026 (1.6x annualised EBITDA)."
     driver: "The Snoonu payment cut cash from SAR 1,054m to SAR 428m (SAR 323m at 30 Sep 2026), borrowings of SAR 165m appeared at end-2025, and lease liabilities rose from SAR 71.8m to SAR 290m. Finance income fell to SAR 2.4m in 9M 2026 (SAR 30.3m) and capex rose to SAR 124m (SAR 39.1m)."
-    evidence: "Company narrative 6017; sector NET_DEBT, CASH and DEBT"
+    evidence: "Company narrative 6017; group net debt, cash and borrowings"
     refs: ["6017-FY2024-CASH", "6017-FY2025-CASH", "6017-FY2025-DEBT", "6017-9M2026-NET_DEBT"]
 takeaways:
   improved: "Scale: revenue grew 13.2% a year from FY2022 to FY2025 and 37.5% in 9M 2026, and 9M 2026 operating cash flow rose 61.4% to SAR 87.5m."
@@ -29,3 +29,4 @@ data_notes:
   - "Perimeter: Snoonu (76.56%) is consolidated from 6 October 2025, with SAR 228m of FY2025 revenue disclosed; its 9M 2026 revenue is not disclosed. Marn (from 2 January 2023) added SAR 1.1m in FY2023; SOL (consolidated from 26 December 2023) has no disclosed revenue, so FY2024 organic growth is not determinable."
   - "Revenue is net of customer promotions and cash back (SAR 198m in FY2025). Our operating income includes unrealised fair-value results on start-up investments (FY2025 −SAR 11.3m), which EBITDA excluding one-offs removes, so it differs from Jahez's printed operating profit (FY2025: SAR 49.4m printed, SAR 38.1m on our definition)."
   - "All 9M 2026 figures were read from the 2026 Q3 interim PDF (no XBRL file)."
+  - "Net debt includes lease liabilities and deducts short-term deposits held outside cash (SAR 200m at end-2022, SAR 108m at end-2023), so Jahez was net cash of SAR 974m at end-2022 and SAR 1,119m at end-2023."

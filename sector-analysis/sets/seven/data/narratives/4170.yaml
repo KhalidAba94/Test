@@ -11,13 +11,13 @@ lfl_basis:
     Revenue is below SAR 10m from FY2023, so growth after FY2023 is n.m. Interest on deposits, investment gains and losses, and the
     real estate fund are outside revenue.
   perimeter_changes:
-  - event: None (single entity); SR 249.4m investment in a SEDCO Capital real estate fund (Fairmont Al Khobar) is a financial asset
+  - event: None (single entity); SAR 249.4m investment in a SEDCO Capital real estate fund (Fairmont Al Khobar) is a financial asset
       at fair value through OCI
     date: '2024'
     effect: no revenue effect
     source: 4170_TECO/2025_Annual_filed2026-04-07.pdf p.12, p.24
   capacity_changes:
-  - event: No new rooms or sites disclosed; capex SR 0.4m-7.6m a year
+  - event: No new rooms or sites disclosed; capex SAR 0.4m-7.6m a year
     date: FY2022-9M2026
     effect: nil
     source: 4170_TECO/2025_Annual_filed2026-04-07.pdf p.11; 4170_TECO/2026_Q3_filed2026-11-09.pdf p.7
@@ -121,24 +121,24 @@ profit_and_margin:
 developments:
 - date: '2022'
   category: financing
-  text: Rights issue raised net proceeds of SR 502.4m; share capital rose from SR 52.6m to SR 578.2m.
+  text: Rights issue raised net proceeds of SAR 502.4m; share capital rose from SAR 52.6m to SAR 578.2m.
   source: 4170_TECO/2023_Annual_filed2024-04-04.pdf p.11; 4170_TECO/2022_Annual_filed2023-04-04.pdf p.8
 - date: '2023'
   category: event
-  text: Impaired the Palm Beach Resort by SR 38.8m after a value-in-use test.
+  text: Impaired the Palm Beach Resort by SAR 38.8m after a value-in-use test.
   source: 4170_TECO/2025_Annual_filed2026-04-07.pdf p.23
 - date: '2024'
   category: strategy
-  text: Invested SR 243.8m (plus SR 5.6m costs) in a SEDCO Capital fund developing a Fairmont hotel on the Al Khobar corniche, and SR
+  text: Invested SAR 243.8m (plus SAR 5.6m costs) in a SEDCO Capital fund developing a Fairmont hotel on the Al Khobar corniche, and SAR
     24.0m in FVTPL assets.
   source: 4170_TECO/2025_Annual_filed2026-04-07.pdf p.24; 4170_TECO/2024_Annual_filed2025-04-06.pdf p.11
 - date: '2025-10-16'
   category: financing
-  text: Changed the nominal value of shares from SR 0.5 to SR 10 (57.8m shares).
+  text: Changed the nominal value of shares from SAR 0.5 to SAR 10 (57.8m shares).
   source: 4170_TECO/2026_Q3_filed2026-11-09.pdf p.14
 - date: 2026 (9M)
   category: event
-  text: Sold FVTPL investments at a realised loss of SR 3.2m.
+  text: Sold FVTPL investments at a realised loss of SAR 3.2m.
   source: 4170_TECO/2026_Q3_filed2026-11-09.pdf p.13
 what_it_means:
   improved: FY2024 was the only profitable year (net profit SAR 6.4m), and equity was still SAR 475m at 30 Sep 2026, mostly cash (SAR
@@ -151,16 +151,17 @@ what_it_means:
     15.7m of cumulative fair-value losses in OCI).
 confidence_overall: High
 data_notes:
-- 'Revenue is below SAR 10m from FY2023, so revenue growth from FY2024 and all margins from FY2023 are n.m. TECO has no borrowings:
-  DEBT = 0 override rows were added in stage B (balance-sheet pages), so net debt is a net cash position; net debt / EBITDA is n.m.
+- 'Revenue is below SAR 10m from FY2023, so revenue growth from FY2024 and all margins from FY2023 are n.m. TECO has no borrowings
+  (shown as a true zero, from the balance sheets), so net debt is a net cash position (SAR 249m at end-2025); net debt / EBITDA is n.m.
   because EBITDA is negative (below SAR 10m).'
-- 'Stage A overrides: finance cost set to 0 for FY2023 and FY2024 (the XBRL had mapped the provision for legal claims); there is no
-  finance-cost line on the face. Lease interest (SR 14,707 FY2024; SR 9,659 FY2025) and employee-benefit interest (SR 64,598; SR 71,360)
+- 'Corrected from the PDF statements: finance cost is nil for FY2023 and FY2024 (the XBRL had mapped the provision for legal claims); there is no
+  finance-cost line on the face. Lease interest (SAR 14,707 FY2024; SAR 9,659 FY2025) and employee-benefit interest (SAR 64,598; SAR 71,360)
   sit inside operating expenses.'
-- 'Stage A overrides: impairment add-back is SR 38.8m in FY2023 and nil in all other periods (the XBRL mixed credit-loss, claims and
-  FVTPL items); FY2022 depreciation corrected to SR 6.4m.'
-- FY2024 cost of revenue and gross profit are re-presented in the FY2025 annual, note 27 (SR 2.9m moved from S&M and G&A into cost of
-  revenue; no profit effect). The 9M 2025 finance income in the 2025 Q3 XBRL (SR 0.5m) was a tagging error; both PDFs show SR 11.2m.
-- Finance income = interest on time deposits only. FVTPL fair-value results and dividends sit inside our operating income and are listed
-  as one-offs; fair-value changes on the hotel fund go to OCI.
+- 'Corrected from the PDF statements: impairment add-back is SAR 38.8m in FY2023 and nil in all other periods (the XBRL mixed credit-loss, claims and
+  FVTPL items); FY2022 depreciation corrected to SAR 6.4m.'
+- FY2024 cost of revenue and gross profit are re-presented in the FY2025 annual, note 27 (SAR 2.9m moved from S&M and G&A into cost of
+  revenue; no profit effect). The 9M 2025 finance income in the 2025 Q3 XBRL (SAR 0.5m) was a tagging error; both PDFs show SAR 11.2m.
+- Finance income = interest on time deposits only. Realised and unrealised FVTPL results and the dividends on those investments sit inside
+  our operating income. They are listed as one-offs because results on financial investments are outside the resort's normal operations
+  (and they were 6% to 34% of the result in each period); fair-value changes on the hotel fund go to OCI.
 - Primary statements in the FY2022-FY2024 annuals and the 2026 Q3 interim are scanned and were read visually.

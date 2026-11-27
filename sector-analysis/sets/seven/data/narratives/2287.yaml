@@ -124,14 +124,14 @@ profit_and_margin:
     line: Other income
     source: 2287_ENTAJ/2025_Annual_filed2026-04-23.pdf p.44-45
     tax_nci: >-
-      Zakat effect not disclosed; no non-controlling interests: after-zakat effect not determinable, loss kept as reported
+      Insurance compensation, 8.6% of attributable profit; zakat effect not disclosed; no non-controlling interests: after-zakat effect not determinable, profit kept as reported
   - item: Gain on disposal of property, plant and equipment
     period: FY2025
     amount_sar_m: 15.8
     line: Other income
     source: 2287_ENTAJ/2025_Annual_filed2026-04-23.pdf p.44
     tax_nci: >-
-      Zakat effect not disclosed; no non-controlling interests: after-zakat effect not determinable, loss kept as reported
+      A property disposal gain (proceeds SAR 22.3m), 12.9% of the attributable loss; zakat effect not disclosed; no non-controlling interests: after-zakat effect not determinable, loss kept as reported
   - item: >-
       Gain on fair value remeasurement of biological assets (FY2023 SAR +2.7m, FY2024 SAR -1.2m, 9M 2025 SAR +11.4m, 9M 2026 SAR +1.4m)
     period: FY2025
@@ -139,28 +139,35 @@ profit_and_margin:
     line: Cost of revenue
     source: 2287_ENTAJ/2025_Annual_filed2026-04-23.pdf p.12; 2287_ENTAJ/2026_Q3_filed2026-11-11.pdf p.9
     tax_nci: >-
-      Zakat effect not disclosed; no non-controlling interests: after-zakat effect not determinable, loss kept as reported
+      A valuation result outside normal operations, listed in every period; zakat effect not disclosed; no non-controlling interests: after-zakat effect not determinable, loss kept as reported
   - item: Insurance proceeds
     period: FY2025
     amount_sar_m: 4.2
     line: Other income
     source: 2287_ENTAJ/2025_Annual_filed2026-04-23.pdf p.44
     tax_nci: >-
-      Zakat effect not disclosed; no non-controlling interests: after-zakat effect not determinable, loss kept as reported
+      Insurance compensation; zakat effect not disclosed; no non-controlling interests: after-zakat effect not determinable, loss kept as reported
   - item: Gain on disposal of property, plant and equipment (restated comparative)
     period: 9M2025
     amount_sar_m: 15.8
     line: Other income
     source: 2287_ENTAJ/2026_Q3_filed2026-11-11.pdf p.23
     tax_nci: >-
-      Zakat effect not disclosed; no non-controlling interests: after-zakat effect not determinable, loss kept as reported
+      The same property disposal as in FY2025; zakat effect not disclosed; no non-controlling interests: after-zakat effect not determinable, loss kept as reported
+  - item: Insurance proceeds (restated comparative)
+    period: 9M2025
+    amount_sar_m: 4.2
+    line: Other income
+    source: 2287_ENTAJ/2026_Q3_filed2026-11-11.pdf p.23
+    tax_nci: >-
+      Insurance compensation, the same receipt as in FY2025; zakat effect not disclosed; no non-controlling interests: after-zakat effect not determinable, loss kept as reported
   - item: Extinguishment of trade payable balances
     period: 9M2026
     amount_sar_m: 5.5
     line: Other income
     source: 2287_ENTAJ/2026_Q3_filed2026-11-11.pdf p.23
     tax_nci: >-
-      Zakat effect not disclosed; no non-controlling interests: after-zakat effect not determinable, loss kept as reported
+      A one-time write-back of old payables, 9.6% of the attributable loss; zakat effect not disclosed; no non-controlling interests: after-zakat effect not determinable, loss kept as reported
 developments:
 - date: '2024-01-01'
   category: regulation
@@ -218,9 +225,10 @@ data_notes:
   corrections turned a SAR 18.9m profit into a SAR 39.2m loss. The 30 Sep 2025 balance sheet exists only on the earlier basis (equity
   SAR 465m).
 - >-
-  Stage A corrections: capex is PP&E plus intangibles (the XBRL took biological-asset additions); D&A includes right-of-use depreciation
+  Corrected from the PDF statements: capex is PP&E plus intangibles (the XBRL took biological-asset additions); D&A includes right-of-use depreciation
   and amortisation of breeder birds (bearer biological assets, kept in D&A: FY2025 SAR 14.5m); FY2025 finance income set to nil (the
-  XBRL took a receivables reversal); receivable allowances removed from impairments; 9M 2026 read from the PDF.
+  XBRL took a receivables reversal); receivable allowances are excluded from the impairment add-back; 9M 2026 is read from the 2026 Q3
+  interim.
 - >-
   Biological fair-value changes sit in cost of revenue since the FY2024 restatement (note 32.2.8); EBITDA excluding one-offs removes
   them in every period, with the FY2024-FY2025 insurance receipts, the FY2025 and 9M 2025 disposal gain and the 9M 2026 payables write-back.

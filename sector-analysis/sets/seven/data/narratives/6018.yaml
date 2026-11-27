@@ -15,7 +15,7 @@ lfl_basis:
     effect: nil
     source: 6018_SPORT_CLUBS/2023_Annual_filed2025-11-13.pdf p.9; 6018_SPORT_CLUBS/2026_Q3_filed2026-11-07.pdf p.8
   capacity_changes:
-  - event: New branches under construction each year (capex SR 33.0m FY2022 to SR 118m FY2025; SR 133m in 9M 2026)
+  - event: New branches under construction each year (capex SAR 33.0m FY2022 to SAR 118m FY2025; SAR 133m in 9M 2026)
     date: FY2022-9M2026
     effect: not determinable
     source: 6018_SPORT_CLUBS/2025_Annual_filed2026-03-15.pdf p.9, p.23
@@ -136,12 +136,12 @@ developments:
   source: 6018_SPORT_CLUBS/2026_Q3_filed2026-11-07.pdf p.8
 - date: '2024-08-22'
   category: financing
-  text: Shareholders approved offering 30% of post-issue capital in an IPO and removed the statutory reserve (SR 15.9m moved to retained
+  text: Shareholders approved offering 30% of post-issue capital in an IPO and removed the statutory reserve (SAR 15.9m moved to retained
     earnings).
   source: 6018_SPORT_CLUBS/2026_Q3_filed2026-11-07.pdf p.8; 6018_SPORT_CLUBS/2024_Annual_filed2025-11-13.pdf p.44
 - date: '2025-07-22'
   category: financing
-  text: Listed on Tadawul (symbol 6018); 10.4m new shares at SR 7.5 raised SR 78m, with 23.92m existing shares sold by shareholders.
+  text: Listed on Tadawul (symbol 6018); 10.4m new shares at SAR 7.5 raised SAR 78m, with 23.92m existing shares sold by shareholders.
   source: 6018_SPORT_CLUBS/2025_Annual_filed2026-03-15.pdf p.28; 6018_SPORT_CLUBS/2026_Q3_filed2026-11-07.pdf p.8
 what_it_means:
   improved: Revenue grew 12.0% a year from FY2022 to FY2025 and 17.2% in 9M 2026, and the gross margin rose from 25.8% (FY2022) to 32.1%
@@ -161,11 +161,11 @@ data_notes:
   24.3m (standalone) to 22.7m. Revenue and finance cost unchanged.'
 - 'Restatement (FY2025 annual, note 34, cited as note 35 on the face): work-permit and residency fees expensed and right-of-use depreciation
   of buildings on leased land expensed (SOCPA, 30 Oct 2025). FY2024 cost of revenue 228.9m to 230.7m; profit 38.1m to 36.1m; FY2023
-  and FY2024 total assets and equity restated (R).'
+  and FY2024 total assets and equity are shown as restated.'
 - The 2026 Q3 interim does not restate its 9M 2025 comparatives (opening 2025 equity 168.8m, pre-restatement), so 9M 2025 is on the
   old basis while FY2024 is restated.
-- 'Stage A overrides: lease liabilities include the current portion (the XBRL took only the non-current portion for FY2024, FY2025 and
-  9M 2025); 9M 2026 lease liabilities added.'
-- Finance costs include bank charges (SR 9.9m in FY2025, SR 6.4m in FY2024). Interest on bank deposits (SR 0.7m in FY2025) sits in other
+- 'Corrected from the PDF balance sheets: lease liabilities include the current portion (the XBRL took only the non-current portion for FY2024, FY2025 and
+  9M 2025), and 9M 2026 lease liabilities are taken from the interim.'
+- Finance costs include bank charges (SAR 9.9m in FY2025, SAR 6.4m in FY2024). Interest on bank deposits (SAR 0.7m in FY2025) sits in other
   income, inside our operating income.
 - CFO is after zakat and end-of-service payments; lease and finance costs paid are in financing.

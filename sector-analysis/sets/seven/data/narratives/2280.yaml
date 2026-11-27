@@ -3,7 +3,7 @@ headline: Revenue grew every year, from SAR 18,722m (FY2022) to SAR 22,065m (FY2
   revenue rose 9.7% but attributable profit was flat (-0.3%) as margins narrowed and capex of SAR 4,385m in FY2025 cut free cash flow.
 lfl_basis:
   definition_used: 'Standard bridge on IFRS revenue. Almarai made one material acquisition in the window: Pure Beverages Industry Co. (bottled water) from 31 July 2025, whose revenue
-    is not disclosed, so organic growth for FY2025/FY2024 and 9M2026/9M2025 is not determinable. FY2023 and FY2024 had no business combinations. About 13% of revenue is earned outside
+    is not disclosed, so organic growth for FY2025 vs FY2024 and 9M 2026 vs 9M 2025 is not determinable. FY2023 and FY2024 had no business combinations. About 13% of revenue is earned outside
     the GCC (Egypt and Jordan through IDJ, exports, arable farms) without constant-currency figures, so the FX effect is not determinable in any year; no entity applies hyperinflation
     accounting. No volumes, prices or like-for-like sales are disclosed, so new-capacity and like-for-like growth are not determinable.'
   perimeter_changes:
@@ -25,7 +25,7 @@ lfl_basis:
     source: 2280_ALMARAI/2025_Annual_filed2026-01-20.pdf p.39, p.48
   - event: Pure Beverages Industry Co. acquired for SAR 1,012m (goodwill SAR 328m)
     date: '2025-07-31'
-    effect: revenue contribution not disclosed; perimeter effect not determinable for FY2025/FY2024 and 9M2026/9M2025
+    effect: revenue contribution not disclosed; perimeter effect not determinable for FY2025 vs FY2024 and 9M 2026 vs 9M 2025
     source: 2280_ALMARAI/2025_Annual_filed2026-01-20.pdf p.15, p.39-40
   capacity_changes:
   - event: Capex programme (capex SAR 2,530m FY2023 to SAR 4,385m FY2025); capital commitments SAR 4.4bn at end-2024 and SAR 2.6bn at end-2025, mainly poultry expansion
@@ -109,24 +109,19 @@ profit_and_margin:
     - 2280-9M2026-CFO
     - 2280-9M2025-NI_ATTR
   one_offs:
-  - item: Impairment of the 49% associate Maria Fondomonte (Romania)
-    period: FY2022
-    amount_sar_m: -82.9
-    line: Other Expenses, net
-    source: 2280_ALMARAI/2023_Annual_filed2024-01-21.pdf p.52
-    tax_nci: 'Impairment: outside our EBITDA already; tax/zakat effect not disclosed: not determinable, profit kept as reported'
   - item: Gain on disposal of the associate stake (net of recovery costs)
     period: 9M2025
     amount_sar_m: 43.6
     line: Other Expenses, net
     source: 2280_ALMARAI/2025_Q3_filed2025-10-05.pdf p.13
-    tax_nci: 'Zakat effect not disclosed; minority share nil in substance but not stated: not determinable, profit kept as reported'
+    tax_nci: 'Disposal of an associate, outside normal operations (2.2% of 9M 2025 attributable profit); zakat effect not disclosed; minority share nil in substance but not stated: not determinable,
+      profit kept as reported'
   - item: Gain on disposal of investment in associate
     period: FY2025
     amount_sar_m: 75.4
     line: Other Expenses, net
     source: 2280_ALMARAI/2025_Annual_filed2026-01-20.pdf p.48
-    tax_nci: 'Zakat effect not disclosed; minority share not stated: not determinable, profit kept as reported'
+    tax_nci: 'Disposal of an associate, outside normal operations (3.1% of attributable profit); zakat effect not disclosed; minority share not stated: not determinable, profit kept as reported'
 developments:
 - date: '2022-01-12'
   category: M&A
@@ -166,17 +161,22 @@ what_it_means:
     the GCC cannot be measured.
 confidence_overall: Medium
 data_notes:
-- CASH corrected in stage A in every period to the balance-sheet 'Cash and Cash Equivalents' (the XBRL value was a sub-line of the cash note); e.g. FY2025 SAR 523.0m (was 464.8m).
-- DEBT includes bank overdrafts (IDJ Egypt and Jordan facilities; FY2025 SAR 16.9m, FY2022 SAR 87.1m) in addition to loans and borrowings (stage A override).
+- Cash is corrected from the PDF balance sheets in every period to 'Cash and Cash Equivalents' (the XBRL value was a sub-line of the cash note); e.g. FY2025 SAR 523.0m (XBRL SAR 464.8m; FY2025 annual p.9).
+- DEBT includes bank overdrafts (IDJ Egypt and Jordan facilities; FY2025 SAR 16.9m, FY2022 SAR 87.1m) in addition to loans and borrowings, read from the PDF balance sheets (the XBRL omitted the overdraft line).
 - D&A for EBITDA includes depreciation of right-of-use assets and of biological assets (dairy herd and poultry flock carried at cost less depreciation; FY2025 SAR 635.3m). FY2022 D&A
   was corrected to include biological-asset depreciation (SAR 480.5m) omitted by XBRL.
-- 'IMPAIR_CF: the XBRL value was the fair-value change of crops (a remeasurement, not an impairment); set to nil in FY2023-9M2026, and FY2022 holds the SAR 82.9m associate impairment
+- 'IMPAIR_CF: the XBRL value was the fair-value change of crops (a remeasurement, not an impairment); set to nil from FY2023 to 9M 2026, and FY2022 holds the SAR 82.9m associate impairment
   that sits inside the Other Expenses, net add-back.'
 - CAPEX = additions to PP&E and intangibles; it excludes additions to biological assets (FY2025 SAR 1,042m, FY2024 SAR 1,073m), so FCF on this basis is higher than cash after herd and
   flock investment. FY2024 capex includes the SAR 187.9m warehouse asset acquisition.
 - The income statement shows only 'Finance Cost, net'. FIN_COST and FIN_INC are split from note 31 for full years; the interims give no split, so the 9M figures are XBRL values that
   agree with the net line. Our operating income equals the printed Operating Profit.
 - FY2022 operating cash flow uses the FY2023 annual comparative (SAR 3,829.6m, R) vs SAR 3,829.3m first reported (dividend from equity investment moved into operating activities).
-- 9M2025 segment revenue was re-presented in the 2026 Q3 interim for the new Protein segment (seafood and value-added meat moved out of Other Activities).
+- 9M 2025 segment revenue was re-presented in the 2026 Q3 interim for the new Protein segment (seafood and value-added meat moved out of Other Activities).
 - Primary statements are scanned images in the FY2023 and FY2025 annuals and the 2025 Q3 and 2026 Q3 interims; values were read visually and checked by OCR.
-- EBITDA excluding one-offs removes the associate disposal gains (9M2025 SAR 43.6m, FY2025 SAR 75.4m) once the dataset is rebuilt with this one-offs file.
+- EBITDA excluding one-offs removes the associate disposal gains (9M 2025 SAR 43.6m, FY2025 SAR 75.4m). The FY2022 impairment of the same associate (SAR 82.9m, FY2023 annual p.52) is not a
+  one-off under the one-off rule; it is an impairment, already outside EBITDA.
+- 'Net debt deducts short-term bank deposits held outside cash: a SAR 1,926m time deposit (Murabaha) at end-2023 (FY2024 annual note 15, p.43), so end-2023 net debt is SAR 9,887m and 1.9x
+  EBITDA; there were no such deposits at the other period ends.'
+- 'Cross-holding: Savola equity-accounted 34.52% of Almarai until the in-kind distribution of 12 Dec 2024, so Savola''s share of Almarai''s profit, SAR 607.5m (FY2022), SAR 707.4m (FY2023) and about
+  SAR 771m (FY2024, to 12 Dec 2024), is counted twice in the Supporting group totals; Savola has held no associate stake since.'

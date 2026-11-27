@@ -73,7 +73,7 @@ what_it_means:
   uncertain: "Alamar reports no same-store sales and does not disclose the revenue of the 29 acquired Makkah and Taif branches, so acquired, new-restaurant and like-for-like growth cannot be separated."
 confidence_overall: "Medium"
 data_notes:
-  - "The XBRL files in the archive are mislabelled by year and contain nothing after FY2024; all FY2025, 9M 2025 and 9M 2026 figures were read from the PDFs (override file 6014.csv). The 30 September 2025 balance sheet comes from the 2025 Q3 interim."
+  - "The XBRL files in the archive are mislabelled by year and contain nothing after FY2024; all FY2025, 9M 2025 and 9M 2026 figures were read from the PDF statements. The 30 September 2025 balance sheet comes from the 2025 Q3 interim."
   - "Cash flow re-presentations: FY2023 operating cash flow is the FY2024 AFS comparative SAR 186m (SAR 190m first reported; finance income received and loan interest moved to financing) and FY2024 is the FY2025 AFS comparative SAR 96.7m (SAR 97.0m first reported; loan interest kept in operating). Interim cash flows include lease interest within lease payments in financing."
   - "FY2023 capex is the FY2024 AFS comparative SAR 51.5m (SAR 55.0m first reported): the FY2024 AFS netted a SAR 3.5m capital-advance refund into the PP&E line. Capital advances paid are excluded from capex in other periods (FY2025 SAR 3.5m, 9M 2026 SAR 6.7m)."
   - "Impairment add-back covers property and equipment only: FY2022 corrected to nil (the XBRL value was a receivable reversal), FY2023 corrected to SAR 1.0m, FY2025 a reversal of SAR 0.9m. Receivable ECL and inventory write-downs are excluded."

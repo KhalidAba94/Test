@@ -124,24 +124,42 @@ profit_and_margin:
     line: Other income, net (inside operating profit)
     source: 6001_HB/2023_Annual_filed2024-03-18.pdf p.38
     tax_nci: >-
-      Tax effect not disclosed (Egyptian income tax and Saudi zakat apply); no non-controlling interests: after-tax effect not determinable,
-      profit kept as reported
+      A disposal gain on assets held for sale, outside normal operations (FY2022 attributable profit was only SAR 2.9m); tax effect not disclosed (Egyptian income tax and Saudi zakat apply); no non-controlling interests: after-tax effect not
+      determinable, profit kept as reported
   - item: Loss on foreign currency differences
     period: FY2022
     amount_sar_m: -5.2
     line: Below profit from operations, above PBT (inside our operating income)
     source: 6001_HB/2023_Annual_filed2024-03-18.pdf p.7
     tax_nci: >-
-      Tax effect not disclosed (Egyptian income tax and Saudi zakat apply); no non-controlling interests: after-tax effect not determinable,
-      profit kept as reported
+      FX differences are shown below HB's profit from operations and are listed in every period; tax effect not disclosed (Egyptian income tax and Saudi zakat apply); no non-controlling interests: after-tax effect not
+      determinable, profit kept as reported
+  - item: Gain on derivative instruments at fair value through profit or loss
+    period: FY2022
+    amount_sar_m: 0.3
+    line: Below profit from operations, above PBT
+    source: 6001_HB/2023_Annual_filed2024-03-18.pdf p.7
+    tax_nci: A derivative fair-value result, outside normal operations (11% of the small FY2022 profit); profit kept as reported
+  - item: Gain on foreign currency differences
+    period: FY2023
+    amount_sar_m: 0.3
+    line: Below profit from operations, above PBT
+    source: 6001_HB/2024_Annual_filed2025-03-04.pdf p.7
+    tax_nci: Under 5% but FX differences are listed in every period; profit kept as reported
+  - item: 'Derivative instruments: loss on sale (SAR 0.32m) less fair-value gain (SAR 0.04m)'
+    period: FY2023
+    amount_sar_m: -0.3
+    line: Below profit from operations, above PBT
+    source: 6001_HB/2024_Annual_filed2025-03-04.pdf p.7
+    tax_nci: Under 5% but derivative fair-value results are outside normal operations; profit kept as reported
   - item: Loss on foreign currency differences after the EGP float (restated from SAR 26.2m)
     period: FY2024
     amount_sar_m: -27.6
     line: Below profit from operations, above PBT
     source: 6001_HB/2025_Annual_filed2026-02-11.pdf p.7, p.55
     tax_nci: >-
-      Tax effect not disclosed (Egyptian income tax and Saudi zakat apply); no non-controlling interests: after-tax effect not determinable,
-      profit kept as reported
+      62% of attributable profit; FX differences are listed in every period; tax effect not disclosed (Egyptian income tax and Saudi zakat apply); no non-controlling interests: after-tax effect not
+      determinable, profit kept as reported
   - item: >-
       Provisions no longer required (SAR 13.5m cash-flow add-back; SAR 11.0m after the ordinary inventory and receivables releases;
       P&L line not named)
@@ -150,33 +168,36 @@ profit_and_margin:
     line: not named (we assume other income, net)
     source: 6001_HB/2024_Annual_filed2025-03-04.pdf p.10, p.48, p.51, p.55
     tax_nci: >-
-      Tax effect not disclosed (Egyptian income tax and Saudi zakat apply); no non-controlling interests: after-tax effect not determinable,
-      profit kept as reported
+      25% of attributable profit, a release of provisions no longer required beyond the ordinary inventory and receivable releases; tax effect not disclosed (Egyptian income tax and Saudi zakat apply); no non-controlling interests: after-tax effect not
+      determinable, profit kept as reported
   - item: Gain on disposal of property, plant and equipment
     period: FY2025
     amount_sar_m: 8.8
     line: Other income, net
     source: 6001_HB/2025_Annual_filed2026-02-11.pdf p.35
     tax_nci: >-
-      Tax effect not disclosed (Egyptian income tax and Saudi zakat apply); no non-controlling interests: after-tax effect not determinable,
-      profit kept as reported
-  - item: 'Foreign currency differences, net (9M 2025: SAR -1.0m)'
+      21% of attributable profit, a property disposal (other years' disposal gains were small); tax effect not disclosed (Egyptian income tax and Saudi zakat apply); no non-controlling interests: after-tax effect not
+      determinable, profit kept as reported
+  - item: Loss on foreign currency differences
+    period: FY2025
+    amount_sar_m: -0.8
+    line: Below profit from operations, above PBT
+    source: 6001_HB/2025_Annual_filed2026-02-11.pdf p.7
+    tax_nci: Under 5% but FX differences are listed in every period; profit kept as reported
+  - item: Loss on foreign currency differences
+    period: 9M2025
+    amount_sar_m: -1.0
+    line: Below profit from operations, above PBT
+    source: 6001_HB/2026_Q3_filed2026-11-05.pdf p.4
+    tax_nci: 3.9% of attributable profit; FX differences are listed in every period; profit kept as reported
+  - item: Foreign currency differences, net
     period: 9M2026
     amount_sar_m: -3.1
     line: Below profit from operations, above PBT
     source: 6001_HB/2026_Q3_filed2026-11-05.pdf p.4
     tax_nci: >-
-      Tax effect not disclosed (Egyptian income tax and Saudi zakat apply); no non-controlling interests: after-tax effect not determinable,
-      profit kept as reported
-  - item: >-
-      Impairment of property, plant and equipment (already outside EBITDA): FY2023 SAR 3.7m, FY2025 SAR 2.3m, 9M 2026 SAR 2.6m
-    period: FY2023-9M2026
-    amount_sar_m: -2.6
-    line: Asset impairment
-    source: >-
-      6001_HB/2024_Annual_filed2025-03-04.pdf p.7; 6001_HB/2025_Annual_filed2026-02-11.pdf p.7; 6001_HB/2026_Q3_filed2026-11-05.pdf
-      p.4
-    tax_nci: Excluded from EBITDA already; profit kept as reported
+      9% of attributable profit; FX differences are listed in every period; tax effect not disclosed (Egyptian income tax and Saudi zakat apply); no non-controlling interests: after-tax effect not
+      determinable, profit kept as reported
 developments:
 - date: '2023'
   category: event
@@ -225,9 +246,11 @@ what_it_means:
 confidence_overall: Medium
 data_notes:
 - >-
-  Stage A corrections from the PDF statements (image pages read by OCR, checked against printed subtotals): borrowings now include all
-  Islamic murabaha contracts (the XBRL kept only term loans or the current portion, e.g. FY2025 SAR 16.5m vs SAR 153m); lease liabilities
-  added for FY2024-9M2026; D&A includes depreciation of right-of-use assets; PP&E impairments moved to IMPAIR_CF.
+  Corrected from the PDF statements (image pages read by OCR, checked against printed subtotals; e.g. FY2025 annual p.8 and p.10): borrowings
+  include all Islamic murabaha contracts (the XBRL kept only term loans or the current portion, e.g. FY2025 SAR 16.5m vs SAR 153m); lease
+  liabilities are read for FY2024 to 9M 2026; D&A includes depreciation of right-of-use assets; PP&E impairments are in the impairment add-back.
+- >-
+  PP&E impairments (FY2023 SAR 3.7m, FY2025 SAR 2.3m, 9M 2026 SAR 2.6m) are outside EBITDA and are not one-offs under the one-off rule.
 - >-
   FY2022 borrowings exclude letters-of-credit liabilities of SAR 18.3m, which the company shows apart from interest-bearing loans (FY2022
   annual note 30).

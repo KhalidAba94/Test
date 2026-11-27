@@ -110,7 +110,7 @@ profit_and_margin:
   - period: FY2022-9M2026
     driver: 'Cash generation covered capex and dividends: operating cash flow (after interest) rose from SAR 232m to SAR 342m and free cash flow
       was SAR 257m in FY2025 and SAR 228m in 9M 2026 (we calculate). Borrowings fell from SAR 1,171m (end-2022) to SAR 981m, and net debt to EBITDA
-      from 4.25x to 2.52x (annualised).'
+      from 4.2x to 2.5x (annualised).'
     source: cash-flow statements and balance sheets (FY2023-FY2025 annuals; 2026 Q3 p.6, p.9)
     refs:
     - 2283-FY2022-CFO
@@ -125,26 +125,26 @@ profit_and_margin:
     amount_sar_m: -4.28
     line: General and administrative expenses
     source: 2283_FIRST_MILLS/2023_Annual_filed2024-03-14.pdf p.45
-    tax_nci: 'Under 5% of attributable profit; zakat effect not disclosed, no minority interests: after-tax effect not determinable, profit kept
-      as reported'
+    tax_nci: 'Under 5% of attributable profit but listed because IPO costs are outside normal operations; zakat effect not disclosed, no minority
+      interests: after-tax effect not determinable, profit kept as reported'
   - item: Initial public offering costs
     period: FY2023
     amount_sar_m: -2.47
     line: General and administrative expenses
     source: 2283_FIRST_MILLS/2023_Annual_filed2024-03-14.pdf p.45
-    tax_nci: 'Under 5% of attributable profit; zakat effect not disclosed, no minority interests: profit kept as reported'
+    tax_nci: 'Under 5% of attributable profit but listed because IPO costs are outside normal operations; zakat effect not disclosed, no minority interests: profit kept as reported'
   - item: Provision for a GFSA fine (inspection of 19 Oct 2024; still under review at end-2025)
     period: FY2024
     amount_sar_m: -2.0
     line: Cost of revenue (other expenses)
     source: 2283_FIRST_MILLS/2024_Annual_filed2025-03-19.pdf p.49
-    tax_nci: 'Under 5% of attributable profit; zakat effect not disclosed, no minority interests: profit kept as reported'
+    tax_nci: 'Under 5% of attributable profit, listed as a regulatory penalty outside normal operations; zakat effect not disclosed, no minority interests: profit kept as reported'
   - item: Acquisition-related costs for Al-Manar Feed (SAR 2.96m) and Al-Kenan Arabia (SAR 1.88m)
     period: FY2025
     amount_sar_m: -4.84
     line: General and administrative expenses
     source: 2283_FIRST_MILLS/2025_Annual_filed2026-03-17.pdf p.30-31
-    tax_nci: 'Under 5% of attributable profit; zakat effect not disclosed and costs borne by the parent: not determinable, profit kept as reported'
+    tax_nci: 'Under 5% of attributable profit but listed because acquisition costs are outside normal operations; zakat effect not disclosed and costs borne by the parent: not determinable, profit kept as reported'
 developments:
 - date: '2022-09-15'
   category: M&A
@@ -184,7 +184,7 @@ developments:
   source: 2283_FIRST_MILLS/2026_Q3_filed2026-11-02.pdf p.24; 2283_FIRST_MILLS/2025_Annual_filed2026-03-17.pdf p.10
 what_it_means:
   improved: Revenue grew 7.9% a year from FY2022 to FY2025 and attributable profit 8.5% a year, with the EBITDA margin between 33.6% and 35.7%;
-    borrowings fell every year and net debt to EBITDA eased from 4.25x to 2.91x.
+    borrowings fell every year and net debt to EBITDA eased from 4.2x to 2.9x.
   weakened: 'In 9M 2026 profit grew more slowly than revenue: the gross margin rose but selling costs jumped and interest income fell, so the
     net margin slipped to 23.6% from 25.1%, and part of the profit now belongs to minority shareholders.'
   why: Growth came from feed and flour sales in Jeddah and Qassim, helped in 2026 by the two feed businesses bought in late 2025; lower finance
@@ -193,21 +193,21 @@ what_it_means:
     determinable; the largest customer's share fell from 19.9% to 5.7% of nine-month revenue.
 confidence_overall: Medium
 data_notes:
-- 'Units: the XBRL files of the FY2025 annual and the 2026 Q3 interim carry SAR thousands tagged as riyals, so every FY2024, FY2025, 9M2025 and
-  9M2026 figure was read from the PDFs (overrides); the PDFs are in riyals.'
+- 'Units: the XBRL files of the FY2025 annual and the 2026 Q3 interim carry SAR thousands tagged as riyals, so every FY2024, FY2025, 9M 2025 and
+  9M 2026 figure was read from the PDFs, which are in riyals.'
 - Balance-sheet figures (total assets, equity, cash, borrowings, lease liabilities) are not in the XBRL extract and were read from the PDFs for
-  every period, FY2021 to 9M2026.
+  every period, FY2021 to 9M 2026.
 - 'FY2023 was re-presented in the FY2024 annual: finance costs and finance income both rose by SAR 1.05m (cost-of-hedging amortisation shown gross,
   notes 30-31) and operating cash flow fell from SAR 317.9m to SAR 307.5m (related-party movement moved to financing). Figures used are the re-presented
   ones (R).'
 - FY2021 lease liabilities were re-split between current and non-current in the FY2022 annual (note 41, auditor emphasis of matter); the total
   of SAR 358.7m is unchanged.
 - 'Borrowings (DEBT) exclude long-term payables to Buhler AG for machinery bought on instalments, which carry a finance cost: SAR 40.5m (FY2023),
-  33.1m (FY2024), 58.6m (FY2025), 29.4m (9M2025) and 50.6m (9M2026). Net debt would be higher by these amounts.'
+  SAR 33.1m (FY2024), SAR 58.6m (FY2025), SAR 29.4m (9M 2025) and SAR 50.6m (9M 2026). Net debt would be higher by these amounts.'
 - Operating cash flow is after interest paid and interest received (both in operating activities); Arabian Mills and Fourth Milling show interest
   paid in financing, so their CFO is not on the same basis.
 - 'The impairment add-back is nil for every period: the XBRL row is the expected credit loss on receivables, which is excluded from EBITDA add-backs
-  (FY2024, FY2025 corrected to 0).'
+  (FY2024 and FY2025 corrected to nil from the PDF cash-flow statements).'
 - The September 2022 merger with the former parent added goodwill and SAR 1.17bn of loans; FY2021 (no borrowings) is not comparable with later
   years.
 - Primary statements in the FY2024 annual and the 2025 Q3 interim are scanned images (read visually and by OCR); the FY2023 annual is an OCR text
