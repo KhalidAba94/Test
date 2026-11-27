@@ -96,7 +96,7 @@ profit_and_margin:
     amount_sar_m: 59.3
     line: Fair value gain on swap derivatives (below operating profit, inside our operating income)
     source: 4163_ALDAWAA/2023_Annual_filed2024-03-21.pdf p.8
-    tax_nci: 'Zakat effect not disclosed; no non-controlling interests: after-tax effect not determinable, profit kept as reported'
+    tax_nci: '19.4% of attributable profit, a fair-value result outside retail operations; zakat effect not disclosed; no non-controlling interests: after-tax effect not determinable, profit kept as reported'
 developments:
 - date: '2022-03-14'
   category: event
@@ -132,7 +132,7 @@ data_notes:
 - 'FY2024 P&L and balance sheet are restated (FY2025 annual note 34, p.50-56): profit SAR 370.1m -> 351.4m; equity SAR 1,456.5m -> 1,329.8m. FY2023 balance-sheet figures (TA SAR 4,733m, equity SAR 1,210m) are the restated 1 January 2024 column of the FY2025 annual, while FY2023 profit is not restated, so FY2023-FY2024 ROE mixes restated equity with unrestated FY2023 profit.'
 - 9M 2025 P&L comparatives in the 2026 Q3 interim were not restated (impact judged immaterial, note 2.1). 9M 2025 equity (SAR 1,425m) is restated via the opening balance in the statement of changes in equity; 9M 2025 total assets (SAR 5,229m) come from the 2026 Q3 XBRL only (the 2025 Q3 PDF printed SAR 5,175m before restatement).
 - FY2024 operating cash flow (SAR 692m) is the FY2025 annual comparative, after SAR 8.3m was moved to investing activities; the FY2024 annual printed SAR 683m.
-- Capex includes additions to intangible assets and 9M D&A includes right-of-use depreciation (both corrected in stage A).
+- Capex includes additions to intangible assets and 9M D&A includes right-of-use depreciation (both corrected from the PDF cash-flow statements, p.11 of each annual and p.8 of the 2026 Q3 interim).
 - FY2025 share of associates (-SAR 3.9m) excludes a SAR 0.2m write-off of an investment in unconsolidated subsidiaries, which stays in operating income.
 - Debt at 30 Sep 2026 includes a SAR 25.5m bank overdraft; the cash-flow statement shows cash net of the overdraft (SAR 6.2m) while the balance sheet shows SAR 31.7m.
 - Revenue is shown after a voluntary social-services contribution (SAR 44.3m FY2025, SAR 8.9m FY2024; note 23).

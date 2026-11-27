@@ -28,7 +28,7 @@ price_volume:
   refs:
   - 4008-FY2025-REV
   - 4008-FY2024-REV
-- period: 9M2026 vs 9M2025
+- period: 9M 2026 vs 9M 2025
   text: 'Revenue fell SAR 87.7m (-11.3%) with 32 stores in both periods: sales and services fell 10.0% (SAR 744m to SAR 670m) and external logistics revenue fell 41.6% (SAR 32.0m to SAR 18.7m). The interim gives no reason.'
   basis: disclosed (segment revenue, store counts); split not determinable
   confidence: High for the amounts
@@ -90,7 +90,7 @@ profit_and_margin:
     amount_sar_m: 42.2
     line: Gain on sale of investment property, net (below operating income, inside our operating income)
     source: 4008_SACO/2025_Annual_filed2026-03-10.pdf p.9, p.32
-    tax_nci: 'Zakat effect not disclosed (total zakat SAR 0.4m); no non-controlling interests: after-tax effect not determinable, profit kept as reported'
+    tax_nci: 'Property disposal, 92.6% of attributable profit; zakat effect not disclosed (total zakat SAR 0.4m); no non-controlling interests: after-tax effect not determinable, profit kept as reported'
   - item: Same gain, recognised in Q3 2025
     period: 9M2025
     amount_sar_m: 42.2
@@ -121,10 +121,10 @@ what_it_means:
   uncertain: The filings do not explain the 9M 2026 sales fall or give like-for-like sales, so trading momentum per store is not determinable.
 confidence_overall: Medium
 data_notes:
-- Primary statements are scanned images; stage A read them by OCR and checked values to printed subtotals.
+- Primary statements are scanned images; they were read by OCR and the values checked to printed subtotals.
 - Gross profit in FY2022 and FY2023 is after a separate "impairment loss on non-financial assets" line shown above gross profit (SAR 29.7m and SAR 8.2m), so COGS + GP does not equal revenue in those years; the impairment is in IMPAIR_CF and added back in EBITDA.
 - FY2023 operating cash flow (SAR 115m) is the FY2024 annual comparative, after lease interest paid (SAR 19.6m) was moved into operating activities; the FY2023 annual printed SAR 134m. FY2022 CFO (SAR 206m) is on the earlier basis, before lease interest paid.
-- D&A includes right-of-use depreciation and capex includes intangible assets (both corrected in stage A); COGS and GP for FY2023-FY2025 were added from the PDFs.
+- D&A includes right-of-use depreciation and capex includes intangible assets (both corrected from the PDF cash-flow statements); COGS and GP for FY2023-FY2025 were read from the PDF income statements.
 - 'SACO has had no borrowings since 2025: DEBT is recorded as nil and net debt is lease liabilities less cash.'
 - The 31 Dec 2025 total assets (SAR 1,075m) are the 9M 2026 interim comparative, SAR 1.0m lower than the FY2025 annual after a netting (0.09%).
 - There is no finance income line; operating income includes "other income" (SAR 20.3m in FY2025, not analysed in the notes).

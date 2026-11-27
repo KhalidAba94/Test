@@ -116,7 +116,7 @@ profit_and_margin:
     amount_sar_m: 12.5
     line: Unrealized gain on financial assets measured at FVTPL (above profit before zakat)
     source: 4164_NAHDI/2026_Q3_filed2026-10-29.pdf p.6, p.21
-    tax_nci: 'Zakat effect not disclosed; no non-controlling interests; 2.0% of attributable profit: after-tax effect not determinable, profit kept as reported'
+    tax_nci: 'Under 5% of attributable profit (2.0%), listed because a fair-value result on a financial investment is outside retail operations; zakat effect not disclosed; no non-controlling interests: after-tax effect not determinable, profit kept as reported'
 developments:
 - date: '2024'
   category: event
@@ -149,12 +149,12 @@ what_it_means:
   uncertain: The filings give no pharmacy count, openings or like-for-like sales, so growth from new pharmacies and clinics cannot be separated; the fall in zakat to SAR 13.8m-15.2m in FY2024-FY2025 is not explained.
 confidence_overall: Medium
 data_notes:
-- Primary statements in every annual and both Q3 interims are scanned images (the FY2025 annual is fully scanned); stage A read them by OCR and checked each value to printed subtotals.
+- Primary statements in every annual and both Q3 interims are scanned images (the FY2025 annual is fully scanned); they were read by OCR and each value was checked to printed subtotals.
 - 'Gross profit FY2024 (SAR 3,512m) is the FY2025 annual comparative: SAR 20.5m of D&A of medical services was moved from selling expenses into cost of revenue (note 33, p.52-53); the FY2024 annual printed SAR 3,533m. FY2023 and earlier are not re-presented, so the FY2024 gross-margin fall is overstated by about 0.2 pp.'
 - FY2023 operating cash flow (SAR 1,316m) is the FY2024 annual comparative, after interest received (SAR 52.7m) was moved to investing activities; the FY2023 annual printed SAR 1,369m. FY2022 CFO (SAR 1,668m) is on the earlier basis, with interest received inside operating cash flow.
 - FY2022 finance costs and finance income were both grossed up by SAR 1.8m in the FY2023 annual (generic note 32); net finance cost is unchanged.
 - 'Nahdi has no borrowings: DEBT is recorded as nil and net debt is lease liabilities less cash.'
 - IMPAIR_CF holds reversals of impairment on investment properties (FY2022 -SAR 17.2m incl. a PP&E reversal, FY2023 -SAR 0.5m, FY2024 -SAR 1.6m); they reduce EBITDA.
 - Finance costs include bank charges (SAR 32.6m FY2023, SAR 42.1m FY2024, SAR 53.8m FY2025; FY2024 annual note 23 p.45, FY2025 annual note 24 p.46) besides lease interest. Because our operating income adds back all finance costs, it excludes these bank charges, which other retailers report in operating expenses (e.g. point-of-sale commissions); operating income and EBITDA are overstated by that amount relative to such peers. The 9M interims do not split finance costs.
-- COGS and GP were added from the PDFs in stage A (missing from the XBRL extraction); D&A includes right-of-use depreciation.
-- The 9M 2026 XBRL tagged the SAR 12.5m FVTPL gain as share of results of associates; stage A set SHARE_JV to nil (Nahdi has no associates), so the gain sits in operating income and is listed as a one-off.
+- Cost of revenue and gross profit were read from the PDF income statements (p.8 of each annual, p.6 of the 2026 Q3 interim) because the XBRL did not carry them; D&A includes right-of-use depreciation.
+- The 9M 2026 XBRL tagged the SAR 12.5m FVTPL gain as share of results of associates; corrected from the PDF (2026 Q3 interim p.6), the share of associates is nil (Nahdi has no associates), so the gain sits in operating income and is listed as a one-off.

@@ -1,6 +1,6 @@
 ticker: '4161'
 headline: Revenue grew from SAR 4,897m (FY2022) to SAR 6,348m (FY2025) and SAR 5,171m in 9M 2026 (+10.5%), increasingly through acquisitions (Zahrat Al Rawdah pharmacies alone added SAR 420m in 2025), while
-  attributable profit has stayed near SAR 270m since FY2023 and debt-funded deals took net debt including leases to SAR 3,752m.
+  attributable profit has stayed near SAR 270m since FY2023 and debt-funded deals took net debt including leases to SAR 3,749m.
 lfl_basis:
   definition_used: Standard bridge on IFRS revenue (sale of goods and services). Perimeter = post-acquisition revenue of businesses bought in the current period, as disclosed in the IFRS 3 notes, plus the
     months not owned in the prior period for earlier acquisitions. The current-period contributions are disclosed for every acquisition since 2024; the extra months of earlier deals (IATC and Ykone in 2023;
@@ -90,7 +90,7 @@ profit_and_margin:
     - 4161-9M2026-FIN_COST
   - period: FY2024-9M2026
     driver: Acquisitions used SAR 208m of cash in FY2024, SAR 474m in FY2025 and SAR 955m in 9M 2026. Bank borrowings went from nil at end-2024 to SAR 1,264m at 30 Sep 2026, and net debt including SAR 2,869m
-      of lease liabilities reached SAR 3,752m, 4.0 times annualised EBITDA (we calculate).
+      of lease liabilities reached SAR 3,749m, 4.0 times annualised EBITDA (we calculate).
     source: 4161_BINDAWOOD/2025_Annual_filed2026-03-18.pdf p.13; 4161_BINDAWOOD/2026_Q3_filed2026-11-16.pdf p.4, p.9
     refs:
     - 4161-9M2026-DEBT
@@ -132,7 +132,7 @@ what_it_means:
   improved: Revenue grew 9.0% a year from FY2022 to FY2025 and 10.5% in 9M 2026, and the gross margin widened from 29.3% to 34.1% (FY2022 to FY2025), helped by higher-margin acquired businesses such as
     pharmacies.
   weakened: Attributable profit has not grown since FY2023 (SAR 277m to SAR 270m in FY2025, -3.4% in 9M 2026) as operating, finance and acquisition-related costs rose, and net debt including leases rose
-    from SAR 1,864m (end-2024) to SAR 3,752m.
+    from SAR 1,852m (end-2024) to SAR 3,749m.
   why: 'Most growth since 2024 is bought: disclosed acquired revenue was SAR 56.8m in FY2024, SAR 448.5m in FY2025 and SAR 119.6m in 9M 2026, while growth excluding those deals was 0.3% in FY2024 and 3.9%
     in FY2025 (we calculate).'
   uncertain: The filings do not give store numbers, same-store sales or the revenue of earlier acquisitions for the months not owned in the prior period, so true like-for-like growth of the original supermarkets
@@ -142,8 +142,10 @@ data_notes:
 - The 31 Dec 2022 balance sheet uses the FY2023 annual comparative, revised for the completed IATC and Ykone purchase price allocation (notes 8.2 and 31; total assets SAR 4,802.8m to SAR 4,841.5m).
 - FY2023 operating cash flow uses the FY2024 annual comparative (SAR 761.0m), re-presented from SAR 776.1m by moving term-deposit interest to investing; FY2023 finance income (SAR 15.1m) was split from
   other income in the same re-presentation. In FY2022 finance income on deposits (SAR 7.9m) is inside other income.
-- 'Stage A corrections: FY2022 and FY2023 debt set to nil (our data had current lease liabilities as debt), FY2022 lease liabilities now include the current portion (SAR 2,298m), FY2022 impairment add-back
-  set to nil (it was a receivable credit loss).'
+- 'Corrected from the PDF statements: FY2022 and FY2023 debt is nil (the XBRL had tagged current lease liabilities as debt; FY2023 annual p.8, FY2024 annual p.7), FY2022 lease liabilities include the
+  current portion (SAR 2,298m; FY2023 annual p.8), and the FY2022 impairment add-back is nil (the XBRL item was a receivable credit loss; FY2023 annual p.13).'
+- 'Net debt deducts term deposits with original maturities over 90 days: SAR 11.3m at end-2023 (FY2024 annual note 13, p.49), SAR 11.8m at end-2024 (FY2025 annual note 13, p.51) and SAR 2.9m at
+  30 Sep 2026 (2026 Q3 interim note 9, p.34).'
 - Compulsory convertible debentures at fair value (SAR 10.7m-11.9m) are not included in debt; put-option liabilities over minority stakes (e.g. SAR 30.9m for No Border) are also outside debt.
 - The cash-flow statement starts from profit after zakat; our operating income and EBITDA are built from profit before zakat and tax.
 - 'There is no XBRL file for the 2026 Q3 interim: all 9M 2026 figures were read from the PDF (text layer). The FY2022 annual is a fully scanned document; other primary statements are scanned images checked

@@ -97,19 +97,19 @@ profit_and_margin:
     amount_sar_m: 13.6
     line: Other income (inside our operating income)
     source: 4003_EXTRA/2023_Annual_filed2024-02-19.pdf p.33 (note 7.1)
-    tax_nci: 'Under 5% of attributable profit; zakat effect not disclosed and the item arose before minorities existed: profit kept as reported'
+    tax_nci: 'Under 5% of attributable profit, listed as outside normal operations; zakat effect not disclosed and the item arose before minorities existed: profit kept as reported'
   - item: VAT claim refunded after a successful appeal against 2018-2019 assessments
     period: FY2022
     amount_sar_m: 10.6
     line: Other income (inside our operating income)
     source: 4003_EXTRA/2023_Annual_filed2024-02-19.pdf p.33 (note 7.2)
-    tax_nci: 'Under 5% of attributable profit; zakat effect not disclosed and the item arose before minorities existed: profit kept as reported'
+    tax_nci: 'Under 5% of attributable profit, listed as outside normal operations (a tax settlement); zakat effect not disclosed and the item arose before minorities existed: profit kept as reported'
   - item: Value added tax (VAT) refund
     period: FY2024
     amount_sar_m: 16.3
     line: Other income (inside our operating income)
     source: 4003_EXTRA/2024_Annual_filed2025-02-19.pdf p.32 (note 7)
-    tax_nci: 'Under 5% of attributable profit; zakat effect and minority share not disclosed: profit kept as reported'
+    tax_nci: 'Under 5% of attributable profit, listed as outside normal operations (a tax settlement); zakat effect and minority share not disclosed: profit kept as reported'
 developments:
 - date: '2023-04-30'
   category: strategy
@@ -144,10 +144,12 @@ data_notes:
   and EBITDA are after the consumer-finance funding cost.
 - 'Finance income (income from net investment in finance leases, and from 2025 a separate finance income) is inside other income, not a separate line: SAR 2.5m FY2022, SAR 2.9m FY2023, SAR 2.8m FY2024,
   SAR 4.1m FY2025.'
-- Net impairment losses on financial assets (credit losses on financing) are an operating cost on the face; they are not added back in EBITDA. Stage A set the impairment add-back to nil where our data had
-  used them.
-- 'Stage A corrections: depreciation of right-of-use assets added to D&A for FY2024 and FY2025; payments for intangible assets added to FY2022 and FY2023 capex; borrowings and lease liabilities added where
-  missing; 9M 2026 cash-flow items read from the PDF because the XBRL had none.'
-- Borrowings largely fund the consumer-finance receivables, so net debt (SAR 2,075m at end-2025) is not comparable with a pure retailer's.
+- Net impairment losses on financial assets (credit losses on financing) are an operating cost on the face; they are not added back in EBITDA. The impairment add-back is nil in every period (corrected
+  from the PDF cash-flow statements where the XBRL had used these losses).
+- 'Corrected from the PDF statements: depreciation of right-of-use assets added to D&A for FY2024 and FY2025 (FY2025 annual p.12); payments for intangible assets added to FY2022 and FY2023 capex (FY2023
+  annual p.12, FY2024 annual p.12); borrowings and lease liabilities read from the balance sheets where the XBRL had none (FY2023 annual p.9, FY2024 annual p.9, 2025 Q3 and 2026 Q3 interims p.6); 9M 2026
+  cash-flow items read from the 2026 Q3 interim (p.9) because the XBRL had none.'
+- 'Borrowings largely fund the consumer-finance receivables, so net debt (SAR 2,045m at end-2025) is not comparable with a pure retailer''s. Net debt deducts a SAR 30.0m Islamic short-term deposit
+  placed with a local bank at end-2025 (FY2025 annual note 16, p.47) and at 30 Sep 2025 (2025 Q3 interim note 7, p.24).'
 - The FY2024 NI_ATTR and CAPEX values first reported in our data were XBRL line picks (net profit before minorities; PP&E only), not restatements.
 - The FY2022 annual is a fully scanned document and the FY2024 annual has an unreliable embedded text layer; figures were read by OCR and checked against totals.

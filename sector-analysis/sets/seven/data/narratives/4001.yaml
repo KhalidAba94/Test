@@ -178,13 +178,18 @@ what_it_means:
 confidence_overall: Medium
 data_notes:
 - 'FY2023 is restated (FY2024 annual note 37: a related-party sublease corrected from operating to finance lease, plus reclassifications); the 31 Dec 2022 balance sheet is taken from the restated 1 January
-  2023 column of the FY2024 annual (stage A override).'
+  2023 column of the FY2024 annual (p.8), read from the PDF.'
 - 'FY2024 is re-presented in the FY2025 annual (note 36: reclassifications and the Mueen IFRS 15 change, revenue +SAR 47.2m, CFO SAR 910.3m to SAR 909.3m) and 9M 2025 in the 2026 Q3 interim (note 23, revenue
   +SAR 31.9m); FY2022 and FY2023 revenue are not on this basis, so FY2023/FY2022 and FY2024/FY2023 growth include presentation steps (see bridge).'
 - Rental income (FY2025 SAR 128.5m gross, SAR 93.6m net) is shown below gross profit and is not in revenue; it is inside our operating income.
-- 'Zakat and tax (ZAKAT_TAX) is net of prior-year zakat reversals: FY2024 is a net credit of SAR 0.6m (reversal SAR 17.7m) and FY2023 includes a SAR 0.8m reversal (stage A override).'
+- 'Zakat and tax (ZAKAT_TAX) is net of prior-year zakat reversals: FY2024 is a net credit of SAR 0.6m (reversal SAR 17.7m) and FY2023 includes a SAR 0.8m reversal (corrected from the PDF, FY2024 annual p.9).'
 - 'Capex is PP&E plus intangibles; cash spent on investment property is kept out of capex and deducted separately in free cash flow (IP_CAPEX: SAR 93.1m FY2022, SAR 224.2m FY2023, SAR 49.7m FY2024, SAR
   15.7m FY2025, SAR 6.5m 9M 2025, SAR 0.65m 9M 2026).'
 - Operating cash flow is after zakat paid and before finance costs paid on leases, which are in financing activities (9M 2026 shows lease interest separately in financing).
 - 'There is no XBRL file for the 2026 Q3 interim: all 9M 2026 figures were read from the PDF (scanned pages, OCR checked against totals). Primary statements in several filings are scanned images.'
 - FY2022 profit includes a SAR 0.2m loss from discontinued operations; our PBT is continuing operations only.
+- 'Net debt deducts short-term bank deposits held outside cash (original maturities over three months): SAR 375m at end-2022 and SAR 35.0m at end-2023 (FY2024 annual note
+  16-a, p.42) and about SAR 1m at end-2024 and end-2025. End-2022 net debt is therefore SAR 1,038m (0.7x EBITDA).'
+- 'Cross-holding: Othaim owns a third of Gulf Flour Milling Industrial Co., which holds Fourth Milling (100% until its October 2024 IPO, 70% after; Supporting group), so Othaim''s share of that joint
+  venture''s results, SAR 46.0m (FY2022), SAR 30.1m (FY2023), SAR 28.7m (FY2024, plus the SAR 161.3m IPO gain, which is not Fourth Milling profit) and SAR 46.6m (FY2025), is profit also counted in Fourth
+  Milling''s figures.'

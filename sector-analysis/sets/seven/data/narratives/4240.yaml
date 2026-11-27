@@ -36,7 +36,7 @@ price_volume:
   refs:
   - 4240-FY2025-REV
   - 4240-FY2024-REV
-- period: 9M2026 vs 9M2025
+- period: 9M 2026 vs 9M 2025
   text: Revenue rose SAR 233m (+6.3%). International revenue rose 14.2% (SAR 1,105m to SAR 1,262m), mostly apparel; KSA revenue rose 3.0%. Electronics, all in KSA, rose 31.8% (SAR 314m to SAR 413m) and food and beverages fell 10.9% (SAR 246m to SAR 219m).
   basis: disclosed (segment, geographic and product revenue); split not determinable
   confidence: High for the amounts
@@ -158,8 +158,9 @@ profit_and_margin:
     period: FY2025
     amount_sar_m: -59.3
     line: Other operating expense
-    source: 4240_AFG_RETAIL/2025_Annual_filed2026-03-16.pdf p.51
-    tax_nci: 'Zakat and tax effect not disclosed; minority (NCI) share not disclosed: after-tax effect not determinable, profit kept as reported'
+    source: 4240_AFG_RETAIL/2025_Annual_filed2026-03-16.pdf p.51, p.56 (note 26, currency exposures)
+    tax_nci: 'Listed because it is material (11.7% of the attributable loss of SAR 506m) and not a normal trading item: it arose on revaluing net foreign-currency balances, mainly in euro, which rose
+      from SAR 3.91 to SAR 4.41 in 2025 (FY2024 was a SAR 4.7m FX gain). The FY2023 FX loss of SAR 28.8m, 2.4% of that year''s loss, is under the 5% threshold and not listed. Zakat and tax effect not disclosed; minority (NCI) share not disclosed: after-tax effect not determinable, profit kept as reported'
   - item: Gain on disposal of brands
     period: 9M2025
     amount_sar_m: 21.9
@@ -171,7 +172,7 @@ profit_and_margin:
     amount_sar_m: -57.5
     line: Other operating expenses
     source: 4240_AFG_RETAIL/2026_Q3_filed2026-11-11.pdf p.25
-    tax_nci: 'Zakat and tax effect not disclosed; minority (NCI) share not disclosed: after-tax effect not determinable, profit kept as reported'
+    tax_nci: 'Listed because it is material (24.0% of the 9M 2025 attributable loss of SAR 239m) and part of the same euro-driven revaluation as in FY2025; 9M 2026 was almost nil. Zakat and tax effect not disclosed; minority (NCI) share not disclosed: after-tax effect not determinable, profit kept as reported'
 developments:
 - date: '2022'
   category: regulation
@@ -212,14 +213,14 @@ what_it_means:
   uncertain: Management and the auditor report a going-concern material uncertainty that rests on Al Futtaim's support; the 2026 lease restatement, the nine-month FY2022 and brand disposals mean comparisons are only partly like-for-like, and FX effects are not disclosed.
 confidence_overall: Low
 data_notes:
-- 'Year-end changed from 31 March to 31 December: FY2022 is the nine months April-December 2022 and growth across it is n.m.; the FY2021 opening balance sheet is 31 March 2022 (restated). The FY2023 annual gives an unaudited twelve-month calendar-2022 P&L (Annex 1, p.66: revenue SAR 5,525.3m, attributable profit SAR 39.4m) on a pre-re-presentation basis. The FY2022 ROE (26.5%) is on nine months of profit.'
+- 'Year-end changed from 31 March to 31 December: FY2022 is the nine months April-December 2022 and growth across it is n.m.; the FY2021 opening balance sheet is 31 March 2022 (restated). The FY2023 annual gives an unaudited twelve-month calendar-2022 P&L (Annex 1, p.66: revenue SAR 5,525.3m, attributable profit SAR 39.4m) on a pre-re-presentation basis. The FY2022 ROE of 35.4% is annualised on its true length (nine months of profit × 12/9, over average equity); the 2022–25 CAGRs are n.m. because the span includes this short year.'
 - 'Restatements: FY2023 annual note 33 restated 31 Dec 2022 and 1 Apr 2022 lease balances (IFRS 16 review after the FY2022 qualified opinion); the FY2024 annual re-presented FY2023 for discontinued operations (revenue SAR 5,232m to SAR 4,671m); the FY2025 annual note 36 re-presented FY2024 (one brand back to continuing operations; D&A moved into functional expense lines); the 2026 Q3 note 23 restated 31 Dec 2025, 1 Jan 2025 and 9M 2025.'
 - 'Gross-profit basis break: from the 2026 Q3 interim, D&A, store, utility and similar costs are no longer in cost of revenue (note 23, adjustment 2), so the 9M gross margins (32.4% and 31.3%, we calculate) are not comparable with the full-year margins (11.4%-12.8%), which are on the old basis.'
 - 'Balance-sheet basis break: FY2024 onward balance sheets are on the restated lease basis of note 23 (lease liabilities +SAR 852m at 1 Jan 2025); FY2023 and earlier are not, so the FY2023-FY2024 changes in total assets, lease liabilities and equity partly reflect the restatement.'
 - 9M 2025 total assets (SAR 4,828m) and lease liabilities (SAR 2,280m) are restated values from the 2026 Q3 XBRL only; the 2025 Q3 PDF printed SAR 4,215m and SAR 1,500m before restatement.
 - Debt includes the shareholder's loan from Al Futtaim (SAR 1,378m at 31 Dec 2025; SAR 1,470m at 30 Sep 2026 with capitalised interest) and bank overdrafts (FY2021-FY2023). The first XBRL value for FY2025 debt (SAR 1,413m) left out the SAR 1,574m Emirates NBD loan; the restatement itself added only SAR 6.2m of accrued interest.
 - Net profit includes discontinued operations (FY2023 -SAR 87.8m, FY2024 -SAR 45.3m, FY2025 -SAR 48.2m, 9M 2025 -SAR 17.1m); PBT and operating income are continuing operations only, while D&A from the cash-flow statement covers the whole group.
-- D&A includes right-of-use depreciation (added in stage A; the XBRL omitted it). IMPAIR_CF holds goodwill impairments (FY2023-FY2025) and the 9M 2026 store impairment. FY2024 finance cost includes a SAR 12.6m derivative loss; FY2023 finance income is a SAR 16.8m derivative gain.
+- D&A includes right-of-use depreciation (read from the PDF cash-flow statements, p.13 of each annual and p.8 of the 2026 Q3 interim; the XBRL omitted it). IMPAIR_CF holds goodwill impairments (FY2023-FY2025) and the 9M 2026 store impairment. FY2024 finance cost includes a SAR 12.6m derivative loss; FY2023 finance income is a SAR 16.8m derivative gain.
 - ROE is n.m. from FY2023 because average equity attributable is negative. Net debt / EBITDA includes lease liabilities.
 - Asset write-offs recur every year and are not treated as one-offs; a "tax expense" in other operating expense (SAR 50.6m in FY2025) is not explained in the notes and is kept in operating income.
 - The company was renamed AFG International Company on 20 January 2026 (formerly Fawaz Abdulaziz Al Hokair & Co., known as Cenomi Retail).

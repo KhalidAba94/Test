@@ -101,19 +101,20 @@ profit_and_margin:
     amount_sar_m: 10.2
     line: Other income, net
     source: 4190_JARIR/2023_Annual_filed2024-03-10.pdf p.45 (note 24)
-    tax_nci: 'Under 5% of profit; tax effect not disclosed, no minority interests: profit kept as reported'
+    tax_nci: 'Under 5% of profit, listed because a property disposal is outside normal retail operations; tax effect not disclosed, no minority interests: profit kept as reported'
   - item: Gain on disposal of property and equipment (proceeds SAR 45.5m; asset not named)
     period: FY2025
     amount_sar_m: 10.5
     line: Other income, net
     source: 4190_JARIR/2025_Annual_filed2026-03-31.pdf p.13
-    tax_nci: 'Under 5% of profit; tax effect not disclosed, no minority interests: profit kept as reported'
+    tax_nci: 'Under 5% of profit, listed because a property disposal is outside normal retail operations (other disposal gains were SAR 0.1m-0.3m a year); tax effect not disclosed, no minority interests:
+      profit kept as reported'
   - item: Same disposal gain in the 9M 2025 comparative
     period: 9M2025
     amount_sar_m: 10.9
     line: Other income, net
     source: 4190_JARIR/2026_Q3_filed2026-11-09.pdf p.8
-    tax_nci: 'Under 5% of profit; tax effect not disclosed, no minority interests: profit kept as reported'
+    tax_nci: 'Under 5% of profit, listed so that 9M 2026 and 9M 2025 compare on the same basis; tax effect not disclosed, no minority interests: profit kept as reported'
 developments:
 - date: '2022'
   category: operations
@@ -145,8 +146,8 @@ confidence_overall: High
 data_notes:
 - 'Revenue basis break: FY2024 (FY2025 annual note 38) and 9M 2025 (2026 Q3 interim note 16) are re-presented on a net (agent) basis, by -SAR 211.7m and -SAR 183.2m; FY2022 and FY2023 remain gross. Gross
   profit is unchanged by the change, so gross margins are slightly higher on the net basis.'
-- 'Stage A correction: the impairment add-back (IMPAIR_CF) now holds only reversals of impairment on investment property (FY2022 -SAR 2.6m, FY2023 -SAR 0.4m); the trade-receivable credit losses our data
-  had included are excluded.'
+- 'Corrected from the PDF cash-flow statements (FY2023 annual p.12, FY2024 annual p.13, FY2025 annual p.13, 2026 Q3 interim p.8): the impairment add-back holds only reversals of impairment on investment
+  property (FY2022 -SAR 2.6m, FY2023 -SAR 0.4m); trade-receivable credit losses, which the XBRL had included, are excluded.'
 - Investment-property spend is kept out of capex and deducted in free cash flow (IP_CAPEX SAR 6.1m FY2022, SAR 4.0m FY2023, SAR 0.4m FY2024, nil FY2025, SAR 0.4m 9M 2026).
 - Other income, net includes rental income from investment properties and subleases and administrative fees from financing companies; it is inside our operating income.
 - Operating cash flow is after finance costs paid and zakat paid.
