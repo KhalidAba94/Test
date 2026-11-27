@@ -83,7 +83,7 @@ sections:
     and 736 were ''not applicable'' or ''not printed'' for that company (e.g. no gross profit line). Each correction cites its file and page (Data sheet).'
   - 'Stage 2, automatic: every disclosed figure (5,118) was searched for on its PDF page, including the OCR text of scanned pages, and the line it was found on was compared with the figure''s label. Of
     the 1,636 calculated figures, 1,577 were recomputed from their inputs and all reproduce; the other 59 are sums of printed lines checked against the PDF page.'
-  - 'Stage 3, manual: the 1,659 figures the search could not place, or found on a line with a different label, were matched to the stage 1 page checks: 1,627 confirmed and 32 accepted limitations, listed
+  - 'Stage 3, manual: the 1,733 figures the search could not place, or found on a line with a different label, were matched to the stage 1 page checks: 1,701 confirmed and 32 accepted limitations, listed
     below. An independent reviewer then re-read a random sample of 94 figures (two per company) on the PDF pages: 93 confirmed, 1 not checkable (SADAFCO FY2022, no PDF).'
   - 'Accepted limitations: SADAFCO''s year to 31 March 2023 and its 31 March 2022 balance sheet exist in the archive only as XBRL files (no PDF); the restated 30 September 2025 balance sheets of Baan, Armah
     and Cenomi Retail appear only in the 2026 Q3 XBRL files; REIT nine-month figures come from unaudited fact sheets.'
