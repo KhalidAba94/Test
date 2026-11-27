@@ -108,7 +108,8 @@ for g, S in ds.items():
                "margin": {p: ra.get("FFO_M" if reit else "EBITDA_M_U", {}).get(p) for p in ("FY2025", "9M2025", "9M2026")},
                "lev": ra.get("LTV" if reit else "ND_EBITDA", {}).get("FY2025"),
                "payout": ra.get("PAYOUT", {}).get("FY2025") if reit else None,
-               "ni25": sv(c, "NI_ATTR", "FY2025"), "line": lines["company"][t]}
+               "ni25": sv(c, "NI_ATTR", "FY2025"), "ni9": [sv(c, "NI_ATTR", "9M2025"), sv(c, "NI_ATTR", "9M2026")],
+               "line": lines["company"][t]}
         rows.append(row)
         g9 = c["growth"][top].get("9M2026/9M2025")
         if isinstance(g9, float):

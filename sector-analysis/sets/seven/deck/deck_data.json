@@ -81,6 +81,10 @@
      "lev": 2.4448220701216137,
      "payout": null,
      "ni25": 304.8704,
+     "ni9": [
+      226.0853,
+      185.422196
+     ],
      "line": "Growth slowing: 9M revenue +4.0% after 14.8% a year since FY2022; profit \u221218% as costs outpace revenue"
     },
     {
@@ -122,6 +126,10 @@
      "lev": "n.m.",
      "payout": null,
      "ni25": -11.4846,
+     "ni9": [
+      -3.405,
+      -10.1372
+     ],
      "line": "Tiny resort (revenue about SAR 10m a year); results depend on deposit income, which is falling"
     },
     {
@@ -163,6 +171,10 @@
      "lev": 10.435688176506918,
      "payout": null,
      "ni25": -201.814,
+     "ni9": [
+      -40.402,
+      60.869
+     ],
      "line": "Core shrinking (9M \u22129.9%); the 9M profit rests on a SAR 69.5m JV sale gain and insurance income"
     },
     {
@@ -205,6 +217,10 @@
      "lev": 3.0855267138729663,
      "payout": null,
      "ni25": 41.1669,
+     "ni9": [
+      26.5903,
+      40.8867
+     ],
      "line": "Fastest-growing gym operator: 9M revenue +17.2% and profit +54% at a steady 42% margin"
     },
     {
@@ -247,6 +263,10 @@
      "lev": 2.793213193798163,
      "payout": null,
      "ni25": 62.0125,
+     "ni9": [
+      44.7119,
+      39.4383
+     ],
      "line": "Gyms filling up: revenue from SAR 13m (FY2022) to SAR 225m (FY2025); margin steady at about 51%"
     }
    ]
@@ -295,6 +315,10 @@
      "lev": -2.3931122686526884,
      "payout": null,
      "ni25": 382.527,
+     "ni9": [
+      402.557,
+      -509.787
+     ],
      "line": "Revenue \u221222.8% in 9M 2026; a SAR 575m fair-value loss on ACSC turned profit into a SAR 510m loss"
     }
    ]
@@ -379,6 +403,10 @@
      "lev": 0.5675524075096022,
      "payout": null,
      "ni25": 821.7112,
+     "ni9": [
+      507.7125,
+      814.3988
+     ],
      "line": "Recovery: 9M revenue +12.9% and profit +60%; estate up from 2,183 to 2,749 restaurants since FY2022"
     },
     {
@@ -421,6 +449,10 @@
      "lev": 2.737404895062278,
      "payout": null,
      "ni25": -77.4783,
+     "ni9": [
+      -65.8221,
+      2.0744
+     ],
      "line": "Shrinking estate (393 to 370 restaurants): revenue down every year; back to a small 9M profit"
     },
     {
@@ -465,6 +497,10 @@
      "lev": 0.7108412881852436,
      "payout": null,
      "ni25": 47.572833,
+     "ni9": [
+      30.08032,
+      38.776524
+     ],
      "line": "Growth partly bought: 9M +18.3%, about +11% without Five Guys; Makkah/Taif branches not split out"
     },
     {
@@ -509,6 +545,10 @@
      "lev": 1.3682605525733877,
      "payout": null,
      "ni25": 10.914889,
+     "ni9": [
+      6.509779,
+      14.53005
+     ],
      "line": "Growth is bought: 9M +27.5% reported, +6.1% without the SHOVEL caf\u00e9 chain"
     },
     {
@@ -551,6 +591,10 @@
      "lev": "n.m.",
      "payout": null,
      "ni25": -64.729123,
+     "ni9": [
+      -28.452849,
+      -39.679029
+     ],
      "line": "Winding down: continuing revenue \u221267% in 9M 2026, negative equity and a going-concern doubt"
     }
    ]
@@ -602,6 +646,10 @@
      "lev": 0.1929231615553706,
      "payout": null,
      "ni25": 72.9748,
+     "ni9": [
+      121.5479,
+      -28.477986
+     ],
      "line": "Acquisition masks a shrinking core: 9M +37.5% with Snoonu, while Saudi delivery revenue fell 10%"
     }
    ]
@@ -686,6 +734,10 @@
      "lev": 9.865323438327632,
      "payout": null,
      "ni25": 1266.8934,
+     "ni9": [
+      1190.4716,
+      993.0748
+     ],
      "line": "Flat revenue, debt-funded development (net debt 9.9x EBITDA); profit leans on fair-value gains"
     },
     {
@@ -728,6 +780,10 @@
      "lev": 7.993728489168879,
      "payout": null,
      "ni25": -18.2732,
+     "ni9": [
+      -10.3892,
+      27.2287
+     ],
      "line": "9M revenue +24.4% after flat years; consolidates Alahli REIT 1, about 80\u201386% of its revenue"
     },
     {
@@ -772,6 +828,10 @@
      "lev": -3.8509689322325613,
      "payout": null,
      "ni25": 296.062285,
+     "ni9": [
+      251.479515,
+      146.531128
+     ],
      "line": "Land sales swing the headline: 9M \u221217.7% reported, +2.7% without land sales; net cash"
     }
    ]
@@ -856,6 +916,10 @@
      "lev": 0.37349842336339084,
      "payout": 1.2427194215705966,
      "ni25": 18.387,
+     "ni9": [
+      17.9292,
+      48.221449
+     ],
      "line": "FFO roughly halved since FY2022 as finance costs doubled; 9M fact sheet shows revenue +23%"
     },
     {
@@ -897,6 +961,10 @@
      "lev": 0.4873085051655771,
      "payout": 1.105187111790053,
      "ni25": -28.361977,
+     "ni9": [
+      null,
+      null
+     ],
      "line": "Growth bought (Aljada, Al-Maather); impairments keep profit negative; LTV 48.7%"
     },
     {
@@ -938,6 +1006,10 @@
      "lev": 0.44816221088769437,
      "payout": 0.9975491208403952,
      "ni25": -21.006754,
+     "ni9": [
+      null,
+      null
+     ],
      "line": "Pivot from malls to Riyadh offices doubled revenue on debt; LTV 44.8% and mall impairments"
     },
     {
@@ -979,6 +1051,10 @@
      "lev": 0.4695155805096987,
      "payout": 1.5870656553732019,
      "ni25": -109.894005,
+     "ni9": [
+      null,
+      null
+     ],
      "line": "No deals, slow decline: revenue \u22124.7% a year, FFO SAR 48m to 13m; covenant breached at end-2025"
     },
     {
@@ -1020,6 +1096,10 @@
      "lev": 0.30339803435014134,
      "payout": 0.8536411184865413,
      "ni25": 103.694624,
+     "ni9": [
+      null,
+      null
+     ],
      "line": "Largest REIT: FY2025 revenue +15.6% on two office towers; FFO margin 52.8%, LTV 30.3%"
     },
     {
@@ -1061,6 +1141,10 @@
      "lev": 0.5154903052251416,
      "payout": 0.8089466345100047,
      "ni25": 79.251451,
+     "ni9": [
+      null,
+      null
+     ],
      "line": "Growth bought with a rights issue and debt; LTV 51.5%, FFO still below FY2022"
     },
     {
@@ -1102,6 +1186,10 @@
      "lev": 0.40873979326313814,
      "payout": 1.1880314850612672,
      "ni25": 8.725238,
+     "ni9": [
+      null,
+      null
+     ],
      "line": "Tenant defaults: revenue \u22126.6% a year; distributions above FFO every year (payout 119%)"
     },
     {
@@ -1143,6 +1231,10 @@
      "lev": 0.3352535974892796,
      "payout": 0.0,
      "ni25": 0.356829,
+     "ni9": [
+      8.734146,
+      -9.527138
+     ],
      "line": "Flat revenue, no distribution since February 2024; a SAR 9.5m loss in 9M 2026"
     }
    ]
@@ -1227,6 +1319,10 @@
      "lev": 3.5552170723257244,
      "payout": null,
      "ni25": 250.097,
+     "ni9": [
+      134.982,
+      -92.725842
+     ],
      "line": "Revenue \u22123.3% in 9M 2026 and a loss after SAR 154m of inventory provisions"
     },
     {
@@ -1271,6 +1367,10 @@
      "lev": 2.7043465105711912,
      "payout": null,
      "ni25": 269.9317,
+     "ni9": [
+      161.0207,
+      155.47385
+     ],
      "line": "Growth increasingly bought (Zahrat Al Rawdah added SAR 420m in 2025); profit flat near SAR 270m"
     },
     {
@@ -1315,6 +1415,10 @@
      "lev": 0.36079734523191487,
      "payout": null,
      "ni25": 1049.192,
+     "ni9": [
+      739.38,
+      863.016
+     ],
      "line": "Steady compounder: 9M revenue +9.7%, profit +16.7%, online about a third of sales"
     },
     {
@@ -1357,6 +1461,10 @@
      "lev": 2.571037767041433,
      "payout": null,
      "ni25": 497.002,
+     "ni9": [
+      335.391,
+      302.025
+     ],
      "line": "Revenue up 3\u201310% a year (9M +5.4%); profit down as Tas'heel minorities and credit losses grow"
     },
     {
@@ -1399,6 +1507,10 @@
      "lev": 0.7139474484420757,
      "payout": null,
      "ni25": 830.7376,
+     "ni9": [
+      654.8159,
+      622.682
+     ],
      "line": "Revenue +7.0% in 9M but profit \u22124.9%; margin slipping on mix and lease costs"
     },
     {
@@ -1443,6 +1555,10 @@
      "lev": 2.5133322346436104,
      "payout": null,
      "ni25": 321.7557,
+     "ni9": [
+      260.807,
+      100.1776
+     ],
      "line": "Turned down in 2026: 9M revenue \u22124.7%, profit \u221262%, receivables nearly doubled"
     },
     {
@@ -1484,6 +1600,10 @@
      "lev": 10.898356427792642,
      "payout": null,
      "ni25": -505.507,
+     "ni9": [
+      -239.4456,
+      -233.0706
+     ],
      "line": "Growing again (+6.3% in 9M) but loss-making with negative equity; now AFG International"
     },
     {
@@ -1526,6 +1646,10 @@
      "lev": 1.2374308301934858,
      "payout": null,
      "ni25": 45.5876,
+     "ni9": [
+      49.516,
+      -15.4928
+     ],
      "line": "Decline resumed: 9M revenue \u221211.3% and a loss; FY2025 profit came from a warehouse sale"
     },
     {
@@ -1568,6 +1692,10 @@
      "lev": 1.2516980405932423,
      "payout": null,
      "ni25": 58.0314,
+     "ni9": [
+      49.5521,
+      42.1911
+     ],
      "line": "Revenue flat over three years; 9M +5.9% but profit \u221215% on margin and overheads"
     },
     {
@@ -1610,6 +1738,10 @@
      "lev": -2.6324853441453837,
      "payout": null,
      "ni25": 2.9804,
+     "ni9": [
+      28.7571,
+      -9.4964
+     ],
      "line": "Growth stalled after the IPO: 9M revenue \u22123.4% and a net loss as costs outgrew sales"
     },
     {
@@ -1651,6 +1783,10 @@
      "lev": 48.006500224189466,
      "payout": null,
      "ni25": -42.1723,
+     "ni9": [
+      -16.7962,
+      0.1966
+     ],
      "line": "Gold price does the lifting (9M +29.3%); thin margin and gold-loan debt (48x EBITDA)"
     }
    ]
@@ -1735,6 +1871,10 @@
      "lev": 2.2493871624001667,
      "payout": null,
      "ni25": 2456.093,
+     "ni9": [
+      1991.299,
+      1985.668
+     ],
      "line": "Steady growth (9M +9.7%) but flat profit as margins narrow and capex peaks"
     },
     {
@@ -1776,6 +1916,10 @@
      "lev": 2.1176573789332007,
      "payout": null,
      "ni25": 874.462,
+     "ni9": [
+      680.42,
+      529.553
+     ],
      "line": "Smaller after exits; FY2024 profit was the SAR 11.6bn gain on distributing Almarai shares"
     },
     {
@@ -1817,6 +1961,10 @@
      "lev": -0.8631731440088891,
      "payout": null,
      "ni25": 477.389,
+     "ni9": [
+      428.306,
+      236.929
+     ],
      "line": "9M revenue \u22126.6% and profit \u221244.7% as Polish sales fell; net cash, no borrowings"
     },
     {
@@ -1861,6 +2009,10 @@
      "lev": -1.7004597292671761,
      "payout": null,
      "ni25": 393.3486,
+     "ni9": [
+      329.354,
+      188.6636
+     ],
      "line": "Flat 9M revenue (+0.7%) and profit \u221242.7% as gross margin fell to 28.6%; net cash"
     },
     {
@@ -1902,6 +2054,10 @@
      "lev": 1.2394154210417683,
      "payout": null,
      "ni25": 42.6076,
+     "ni9": [
+      26.9567,
+      33.6671
+     ],
      "line": "Smaller (Egyptian pound) but profitable again; borrowings cut from SAR 357m to 153m"
     },
     {
@@ -1943,6 +2099,10 @@
      "lev": 5.428463680011836,
      "payout": null,
      "ni25": -18.835,
+     "ni9": [
+      3.5982,
+      23.188799
+     ],
      "line": "Fast, debt-funded growth (15% a year); FY2025 loss, 9M profit recovering"
     },
     {
@@ -1985,6 +2145,10 @@
      "lev": -0.6499062508004783,
      "payout": null,
      "ni25": -2.6878,
+     "ni9": [
+      11.8967,
+      17.9865
+     ],
      "line": "Wholesale water collapsed 2022\u201325; 9M 2026 +21% on retail water and eggs"
     },
     {
@@ -2029,6 +2193,10 @@
      "lev": 15.055547740794196,
      "payout": null,
      "ni25": -123.0519,
+     "ni9": [
+      -39.164306,
+      -57.481214
+     ],
      "line": "Revenue +27% in 9M but losses widen; restated twice; net debt 15x EBITDA"
     },
     {
@@ -2073,6 +2241,10 @@
      "lev": 2.907281722729058,
      "payout": null,
      "ni25": 277.443269,
+     "ni9": [
+      202.727791,
+      230.831487
+     ],
      "line": "Mills earn about 35% EBITDA margins; 9M +21.3% led by feed acquisitions"
     },
     {
@@ -2115,6 +2287,10 @@
      "lev": 2.3079145291012195,
      "payout": null,
      "ni25": 223.78568,
+     "ni9": [
+      171.44923,
+      181.623616
+     ],
      "line": "9M revenue +17.2%; EBITDA margin down 3.6 points since FY2022 as a feed plant is built"
     },
     {
@@ -2157,6 +2333,10 @@
      "lev": 1.847529456663448,
      "payout": null,
      "ni25": 237.0379,
+     "ni9": [
+      180.0941,
+      208.5294
+     ],
      "line": "Highest-margin mill (about 39%); borrowings cut from SAR 1.7bn to 0.7bn since the merger"
     },
     {
@@ -2199,6 +2379,10 @@
      "lev": 0.5832174444576634,
      "payout": null,
      "ni25": 200.7927,
+     "ni9": [
+      138.8653,
+      159.7618
+     ],
      "line": "No borrowings and about 40% margin; 9M revenue +12.6%, capex up for Al-Kharj"
     },
     {
@@ -2240,6 +2424,10 @@
      "lev": -0.0717894472954147,
      "payout": null,
      "ni25": 217.6055,
+     "ni9": [
+      175.3378,
+      182.2048
+     ],
      "line": "Fastest consumer grower (23% a year), Gulf sales leading; 9M profit growth slows to 3.9%"
     }
    ]
