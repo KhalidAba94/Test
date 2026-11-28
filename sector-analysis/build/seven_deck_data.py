@@ -92,7 +92,7 @@ def lfl9(t, c, top):
     nd_deal = sorted({r["bridge_step"] for r in rows if r["bridge_step"] in ("perimeter", "accounting_other") and r["basis"] == "not determinable"})
     nd_fx = sorted({r["bridge_step"] for r in rows if r["bridge_step"] in ("fx", "hyperinflation") and r["basis"] == "not determinable"})
     txt = {"perimeter": "acquisition or disposal", "accounting_other": "basis change", "fx": "currency", "hyperinflation": "hyperinflation"}
-    fxnote = ("; " + " and ".join(txt[x] for x in nd_fx) + " effects not disclosed, not removed") if nd_fx else ""
+    fxnote = ("; unquantified " + " and ".join(txt[x] for x in nd_fx) + " effects remain") if nd_fx else ""
     if nd_deal:
         return {"v": None, "basis": "n.d.: " + " and ".join(txt[x] for x in nd_deal) + " not quantified" + fxnote}
     amt = sum(float(r["amount_sar_m"]) for r in rows if r["amount_sar_m"] not in ("", None))

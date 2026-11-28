@@ -337,7 +337,7 @@
      },
      "lfl9": {
       "v": -0.22838864108683055,
-      "basis": "No deals or basis changes; currency and hyperinflation effects not disclosed, not removed",
+      "basis": "No deals or basis changes; unquantified currency and hyperinflation effects remain",
       "same": true
      },
      "margin": {
@@ -431,7 +431,7 @@
      },
      "lfl9": {
       "v": null,
-      "basis": "n.d.: acquisition or disposal not quantified; currency and hyperinflation effects not disclosed, not removed"
+      "basis": "n.d.: acquisition or disposal not quantified; unquantified currency and hyperinflation effects remain"
      },
      "margin": {
       "FY2025": 0.2373038850397384,
@@ -536,7 +536,7 @@
      },
      "lfl9": {
       "v": null,
-      "basis": "n.d.: acquisition or disposal not quantified; currency effects not disclosed, not removed"
+      "basis": "n.d.: acquisition or disposal not quantified; unquantified currency effects remain"
      },
      "margin": {
       "FY2025": 0.19003966702987637,
@@ -1435,7 +1435,7 @@
      },
      "lfl9": {
       "v": -0.032730962510689965,
-      "basis": "No deals or basis changes; currency effects not disclosed, not removed",
+      "basis": "No deals or basis changes; unquantified currency effects remain",
       "same": true
      },
      "margin": {
@@ -1489,7 +1489,7 @@
      },
      "lfl9": {
       "v": null,
-      "basis": "n.d.: acquisition or disposal not quantified; currency effects not disclosed, not removed"
+      "basis": "n.d.: acquisition or disposal not quantified; unquantified currency effects remain"
      },
      "margin": {
       "FY2025": 0.14734264334994246,
@@ -1542,7 +1542,7 @@
      },
      "lfl9": {
       "v": 0.09738744116653808,
-      "basis": "No deals or basis changes; currency effects not disclosed, not removed",
+      "basis": "No deals or basis changes; unquantified currency effects remain",
       "same": true
      },
      "margin": {
@@ -1750,7 +1750,7 @@
      },
      "lfl9": {
       "v": null,
-      "basis": "n.d.: acquisition or disposal not quantified; currency effects not disclosed, not removed"
+      "basis": "n.d.: acquisition or disposal not quantified; unquantified currency effects remain"
      },
      "margin": {
       "FY2025": 0.09690321661668976,
@@ -1956,7 +1956,7 @@
      },
      "lfl9": {
       "v": 0.2930546367834257,
-      "basis": "No deals or basis changes; currency effects not disclosed, not removed",
+      "basis": "No deals or basis changes; unquantified currency effects remain",
       "same": true
      },
      "margin": {
@@ -2050,7 +2050,7 @@
      },
      "lfl9": {
       "v": null,
-      "basis": "n.d.: acquisition or disposal not quantified; currency effects not disclosed, not removed"
+      "basis": "n.d.: acquisition or disposal not quantified; unquantified currency effects remain"
      },
      "margin": {
       "FY2025": 0.2487599749030994,
@@ -2100,7 +2100,7 @@
      },
      "lfl9": {
       "v": 0.031033176409716257,
-      "basis": "No deals or basis changes; currency effects not disclosed, not removed",
+      "basis": "No deals or basis changes; unquantified currency effects remain",
       "same": true
      },
      "margin": {
@@ -2151,7 +2151,7 @@
      },
      "lfl9": {
       "v": -0.06559613140622622,
-      "basis": "No deals or basis changes; currency effects not disclosed, not removed",
+      "basis": "No deals or basis changes; unquantified currency effects remain",
       "same": true
      },
      "margin": {
@@ -2205,7 +2205,7 @@
      },
      "lfl9": {
       "v": 0.0033149200484016185,
-      "basis": "AlRaie removed; currency effects not disclosed, not removed"
+      "basis": "AlRaie removed; unquantified currency effects remain"
      },
      "margin": {
       "FY2025": 0.1922393075410407,
@@ -2255,7 +2255,7 @@
      },
      "lfl9": {
       "v": 0.033082581010458245,
-      "basis": "No deals or basis changes; currency effects not disclosed, not removed",
+      "basis": "No deals or basis changes; unquantified currency effects remain",
       "same": true
      },
      "margin": {
@@ -2306,7 +2306,7 @@
      },
      "lfl9": {
       "v": 0.18424556624305954,
-      "basis": "No deals or basis changes; currency effects not disclosed, not removed",
+      "basis": "No deals or basis changes; unquantified currency effects remain",
       "same": true
      },
      "margin": {
@@ -2672,7 +2672,7 @@
      },
      "lfl9": {
       "v": 0.11433174288966907,
-      "basis": "No deals or basis changes; currency effects not disclosed, not removed",
+      "basis": "No deals or basis changes; unquantified currency effects remain",
       "same": true
      },
      "margin": {
