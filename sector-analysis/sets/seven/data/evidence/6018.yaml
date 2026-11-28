@@ -1,0 +1,308 @@
+# Evidence from Sport Clubs Company filings (archive: 6018_SPORT_CLUBS). Facts only; page = physical PDF page. Units: SR.
+# Listed 22 July 2025; FY2022-FY2024 annuals were filed in Nov 2025. The 2025 Q3 balance sheet page is scanned.
+ticker: '6018'
+company: Sport Clubs Company
+perimeter_changes:
+- event: 'One subsidiary throughout: Third Amaken Sports Company (100%, cleaning and maintenance for the clubs); no business combinations
+    or disposals'
+  type: new_subsidiary
+  status: no change
+  date: null
+  consideration: null
+  revenue_contribution: null
+  profit_contribution: null
+  pro_forma_revenue: null
+  period: FY2022-9M2026
+  unit: SR
+  source: 6018_SPORT_CLUBS/2023_Annual_filed2025-11-13.pdf
+  page: 11
+  quote: The subsidiary company, Third Amaken Sports Company, which is referred to later with the company as the
+  note: FY2022 was first reported as standalone statements; the FY2023 annual presents 2022 consolidated (revenue unchanged at 268,043,244).
+segments:
+- period: FY2023
+  segment: Men's fitness centres
+  basis: operating
+  revenue: 196075175
+  profit: 56367176
+  unit: SR
+  source: 6018_SPORT_CLUBS/2024_Annual_filed2025-11-13.pdf
+  page: 42
+- period: FY2023
+  segment: Women's fitness centres
+  basis: operating
+  revenue: 71792911
+  profit: 14418028
+  unit: SR
+  source: 6018_SPORT_CLUBS/2024_Annual_filed2025-11-13.pdf
+  page: 42
+- period: FY2023
+  segment: Sport solutions
+  basis: operating
+  revenue: 2752629
+  profit: 1599807
+  unit: SR
+  source: 6018_SPORT_CLUBS/2024_Annual_filed2025-11-13.pdf
+  page: 42
+- period: FY2024
+  segment: Men's fitness centres
+  basis: operating
+  revenue: 207028633
+  profit: 60967448
+  unit: SR
+  source: 6018_SPORT_CLUBS/2024_Annual_filed2025-11-13.pdf
+  page: 42
+- period: FY2024
+  segment: Women's fitness centres
+  basis: operating
+  revenue: 93569405
+  profit: 26874036
+  unit: SR
+  source: 6018_SPORT_CLUBS/2024_Annual_filed2025-11-13.pdf
+  page: 42
+- period: FY2024
+  segment: Sport solutions
+  basis: operating
+  revenue: 26827918
+  profit: 10703745
+  unit: SR
+  source: 6018_SPORT_CLUBS/2024_Annual_filed2025-11-13.pdf
+  page: 42
+- period: FY2025
+  segment: Men's fitness centres
+  basis: operating
+  revenue: 243738069
+  profit: 77139493
+  unit: SR
+  source: 6018_SPORT_CLUBS/2025_Annual_filed2026-03-15.pdf
+  page: 40
+- period: FY2025
+  segment: Women's fitness centres
+  basis: operating
+  revenue: 106174137
+  profit: 28384842
+  unit: SR
+  source: 6018_SPORT_CLUBS/2025_Annual_filed2026-03-15.pdf
+  page: 40
+- period: FY2025
+  segment: Sport solutions (construction contracts, equipment, maintenance)
+  basis: operating
+  revenue: 26326794
+  profit: 6948362
+  unit: SR
+  source: 6018_SPORT_CLUBS/2025_Annual_filed2026-03-15.pdf
+  page: 40
+- period: FY2025
+  segment: Central region (largest of five Saudi regions)
+  basis: geographic
+  revenue: 242213819
+  profit: 84533482
+  unit: SR
+  source: 6018_SPORT_CLUBS/2025_Annual_filed2026-03-15.pdf
+  page: 39
+- period: 9M2026
+  segment: Men's fitness centres
+  basis: operating
+  revenue: 215237611
+  profit: 72354573
+  unit: SR
+  source: 6018_SPORT_CLUBS/2026_Q3_filed2026-11-07.pdf
+  page: 20
+- period: 9M2026
+  segment: Women's fitness centres
+  basis: operating
+  revenue: 100120776
+  profit: 28387781
+  unit: SR
+  source: 6018_SPORT_CLUBS/2026_Q3_filed2026-11-07.pdf
+  page: 20
+- period: 9M2026
+  segment: Sports solutions
+  basis: operating
+  revenue: 3398777
+  profit: 1510578
+  unit: SR
+  source: 6018_SPORT_CLUBS/2026_Q3_filed2026-11-07.pdf
+  page: 20
+- period: 9M2025
+  segment: Men's fitness centres
+  basis: operating
+  revenue: 172428986
+  profit: 51022497
+  unit: SR
+  source: 6018_SPORT_CLUBS/2026_Q3_filed2026-11-07.pdf
+  page: 20
+- period: 9M2025
+  segment: Women's fitness centres
+  basis: operating
+  revenue: 74896098
+  profit: 19213505
+  unit: SR
+  source: 6018_SPORT_CLUBS/2026_Q3_filed2026-11-07.pdf
+  page: 20
+- period: 9M2025
+  segment: Sports solutions
+  basis: operating
+  revenue: 24657868
+  profit: 7823214
+  unit: SR
+  source: 6018_SPORT_CLUBS/2026_Q3_filed2026-11-07.pdf
+  page: 20
+revenue_drivers:
+- period: FY2025
+  driver: 'Subscriptions and membership revenue (FY2024: 260,417,358)'
+  value: 309585935
+  unit: SR
+  source: 6018_SPORT_CLUBS/2025_Annual_filed2026-03-15.pdf
+  page: 33
+  quote: Subscriptions and membership 309,585,935 260,417,358
+- period: FY2025
+  driver: 'Personal training and other health services (FY2024: 39,149,843)'
+  value: 38255938
+  unit: SR
+  source: 6018_SPORT_CLUBS/2025_Annual_filed2026-03-15.pdf
+  page: 33
+  quote: Personal training and other health services 38,255,938 39,149,843
+- period: FY2025
+  driver: 'Construction and development contracts (sport solutions; FY2024: 24,838,302)'
+  value: 18361698
+  unit: SR
+  source: 6018_SPORT_CLUBS/2025_Annual_filed2026-03-15.pdf
+  page: 33
+  quote: Construction and development contracts 18,361,698 24,838,302
+- period: FY2024
+  driver: 'Seasonality: Q4 usually strongest (National Day offers)'
+  value: null
+  unit: SR
+  source: 6018_SPORT_CLUBS/2024_Annual_filed2025-11-13.pdf
+  page: 44
+  quote: there is an improvement in the company’s business during the fourth quarter of the year better than other
+- period: FY2022-FY2025
+  driver: New branches under construction in capital work in progress; club count not disclosed
+  value: null
+  unit: count
+  source: 6018_SPORT_CLUBS/2025_Annual_filed2026-03-15.pdf
+  page: 23
+  quote: The capital work in progress as of December 31, 2025 mainly represents the costs incurred in establishing new branches that
+    are still under construction.
+one_offs:
+- period: FY2023
+  item: Penalties and compensations arising from lease agreements
+  amount: -2750167
+  unit: SR
+  pnl_line: Other income, net
+  recurring: false
+  source: 6018_SPORT_CLUBS/2024_Annual_filed2025-11-13.pdf
+  page: 35
+  quote: Penalties and compensations arising from lease agreements - )2,750,167(
+- period: FY2024
+  item: Listing and initial public offering expenses
+  amount: -2851615
+  unit: SR
+  pnl_line: Listing and Initial Public Offering Expenses
+  recurring: false
+  source: 6018_SPORT_CLUBS/2024_Annual_filed2025-11-13.pdf
+  page: 6
+  quote: Listing and Initial Public Offering Expenses (35) (2,851,615) -
+- period: FY2025
+  item: Listing and initial public offering expenses
+  amount: -4748788
+  unit: SR
+  pnl_line: Listing and Initial Public Offering Expenses
+  recurring: false
+  source: 6018_SPORT_CLUBS/2025_Annual_filed2026-03-15.pdf
+  page: 7
+  quote: Listing and Initial Public Offering Expenses (34) (4,748,788) (2,851,615)
+- period: 9M2025
+  item: Listing and initial public offering expenses (nil in 9M2026)
+  amount: -4748788
+  unit: SR
+  pnl_line: Listing and Initial Public Offering Expenses
+  recurring: false
+  source: 6018_SPORT_CLUBS/2026_Q3_filed2026-11-07.pdf
+  page: 5
+  quote: Listing and Initial Public Offering Expenses (21) - (4,163,326) - (4,748,788)
+- period: FY2023-FY2025
+  item: 'Lease adjustments (gains on lease terminations and remeasurements) recur every year: 1,742,185 (FY2023), 2,108,929 (FY2024),
+    711,220 (FY2025); treated as recurring, not one-offs'
+  amount: null
+  unit: SR
+  pnl_line: Other income, net
+  recurring: true
+  source: 6018_SPORT_CLUBS/2025_Annual_filed2026-03-15.pdf
+  page: 34
+  quote: Lease adjustments 711,220 2,108,929
+restatements:
+- period_restated: FY2021-FY2022 (in FY2023 annual)
+  item: Cost of revenue, PP&E, equity
+  from: 24261506
+  to: 22682826
+  unit: SR
+  reason: 'Note 33: SOCPA clarification (Nov 2023) on right-of-use depreciation of leased land during construction; 2022 net profit
+    24,261,506 (standalone) to 22,682,826'
+  source: 6018_SPORT_CLUBS/2023_Annual_filed2025-11-13.pdf
+  page: 46
+  quote: the Group capitalized the depreciation of right-of-use assets related to leased land into the cost of the buildings during
+    the construction period.
+- period_restated: FY2023-FY2024 (in FY2025 annual)
+  item: Cost of revenue, S&M, G&A, PP&E, prepayments, equity
+  from: 38069740
+  to: 36104369
+  unit: SR
+  reason: 'Note 34 (cited as note 35 on the face): work-permit fees expensed; ROU depreciation of buildings on leased land expensed
+    (SOCPA, 30 Oct 2025)'
+  source: 6018_SPORT_CLUBS/2025_Annual_filed2026-03-15.pdf
+  page: 45
+  quote: Profit for the year 38,069,740 (1,965,371) 36,104,369
+- period_restated: 9M2025 (in 2026 Q3)
+  item: 'Not restated: the 2026 Q3 opens 2025 at 168,808,870 (pre-restatement equity)'
+  from: null
+  to: null
+  unit: SR
+  reason: Comparatives not adjusted for the FY2025 annual restatement
+  source: 6018_SPORT_CLUBS/2026_Q3_filed2026-11-07.pdf
+  page: 6
+  quote: Balance as at 1 January 2025 (Audited) 104,000,000 (1,026,540) 65,835,410 168,808,870
+significant_events:
+- date: '2025-07-22'
+  event: 'IPO and listing on Tadawul: 30% of post-issue capital offered; 10.4m new shares at SR 7.5 raised SR 78m'
+  financial_effect: Share capital 104m to 114.4m; share premium 61.97m after costs
+  source: 6018_SPORT_CLUBS/2025_Annual_filed2026-03-15.pdf
+  page: 28
+  quote: The Company was listed on the Saudi Stock Exchange (Tadawul) on 22 July 2025 (27 Muharram 1447 H) under the
+audit_opinion:
+- period: FY2022
+  opinion: Unmodified (BDO), standalone statements
+  emphasis_of_matter: null
+  source: 6018_SPORT_CLUBS/2022_Annual_filed2025-11-13.pdf
+  page: 3
+- period: FY2023
+  opinion: Unmodified (BDO)
+  emphasis_of_matter: null
+  source: 6018_SPORT_CLUBS/2023_Annual_filed2025-11-13.pdf
+  page: 3
+- period: FY2024
+  opinion: Unmodified (BDO)
+  emphasis_of_matter: null
+  source: 6018_SPORT_CLUBS/2024_Annual_filed2025-11-13.pdf
+  page: 3
+- period: FY2025
+  opinion: Unmodified (BDO)
+  emphasis_of_matter: null
+  source: 6018_SPORT_CLUBS/2025_Annual_filed2026-03-15.pdf
+  page: 3
+kpis_in_filings:
+- period: FY2022-9M2026
+  kpi: Number of clubs, members, same-club revenue
+  value: null
+  unit: count
+  source: 6018_SPORT_CLUBS/2025_Annual_filed2026-03-15.pdf
+  page: 40
+  status: not found
+special_extractions:
+- item: FY2021 balance sheet, FY2022 and FY2023 figures read from the PDFs (pre-IPO audited statements; no XBRL)
+  source: 6018_SPORT_CLUBS/2023_Annual_filed2025-11-13.pdf
+  page: 5
+open_questions:
+- Club counts and openings are not disclosed, so new-club revenue cannot be separated from like-for-like growth.
+- The 9M 2025 comparatives in the 2026 Q3 interim are not restated for the FY2025 annual restatement (note 34); the effect on 9M 2025
+  is not disclosed.

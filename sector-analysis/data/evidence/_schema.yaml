@@ -1,0 +1,16 @@
+# Evidence file schema: one file per company: data/evidence/<ticker>.yaml
+# Every item must carry: period, amount (number or null), unit (SAR m | SAR '000 | SAR | USD m | count | %),
+# source (archive file, e.g. "2222_SAUDI_ARAMCO/2025_Annual_filed2026-03-10.pdf"), page (physical PDF page, 1-based),
+# quote (verbatim snippet, max 25 words). Use status: "not found" when searched and absent.
+ticker: ""
+company: ""
+perimeter_changes: []      # {event, type: acquisition|disposal|discontinued|deconsolidation|new_subsidiary, date, consideration, revenue_contribution, profit_contribution, pro_forma_revenue, period, unit, source, page, quote}
+segments: []               # {period, segment, basis: operating|geographic|product, revenue, profit, unit, source, page}
+revenue_drivers: []        # {period, driver, value, unit, source, page, quote}
+one_offs: []               # {period, item, amount, unit, pnl_line, recurring: false, source, page, quote}
+restatements: []           # {period_restated, item, from, to, unit, reason, source, page, quote}
+significant_events: []     # {date, event, financial_effect, source, page, quote}
+audit_opinion: []          # {period, opinion, emphasis_of_matter, source, page}
+kpis_in_filings: []        # {period, kpi, value, unit, source, page}
+special_extractions: []    # task-specific tables (e.g. figures missing from XBRL)
+open_questions: []         # anything ambiguous or unreadable

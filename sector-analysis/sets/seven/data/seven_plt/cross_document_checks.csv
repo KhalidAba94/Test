@@ -1,0 +1,3 @@
+ticker,period,metric_code,kind,values,used_file,used,original
+6017,FY2025,DEBT,restated (like documents),2025_Annual_filed2026-07-28.xls=15.772 | 2026_Q1_filed2026-08-02.xls=165.062 | 2026_Q2_filed2026-08-24.xls=230.417,2026_Q2_filed2026-08-24.xls,230.416967,15.772165999999999
+6017,FY2025,LEASE_LIAB,restated (like documents),2025_Annual_filed2026-07-28.xls=290.226 | 2026_Q1_filed2026-08-02.xls=290.226 | 2026_Q2_filed2026-08-24.xls=224.871,2026_Q2_filed2026-08-24.xls,224.870601,290.225762

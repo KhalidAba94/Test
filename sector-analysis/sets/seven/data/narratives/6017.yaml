@@ -1,0 +1,94 @@
+ticker: "6017"
+headline: >-
+  Revenue grew 13.2% a year from SAR 1,602m (FY2022) to SAR 2,324m (FY2025) and attributable profit peaked at SAR 188m in FY2024
+  before falling 61.2% to SAR 73.0m in FY2025; in 9M 2026 revenue rose 37.5% to SAR 2,237m, mostly from the Snoonu acquisition in
+  Qatar, while delivery revenue inside Saudi Arabia fell 10.0% and the company made an attributable loss of SAR 28.5m.
+lfl_basis:
+  definition_used: >-
+    Standard bridge on IFRS revenue, which is net of customer promotions and cash back (FY2025: SAR 198m deducted). Perimeter =
+    revenue of acquired businesses for the months not owned in the prior period: Marn (2 January 2023, SAR 1.1m disclosed for FY2023)
+    and Snoonu (76.56% from 6 October 2025, SAR 228m disclosed for FY2025; 9M 2026 not disclosed). SOL Company for Trading,
+    consolidated from 26 December 2023, has no disclosed revenue, so FY2024 organic growth is not determinable. The February 2024
+    buy-out of the remaining 40% of Joint Preparation Company for Meals is not a perimeter change: it was already a consolidated 60%
+    subsidiary. There is no FX translation effect (no translation reserve; Gulf currencies pegged). Jahez reports no orders, users or
+    same-store measures, so like-for-like growth is not determinable in any period.
+  perimeter_changes:
+    - {event: "Marn Business Information Technology Company (100%, SAR 60m)", date: "2023-01-02", effect: "SAR 1.1m revenue from the acquisition date in FY2023, disclosed", source: "6017_JAHEZ/2023_Annual_filed2024-03-27.pdf p.55"}
+    - {event: "SOL Company for Trading (35%, controlled, SAR 5m)", date: "2023-12-26", effect: "revenue not disclosed; FY2024 perimeter not determinable", source: "6017_JAHEZ/2023_Annual_filed2024-03-27.pdf p.55"}
+    - {event: "Joint Preparation Company for Meals: remaining 40% bought for SAR 4.8m (equity transaction)", date: "2024-02-04", effect: "none on revenue (consolidated before and after)", source: "6017_JAHEZ/2024_Annual_filed2025-03-17.pdf p.58; 6017_JAHEZ/2023_Annual_filed2024-03-27.pdf p.13"}
+    - {event: "Snoonu Corporation Holding LLC (76.56%; Qatar and Oman delivery platform): cash SAR 802m plus treasury shares worth SAR 34.6m and a SAR 75m capital injection", date: "2025-10-06", effect: "SAR 228m revenue in FY2025, disclosed; 9M 2026 not disclosed", source: "6017_JAHEZ/2025_Annual_filed2026-04-07.pdf p.62-63"}
+  capacity_changes:
+    - {event: "Delivery outside the Kingdom (Bahrain, Kuwait) grew from SAR 48.5m (FY2023) to SAR 212m (FY2024)", date: "2023-2024", effect: "revenue of new markets not disclosed", source: "6017_JAHEZ/2024_Annual_filed2025-03-17.pdf p.50-51"}
+    - {event: "Logi Kuwait Company for Consumer Orders Delivery started operating", date: "2026 Q1", effect: "not determinable", source: "6017_JAHEZ/2026_Q3_filed2026-11-17.pdf p.9"}
+  fx_exposure: "Operations outside Saudi Arabia are in Bahrain, Kuwait and, from October 2025, Qatar and Oman. Equity has no translation reserve and other comprehensive income shows no translation differences, so no FX effect is identified."
+  price_volume_support: "Not determinable: the filings give segment revenue but no orders, basket size, commission rates or active users."
+  confidence: "High for the disclosed perimeter amounts (FY2023, FY2025); not determinable for FY2024 and 9M 2026 and for like-for-like growth"
+price_volume:
+  - period: "FY2025 vs FY2024"
+    text: >-
+      Delivery revenue inside the Kingdom fell 8.6% (SAR 1,928m to SAR 1,761m) while customer promotions and cash back rose to
+      SAR 198m (SAR 168m). Delivery revenue outside the Kingdom rose from SAR 212m to SAR 462m, of which Snoonu SAR 228m from
+      6 October; excluding Snoonu it rose to SAR 235m (we calculate). Logistics revenue rose 1.4%. Orders and prices are not disclosed.
+    basis: "disclosed (segment revenue); price/volume split not determinable"
+    confidence: "High for the amounts; the split is not determinable"
+    source: "6017_JAHEZ/2025_Annual_filed2026-04-07.pdf p.53, p.63"
+    refs: ["6017-FY2025-REV", "6017-FY2024-REV"]
+  - period: "9M 2026 vs 9M 2025"
+    text: >-
+      Delivery revenue inside the Kingdom fell 10.0% (SAR 1,370m to SAR 1,232m). Delivery revenue outside the Kingdom rose from
+      SAR 183m to SAR 946m with Snoonu, whose own revenue is not disclosed. Cost of goods sold rose to SAR 206m from SAR 47.1m,
+      which suggests a larger share of goods sales (Snoonu sells groceries and other goods); orders and prices are not disclosed.
+    basis: "disclosed (segment revenue, cost of revenue note); split not determinable"
+    confidence: "High for the amounts; the split is not determinable"
+    source: "6017_JAHEZ/2026_Q3_filed2026-11-17.pdf p.31, p.35-36"
+    refs: ["6017-9M2026-REV", "6017-9M2025-REV"]
+profit_and_margin:
+  drivers:
+    - {period: "FY2023", driver: "Revenue +11.4% to SAR 1,785m (organic 11.3%, we calculate) and attributable profit +112.5% to SAR 125m: G&A fell from SAR 136m to SAR 106m, interest on deposits rose to SAR 46.1m (SAR 22.2m) and operating income rose 59.9% to SAR 105m. EBITDA rose 76.0% to SAR 157m (EBITDA margin 8.8%); net margin 7.0% (3.7%); ROE 11.6%. The outside-Kingdom delivery segment lost SAR 97.2m.", source: "6017_JAHEZ/2023_Annual_filed2024-03-27.pdf p.8; 6017_JAHEZ/2024_Annual_filed2025-03-17.pdf p.51", refs: ["6017-FY2023-REV", "6017-FY2023-NI_ATTR", "6017-FY2023-OPINC", "6017-FY2023-EBITDA_C"]}
+    - {period: "FY2024", driver: "Revenue +24.3% to SAR 2,219m: delivery inside the Kingdom +12.3% and outside the Kingdom up from SAR 48.5m to SAR 212m. Gross margin 24.4% (22.7%); operating income +54.7% to SAR 163m (operating margin 7.3%); attributable profit +50.0% to SAR 188m (net margin 8.5%, ROE 15.7%). Capex rose to SAR 195m, mostly property and equipment (SAR 175m).", source: "6017_JAHEZ/2025_Annual_filed2026-04-07.pdf p.9, p.11; 6017_JAHEZ/2024_Annual_filed2025-03-17.pdf p.50", refs: ["6017-FY2024-REV", "6017-FY2024-OPINC", "6017-FY2024-NI_ATTR", "6017-FY2024-CAPEX"]}
+    - {period: "FY2025", driver: "Revenue +4.7% to SAR 2,324m, but -5.5% excluding Snoonu's SAR 228m (we calculate). Marketing and advertising rose 34.8% to SAR 228m and G&A 16.7% to SAR 159m; a SAR 11.8m goodwill impairment (Marn) and SAR 11.3m of fair-value losses were charged. Operating income fell 76.6% to SAR 38.1m (operating margin 1.6%); EBITDA fell 35.5% to SAR 139m (EBITDA margin 6.0%); attributable profit fell 61.2% to SAR 73.0m (net margin 3.1%, ROE 5.7%). Operating cash flow fell 50.8% to SAR 99.8m, and the Snoonu payment cut cash from SAR 1,054m to SAR 428m.", source: "6017_JAHEZ/2025_Annual_filed2026-04-07.pdf p.8-9, p.11, p.36, p.52, p.63", refs: ["6017-FY2025-REV", "6017-FY2025-OPINC", "6017-FY2025-EBITDA_C", "6017-FY2025-NI_ATTR", "6017-FY2025-CFO", "6017-FY2025-CASH", "6017-FY2025-IMPAIR_CF"]}
+    - {period: "9M2026", driver: "Revenue +37.5% to SAR 2,237m with Snoonu, but the gross margin fell to 20.1% (23.2%). Depreciation and amortisation rose to SAR 140m (SAR 49.8m), including SAR 10.4m amortisation of the acquired brand; marketing rose 68.4% and G&A 69.6%. We calculate an operating loss of SAR 44.3m (operating margin -2.0%); EBITDA fell 32.7% to SAR 95.8m (EBITDA margin 4.3%). Finance costs rose to SAR 17.3m (SAR 4.7m) and finance income fell to SAR 2.4m (SAR 30.3m). The attributable loss was SAR 28.5m (net margin -1.3%); minority shareholders bore SAR 27.2m of losses. Operating cash flow rose 61.4% to SAR 87.5m; capex SAR 124m; net debt SAR 208m (net debt / EBITDA 1.6x annualised).", source: "6017_JAHEZ/2026_Q3_filed2026-11-17.pdf p.3-4, p.6, p.31-32", refs: ["6017-9M2026-REV", "6017-9M2026-GP", "6017-9M2026-DA_CF", "6017-9M2026-OPINC", "6017-9M2026-EBITDA_C", "6017-9M2026-NI_ATTR", "6017-9M2026-NI_NCI", "6017-9M2026-CFO", "6017-9M2026-NET_DEBT"]}
+  one_offs:
+    - {item: "Unrealized gains on investments at FVTPL (minority start-up stakes)", period: "FY2022", amount_sar_m: 1.8, line: "Below operating profit, above finance lines (inside our operating income)", source: "6017_JAHEZ/2023_Annual_filed2024-03-27.pdf p.8", tax_nci: "Under 5% of attributable profit: tax effect not checked; profit kept as reported"}
+    - {item: "Unrealized gains on investments at FVTPL", period: "FY2023", amount_sar_m: 3.3, line: "Below operating profit, above finance lines (inside our operating income)", source: "6017_JAHEZ/2024_Annual_filed2025-03-17.pdf p.8", tax_nci: "Under 5% of attributable profit: tax effect not checked; profit kept as reported"}
+    - {item: "Unrealized losses on investments at FVTPL", period: "FY2024", amount_sar_m: -6.1, line: "Below operating profit, above finance lines (inside our operating income)", source: "6017_JAHEZ/2025_Annual_filed2026-04-07.pdf p.9", tax_nci: "Under 5% of attributable profit: tax effect not checked; profit kept as reported"}
+    - {item: "Unrealized losses on investments at FVTPL", period: "FY2025", amount_sar_m: -11.3, line: "Below operating profit, above finance lines (inside our operating income)", source: "6017_JAHEZ/2025_Annual_filed2026-04-07.pdf p.9", tax_nci: "Zakat effect not disclosed; held by the parent company, but the minority share is not stated: after-tax effect not determinable, profit kept as reported"}
+    - {item: "Unrealized gain on investments at FVTPL", period: "9M2025", amount_sar_m: 0.9, line: "Below operating profit, above finance lines (inside our operating income)", source: "6017_JAHEZ/2026_Q3_filed2026-11-17.pdf p.4", tax_nci: "Under 5% of attributable profit: tax effect not checked; profit kept as reported"}
+    - {item: "Unrealized gain on investments at FVTPL", period: "9M2026", amount_sar_m: 0.1, line: "Below operating profit, above finance lines (inside our operating income)", source: "6017_JAHEZ/2026_Q3_filed2026-11-17.pdf p.4", tax_nci: "Immaterial: tax effect not checked; profit kept as reported"}
+developments:
+  - {date: "2022-01-05", category: "financing", text: "Shares listed on the Parallel Market (Nomu); IPO proceeds of SAR 749m received in 2022.", source: "6017_JAHEZ/2024_Annual_filed2025-03-17.pdf p.12; 6017_JAHEZ/2023_Annual_filed2024-03-27.pdf p.10"}
+  - {date: "2023-01-02", category: "M&A", text: "Acquired Marn Business Information Technology Company (point-of-sale software) for SAR 60m; goodwill SAR 62.4m, of which SAR 11.8m was impaired in FY2025.", source: "6017_JAHEZ/2023_Annual_filed2024-03-27.pdf p.54-55; 6017_JAHEZ/2025_Annual_filed2026-04-07.pdf p.36"}
+  - {date: "2023-12-26", category: "M&A", text: "Acquired 35% of SOL Company for Trading for SAR 5m and consolidated it as a controlled subsidiary.", source: "6017_JAHEZ/2023_Annual_filed2024-03-27.pdf p.55"}
+  - {date: "2024-02-04", category: "M&A", text: "Bought the remaining 40% of Joint Preparation Company for Meals (cloud kitchens) for SAR 4.8m plus a contingent amount, taking the stake to 100%.", source: "6017_JAHEZ/2024_Annual_filed2025-03-17.pdf p.58"}
+  - {date: "2024", category: "financing", text: "Bought back treasury shares for SAR 91.2m and invested SAR 103m in equity-accounted investees (Global Fintech 20.62%, GrubTech 11.24%).", source: "6017_JAHEZ/2024_Annual_filed2025-03-17.pdf p.10; 6017_JAHEZ/2026_Q3_filed2026-11-17.pdf p.9"}
+  - {date: "2024-12-10", category: "regulation", text: "Shares moved from Nomu to the Main Market (TASI) under code 6017.", source: "6017_JAHEZ/2024_Annual_filed2025-03-17.pdf p.12"}
+  - {date: "2025", category: "financing", text: "Drew SAR 150m of Islamic facilities; borrowings were SAR 165m at 31 December 2025 and SAR 159m at 30 September 2026.", source: "6017_JAHEZ/2025_Annual_filed2026-04-07.pdf p.8, p.11; 6017_JAHEZ/2026_Q3_filed2026-11-17.pdf p.3"}
+  - {date: "2025-10-06", category: "M&A", text: "Acquired 76.56% of Snoonu (Qatar and Oman) for SAR 802m in cash, 1,538,460 treasury shares and a SAR 75m capital injection; goodwill SAR 657m; Snoonu added SAR 228m of revenue and a SAR 3.2m loss in FY2025.", source: "6017_JAHEZ/2025_Annual_filed2026-04-07.pdf p.62-63"}
+  - {date: "2026 Q1", category: "capacity", text: "Logi Kuwait Company for Consumer Orders Delivery (established May 2025) started operations.", source: "6017_JAHEZ/2026_Q3_filed2026-11-17.pdf p.9"}
+what_it_means:
+  improved: "Revenue grew 13.2% a year from FY2022 to FY2025 and 37.5% in 9M 2026, and operating cash flow rose 61.4% in 9M 2026 to SAR 87.5m."
+  weakened: "Profitability fell after FY2024: the net margin dropped from 8.5% to 3.1% in FY2025 and -1.3% in 9M 2026, and delivery revenue inside Saudi Arabia fell 8.6% in FY2025 and 10.0% in 9M 2026."
+  why: "Marketing, G&A and technology costs grew faster than revenue, Snoonu added revenue but also amortisation, losses and a minority share, and the SAR 802m cash payment for Snoonu cut cash from SAR 1,054m to SAR 428m, so finance income fell (SAR 2.4m in 9M 2026 vs SAR 30.3m)."
+  uncertain: "Snoonu's own revenue and profit for 9M 2026 are not disclosed, so organic growth cannot be measured, and the statements do not explain why delivery revenue inside Saudi Arabia fell."
+confidence_overall: "Medium"
+data_notes:
+- Listed on Nomu from 5 January 2022 and on the Main Market from 10 December 2024; all periods are audited or reviewed statements. Year-end 31 December.
+- D&A (cash-flow 'Depreciation and amortization', which includes right-of-use depreciation) was missing from the XBRL data and was added from the cash-flow
+  statements for FY2022-9M 2026; the FY2025 goodwill impairment of SAR 11.8m was added as an impairment add-back.
+- 'Capex corrected in every period to include payments for intangible assets (the XBRL held only property and equipment): FY2022 SAR 40.1m, FY2023 SAR 36.8m,
+  FY2024 SAR 195m, FY2025 SAR 88.3m, 9M 2025 SAR 39.1m.'
+- FY2025 borrowings corrected to SAR 165m (long-term SAR 149m + short-term SAR 15.8m; the XBRL added current lease liabilities) and lease liabilities to
+  SAR 290m (the XBRL held only the non-current part). Nil borrowings recorded for FY2021, FY2022 and FY2024.
+- 'Net debt deducts short-term deposits held outside cash: SAR 200m at end-2022 and SAR 108m at end-2023, so net debt was -SAR 974m (FY2022) and -SAR 1,119m
+  (FY2023), -10.9x and -7.1x EBITDA.'
+- 9M 2026 has no XBRL file; every 9M 2026 figure was read from the 2026 Q3 interim PDF. The FY2025 AFS is a fully scanned PDF read visually and by OCR.
+- Revenue is net of customer promotions and cash back (segment note). Our operating income includes the unrealised fair-value results on start-up investments,
+  which sit below the printed 'Operating profit' (FY2025 printed SAR 49.4m vs our SAR 38.1m).
+- The FY2024 cash-flow add-back for finance costs (SAR 5.3m) differs from the income-statement line (SAR 4.5m) in both the FY2024 and FY2025 AFS; not a
+  restatement.
+- Joint Preparation Company for Meals is treated as consolidated throughout (60% subsidiary before February 2024), despite the acquisition-style table in
+  the FY2024 AFS; open question.
+- Cash includes current accounts with banks of SAR 367.4m at end-2025 (SAR 289.5m at 30 Sep 2026) that, per note 8, include amounts collected on behalf
+  of customers and settled weekly against proceeds due to customers. Net cash is therefore larger than the company's own funds; the matching liability is
+  in payables. Short-term deposits of SAR 47.3m (end-2025) and SAR 11.0m (30 Sep 2026) are inside cash with maturity under three months, so they are not
+  deducted again.

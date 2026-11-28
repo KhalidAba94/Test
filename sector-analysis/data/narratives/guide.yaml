@@ -1,0 +1,63 @@
+as_of: "25 November 2026 (filings to 30 September 2026; FY2027 budget approved 24 November 2026)"
+intro: >-
+  Financial analysis of Saudi Main Market companies by sector for FY2022–FY2025 and the first nine months of 2026, built
+  sector by sector from the 'Tadawul Financials' archive of Saudi Exchange filings: audited annual and reviewed interim
+  financial statements as PDFs, plus the exchange's XBRL renderings. Energy and Banks were the pilots and are fully
+  reviewed; further sectors are added in waves under the same method. Every figure is traced to its archive file and
+  XBRL row and, where the full trace has been run, to the PDF page where it is printed. A saudiexchange.sa link is given
+  where the archive's manifest provides one.
+sections:
+  - heading: "Start here: the five rules behind every number"
+    lines:
+      - "Full years (FY2022–FY2025) and the 2026 year-to-date (9M 2026 = 1 January to 30 September) are always shown apart. 9M 2026 is compared only with 9M 2025, never with a full year."
+      - "Each year uses the latest restated figure: the comparative in the most recent filing that shows that year. Where this differs from what was first reported, the figure carries an R chip and the original value is shown."
+      - "Sector totals and ratios are built from summed company figures. A sector cost-to-income ratio is total costs ÷ total income, not an average of bank ratios."
+      - "Sector growth uses a matched sample: only companies with figures in both periods. The number of companies in each total is shown."
+      - "Like-for-like growth separates the existing business from acquisitions, disposals, currency and new capacity. Where the filings do not allow this, it says 'not determinable' instead of guessing."
+  - heading: "Periods"
+    lines:
+      - "Compound annual growth (CAGR) 2022–25 = (FY2025 ÷ FY2022)^(1/3) − 1, i.e. three years of compounding. A 2022–26 CAGR needs full-year 2026 results (expected Feb–Apr 2027) and is not shown."
+      - "Growth and CAGR are 'n.m.' (not meaningful) when the starting value is zero, negative or below SAR 10m, or when a profit turns into a loss. Margins are 'n.m.' when revenue is below SAR 10m (e.g. SARCO, an investment holding with almost no revenue)."
+      - "9M ratios that divide by a balance-sheet amount (ROE, ROA, cost of risk, margin on assets) are annualised (× 12/9). Income figures are never annualised."
+      - "All 16 companies report to 31 December; no fiscal-year changes were found."
+  - heading: "Numbers and labels"
+    lines:
+      - "Units: SAR million unless stated. Filings in SAR or SAR '000 were converted using the rounding level declared in each filing, then checked against the next year's comparatives to catch unit errors."
+      - "Click (or tap) any underlined figure to see its source file, the XBRL row or PDF page, whether it was restated, and a link to the original on saudiexchange.sa where the archive's manifest provides one. Calculated figures show the formula and the input values."
+      - "A small number after a sector figure or ratio (e.g. 5) means only that many companies had the inputs for that period; hover over it or tap it to see which were left out."
+      - "Chips: R = restated comparative used; C = calculated by us (formula shown); PDF = taken from the PDF because the XBRL file was missing, unreadable or mis-tagged. No chip = disclosed as printed."
+      - "A dash (–) means the figure is not available. Missing figures are never filled with zeros or estimates."
+      - "Yellow cells and shaded chart areas are partial-year (9M) figures. On a phone, period tables open on FY2024–FY2025 and the CAGR; use the switch above each table to see FY2022–FY2023 or 9M 2026."
+      - "Cost of risk is shown in basis points (1 bp = 0.01%). ROA and the margin on assets are shown with two decimals."
+  - heading: "Reported vs like-for-like growth"
+    lines:
+      - "Reported growth − perimeter (acquisitions/disposals) − FX translation − hyperinflation − accounting/presentation changes = organic growth."
+      - "Organic growth − revenue from new capacity added in the period (new rigs, vessels, branches) = like-for-like growth of the existing business."
+      - "Price, tariff and rate changes in the existing business are part of like-for-like growth. They are not treated as non-organic."
+      - "The Saudi riyal is pegged to the US dollar, so FX is nil for SAR and USD business; it matters only for other currencies (e.g. Turkish lira)."
+      - "Each adjustment shows its basis (disclosed, calculated, estimated, not determinable), its source page and a confidence level."
+  - heading: "Sector measures"
+    lines:
+      - "Banks: total operating income (TOI); net special commission income (Islamic banks' net financing and investment income mapped to it); net fees; operating expenses before impairment; cost-to-income = pre-impairment costs ÷ TOI; cost of risk = credit impairment ÷ average net financing; ROE = (attributable profit − Tier 1 sukuk distributions) ÷ average ordinary equity."
+      - "Energy margins (EBITDA, operating, net, capex intensity) divide by revenue plus Aramco's other income related to sales (the 'margin base'), because that income is inside Aramco's operating income, EBITDA and profit. For every other company the margin base equals revenue."
+      - "Energy: IFRS revenue (Aramco's 'other income related to sales', the government compensation for regulated domestic prices, is shown separately and kept out of sector revenue); operating income; EBITDA calculated consistently as operating income + depreciation, amortisation and impairment from the cash-flow statement; net margin; capex; free cash flow."
+      - "Operating measures (production, rigs, fleet) are quoted only where they appear in the filings in the archive; the archive holds financial statements, not operating reports."
+  - heading: "Confidence"
+    lines:
+      - "High: company-disclosed amount or simple arithmetic on audited/reviewed figures."
+      - "Medium: disclosed inputs combined with one stated assumption."
+      - "Low: proxies or management commentary without amounts."
+      - "Not determinable: disclosure is insufficient, so no number is shown."
+  - heading: "Budget and policy section"
+    lines:
+      - "This forward-looking section never feeds the historical figures or like-for-like calculations."
+      - "It separates the final approved budget (FY2027, approved 24 Nov 2026) from the preliminary pre-budget statement (30 Sep 2026), ministerial statements, regulatory measures and our own interpretation."
+      - "Each impact gives a channel, direction, timing, significance and confidence. It is quantified only where the evidence supports it."
+  - heading: "Technical note: applying the template to the remaining sectors"
+    technical: true
+    lines:
+      - "1. Download the sector folder and exclude files marked STALE / DO-NOT-USE or UNKNOWN-PERIOD (they exist in other sectors of the archive)."
+      - "2. Run build/run_pipeline.sh: XBRL parsing → metric mapping → latest-restated selection → PDF page location → overrides → derived metrics → source register → analytics."
+      - "3. Add config/mapping_<sector>.json (labels per metric) and the sector entry in config/sectors.json (top line, ratios, constituents)."
+      - "4. Review cross_document_checks.csv (restatements and unit errors) and record PDF-based corrections in data/overrides.csv with page and reason."
+      - "5. Write the adjustments register and one narrative file per company from the template; then run the independent review before publishing."

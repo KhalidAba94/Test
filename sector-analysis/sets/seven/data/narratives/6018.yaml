@@ -1,0 +1,171 @@
+ticker: '6018'
+headline: >-
+  Sport Clubs, listed in July 2025, grew revenue from SAR 268m (FY2022) to SAR 376m (FY2025), 12.0% a year, and attributable profit
+  from SAR 22.7m to SAR 41.2m; in 9M 2026 revenue rose 17.2% to SAR 319m and attributable profit 53.8% to SAR 40.9m, helped by the absence
+  of the SAR 4.7m IPO costs of 9M 2025.
+lfl_basis:
+  definition_used: >-
+    Standard bridge on IFRS revenue. The group is the parent and one service subsidiary throughout, operating men's and women's fitness
+    centres in Saudi Arabia plus a small sport-solutions business (building and equipping sports facilities for clients). There were
+    no acquisitions or disposals and no foreign operations, so organic growth equals reported growth. No club count, openings or same-club
+    revenue is disclosed, so like-for-like growth is not determinable.
+  perimeter_changes:
+  - event: 'None: parent plus Third Amaken Sports (100%) in every period'
+    date: FY2022-9M2026
+    effect: nil
+    source: 6018_SPORT_CLUBS/2023_Annual_filed2025-11-13.pdf p.9; 6018_SPORT_CLUBS/2026_Q3_filed2026-11-07.pdf p.8
+  capacity_changes:
+  - event: New branches under construction each year (capex SAR 33.0m FY2022 to SAR 118m FY2025; SAR 133m in 9M 2026)
+    date: FY2022-9M2026
+    effect: not determinable
+    source: 6018_SPORT_CLUBS/2025_Annual_filed2026-03-15.pdf p.9, p.23
+  fx_exposure: 'None: all operations in Saudi Arabia.'
+  price_volume_support: 'Not determinable: revenue by service type and by men’s, women’s and sport-solutions segments is given, but
+    not members, clubs or prices.'
+  confidence: Medium (perimeter and FX nil with High confidence; new capacity not determinable)
+price_volume:
+- period: 9M 2026 vs 9M 2025
+  text: >-
+    Revenue rose SAR 47m (+17.2%). Men's centres rose 24.8% (SAR 172m to SAR 215m) and women's centres 33.7% (SAR 74.9m to SAR 100m),
+    while sport-solutions contracts fell from SAR 24.7m to SAR 3.4m. Members, clubs and prices are not disclosed.
+  basis: disclosed (segment revenue); split not determinable
+  confidence: High for the amounts
+  source: 6018_SPORT_CLUBS/2026_Q3_filed2026-11-07.pdf p.20
+  refs:
+  - 6018-9M2026-REV
+  - 6018-9M2025-REV
+- period: FY2025 vs FY2024
+  text: >-
+    Revenue rose SAR 49m (+14.9%). Subscriptions rose 18.9% (SAR 260m to SAR 310m); men's centres +17.8% and women's centres +13.5%;
+    sport solutions -2.2%.
+  basis: disclosed (revenue by type and segment)
+  confidence: High for the amounts
+  source: 6018_SPORT_CLUBS/2025_Annual_filed2026-03-15.pdf p.33, p.40
+  refs:
+  - 6018-FY2025-REV
+  - 6018-FY2024-REV
+profit_and_margin:
+  drivers:
+  - period: FY2023
+    driver: >-
+      Revenue +1.0% to SAR 271m and gross profit +4.5% (gross margin 26.7% vs 25.8%). Finance cost rose to SAR 27.0m (SAR 25.1m) and
+      lease penalties of SAR 2.8m were booked. Attributable profit +10.6% to SAR 25.1m. EBITDA margin 41.5% (FY2022: 40.1%); net margin
+      9.3%; ROE 18.8%.
+    source: 6018_SPORT_CLUBS/2024_Annual_filed2025-11-13.pdf p.6, p.35; 6018_SPORT_CLUBS/2023_Annual_filed2025-11-13.pdf p.6
+    refs:
+    - 6018-FY2023-REV
+    - 6018-FY2023-GP
+    - 6018-FY2023-NI_ATTR
+    - 6018-FY2023-EBITDA_C
+  - period: FY2024
+    driver: >-
+      Revenue +21.0% to SAR 327m: sport-solutions contracts added SAR 24.1m and women's centres rose 30.3%, while men's centres rose
+      5.6%. Gross profit +33.6% (gross margin 29.5%). After SAR 2.9m of IPO costs, attributable profit rose 43.9% to SAR 36.1m (restated).
+      EBITDA margin 41.0%; net margin 11.0%; ROE 23.6%. Operating cash flow fell 22.4% as receivables and prepayments rose, so free
+      cash flow was only SAR 11.9m.
+    source: 6018_SPORT_CLUBS/2025_Annual_filed2026-03-15.pdf p.7, p.9; 6018_SPORT_CLUBS/2024_Annual_filed2025-11-13.pdf p.42
+    refs:
+    - 6018-FY2024-REV
+    - 6018-FY2024-GP
+    - 6018-FY2024-NI_ATTR
+    - 6018-FY2024-CFO
+    - 6018-FY2024-FCF
+  - period: FY2025
+    driver: >-
+      Revenue +14.9% to SAR 376m, led by subscriptions (+18.9%). Gross profit +16.3% (gross margin 29.9%). IPO costs rose to SAR 4.7m
+      and finance cost to SAR 35.1m (SAR 31.4m), including bank charges of SAR 9.9m. Attributable profit +14.0% to SAR 41.2m. EBITDA
+      margin 40.2%; net margin 10.9%; ROE 18.9%. The IPO raised SAR 78m of new capital.
+    source: 6018_SPORT_CLUBS/2025_Annual_filed2026-03-15.pdf p.7, p.28, p.33-34
+    refs:
+    - 6018-FY2025-REV
+    - 6018-FY2025-GP
+    - 6018-FY2025-NI_ATTR
+    - 6018-FY2025-FIN_COST
+  - period: 9M2026
+    driver: >-
+      Revenue +17.2% to SAR 319m and gross profit +31.0% (gross margin 32.1% vs 28.7%) as club revenue grew 27.5% and the lower-margin
+      sport-solutions contracts fell away. No IPO costs (SAR 4.7m in 9M 2025). Attributable profit +53.8% to SAR 40.9m. EBITDA margin
+      41.8% (39.5%); net margin 12.8% (9.8%); ROE 18.9% (annualised). Capex rose to SAR 133m (SAR 76.8m), so free cash flow fell to
+      SAR 39.1m despite operating cash flow of SAR 172m.
+    source: 6018_SPORT_CLUBS/2026_Q3_filed2026-11-07.pdf p.5, p.7, p.20
+    refs:
+    - 6018-9M2026-REV
+    - 6018-9M2026-GP
+    - 6018-9M2026-NI_ATTR
+    - 6018-9M2026-CAPEX
+    - 6018-9M2026-FCF
+  - period: FY2022-FY2025
+    driver: >-
+      Lease adjustments (gains on lease terminations and remeasurements, SAR 0.7m-2.1m a year) recur and are not treated as one-offs.
+      Net debt including leases stayed between SAR 409m and SAR 467m while EBITDA rose, so net debt / EBITDA fell from 3.8x (FY2022)
+      to 3.1x (FY2025).
+    source: 6018_SPORT_CLUBS/2025_Annual_filed2026-03-15.pdf p.34; 6018_SPORT_CLUBS/2024_Annual_filed2025-11-13.pdf p.35
+    refs:
+    - 6018-FY2022-NET_DEBT
+    - 6018-FY2025-NET_DEBT
+    - 6018-FY2025-EBITDA_C
+  one_offs:
+  - item: Penalties and compensations arising from lease agreements
+    period: FY2023
+    amount_sar_m: -2.8
+    line: Other income, net
+    source: 6018_SPORT_CLUBS/2024_Annual_filed2025-11-13.pdf p.35
+    tax_nci: 'No minority interests; zakat effect not disclosed: not determinable, profit kept as reported'
+  - item: Listing and IPO expenses
+    period: FY2024
+    amount_sar_m: -2.9
+    line: Listing and Initial Public Offering Expenses
+    source: 6018_SPORT_CLUBS/2025_Annual_filed2026-03-15.pdf p.7
+    tax_nci: 'No minority interests; zakat effect not disclosed: not determinable, profit kept as reported'
+  - item: Listing and IPO expenses
+    period: FY2025
+    amount_sar_m: -4.7
+    line: Listing and Initial Public Offering Expenses
+    source: 6018_SPORT_CLUBS/2025_Annual_filed2026-03-15.pdf p.7
+    tax_nci: 'No minority interests; zakat effect not disclosed: not determinable, profit kept as reported'
+  - item: Listing and IPO expenses (all incurred by Q3 2025)
+    period: 9M2025
+    amount_sar_m: -4.7
+    line: Listing and Initial Public Offering Expenses
+    source: 6018_SPORT_CLUBS/2026_Q3_filed2026-11-07.pdf p.5, p.23
+    tax_nci: 'No minority interests; zakat effect not disclosed: not determinable, profit kept as reported'
+developments:
+- date: '2022-09-26'
+  category: regulation
+  text: Converted from a limited liability company to a closed joint stock company.
+  source: 6018_SPORT_CLUBS/2026_Q3_filed2026-11-07.pdf p.8
+- date: '2024-08-22'
+  category: financing
+  text: Shareholders approved offering 30% of post-issue capital in an IPO and removed the statutory reserve (SAR 15.9m moved to retained
+    earnings).
+  source: 6018_SPORT_CLUBS/2026_Q3_filed2026-11-07.pdf p.8; 6018_SPORT_CLUBS/2024_Annual_filed2025-11-13.pdf p.44
+- date: '2025-07-22'
+  category: financing
+  text: Listed on Tadawul (symbol 6018); 10.4m new shares at SAR 7.5 raised SAR 78m, with 23.92m existing shares sold by shareholders.
+  source: 6018_SPORT_CLUBS/2025_Annual_filed2026-03-15.pdf p.28; 6018_SPORT_CLUBS/2026_Q3_filed2026-11-07.pdf p.8
+what_it_means:
+  improved: Revenue grew 12.0% a year from FY2022 to FY2025 and 17.2% in 9M 2026, and the gross margin rose from 25.8% (FY2022) to 32.1%
+    in 9M 2026; attributable profit rose 53.8% in 9M 2026.
+  weakened: Free cash flow is thin because capex keeps rising (SAR 133m in 9M 2026, 41.6% of revenue), and lease liabilities rose to
+    SAR 436m at 30 Sep 2026 (SAR 373m at end-2025).
+  why: Men’s and women’s club revenue grew 24.8% and 33.7% in 9M 2026 as new branches opened, while one-time IPO costs dropped out;
+    part of FY2024 growth came from lumpy sport-solutions contracts, which fell away in 2026.
+  uncertain: No club or member counts are disclosed, so growth from new clubs and from existing clubs cannot be separated, and the 9M
+    2025 comparatives are not restated for the FY2025 annual adjustments.
+confidence_overall: Medium
+data_notes:
+- 'Listed on 22 July 2025. FY2022-FY2024 figures come from audited pre-IPO statements in the archive (filed Nov 2025): FY2021 balance
+  sheet and FY2022 from the FY2023 annual (consolidated, restated under note 33), FY2023 income statement and cash flow from the FY2024
+  annual, FY2023 balance sheet from the FY2025 annual (restated). All read from the PDFs (no XBRL).'
+- 'Restatement (FY2023 annual, note 33): SOCPA ruling on right-of-use depreciation of leased land during construction; 2022 net profit
+  24.3m (standalone) to 22.7m. Revenue and finance cost unchanged.'
+- 'Restatement (FY2025 annual, note 34, cited as note 35 on the face): work-permit and residency fees expensed and right-of-use depreciation
+  of buildings on leased land expensed (SOCPA, 30 Oct 2025). FY2024 cost of revenue 228.9m to 230.7m; profit 38.1m to 36.1m; FY2023
+  and FY2024 total assets and equity are shown as restated.'
+- The 2026 Q3 interim does not restate its 9M 2025 comparatives (opening 2025 equity 168.8m, pre-restatement), so 9M 2025 is on the
+  old basis while FY2024 is restated.
+- 'Corrected from the PDF balance sheets: lease liabilities include the current portion (the XBRL took only the non-current portion for FY2024, FY2025 and
+  9M 2025), and 9M 2026 lease liabilities are taken from the interim.'
+- Finance costs include bank charges (SAR 9.9m in FY2025, SAR 6.4m in FY2024). Interest on bank deposits (SAR 0.7m in FY2025) sits in other
+  income, inside our operating income.
+- CFO is after zakat and end-of-service payments; lease and finance costs paid are in financing.

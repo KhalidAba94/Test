@@ -1,0 +1,11 @@
+ticker,period,flag,item,detail
+2083,FY2022,relation,EBITDA above revenue,EBITDA 2261.6 > REV 1148.2
+2083,FY2023,restated_big,REV,1124.9 -> 6383.3
+2083,9M2026,missing,DA_CF,
+2083,9M2026,missing,CFO,
+2083,9M2026,missing,CAPEX,
+2083,FY2023,jump,REV,1148.2 -> 6383.3 (+456%)
+2080,9M2026,missing,DA_CF,
+2080,9M2026,missing,CFO,
+2080,9M2026,missing,CAPEX,
+2081,FY2022,restated_big,REV,822.0 -> 187.1

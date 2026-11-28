@@ -1,0 +1,423 @@
+ticker: '2286'
+company: The Fourth Milling Company
+perimeter_changes:
+- event: Subsidiaries, acquisitions or disposals FY2022-9M2026
+  type: acquisition
+  status: not found
+  period: FY2022-9M2026
+  unit: SAR m
+  source: 2286_FOURTH_MILLING/2025_Annual_filed2026-03-15.pdf
+  page: 3
+  quote: ''
+  note: Stand-alone (not consolidated) statements in every period; no business-combination note. Intangible additions of SAR 50.4m in FY2022 relate
+    to the milling licence period, not a business.
+segments:
+- period: FY2022
+  segment: Dammam
+  basis: geographic
+  revenue: 243.9
+  profit: null
+  unit: SAR m
+  source: 2286_FOURTH_MILLING/2023_Annual_filed2024-11-07.pdf
+  page: 27
+- period: FY2022
+  segment: Madinah
+  basis: geographic
+  revenue: 176.94
+  profit: null
+  unit: SAR m
+  source: 2286_FOURTH_MILLING/2023_Annual_filed2024-11-07.pdf
+  page: 27
+- period: FY2022
+  segment: Al-Kharj
+  basis: geographic
+  revenue: 157.48
+  profit: null
+  unit: SAR m
+  source: 2286_FOURTH_MILLING/2023_Annual_filed2024-11-07.pdf
+  page: 27
+- period: FY2023 (FY2024 annual basis)
+  segment: Dammam
+  basis: geographic
+  revenue: 249.08
+  profit: null
+  unit: SAR m
+  source: 2286_FOURTH_MILLING/2024_Annual_filed2025-03-16.pdf
+  page: 30
+- period: FY2023 (FY2024 annual basis)
+  segment: Madinah
+  basis: geographic
+  revenue: 174.28
+  profit: null
+  unit: SAR m
+  source: 2286_FOURTH_MILLING/2024_Annual_filed2025-03-16.pdf
+  page: 30
+- period: FY2023 (FY2024 annual basis)
+  segment: Al-Kharj
+  basis: geographic
+  revenue: 134.73
+  profit: null
+  unit: SAR m
+  source: 2286_FOURTH_MILLING/2024_Annual_filed2025-03-16.pdf
+  page: 30
+- period: FY2024 (FY2024 annual basis)
+  segment: Dammam
+  basis: geographic
+  revenue: 253.7
+  profit: null
+  unit: SAR m
+  source: 2286_FOURTH_MILLING/2024_Annual_filed2025-03-16.pdf
+  page: 29
+- period: FY2024 (FY2024 annual basis)
+  segment: Madinah
+  basis: geographic
+  revenue: 200.84
+  profit: null
+  unit: SAR m
+  source: 2286_FOURTH_MILLING/2024_Annual_filed2025-03-16.pdf
+  page: 29
+- period: FY2024 (FY2024 annual basis)
+  segment: Al-Kharj
+  basis: geographic
+  revenue: 174.48
+  profit: null
+  unit: SAR m
+  source: 2286_FOURTH_MILLING/2024_Annual_filed2025-03-16.pdf
+  page: 29
+- period: FY2024
+  segment: Dammam
+  basis: geographic
+  revenue: 250.36
+  profit: null
+  unit: SAR m
+  source: 2286_FOURTH_MILLING/2025_Annual_filed2026-03-15.pdf
+  page: 23
+- period: FY2024
+  segment: Madinah
+  basis: geographic
+  revenue: 196.72
+  profit: null
+  unit: SAR m
+  source: 2286_FOURTH_MILLING/2025_Annual_filed2026-03-15.pdf
+  page: 23
+- period: FY2024
+  segment: Al-Kharj
+  basis: geographic
+  revenue: 170.4
+  profit: null
+  unit: SAR m
+  source: 2286_FOURTH_MILLING/2025_Annual_filed2026-03-15.pdf
+  page: 23
+- period: FY2025
+  segment: Dammam
+  basis: geographic
+  revenue: 241.37
+  profit: null
+  unit: SAR m
+  source: 2286_FOURTH_MILLING/2025_Annual_filed2026-03-15.pdf
+  page: 23
+- period: FY2025
+  segment: Madinah
+  basis: geographic
+  revenue: 225.65
+  profit: null
+  unit: SAR m
+  source: 2286_FOURTH_MILLING/2025_Annual_filed2026-03-15.pdf
+  page: 23
+- period: FY2025
+  segment: Al-Kharj
+  basis: geographic
+  revenue: 193.39
+  profit: null
+  unit: SAR m
+  source: 2286_FOURTH_MILLING/2025_Annual_filed2026-03-15.pdf
+  page: 23
+- period: 9M2025
+  segment: Dammam
+  basis: geographic
+  revenue: 169.44
+  profit: null
+  unit: SAR m
+  source: 2286_FOURTH_MILLING/2026_Q3_filed2026-11-04.pdf
+  page: 16
+- period: 9M2025
+  segment: Madinah
+  basis: geographic
+  revenue: 161.3
+  profit: null
+  unit: SAR m
+  source: 2286_FOURTH_MILLING/2026_Q3_filed2026-11-04.pdf
+  page: 16
+- period: 9M2025
+  segment: Al-Kharj
+  basis: geographic
+  revenue: 138.19
+  profit: null
+  unit: SAR m
+  source: 2286_FOURTH_MILLING/2026_Q3_filed2026-11-04.pdf
+  page: 16
+- period: 9M2026
+  segment: Dammam
+  basis: geographic
+  revenue: 213.24
+  profit: null
+  unit: SAR m
+  source: 2286_FOURTH_MILLING/2026_Q3_filed2026-11-04.pdf
+  page: 15
+- period: 9M2026
+  segment: Madinah
+  basis: geographic
+  revenue: 171.59
+  profit: null
+  unit: SAR m
+  source: 2286_FOURTH_MILLING/2026_Q3_filed2026-11-04.pdf
+  page: 15
+- period: 9M2026
+  segment: Al-Kharj
+  basis: geographic
+  revenue: 143.03
+  profit: null
+  unit: SAR m
+  source: 2286_FOURTH_MILLING/2026_Q3_filed2026-11-04.pdf
+  page: 15
+revenue_drivers:
+- period: FY2023
+  driver: 'Gross revenue by product (FY2023 annual): flour 370.8 (358.6), bran 161.4 (159.4), feed 49.3 (66.8), less discounts and promotions
+    15.9 (6.4)'
+  value: 565.64
+  unit: SAR m
+  source: 2286_FOURTH_MILLING/2023_Annual_filed2024-11-07.pdf
+  page: 40
+  quote: Flour 370,763,830 358,576,791
+- period: FY2024
+  driver: 'Gross revenue by product (FY2024 annual): flour 426.0, bran 182.5, feed 53.3, less discounts and promotions 32.8 (FY2023 re-presented:
+    23.4)'
+  value: 629.03
+  unit: SAR m
+  source: 2286_FOURTH_MILLING/2024_Annual_filed2025-03-16.pdf
+  page: 45
+  quote: Flour 425,987,899 370,763,830
+- period: FY2025
+  driver: 'Revenue by customer sector: corporate 615.8 (576.2), hypermarkets 17.0 (15.6), individuals 27.6 (25.7); exports 0.06; no product split
+    from FY2025'
+  value: 660.41
+  unit: SAR m
+  source: 2286_FOURTH_MILLING/2025_Annual_filed2026-03-15.pdf
+  page: 36
+  quote: Corporate sector 615,824,601 576,246,876
+- period: 9M2026
+  driver: 'Nine-month revenue by sector: corporate 499.3 (437.6), hypermarkets 9.7 (10.7), individuals 18.9 (20.6); exports 1.6 (nil)'
+  value: 527.86
+  unit: SAR m
+  source: 2286_FOURTH_MILLING/2026_Q3_filed2026-11-04.pdf
+  page: 23
+  quote: Corporate 175,727,999 154,502,907 499,272,997 437,604,608
+- period: FY2025
+  driver: Subsidised wheat from GFSA at SAR 180 per tonne, unchanged since 2017 (same wording in the 2026 Q3 interim)
+  value: 180
+  unit: SAR per tonne
+  source: 2286_FOURTH_MILLING/2025_Annual_filed2026-03-15.pdf
+  page: 11
+  quote: SR 180 per metric ton since 2017
+- period: FY2022-9M2026
+  driver: Volumes, capacity, regulated selling prices
+  status: not found
+  value: null
+  unit: count
+  source: 2286_FOURTH_MILLING/2025_Annual_filed2026-03-15.pdf
+  page: 11
+  quote: ''
+  note: No tonnes, capacity or price data; unlike the other mills the note on GFSA-regulated flour prices was not found in the Fourth Milling
+    statements.
+one_offs:
+- period: FY2023
+  item: Fines and penalties
+  amount: 4.08
+  unit: SAR m
+  pnl_line: Other expense (below operating profit, inside our operating income)
+  recurring: false
+  source: 2286_FOURTH_MILLING/2024_Annual_filed2025-03-16.pdf
+  page: 46
+  quote: Fines and penalties 4,000,000 4,079,205
+- period: FY2024
+  item: Provision for a GFSA fine after an inspection on 24 Oct 2024 (Flour Mills Production Regulation); annulled by a final court judgment on
+    27 Oct 2026
+  amount: 4.0
+  unit: SAR m
+  pnl_line: Other expenses, net
+  recurring: false
+  source: 2286_FOURTH_MILLING/2024_Annual_filed2025-03-16.pdf
+  page: 46
+  quote: Fines and penalties 4,000,000 4,079,205
+- period: FY2024
+  item: Write-off of capital work in progress (in IMPAIR_CF, already outside EBITDA)
+  amount: 4.4
+  unit: SAR m
+  pnl_line: Other expenses, net
+  recurring: false
+  source: 2286_FOURTH_MILLING/2024_Annual_filed2025-03-16.pdf
+  page: 46
+  quote: Write-off of capital work in progress 4,402,937 -
+- period: FY2025
+  item: Gain on termination of lease (below SAR 1m; not used)
+  amount: 0.84
+  unit: SAR m
+  pnl_line: Other income / (expenses)
+  recurring: false
+  source: 2286_FOURTH_MILLING/2025_Annual_filed2026-03-15.pdf
+  page: 28
+  quote: ''
+restatements:
+- period_restated: FY2021 (1 Jan 2022) and FY2022
+  item: Lease liabilities +SAR 111.8m, right-of-use assets +SAR 111.8m, PP&E -SAR 16.4m; FY2022 net profit SAR 164.9m to SAR 163.0m; total assets
+    SAR 1,151.0m to SAR 1,246.4m
+  from: 164.92
+  to: 163.04
+  unit: SAR m
+  reason: Restatement of prior-period financial statements, FY2023 annual note 29 (leases not reassessed after the 2021 milling licence; buildings
+    on leased land over-depreciated)
+  source: 2286_FOURTH_MILLING/2023_Annual_filed2024-11-07.pdf
+  page: 47
+  quote: management of the Company has identified that they have not reassessed the value of lease liabilities after obtaining flour milling license
+    in 2021
+- period_restated: FY2023
+  item: Revenue SAR 565.6m to SAR 558.1m; direct costs +SAR 5.7m; selling -SAR 15.9m; G&A +SAR 2.6m
+  from: 565.64
+  to: 558.09
+  unit: SAR m
+  reason: 'Comparative figures, FY2024 annual note 30: rebates reclassified as a reduction of revenue; expenses allocated by cost centre'
+  source: 2286_FOURTH_MILLING/2024_Annual_filed2025-03-16.pdf
+  page: 51
+  quote: Certain rebates have been classified as reduction of revenue instead of expenses.
+- period_restated: FY2024
+  item: Revenue SAR 629.0m to SAR 617.5m (transport costs SAR 11.5m netted); operating cash flow SAR 262.3m to SAR 269.0m; lease liabilities re-split
+    (total unchanged)
+  from: 629.03
+  to: 617.48
+  unit: SAR m
+  reason: Reclassification, FY2025 annual note 31
+  source: 2286_FOURTH_MILLING/2025_Annual_filed2026-03-15.pdf
+  page: 48
+  quote: Transportation costs have been reclassified as a reduction of revenue instead of being presented under selling and distribution expenses.
+- period_restated: 9M2025
+  item: Revenue SAR 479.8m to SAR 468.9m (transport costs SAR 10.8m netted)
+  from: 479.78
+  to: 468.93
+  unit: SAR m
+  reason: Reclassification, 2026 Q3 interim note 27
+  source: 2286_FOURTH_MILLING/2026_Q3_filed2026-11-04.pdf
+  page: 29
+  quote: Revenue 479,775,793 (10,843,276) 468,932,517
+- period_restated: FY2025
+  item: Cash and cash equivalents SAR 63.10m to SAR 63.75m (accrued finance income moved from prepayments)
+  from: 63.1
+  to: 63.75
+  unit: SAR m
+  reason: Reclassification, 2026 Q3 interim note 27; the dataset uses the re-presented figure (R)
+  source: 2286_FOURTH_MILLING/2026_Q3_filed2026-11-04.pdf
+  page: 29
+  quote: Cash and cash equivalents 63,100,434 650,513 63,750,947
+significant_events:
+- date: '2024-01-09'
+  event: Share capital raised from SAR 473.9m to SAR 540.0m by transfer from retained earnings and statutory reserve
+  financial_effect: No cash effect
+  source: 2286_FOURTH_MILLING/2024_Annual_filed2025-03-16.pdf
+  page: 40
+  quote: increase in the Company’s share capital from SR 473,903,170 to SR 540,000,000
+- date: '2024-10-27'
+  event: Listed on the Saudi Exchange
+  financial_effect: IPO costs charged to the selling shareholder (SAR 15.2m)
+  source: 2286_FOURTH_MILLING/2025_Annual_filed2026-03-15.pdf
+  page: 12
+  quote: the Company’s ordinary shares began trading on Tadawul on 24 Rabi Al-Thani 1446H (corresponding to 27 October 2024)
+- date: '2026-10-27'
+  event: GFSA fine of SAR 4m (provided in FY2024) annulled by a final court judgment after the period end
+  financial_effect: Provision of SAR 4.0m still in accrued expenses at 30 Sep 2026; a release would fall after 9M 2026
+  source: 2286_FOURTH_MILLING/2026_Q3_filed2026-11-04.pdf
+  page: 22
+  quote: confirming the annulment of the GFSA committee’s decision against the Company
+- date: '2026-09-30'
+  event: Expansion of the Al-Kharj flour mill and feed plant under construction, completion expected in the second half of 2027; projects under
+    progress SAR 91.5m
+  financial_effect: Capex SAR 85.0m in 9M 2026
+  source: 2286_FOURTH_MILLING/2026_Q3_filed2026-11-04.pdf
+  page: 17
+  quote: Expansion of Flour Mill & feed production plant for Al-Kharj Branch which is expected to be completed by second half of fiscal year 2027.
+- date: '2026'
+  event: Interim dividends of SAR 70.2m paid on 9 Apr 2026 (H2 2025) and SAR 70.2m on 3 Sep 2026 (H1 2026)
+  financial_effect: SAR 140.4m paid in 9M 2026
+  source: 2286_FOURTH_MILLING/2026_Q3_filed2026-11-04.pdf
+  page: 21
+  quote: interim cash dividends of SR 0.13 per share, amounting to SR 70.20 million, for the first half of 2026
+audit_opinion:
+- period: FY2022
+  opinion: unmodified (image page, read by OCR)
+  emphasis_of_matter: null
+  source: 2286_FOURTH_MILLING/2022_Annual_filed2024-11-17.pdf
+  page: 3
+- period: FY2023
+  opinion: unmodified (image page, read by OCR)
+  emphasis_of_matter: null
+  source: 2286_FOURTH_MILLING/2023_Annual_filed2024-11-07.pdf
+  page: 3
+- period: FY2024
+  opinion: unmodified
+  emphasis_of_matter: null
+  source: 2286_FOURTH_MILLING/2024_Annual_filed2025-03-16.pdf
+  page: 3
+- period: FY2025
+  opinion: 'unmodified; other matter: FY2024 audited by another auditor'
+  emphasis_of_matter: null
+  source: 2286_FOURTH_MILLING/2025_Annual_filed2026-03-15.pdf
+  page: 5
+kpis_in_filings:
+- period: FY2017-9M2026
+  kpi: Subsidised wheat purchase price from GFSA
+  value: 180
+  unit: SAR per tonne
+  source: 2286_FOURTH_MILLING/2025_Annual_filed2026-03-15.pdf
+  page: 11
+- period: 9M2026
+  kpi: Export revenue
+  value: 1.59
+  unit: SAR m
+  source: 2286_FOURTH_MILLING/2026_Q3_filed2026-11-04.pdf
+  page: 23
+- period: 9M2026
+  kpi: Projects under progress (mainly Al-Kharj expansion)
+  value: 91.49
+  unit: SAR m
+  source: 2286_FOURTH_MILLING/2026_Q3_filed2026-11-04.pdf
+  page: 17
+special_extractions:
+- item: 'No borrowings: XBRL tagged the current portion of lease liabilities as loans; DEBT corrected to 0 and LEASE_LIAB to the total (stage
+    A)'
+  source: 2286_FOURTH_MILLING/2025_Annual_filed2026-03-15.pdf
+  page: 7
+  quote: ''
+  note: Statement of financial position is a scanned image (read by OCR; liabilities totals cross-checked).
+- item: Short-term murabaha deposits excluded from cash, SAR m
+  values_sar_m:
+    FY2024: 74.06
+    FY2025 (2026 Q3 comparative): 156.22
+    9M2025: 44.38
+    9M2026: 21.07
+  source: 2286_FOURTH_MILLING/2026_Q3_filed2026-11-04.pdf
+  page: 20
+  quote: ''
+  note: From the balance sheets (image pages); net debt (leases less cash) would be lower by these amounts.
+- item: Advances to contractors and suppliers excluded from capex, SAR m
+  values_sar_m:
+    FY2024: 6.69
+    FY2025: 43.02
+    9M2025: 22.43
+    9M2026: 12.64
+  source: 2286_FOURTH_MILLING/2025_Annual_filed2026-03-15.pdf
+  page: 10
+  quote: ''
+  note: Cash-flow statement (image page); capex-related prepayments for machinery and engineering works.
+open_questions:
+- The nature of the FY2023 fines and penalties (SAR 4.08m) is not described.
+- Revenue by product is not given after FY2024, so mix changes in FY2025 and 9M 2026 cannot be shown.
+- Dammam revenue rose 25.8% in 9M 2026 after falling 3.6% in FY2025; the filings do not explain it.
+- Release of the SAR 4m GFSA provision after the October 2026 judgment is expected after the period; not yet in the figures.

@@ -1,0 +1,208 @@
+# Evidence file: The Saudi National Bank (SNB). Amounts SAR '000 unless stated. Pages = physical PDF page (1-based).
+ticker: "1180"
+company: "The Saudi National Bank"
+
+perimeter_changes:
+  - event: "Samba Bank Limited (SBL, Pakistan, 84.51%) ceased to be classified as held for sale in FY2022 after Board reconsidered sale; consolidated again. Still 84.51% subsidiary at 30 Sep 2026."
+    type: disposal
+    date: "FY2022 (reversal of held-for-sale classification)"
+    consideration: null
+    revenue_contribution: null
+    profit_contribution: null
+    pro_forma_revenue: null
+    period: FY2022
+    unit: "SAR '000"
+    source: "1180_SNB/2022_Annual_filed2023-02-06.pdf"
+    page: 108
+    quote: "As disclosed in note 1, SBL ceased to be classified as held for sale and thus has been consolidated in this consolidated financial statements."
+  - event: "Türkiye Finans Katılım Bankası (TFKB), 67.03% subsidiary (Turkish lira), part of International segment with SBL; no change in ownership FY2022-9M2026"
+    type: new_subsidiary
+    date: "n/a (existing)"
+    consideration: null
+    revenue_contribution: {International_segment_total_operating_income_FY2022: 2590820, FY2025: 2162824, 9M2025: 1461288, 9M2026: 2097911}
+    profit_contribution: {International_segment_PBT_FY2024: -111908, FY2025: 196782, 9M2025: 34864, 9M2026: 384221}
+    pro_forma_revenue: null
+    period: "FY2022-9M2026"
+    unit: "SAR '000"
+    source: "1180_SNB/2026_Q3_filed2026-10-28.pdf"
+    page: 10
+    quote: "Türkiye Finans Katılım Bankası A.Ş. (TFKB) 67.03% 67.03% 67.03% Turkish Lira"
+  - event: "Acquisitions, disposals, deconsolidations or discontinued operations FY2023-9M2026"
+    type: disposal
+    status: "not found"
+    date: null
+    consideration: null
+    revenue_contribution: null
+    profit_contribution: null
+    pro_forma_revenue: null
+    period: "FY2023-9M2026"
+    unit: "SAR '000"
+    source: null
+    page: null
+    quote: null
+
+segments:
+  - {period: FY2022, segment: "Retail", basis: operating, revenue: 14627046, profit: null, unit: "SAR '000", source: "1180_SNB/2022_Annual_filed2023-02-06.pdf", page: 73}
+  - {period: FY2022, segment: "Wholesale", basis: operating, revenue: 13854359, profit: null, unit: "SAR '000", source: "1180_SNB/2022_Annual_filed2023-02-06.pdf", page: 73}
+  - {period: FY2022, segment: "Capital Market", basis: operating, revenue: 1931227, profit: null, unit: "SAR '000", source: "1180_SNB/2022_Annual_filed2023-02-06.pdf", page: 73}
+  - {period: FY2022, segment: "International (TFKB, SBL)", basis: operating, revenue: 2590820, profit: 954738, unit: "SAR '000", source: "1180_SNB/2022_Annual_filed2023-02-06.pdf", page: 73, note: "profit (PBT) from FY2023 annual comparative p78"}
+  - {period: FY2022, segment: "Total", basis: operating, revenue: 33003452, profit: 21276779, unit: "SAR '000", source: "1180_SNB/2022_Annual_filed2023-02-06.pdf", page: 73, note: "FY2023 annual comparative re-presents FY2022 total operating income as 33,004,553"}
+  - {period: FY2025, segment: "Retail", basis: operating, revenue: 17168444, profit: 10715358, unit: "SAR '000", source: "1180_SNB/2025_Annual_filed2026-02-04.pdf", page: 75}
+  - {period: FY2025, segment: "Wholesale", basis: operating, revenue: 17441558, profit: 15253927, unit: "SAR '000", source: "1180_SNB/2025_Annual_filed2026-02-04.pdf", page: 75}
+  - {period: FY2025, segment: "Capital Market", basis: operating, revenue: 2421744, profit: 1730666, unit: "SAR '000", source: "1180_SNB/2025_Annual_filed2026-02-04.pdf", page: 75}
+  - {period: FY2025, segment: "International", basis: operating, revenue: 2162824, profit: 196782, unit: "SAR '000", source: "1180_SNB/2025_Annual_filed2026-02-04.pdf", page: 75}
+  - {period: FY2025, segment: "Total", basis: operating, revenue: 39194570, profit: 27896733, unit: "SAR '000", source: "1180_SNB/2025_Annual_filed2026-02-04.pdf", page: 75}
+  - {period: 9M2026, segment: "Retail", basis: operating, revenue: 13688409, profit: 8655370, unit: "SAR '000", source: "1180_SNB/2026_Q3_filed2026-10-28.pdf", page: 39}
+  - {period: 9M2026, segment: "Wholesale", basis: operating, revenue: 13283645, profit: 11886758, unit: "SAR '000", source: "1180_SNB/2026_Q3_filed2026-10-28.pdf", page: 39}
+  - {period: 9M2026, segment: "Capital Market", basis: operating, revenue: 1528787, profit: 1021682, unit: "SAR '000", source: "1180_SNB/2026_Q3_filed2026-10-28.pdf", page: 39}
+  - {period: 9M2026, segment: "International", basis: operating, revenue: 2097911, profit: 384221, unit: "SAR '000", source: "1180_SNB/2026_Q3_filed2026-10-28.pdf", page: 39}
+  - {period: 9M2026, segment: "Total", basis: operating, revenue: 30598752, profit: 21948031, unit: "SAR '000", source: "1180_SNB/2026_Q3_filed2026-10-28.pdf", page: 39}
+  - {period: 9M2025, segment: "Retail", basis: operating, revenue: 12898429, profit: 8090362, unit: "SAR '000", source: "1180_SNB/2026_Q3_filed2026-10-28.pdf", page: 39}
+  - {period: 9M2025, segment: "Wholesale", basis: operating, revenue: 12941021, profit: 11254908, unit: "SAR '000", source: "1180_SNB/2026_Q3_filed2026-10-28.pdf", page: 39}
+  - {period: 9M2025, segment: "Capital Market", basis: operating, revenue: 1966655, profit: 1481060, unit: "SAR '000", source: "1180_SNB/2026_Q3_filed2026-10-28.pdf", page: 39}
+  - {period: 9M2025, segment: "International", basis: operating, revenue: 1461288, profit: 34864, unit: "SAR '000", source: "1180_SNB/2026_Q3_filed2026-10-28.pdf", page: 39}
+  - {period: 9M2025, segment: "Total", basis: operating, revenue: 29267393, profit: 20861194, unit: "SAR '000", source: "1180_SNB/2026_Q3_filed2026-10-28.pdf", page: 39}
+
+revenue_drivers:
+  # Fee income from banking services
+  - {period: FY2022, driver: "Fee income gross / fee expenses / net (as originally reported)", value: "5,125,953 / (1,421,790) / 3,704,163", unit: "SAR '000", source: "1180_SNB/2022_Annual_filed2023-02-06.pdf", page: 69, quote: "Fee income from banking services, net 3,704,163 3,058,631"}
+  - {period: FY2022, driver: "Fee income gross / fee expenses / net (re-presented in FY2023 annual)", value: "5,690,494 / (1,954,562) / 3,735,932", unit: "SAR '000", source: "1180_SNB/2023_Annual_filed2024-02-13.pdf", page: 74, quote: "Fee income from banking services, net 3,925,081 3,735,932"}
+  - {period: FY2023, driver: "Fee income gross / fee expenses / net", value: "5,988,495 / (2,063,414) / 3,925,081", unit: "SAR '000", source: "1180_SNB/2023_Annual_filed2024-02-13.pdf", page: 74, quote: "Total 5,988,495 5,690,494"}
+  - {period: FY2024, driver: "Fee income gross / fee expenses / net (as originally reported)", value: "7,044,521 / (2,444,870) / 4,599,651", unit: "SAR '000", source: "1180_SNB/2024_Annual_filed2025-02-06.pdf", page: 74, quote: "Fee income from banking services, net 4,599,651 3,925,081"}
+  - {period: FY2024, driver: "Fee income gross / fee expenses / net (re-presented in FY2025 annual; 'Others' 938,881 -> 716,371)", value: "6,822,011 / (2,444,870) / 4,377,141", unit: "SAR '000", source: "1180_SNB/2025_Annual_filed2026-02-04.pdf", page: 71, quote: "Fee income from banking services, net 4,931,351 4,377,141"}
+  - {period: FY2025, driver: "Fee income gross / fee expenses / net", value: "7,358,225 / (2,426,874) / 4,931,351", unit: "SAR '000", source: "1180_SNB/2025_Annual_filed2026-02-04.pdf", page: 10, quote: "Fee income from banking services 21 7,358,225 6,822,011"}
+  - {period: 9M2025, driver: "Fee income gross / fee expenses / net (as originally reported)", value: "5,563,953 / (1,823,840) / 3,740,113", unit: "SAR '000", source: "1180_SNB/2025_Q3_filed2025-10-29.pdf", page: 5, quote: "Fee income from banking services, net 1,259,504 1,163,809 3,740,113 3,355,181"}
+  - {period: 9M2025, driver: "Fee income gross / fee expenses / net (comparative in 9M2026 interim)", value: "5,587,256 / (1,823,840) / 3,763,416", unit: "SAR '000", source: "1180_SNB/2026_Q3_filed2026-10-28.pdf", page: 5, quote: "Fee income from banking services, net 1,418,935 1,269,089 3,998,928 3,763,416"}
+  - {period: 9M2026, driver: "Fee income gross / fee expenses / net", value: "5,900,858 / (1,901,930) / 3,998,928", unit: "SAR '000", source: "1180_SNB/2026_Q3_filed2026-10-28.pdf", page: 5, quote: "Fee income from banking services 2,068,873 1,896,832 5,900,858 5,587,256"}
+  # ECL
+  - {period: FY2022, driver: "Net impairment charge for ECL (IS) 1,685,484; of which financing 1,745,924 after recoveries (1,101,863)", value: 1685484, unit: "SAR '000", source: "1180_SNB/2022_Annual_filed2023-02-06.pdf", page: 55, quote: "Recoveries - - (1,101,863) (1,101,863)"}
+  - {period: FY2023, driver: "Net impairment charge for ECL (IS) 922,748; financing 907,898 after recoveries/reassessments (1,676,210) incl. POCI (413,709)", value: 922748, unit: "SAR '000", source: "1180_SNB/2023_Annual_filed2024-02-13.pdf", page: 57, quote: "Recoveries/reassessments - (64) (1,262,437) (413,709) (1,676,210)"}
+  - {period: FY2024, driver: "ECL charge (IS, as re-presented) 1,018,805; financing 1,026,260 after recoveries (2,523,311) incl. POCI (1,366,927)", value: 1018805, unit: "SAR '000", source: "1180_SNB/2025_Annual_filed2026-02-04.pdf", page: 53, quote: "Recoveries - - (1,156,384) (1,366,927) (2,523,311)"}
+  - {period: FY2025, driver: "ECL charge (IS) 1,034,143 = financing 1,061,535 (after recoveries (1,712,992) incl. POCI (394,813); indirect facilities reversal (363,586)) + investments reversal (27,392)", value: 1034143, unit: "SAR '000", source: "1180_SNB/2025_Annual_filed2026-02-04.pdf", page: 53, quote: "Net charge for the year (510,168) 1,085,791 869,899 (383,987) 1,061,535"}
+  - {period: 9M2025, driver: "ECL charge (IS) 92,584; by segment Retail 316,277, Wholesale (302,164), Capital Market (493), International 78,964", value: 92584, unit: "SAR '000", source: "1180_SNB/2026_Q3_filed2026-10-28.pdf", page: 39, quote: "Impairment charge/(reversal) for expected credit losses, net 316,277 (302,164) (493) 78,964 92,584"}
+  - {period: 9M2026, driver: "ECL charge (IS) 2,583; by segment Retail 693,171, Wholesale (882,985), Capital Market (2,663), International 195,060", value: 2583, unit: "SAR '000", source: "1180_SNB/2026_Q3_filed2026-10-28.pdf", page: 39, quote: "Impairment charge/(reversal) for expected credit losses, net 693,171 (882,985) (2,663) 195,060 2,583"}
+  - {period: 9M2026, driver: "Allowance movement components: financing net impairment charge 2,192,670; credit-related commitments net reversal/settlement (1,113,895) incl. POCI (967,426); investments net ECL reversal (2,218)", value: null, unit: "SAR '000", source: "1180_SNB/2026_Q3_filed2026-10-28.pdf", page: 36, quote: "Net impairment charge/(reversal/settlement) (8,874) (101,322) (36,273) (967,426) (1,113,895)"}
+  - {period: 9M2025, driver: "Allowance movement components: financing net impairment charge 1,726,226; credit-related commitments net reversal/settlement (421,772) incl. POCI (396,739)", value: null, unit: "SAR '000", source: "1180_SNB/2026_Q3_filed2026-10-28.pdf", page: 36, quote: "Net impairment charge/(reversal/settlement) (57,998) 60,044 (27,079) (396,739) (421,772)"}
+
+one_offs:
+  - {period: FY2022, item: "IAS 29 net monetary loss (TFKB, Türkiye), in other non-operating expenses; total IAS 29 impact on net income attributable SAR 323m", amount: 308951, unit: "SAR '000", pnl_line: "Other non-operating (expenses), net", recurring: false, source: "1180_SNB/2022_Annual_filed2023-02-06.pdf", page: 23, quote: "The net monetary loss for the year ended 31 December 2022 amounting to SAR 309 million has been recorded in these consolidated financial statements and included under other non-operating expenses."}
+  - {period: FY2023, item: "IAS 29 net monetary loss", amount: 522869, unit: "SAR '000", pnl_line: "Other non-operating expenses, net (per cash flow add-back)", recurring: false, source: "1180_SNB/2023_Annual_filed2024-02-13.pdf", page: 17, quote: "Net monetary loss from the application of IAS 29-Hyperinflationary economies 522,869 308,951"}
+  - {period: FY2024, item: "IAS 29 net monetary loss", amount: 266065, unit: "SAR '000", pnl_line: "Other non-operating", recurring: false, source: "1180_SNB/2025_Annual_filed2026-02-04.pdf", page: 13, quote: "Net monetary loss/(gain) from the application of IAS 29-Hyperinflationary economies 293,267 266,065"}
+  - {period: FY2025, item: "IAS 29 net monetary loss", amount: 293267, unit: "SAR '000", pnl_line: "Other non-operating", recurring: false, source: "1180_SNB/2025_Annual_filed2026-02-04.pdf", page: 13, quote: "Net monetary loss/(gain) from the application of IAS 29-Hyperinflationary economies 293,267 266,065"}
+  - {period: 9M2025, item: "IAS 29 net monetary loss", amount: 247948, unit: "SAR '000", pnl_line: "Other non-operating", recurring: false, source: "1180_SNB/2026_Q3_filed2026-10-28.pdf", page: 8, quote: "Net monetary loss/(gain) from the application of IAS 29-Hyperinflationary economies 247,295 247,948"}
+  - {period: 9M2026, item: "IAS 29 net monetary loss", amount: 247295, unit: "SAR '000", pnl_line: "Other non-operating", recurring: false, source: "1180_SNB/2026_Q3_filed2026-10-28.pdf", page: 8, quote: "Net monetary loss/(gain) from the application of IAS 29-Hyperinflationary economies 247,295 247,948"}
+  - {period: "FY2022-9M2026", item: "IAS 29 restatement impact credited to equity (SoCE, attributable / total): FY2022 461,255 / 661,396; FY2023 1,066,223 / 1,353,379; FY2024 582,782 / 973,273; FY2025 901,122 / 1,114,652; 9M2025 750,985 / 925,614; 9M2026 880,347 / 1,083,699", amount: null, unit: "SAR '000", pnl_line: "Equity (not P&L)", recurring: false, source: "1180_SNB/2026_Q3_filed2026-10-28.pdf", page: 7, quote: "Impact arising from the application of IAS 29 at a foreign subsidiary - - - 50,654 - 54,611 - 775,082 - 880,347"}
+  - {period: FY2025, item: "Recoveries of written-off financing (incl. POCI 394,813) netted in ECL charge", amount: 1712992, unit: "SAR '000", pnl_line: "Impairment charge for ECL, net", recurring: false, source: "1180_SNB/2025_Annual_filed2026-02-04.pdf", page: 53, quote: "Recoveries - - (1,318,179) (394,813) (1,712,992)"}
+  - {period: FY2024, item: "Recoveries of written-off financing (incl. POCI 1,366,927)", amount: 2523311, unit: "SAR '000", pnl_line: "Impairment charge for ECL, net", recurring: false, source: "1180_SNB/2025_Annual_filed2026-02-04.pdf", page: 53, quote: "Recoveries - - (1,156,384) (1,366,927) (2,523,311)"}
+  - {period: "FY2022-9M2026", item: "Gains on non-FVIS financial instruments, net (FY2022 773,837; FY2023 594,425; FY2024 76,584; FY2025 558,687; 9M2025 427,617; 9M2026 334,683)", amount: null, unit: "SAR '000", pnl_line: "Gains on non-FVIS financial instruments, net", recurring: null, source: "1180_SNB/2025_Annual_filed2026-02-04.pdf", page: 10, quote: "Gains on non-FVIS financial instruments, net 558,687 76,584"}
+  - {period: "FY2022-9M2026", item: "Zakat settlements / prior-year zakat adjustments in period (only legacy Samba ZATCA settlement obligations assumed on merger are referenced)", amount: null, unit: "SAR '000", pnl_line: "Zakat", recurring: false, status: "not found", source: "1180_SNB/2023_Annual_filed2024-02-13.pdf", page: 71, quote: "the Bank assumed all of Samba's obligations owed to ZATCA, under a settlement agreement signed by Samba with ZATCA"}
+
+restatements:
+  - period_restated: "9M2025 interim / 9M2026 interim"
+    item: "No IAS 8 restatement; only insignificant reclassifications (e.g. 9M2025 other operating expenses (1,235,544) -> (1,235,684); fee income 5,563,953 -> 5,587,256)"
+    from: null
+    to: null
+    unit: "SAR '000"
+    reason: "Reclassification to conform to current presentation"
+    source: "1180_SNB/2026_Q3_filed2026-10-28.pdf"
+    page: 45
+    quote: "Certain insignificant prior period figures have been reclassified to conform to current period presentation."
+  - period_restated: "31 Dec 2023 (FY2024 annual)"
+    item: "Term loans reclassified from due to banks (211,665,630 -> 181,142,345) to debt securities issued and term loans (13,889,142 -> 44,412,427)"
+    from: 211665630
+    to: 181142345
+    unit: "SAR '000"
+    reason: "Reclassification to reflect funding profile"
+    source: "1180_SNB/2024_Annual_filed2025-02-06.pdf"
+    page: 114
+    quote: "term loans have been reclassified from \"Due to banks, Saudi Central Bank and other financial institutions\" to \"Debt securities issued and term loans\""
+  - period_restated: "FY2024 income statement (FY2025 annual comparatives)"
+    item: "Total operating income 36,038,363 -> 36,033,109; fee income net 4,599,651 -> 4,377,141"
+    from: {total_operating_income: 36038363, fee_net: 4599651}
+    to: {total_operating_income: 36033109, fee_net: 4377141}
+    unit: "SAR '000"
+    reason: "Not explained beyond reclassification of comparatives"
+    source: "1180_SNB/2025_Annual_filed2026-02-04.pdf"
+    page: 10
+    quote: "Fee income from banking services, net 4,931,351 4,377,141"
+
+significant_events:
+  - {date: "FY2025", event: "Issued SAR 2.7bn AT1 sukuk; called existing Tier 1 sukuk of SAR 6.2bn", financial_effect: -3534816, source: "1180_SNB/2025_Annual_filed2026-02-04.pdf", page: 73, quote: "the Bank issued through Shariah compliant arrangements, additional Tier 1 Sukuk, amounting to 2.7 billion (SAR-denominated)."}
+  - {date: "9M2026", event: "Issued AT1 notes USD 1bn (SAR 3.75bn) and AT1 sukuk ~SAR 4.875bn; called USD 1.25bn AT1 sukuk issued 26 Jan 2021 (SoCE: issued 8,615,753; called 4,687,500)", financial_effect: 3928253, source: "1180_SNB/2026_Q3_filed2026-10-28.pdf", page: 37, quote: "the Bank exercised the call option on its existing Additional Tier 1 Sukuk that was issued on 26 January 2021, amounting to $1.25 billion."}
+  - {date: "2026-02-28 onward", event: "Geopolitical situation (Strait of Hormuz); bank states no significant ECL impact due to sectoral concentration; no overlay amount", financial_effect: null, source: "1180_SNB/2026_Q3_filed2026-10-28.pdf", page: 45, quote: "Based on management's analysis and assessment, there is no significant impact on ECL stemming from the ongoing conflict due to underlying sectoral concentration of the portfolio."}
+  - {date: "after 2026-09-30", event: "Post-period escalation of geopolitical situation in KSA noted; heightened credit, liquidity, operational risk; impact uncertain", financial_effect: null, source: "1180_SNB/2026_Q3_filed2026-10-28.pdf", page: 45, quote: "Subsequent to the period ended 30 September 2026, the volatility of the ongoing geopolitical situation in the Kingdom of Saudi Arabia has escalated"}
+  - {date: "9M2026", event: "Term loans issued 42,933,979 and repaid 45,914,018; term loans 56,872,687 at 30 Sep 2026", financial_effect: null, source: "1180_SNB/2026_Q3_filed2026-10-28.pdf", page: 35, quote: "Term loans issued 42,933,979 66,785,523 40,861,125"}
+
+audit_opinion:
+  - {period: FY2022, opinion: "unmodified (EY, KPMG)", emphasis_of_matter: "none found in text", source: "1180_SNB/2022_Annual_filed2023-02-06.pdf", page: 2}
+  - {period: FY2023, opinion: "unmodified (EY, KPMG)", emphasis_of_matter: "none found in text", source: "1180_SNB/2023_Annual_filed2024-02-13.pdf", page: 3}
+  - {period: FY2024, opinion: "unmodified (EY, Deloitte)", emphasis_of_matter: "none; Other Matter: FY2023 audited by other joint auditor (unmodified, 13 Feb 2024)", source: "1180_SNB/2024_Annual_filed2025-02-06.pdf", page: 3}
+  - {period: FY2025, opinion: "unmodified (PwC, Deloitte)", emphasis_of_matter: "none found in text; no Other Matter paragraph found", source: "1180_SNB/2025_Annual_filed2026-02-04.pdf", page: 3}
+  - {period: 9M2025, opinion: "unmodified review conclusion (PwC, Deloitte)", emphasis_of_matter: "none found", source: "1180_SNB/2025_Q3_filed2025-10-29.pdf", page: 3}
+  - {period: 9M2026, opinion: "unmodified review conclusion (PwC, Deloitte)", emphasis_of_matter: "none found", source: "1180_SNB/2026_Q3_filed2026-10-28.pdf", page: 3}
+
+kpis_in_filings:
+  - {period: "31 Dec 2021", kpi: "Tier 1 / Tier 1+2 ratio", value: "18.4 / 19.2", unit: "%", source: "1180_SNB/2022_Annual_filed2023-02-06.pdf", page: 101}
+  - {period: "31 Dec 2022", kpi: "CET1 / Tier 1 / Tier 1+2 ratio", value: "16.1 / 18.3 / 19.0", unit: "%", source: "1180_SNB/2023_Annual_filed2024-02-13.pdf", page: 110, note: "CET1 for 2022 from FY2023 comparative; FY2022 annual shows Tier 1 and total only"}
+  - {period: "31 Dec 2023", kpi: "CET1 / Tier 1 / Tier 1+2 ratio", value: "17.3 / 19.4 / 20.1", unit: "%", source: "1180_SNB/2023_Annual_filed2024-02-13.pdf", page: 110}
+  - {period: "31 Dec 2024", kpi: "CET1 / Tier 1 / Tier 1+2 ratio", value: "17.6 / 20.3 / 20.8", unit: "%", source: "1180_SNB/2024_Annual_filed2025-02-06.pdf", page: 109}
+  - {period: "30 Sep 2025", kpi: "CET1 / Tier 1 / Tier 1+2 ratio", value: "17.6 / 19.5 / 20.8", unit: "%", source: "1180_SNB/2025_Q3_filed2025-10-29.pdf", page: 36}
+  - {period: "31 Dec 2025", kpi: "CET1 / Tier 1 / Tier 1+2 ratio", value: "17.7 / 19.8 / 21.2", unit: "%", source: "1180_SNB/2025_Annual_filed2026-02-04.pdf", page: 106}
+  - {period: "30 Sep 2026", kpi: "CET1 / Tier 1 / Tier 1+2 ratio", value: "17.3 / 19.8 / 21.1", unit: "%", source: "1180_SNB/2026_Q3_filed2026-10-28.pdf", page: 44}
+  - {period: "31 Dec 2021", kpi: "Non-performing financing / total financing / ECL allowance / POCI", value: "8,139,604 / 505,960,894 / 11,016,607 / 2,623,775", unit: "SAR '000", source: "1180_SNB/2022_Annual_filed2023-02-06.pdf", page: 49}
+  - {period: "31 Dec 2022", kpi: "Non-performing financing / total financing / ECL allowance / POCI", value: "8,982,525 / 553,761,800 / 11,407,864 / 2,956,723", unit: "SAR '000", source: "1180_SNB/2022_Annual_filed2023-02-06.pdf", page: 49}
+  - {period: "31 Dec 2023", kpi: "Non-performing financing / total financing / ECL allowance / POCI", value: "7,359,471 / 608,615,543 / 10,275,304 / 3,187,215", unit: "SAR '000", source: "1180_SNB/2023_Annual_filed2024-02-13.pdf", page: 50}
+  - {period: "31 Dec 2024", kpi: "Non-performing financing / total financing / ECL allowance / POCI", value: "7,692,328 / 662,205,802 / 10,405,224 / 2,451,768", unit: "SAR '000", source: "1180_SNB/2024_Annual_filed2025-02-06.pdf", page: 50}
+  - {period: "30 Sep 2025", kpi: "Non-performing financing / total financing / ECL allowance / POCI", value: "5,879,629 / 731,574,648 / 8,643,354 / 2,158,312", unit: "SAR '000", source: "1180_SNB/2026_Q3_filed2026-10-28.pdf", page: 21}
+  - {period: "31 Dec 2025", kpi: "Non-performing financing / total financing / ECL allowance / POCI", value: "5,001,326 / 734,943,929 / 7,355,988 / 1,722,965", unit: "SAR '000", source: "1180_SNB/2025_Annual_filed2026-02-04.pdf", page: 46}
+  - {period: "30 Sep 2026", kpi: "Non-performing financing / total financing / ECL allowance / POCI", value: "5,234,239 / 765,168,697 / 7,994,626 / 924,911", unit: "SAR '000", source: "1180_SNB/2026_Q3_filed2026-10-28.pdf", page: 21}
+  - {period: "all", kpi: "NPL ratio, coverage ratio, LCR, NSFR stated as ratios", value: null, unit: "%", status: "not found", source: null, page: null}
+
+special_extractions:
+  - name: "SNB impairment check (XBRL flagged 93m 9M2025, 2.6m 9M2026, 1,034m FY2025)"
+    findings:
+      - {period: 9M2025, value: 92584, source: "1180_SNB/2025_Q3_filed2025-10-29.pdf", page: 5, quote: "Impairment charge/(reversal) for expected credit losses, net 231,139 223,755 92,584 998,732"}
+      - {period: 9M2026, value: 2583, source: "1180_SNB/2026_Q3_filed2026-10-28.pdf", page: 5, quote: "Impairment charge/(reversal) for expected credit losses, net 322,692 231,139 2,583 92,584"}
+      - {period: FY2025, value: 1034143, source: "1180_SNB/2025_Annual_filed2026-02-04.pdf", page: 10, quote: "Impairment charge/(reversal) for expected credit losses, net 6&7 1,034,143 1,018,805"}
+      - {period: 9M2024, value: 998732, source: "1180_SNB/2025_Q3_filed2025-10-29.pdf", page: 5}
+    explanation: "The XBRL values match the PDFs. There is no presentation change: ECL remains a separate line below operating income, and 'Other operating expenses, net' is a separate pre-existing line (FY2022 (1,034,738); FY2023 (1,300,111); FY2024 (1,368,710); FY2025 (1,649,309); 9M2025 (1,235,684); 9M2026 (1,516,222)). The interims give no breakdown of that line. The low 9M charges come from net reversals in the Wholesale segment ((302,164) 9M2025; (882,985) 9M2026) and from POCI reversals/settlements on credit-related commitments ((396,739) 9M2025; (967,426) 9M2026). The FY2025 annual shows recoveries of written-off financing of 1,712,992 (POCI 394,813) inside the charge. The interims do not disclose the recoveries amount."
+  - name: "Additional Tier 1 (Tier 1 sukuk/notes) carrying amount"
+    unit: "SAR '000"
+    items:
+      - {date: "31 Dec 2021", value: 12187500, source: "1180_SNB/2022_Annual_filed2023-02-06.pdf", page: 12, quote: "Tier 1 Sukuk 28 15,487,500 12,187,500"}
+      - {date: "31 Dec 2022", value: 15487500, source: "1180_SNB/2022_Annual_filed2023-02-06.pdf", page: 12}
+      - {date: "31 Dec 2023", value: 15187500, source: "1180_SNB/2023_Annual_filed2024-02-13.pdf", page: 13}
+      - {date: "31 Dec 2024", value: 21187500, source: "1180_SNB/2025_Annual_filed2026-02-04.pdf", page: 9}
+      - {date: "30 Sep 2025", value: 16717500, source: "1180_SNB/2025_Q3_filed2025-10-29.pdf", page: 4}
+      - {date: "31 Dec 2025", value: 17652684, source: "1180_SNB/2025_Annual_filed2026-02-04.pdf", page: 9, quote: "Tier 1 Sukuk 25 17,652,684 21,187,500"}
+      - {date: "30 Sep 2026", value: 21580937, source: "1180_SNB/2026_Q3_filed2026-10-28.pdf", page: 4, quote: "Additional Tier 1 Capital 15 21,580,937 17,652,684 16,717,500"}
+  - name: "AT1 issuances, calls and related costs charged to retained earnings (SoCE)"
+    unit: "SAR '000"
+    items:
+      - {period: FY2021, issued: 4687500, called: 2700000, costs: 484533, source: "1180_SNB/2022_Annual_filed2023-02-06.pdf", page: 15}
+      - {period: FY2022, issued: 3300000, called: 0, costs: 567915, source: "1180_SNB/2022_Annual_filed2023-02-06.pdf", page: 15}
+      - {period: FY2023, issued: 1000000, called: 1300000, costs: 772528, source: "1180_SNB/2023_Annual_filed2024-02-13.pdf", page: 16}
+      - {period: FY2024, issued: 6000000, called: 0, costs: 764076, source: "1180_SNB/2025_Annual_filed2026-02-04.pdf", page: 12}
+      - {period: 9M2025, issued: 1730000, called: 6200000, costs: 855069, source: "1180_SNB/2026_Q3_filed2026-10-28.pdf", page: 7}
+      - {period: FY2025, issued: 2665184, called: 6200000, costs: 1037305, source: "1180_SNB/2025_Annual_filed2026-02-04.pdf", page: 12}
+      - {period: 9M2026, issued: 8615753, called: 4687500, costs: 887829, source: "1180_SNB/2026_Q3_filed2026-10-28.pdf", page: 7}
+  - name: "Is AT1 inside 'equity attributable to equity holders of the Bank'?"
+    answer: "Yes. 'Equity attributable to shareholders of the Bank' (185,625,827 at 31 Dec 2025) excludes AT1; adding AT1 (17,652,684) gives 'Equity attributable to equity holders of the Bank' (203,278,511); NCI then added for total equity."
+    source: "1180_SNB/2026_Q3_filed2026-10-28.pdf"
+    page: 4
+    quote: "Equity attributable to shareholders of the Bank 187,701,603 185,625,827 ... Additional Tier 1 Capital 15 21,580,937 ... Equity attributable to equity holders of the Bank 209,282,540"
+  - name: "SNB headline totals"
+    unit: "SAR '000"
+    items:
+      - {period: FY2022, total_operating_income: 33003452, ecl: 1685484, net_income_attributable: 18580690, source: "1180_SNB/2022_Annual_filed2023-02-06.pdf", page: 13}
+      - {period: FY2023, total_operating_income: 34589401, ecl: 922748, net_income_attributable: 20009968, source: "1180_SNB/2023_Annual_filed2024-02-13.pdf", page: 14}
+      - {period: FY2024, total_operating_income: 36033109, ecl: 1018805, net_income_attributable: 21192995, source: "1180_SNB/2025_Annual_filed2026-02-04.pdf", page: 10, note: "re-presented comparative; FY2024 annual segment note total 36,038,363"}
+      - {period: FY2025, total_operating_income: 39194570, ecl: 1034143, net_income_attributable: 25013279, other_operating_expenses_net: -1649309, source: "1180_SNB/2025_Annual_filed2026-02-04.pdf", page: 10}
+      - {period: 9M2025, total_operating_income: 29267393, ecl: 92584, net_income_attributable: 18627804, other_operating_expenses_net: -1235684, source: "1180_SNB/2026_Q3_filed2026-10-28.pdf", page: 5}
+      - {period: 9M2026, total_operating_income: 30598752, ecl: 2583, net_income_attributable: 19478847, other_operating_expenses_net: -1516222, source: "1180_SNB/2026_Q3_filed2026-10-28.pdf", page: 5}
+
+open_questions:
+  - "The composition of 'Other operating expenses, net' (9M2026: (1,516,222)) is not disclosed in the interims or annuals reviewed. The IAS 29 monetary loss is stated (FY2022 note) to sit in other NON-operating expenses, not in other operating expenses."
+  - "Interims do not reconcile the allowance movements to the P&L ECL line (recoveries are not disclosed for 9M periods). The Q4 2025 charge implied by FY2025 less 9M2025 is about 941.6m (derived, not stated)."
+  - "The FY2024 annual primary statements (pp.13-17) are image pages and were not viewed. FY2024 values are from the FY2025 annual comparatives and the FY2024 notes."
+  - "LCR and NSFR are not disclosed in the financial statements."

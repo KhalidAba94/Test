@@ -1,0 +1,159 @@
+# Evidence extracted from Al-Saif Stores for Development and Investment Company (Alsaif Gallery) filings (archive: 4192_ALSAIF_GALLERY).
+# Facts only; page = physical PDF page (1-based). Units: SAR as presented unless stated.
+# Primary statements are scanned images in the FY2023, FY2024 and FY2025 annuals (pp8-11) and in the 2025 Q3 and 2026 Q3 interims;
+# the 2026 Q3 interim is scanned throughout (notes read by OCR and checked visually). The FY2022 annual is a text PDF.
+ticker: "4192"
+company: "Al-Saif Stores for Development and Investment Company (Alsaif Gallery)"
+
+perimeter_changes:
+  - event: "Two foreign subsidiaries shown for the first time at 31 Dec 2022: Al Saif Gallery Trading (Abu Dhabi, UAE) and Al Saif Gallery Kuwait, 100%, nil a year earlier"
+    type: new_subsidiary
+    date: "2022"
+    consideration: null
+    revenue_contribution: 0
+    profit_contribution: null
+    pro_forma_revenue: null
+    period: "FY2022"
+    unit: "SAR"
+    source: "4192_ALSAIF_GALLERY/2022_Annual_filed2023-03-26.pdf"
+    page: 11
+    quote: "Al Saif Gallery Kuwait Kuwait City - Kuwait 100% --"
+    note: "FY2022 revenue was all from Saudi Arabia (p.32: 'Revenue relates to Kingdom of Saudi Arabia.'), so these were start-ups, not acquisitions."
+  - event: "New subsidiary Al Saif Gallery Oman (100%)"
+    type: new_subsidiary
+    date: "2023"
+    consideration: null
+    revenue_contribution: null
+    profit_contribution: null
+    pro_forma_revenue: null
+    period: "FY2023"
+    unit: "SAR"
+    source: "4192_ALSAIF_GALLERY/2023_Annual_filed2024-03-10.pdf"
+    page: 12
+    quote: "Al Saif Gallery Oman Oman 100% -"
+  - event: "New subsidiary Al Saif Gallery Qatar (100%)"
+    type: new_subsidiary
+    date: "2024"
+    consideration: null
+    revenue_contribution: null
+    profit_contribution: null
+    pro_forma_revenue: null
+    period: "FY2024"
+    unit: "SAR"
+    source: "4192_ALSAIF_GALLERY/2024_Annual_filed2025-03-20.pdf"
+    page: 12
+    quote: "Al Saif Gallery Qatar Qatar 100% -"
+  - event: "Acquisitions, disposals or deconsolidations of businesses"
+    type: acquisition
+    status: "not found"
+    period: "FY2022-9M2026"
+    source: "4192_ALSAIF_GALLERY/2025_Annual_filed2026-02-25.pdf"
+    page: 12
+    quote: "No business-combination note in the FY2022-FY2025 annuals or the 2026 Q3 interim; all four subsidiaries are 100% owned start-ups in the UAE, Kuwait, Oman and Qatar."
+
+segments:
+  - {period: "FY2022-FY2025", segment: "Single operating segment (household utensils and electrical appliances)", basis: operating, revenue: null, profit: null, unit: "SAR", source: "4192_ALSAIF_GALLERY/2025_Annual_filed2026-02-25.pdf", page: 39, quote: "The Group operates on one segment of selling and importing of household utensils and electrical appliances"}
+  - {period: "FY2022", segment: "Retail branches", basis: product, revenue: 665030847, profit: null, unit: "SAR", source: "4192_ALSAIF_GALLERY/2022_Annual_filed2023-03-26.pdf", page: 32, note: "FY2021: 757,892,754"}
+  - {period: "FY2022", segment: "E-commerce", basis: product, revenue: 66274819, profit: null, unit: "SAR", source: "4192_ALSAIF_GALLERY/2022_Annual_filed2023-03-26.pdf", page: 32, note: "FY2021: 61,433,667; the channel split is not given in later annuals"}
+  - {period: "FY2022", segment: "Wholesale", basis: product, revenue: 7802047, profit: null, unit: "SAR", source: "4192_ALSAIF_GALLERY/2022_Annual_filed2023-03-26.pdf", page: 32, note: "FY2021: 5,962,274"}
+  - {period: "FY2022", segment: "Saudi Arabia (all revenue)", basis: geographic, revenue: 739107713, profit: null, unit: "SAR", source: "4192_ALSAIF_GALLERY/2022_Annual_filed2023-03-26.pdf", page: 32}
+  - {period: "FY2023", segment: "Within KSA", basis: geographic, revenue: 674900000, profit: null, unit: "SAR", source: "4192_ALSAIF_GALLERY/2023_Annual_filed2024-03-10.pdf", page: 34, note: "Disclosed in SAR millions (674.9)"}
+  - {period: "FY2023", segment: "Outside KSA (FY2022: nil)", basis: geographic, revenue: 44900000, profit: null, unit: "SAR", source: "4192_ALSAIF_GALLERY/2023_Annual_filed2024-03-10.pdf", page: 34, quote: "SR 44.9 million (31 December 2022: Nil) relates to business within KSA and outside KSA respectively"}
+  - {period: "FY2024", segment: "Within KSA", basis: geographic, revenue: 677900000, profit: null, unit: "SAR", source: "4192_ALSAIF_GALLERY/2025_Annual_filed2026-02-25.pdf", page: 34}
+  - {period: "FY2024", segment: "Outside KSA", basis: geographic, revenue: 53700000, profit: null, unit: "SAR", source: "4192_ALSAIF_GALLERY/2025_Annual_filed2026-02-25.pdf", page: 34}
+  - {period: "FY2025", segment: "Within KSA", basis: geographic, revenue: 697000000, profit: null, unit: "SAR", source: "4192_ALSAIF_GALLERY/2025_Annual_filed2026-02-25.pdf", page: 34, quote: "The Group's revenue of 697.0 million (31 December 2024: 677.9 million)"}
+  - {period: "FY2025", segment: "Outside KSA", basis: geographic, revenue: 61800000, profit: null, unit: "SAR", source: "4192_ALSAIF_GALLERY/2025_Annual_filed2026-02-25.pdf", page: 34}
+  - {period: "9M2026", segment: "Within KSA (9M2025: 523.55m)", basis: geographic, revenue: 561470000, profit: null, unit: "SAR", source: "4192_ALSAIF_GALLERY/2026_Q3_filed2026-11-05.pdf", page: 15, quote: "The Group's revenue of SR 561.47 million (30 September 2025: SR 523.55 million)"}
+  - {period: "9M2026", segment: "Outside KSA (9M2025: 47.06m)", basis: geographic, revenue: 42860000, profit: null, unit: "SAR", source: "4192_ALSAIF_GALLERY/2026_Q3_filed2026-11-05.pdf", page: 15}
+
+revenue_drivers:
+  - {period: "FY2023", driver: "Revenue from new markets outside Saudi Arabia (UAE, Kuwait, Oman); nil in FY2022", value: 44900000, unit: "SAR", source: "4192_ALSAIF_GALLERY/2023_Annual_filed2024-03-10.pdf", page: 34, quote: "SR 44.9 million (31 December 2022: Nil) relates to business within KSA and outside KSA respectively"}
+  - {period: "FY2022", driver: "E-commerce revenue (FY2021: 61,433,667)", value: 66274819, unit: "SAR", source: "4192_ALSAIF_GALLERY/2022_Annual_filed2023-03-26.pdf", page: 32, quote: "E-commerce 66,274,819 61,433,667"}
+  - {period: "FY2024", driver: "Right-of-use additions 23,910,841 and lease terminations of 40,477,750 (right-of-use asset) while the branch count rose from 70 to 73", value: 23910841, unit: "SAR", source: "4192_ALSAIF_GALLERY/2025_Annual_filed2026-02-25.pdf", page: 11, quote: "Lease termination in right of use asset 7,865,546 40,477,750"}
+  - {period: "FY2025", driver: "New leases (right-of-use additions) and lease terminations (gain 2,020,330) while the branch count stayed at 73", value: 70387297, unit: "SAR", source: "4192_ALSAIF_GALLERY/2025_Annual_filed2026-02-25.pdf", page: 11, quote: "Increase in right of use assets and lease liabilities 7 70,387,297 23,910,841"}
+
+one_offs:
+  - {period: "FY2022", item: "Gain on disposal of property and equipment", amount: 16575982, unit: "SAR", pnl_line: "Other income", recurring: false, source: "4192_ALSAIF_GALLERY/2023_Annual_filed2024-03-10.pdf", page: 34, quote: "Gain on disposal of property and equipment - 16,575,982"}
+  - {period: "FY2024", item: "Gain on disposal of property and equipment: land and building (book value SAR 53.77m) sold to the chairman for SAR 97m", amount: 43002331, unit: "SAR", pnl_line: "Other income", recurring: false, source: "4192_ALSAIF_GALLERY/2024_Annual_filed2025-03-20.pdf", page: 28, quote: "land and building having book value of SR 53.77 million were sold to chairman of the Group at price of SR 97 million"}
+  - {period: "FY2024", item: "Gain on disposal of property and equipment (note 26 line)", amount: 43002331, unit: "SAR", pnl_line: "Other income", recurring: false, source: "4192_ALSAIF_GALLERY/2024_Annual_filed2025-03-20.pdf", page: 35, quote: "Gain on disposal of property and equipment (refer note 6.1) 43,002,331 -"}
+  - {period: "FY2025", item: "Gain on lease termination (FY2024: 271,077); under 5% of profit and recurs with lease changes, so not treated as a one-off", amount: 2020330, unit: "SAR", pnl_line: "Other income", recurring: true, source: "4192_ALSAIF_GALLERY/2025_Annual_filed2026-02-25.pdf", page: 35, quote: "Gain on lease termination 2,020,330 271,077"}
+  - {period: "9M2026", item: "Realized gain (1,291,804) and unrealized gain (1,308,658) on mutual-fund investments at FVTPL (9M2025: realized 194,593). Treasury gains on FVTPL funds appear every year (FY2022 -1,610,865; FY2023 484,750; FY2024 81,352; FY2025 503,749), so they are treated as recurring, not as a one-off", amount: 2600462, unit: "SAR", pnl_line: "Separate lines above profit before zakat", recurring: true, source: "4192_ALSAIF_GALLERY/2026_Q3_filed2026-11-05.pdf", page: 15, quote: "Unrealized gain on revaluation of financial assets at FVTPL during the period / year 1,308,658"}
+
+restatements:
+  - period_restated: "FY2023"
+    item: "Cost of revenue and gross profit: depreciation of right-of-use assets of branches moved from operating expenses into cost of revenue (note 34)"
+    from: -509355911
+    to: -535107092
+    unit: "SAR"
+    reason: "Reclassification under IAS 8 in the FY2024 annual; gross profit 210,424,189 -> 184,673,008; no effect on operating profit, net profit, balance sheet or cash flows. FY2022 is not re-presented (its ROU depreciation of 18,435,450 stays below gross profit)."
+    source: "4192_ALSAIF_GALLERY/2024_Annual_filed2025-03-20.pdf"
+    page: 41
+    quote: "the Group has restated the \"Depreciation of right of use assets\" from separate line item within the operating expenses to \"Cost of revenue\""
+
+significant_events:
+  - date: "2022-12-27"
+    event: "IPO: 10.5m shares (30% of capital) offered on the Main Market; shares listed on 27 Dec 2022"
+    financial_effect: "Sale by existing shareholders; no new shares issued (share capital SAR 350m before and after)"
+    source: "4192_ALSAIF_GALLERY/2022_Annual_filed2023-03-26.pdf"
+    page: 11
+    quote: "the shares of the Company were listed on Saudi Exchange on 27 December 2022"
+  - date: "2024"
+    event: "Sale of land and building to the chairman for SAR 97m (book value SAR 53.77m); proceeds from disposal of PP&E SAR 97.0m in the cash-flow statement"
+    financial_effect: "Gain SAR 43.0m in other income; short-term loans cut from SAR 230.7m to SAR 65.4m during 2024"
+    source: "4192_ALSAIF_GALLERY/2024_Annual_filed2025-03-20.pdf"
+    page: 28
+    quote: "land and building having book value of SR 53.77 million were sold to chairman of the Group at price of SR 97 million"
+  - date: "2025"
+    event: "Short-term loans fully repaid (nil at 31 Dec 2025, SAR 65.4m a year earlier); no dividend declared for 2024 or 2025"
+    financial_effect: "Finance cost fell to SAR 11.4m (FY2024: SAR 20.6m)"
+    source: "4192_ALSAIF_GALLERY/2025_Annual_filed2026-02-25.pdf"
+    page: 33
+    quote: "No dividend has been declared for the year ended 31 December 2025 (31 December 2024: nil)."
+  - date: "2026 (9M)"
+    event: "Investment in mutual funds managed by Al Rajhi Capital and Alinma Capital (FVTPL), SAR 80.1m at 30 Sep 2026"
+    financial_effect: "Held outside cash and cash equivalents (SAR 21.0m); realized and unrealized gains SAR 2.6m in 9M2026"
+    source: "4192_ALSAIF_GALLERY/2026_Q3_filed2026-11-05.pdf"
+    page: 15
+    quote: "The Group has made investment in mutual funds managed by Al Rajhi Capital and Alinma Capital."
+  - date: "2026-04-13 / 2026-10-08"
+    event: "Dividends: SAR 21m (SAR 0.06/share) for H2 2025 paid 5 May 2026; SAR 10.5m (SAR 0.03/share) for H1 2026 approved 8 Oct 2026"
+    financial_effect: "Cash dividends"
+    source: "4192_ALSAIF_GALLERY/2026_Q3_filed2026-11-05.pdf"
+    page: 17
+    quote: "approved the distribution of cash dividends of SAR 21 million (SAR 0.06 per share) to the shareholders"
+  - date: "2023-03-19 / 2023-07-06"
+    event: "Dividends of SAR 35m for FY2022 (SAR 1 per share) and SAR 35m for Q1 2023 approved"
+    financial_effect: "Dividends paid SAR 140.0m in FY2023 (cash-flow statement), the year short-term loans rose to SAR 230.7m"
+    source: "4192_ALSAIF_GALLERY/2023_Annual_filed2024-03-10.pdf"
+    page: 33
+    quote: "approved distribution of cash dividends of SAR 1 per share amounting to SAR 35,000,000 for the year ended 31 December 2022"
+
+audit_opinion:
+  - {period: "FY2022", opinion: "Unmodified (Ibrahim Ahmed Al-Bassam & Co., PKF); Other Matter: FY2021 audited by another auditor", emphasis_of_matter: none, source: "4192_ALSAIF_GALLERY/2022_Annual_filed2023-03-26.pdf", page: 4}
+  - {period: "FY2023", opinion: "Unmodified (Al-Bassam & Co.); no EoM found", emphasis_of_matter: none, source: "4192_ALSAIF_GALLERY/2023_Annual_filed2024-03-10.pdf", page: 3}
+  - {period: "FY2024", opinion: "Unmodified (PKF Al-Bassam); no EoM found", emphasis_of_matter: none, source: "4192_ALSAIF_GALLERY/2024_Annual_filed2025-03-20.pdf", page: 3}
+  - {period: "FY2025", opinion: "Unmodified (PKF Al-Bassam); no EoM found", emphasis_of_matter: none, source: "4192_ALSAIF_GALLERY/2025_Annual_filed2026-02-25.pdf", page: 3}
+  - {period: "9M2026", opinion: "Review conclusion unmodified (PKF Al-Bassam, 4 Nov 2026; scanned page viewed)", emphasis_of_matter: none, source: "4192_ALSAIF_GALLERY/2026_Q3_filed2026-11-05.pdf", page: 3}
+
+kpis_in_filings:
+  - {period: "31 Dec 2022", kpi: "Branches leased (KSA only)", value: 61, unit: "count", source: "4192_ALSAIF_GALLERY/2023_Annual_filed2024-03-10.pdf", page: 12, quote: "As at 31 December 2023, the total number of branches leased by the Group were 70 (31 December 2022: 61)"}
+  - {period: "31 Dec 2023", kpi: "Branches leased (KSA, UAE, Kuwait, Oman)", value: 70, unit: "count", source: "4192_ALSAIF_GALLERY/2023_Annual_filed2024-03-10.pdf", page: 12}
+  - {period: "30 Sep 2024", kpi: "Branches leased", value: 73, unit: "count", source: "4192_ALSAIF_GALLERY/2024_Q3_filed2024-11-07.pdf", page: 8}
+  - {period: "31 Dec 2024", kpi: "Branches leased (KSA, UAE, Kuwait, Oman, Qatar)", value: 73, unit: "count", source: "4192_ALSAIF_GALLERY/2024_Annual_filed2025-03-20.pdf", page: 12, quote: "As at 31 December 2024, the total number of branches leased by the Group were 73 (31 December 2023: 70)"}
+  - {period: "30 Sep 2025", kpi: "Branches leased", value: 75, unit: "count", source: "4192_ALSAIF_GALLERY/2025_Q3_filed2025-10-23.pdf", page: 8, quote: "As at 30 September 2025, the total number of branches leased by the Group reached 75 (31 December 2024: 73)"}
+  - {period: "31 Dec 2025", kpi: "Branches leased", value: 73, unit: "count", source: "4192_ALSAIF_GALLERY/2025_Annual_filed2026-02-25.pdf", page: 12, quote: "As at 31 December 2025, the total number of branches leased by the Group were 73 (31 December 2024: 73)"}
+  - {period: "30 Sep 2026", kpi: "Branches leased", value: 74, unit: "count", source: "4192_ALSAIF_GALLERY/2026_Q3_filed2026-11-05.pdf", page: 8, quote: "As at 30 September 2026, the total number of branches leased by the Group were 74 (31 December 2025: 73)"}
+  - {period: "FY2022-9M2026", kpi: "Same-store (like-for-like) sales growth, gross leasable or selling area, store revenue", value: null, unit: "count", status: "not found", source: "4192_ALSAIF_GALLERY/2025_Annual_filed2026-02-25.pdf", page: 12}
+
+special_extractions:
+  - name: "Gross-profit basis by year"
+    unit: "SAR"
+    note: "FY2022 gross profit (206,257,722) excludes depreciation of right-of-use assets (18,435,450); FY2023 onward include it in cost of revenue (FY2024 annual note 34). On the FY2023 basis FY2022 gross profit would be 187,822,272 (we calculate)."
+    source: "4192_ALSAIF_GALLERY/2023_Annual_filed2024-03-10.pdf"
+    page: 9
+
+open_questions:
+  - "Why gross margin fell to 15.4% in FY2024 (cost of revenue +15.6% on revenue +1.6%) while inventories fell from SAR 410m to SAR 283m is not explained in the statements; no inventory write-down is shown in the FY2024 cash-flow statement."
+  - "Revenue of new branches, openings and closures within each year, and same-store sales are not disclosed; the branch count was 73 at both end-2024 and end-2025 although new leases of SAR 70.4m were added and some terminated in 2025."
+  - "The revenue split by channel (retail branches, e-commerce, wholesale) is given for FY2022 and in 2023 interims only."
+  - "Rent paid to the chairman rose to SAR 9.4m in 9M2026 (9M2025: SAR 5.9m) after the 2024 sale of land and building to him (2026 Q3 p.14); whether the sold property is leased back is not stated."

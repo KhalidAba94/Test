@@ -1,0 +1,101 @@
+ticker: "4150"
+headline: >-
+  Reported revenue swung with land sales (SAR 41.4m in FY2023, SAR 96.5m in FY2025, SAR 33.4m in 9M 2026); without them revenue rose 15.0%
+  in FY2023 and 8.0% in FY2024, then fell 10.5% in FY2025 after the Ta'meer market moved into the Dira associate. Attributable profit held at
+  about SAR 296m in FY2024-FY2025, carried by associates and Murabaha deposit income, and fell 41.7% to SAR 147m in 9M 2026.
+lfl_basis:
+  definition_used: >-
+    Standard bridge on IFRS revenue (rental income from markets and centres, operating revenue of the wholesale fruit and vegetable market and
+    car auction, land sales and development fees). Land sales are investment-property disposals that the company books gross in revenue (the
+    cash-flow statement shows them as gains on sale of investment properties), so we move the change in land-sale revenue out of organic growth
+    as a presentation step (accounting_other, calculated) and list the land-sale margin as a one-off in operating income. Perimeter = properties
+    bought, sold or contributed: the 2022 property purchase and the Ta'meer market contribution to the Dira associate (1 Dec 2024) have no
+    disclosed revenue, so like-for-like growth is not determinable; the Remat Al-Riyadh assets bought for shares in 2025 are land. FX is nil.
+  perimeter_changes:
+    - {event: "Land and buildings bought (SAR 189.9m, property not named)", date: "2022", effect: "revenue not disclosed", source: "4150_ARDCO/2022_Annual_filed2023-03-22.pdf p.25"}
+    - {event: "Ta'meer market properties contributed to Dira Development Company (46.34% associate with Riyadh Holding) for shares worth SAR 705.2m", date: "2024-12-01", effect: "revenue leaves the group from Dec 2024; amount not disclosed", source: "4150_ARDCO/2025_Annual_filed2026-03-08.pdf p.32, p.34"}
+    - {event: "Two real-estate assets bought from Remat Al-Riyadh Development Company for 56.2m new shares (SAR 1,403.8m), recorded as land", date: "2025-02", effect: "no revenue disclosed", source: "4150_ARDCO/2025_Annual_filed2026-03-08.pdf p.41, p.31"}
+    - {event: "Two wholly owned subsidiaries set up (Al-Rimal Logistics Park, Hulul Salasil); first consolidated statements", date: "2025-09/10", effect: "no acquired revenue", source: "4150_ARDCO/2025_Annual_filed2026-03-08.pdf p.14"}
+  capacity_changes:
+    - {event: "Completed projects moved into investment properties (SAR 2.1m in 2022, SAR 1.0m in 2023, SAR 33.0m in 2024, SAR 10.6m in 2025)", date: "2022-2025", effect: "revenue not disclosed", source: "4150_ARDCO/2023_Annual_filed2024-03-14.pdf p.12; 4150_ARDCO/2025_Annual_filed2026-03-08.pdf p.31"}
+    - {event: "Buildings received at the end of land leases (SAR 12.5m in 2025; SAR 45.1m on 18 Apr 2026 under a BOT contract)", date: "2025; 2026-04-18", effect: "revenue not disclosed", source: "4150_ARDCO/2025_Annual_filed2026-03-08.pdf p.44; 4150_ARDCO/2026_Q3_filed2026-11-01.pdf p.12"}
+  fx_exposure: "All revenue is generated in Saudi Arabia in riyals; no FX or hyperinflation effect."
+  price_volume_support: >-
+    Not determinable. The filings give revenue by segment and by type (rental, operating, land sales, development) but no leasable area,
+    occupancy, rents, visitors or auction and market volumes.
+  confidence: "High for the land-sale presentation step and the nil FX effect; not determinable for perimeter and new capacity"
+price_volume:
+  - period: "FY2025 vs FY2024"
+    text: >-
+      Rental revenue fell 17.4% (SAR 204m to SAR 168m) in the first year without the Ta'meer market, while operating revenue, mainly the
+      wholesale market, rose 2.2% (SAR 112m to SAR 115m), as we calculate from the revenue note. Rents, occupancy and market volumes are not
+      disclosed, so price and volume cannot be separated.
+    basis: "disclosed (revenue by type); split not determinable"
+    confidence: "High for the amounts; the split is not determinable"
+    source: "4150_ARDCO/2025_Annual_filed2026-03-08.pdf p.43"
+    refs: ["4150-FY2025-REV", "4150-FY2024-REV"]
+  - period: "9M 2026 vs 9M 2025"
+    text: >-
+      Rental revenue rose 2.1% (SAR 126m to SAR 129m) and operating revenue 9.6% (SAR 85.2m to SAR 93.4m); by segment the wholesale market
+      rose 13.7% and commercial centres fell 8.3% (we calculate). No volume or price data are given.
+    basis: "disclosed (revenue by type and segment); split not determinable"
+    confidence: "High for the amounts; the split is not determinable"
+    source: "4150_ARDCO/2026_Q3_filed2026-11-01.pdf p.24, p.26"
+    refs: ["4150-9M2026-REV", "4150-9M2025-REV"]
+profit_and_margin:
+  drivers:
+    - {period: "FY2023", driver: "Revenue +31.0% to SAR 339m, of which SAR 41.4m came from a land sale; without land sales revenue rose 15.0% (we calculate), with commercial centres +11.8% and the wholesale market +19.2%. Operating income rose 53.2% to SAR 159m, including a SAR 37.9m gain on the land sale, and Murabaha deposit income rose to SAR 37.9m (SAR 21.6m). The share of associates' profit halved to SAR 97.5m (SAR 190.5m), so attributable profit fell 9.6% to SAR 272m; net margin 80.1%; ROE 11.9%.", source: "4150_ARDCO/2024_Annual_filed2025-03-02.pdf p.11, p.41, p.43; 4150_ARDCO/2023_Annual_filed2024-03-14.pdf p.12, p.37", refs: ["4150-FY2023-REV", "4150-FY2023-OPINC", "4150-FY2023-FIN_INC", "4150-FY2023-SHARE_JV", "4150-FY2023-NI_ATTR"]}
+    - {period: "FY2024", driver: "Revenue -5.2% to SAR 322m with no land sales (+8.0% without the FY2023 land sale, we calculate): the wholesale market rose 12.2% and commercial centres 1.0%. G&A rose to SAR 99.7m (SAR 69.1m), including a SAR 14.7m litigation provision. Operating income fell 8.5% to SAR 146m and includes a SAR 26.8m release of the Al-Shorouk land provision and a SAR 17.2m gain on contributing the Ta'meer market to Dira. Murabaha income was SAR 57.5m and the associates' share SAR 125.9m. Attributable profit +9.1% to SAR 296m; net margin 92.1%; ROE 12.0%.", source: "4150_ARDCO/2025_Annual_filed2026-03-08.pdf p.11, p.32, p.44, p.45", refs: ["4150-FY2024-REV", "4150-FY2024-OPINC", "4150-FY2024-FIN_INC", "4150-FY2024-SHARE_JV", "4150-FY2024-NI_ATTR"]}
+    - {period: "FY2025", driver: "Revenue +19.5% to SAR 384m, including SAR 96.5m of land sales; without them revenue fell 10.5% as the Ta'meer market left for the Dira associate (commercial centres -24.7%) while the wholesale market grew 5.0%. Operating income +50.2% to SAR 219m includes SAR 117.8m of one-offs (we calculate), mainly the SAR 90.7m land-sale gain. EBITDA was SAR 261m (margin 68.1%). The associates' share fell to SAR 48.0m (SAR 125.9m). Attributable profit was flat at SAR 296m; net margin 77.1%; ROE 8.9% on equity enlarged by the SAR 1,403.8m share issue for the Remat assets.", source: "4150_ARDCO/2025_Annual_filed2026-03-08.pdf p.11, p.13, p.43-45", refs: ["4150-FY2025-REV", "4150-FY2025-OPINC", "4150-FY2025-EBITDA_C", "4150-FY2025-SHARE_JV", "4150-FY2025-NI_ATTR", "4150-FY2025-EQ_ATTR"]}
+    - {period: "9M2026", driver: "Revenue -17.7% to SAR 255m because land sales fell to SAR 33.4m (SAR 96.5m); without them revenue rose 3.9% (we calculate). G&A doubled to SAR 106.9m (SAR 50.1m), with SAR 18.3m of White Land Fees (a new levy from 2026) and a SAR 16.1m lawsuit provision, while other income included a SAR 45.1m non-cash gain on a building received at the end of a BOT lease. Operating income -39.6% to SAR 113m; EBITDA -33.3% to SAR 146m (margin 57.3% vs 70.6%); the associates' share was SAR 21.6m (SAR 43.3m). Attributable profit -41.7% to SAR 147m; net margin 57.4%; annualised ROE 4.7%.", source: "4150_ARDCO/2026_Q3_filed2026-11-01.pdf p.5, p.23-26", refs: ["4150-9M2026-REV", "4150-9M2026-OPINC", "4150-9M2026-EBITDA_C", "4150-9M2026-SHARE_JV", "4150-9M2026-NI_ATTR", "4150-9M2025-REV"]}
+    - {period: "FY2022-9M2026", driver: "ARDCO has no borrowings. It holds large Murabaha deposits outside cash (SAR 1,025m at end-2025, SAR 925m at 30 Sep 2026); net of the short-term deposits it is net cash, with net debt of -SAR 1,007m at end-2025 (net debt / EBITDA -3.9x) and -SAR 1,042m at 30 Sep 2026 (-5.3x annualised). The deposit income (SAR 56.9m in FY2025) sits below operating income, as does the share of associates. Operating cash flow was SAR 63.9m in FY2024, SAR 146m in FY2025 and SAR 75.8m in 9M 2026 (SAR 222m in 9M 2025).", source: "4150_ARDCO/2025_Annual_filed2026-03-08.pdf p.10, p.13, p.40; 4150_ARDCO/2026_Q3_filed2026-11-01.pdf p.4, p.7", refs: ["4150-FY2025-DEBT", "4150-FY2025-NET_DEBT", "4150-9M2026-NET_DEBT", "4150-FY2025-FIN_INC", "4150-FY2024-CFO", "4150-FY2025-CFO", "4150-9M2026-CFO", "4150-9M2025-CFO"]}
+  one_offs:
+    - {item: "Gain on a land sale (booked gross: revenue SAR 41.4m, cost SAR 3.5m)", period: "FY2023", amount_sar_m: 37.9, line: "Revenue and cost of revenue (inside operating income)", source: "4150_ARDCO/2023_Annual_filed2024-03-14.pdf p.12", tax_nci: "Zakat effect not disclosed; no non-controlling interests: after-zakat effect not determinable, profit kept as reported"}
+    - {item: "Release of the Al-Shorouk land contribution provision", period: "FY2024", amount_sar_m: 26.8, line: "Other income", source: "4150_ARDCO/2025_Annual_filed2026-03-08.pdf p.44", tax_nci: "Zakat effect not disclosed; no non-controlling interests: profit kept as reported"}
+    - {item: "Realised gain on contributing the Ta'meer market properties to the Dira associate", period: "FY2024", amount_sar_m: 17.2, line: "Gain from sale of investment properties", source: "4150_ARDCO/2025_Annual_filed2026-03-08.pdf p.11, p.32", tax_nci: "Zakat effect not disclosed; no non-controlling interests: profit kept as reported"}
+    - {item: "Litigation expense provision", period: "FY2024", amount_sar_m: -14.7, line: "General and administrative expenses", source: "4150_ARDCO/2025_Annual_filed2026-03-08.pdf p.44", tax_nci: "Under 5% of attributable profit; zakat effect not disclosed: profit kept as reported"}
+    - {item: "Gain on land sales (booked gross: revenue SAR 96.5m, land selling costs SAR 5.9m)", period: "FY2025", amount_sar_m: 90.7, line: "Revenue and cost of revenue", source: "4150_ARDCO/2025_Annual_filed2026-03-08.pdf p.13, p.43", tax_nci: "Zakat effect not disclosed; no non-controlling interests: profit kept as reported"}
+    - {item: "Gain on buildings received on lease termination (non-cash)", period: "FY2025", amount_sar_m: 12.5, line: "Other income", source: "4150_ARDCO/2025_Annual_filed2026-03-08.pdf p.44", tax_nci: "Under 5% of attributable profit; zakat effect not disclosed: profit kept as reported"}
+    - {item: "Release of a provision from earlier years (SAR 9.1m), forfeited land-sale deposit (SAR 3.6m) and FVTPL gain (SAR 2.0m)", period: "FY2025", amount_sar_m: 14.7, line: "Other income; unrealised FVTPL gains", source: "4150_ARDCO/2025_Annual_filed2026-03-08.pdf p.44, p.11", tax_nci: "Each under 5% of attributable profit; zakat effect not disclosed: profit kept as reported"}
+    - {item: "Margin on land sales (revenue SAR 96.5m less cost SAR 5.6m)", period: "9M2025", amount_sar_m: 90.9, line: "Revenue and cost of revenue", source: "4150_ARDCO/2026_Q3_filed2026-11-01.pdf p.26", tax_nci: "Zakat effect not disclosed; no non-controlling interests: profit kept as reported"}
+    - {item: "Unrealised gain on investments designated at FVTPL", period: "9M2025", amount_sar_m: 14.8, line: "Unrealised gains from investments designated at FVTPL", source: "4150_ARDCO/2026_Q3_filed2026-11-01.pdf p.5", tax_nci: "Zakat effect not disclosed; no non-controlling interests: profit kept as reported"}
+    - {item: "Gain on a building received at the end of a BOT land lease (non-cash)", period: "9M2026", amount_sar_m: 45.1, line: "Other income", source: "4150_ARDCO/2026_Q3_filed2026-11-01.pdf p.25, p.12", tax_nci: "Zakat effect not disclosed; no non-controlling interests: profit kept as reported"}
+    - {item: "Gain on a land sale (Telal Arriyadh plot)", period: "9M2026", amount_sar_m: 31.3, line: "Revenue and cost of revenue", source: "4150_ARDCO/2026_Q3_filed2026-11-01.pdf p.7", tax_nci: "Zakat effect not disclosed; no non-controlling interests: profit kept as reported"}
+    - {item: "Provision for a SAR 74m lawsuit by a lessee (legal expenses)", period: "9M2026", amount_sar_m: -16.1, line: "General and administrative expenses", source: "4150_ARDCO/2026_Q3_filed2026-11-01.pdf p.24, p.29", tax_nci: "Zakat effect not disclosed; no non-controlling interests: profit kept as reported"}
+developments:
+  - {date: "2022", category: "M&A", text: "Bought land and buildings for SAR 189.9m (property not named) and liquidated its listed equity portfolio.", source: "4150_ARDCO/2022_Annual_filed2023-03-22.pdf p.25, p.27"}
+  - {date: "2024-12-01", category: "M&A", text: "Formed Dira Development Company with Riyadh Holding Company (ARDCO 46.34%), contributing the Ta'meer market properties for shares worth SAR 705.2m.", source: "4150_ARDCO/2025_Annual_filed2026-03-08.pdf p.32, p.34"}
+  - {date: "2024", category: "capacity", text: "Joined Riyadh Holding and Saudi Real Estate Company in Abraj Al-Tilal (50%) to build Misk school complexes, transferring SAR 50.7m of projects under development.", source: "4150_ARDCO/2025_Annual_filed2026-03-08.pdf p.32"}
+  - {date: "2025-02", category: "M&A", text: "Bought two real-estate assets from Remat Al-Riyadh Development Company for 56.2m new shares worth SAR 1,403.8m; share capital rose to SAR 2,339.3m.", source: "4150_ARDCO/2025_Annual_filed2026-03-08.pdf p.41"}
+  - {date: "2025-09/10", category: "strategy", text: "Set up two wholly owned subsidiaries; the Al Aziziyah fruit and vegetable market assets moved to one of them from 1 Jan 2026.", source: "4150_ARDCO/2025_Annual_filed2026-03-08.pdf p.14; 4150_ARDCO/2026_Q3_filed2026-11-01.pdf p.9"}
+  - {date: "2026-01-01", category: "regulation", text: "The first White Land Fees invoice under the regulation of 24 Nov 2025 was issued; SAR 18.3m was charged in 9M 2026.", source: "4150_ARDCO/2026_Q3_filed2026-11-01.pdf p.23"}
+  - {date: "2026-04-18", category: "capacity", text: "Took ownership of a building on its land when a build-operate-transfer lease expired (fair value SAR 45.1m).", source: "4150_ARDCO/2026_Q3_filed2026-11-01.pdf p.12"}
+  - {date: "2026-09-22", category: "strategy", text: "The board resolved to sell the Al Malqa Business Center and the Al Rimal land plots (SAR 225.4m held for sale).", source: "4150_ARDCO/2026_Q3_filed2026-11-01.pdf p.21-22"}
+what_it_means:
+  improved: "Without land sales, revenue rose 15.0% in FY2023, 8.0% in FY2024 and 3.9% in 9M 2026, led by the wholesale fruit and vegetable market, and the company still has no borrowings."
+  weakened: "Revenue without land sales fell 10.5% in FY2025 after the Ta'meer market moved into an associate, and 9M 2026 attributable profit fell 41.7% as G&A doubled and the associates' share halved."
+  why: "Much of ARDCO's profit comes from outside its own operations: Murabaha deposit income (SAR 56.9m in FY2025), associates (SAR 48.0m) and one-off land-sale and property gains (SAR 117.8m of one-offs in FY2025 operating income, we calculate)."
+  uncertain: "The revenue of the property moved into Dira and of the newly received buildings is not disclosed, the Remat land has not yet produced disclosed income, and a SAR 74m lawsuit is pending."
+confidence_overall: "Medium"
+data_notes:
+- 'No usable XBRL filing for ARDCO: every figure was read from the PDF statements. Statement text layers are garbled, so the pages were re-read by OCR at
+  300 dpi and cross-footed (gross profit, profit before zakat, net profit, operating cash flow, total assets = equity + liabilities).'
+- Standalone financial statements to FY2024; consolidated from FY2025 (two wholly owned subsidiaries, no NCI). Minority interest and borrowings are shown
+  as true zeros because there are no non-controlling interests and no borrowings.
+- Land sales are booked gross in revenue (FY2023 SAR 41.4m, FY2025 SAR 96.5m, 9M 2025 SAR 96.5m, 9M 2026 SAR 33.4m). The bridge removes them as a presentation
+  step and the one-offs register removes the land-sale margin from EBITDA.
+- 'Cash is ''cash at banks'' on the balance sheet. Net debt (lease liabilities less cash and short-term bank deposits) deducts the short-term Murabaha deposits:
+  SAR 120m (FY2021), SAR 460m (FY2022), SAR 270m (FY2023), SAR 300m (FY2024), SAR 1,025m (FY2025), SAR 1,065m (9M 2025) and SAR 925m (9M 2026). Long-term
+  Murabaha deposits (SAR 600m at end-2023, SAR 630m at end-2024; FY2024 FS note 13) are not deducted. ARDCO is therefore net cash in every period. The FY2023
+  cash-flow statement counts SAR 270m of short deposits as cash equivalents (SAR 315.0m vs SAR 45.0m on the balance sheet).'
+- Murabaha deposit income is finance income and finance cost is lease interest only. The share of associates is large (Tanal 69.38%, equity-accounted without
+  control; Dira 46.34%), so attributable profit exceeds operating income and the FY2022 net margin is 116.0%.
+- 'Re-presentations: FY2024 operating cash flow SAR 66.5m to SAR 63.9m (lease interest paid moved into operating activities, FY2025 FS p.13); FY2022 capex
+  re-split between PP&E (SAR 7.5m) and investment property under development (FY2023 FS p.12); 31 Dec 2024 balance-sheet lines reclassified (FY2025 FS note
+  33, p.49), totals unchanged. Operating cash flow is after lease interest from FY2024.'
+- 'Not treated as one-offs: White Land Fees (SAR 18.3m in 9M 2026; a new annual levy) and unexplained ''other'' income of SAR 12.0m in FY2023.'
+- 'Sensitivity (not in the totals): if the long-term Murabaha deposits were also deducted, net cash would be SAR 867m at end-2023 (-267m less 600m) and
+  SAR 917m at end-2024 (-287m less 630m); end-2025 is unchanged at SAR 1,007m because the long-term deposits were nil. The rise in short-term deposits from
+  SAR 300m (2024) to SAR 1,025m (2025) is therefore partly a reclassification of the SAR 630m long-term deposits to short-term (2025 annual note 12: maturities
+  3 to 12 months), not only new cash. Terms for early withdrawal or any restriction on the long-term deposits were not found in the filings read, so the
+  sensitivity is not evidence that they were freely available cash.'

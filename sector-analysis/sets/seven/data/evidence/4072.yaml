@@ -1,0 +1,150 @@
+# Evidence extracted from MBC Group filings (archive folder SEVEN_MED/4072_MBC_GROUP). Facts only; page = physical PDF page (1-based).
+# Units: SAR '000 as presented. Primary statements (IS, BS, CF) are scanned images in every PDF (annual pp7-11 / pp8-11; interims pp3-7) and were read from rendered images;
+# notes are text pages.
+ticker: "4072"
+company: "MBC Group (A Listed Joint Stock Company)"
+
+perimeter_changes:
+  - event: "Reorganisation under common control: MBC Group Co. incorporated 20 April 2023 as new holding company; Group entities transferred from MBC Group Holdings Limited (BVI) for nil consideration, legal transfer completed 22 June 2023; subsidiaries consolidated prospectively from 30 June 2023 (SOCPA directive bars retrospective presentation)"
+    type: new_subsidiary
+    date: "2023-06-30"
+    consideration: "nil (common control)"
+    revenue_contribution: 1712062
+    profit_contribution: 17555
+    pro_forma_revenue: 3703903
+    period: "FY2023"
+    unit: "SAR '000"
+    source: "4072_MBC_GROUP/2023_Annual_filed2024-07-02.pdf"
+    page: 16
+    quote: "the Group considered the acquisition date to be the end of the month on which the transfer of the acquired Group entities was completed"
+    note: "FY2023 statutory period = 20 April-31 December 2023 with about six months of operations; FY2023 revenue 1,712,062 is the restated figure (FY2024 AFS p.8). Pro-forma revenue = note 30(b) retrospective presentation 2,800,027 + 903,876 (FY2023 AFS p.71, additional information, not the statutory figures)."
+  - event: "Note 30(b) additional information: consolidated statement of comprehensive income as if the Company had always owned the Group entities (2023 and 2022)"
+    type: new_subsidiary
+    date: "2023"
+    consideration: null
+    revenue_contribution: null
+    profit_contribution: null
+    pro_forma_revenue: 3488734
+    period: "FY2022 (pro forma)"
+    unit: "SAR '000"
+    source: "4072_MBC_GROUP/2023_Annual_filed2024-07-02.pdf"
+    page: 71
+    quote: "Revenue from contracts with customers 2,800,027 2,353,711 Other operating revenues 903,876 1,135,023"
+    note: "Pro-forma 2022 revenue 2,353,711 + 1,135,023 = 3,488,734; profit for the year 47,866 (2022) and 69,288 (2023); attributable 34,974 and 65,286. Not used in the tables (not statutory)."
+  - event: "Partial sale of the stake in Arabian Contracting Services Company (ACSC, associate): 2,450,000 shares (4.9% of ACSC) sold for SAR 416,500 thousand; gain 170,674"
+    type: disposal
+    date: "FY2024"
+    consideration: 416500
+    revenue_contribution: null
+    profit_contribution: 170674
+    pro_forma_revenue: null
+    period: "FY2024"
+    unit: "SAR '000"
+    source: "4072_MBC_GROUP/2024_Annual_filed2025-03-27.pdf"
+    page: 52
+    quote: "The Transaction completed with a total value of SAR 416,500 thousand. The gain arising from the Transaction amounted to SAR 170,674 thousand."
+    note: "ACSC was equity-accounted, so no revenue effect."
+  - event: "ACSC reclassified from equity-accounted associate to financial asset at FVTPL after loss of significant influence (deemed disposal); fair value 1,039,784 vs carrying amount 775,883"
+    type: deconsolidation
+    date: "2025-05-15"
+    consideration: null
+    revenue_contribution: null
+    profit_contribution: 263901
+    pro_forma_revenue: null
+    period: "FY2025"
+    unit: "SAR '000"
+    source: "4072_MBC_GROUP/2025_Annual_filed2026-03-27.pdf"
+    page: 52
+    quote: "ACSC at the time of reclassification amounted to SAR 1,039,784 thousand while the carrying amount amounted to SAR 775,883 thousand"
+    note: "Gain 263,901 recognised in the FVTPL line; no revenue effect (associate)."
+  - event: "Additional investments in the MBC Game Studio joint venture (equity-accounted; 96,750 in 9M 2026, 138,790 in FY2025)"
+    type: new_subsidiary
+    date: "2025-2026"
+    consideration: 96750
+    revenue_contribution: null
+    profit_contribution: -95966
+    pro_forma_revenue: null
+    period: "9M2026"
+    unit: "SAR '000"
+    source: "4072_MBC_GROUP/2026_Q3_filed2026-11-15.pdf"
+    page: 22
+    quote: "Additional investment 96,750 138,790 Share of results (Note 5) (95,966) (46,311)"
+    note: "Joint venture, equity-accounted: no revenue effect. Its losses are offset by the gaming-initiative government funding recognised in other operating revenues (note 5)."
+  - event: "Business combinations (IFRS 3) FY2024-9M 2026"
+    type: acquisition
+    status: "not found"
+    period: "FY2024-9M2026"
+    source: "4072_MBC_GROUP/2025_Annual_filed2026-03-27.pdf"
+    page: 12
+    quote: "No business combination note in the FY2024 or FY2025 AFS or the 2026 Q3 interim; subsidiary list unchanged apart from ownership percentages shown."
+
+segments:
+  # Operating segments; profit = segment result before income tax (includes other income, associates, fair-value items and net finance).
+  - {period: "FY2023 (20 Apr-31 Dec)", segment: "Broadcasting and other commercial activities", basis: operating, revenue: 890407, profit: 137666, unit: "SAR '000", source: "4072_MBC_GROUP/2024_Annual_filed2025-03-27.pdf", page: 35}
+  - {period: "FY2023 (20 Apr-31 Dec)", segment: "Shahid", basis: operating, revenue: 448019, profit: -125657, unit: "SAR '000", source: "4072_MBC_GROUP/2024_Annual_filed2025-03-27.pdf", page: 35}
+  - {period: "FY2023 (20 Apr-31 Dec)", segment: "M&E Initiatives", basis: operating, revenue: 373636, profit: 3361, unit: "SAR '000", source: "4072_MBC_GROUP/2024_Annual_filed2025-03-27.pdf", page: 35}
+  - {period: "FY2024", segment: "Broadcasting and other commercial activities", basis: operating, revenue: 2424141, profit: 541068, unit: "SAR '000", source: "4072_MBC_GROUP/2025_Annual_filed2026-03-27.pdf", page: 35}
+  - {period: "FY2024", segment: "MBC Shahid", basis: operating, revenue: 1078904, profit: -129076, unit: "SAR '000", source: "4072_MBC_GROUP/2025_Annual_filed2026-03-27.pdf", page: 35}
+  - {period: "FY2024", segment: "M&E Initiatives", basis: operating, revenue: 693328, profit: 23981, unit: "SAR '000", source: "4072_MBC_GROUP/2025_Annual_filed2026-03-27.pdf", page: 35}
+  - {period: "FY2025", segment: "Broadcasting and other commercial activities", basis: operating, revenue: 2831232, profit: 499376, unit: "SAR '000", source: "4072_MBC_GROUP/2025_Annual_filed2026-03-27.pdf", page: 34}
+  - {period: "FY2025", segment: "MBC Shahid", basis: operating, revenue: 1383493, profit: -78745, unit: "SAR '000", source: "4072_MBC_GROUP/2025_Annual_filed2026-03-27.pdf", page: 34}
+  - {period: "FY2025", segment: "M&E Initiatives", basis: operating, revenue: 1176141, profit: 24969, unit: "SAR '000", source: "4072_MBC_GROUP/2025_Annual_filed2026-03-27.pdf", page: 34}
+  - {period: "9M2025", segment: "Broadcasting and other commercial activities", basis: operating, revenue: 2137703, profit: 445663, unit: "SAR '000", source: "4072_MBC_GROUP/2026_Q3_filed2026-11-15.pdf", page: 16}
+  - {period: "9M2025", segment: "MBC Shahid", basis: operating, revenue: 1017082, profit: -23305, unit: "SAR '000", source: "4072_MBC_GROUP/2026_Q3_filed2026-11-15.pdf", page: 16}
+  - {period: "9M2025", segment: "M&E Initiatives", basis: operating, revenue: 686991, profit: 21387, unit: "SAR '000", source: "4072_MBC_GROUP/2026_Q3_filed2026-11-15.pdf", page: 16}
+  - {period: "9M2026", segment: "Broadcasting and other commercial activities", basis: operating, revenue: 1372252, profit: -531108, unit: "SAR '000", source: "4072_MBC_GROUP/2026_Q3_filed2026-11-15.pdf", page: 16}
+  - {period: "9M2026", segment: "MBC Shahid", basis: operating, revenue: 1178505, profit: 57343, unit: "SAR '000", source: "4072_MBC_GROUP/2026_Q3_filed2026-11-15.pdf", page: 16}
+  - {period: "9M2026", segment: "M&E Initiatives", basis: operating, revenue: 413601, profit: 1183, unit: "SAR '000", source: "4072_MBC_GROUP/2026_Q3_filed2026-11-15.pdf", page: 16}
+  - {period: "FY2025", segment: "GCC (revenue from contracts only)", basis: geographic, revenue: 3386769, profit: null, unit: "SAR '000", source: "4072_MBC_GROUP/2025_Annual_filed2026-03-27.pdf", page: 36, note: "FY2024: 2,961,290"}
+  - {period: "FY2025", segment: "Egypt (revenue from contracts only)", basis: geographic, revenue: 416324, profit: null, unit: "SAR '000", source: "4072_MBC_GROUP/2025_Annual_filed2026-03-27.pdf", page: 36, note: "FY2024: 267,847"}
+  - {period: "FY2025", segment: "Others: North Africa, Iraq, Shahid subscribers elsewhere (revenue from contracts only)", basis: geographic, revenue: 441013, profit: null, unit: "SAR '000", source: "4072_MBC_GROUP/2025_Annual_filed2026-03-27.pdf", page: 36, note: "FY2024: 307,806"}
+
+revenue_drivers:
+  - {period: "FY2025", driver: "Advertising revenue (FY2024: 1,345,165)", value: 1405468, unit: "SAR '000", source: "4072_MBC_GROUP/2025_Annual_filed2026-03-27.pdf", page: 36, quote: "Advertising revenue 1,405,468 1,345,165"}
+  - {period: "FY2025", driver: "Broadcast and technical services revenue (FY2024: 915,440)", value: 1155868, unit: "SAR '000", source: "4072_MBC_GROUP/2025_Annual_filed2026-03-27.pdf", page: 36, quote: "Broadcast and technical services revenue 1,155,868 915,440"}
+  - {period: "FY2025", driver: "Digital revenue (FY2024: 771,579)", value: 969496, unit: "SAR '000", source: "4072_MBC_GROUP/2025_Annual_filed2026-03-27.pdf", page: 36, quote: "Digital revenue 969,496 771,579"}
+  - {period: "FY2025", driver: "Other operating revenues = government funding treated as government grants (FY2024: 659,430), of which production related initiatives 774,882 (308,060)", value: 1146760, unit: "SAR '000", source: "4072_MBC_GROUP/2025_Annual_filed2026-03-27.pdf", page: 37, quote: "Production related initiatives (a) 774,882 308,060"}
+  - {period: "FY2025", driver: "Nature of other operating revenues: KSA government funding for media and entertainment initiatives, linked to KPIs/milestones, recognised as related costs are expensed", value: null, unit: "SAR '000", source: "4072_MBC_GROUP/2025_Annual_filed2026-03-27.pdf", page: 37, quote: "The Group receives from the Government of the KSA, government funding to implement a number of expansion initiatives"}
+  - {period: "9M2026", driver: "Advertising revenue (9M2025: 1,123,689)", value: 886131, unit: "SAR '000", source: "4072_MBC_GROUP/2026_Q3_filed2026-11-15.pdf", page: 19, quote: "Advertising revenue 116,480 174,242 886,131 1,123,689"}
+  - {period: "9M2026", driver: "Broadcast and technical services revenue (9M2025: 858,109)", value: 402657, unit: "SAR '000", source: "4072_MBC_GROUP/2026_Q3_filed2026-11-15.pdf", page: 19, quote: "Broadcast and technical services revenue 14,837 118,106 402,657 858,109"}
+  - {period: "9M2026", driver: "Digital revenue (9M2025: 728,469)", value: 835936, unit: "SAR '000", source: "4072_MBC_GROUP/2026_Q3_filed2026-11-15.pdf", page: 19, quote: "Digital revenue 264,675 239,888 835,936 728,469"}
+  - {period: "9M2026", driver: "Other operating revenues (9M2025: 663,457); production related initiatives 50,308 (385,577)", value: 393617, unit: "SAR '000", source: "4072_MBC_GROUP/2026_Q3_filed2026-11-15.pdf", page: 19, quote: "Production related initiatives (a) 16,406 16,762 50,308 385,577"}
+
+one_offs:
+  - {period: "FY2023", item: "Compensation for loss of business (TV channel), recognised from compensation received in prior years", amount: 54375, unit: "SAR '000", pnl_line: "Other income", recurring: false, source: "4072_MBC_GROUP/2024_Annual_filed2025-03-27.pdf", page: 42, quote: "Compensation for loss of business* (Note 17c) 67,729 54,375"}
+  - {period: "FY2024", item: "Compensation for loss of business (TV channel)", amount: 67729, unit: "SAR '000", pnl_line: "Other income", recurring: false, source: "4072_MBC_GROUP/2025_Annual_filed2026-03-27.pdf", page: 41, quote: "the Group recognised compensation amounting to SAR nil (2024: SAR 67,729 thousand)."}
+  - {period: "FY2024", item: "Realised gain on sale of 4.9% of ACSC (associate)", amount: 170674, unit: "SAR '000", pnl_line: "Realized gain on sale of investment in an associate", recurring: false, source: "4072_MBC_GROUP/2024_Annual_filed2025-03-27.pdf", page: 52, quote: "The gain arising from the Transaction amounted to SAR 170,674 thousand."}
+  - {period: "FY2023", item: "Fair-value result on FVTPL investment (Anghami) and call options, net: FVTPL (882) + derivatives 2,961", amount: 2079, unit: "SAR '000", pnl_line: "Unrealised loss on FVTPL / Gain on derivative financial instruments", recurring: false, source: "4072_MBC_GROUP/2024_Annual_filed2025-03-27.pdf", page: 35, quote: "Loss on financial assets and derivative instruments (net) 2,079"}
+  - {period: "FY2024", item: "Fair-value result on FVTPL investment and call options, net: FVTPL (3,300) + derivatives (5,846)", amount: -9146, unit: "SAR '000", pnl_line: "Unrealised loss on FVTPL / Loss on derivative financial instruments", recurring: false, source: "4072_MBC_GROUP/2025_Annual_filed2026-03-27.pdf", page: 35, quote: "Loss on financial assets and derivative instruments (net) (9,146)"}
+  - {period: "FY2025", item: "Fair-value result, net 179,228: FVTPL 177,343 (ACSC reclassification gain 263,901, ACSC fair-value loss 79,728, Anghami loss 6,830) + derivatives 1,885", amount: 179228, unit: "SAR '000", pnl_line: "Gain on investment in financial assets at FVTPL / gain on derivative financial instruments", recurring: false, source: "4072_MBC_GROUP/2025_Annual_filed2026-03-27.pdf", page: 34, quote: "Gain on financial assets and derivative instruments (net) 179,228"}
+  - {period: "9M2025", item: "Fair-value result, net 52,355 (ACSC net gain 60,429; Anghami loss 8,083; derivatives 9)", amount: 52355, unit: "SAR '000", pnl_line: "Gain on investment in financial assets at FVTPL and derivative financial instruments", recurring: false, source: "4072_MBC_GROUP/2026_Q3_filed2026-11-15.pdf", page: 16, quote: "Gain on investment in financial asset at fair value through profit or loss (FVTPL) and derivative financial instruments 52,355"}
+  - {period: "9M2026", item: "Unrealised fair-value loss, net (575,022): ACSC (575,550), Anghami (13), derivatives 541", amount: -575022, unit: "SAR '000", pnl_line: "(Loss) on investment in financial assets at FVTPL / gain on derivatives", recurring: false, source: "4072_MBC_GROUP/2026_Q3_filed2026-11-15.pdf", page: 24, quote: "Unrealised loss due to change in fair value (575,550) (79,728)"}
+  - {period: "9M2026", item: "Share of losses of MBC Game Studio JV (95,966), offset in revenue by gaming-initiative funding of 95,966", amount: -95966, unit: "SAR '000", pnl_line: "Share of results in associates and joint venture (outside our operating income)", recurring: false, source: "4072_MBC_GROUP/2026_Q3_filed2026-11-15.pdf", page: 22, quote: "Share of results (Note 5) (95,966) (46,311)"}
+
+restatements:
+  - {period_restated: "FY2023", item: "Revenue (contracts with customers) and direct costs", from: "1,334,697 / 1,231,188", to: "1,342,572 / 1,239,063", unit: "SAR '000", reason: "Reclassification of comparatives (note 31 'Comparative figures'), both lines grossed up by 7,875; no effect on profit", source: "4072_MBC_GROUP/2024_Annual_filed2025-03-27.pdf", page: 80, quote: "Certain reclassifications have been made to the prior period's financial statements to conform to the current year's presentation."}
+  - {period_restated: "FY2024", item: "Direct costs and general and administrative expenses", from: "2,992,197 / 1,086,954", to: "2,990,356 / 1,088,795", unit: "SAR '000", reason: "Reclassification of 1,841 (note 30 'Comparative figures'); revenue and profit unchanged", source: "4072_MBC_GROUP/2025_Annual_filed2026-03-27.pdf", page: 73, quote: "Certain reclassifications have been made to the prior year's financial statements to conform to the current year's presentation."}
+
+significant_events:
+  - {date: "2024-01-08", event: "Listing on the Saudi Exchange after an IPO of 33,250 thousand new shares at SAR 25 (gross 831,250, net 763,750 received in 2024)", financial_effect: "Proceeds from IPO 763,750 in FY2024 financing cash flow", source: "4072_MBC_GROUP/2024_Annual_filed2025-03-27.pdf", page: 58, quote: "The net proceeds after deducting the transaction costs, related to financial institutions' advisory and underwriting charges, of SAR 67,500 thousand amounted to SAR 763,750 thousand."}
+  - {date: "2024", event: "Interest-free shareholder loan of 497,250 (used for the 2022 ACSC stake increase) repaid in full", financial_effect: "Repayment of loan from shareholder and a related party (497,625) in FY2024 financing cash flow", source: "4072_MBC_GROUP/2024_Annual_filed2025-03-27.pdf", page: 52, quote: "The loan was interest-free and is repayable on demand with 12 month-notice year. The loan was repaid in full during the year"}
+  - {date: "2025-09-18", event: "PIF acquired Istedamah's stake and became the new parent company", financial_effect: "none on the figures; government funding continues (note 5)", source: "4072_MBC_GROUP/2025_Annual_filed2026-03-27.pdf", page: 12, quote: "On 18 September 2025, the Public Investment Fund (PIF), the sovereign wealth fund of the Government of the"}
+
+audit_opinion:
+  - {period: "FY2023 (20 Apr-31 Dec 2023)", opinion: "Unmodified (EY); key audit matter on revenue recognition; no emphasis of matter", emphasis_of_matter: null, source: "4072_MBC_GROUP/2023_Annual_filed2024-07-02.pdf", page: 3}
+  - {period: "FY2024", opinion: "Unmodified (EY); key audit matter on revenue recognition; no emphasis of matter", emphasis_of_matter: null, source: "4072_MBC_GROUP/2024_Annual_filed2025-03-27.pdf", page: 3}
+  - {period: "FY2025", opinion: "Unmodified (EY); key audit matter on revenue recognition (advertising and digital revenue, volume rebates); no emphasis of matter", emphasis_of_matter: null, source: "4072_MBC_GROUP/2025_Annual_filed2026-03-27.pdf", page: 3}
+  - {period: "9M2026", opinion: "Unmodified review conclusion (EY), IAS 34", emphasis_of_matter: null, source: "4072_MBC_GROUP/2026_Q3_filed2026-11-15.pdf", page: 3}
+
+kpis_in_filings:
+  - {period: "FY2022-9M2026", kpi: "Shahid subscribers, viewers or audience share", value: null, unit: "count", source: "4072_MBC_GROUP/2025_Annual_filed2026-03-27.pdf", page: 33, status: "not found"}
+  - {period: "FY2025", kpi: "Revenue recognised over time (FY2024: 3,412,200)", value: 4036520, unit: "SAR '000", source: "4072_MBC_GROUP/2025_Annual_filed2026-03-27.pdf", page: 36}
+
+special_extractions:
+  - {item: "Finance income and costs inside the single net line (note 9)", detail: "FY2025: income 62,077, costs (4,073); FY2024: 60,355, (4,073) (FY2025 AFS p.41); FY2023: 3,127, (6,222) (FY2024 AFS p.42). Interim notes give no split.", unit: "SAR '000"}
+  - {item: "Interest-free loans excluded from DEBT", detail: "Loan from a shareholder 497,250 (31 Dec 2023, repaid 2024) and loan from a related party 64,167 / 63,792 (interest-free, no fixed repayment), FY2024 AFS p.9 and note 17e-f.", unit: "SAR '000"}
+
+open_questions:
+  - "Revenue from the Saudi government funding programme (other operating revenues, note 5) swings with production milestones (FY2025 1,146,760; 9M 2026 393,617 vs 663,457). The filings do not say how much funding is committed for 2026."
+  - "Broadcast and technical services revenue fell to 402,657 in 9M 2026 from 858,109; the notes do not name the customers or explain the fall (Q3 2026 only 14,837)."
+  - "Revenue earned in Egypt (416,324 in FY2025) is not split by currency, so the effect of the Egyptian pound's fall cannot be measured."

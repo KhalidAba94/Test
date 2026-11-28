@@ -1,0 +1,71 @@
+ticker: "4335"
+headline: >-
+  Revenue fell every year from SAR 112m (FY2022) to SAR 97.2m (FY2025) with no change in the portfolio, finance costs stayed above SAR 50m
+  from FY2023 on borrowings of about SAR 670m, and funds from operations (FFO, we calculate) fell from SAR 48.0m to SAR 13.3m; a SAR 91.9m
+  impairment produced a SAR 110m loss in FY2025, LTV reached 47.0% and a loan covenant was breached at year-end.
+lfl_basis:
+  definition_used: >-
+    Revenue is the audited 'Total income': rental revenue plus finance income on finance leases in which the fund is lessor (SAR 10-12m a
+    year, falling as the receivable amortises). The only perimeter change is SAR 260.3m of property added in 2022, whose revenue is not
+    disclosed, so FY2023 organic growth is not determinable; from FY2024 the portfolio of 13 properties is unchanged, so organic and
+    like-for-like growth equal reported growth. The one UAE warehouse earns AED, which is pegged to the US dollar. 9M figures sum quarterly
+    rental income from unaudited quarterly statements.
+  perimeter_changes:
+    - {event: "Owned investment properties added (SAR 260.3m; property not named)", date: "2022", effect: "revenue not disclosed", source: "4335_MUSHARAKA_REIT/2023_Annual_filed2024-04-01.pdf p.20"}
+    - {event: "No acquisitions or disposals", date: "2023 to 9M 2026", effect: "nil", source: "4335_MUSHARAKA_REIT/2025_Annual_filed2026-03-31_t16-46-18.pdf p.20; 4335_MUSHARAKA_REIT/2026_Q3_filed2026-10-15.pdf p.1"}
+  capacity_changes:
+    - {event: "No developments; additions were improvements only (SAR 2.4m in 2023, nil in 2024, SAR 1.0m in 2025)", date: "2023-2025", effect: "nil", source: "4335_MUSHARAKA_REIT/2023_Annual_filed2024-04-01.pdf p.20; 4335_MUSHARAKA_REIT/2025_Annual_filed2026-03-31_t16-46-18.pdf p.20"}
+  fx_exposure: "One warehouse in Dubai (rent in AED, pegged to the US dollar like the riyal); no FX effect."
+  price_volume_support: >-
+    Not determinable. The fund reports give occupancy and an 'annual income' figure per property (a mix of gross and net measures that does
+    not reconcile to audited revenue), but no rents per square metre, so rent and occupancy effects cannot be separated.
+  confidence: "Medium (perimeter nil from FY2024 with High confidence; FY2023 perimeter not determinable)"
+price_volume:
+  - period: "FY2025 vs FY2024"
+    text: >-
+      Rental revenue fell 8.8% (SAR 95.4m to SAR 87.0m, we calculate) and finance-lease income 5.2% (SAR 10.7m to SAR 10.2m) with no change
+      in the portfolio. The fund reports show the largest falls at Verdun Tower (annual income SAR 23.3m to SAR 17.3m; occupancy 73% to 82%)
+      and the Pearl compound (SAR 14.1m to SAR 12.0m; occupancy 72% to 64%). Rents per square metre are not disclosed.
+    basis: "disclosed (revenue lines; fund-report income and occupancy); split not determinable"
+    confidence: "Medium (fund-report property figures are unaudited)"
+    source: "4335_MUSHARAKA_REIT/2025_Annual_filed2026-03-31_t16-46-18.pdf p.7, p.19; 4335_MUSHARAKA_REIT/2025_Annual_filed2026-03-31_t16-46-52.pdf p.5, p.16; 4335_MUSHARAKA_REIT/2024_Annual_filed2025-03-24.pdf p.5, p.16"
+    refs: ["4335-FY2025-REV", "4335-FY2024-REV"]
+  - period: "9M 2026 vs 9M 2025"
+    text: >-
+      Summed quarterly rental income fell 1.3% (SAR 75.2m to SAR 74.2m). Occupancy at Verdun Tower was 89% at 30 Sep 2026 against 58% a year
+      earlier, while the Sea Shore compound fell to 38% from 46% and the Ajzala compound to 82% from 92%.
+    basis: "disclosed (quarterly statements); split not determinable"
+    confidence: "Low (unaudited quarterly statements)"
+    source: "4335_MUSHARAKA_REIT/2026_Q3_filed2026-10-15.pdf p.1; 4335_MUSHARAKA_REIT/2025_Q3_filed2025-11-03.pdf p.1"
+    refs: ["4335-9M2026-REV", "4335-9M2025-REV"]
+profit_and_margin:
+  drivers:
+    - {period: "FY2023", driver: "Revenue -4.9% to SAR 107m (rental revenue -5.1%, finance-lease income SAR 11.2m vs SAR 11.6m). The result swung to an SAR 8.3m loss: finance costs rose to SAR 57.2m (SAR 32.3m), including a SAR 1.9m write-off of arrangement fees on the refinancing, and other operating expenses to SAR 23.3m (SAR 13.7m), partly offset by a SAR 15.0m impairment reversal. FY2022 profit of SAR 10.9m had included a SAR 2.0m zakat reversal. FFO fell 84.0% to SAR 7.7m (FFO margin 7.2%) while distributions were SAR 23.8m; net margin -7.8%; ROE -1.0%.", source: "4335_MUSHARAKA_REIT/2024_Annual_filed2025-03-23.pdf p.7; 4335_MUSHARAKA_REIT/2023_Annual_filed2024-04-01.pdf p.7, p.19", refs: ["4335-FY2023-REV", "4335-FY2023-NI_ATTR", "4335-FY2023-FFO", "4335-FY2022-FFO", "4335-FY2023-DIST"]}
+    - {period: "FY2024", driver: "Revenue -0.5% to SAR 106m. The loss widened to SAR 22.3m with a SAR 5.9m impairment, finance costs of SAR 56.7m and lower fund management fees (SAR 14.8m vs SAR 19.0m). FFO rose to SAR 14.9m (FFO margin 14.0%; growth n.m. because the FY2023 base was below SAR 10m) and distributions were 118.4% of it. Net margin -21.0%; ROE -2.9%; LTV 42.7%. Fund reports show occupancy falling at Verdun Tower (96% to 73%) and the Pearl compound (88% to 72%).", source: "4335_MUSHARAKA_REIT/2025_Annual_filed2026-03-31_t16-46-18.pdf p.7 (FY2024 column); 4335_MUSHARAKA_REIT/2024_Annual_filed2025-03-24.pdf p.5, p.16", refs: ["4335-FY2024-REV", "4335-FY2024-NI_ATTR", "4335-FY2024-FFO", "4335-FY2024-DEBT", "4335-FY2024-TA"]}
+    - {period: "FY2025", driver: "Revenue -8.4% to SAR 97.2m (rental -8.8%). A SAR 91.9m impairment, as valuations fell below carrying values, produced a SAR 110m loss (net margin -113.1%, ROE -16.2%). FFO fell 10.5% to SAR 13.3m (FFO margin 13.7%); distributions of SAR 21.1m were 158.7% of FFO. NAV at fair value fell 12.0% to SAR 784m and LTV rose to 47.0% as total assets shrank. At 31 Dec 2025 the fund breached a covenant on its Bank Al Jazira loan, with no waiver.", source: "4335_MUSHARAKA_REIT/2025_Annual_filed2026-03-31_t16-46-18.pdf p.7-9, p.21, p.23, p.26", refs: ["4335-FY2025-REV", "4335-FY2025-NI_ATTR", "4335-FY2025-FFO", "4335-FY2025-IMPAIR_CF", "4335-FY2025-DIST", "4335-FY2025-NAV_FV", "4335-FY2025-DEBT"]}
+    - {period: "9M2026", driver: "Quarterly statements only (unaudited; their financial highlights cover the prior half-year, so no 9M profit is printed): summed rental income SAR 74.2m against SAR 75.2m (-1.3%); distributions SAR 19.4m (SAR 21.1m, -8.3%); borrowing amount SAR 677m at 30 Sep 2026 against SAR 665m a year earlier, on a basis that now includes accrued finance costs. FFO, margins, ROE and LTV cannot be calculated for 9M.", source: "4335_MUSHARAKA_REIT/2026_Q3_filed2026-10-15.pdf p.1; 4335_MUSHARAKA_REIT/2025_Q3_filed2025-11-03.pdf p.1", refs: ["4335-9M2026-REV", "4335-9M2025-REV", "4335-9M2026-DIST", "4335-9M2026-DEBT", "4335-9M2025-DEBT"]}
+  one_offs:
+    - {item: "Zakat reversal after ZATCA ruled that investment funds do not pay zakat (inside FFO)", period: "FY2022", amount_sar_m: 2.0, line: "Zakat reversal", source: "4335_MUSHARAKA_REIT/2023_Annual_filed2024-04-01.pdf p.7, p.19", tax_nci: "The item is itself zakat and the fund has no non-controlling interests; net profit kept as reported (a gain is never subtracted from net profit); listed for FFO excluding one-offs"}
+    - {item: "Loan arrangement fee written off on the refinancing of SAR 320.7m (inside finance costs and FFO)", period: "FY2023", amount_sar_m: -1.9, line: "Finance costs (arrangement fee written-off)", source: "4335_MUSHARAKA_REIT/2023_Annual_filed2024-04-01.pdf p.19", tax_nci: "No zakat from FY2023 and no non-controlling interests; net profit kept as reported; listed for FFO excluding one-offs"}
+    - {item: "Reversal of impairment loss on investment properties (excluded from FFO)", period: "FY2023", amount_sar_m: 15.0, line: "Reversal of impairment loss on investment properties", source: "4335_MUSHARAKA_REIT/2023_Annual_filed2024-04-01.pdf p.7", tax_nci: "No zakat and no non-controlling interests; net profit kept as reported; FFO excludes it"}
+    - {item: "Impairment loss on investment properties (excluded from FFO)", period: "FY2025", amount_sar_m: -91.9, line: "Impairment loss on investment properties", source: "4335_MUSHARAKA_REIT/2025_Annual_filed2026-03-31_t16-46-18.pdf p.7, p.21", tax_nci: "No zakat and no non-controlling interests; net profit kept as reported; FFO excludes it"}
+developments:
+  - {date: "2022", category: "M&A", text: "Added SAR 260.3m of owned investment property, financed by SAR 254.9m of new borrowings; total assets rose from SAR 1,442m (FY2021) to SAR 1,657m.", source: "4335_MUSHARAKA_REIT/2023_Annual_filed2024-04-01.pdf p.20, p.10; 4335_MUSHARAKA_REIT/2025_Annual_filed2026-03-31_t16-46-52.pdf p.21"}
+  - {date: "2023", category: "financing", text: "Took a SAR 1bn facility from Bank Al Jazira and repaid SAR 320.7m of Al Rajhi loans with it, writing off SAR 1.9m of arrangement fees; ZATCA ruled that investment funds do not pay zakat.", source: "4335_MUSHARAKA_REIT/2023_Annual_filed2024-04-01.pdf p.19; 4335_MUSHARAKA_REIT/2025_Annual_filed2026-03-31_t16-46-18.pdf p.26"}
+  - {date: "2025-04-22", category: "strategy", text: "Changed the investment concentration policy to main Saudi cities and renamed the Radisson Blu Hotel Apartments 'Hotel Apartments – Dhahran'.", source: "4335_MUSHARAKA_REIT/2025_Annual_filed2026-03-31_t16-46-52.pdf p.2"}
+  - {date: "2025-12-31", category: "financing", text: "Breached one covenant on the Bank Al Jazira loan, giving the bank the right to demand immediate repayment; no waiver was obtained and the loan is presented under the facility terms. The auditor's opinion is unmodified with no emphasis of matter.", source: "4335_MUSHARAKA_REIT/2025_Annual_filed2026-03-31_t16-46-18.pdf p.26, p.3"}
+  - {date: "2026-08-16", category: "financing", text: "Distributed SAR 0.12 per unit (SAR 10.56m) after SAR 0.10 (SAR 8.8m) in March 2026; per-unit distributions were SAR 0.30 per half-year in 2021-2022.", source: "4335_MUSHARAKA_REIT/2026_Q3_filed2026-10-15.pdf p.1"}
+what_it_means:
+  improved: "Verdun Tower, the largest property, was 89% occupied at 30 Sep 2026 against 58% a year earlier, and 9M 2026 rental income was close to flat (-1.3%)."
+  weakened: "Revenue fell 4.7% a year from FY2022 to FY2025, FFO fell from SAR 48.0m to SAR 13.3m while distributions stayed above it, NAV at fair value fell from SAR 895m to SAR 784m and LTV rose from 39.7% to 47.0%; the FY2025 loss was SAR 110m (net margin -113.1%)."
+  why: "Finance costs rose from SAR 32.3m in FY2022 to above SAR 50m a year on borrowings of about SAR 670m, occupancy fell at the residential compounds and Verdun Tower, and valuations dropped, forcing a SAR 91.9m impairment in FY2025."
+  uncertain: "The covenant breach at end-2025 lets Bank Al Jazira demand repayment and no waiver had been obtained when the statements were approved; the 9M 2026 data are partial and include no profit."
+confidence_overall: "Medium"
+data_notes:
+  - 'Revenue basis (the same for all eight REITs): revenue is rental income plus other property operating income (hotel revenue, service charges, finance-lease income on leased property) and excludes Murabaha, deposit and other finance income, fair-value gains, disposal gains, dividends and other income. For this fund revenue is ''Total income'' = rental revenue plus finance income on finance leases where the fund is lessor (rent in substance); finance income on term deposits, FVTPL gains and other income (rent concessions) are below that line and excluded.'
+  - "9M 2025 and 9M 2026 are partial: the archive holds one-page quarterly statements. 9M revenue sums 'Quarter rental income' for three quarters (the four 2025 quarters add to SAR 99.0m vs audited total income of SAR 97.2m). The statements' financial highlights are for the prior half-year, so no 9M profit, total assets, net assets or cash are printed and 9M FFO, margins, ROE and LTV are blank. The 'Borrowing Amount' excluded accrued finance costs in 2025 (Q4 2025: SAR 665.1m = loans less unamortised costs) but appears to include them from Q1 2026, so 9M 2025 and 9M 2026 borrowings are not on the same basis."
+  - "Revenue (REV) is 'Total income' and includes finance income on finance leases where the fund is lessor (FY2022 SAR 11.6m to FY2025 SAR 10.2m). Borrowings exclude lease liabilities on head leases (FY2025 SAR 117m); cash excludes short-term Murabaha deposits (FY2022 SAR 35.0m, FY2023 SAR 45.3m)."
+  - "Restated: FY2024 borrowings SAR 678.3m in the FY2025 statements (FY2024 statements: SAR 663.6m) after accrued finance costs of SAR 14.7m were moved into borrowings (note 26); total assets and net assets unchanged."
+  - "No FY2022 annual is in the archive: FY2022 is the FY2023 annual's comparative column; FY2021 total assets (SAR 1,442m) come from the unaudited fund annual report and FY2021 borrowings and fair-value NAV are not printed."
+  - "Distributions are those declared or paid in the year per the statement of changes in net assets; 9M figures sum the dividend-table entries dated in January to September."
+  - "Per-property 'annual income' and occupancy quoted from the fund annual reports are unaudited and mix gross and net measures."

@@ -1,0 +1,470 @@
+# Evidence extracted from Saudi Aramco filings (archive: 2222_SAUDI_ARAMCO). Facts only; page = physical PDF page (1-based).
+# All SAR amounts are SAR millions (Aramco presents "All amounts in millions of Saudi Riyals").
+ticker: "2222"
+company: "Saudi Arabian Oil Company (Saudi Aramco)"
+
+perimeter_changes:
+  - event: "Acquisition of 100% of Aramco Fuels Poland (AFP, ex LOTOS SPV 1) from Grupa LOTOS"
+    type: acquisition
+    date: "2022-11-30"
+    consideration: "SAR 930m cash (plus SAR 889m for 30% LOTOS Asfalt and 50% LOTOS-Air BP Polska)"
+    revenue_contribution: 2043
+    profit_contribution: 14
+    pro_forma_revenue: null
+    period: "FY2022"
+    unit: "SAR m"
+    source: "2222_SAUDI_ARAMCO/2023_Annual_filed2024-03-11.pdf"
+    page: 72
+    quote: "Post-acquisition, AFP contributed revenues of SAR 2,043 and net income of SAR 14, for the year ended December 31, 2022"
+  - event: "Sale of 49% of Aramco Gas Pipelines Company (AGPC) to GreenSaif; recognised as non-controlling interest (control retained)"
+    type: new_subsidiary
+    date: "2022-02-23"
+    consideration: "SAR 58,125m upfront cash"
+    revenue_contribution: null
+    profit_contribution: null
+    pro_forma_revenue: null
+    period: "FY2022"
+    unit: "SAR m"
+    source: "2222_SAUDI_ARAMCO/2023_Annual_filed2024-03-11.pdf"
+    page: 71
+    quote: "the Company sold a 49% equity interest in AGPC, a newly formed wholly-owned subsidiary of the Company ... for upfront proceeds of SAR 58,125"
+  - event: "Acquisition of 100% of Valvoline Inc. global products business (VGP Holdings LLC)"
+    type: acquisition
+    date: "2023-03-01"
+    consideration: "SAR 10,338m cash incl. customary adjustments; goodwill SAR 410m"
+    revenue_contribution: 9428
+    profit_contribution: 668
+    pro_forma_revenue: 11189
+    period: "FY2023"
+    unit: "SAR m"
+    source: "2222_SAUDI_ARAMCO/2023_Annual_filed2024-03-11.pdf"
+    page: 71
+    quote: "Post-acquisition, VGP Holdings LLC contributed revenues of SAR 9,428 and net income of SAR 668"
+    note: "FY2023 AFS says pro-forma revenue/net income 'would have been SAR 11,189 and SAR 802'; FY2024 AFS (p70) rewords as 'would have been higher by SAR 11,189 and SAR 802'. See open_questions."
+  - event: "Acquisition of 10% equity interest in Rongsheng Petrochemical (investment, not consolidated)"
+    type: acquisition
+    date: "2023-07-21"
+    consideration: "SAR 12,767m"
+    revenue_contribution: null
+    profit_contribution: null
+    pro_forma_revenue: null
+    period: "FY2023"
+    unit: "SAR m"
+    source: "2222_SAUDI_ARAMCO/2023_Annual_filed2024-03-11.pdf"
+    page: 73
+    quote: "On July 21, 2023, the Company announced the completion of the acquisition of a 10% equity interest in Rongsheng Petrochemical"
+  - event: "Acquisition of 100% of Esmax Distribucion SpA (Chile fuels retail)"
+    type: acquisition
+    date: "2024-03-01"
+    consideration: "SAR 1,373m cash (SAR 22m refunded Q3 2024); net assets SAR 1,096m, goodwill SAR 255m"
+    revenue_contribution: 7796
+    profit_contribution: 8
+    pro_forma_revenue: 1564
+    period: "FY2024"
+    unit: "SAR m"
+    source: "2222_SAUDI_ARAMCO/2025_Annual_filed2026-03-10.pdf"
+    page: 73
+    quote: "Esmax contributed revenues of SAR 7,796 and net income of SAR 8 ... would have been higher by SAR 1,564 and SAR 15"
+    note: "pro_forma_revenue field holds the incremental uplift (SAR 1,564m higher), not total pro-forma revenue."
+  - event: "SABIC disposal of Hadeed (Saudi Iron and Steel) to PIF"
+    type: disposal
+    date: "2024-05-31"
+    consideration: "SAR 1,163m cash + deferred SAR 3,032m current and SAR 1,794m non-current"
+    revenue_contribution: null
+    profit_contribution: -304
+    pro_forma_revenue: null
+    period: "FY2024"
+    unit: "SAR m"
+    source: "2222_SAUDI_ARAMCO/2025_Annual_filed2026-03-10.pdf"
+    page: 73
+    quote: "was recognized in 2023, followed by an additional fair value loss of SAR 304 in 2024."
+    note: "Metal products revenue line (FY2023 SAR 13,054m; FY2024 SAR 5,211m) disappears in FY2025."
+  - event: "SABIC sale of Film & Sheet business"
+    type: disposal
+    date: "2024-09"
+    consideration: "SAR 937m (SAR 562m cash, SAR 375m deferred); gain SAR 291m"
+    revenue_contribution: null
+    profit_contribution: 291
+    pro_forma_revenue: null
+    period: "FY2024"
+    unit: "SAR m"
+    source: "2222_SAUDI_ARAMCO/2025_Annual_filed2026-03-10.pdf"
+    page: 73
+    quote: "In September 2024, SABIC completed the sale of its Film & Sheet business for a consideration of SAR 937."
+  - event: "Equity-accounted / investment acquisitions 2024: MidOcean (associate, SAR 969m total), GO Pakistan 40% (JV, SAR 279m), HORSE Powertrain 10% (FVOCI, SAR 2,576m)"
+    type: acquisition
+    date: "2024"
+    consideration: "see event"
+    revenue_contribution: null
+    profit_contribution: null
+    pro_forma_revenue: null
+    period: "FY2024"
+    unit: "SAR m"
+    source: "2222_SAUDI_ARAMCO/2025_Annual_filed2026-03-10.pdf"
+    page: 74
+    quote: "AAS ... completed the acquisition of a 40% equity stake in Gas & Oil Pakistan Limited (GO), for a purchase consideration of SAR 279."
+  - event: "SABIC sale of 20.62% stake in ALBA (associate) to Ma'aden"
+    type: disposal
+    date: "2025-02-19"
+    consideration: "BHD 363m (approx SAR 3,606m) cash; carrying amount SAR 3,294m"
+    revenue_contribution: null
+    profit_contribution: 342
+    pro_forma_revenue: null
+    period: "FY2025"
+    unit: "SAR m"
+    source: "2222_SAUDI_ARAMCO/2025_Annual_filed2026-03-10.pdf"
+    page: 72
+    quote: "The sale proceeds of Bahraini Dinars 363 million (approximately SAR 3,606) were received in cash and a gain of SAR 342 was recognized"
+  - event: "Additional 22.5% of Petro Rabigh Class A shares from Sumitomo plus Class B subscription; Petro Rabigh remains an associate"
+    type: acquisition
+    date: "2025-10-09"
+    consideration: "SAR 2,632m (Class A) + SAR 2,632m (Class B); total investment increase SAR 5,264m"
+    revenue_contribution: null
+    profit_contribution: null
+    pro_forma_revenue: null
+    period: "FY2025"
+    unit: "SAR m"
+    source: "2222_SAUDI_ARAMCO/2025_Annual_filed2026-03-10.pdf"
+    page: 73
+    quote: "the Company continues to account for Petro Rabigh as an associate."
+  - event: "Sale of 49% of Jafurah Midstream Gas Company (JMGC) to Green Palm (GIP/BlackRock consortium); control retained, proceeds booked as NCI"
+    type: new_subsidiary
+    date: "2025-10-27"
+    consideration: "SAR 41,802m upfront cash"
+    revenue_contribution: null
+    profit_contribution: null
+    pro_forma_revenue: null
+    period: "FY2025"
+    unit: "SAR m"
+    source: "2222_SAUDI_ARAMCO/2025_Annual_filed2026-03-10.pdf"
+    page: 71
+    quote: "the upfront sale proceeds have been recognized as a non-controlling interest within equity in 2025."
+  - event: "Other 2025 equity-accounted investments: FSARP 25% JV (SAR 2,542m), BHIG 50% JV (SAR 113m + 891m), Unioil 25% associates (SAR 295m)"
+    type: acquisition
+    date: "2025"
+    consideration: "see event"
+    revenue_contribution: null
+    profit_contribution: null
+    pro_forma_revenue: null
+    period: "FY2025"
+    unit: "SAR m"
+    source: "2222_SAUDI_ARAMCO/2025_Annual_filed2026-03-10.pdf"
+    page: 74
+    quote: "AAS holds a 25% equity interest in FSARP ... an amount of SAR 2,542 was recognized as an investment in joint venture"
+  - event: "SABIC Europe B.V. (European petrochemicals) classified held for sale; sale to AEQUITA affiliate signed 8 Jan 2026, completion expected Q4 2026"
+    type: disposal
+    date: "2025-12-16 (HFS); 2026-01-08 (SPA)"
+    consideration: "Enterprise value SAR 1,875m via two vendor loan notes (deferred/contingent)"
+    revenue_contribution: null
+    profit_contribution: -8640
+    pro_forma_revenue: null
+    period: "FY2025"
+    unit: "SAR m"
+    source: "2222_SAUDI_ARAMCO/2025_Annual_filed2026-03-10.pdf"
+    page: 72
+    quote: "A remeasurement loss of SAR 8,640 was recognized in the consolidated statement of income within impairment and held for sale remeasurement losses"
+  - event: "SABIC Engineering Thermoplastics (ETP) Americas and Europe sold to Mutares; HFS at 31 Dec 2025, closed 4 Aug 2026"
+    type: disposal
+    date: "2026-08-04"
+    consideration: "EV SAR 1,688m; cash SAR 30m + deferred consideration SAR 3,135m; assets SAR 5,702m and liabilities SAR 2,857m derecognised"
+    revenue_contribution: null
+    profit_contribution: -4755
+    pro_forma_revenue: null
+    period: "FY2025 / 9M2026"
+    unit: "SAR m"
+    source: "2222_SAUDI_ARAMCO/2026_Q3_filed2026-11-03.pdf"
+    page: 42
+    quote: "SABIC received cash consideration of SAR 30, and recognized a deferred consideration of SAR 3,135 within non-current other assets and receivables."
+    note: "FY2025 remeasurement loss SAR 4,755m (FY2025 AFS p72); further SAR 554m in 9M2026."
+  - event: "Sale of equity stakes in PRefChem (Pengerang refining and petrochemical joint operations, Malaysia) to PETRONAS"
+    type: disposal
+    date: "2026-09-02"
+    consideration: "Net liabilities derecognised SAR 12,141m plus additional trade receivables SAR 13,761m; total receivables from PRefChem SAR 27,523m (SAR 5,777m received 3 Sep 2026, rest over six years)"
+    revenue_contribution: null
+    profit_contribution: 25902
+    pro_forma_revenue: null
+    period: "9M2026"
+    unit: "SAR m"
+    source: "2222_SAUDI_ARAMCO/2026_Q3_filed2026-11-03.pdf"
+    page: 42
+    quote: "A gain on sale of SAR 25,902 has been recorded, resulting from the derecognition of net liabilities classified as held for sale of SAR 12,141"
+  - event: "Acquisition of 49% stakes in HUMAIN entities from PIF (associate), subsequent event"
+    type: acquisition
+    date: "2026-11-01"
+    consideration: "SAR 9,892m cash plus certain AI assets"
+    revenue_contribution: null
+    profit_contribution: null
+    pro_forma_revenue: null
+    period: "post 9M2026"
+    unit: "SAR m"
+    source: "2222_SAUDI_ARAMCO/2026_Q3_filed2026-11-03.pdf"
+    page: 43
+    quote: "Saudi Aramco contributed cash amounting to SAR 9,892, and certain Artificial Intelligence (AI) assets to HUMAIN."
+  - event: "Pro-forma / post-acquisition contribution disclosure for acquisitions in FY2025 or 9M2026"
+    type: acquisition
+    status: "not found"
+    period: "FY2025, 9M2026"
+    source: "2222_SAUDI_ARAMCO/2025_Annual_filed2026-03-10.pdf"
+    page: 73
+    quote: "No new subsidiary acquisition with IFRS 3 contribution disclosure in FY2025 notes 34-36."
+
+segments:
+  # Operating segments: external revenue and EBIT (segment profit measure). Corporate and eliminations shown where relevant.
+  - {period: "FY2022", segment: "Upstream", basis: operating, revenue: 1024628, profit: 1092425, other_income_related_to_sales: 85475, unit: "SAR m", source: "2222_SAUDI_ARAMCO/2022_Annual_filed2023-03-13.pdf", page: 32}
+  - {period: "FY2022", segment: "Downstream", basis: operating, revenue: 980681, profit: 79292, other_income_related_to_sales: 173943, unit: "SAR m", source: "2222_SAUDI_ARAMCO/2022_Annual_filed2023-03-13.pdf", page: 32}
+  - {period: "FY2022", segment: "Corporate", basis: operating, revenue: 1646, profit: -19667, unit: "SAR m", source: "2222_SAUDI_ARAMCO/2022_Annual_filed2023-03-13.pdf", page: 32}
+  - {period: "FY2022", segment: "Eliminations / Consolidated EBIT", basis: operating, revenue: 2006955, profit: 1149419, note: "eliminations EBIT -2,631", unit: "SAR m", source: "2222_SAUDI_ARAMCO/2022_Annual_filed2023-03-13.pdf", page: 32}
+  - {period: "FY2023", segment: "Upstream", basis: operating, revenue: 784642, profit: 863549, other_income_related_to_sales: 71361, unit: "SAR m", source: "2222_SAUDI_ARAMCO/2023_Annual_filed2024-03-11.pdf", page: 34}
+  - {period: "FY2023", segment: "Downstream", basis: operating, revenue: 866688, profit: 21184, other_income_related_to_sales: 131731, unit: "SAR m", source: "2222_SAUDI_ARAMCO/2023_Annual_filed2024-03-11.pdf", page: 34}
+  - {period: "FY2023", segment: "Corporate", basis: operating, revenue: 1951, profit: -18220, unit: "SAR m", source: "2222_SAUDI_ARAMCO/2023_Annual_filed2024-03-11.pdf", page: 34}
+  - {period: "FY2023", segment: "Consolidated EBIT", basis: operating, revenue: 1653281, profit: 865037, note: "eliminations EBIT -1,476", unit: "SAR m", source: "2222_SAUDI_ARAMCO/2023_Annual_filed2024-03-11.pdf", page: 34}
+  - {period: "FY2024", segment: "Upstream", basis: operating, revenue: 719157, profit: 801047, other_income_related_to_sales: 54972, unit: "SAR m", source: "2222_SAUDI_ARAMCO/2025_Annual_filed2026-03-10.pdf", page: 36}
+  - {period: "FY2024", segment: "Downstream", basis: operating, revenue: 917044, profit: -10998, other_income_related_to_sales: 109403, unit: "SAR m", source: "2222_SAUDI_ARAMCO/2025_Annual_filed2026-03-10.pdf", page: 36}
+  - {period: "FY2024", segment: "Corporate", basis: operating, revenue: 1098, profit: -21830, unit: "SAR m", source: "2222_SAUDI_ARAMCO/2025_Annual_filed2026-03-10.pdf", page: 36}
+  - {period: "FY2024", segment: "Consolidated EBIT", basis: operating, revenue: 1637299, profit: 772296, note: "eliminations EBIT +4,077; same figures in FY2024 AFS p34", unit: "SAR m", source: "2222_SAUDI_ARAMCO/2025_Annual_filed2026-03-10.pdf", page: 36}
+  - {period: "FY2025", segment: "Upstream", basis: operating, revenue: 659011, profit: 731850, other_income_related_to_sales: 40262, unit: "SAR m", source: "2222_SAUDI_ARAMCO/2025_Annual_filed2026-03-10.pdf", page: 36}
+  - {period: "FY2025", segment: "Downstream", basis: operating, revenue: 897712, profit: -9552, other_income_related_to_sales: 71600, note: "Downstream EBIT includes SAR 20,363m losses relating to assets held for sale", unit: "SAR m", source: "2222_SAUDI_ARAMCO/2025_Annual_filed2026-03-10.pdf", page: 36}
+  - {period: "FY2025", segment: "Corporate", basis: operating, revenue: 2619, profit: -18539, unit: "SAR m", source: "2222_SAUDI_ARAMCO/2025_Annual_filed2026-03-10.pdf", page: 36}
+  - {period: "FY2025", segment: "Consolidated EBIT", basis: operating, revenue: 1559342, profit: 700664, note: "eliminations EBIT -3,095", unit: "SAR m", source: "2222_SAUDI_ARAMCO/2025_Annual_filed2026-03-10.pdf", page: 36}
+  - {period: "9M2026", segment: "Upstream", basis: operating, revenue: 547328, profit: 569386, other_income_related_to_sales: 48015, unit: "SAR m", source: "2222_SAUDI_ARAMCO/2026_Q3_filed2026-11-03.pdf", page: 35}
+  - {period: "9M2026", segment: "Downstream", basis: operating, revenue: 798852, profit: 138215, other_income_related_to_sales: 119659, unit: "SAR m", source: "2222_SAUDI_ARAMCO/2026_Q3_filed2026-11-03.pdf", page: 35}
+  - {period: "9M2026", segment: "Corporate", basis: operating, revenue: 2023, profit: -16429, unit: "SAR m", source: "2222_SAUDI_ARAMCO/2026_Q3_filed2026-11-03.pdf", page: 35}
+  - {period: "9M2026", segment: "Consolidated EBIT", basis: operating, revenue: 1348203, profit: 667838, note: "eliminations EBIT -23,334", unit: "SAR m", source: "2222_SAUDI_ARAMCO/2026_Q3_filed2026-11-03.pdf", page: 35}
+  - {period: "9M2025", segment: "Upstream", basis: operating, revenue: 494627, profit: 552295, other_income_related_to_sales: 29883, unit: "SAR m", source: "2222_SAUDI_ARAMCO/2026_Q3_filed2026-11-03.pdf", page: 36}
+  - {period: "9M2025", segment: "Downstream", basis: operating, revenue: 674136, profit: 9096, other_income_related_to_sales: 54389, unit: "SAR m", source: "2222_SAUDI_ARAMCO/2026_Q3_filed2026-11-03.pdf", page: 36}
+  - {period: "9M2025", segment: "Corporate", basis: operating, revenue: 1879, profit: -12401, unit: "SAR m", source: "2222_SAUDI_ARAMCO/2026_Q3_filed2026-11-03.pdf", page: 36}
+  - {period: "9M2025", segment: "Consolidated EBIT", basis: operating, revenue: 1170642, profit: 548121, note: "eliminations EBIT -869", unit: "SAR m", source: "2222_SAUDI_ARAMCO/2026_Q3_filed2026-11-03.pdf", page: 36}
+  # Geographic (external revenue by location of selling entity)
+  - {period: "FY2022", segment: "In-Kingdom", basis: geographic, revenue: 1293097, profit: null, unit: "SAR m", source: "2222_SAUDI_ARAMCO/2022_Annual_filed2023-03-13.pdf", page: 33}
+  - {period: "FY2022", segment: "Out-of-Kingdom", basis: geographic, revenue: 713858, profit: null, unit: "SAR m", source: "2222_SAUDI_ARAMCO/2022_Annual_filed2023-03-13.pdf", page: 33}
+  - {period: "FY2023", segment: "In-Kingdom", basis: geographic, revenue: 1011932, profit: null, unit: "SAR m", source: "2222_SAUDI_ARAMCO/2023_Annual_filed2024-03-11.pdf", page: 35}
+  - {period: "FY2023", segment: "Out-of-Kingdom", basis: geographic, revenue: 641349, profit: null, unit: "SAR m", source: "2222_SAUDI_ARAMCO/2023_Annual_filed2024-03-11.pdf", page: 35}
+  - {period: "FY2024", segment: "In-Kingdom", basis: geographic, revenue: 954139, profit: null, unit: "SAR m", source: "2222_SAUDI_ARAMCO/2025_Annual_filed2026-03-10.pdf", page: 37}
+  - {period: "FY2024", segment: "Out-of-Kingdom", basis: geographic, revenue: 683160, profit: null, note: "incl. USA-originated sales SAR 190,011m", unit: "SAR m", source: "2222_SAUDI_ARAMCO/2025_Annual_filed2026-03-10.pdf", page: 37}
+  - {period: "FY2025", segment: "In-Kingdom", basis: geographic, revenue: 893705, profit: null, unit: "SAR m", source: "2222_SAUDI_ARAMCO/2025_Annual_filed2026-03-10.pdf", page: 37}
+  - {period: "FY2025", segment: "Out-of-Kingdom", basis: geographic, revenue: 665637, profit: null, note: "incl. USA-originated sales SAR 184,474m", unit: "SAR m", source: "2222_SAUDI_ARAMCO/2025_Annual_filed2026-03-10.pdf", page: 37}
+  - {period: "9M2026 / 9M2025", segment: "Geographic split", basis: geographic, status: "not found", note: "Interim report gives no geographic revenue split", source: "2222_SAUDI_ARAMCO/2026_Q3_filed2026-11-03.pdf", page: 35}
+
+revenue_drivers:
+  # Revenue from contracts with customers by product (Note 24 annual / Note 10 interim)
+  - {period: "FY2022", driver: "Crude oil revenue", value: 1076726, unit: "SAR m", source: "2222_SAUDI_ARAMCO/2022_Annual_filed2023-03-13.pdf", page: 60, quote: "Crude oil 971,325 105,401 - 1,076,726"}
+  - {period: "FY2022", driver: "Refined and chemical products revenue", value: 835884, unit: "SAR m", source: "2222_SAUDI_ARAMCO/2022_Annual_filed2023-03-13.pdf", page: 60, quote: "Refined and chemical products - 835,884 - 835,884"}
+  - {period: "FY2022", driver: "Natural gas and NGLs revenue", value: 75347, unit: "SAR m", source: "2222_SAUDI_ARAMCO/2022_Annual_filed2023-03-13.pdf", page: 60, quote: "Natural gas and NGLs 56,055 19,292 - 75,347"}
+  - {period: "FY2022", driver: "Metal products revenue", value: 15390, unit: "SAR m", source: "2222_SAUDI_ARAMCO/2022_Annual_filed2023-03-13.pdf", page: 60, quote: "Metal products - 15,390 - 15,390"}
+  - {period: "FY2023", driver: "Crude oil revenue", value: 838634, unit: "SAR m", source: "2222_SAUDI_ARAMCO/2023_Annual_filed2024-03-11.pdf", page: 65, quote: "Crude oil 746,689 91,945 - 838,634"}
+  - {period: "FY2023", driver: "Refined and chemical products revenue", value: 750355, unit: "SAR m", source: "2222_SAUDI_ARAMCO/2023_Annual_filed2024-03-11.pdf", page: 65, quote: "Refined and chemical products - 750,355 - 750,355"}
+  - {period: "FY2023", driver: "Natural gas and NGLs revenue", value: 42071, unit: "SAR m", source: "2222_SAUDI_ARAMCO/2023_Annual_filed2024-03-11.pdf", page: 65, quote: "Natural gas and NGLs 38,053 4,018 - 42,071"}
+  - {period: "FY2023", driver: "Metal products revenue", value: 13054, unit: "SAR m", source: "2222_SAUDI_ARAMCO/2023_Annual_filed2024-03-11.pdf", page: 65, quote: "Metal products - 13,054 - 13,054"}
+  - {period: "FY2024", driver: "Crude oil revenue", value: 803140, unit: "SAR m", source: "2222_SAUDI_ARAMCO/2025_Annual_filed2026-03-10.pdf", page: 67, quote: "Crude oil 671,412 131,728 - 803,140"}
+  - {period: "FY2024", driver: "Refined and chemical products revenue", value: 768438, unit: "SAR m", source: "2222_SAUDI_ARAMCO/2025_Annual_filed2026-03-10.pdf", page: 67, quote: "Refined and chemical products - 768,438 - 768,438"}
+  - {period: "FY2024", driver: "Natural gas and NGLs revenue", value: 53577, unit: "SAR m", source: "2222_SAUDI_ARAMCO/2025_Annual_filed2026-03-10.pdf", page: 67, quote: "Natural gas and NGLs 47,304 6,273 - 53,577"}
+  - {period: "FY2024", driver: "Metal products revenue (Hadeed, disposed May 2024)", value: 5211, unit: "SAR m", source: "2222_SAUDI_ARAMCO/2025_Annual_filed2026-03-10.pdf", page: 67, quote: "Metal products - 5,211 - 5,211"}
+  - {period: "FY2025", driver: "Crude oil revenue", value: 705990, unit: "SAR m", source: "2222_SAUDI_ARAMCO/2025_Annual_filed2026-03-10.pdf", page: 66, quote: "Crude oil 605,258 100,732 - 705,990"}
+  - {period: "FY2025", driver: "Refined and chemical products revenue", value: 777076, unit: "SAR m", source: "2222_SAUDI_ARAMCO/2025_Annual_filed2026-03-10.pdf", page: 66, quote: "Refined and chemical products - 777,076 - 777,076"}
+  - {period: "FY2025", driver: "Natural gas and NGLs revenue", value: 65106, unit: "SAR m", source: "2222_SAUDI_ARAMCO/2025_Annual_filed2026-03-10.pdf", page: 66, quote: "Natural gas and NGLs 52,425 12,681 - 65,106"}
+  - {period: "9M2026", driver: "Crude oil revenue", value: 570259, unit: "SAR m", source: "2222_SAUDI_ARAMCO/2026_Q3_filed2026-11-03.pdf", page: 40, quote: "Crude oil 499,650 70,609 - 570,259"}
+  - {period: "9M2026", driver: "Refined and chemical products revenue", value: 707154, unit: "SAR m", source: "2222_SAUDI_ARAMCO/2026_Q3_filed2026-11-03.pdf", page: 40, quote: "Refined and chemical products - 707,154 - 707,154"}
+  - {period: "9M2026", driver: "Natural gas and NGLs revenue", value: 50651, unit: "SAR m", source: "2222_SAUDI_ARAMCO/2026_Q3_filed2026-11-03.pdf", page: 40, quote: "Natural gas and NGLs 36,005 14,646 - 50,651"}
+  - {period: "9M2026", driver: "Movement between provisional and final prices", value: 12473, unit: "SAR m", source: "2222_SAUDI_ARAMCO/2026_Q3_filed2026-11-03.pdf", page: 39, quote: "Movement between provisional and final prices 7,103 342 12,473 1,437"}
+  - {period: "9M2025", driver: "Crude oil revenue", value: 530139, unit: "SAR m", source: "2222_SAUDI_ARAMCO/2026_Q3_filed2026-11-03.pdf", page: 40, quote: "Crude oil 453,717 76,422 - 530,139"}
+  - {period: "9M2025", driver: "Refined and chemical products revenue", value: 582547, unit: "SAR m", source: "2222_SAUDI_ARAMCO/2026_Q3_filed2026-11-03.pdf", page: 40, quote: "Refined and chemical products - 582,547 - 582,547"}
+  - {period: "9M2025", driver: "Natural gas and NGLs revenue", value: 48327, unit: "SAR m", source: "2222_SAUDI_ARAMCO/2026_Q3_filed2026-11-03.pdf", page: 40, quote: "Natural gas and NGLs 38,939 9,388 - 48,327"}
+  - {period: "9M2026", driver: "Average realized crude oil price (interim report MD&A)", value: 91.7, unit: "USD/bbl", source: "2222_SAUDI_ARAMCO/2026_Q3_filed2026-11-03.pdf", page: 1, quote: "Average realized crude oil price $/bbl 95.2 108.1 70.1 91.7 71.0"}
+  - {period: "9M2025", driver: "Average realized crude oil price (interim report MD&A)", value: 71.0, unit: "USD/bbl", source: "2222_SAUDI_ARAMCO/2026_Q3_filed2026-11-03.pdf", page: 1, quote: "Average realized crude oil price $/bbl 95.2 108.1 70.1 91.7 71.0"}
+  # Other income related to sales (Government price-equalization compensation)
+  - {period: "FY2022", driver: "Other income related to sales", value: 259418, unit: "SAR m", source: "2222_SAUDI_ARAMCO/2022_Annual_filed2023-03-13.pdf", page: 10, quote: "Other income related to sales 259,418 154,828"}
+  - {period: "FY2023", driver: "Other income related to sales", value: 203092, unit: "SAR m", source: "2222_SAUDI_ARAMCO/2023_Annual_filed2024-03-11.pdf", page: 12, quote: "Other income related to sales 203,092 259,418"}
+  - {period: "FY2024", driver: "Other income related to sales", value: 164375, unit: "SAR m", source: "2222_SAUDI_ARAMCO/2025_Annual_filed2026-03-10.pdf", page: 14, quote: "Other income related to sales 111,862 164,375"}
+  - {period: "FY2025", driver: "Other income related to sales", value: 111862, unit: "SAR m", source: "2222_SAUDI_ARAMCO/2025_Annual_filed2026-03-10.pdf", page: 14, quote: "Other income related to sales 111,862 164,375"}
+  - {period: "9M2026", driver: "Other income related to sales", value: 167674, unit: "SAR m", source: "2222_SAUDI_ARAMCO/2026_Q3_filed2026-11-03.pdf", page: 27, quote: "Other income related to sales 62,514 31,995 167,674 84,272"}
+  - {period: "9M2025", driver: "Other income related to sales", value: 84272, unit: "SAR m", source: "2222_SAUDI_ARAMCO/2026_Q3_filed2026-11-03.pdf", page: 27, quote: "Other income related to sales 62,514 31,995 167,674 84,272"}
+
+one_offs:
+  - {period: "FY2022", item: "PP&E impairment, mainly downstream plant (VIU, recoverable amount SAR 25,100m)", amount: 3690, unit: "SAR m", pnl_line: "Depreciation and amortization (as then presented)", recurring: false, source: "2222_SAUDI_ARAMCO/2022_Annual_filed2023-03-13.pdf", page: 34, quote: "Saudi Aramco recognized an impairment loss of SAR 3,690 mainly relating to plant, machinery and equipment of certain downstream"}
+  - {period: "FY2022", item: "Write-down of downstream facilities (SAR 476m) and of other intangible assets (SAR 330m)", amount: 806, unit: "SAR m", pnl_line: "Depreciation and amortization (as then presented)", recurring: false, source: "2222_SAUDI_ARAMCO/2022_Annual_filed2023-03-13.pdf", page: 34, quote: "Saudi Aramco recognized a write-down of SAR 476 (2021: SAR 875) on certain downstream facilities"}
+  - {period: "FY2023", item: "PP&E impairment, mainly downstream (recoverable amount SAR 10,132m) plus write-down SAR 907m", amount: 3110, unit: "SAR m", pnl_line: "Depreciation and amortization (as then presented)", recurring: false, source: "2222_SAUDI_ARAMCO/2023_Annual_filed2024-03-11.pdf", page: 36, quote: "Saudi Aramco recognized an impairment loss of SAR 3,110 (2022: SAR 3,690) mainly relating to plant, machinery and equipment"}
+  - {period: "FY2023", item: "Hadeed fair-value loss on classification as held for sale", amount: 3219, unit: "SAR m", pnl_line: "Loss on fair value measurement of assets held for sale (cash-flow add-back); FY2025 AFS groups such losses within impairment and HFS remeasurement losses", recurring: false, source: "2222_SAUDI_ARAMCO/2023_Annual_filed2024-03-11.pdf", page: 70, quote: "a loss on fair value measurement of SAR 3,219 was recognized"}
+  - {period: "FY2024", item: "PP&E impairment, domestic and international downstream (SAR 10,370m) plus write-down SAR 1,070m", amount: 11440, unit: "SAR m", pnl_line: "Originally D&A; reclassified to Impairment and held for sale remeasurement losses (total line SAR 11,834m) in FY2025 AFS", recurring: false, source: "2222_SAUDI_ARAMCO/2024_Annual_filed2025-03-04.pdf", page: 36, quote: "An impairment charge of SAR 10,370 mainly relating to plant, machinery and equipment of certain domestic and international downstream facilities"}
+  - {period: "FY2024", item: "Impairment and held for sale remeasurement losses (as re-presented)", amount: 11834, unit: "SAR m", pnl_line: "Impairment and held for sale remeasurement losses", recurring: false, source: "2222_SAUDI_ARAMCO/2025_Annual_filed2026-03-10.pdf", page: 14, quote: "Impairment and held for sale remeasurement losses 5,35 (32,425) (11,834)"}
+  - {period: "FY2024", item: "Gain on SABIC Film & Sheet sale", amount: 291, unit: "SAR m", pnl_line: "not specified", recurring: false, source: "2222_SAUDI_ARAMCO/2025_Annual_filed2026-03-10.pdf", page: 73, quote: "A gain of SAR 291 was recognized at the consolidated level during the year ended December 31, 2024."}
+  - {period: "FY2025", item: "Impairment and held for sale remeasurement losses (total)", amount: 32425, unit: "SAR m", pnl_line: "Impairment and held for sale remeasurement losses", recurring: false, source: "2222_SAUDI_ARAMCO/2025_Annual_filed2026-03-10.pdf", page: 14, quote: "Impairment and held for sale remeasurement losses 5,35 (32,425) (11,834)"}
+  - {period: "FY2025", item: "of which: PP&E impairment, domestic and international downstream (VIU, recoverable SAR 21,408m, pre-tax rates 9.0%-11.7%)", amount: 14569, unit: "SAR m", pnl_line: "Impairment and held for sale remeasurement losses", recurring: false, source: "2222_SAUDI_ARAMCO/2025_Annual_filed2026-03-10.pdf", page: 38, quote: "During the year, an impairment charge of SAR 14,569 was recognized, mainly relating to certain domestic and international downstream facilities"}
+  - {period: "FY2025", item: "of which: write-down mainly closure of an international downstream facility", amount: 4452, unit: "SAR m", pnl_line: "Impairment and held for sale remeasurement losses", recurring: false, source: "2222_SAUDI_ARAMCO/2025_Annual_filed2026-03-10.pdf", page: 38, quote: "a write-down of SAR 4,452, primarily related to the closure of an international downstream facility, was recognized in the impairment charge"}
+  - {period: "FY2025", item: "of which: SABIC Europe B.V. held-for-sale remeasurement loss", amount: 8640, unit: "SAR m", pnl_line: "Impairment and held for sale remeasurement losses", recurring: false, source: "2222_SAUDI_ARAMCO/2025_Annual_filed2026-03-10.pdf", page: 72, quote: "A remeasurement loss of SAR 8,640 was recognized in the consolidated statement of income within impairment and held for sale remeasurement losses"}
+  - {period: "FY2025", item: "of which: SABIC ETP held-for-sale remeasurement loss", amount: 4755, unit: "SAR m", pnl_line: "Impairment and held for sale remeasurement losses", recurring: false, source: "2222_SAUDI_ARAMCO/2025_Annual_filed2026-03-10.pdf", page: 72, quote: "A remeasurement loss of SAR 4,755 was recognized in the consolidated statement of income within impairment and held for sale remeasurement losses"}
+  - {period: "FY2025", item: "Downstream EBIT losses relating to HFS assets (impairment 3,540 + FV remeasurement 13,395 + operational losses 3,428)", amount: 20363, unit: "SAR m", pnl_line: "Downstream EBIT (segment note footnote)", recurring: false, source: "2222_SAUDI_ARAMCO/2025_Annual_filed2026-03-10.pdf", page: 36, quote: "Downstream EBIT includes an amount of SAR 20,363 (2024: SAR 3,544) relating to assets held for sale"}
+  - {period: "FY2025", item: "Gain on disposal of ALBA (held for sale)", amount: 342, unit: "SAR m", pnl_line: "Gain on disposal of assets classified as held for sale (cash flow add-back)", recurring: false, source: "2222_SAUDI_ARAMCO/2025_Annual_filed2026-03-10.pdf", page: 18, quote: "Gain on disposal of assets classified as held for sale 35(b) (342)"}
+  - {period: "FY2025", item: "Loss on retirements and disposal of PP&E", amount: 5079, unit: "SAR m", pnl_line: "Operating costs (cash-flow add-back)", recurring: false, source: "2222_SAUDI_ARAMCO/2025_Annual_filed2026-03-10.pdf", page: 18, quote: "Loss on retirements and disposal of property, plant and equipment 5,079 1,983"}
+  - {period: "9M2026", item: "Gain on sale of equity interest in PRefChem", amount: 25902, unit: "SAR m", pnl_line: "Gain on sale of equity interest in an affiliate (within operating income)", recurring: false, source: "2222_SAUDI_ARAMCO/2026_Q3_filed2026-11-03.pdf", page: 27, quote: "Gain on sale of equity interest in an affiliate 16(a) 25,902 - 25,902 -"}
+  - {period: "9M2026", item: "Impairment and held for sale remeasurement losses (incl. SABIC EP SAR 469m, ETP SAR 554m)", amount: 1908, unit: "SAR m", pnl_line: "Impairment and held for sale remeasurement losses", recurring: false, source: "2222_SAUDI_ARAMCO/2026_Q3_filed2026-11-03.pdf", page: 27, quote: "Impairment and held for sale remeasurement losses 5,16 (980) (5,345) (1,908) (8,886)"}
+  - {period: "9M2025", item: "Impairment and held for sale remeasurement losses (as re-presented)", amount: 8886, unit: "SAR m", pnl_line: "Impairment and held for sale remeasurement losses", recurring: false, source: "2222_SAUDI_ARAMCO/2026_Q3_filed2026-11-03.pdf", page: 27, quote: "Impairment and held for sale remeasurement losses 5,16 (980) (5,345) (1,908) (8,886)"}
+  - {period: "9M2026", item: "Losses on fair value remeasurement of certain commodity derivatives (adjusting item, non-IFRS reconciliation)", amount: 5145, unit: "SAR m", pnl_line: "within EBIT (Downstream)", recurring: false, source: "2222_SAUDI_ARAMCO/2026_Q3_filed2026-11-03.pdf", page: 19, quote: "Losses on fair value remeasurement of certain commodity derivatives 5,145"}
+  - {period: "9M2026", item: "Losses for the period from assets classified as held for sale (adjusting item)", amount: 2580, unit: "SAR m", pnl_line: "within EBIT (Downstream, net of eliminations)", recurring: false, source: "2222_SAUDI_ARAMCO/2026_Q3_filed2026-11-03.pdf", page: 19, quote: "Losses for the period from assets classified as held for sale 3,900 (1,320) 2,580"}
+  - {period: "9M2026", item: "Total adjusting items (net gain) per management reconciliation", amount: -21844, unit: "SAR m", pnl_line: "Net income reconciliation to adjusted net income", recurring: false, source: "2222_SAUDI_ARAMCO/2026_Q3_filed2026-11-03.pdf", page: 15, quote: "Total adjusting items (23,457) (569) 6,767 (21,844) 19,654"}
+
+restatements:
+  - period_restated: "FY2024"
+    item: "Depreciation and amortization (income statement and cash flow)"
+    from: 103209
+    to: 91679
+    unit: "SAR m"
+    reason: "Impairment losses previously presented within D&A reclassified to new line 'Impairment and held for sale remeasurement losses' (FY2024: SAR 11,834m, which also absorbs the SAR 304m Hadeed HFS fair-value loss previously shown separately in cash flow; FY2024 SG&A changed 89,235 -> 88,931). Net income unchanged."
+    source: "2222_SAUDI_ARAMCO/2025_Annual_filed2026-03-10.pdf"
+    page: 24
+    quote: "Impairment losses for 2024, previously recognized within depreciation and amortization, have been reclassified to conform to the current year presentation."
+    original_source: "2222_SAUDI_ARAMCO/2024_Annual_filed2025-03-04.pdf p12 (income statement) and p16 (cash flow): D&A 103,209; Loss on FV measurement of HFS assets 304"
+  - period_restated: "9M2025"
+    item: "Depreciation and amortization (income statement and cash flow)"
+    from: 77601
+    to: 68715
+    unit: "SAR m"
+    reason: "Same presentation change: 9M2025 impairment and HFS remeasurement losses of SAR 8,886m shown separately (77,601 - 68,715 = 8,886)."
+    source: "2222_SAUDI_ARAMCO/2026_Q3_filed2026-11-03.pdf"
+    page: 32
+    quote: "Certain amounts for the comparative periods have been reclassified to conform to the current period presentation."
+    original_source: "2222_SAUDI_ARAMCO/2025_Q3_filed2025-11-04.pdf p27 (income statement) and p31 (cash flow): D&A 77,601"
+  - period_restated: "FY2024"
+    item: "Selling, administrative and general"
+    from: -89235
+    to: -88931
+    unit: "SAR m"
+    reason: "Inferred: SAR 304m Hadeed HFS fair-value loss moved into 'Impairment and held for sale remeasurement losses' (11,530 ex-D&A + 304 = 11,834). The note gives only the general reclassification statement."
+    source: "2222_SAUDI_ARAMCO/2025_Annual_filed2026-03-10.pdf"
+    page: 31
+    quote: "Certain comparative amounts for 2024 have been reclassified to conform to the current year presentation."
+  - period_restated: "FY2022 (notes only)"
+    item: "Comparative amounts in notes"
+    from: null
+    to: null
+    unit: "SAR m"
+    reason: "Generic reclassification of certain 2022 note comparatives; no detail given."
+    source: "2222_SAUDI_ARAMCO/2023_Annual_filed2024-03-11.pdf"
+    page: 29
+    quote: "Certain comparative amounts for 2022 in the notes to the consolidated financial statements have been reclassified to conform to the current year presentation."
+  - period_restated: "9M2025 (non-IFRS)"
+    item: "Adjusted net income / adjusted EBIT"
+    from: null
+    to: 302282
+    unit: "SAR m"
+    reason: "2025 non-IFRS amounts amended to reflect revisions to adjusting items (outside IFRS statements)."
+    source: "2222_SAUDI_ARAMCO/2026_Q3_filed2026-11-03.pdf"
+    page: 1
+    quote: "2025 amounts have been amended to reflect revisions made to adjusting items for comparative purposes."
+
+significant_events:
+  - date: "2026-03 onward"
+    event: "Geopolitical developments in the Middle East: key shipping routes affected; flows rerouted through East-West pipeline and alternative export routes; facilities of the Company and affiliates in the Kingdom targeted in attacks"
+    financial_effect: "Management: impact on facilities not expected to be material as of 30 Sep 2026; factors contributed to changes in 9M2026 financial position and performance"
+    source: "2222_SAUDI_ARAMCO/2026_Q3_filed2026-11-03.pdf"
+    page: 32
+    quote: "certain facilities of the Company and its affiliates in the Kingdom were targeted in attacks during this period and subsequently after the third quarter."
+  - date: "2026-Q1"
+    event: "East-West Pipeline ramped to maximum capacity of 7.0 million bpd to support exports via west coast; relief for customers affected by shipping constraints in the Strait of Hormuz (Q1 2026 interim highlights)"
+    financial_effect: "Q1 2026: impact not material to financial position, results or cash flows as of 31 Mar 2026"
+    source: "2222_SAUDI_ARAMCO/2026_Q1_filed2026-05-11.pdf"
+    page: 1
+    quote: "providing relief to customers affected by shipping constraints in the Strait of Hormuz."
+  - date: "2026-03-31"
+    event: "Q1 2026 note: attacks on facilities during the quarter and in April 2026"
+    financial_effect: "Not material as of 31 Mar 2026"
+    source: "2222_SAUDI_ARAMCO/2026_Q1_filed2026-05-11.pdf"
+    page: 28
+    quote: "Management concluded that, as of March 31, 2026, the impact of these events was not material to Saudi Aramco's financial position"
+  - date: "2026 9M"
+    event: "Upstream production lower YoY (liquids 8,934 mbpd 9M2026 vs 10,536 9M2025); realized crude price 91.7 vs 71.0 USD/bbl; Downstream supply reliability 97.4% vs 99.9%"
+    financial_effect: "Upstream 9M adjusted EBIT up on higher prices partly offset by lower volumes and higher royalties"
+    source: "2222_SAUDI_ARAMCO/2026_Q3_filed2026-11-03.pdf"
+    page: 6
+    quote: "The increase was largely due to higher crude oil prices, partially offset by lower volumes sold of crude oil and an increase in production royalties."
+  - date: "2026-02-02"
+    event: "Issued USD 4,000m (SAR 15,000m) senior unsecured notes in four tranches under GMTN programme"
+    financial_effect: "Borrowings +SAR 15,000m"
+    source: "2222_SAUDI_ARAMCO/2025_Annual_filed2026-03-10.pdf"
+    page: 86
+    quote: "the Company issued four tranches of USD denominated senior unsecured notes, aggregating to an equivalent of SAR 15,000 ($4,000)"
+  - date: "2026-03-09"
+    event: "Board approved buy-back of up to 350m shares over 18 months, max SAR 11,250m; 83.8m shares repurchased for SAR 2,297m by 30 Sep 2026"
+    financial_effect: "Treasury share purchases SAR 2,297m in 9M2026"
+    source: "2222_SAUDI_ARAMCO/2026_Q3_filed2026-11-03.pdf"
+    page: 32
+    quote: "the Company had repurchased an aggregate of 83.8 million shares from the market for a cash payment of SAR 2,297."
+  - date: "FY2024"
+    event: "Dividends paid SAR 465,918m incl. performance-linked SAR 161,593m"
+    financial_effect: "Dividends paid"
+    source: "2222_SAUDI_ARAMCO/2025_Annual_filed2026-03-10.pdf"
+    page: 75
+    quote: "Includes SAR 3,288 (SAR 0.0136 per share) of performance-linked dividends for the year ended December 31, 2025 (2024: SAR 161,593"
+  - date: "FY2025"
+    event: "Dividends paid SAR 320,447m (SAR 1.3248/share) incl. performance-linked SAR 3,288m"
+    financial_effect: "Dividends paid"
+    source: "2222_SAUDI_ARAMCO/2025_Annual_filed2026-03-10.pdf"
+    page: 75
+    quote: "Total1 320,447 465,918 1.3248 1.9260"
+  - date: "9M2026"
+    event: "Base dividends paid SAR 246,217m (SAR 1.0179/share); Q3 2026 base dividend SAR 82,068m declared 2 Nov 2026"
+    financial_effect: "Dividends paid"
+    source: "2222_SAUDI_ARAMCO/2026_Q3_filed2026-11-03.pdf"
+    page: 43
+    quote: "Total dividends declared and paid 246,217 240,329 1.0179 0.9936"
+  - date: "FY2023"
+    event: "Dividends paid to shareholders SAR 366,674m (FY2022: SAR 281,318m)"
+    financial_effect: "Dividends paid"
+    source: "2222_SAUDI_ARAMCO/2023_Annual_filed2024-03-11.pdf"
+    page: 16
+    quote: "Dividends paid to shareholders of the Company 36 (366,674) (281,318)"
+  - date: "2025-01 / 2024-08"
+    event: "Waiver of Petro Rabigh shareholder loans (SAR 1,875m by Aramco in 2024, SAR 938m in Jan 2025), recorded as increase in investment in associate"
+    financial_effect: "Investment in Petro Rabigh increased"
+    source: "2222_SAUDI_ARAMCO/2025_Annual_filed2026-03-10.pdf"
+    page: 73
+    quote: "The Company recognized the waiver of its shareholder loan receivable as an increase in the carrying amount of the investment in Petro Rabigh"
+
+audit_opinion:
+  - {period: "FY2022", opinion: "Unmodified (PwC); no emphasis of matter or material uncertainty paragraph found", emphasis_of_matter: none, source: "2222_SAUDI_ARAMCO/2022_Annual_filed2023-03-13.pdf", page: 2}
+  - {period: "FY2023", opinion: "Unmodified (PwC); KAMs incl. impairment; no EoM found", emphasis_of_matter: none, source: "2222_SAUDI_ARAMCO/2023_Annual_filed2024-03-11.pdf", page: 4}
+  - {period: "FY2024", opinion: "Unmodified (PwC); no EoM found", emphasis_of_matter: none, source: "2222_SAUDI_ARAMCO/2024_Annual_filed2025-03-04.pdf", page: 4}
+  - {period: "FY2025", opinion: "Unmodified (PwC, signed 9 Mar 2026); KAMs: recoverability of Downstream goodwill, valuation of PP&E, sale of NCI in Jafurah; no EoM found", emphasis_of_matter: none, source: "2222_SAUDI_ARAMCO/2025_Annual_filed2026-03-10.pdf", page: 4}
+  - {period: "9M2026", opinion: "Review conclusion (unmodified); no EoM found", emphasis_of_matter: none, source: "2222_SAUDI_ARAMCO/2026_Q3_filed2026-11-03.pdf", page: 26}
+
+kpis_in_filings:
+  # Operational KPIs appear only in the interim report MD&A section (not in the IFRS notes). Annual PDFs (FS extracts) contain none beyond capacity mentions.
+  - {period: "9M2026", kpi: "Total liquids production", value: 8934, unit: "mbpd", source: "2222_SAUDI_ARAMCO/2026_Q3_filed2026-11-03.pdf", page: 6}
+  - {period: "9M2025", kpi: "Total liquids production", value: 10536, unit: "mbpd", source: "2222_SAUDI_ARAMCO/2026_Q3_filed2026-11-03.pdf", page: 6}
+  - {period: "Q3 2026", kpi: "Total liquids production", value: 8695, unit: "mbpd", source: "2222_SAUDI_ARAMCO/2026_Q3_filed2026-11-03.pdf", page: 6}
+  - {period: "Q2 2026", kpi: "Total liquids production", value: 7566, unit: "mbpd", source: "2222_SAUDI_ARAMCO/2026_Q3_filed2026-11-03.pdf", page: 6}
+  - {period: "9M2026", kpi: "Total gas production", value: 10910, unit: "mmscfd", source: "2222_SAUDI_ARAMCO/2026_Q3_filed2026-11-03.pdf", page: 6}
+  - {period: "9M2025", kpi: "Total gas production", value: 11577, unit: "mmscfd", source: "2222_SAUDI_ARAMCO/2026_Q3_filed2026-11-03.pdf", page: 6}
+  - {period: "9M2026", kpi: "Total hydrocarbon production", value: 11035, unit: "mboed", source: "2222_SAUDI_ARAMCO/2026_Q3_filed2026-11-03.pdf", page: 6}
+  - {period: "9M2025", kpi: "Total hydrocarbon production", value: 12787, unit: "mboed", source: "2222_SAUDI_ARAMCO/2026_Q3_filed2026-11-03.pdf", page: 6}
+  - {period: "9M2026", kpi: "Downstream supply reliability", value: 97.4, unit: "%", source: "2222_SAUDI_ARAMCO/2026_Q3_filed2026-11-03.pdf", page: 8}
+  - {period: "9M2025", kpi: "Downstream supply reliability", value: 99.9, unit: "%", source: "2222_SAUDI_ARAMCO/2026_Q3_filed2026-11-03.pdf", page: 8}
+  - {period: "9M2026", kpi: "Downstream utilization of Aramco crude production", value: 51, unit: "%", source: "2222_SAUDI_ARAMCO/2026_Q3_filed2026-11-03.pdf", page: 8}
+  - {period: "9M2025", kpi: "Downstream utilization of Aramco crude production", value: 54, unit: "%", source: "2222_SAUDI_ARAMCO/2026_Q3_filed2026-11-03.pdf", page: 8}
+  - {period: "Q1 2026", kpi: "East-West Pipeline throughput reached maximum capacity", value: 7.0, unit: "million bpd", source: "2222_SAUDI_ARAMCO/2026_Q1_filed2026-05-11.pdf", page: 1}
+  - {period: "FY2022-FY2025", kpi: "Production volumes in annual FS", value: null, unit: "count", status: "not found", source: "2222_SAUDI_ARAMCO/2025_Annual_filed2026-03-10.pdf", page: null}
+
+special_extractions:
+  - name: "Other income related to sales - nature"
+    description: "Government compensation through price equalization for revenue forgone from compliance with domestic regulated prices for certain liquid products and LPG; calculated as equalization price minus domestic regulated price, net of Government fees (2017 and 2019 implementing regulations); taxable; receivable recorded in Due from the Government and offset against tax payments."
+    source: "2222_SAUDI_ARAMCO/2025_Annual_filed2026-03-10.pdf"
+    page: 30
+    quote: "The Government compensates the Company through price equalization for revenue directly forgone as a result of the Company's compliance with local regulations"
+  - name: "Other income related to sales - amounts"
+    unit: "SAR m"
+    values:
+      FY2022: {amount: 259418, upstream: 85475, downstream: 173943, source: "2222_SAUDI_ARAMCO/2022_Annual_filed2023-03-13.pdf", page: 10}
+      FY2023: {amount: 203092, upstream: 71361, downstream: 131731, source: "2222_SAUDI_ARAMCO/2023_Annual_filed2024-03-11.pdf", page: 12}
+      FY2024: {amount: 164375, upstream: 54972, downstream: 109403, source: "2222_SAUDI_ARAMCO/2025_Annual_filed2026-03-10.pdf", page: 14}
+      FY2025: {amount: 111862, upstream: 40262, downstream: 71600, source: "2222_SAUDI_ARAMCO/2025_Annual_filed2026-03-10.pdf", page: 14}
+      9M2026: {amount: 167674, upstream: 48015, downstream: 119659, source: "2222_SAUDI_ARAMCO/2026_Q3_filed2026-11-03.pdf", page: 27}
+      9M2025: {amount: 84272, upstream: 29883, downstream: 54389, source: "2222_SAUDI_ARAMCO/2026_Q3_filed2026-11-03.pdf", page: 27}
+      Q3_2026: {amount: 62514, source: "2222_SAUDI_ARAMCO/2026_Q3_filed2026-11-03.pdf", page: 27}
+      Q3_2025: {amount: 31995, source: "2222_SAUDI_ARAMCO/2026_Q3_filed2026-11-03.pdf", page: 27}
+    due_from_government_for_this_income: {FY2025: 25415, FY2024: 35844, source: "2222_SAUDI_ARAMCO/2025_Annual_filed2026-03-10.pdf", page: 51}
+
+open_questions:
+  - "VGP pro-forma wording differs: FY2023 AFS p71 says consolidated revenue/net income 'would have been SAR 11,189 and SAR 802'; FY2024 AFS p70 says 'would have been higher by SAR 11,189 and SAR 802'. Higher-by reading is the later filing's wording."
+  - "FY2024 reclassification: D&A fell by 11,530 while the new impairment/HFS line is 11,834; the 304 difference matches the Hadeed HFS fair-value loss and the SG&A change (89,235 -> 88,931), but the note does not itemise it."
+  - "FY2025 SAR 32,425m breakdown: disclosed components 14,569 (PP&E VIU impairment) + 4,452 (write-down, facility closure) + 8,640 (SABIC EP HFS) + 4,755 (ETP HFS) = 32,416; residual SAR 9m not itemised (segment note: Downstream 32,357, Corporate 68). Segment footnote also cites SAR 3,540m impairment relating to HFS assets - overlap with the 14,569 not stated."
+  - "Operational KPIs (production, utilization) are only in the interim-report MD&A pages, not in the IFRS notes; annual PDFs in archive contain FS only."
+  - "Note 4 (FY2025) states inter-segment pricing basis changed effective 1 Oct 2024; 2026 interim again cites 'certain changes in the pricing basis of inter-segment transactions' - segment EBIT comparability across periods may be affected; no quantification given."

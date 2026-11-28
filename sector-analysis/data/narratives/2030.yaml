@@ -1,0 +1,64 @@
+ticker: "2030"
+headline: >-
+  SARCO is an investment holding company with almost no revenue: its profit of SAR 28.2m in FY2022 and SAR 7.7m in FY2023, mostly dividend
+  income, turned into losses of SAR 53.5m in FY2024 and SAR 60.2m in FY2025 after it moved its listed shares into a portfolio measured at
+  fair value through profit or loss, and the 9M 2026 attributable loss widened to SAR 27.4m from SAR 22.1m.
+lfl_basis:
+  definition_used: >-
+    Not applicable on a revenue basis. SARCO had no revenue in FY2022-FY2025; its first revenue (SAR 1.1m in 9M 2026) came entirely from
+    Lawazem, acquired on 23 Jul 2026, so revenue growth is not meaningful and all of it is a perimeter effect. The company is analysed on a
+    profit basis: dividend income, the share of associates' results, gains and losses on listed shares held at fair value through profit or
+    loss (FVTPL), overheads and zakat. Operating income in the dataset keeps these investment results inside it.
+  perimeter_changes:
+    - {event: "Sale of the whole portfolio held at fair value through OCI (mainly Saudi Industrial Investment Group shares) for SAR 306.8m and reinvestment in a discretionary FVTPL portfolio", date: "2024", effect: "no revenue effect; future gains and losses go through profit instead of OCI; SAR 180.1m fair-value reserve moved to retained earnings", source: "2030_SARCO/2024_Annual_filed2025-04-09.pdf p.25; 2030_SARCO/2025_Annual_filed2026-04-02.pdf p.9"}
+    - {event: "Dormant subsidiary Al-Sadu Investments (capital never paid) dissolved", date: "2024-07-31", effect: "nil", source: "2030_SARCO/2025_Annual_filed2026-04-02.pdf p.11"}
+    - {event: "Start-up subsidiaries: Clean Energy Company (Dec 2025, green ammonia project), Refineries Storage Services (Jan 2026), Masafi Ventures Holding (Feb 2026)", date: "2025-12 to 2026-02", effect: "no revenue", source: "2030_SARCO/2025_Annual_filed2026-04-02.pdf p.11; 2030_SARCO/2026_Q3_filed2026-11-18.pdf p.8-9"}
+    - {event: "Associates bought: 35% of Raya Al-Tajdeed Contracting (SAR 4.9m) and 33% of Global Waste Solutions (SAR 2.0m)", date: "2026-05-04 / 2026-06-29", effect: "equity-accounted; no revenue", source: "2030_SARCO/2026_Q3_filed2026-11-18.pdf p.13, p.15"}
+    - {event: "85% of Lawazem (kitchens, caravans, doors) acquired for SAR 12.0m (provisional goodwill SAR 10.4m)", date: "2026-07-23", effect: "SAR 1.1m revenue and SAR 0.8m net loss to 30 Sep 2026 (disclosed); pro-forma not disclosed", source: "2030_SARCO/2026_Q3_filed2026-11-18.pdf p.14, p.20"}
+  capacity_changes:
+    - {event: "Commercial plot of 103,140 square metres on Al-Kharj Road (Riyadh) won at auction for SAR 35.5m, held as property for operational use", date: "2026-01-27", effect: "no revenue yet", source: "2030_SARCO/2026_Q3_filed2026-11-18.pdf p.14"}
+  fx_exposure: "None: Saudi listed investments and Saudi operations."
+  price_volume_support: "Not applicable: there was no revenue until Q3 2026."
+  confidence: "High (the profit-basis analysis rests on audited and reviewed line items)"
+price_volume:
+  - period: "9M 2026 vs 9M 2025"
+    text: >-
+      Revenue of SAR 1.1m (9M 2025: nil) is Lawazem's revenue since 23 Jul 2026, recognised over time; gross profit SAR 0.5m. Growth is not
+      meaningful and price and volume are not applicable.
+    basis: "disclosed"
+    confidence: "High"
+    source: "2030_SARCO/2026_Q3_filed2026-11-18.pdf p.5 (P&L), p.20 (segments)"
+    refs: ["2030-9M2026-REV", "2030-9M2026-GP"]
+profit_and_margin:
+  drivers:
+    - {period: "FY2022", driver: "Profit SAR 28.2m, mainly dividend income of SAR 34.5m on listed shares (chiefly Saudi Industrial Investment Group) held at fair value through OCI; ROE 5.7%.", source: "2030_SARCO/2022_Annual_filed2023-03-31.pdf p.8", refs: ["2030-FY2022-NI_ATTR"]}
+    - {period: "FY2023", driver: "Profit fell to SAR 7.7m as dividend income dropped to SAR 15.4m; ROE 1.8%.", source: "2030_SARCO/2024_Annual_filed2025-04-09.pdf p.8", refs: ["2030-FY2023-NI_ATTR"]}
+    - {period: "FY2024", driver: "Loss of SAR 53.5m after the shares were sold and reinvested in a discretionary FVTPL portfolio, which lost SAR 44.9m; dividend income SAR 9.6m, share of associates SAR 2.0m and zakat SAR 7.8m (FY2023: SAR 1.7m). A further SAR 37.1m fair-value loss before the sale went through OCI; attributable equity fell 20.9%.", source: "2030_SARCO/2025_Annual_filed2026-04-02.pdf p.8; 2030_SARCO/2024_Annual_filed2025-04-09.pdf p.8, p.25", refs: ["2030-FY2024-NI_ATTR", "2030-FY2024-EQ_ATTR"]}
+    - {period: "FY2025", driver: "Loss of SAR 60.2m: FVTPL losses SAR 51.5m, dividend income SAR 4.2m and share of associates SAR 5.3m (mainly Arab Tank Terminals, 27%); ROE -19.2%; attributable equity down to SAR 283m.", source: "2030_SARCO/2025_Annual_filed2026-04-02.pdf p.8", refs: ["2030-FY2025-NI_ATTR", "2030-FY2025-EQ_ATTR"]}
+    - {period: "9M2026", driver: "Attributable loss SAR 27.4m (9M 2025: SAR 22.1m): FVTPL losses SAR 22.5m (SAR 16.8m), dividend income SAR 2.6m (SAR 3.7m), share of associates SAR 4.1m (SAR 4.0m), G&A SAR 9.5m (SAR 7.3m) and zakat SAR 3.3m (SAR 5.8m); Lawazem added SAR 1.1m of revenue and a SAR 0.8m loss. Annualised ROE -13.5%.", source: "2030_SARCO/2026_Q3_filed2026-11-18.pdf p.5, p.20", refs: ["2030-9M2026-NI_ATTR", "2030-9M2025-NI_ATTR"]}
+    - {period: "FY2025-9M2026", driver: "Operating cash flow turned negative in FY2025 (-SAR 7.5m) and 9M 2026 (-SAR 9.4m); 9M 2026 capex of SAR 36.0m was mainly the SAR 35.5m land plot.", source: "2030_SARCO/2026_Q3_filed2026-11-18.pdf p.7, p.14", refs: ["2030-FY2025-CFO", "2030-9M2026-CFO", "2030-9M2026-CAPEX"]}
+  one_offs:
+    - {item: "Fair-value reserve transferred to retained earnings on sale of the FVTOCI portfolio (equity only, not profit)", period: "FY2024", amount_sar_m: 180.1, line: "Statement of changes in equity", source: "2030_SARCO/2025_Annual_filed2026-04-02.pdf p.9", tax_nci: "Not in profit (equity or OCI): no adjustment needed"}
+    - {item: "Fair-value loss on the FVTOCI portfolio before its sale (other comprehensive income, not profit)", period: "FY2024", amount_sar_m: -37.1, line: "Other comprehensive income", source: "2030_SARCO/2025_Annual_filed2026-04-02.pdf p.8", tax_nci: "Not in profit (equity or OCI): no adjustment needed"}
+    - {item: "Prior-year zakat charge (ZATCA assessment for 2023)", period: "FY2025", amount_sar_m: -0.4, line: "Zakat", source: "2030_SARCO/2025_Annual_filed2026-04-02.pdf p.30", tax_nci: "Under 5% of attributable profit: tax effect not checked; profit kept as reported"}
+    - {item: "Gain on acquisition of an associate (Raya Al-Tajdeed)", period: "9M2026", amount_sar_m: 0.5, line: "Share of results of associates", source: "2030_SARCO/2026_Q3_filed2026-11-18.pdf p.15", tax_nci: "Under 5% of attributable profit: tax effect not checked; profit kept as reported"}
+developments:
+  - {date: "2024", category: "strategy", text: "Sold the whole FVTOCI share portfolio for SAR 306.8m and reinvested in a discretionary Saudi share portfolio measured at FVTPL.", source: "2030_SARCO/2024_Annual_filed2025-04-09.pdf p.25"}
+  - {date: "2025-12-09", category: "strategy", text: "Set up Clean Energy Company for a green ammonia project; it signed a non-binding MoU with AGR Renewable Energy after the year-end.", source: "2030_SARCO/2025_Annual_filed2026-04-02.pdf p.11"}
+  - {date: "2026-01-27", category: "capacity", text: "Bought a 103,140 square-metre plot on Al-Kharj Road, Riyadh, for SAR 35.5m.", source: "2030_SARCO/2026_Q3_filed2026-11-18.pdf p.14"}
+  - {date: "2026-03-26", category: "financing", text: "Board recommended a SAR 300m rights issue (200% of current capital), still subject to shareholder and regulatory approval at 30 Sep 2026.", source: "2030_SARCO/2026_Q3_filed2026-11-18.pdf p.8"}
+  - {date: "2026-05 / 2026-06", category: "M&A", text: "Bought 35% of Raya Al-Tajdeed Contracting and 33% of Global Waste Solutions for SAR 6.9m in total.", source: "2030_SARCO/2026_Q3_filed2026-11-18.pdf p.13, p.15"}
+  - {date: "2026-07-23", category: "M&A", text: "Acquired 85% of Lawazem, a manufacturer of kitchens, caravans and doors, for SAR 12.0m: SARCO's first revenue-generating subsidiary.", source: "2030_SARCO/2026_Q3_filed2026-11-18.pdf p.9, p.14"}
+  - {date: "2026", category: "event", text: "SARCO's FY2025 annual report and 2026 interim reports do not mention the regional conflict.", source: "2030_SARCO/2026_Q3_filed2026-11-18.pdf"}
+what_it_means:
+  improved: "Little improved: the share of associates' results rose from a small loss in FY2022 to SAR 5.3m in FY2025, and 9M 2026 brought the first revenue (SAR 1.1m) through the Lawazem acquisition."
+  weakened: "Profit fell from SAR 28.2m (FY2022) to losses of SAR 53.5m (FY2024) and SAR 60.2m (FY2025), the 9M 2026 loss widened to SAR 27.4m, and attributable equity fell from SAR 439m to SAR 256m at 30 Sep 2026."
+  why: "Dividend income shrank from SAR 34.5m (FY2022) to SAR 4.2m (FY2025) after the company moved its shares into a discretionary FVTPL portfolio, which lost SAR 44.9m in FY2024, SAR 51.5m in FY2025 and SAR 22.5m in 9M 2026, while overheads continued."
+  uncertain: "Results depend on Saudi share-price movements, and the new businesses (manufacturing, green ammonia, storage) and the proposed SAR 300m rights issue are too recent to assess."
+confidence_overall: "High"
+data_notes:
+  - "SARCO has no revenue before Q3 2026 (SAR 1.1m in 9M 2026), so revenue-based ratios are blank for FY2022-FY2025 and shown as n.m. for 9M 2026 under the SAR 10m materiality rule."
+  - "Operating income (OPINC) for SARCO is PBT + finance costs - finance income with investment results (dividends, associates, FVTPL gains and losses) kept inside, so it is close to PBT. The XBRL 'Operating profit' tag for 9M (-SAR 9.1m and -SAR 7.3m, not used) is gross profit less G&A only; the company's own '(loss)/profit from operations' line is -SAR 24.9m (9M 2026) and -SAR 16.5m (9M 2025)."
+  - "Growth rates that cross from profit to loss, or start from a base below SAR 10m (e.g. capex, which was under SAR 1m a year until 2025), are shown as n.m. under METHODOLOGY s.1."
+  - "FY2024 G&A was re-presented in the FY2025 AFS to include right-of-use depreciation (SAR 0.1m); net loss unchanged. The FY2023 AFS is fully scanned; FY2023 figures were taken from the FY2024 AFS comparatives."
+  - "Net loss (SAR 27.5m) and attributable loss (SAR 27.4m) differ in 9M 2026 by the 15% non-controlling interest in Lawazem."

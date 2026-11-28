@@ -1,0 +1,68 @@
+ticker: "4193"
+headline: >-
+  Nice One, an online beauty retailer that listed on 8 January 2025, grew revenue from SAR 614m in FY2022 to SAR 1,017m in FY2025
+  (18.3% a year), but attributable profit peaked at SAR 71.7m in FY2024 and fell to SAR 3.0m in FY2025 as marketing, overheads and new
+  leases outgrew flat sales; in 9M 2026 revenue fell 3.4% to SAR 741m and it made a net loss of SAR 9.5m.
+lfl_basis:
+  definition_used: >-
+    Standard bridge on IFRS revenue (sale of goods plus delivery charges). The three subsidiaries (Egypt 2022, UAE 2023, a Saudi marketing
+    company 2024) have not started trading and there were no acquisitions, so the perimeter and FX translation effects are nil and organic
+    growth equals reported growth. The business was online-only until 2025, when it added offline outlets; their number and revenue are
+    not disclosed. So like-for-like growth equals organic growth in FY2023 and FY2024 and is not determinable for FY2025 and 9M 2026.
+    The filings give no orders, customers, basket size or gross merchandise value.
+  perimeter_changes:
+    - {event: "No business combinations; start-up subsidiaries in Egypt (Aug 2022), the UAE (May 2023) and Saudi Arabia (Dec 2024), none trading", date: "2022 to 2024", effect: "no revenue", source: "4193_NICE_ONE/2026_Q3_filed2026-11-02.pdf p.8"}
+    - {event: "FY2022 comparatives not consolidated (Egyptian subsidiary immaterial); its SAR 0.43m share of loss was equity-accounted", date: "2022", effect: "no revenue effect", source: "4193_NICE_ONE/2023_Annual_filed2025-01-07.pdf p.10"}
+  capacity_changes:
+    - {event: "Offline outlets opened during 2025 (first physical sales)", date: "2025", effect: "count and revenue not disclosed", source: "4193_NICE_ONE/2025_Annual_filed2026-03-31.pdf p.19"}
+    - {event: "Five leases terminated and one transferred for SAR 1m key money", date: "2026 (9M)", effect: "not determinable", source: "4193_NICE_ONE/2026_Q3_filed2026-11-02.pdf p.13"}
+  fx_exposure: "No operating foreign subsidiaries. International sales (SAR 55.8m, 5.5% of FY2025 revenue) are made by the Saudi company; exchange losses (SAR 0.75m in FY2025) sit in other expenses."
+  price_volume_support: "Not determinable: no order, customer, basket or GMV data. Revenue is split by region (Central, Western, Eastern, International), by local and international sales, and into goods and delivery services."
+  confidence: "Medium (perimeter and FX nil with High confidence; new capacity nil before 2025 rests on the FY2025 statement that outlets started that year)"
+price_volume:
+  - period: "9M 2026 vs 9M 2025"
+    text: >-
+      Revenue fell SAR 26.4m (3.4%). Local sales fell 4.1% (SAR 727.6m to SAR 698.0m) while international sales rose 8.0% (SAR 40.2m to
+      SAR 43.5m); by region, Central fell 1.2%, Western 5.7% and Eastern 7.2% (we calculate). Sales of goods fell 3.2% and delivery
+      revenue 8.3%. Volumes and prices are not disclosed.
+    basis: "disclosed (revenue splits); price/volume not determinable"
+    confidence: "High for the amounts; the split is not determinable"
+    source: "4193_NICE_ONE/2026_Q3_filed2026-11-02.pdf p.16 (revenue note), p.18 (regions)"
+    refs: ["4193-9M2026-REV", "4193-9M2025-REV"]
+  - period: "FY2025 vs FY2024"
+    text: >-
+      Revenue rose SAR 13.1m (1.3%) after rising 28.3% in FY2024. Local sales rose 0.4% and international sales 19.7%; Central region
+      +5.9%, Western -4.4%, Eastern +0.9%. Delivery revenue rose 10.4% and sales of goods 1.0% (we calculate).
+    basis: "disclosed (revenue splits); price/volume not determinable"
+    confidence: "High for the amounts"
+    source: "4193_NICE_ONE/2025_Annual_filed2026-03-31.pdf p.42-43 (revenue note), p.47 (regions)"
+    refs: ["4193-FY2025-REV", "4193-FY2024-REV"]
+profit_and_margin:
+  drivers:
+    - {period: "FY2023", driver: "Revenue rose 27.5% to SAR 782m (local +26.1%, international +71.1%, we calculate). Gross profit rose 33.9% to SAR 217m (27.7% of revenue vs 26.4%). Advertising rose 29.4% to SAR 125.9m. Operating income rose 76.9% to SAR 38.8m (operating margin 5.0%; EBITDA margin 5.8%), including a SAR 2.3m gain on selling fixed assets. Attributable profit rose 95.0% to SAR 32.6m (net margin 4.2%, ROE 32.4%).", source: "4193_NICE_ONE/2024_Annual_filed2025-03-10.pdf p.9 (P&L), p.44 (other income); 4193_NICE_ONE/2023_Annual_filed2025-01-07.pdf p.40 (revenue and expenses)", refs: ["4193-FY2023-REV", "4193-FY2023-GP", "4193-FY2023-OPINC", "4193-FY2023-NI_ATTR"]}
+    - {period: "FY2024", driver: "Revenue rose 28.3% to SAR 1,004m (local +27.7%, international +42.0%). Gross profit rose 23.8% to SAR 268m (26.7% of revenue) and operating costs grew more slowly, so operating income doubled (+105.9%) to SAR 79.8m (operating margin 8.0%; EBITDA margin 8.6%). Attributable profit rose 119.9% to SAR 71.7m (net margin 7.1%, ROE 48.1%). Operating cash flow was -SAR 10.8m as inventories rose SAR 107.2m, and borrowings rose to SAR 74.3m. SAR 0.4m of IPO costs were expensed.", source: "4193_NICE_ONE/2025_Annual_filed2026-03-31.pdf p.9 (P&L), p.11 (cash flow), p.43 (note 22)", refs: ["4193-FY2024-REV", "4193-FY2024-GP", "4193-FY2024-OPINC", "4193-FY2024-NI_ATTR", "4193-FY2024-CFO", "4193-FY2024-DEBT"]}
+    - {period: "FY2025", driver: "Revenue rose only 1.3% to SAR 1,017m while gross profit fell 8.6% to SAR 245m (24.1% of revenue vs 26.7%). Selling and marketing rose 22.3% to SAR 178.9m, mainly advertising (+32.6% to SAR 151.8m), and G&A rose 30.2% to SAR 55.8m, including a SAR 2.5m credit-loss allowance on advances to suppliers. Depreciation and amortisation rose from SAR 6.6m to SAR 19.0m after SAR 58.7m of new leases. Operating income fell 87.4% to SAR 10.0m (operating margin 1.0%; EBITDA margin 2.9%). Finance income of SAR 3.3m came from IPO cash after all borrowings were repaid. Attributable profit fell 95.8% to SAR 3.0m (net margin 0.3%, ROE 1.1%), helped by a SAR 1.0m reversal of prior-year zakat.", source: "4193_NICE_ONE/2025_Annual_filed2026-03-31.pdf p.9 (P&L), p.11 (cash flow), p.42-44 (notes 19, 21, 22, 24), p.47", refs: ["4193-FY2025-REV", "4193-FY2025-GP", "4193-FY2025-OPINC", "4193-FY2025-DA_CF", "4193-FY2025-FIN_INC", "4193-FY2025-NI_ATTR"]}
+    - {period: "9M2026", driver: "Revenue fell 3.4% to SAR 741m and gross profit 3.2% to SAR 185m (margin unchanged at 24.9%), but selling and marketing rose 18.0% to SAR 138.3m and G&A 27.4% to SAR 49.9m (we calculate). The inventory allowance charge was SAR 12.5m (9M 2025: SAR 4.3m). Lease exits added a net SAR 1.3m (gain on five lease terminations SAR 2.8m and SAR 1m key money, less a SAR 2.6m loss on disposing of fit-out), treated as recurring lease-portfolio items. The operating loss was SAR 3.0m (operating margin -0.4% vs 4.5%; EBITDA margin 2.2% vs 6.2%) and the net loss SAR 9.5m (net margin -1.3%; annualised ROE -3.4%). Operating cash flow was SAR 15.1m (-7.4%).", source: "4193_NICE_ONE/2026_Q3_filed2026-11-02.pdf p.5 (P&L), p.7 (cash flow), p.12-14 (notes 4-6)", refs: ["4193-9M2026-REV", "4193-9M2026-GP", "4193-9M2026-OPINC", "4193-9M2026-NI_ATTR", "4193-9M2026-CFO"]}
+  one_offs:
+    - {item: "Gain on disposal of property and equipment (proceeds SAR 11.8m)", period: "FY2023", amount_sar_m: 2.3, line: "Other income - net (inside operating income)", source: "4193_NICE_ONE/2024_Annual_filed2025-03-10.pdf p.44", tax_nci: "7.0% of attributable profit (over 5%), and disposals were near nil in other years; zakat effect not disclosed; no minority interests: after-zakat effect not determinable, profit kept as reported"}
+    - {item: "IPO costs charged to profit (indirect costs of the new-share issue)", period: "FY2024", amount_sar_m: -0.4, line: "General and administrative expenses", source: "4193_NICE_ONE/2025_Annual_filed2026-03-31.pdf p.43; 4193_NICE_ONE/2024_Annual_filed2025-03-10.pdf p.17", tax_nci: "Under 5% of attributable profit but outside normal operations; zakat effect not disclosed; no minority interests: profit kept as reported"}
+developments:
+  - {date: "2024-03-30", category: "strategy", text: "Renamed from Product Sea Trading Company to Nice One Beauty Digital Marketing Company.", source: "4193_NICE_ONE/2023_Annual_filed2025-01-07.pdf p.10"}
+  - {date: "2025-01-08", category: "financing", text: "Listed on the Main Market after an IPO at SAR 35 per share: 29.15m existing shares sold and 5.5m new shares issued, raising SAR 192.5m for the company (SAR 5.5m capital and SAR 187m premium).", source: "4193_NICE_ONE/2025_Annual_filed2026-03-31.pdf p.14, p.11"}
+  - {date: "2025", category: "financing", text: "Repaid all borrowings (SAR 74.3m at end-2024); cash was SAR 135m at end-2025 and SAR 135m at 30 Sep 2026.", source: "4193_NICE_ONE/2025_Annual_filed2026-03-31.pdf p.47, p.8; 4193_NICE_ONE/2026_Q3_filed2026-11-02.pdf p.4"}
+  - {date: "2025", category: "capacity", text: "Added offline sales through outlets and signed SAR 58.7m of new leases; robotics for warehouse operations are being installed, due by end-2026.", source: "4193_NICE_ONE/2025_Annual_filed2026-03-31.pdf p.19, p.30"}
+  - {date: "2026 (9M)", category: "operations", text: "Terminated five leases, transferred one for SAR 1m key money and wrote off SAR 2.6m of fit-out and work in progress; the inventory allowance rose to SAR 25.8m.", source: "4193_NICE_ONE/2026_Q3_filed2026-11-02.pdf p.12-14"}
+what_it_means:
+  improved: "Revenue grew 18.3% a year from FY2022 to FY2025 and the IPO left the company debt-free, with SAR 135m of cash at 30 Sep 2026."
+  weakened: "Profitability collapsed after FY2024: the operating margin fell from 8.0% to 1.0% in FY2025 and to -0.4% in 9M 2026, and 9M 2026 revenue fell 3.4%."
+  why: "Revenue growth stopped in FY2025 (+1.3%) while advertising, overheads and lease costs kept rising, and in 9M 2026 the inventory allowance charge rose to SAR 12.5m."
+  uncertain: "No orders, customers or GMV are disclosed, and the number and revenue of the outlets opened in 2025 are not given, so the cause of the slowdown cannot be measured."
+confidence_overall: "Medium"
+data_notes:
+  - "FY2022 and FY2021 come from pre-IPO statements in the archive: FY2022 from the comparative column of the FY2023 consolidated statements of Product Sea Trading Company (a scanned PDF), and the FY2021 opening balance sheet from the separate FY2022 statements. Both years exclude the Egyptian subsidiary (not consolidated, immaterial)."
+  - "FY2022 was re-presented in the FY2023 statements (note 30): cost of sales SAR 416.3m to SAR 451.9m, gross profit SAR 197.3m to SAR 161.7m, finance cost SAR 6.8m to SAR 2.3m (SAR 4.5m of bank charges moved to selling and marketing) and total assets SAR 294.1m to SAR 289.5m; profit unchanged. The SAR 0.43m share of loss of the unconsolidated subsidiary is kept as SHARE_JV, outside operating income."
+  - "FY2024 cost of sales and gross profit were re-presented in the FY2025 annual by less than 0.5% (gross profit SAR 269.2m to SAR 268.1m), so they carry no R flag."
+  - "9M 2025 revenue, cost of sales and gross profit are restated (9M 2026 interim note 18 plus a SAR 5.0m revenue netting not itemised in the note), and 9M 2025 operating cash flow is re-presented (finance income received moved to investing); the reasons are given in the Restatements sheet. The 9M 2025 cash balance is not a restatement."
+  - "FY2023 operating cash flow is the FY2024 annual comparative (SAR 46.3m), which moved finance cost paid on leases into operating activities; the FY2023 annual showed SAR 47.4m. Operating cash flow is after interest paid in every year."
+  - "Corrected from the PDF statements: D&A for FY2023-FY2025 includes right-of-use depreciation, which the XBRL omitted (cash-flow statements, p.11 of the FY2024 and FY2025 annuals); debt at end-2023 and end-2024 includes long-term borrowings (balance sheets, p.8); debt is nil at end-2025 (FY2025 annual p.8) and 30 Sep 2026 (2026 Q3 interim p.4); the 9M 2025 and 9M 2026 impairment add-back is nil, because the XBRL had tagged receivable credit losses (2026 Q3 interim p.7)."
+  - "Finance income appears only from FY2025 (interest on IPO cash). Bank charges (SAR 6.0m in FY2025) sit in selling and marketing, not finance cost. Lease-termination gains and exchange losses recur every year and are not treated as one-offs."

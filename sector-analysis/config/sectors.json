@@ -1,0 +1,390 @@
+{
+ "Energy": {
+  "name": "Energy",
+  "slug": "energy",
+  "template": "corporate",
+  "archive": "Energy",
+  "top_line": "REV",
+  "top_line_name": "Revenue",
+  "profit": "NI_ATTR",
+  "constituents": {
+   "2222": {
+    "name": "Saudi Aramco",
+    "sub_industry": "Integrated oil & gas",
+    "short": "Aramco"
+   },
+   "4030": {
+    "name": "Bahri (National Shipping Co.)",
+    "sub_industry": "Energy shipping & logistics",
+    "short": "Bahri"
+   },
+   "2380": {
+    "name": "Petro Rabigh",
+    "sub_industry": "Refining & petrochemicals",
+    "short": "Petro Rabigh"
+   },
+   "2382": {
+    "name": "ADES Holding",
+    "sub_industry": "Offshore & onshore drilling",
+    "short": "ADES"
+   },
+   "2381": {
+    "name": "Arabian Drilling",
+    "sub_industry": "Onshore & offshore drilling",
+    "short": "Arabian Drilling"
+   },
+   "2030": {
+    "name": "SARCO (Saudi Arabia Refineries)",
+    "sub_industry": "Investment holding (refining-related)",
+    "short": "SARCO"
+   }
+  },
+  "table_metrics": [
+   "REV",
+   "OIRS",
+   "REV_M",
+   "GP",
+   "OPINC",
+   "EBITDA_C",
+   "EBITDA_U",
+   "NI_ATTR",
+   "CFO",
+   "CAPEX",
+   "FCF",
+   "TA",
+   "EQ_ATTR"
+  ],
+  "ratios": {
+   "EBITDA_M": [
+    "EBITDA_C",
+    "REV_M",
+    "EBITDA margin (calculated)"
+   ],
+   "EBITDA_M_U": [
+    "EBITDA_U",
+    "REV_M",
+    "EBITDA margin excl. identified one-offs"
+   ],
+   "OP_M": [
+    "OPINC",
+    "REV_M",
+    "Operating margin"
+   ],
+   "NET_M": [
+    "NI_ATTR",
+    "REV_M",
+    "Net margin (attributable)"
+   ],
+   "ROE": [
+    "NI_ATTR",
+    "avg:EQ_ATTR",
+    "Return on equity (attributable; YTD annualised)"
+   ],
+   "CAPEX_INT": [
+    "CAPEX",
+    "REV_M",
+    "Capex / revenue"
+   ]
+  },
+  "classification_note": "Constituents = the six companies the Saudi Exchange classifies in the Energy sector at the analysis date (Aramco, SARCO, Petro Rabigh, Bahri, Arabian Drilling, ADES), which matches the archive's Energy folder. Aldrees Petroleum & Transport Services (4200) was moved by the Saudi Exchange from Energy to Consumer Discretionary (Consumer Discretionary Distribution & Retail) with effect from 14 Sep 2025, under GICS, so it is excluded from all periods. Luberef (2223) has been classified in Materials since its listing in Dec 2022, so it is excluded too. The current classification is applied to every period (a constant universe), so totals and growth rates do not jump when a company is reclassified.",
+  "margin_base_note": "Margins use revenue plus Aramco's other income related to sales (REV_M) because that income is inside Aramco's operating profit, EBITDA and net profit; sector revenue growth and contributions use IFRS revenue (REV)."
+ },
+ "Banks": {
+  "name": "Banks",
+  "slug": "banks",
+  "template": "bank",
+  "archive": "Banks",
+  "top_line": "TOI",
+  "top_line_name": "Total operating income",
+  "profit": "NI_ATTR",
+  "constituents": {
+   "1120": {
+    "name": "Al Rajhi Bank",
+    "sub_industry": "Islamic bank",
+    "short": "Al Rajhi"
+   },
+   "1180": {
+    "name": "Saudi National Bank (SNB)",
+    "sub_industry": "Conventional bank",
+    "short": "SNB"
+   },
+   "1010": {
+    "name": "Riyad Bank",
+    "sub_industry": "Conventional bank",
+    "short": "Riyad Bank"
+   },
+   "1060": {
+    "name": "Saudi Awwal Bank (SAB)",
+    "sub_industry": "Conventional bank",
+    "short": "SAB"
+   },
+   "1150": {
+    "name": "Alinma Bank",
+    "sub_industry": "Islamic bank",
+    "short": "Alinma"
+   },
+   "1050": {
+    "name": "Banque Saudi Fransi (BSF)",
+    "sub_industry": "Conventional bank",
+    "short": "BSF"
+   },
+   "1080": {
+    "name": "Arab National Bank (ANB)",
+    "sub_industry": "Conventional bank",
+    "short": "ANB"
+   },
+   "1140": {
+    "name": "Bank Albilad",
+    "sub_industry": "Islamic bank",
+    "short": "Albilad"
+   },
+   "1030": {
+    "name": "Saudi Investment Bank (SAIB)",
+    "sub_industry": "Conventional bank",
+    "short": "SAIB"
+   },
+   "1020": {
+    "name": "Bank Aljazira (BJAZ)",
+    "sub_industry": "Islamic bank",
+    "short": "Aljazira"
+   }
+  },
+  "table_metrics": [
+   "TOI",
+   "NSCI",
+   "FEES_NET",
+   "OTHER_OI",
+   "OPEX_PRE",
+   "PPOP",
+   "IMPAIR_TOTAL",
+   "IMPAIR_FIN",
+   "ECL_LOANS",
+   "NI_ATTR",
+   "TA",
+   "LOANS",
+   "DEPOSITS",
+   "EQ_ATTR",
+   "T1_SUKUK"
+  ],
+  "ratios": {
+   "CI": [
+    "OPEX_PRE",
+    "TOI",
+    "Cost-to-income (pre-impairment)"
+   ],
+   "ROE": [
+    "NI_ATTR-T1_COST",
+    "avg:EQ_ORD",
+    "ROE on ordinary equity (YTD annualised)"
+   ],
+   "ROA": [
+    "NI_ATTR",
+    "avg:TA",
+    "Return on average assets (YTD annualised)"
+   ],
+   "COR": [
+    "ECL_LOANS",
+    "avg:LOANS",
+    "Cost of risk, bp (ECL on loans; YTD annualised)"
+   ],
+   "NSCI_YLD": [
+    "NSCI",
+    "avg:TA",
+    "NSCI / average assets (margin proxy; YTD annualised)"
+   ],
+   "FEE_SHARE": [
+    "FEES_NET",
+    "TOI",
+    "Net fees / TOI"
+   ],
+   "LDR": [
+    "LOANS",
+    "DEPOSITS",
+    "Loans / customer deposits (period-end)"
+   ]
+  },
+  "classification_note": "All 10 Saudi-listed banks are in the archive's Banks folder."
+ },
+ "Telecom": {
+  "name": "Telecommunication Services",
+  "slug": "telecom",
+  "template": "corporate",
+  "archive": "Telecom",
+  "top_line": "REV",
+  "top_line_name": "Revenue",
+  "profit": "NI_ATTR",
+  "constituents": {
+   "7010": {
+    "name": "stc (Saudi Telecom Co.)",
+    "sub_industry": "Integrated telecom, digital and international",
+    "short": "stc"
+   },
+   "7020": {
+    "name": "Mobily (Etihad Etisalat)",
+    "sub_industry": "Mobile and integrated telecom",
+    "short": "Mobily"
+   },
+   "7030": {
+    "name": "Zain KSA",
+    "sub_industry": "Mobile telecom",
+    "short": "Zain KSA"
+   },
+   "7040": {
+    "name": "GO Telecom (Etihad Atheeb)",
+    "sub_industry": "Fixed broadband and telecom services",
+    "short": "GO Telecom"
+   }
+  },
+  "table_metrics": [
+   "REV",
+   "GP",
+   "OPINC",
+   "EBITDA_C",
+   "EBITDA_U",
+   "NI_ATTR",
+   "CFO",
+   "CAPEX",
+   "FCF",
+   "DEBT",
+   "LEASE_LIAB",
+   "CASH",
+   "NET_DEBT",
+   "TA",
+   "EQ_ATTR"
+  ],
+  "ratios": {
+   "EBITDA_M": [
+    "EBITDA_C",
+    "REV_M",
+    "EBITDA margin (calculated)"
+   ],
+   "EBITDA_M_U": [
+    "EBITDA_U",
+    "REV_M",
+    "EBITDA margin excl. identified one-offs"
+   ],
+   "OP_M": [
+    "OPINC",
+    "REV_M",
+    "Operating margin"
+   ],
+   "NET_M": [
+    "NI_ATTR",
+    "REV_M",
+    "Net margin (attributable)"
+   ],
+   "ROE": [
+    "NI_ATTR",
+    "avg:EQ_ATTR",
+    "Return on equity (attributable; YTD annualised)"
+   ],
+   "CAPEX_INT": [
+    "CAPEX",
+    "REV_M",
+    "Capex / revenue"
+   ],
+   "ND_EBITDA": [
+    "NET_DEBT",
+    "ann:EBITDA_C",
+    "Net debt / EBITDA (x; 9M EBITDA annualised)"
+   ]
+  },
+  "classification_note": "Constituents = the four companies the Saudi Exchange classifies in Telecommunication Services at the analysis date, which matches the archive's folder and coverage index. GO Telecom's year ends on 31 March: its fiscal year is shown under the calendar year that holds most of its months (e.g. April 2025 to March 2026 = FY2025), and its year-to-date to 30 September is six months, so it is left out of the sector's 9M totals."
+ },
+ "Utilities": {
+  "name": "Utilities",
+  "slug": "utilities",
+  "template": "corporate",
+  "archive": "Utilities",
+  "top_line": "REV",
+  "top_line_name": "Revenue",
+  "profit": "NI_ATTR",
+  "constituents": {
+   "5110": {
+    "name": "Saudi Electricity Co.",
+    "sub_industry": "Electric utility (generation, transmission, distribution)",
+    "short": "SEC"
+   },
+   "2082": {
+    "name": "ACWA Power",
+    "sub_industry": "Power and water developer (IPP/IWP)",
+    "short": "ACWA Power"
+   },
+   "2083": {
+    "name": "Marafiq (Power & Water Utility Co. for Jubail and Yanbu)",
+    "sub_industry": "Power and water utility (industrial cities)",
+    "short": "Marafiq"
+   },
+   "2080": {
+    "name": "GASCO (National Gas & Industrialization)",
+    "sub_industry": "Gas distribution",
+    "short": "GASCO"
+   },
+   "2081": {
+    "name": "Alkhorayef Water & Power Technologies",
+    "sub_industry": "Water and wastewater services",
+    "short": "AWPT"
+   },
+   "2084": {
+    "name": "Miahona",
+    "sub_industry": "Water and wastewater (public-private partnerships)",
+    "short": "Miahona"
+   }
+  },
+  "table_metrics": [
+   "REV",
+   "GP",
+   "OPINC",
+   "EBITDA_C",
+   "EBITDA_U",
+   "NI_ATTR",
+   "CFO",
+   "CAPEX",
+   "FCF",
+   "DEBT",
+   "LEASE_LIAB",
+   "CASH",
+   "NET_DEBT",
+   "TA",
+   "EQ_ATTR"
+  ],
+  "ratios": {
+   "EBITDA_M": [
+    "EBITDA_C",
+    "REV_M",
+    "EBITDA margin (calculated)"
+   ],
+   "EBITDA_M_U": [
+    "EBITDA_U",
+    "REV_M",
+    "EBITDA margin excl. identified one-offs"
+   ],
+   "OP_M": [
+    "OPINC",
+    "REV_M",
+    "Operating margin"
+   ],
+   "NET_M": [
+    "NI_ATTR",
+    "REV_M",
+    "Net margin (attributable)"
+   ],
+   "ROE": [
+    "NI_ATTR",
+    "avg:EQ_ATTR",
+    "Return on equity (attributable; YTD annualised)"
+   ],
+   "CAPEX_INT": [
+    "CAPEX",
+    "REV_M",
+    "Capex / revenue"
+   ],
+   "ND_EBITDA": [
+    "NET_DEBT",
+    "ann:EBITDA_C",
+    "Net debt / EBITDA (x; 9M EBITDA annualised)"
+   ]
+  },
+  "classification_note": "Constituents = the six companies the Saudi Exchange classifies in Utilities at the analysis date, which matches the archive's folder and coverage index."
+ }
+}

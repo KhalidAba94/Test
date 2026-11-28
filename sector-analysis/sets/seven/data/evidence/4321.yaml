@@ -1,0 +1,255 @@
+# Evidence extracted from Arabian Centres Company (Cenomi Centers) filings (archive: 4321_CENOMI_CENTERS). Facts only; page = physical PDF page (1-based).
+# Units: SAR (Actuals) as presented. Primary statements are scanned images in every annual and Q3 file (2024 annual is almost entirely scanned);
+# they were read visually and by OCR. Notes are mostly text pages.
+# Year-end changed from 31 March to 31 December: FY2022 = nine-month transition period 1 Apr-31 Dec 2022.
+ticker: "4321"
+company: "Arabian Centres Company (Cenomi Centers)"
+
+perimeter_changes:
+  - event: "Sale of 100% of two subsidiaries (projects under construction, no operations) to Saudi FAS Holding Company"
+    type: disposal
+    date: "2022-08-14"
+    consideration: "SAR 750,000"
+    revenue_contribution: 0
+    profit_contribution: null
+    pro_forma_revenue: null
+    period: "FY2022 (nine months)"
+    unit: "SAR"
+    source: "4321_CENOMI_CENTERS/2023_Annual_filed2024-04-03.pdf"
+    page: 58
+    quote: "the Group sold its 100% equity interest in two subsidiaries ... There were no operations in these subsidiaries."
+  - event: "Acquisition of 100% of four subsidiaries (Al Erth Almatin, Aziz Mall Trading, Arkan Salam, Al Malaz Mall Trading) from common shareholders, no consideration"
+    type: acquisition
+    date: "2024"
+    consideration: "nil (common control)"
+    revenue_contribution: null
+    profit_contribution: null
+    pro_forma_revenue: null
+    period: "FY2024"
+    unit: "SAR"
+    source: "4321_CENOMI_CENTERS/2025_Annual_filed2026-04-05.pdf"
+    page: 17
+    quote: "During the year 2024, the Group acquired 100% equity interests in these subsidiaries through common shareholding."
+    note: "Revenue contribution not disclosed. The FY2024 statement of changes in equity shows the related NCI transfer of SAR 4,994,980 (FY2025 FS p.13)."
+  - event: "Sale of an owned mall (agreement in 2024, title deed transferred in 2025); net proceeds SAR 200m, gain SAR 22m, early evacuation cost SAR 22m"
+    type: disposal
+    date: "2025"
+    consideration: "SAR 200m"
+    revenue_contribution: null
+    profit_contribution: null
+    pro_forma_revenue: null
+    period: "FY2025"
+    unit: "SAR"
+    source: "4321_CENOMI_CENTERS/2025_Annual_filed2026-04-05.pdf"
+    page: 34
+    quote: "the Group transferred the title deed of the property and record the disposal with net proceeds of SR 200 million, resulting in a gain of SR 22 million"
+    note: "The mall is not named; its revenue is not disclosed."
+  - event: "Mall of Dhahran (leased) lost: lease terminated by court order with retrospective effect from May 2023; the landlord's revenue claim covers 3 March 2023 to 9 February 2025, which suggests handover around February 2025"
+    type: deconsolidation
+    date: "2025 (court order; the 2026 Q3 interim dates the termination order to December 2024)"
+    consideration: "none determined by the court"
+    revenue_contribution: null
+    profit_contribution: null
+    pro_forma_revenue: null
+    period: "FY2025"
+    unit: "SAR"
+    source: "4321_CENOMI_CENTERS/2025_Annual_filed2026-04-05.pdf"
+    page: 63
+    quote: "the lease agreement in respect of the Mall of Dhahran ... was terminated by order of the Court with retrospective effect from May 2023."
+    note: "Mall revenue not disclosed. 2026 Q3 p.36: claim (ii) is for 'shop revenues for the period from 3 March 2023 to 9 February 2025'."
+  - event: "Tijan Fund (Qaseem project) set up and consolidated; units subscribed by transfer of land and work in progress (SAR 783m)"
+    type: new_subsidiary
+    date: "2025"
+    consideration: "in kind (land and work in progress)"
+    revenue_contribution: 0
+    profit_contribution: null
+    pro_forma_revenue: null
+    period: "FY2025"
+    unit: "SAR"
+    source: "4321_CENOMI_CENTERS/2025_Annual_filed2026-04-05.pdf"
+    page: 17
+    quote: "The Group invested in a private real estate fund named Tijan Fund. The Group signed an agreement with GIB capital to manage the fund."
+  - event: "Land lease for the planned Jawharat Al Khobar Mall terminated (January 2026, adjusting event in FY2025): investment property -SAR 581m, lease liabilities -SAR 593m, gain SAR 11m"
+    type: disposal
+    date: "2026-01"
+    consideration: null
+    revenue_contribution: 0
+    profit_contribution: 11249984
+    pro_forma_revenue: null
+    period: "FY2025"
+    unit: "SAR"
+    source: "4321_CENOMI_CENTERS/2026_Q3_filed2026-11-16.pdf"
+    page: 17
+    quote: "In January 2026, the Company mutually agreed to terminate the land lease agreement in respect of the land located in Al Khobar"
+  - event: "Decision to exercise the termination right on the lease of one operating mall, effective 31 July 2027 (lease liability reduced by SAR 108m)"
+    type: disposal
+    date: "2026 (9M)"
+    consideration: null
+    revenue_contribution: null
+    profit_contribution: null
+    pro_forma_revenue: null
+    period: "9M2026"
+    unit: "SAR"
+    source: "4321_CENOMI_CENTERS/2026_Q3_filed2026-11-16.pdf"
+    page: 17
+    quote: "the Group decided to exercise its right to terminate the lease agreement of one of the operating mall, effective 31 July 2027."
+  - event: "Mall openings"
+    type: acquisition
+    status: "not found"
+    period: "FY2023-9M2026"
+    source: "4321_CENOMI_CENTERS/2026_Q3_filed2026-11-16.pdf"
+    page: 17
+    quote: "the Group announced completion of major construction works on one of its project under construction, however the major customer fit-out activities are currently in progress"
+    note: "No mall moved from projects under construction to operating malls in FY2023-9M2026 in the investment-property notes; projects under construction rose from SAR 5,727m (end-2023) to SAR 11,786m (30 Sep 2026)."
+
+segments:
+  - {period: "FY2022-9M2026", segment: "Single segment (shopping malls in KSA)", basis: operating, revenue: null, profit: null, unit: "SAR", source: "4321_CENOMI_CENTERS/2025_Annual_filed2026-04-05.pdf", page: 57, quote: "Management considers the operations of the Group as a whole as one operating and reportable segment"}
+
+revenue_drivers:
+  - {period: "FY2023", driver: "Rental income (nine months to Dec 2022: 1,551,012,427)", value: 2089447034, unit: "SAR", source: "4321_CENOMI_CENTERS/2023_Annual_filed2024-04-03.pdf", page: 48, quote: "Rental income 2,089,447,034 1,551,012,427 2,028,348,177"}
+  - {period: "FY2023", driver: "Turnover rent (9M 2022: 39,249,253); service and management charges 95,673,728 (9M 2022: 93,827,739)", value: 64170896, unit: "SAR", source: "4321_CENOMI_CENTERS/2023_Annual_filed2024-04-03.pdf", page: 48, quote: "Turnover rent 64,170,896 39,249,253 50,086,726"}
+  - {period: "FY2022 (12 months, pro forma)", driver: "Unaudited 12-month revenue to 31 Dec 2022 shown as additional comparative information", value: 2206702284, unit: "SAR", source: "4321_CENOMI_CENTERS/2023_Annual_filed2024-04-03.pdf", page: 48, quote: "2,253,673,262 1,687,534,280 2,206,702,284"}
+  - {period: "FY2025", driver: "Rental income (FY2024: 2,132,391,666)", value: 2049171772, unit: "SAR", source: "4321_CENOMI_CENTERS/2025_Annual_filed2026-04-05.pdf", page: 55, quote: "Rental income 2,049,171,772 2,132,391,666"}
+  - {period: "FY2025", driver: "Turnover rent (FY2024: 61,378,094)", value: 80165792, unit: "SAR", source: "4321_CENOMI_CENTERS/2025_Annual_filed2026-04-05.pdf", page: 55, quote: "Turnover rent 80,165,792 61,378,094"}
+  - {period: "FY2025", driver: "Service and management charges income (FY2024: 145,276,772)", value: 153852849, unit: "SAR", source: "4321_CENOMI_CENTERS/2025_Annual_filed2026-04-05.pdf", page: 55, quote: "Service and management charges income 153,852,849 145,276,772"}
+  - {period: "9M2026", driver: "Rental income (9M2025: 1,549,261,682)", value: 1542173987, unit: "SAR", source: "4321_CENOMI_CENTERS/2026_Q3_filed2026-11-16.pdf", page: 29, quote: "Rental income 521,001,865 495,235,024 1,542,173,987 1,549,261,682"}
+  - {period: "9M2026", driver: "Development revenue, a new line (9M2025: nil); the 2026 development services agreement with Saudi Downtown Company is described on p.11", value: 35618049, unit: "SAR", source: "4321_CENOMI_CENTERS/2026_Q3_filed2026-11-16.pdf", page: 29, quote: "Development revenue 35,618,049 - 35,618,049 -"}
+  - {period: "9M2026", driver: "Revenue from related parties (9M2025: SAR 269.2m)", value: 86.7, unit: "SAR m", source: "4321_CENOMI_CENTERS/2026_Q3_filed2026-11-16.pdf", page: 29, quote: "SR 86.7 million for the nine-month period ended 30 September 2026 (30 September 2025: SR 269.2 million)"}
+  - {period: "FY2025", driver: "Revenue from top five customers as a share of total revenue", value: 24, unit: "%", source: "4321_CENOMI_CENTERS/2025_Annual_filed2026-04-05.pdf", page: 57, quote: "Revenue from top five customers represent 24% of the total revenue of the Group."}
+
+one_offs:
+  - {period: "FY2022", item: "Loss on disposal of investment property (Olaya land; net proceeds SAR 230m)", amount: -23283650, unit: "SAR", pnl_line: "Other operating expenses", recurring: false, source: "4321_CENOMI_CENTERS/2023_Annual_filed2024-04-03.pdf", page: 50, quote: "Loss on disposal of investment property 8(i) -- 23,283,650 23,283,650"}
+  - {period: "FY2023", item: "Gain on sale of investment property (part of the Jawharat Riyadh land; net proceeds SAR 644.5m)", amount: 238668127, unit: "SAR", pnl_line: "Other operating income", recurring: false, source: "4321_CENOMI_CENTERS/2023_Annual_filed2024-04-03.pdf", page: 49, quote: "Gain on sale of investment property 8A(i) 238,668,127 -- --"}
+  - {period: "FY2023", item: "Gain on lease termination", amount: 16286468, unit: "SAR", pnl_line: "Other operating income", recurring: false, source: "4321_CENOMI_CENTERS/2023_Annual_filed2024-04-03.pdf", page: 49, quote: "Gain on lease termination 9 16,286,468 -- --"}
+  - {period: "FY2023", item: "Fund brokerage fees", amount: -16113705, unit: "SAR", pnl_line: "Other operating expenses", recurring: false, source: "4321_CENOMI_CENTERS/2023_Annual_filed2024-04-03.pdf", page: 50, quote: "Fund brokerage fees 16,113,705 -- --"}
+  - {period: "FY2023", item: "Loss on terminating a project under development, booked inside the net fair value gain (FV_IP; not a one-off for EBITDA)", amount: -142600000, unit: "SAR", pnl_line: "Net fair value gain on investment properties", recurring: false, source: "4321_CENOMI_CENTERS/2023_Annual_filed2024-04-03.pdf", page: 30, quote: "Net fair value gain for the period includes a loss of SR 142.6 million relating to termination of the project under development."}
+  - {period: "FY2025", item: "Insurance claim accepted for the May 2022 Mall of Dhahran fire", amount: 250000000, unit: "SAR", pnl_line: "Other operating income", recurring: false, source: "4321_CENOMI_CENTERS/2025_Annual_filed2026-04-05.pdf", page: 56, quote: "Insurance claim 8 250,000,000 --"}
+  - {period: "FY2025", item: "Gain on sale of investment properties (a mall, SAR 22m, and land parcels, SAR 6.7m)", amount: 28663125, unit: "SAR", pnl_line: "Other operating income", recurring: false, source: "4321_CENOMI_CENTERS/2025_Annual_filed2026-04-05.pdf", page: 56, quote: "Gain on sale of investment properties 8A(i) 28,663,125 --"}
+  - {period: "FY2025", item: "Gain on lease termination (Jawharat Al Khobar land lease)", amount: 11249984, unit: "SAR", pnl_line: "Other operating income", recurring: false, source: "4321_CENOMI_CENTERS/2025_Annual_filed2026-04-05.pdf", page: 56, quote: "Gain on lease termination 21 11,249,984 --"}
+  - {period: "FY2025", item: "Lease termination costs (early evacuation cost linked to the mall sale)", amount: -22000000, unit: "SAR", pnl_line: "Other operating expenses", recurring: false, source: "4321_CENOMI_CENTERS/2025_Annual_filed2026-04-05.pdf", page: 56, quote: "Lease termination costs 8 22,000,000 --"}
+  - {period: "9M2025", item: "Insurance claim (Mall of Dhahran fire)", amount: 250000000, unit: "SAR", pnl_line: "Other operating income", recurring: false, source: "4321_CENOMI_CENTERS/2026_Q3_filed2026-11-16.pdf", page: 29, quote: "Insurance claim -- 250,000,000 -- 250,000,000"}
+  - {period: "9M2025", item: "Gain on sale of investment properties", amount: 31441391, unit: "SAR", pnl_line: "Other operating income", recurring: false, source: "4321_CENOMI_CENTERS/2026_Q3_filed2026-11-16.pdf", page: 29, quote: "properties 8A(i) -- (486,695) -- 31,441,391"}
+  - {period: "9M2025", item: "Lease termination costs (early evacuation)", amount: -22000000, unit: "SAR", pnl_line: "Other operating expenses", recurring: false, source: "4321_CENOMI_CENTERS/2026_Q3_filed2026-11-16.pdf", page: 6, quote: "Other operating expenses 8A -- -- -- (22,000,000)"}
+  - {period: "9M2026", item: "Fair-value gain on profit-rate swaps (not hedge-accounted), netted inside finance costs over loans and borrowings, outside our operating income", amount: 92963657, unit: "SAR", pnl_line: "Finance costs over loans and borrowings (cash-flow add-back 'Gain on derivative financial instruments')", recurring: false, source: "4321_CENOMI_CENTERS/2026_Q3_filed2026-11-16.pdf", page: 26, quote: "A fair value gain of SR 86.23 million (2025: nil) was recognised in interim condensed consolidated statement of profit or loss"}
+
+restatements:
+  - period_restated: "31 March 2022 (FY2021 opening balance) and the year to 31 March 2022"
+    item: "Investment properties moved from the cost model to the fair-value model; total assets 18,281,162,588 -> 26,085,926,175, total equity 5,780,581,065 -> 13,585,344,652"
+    from: 18281162588
+    to: 26085926175
+    unit: "SAR"
+    reason: "Change in accounting policy (note 36 of the transition-period FS)"
+    source: "4321_CENOMI_CENTERS/2022_Annual_filed2023-04-09.pdf"
+    page: 65
+    quote: "the Board of Directors of the Company approved the change in accounting policy for the subsequent measurement of the Group's investment properties from the cost model to the fair value model."
+  - period_restated: "FY2022 (nine months to 31 Dec 2022)"
+    item: "Cost of revenue 275,997,528 -> 285,790,026 (SAR 9,792,498 moved from G&A); gross profit 1,411,536,752 -> 1,401,744,254; operating profit unchanged"
+    from: 275997528
+    to: 285790026
+    unit: "SAR"
+    reason: "Reclassification of comparatives, FY2023 FS note 36(i)"
+    source: "4321_CENOMI_CENTERS/2023_Annual_filed2024-04-03.pdf"
+    page: 60
+    quote: "Comparative figure of SR 9,792,498 in the consolidated statement of profit or loss for the nine-month period ended 31 December 2022 has been reclassified"
+  - period_restated: "FY2022 (nine months to 31 Dec 2022)"
+    item: "Operating cash flow 871,508,353 -> 818,678,082: additions to development properties (52,830,271) moved from investing to operating working capital"
+    from: 871508353
+    to: 818678082
+    unit: "SAR"
+    reason: "Re-presentation in the FY2023 FS cash-flow statement; not described in note 36"
+    source: "4321_CENOMI_CENTERS/2023_Annual_filed2024-04-03.pdf"
+    page: 13
+    quote: "Net cash from operating activities 1,383,597,758 818,678,082"
+  - period_restated: "FY2023"
+    item: "Operating cash flow 1,383,597,758 -> 1,390,236,167 (additions to development properties shown in investing again); difference 0.48%, kept as D"
+    from: 1383597758
+    to: 1390236167
+    unit: "SAR"
+    reason: "Re-presentation in the FY2024 FS cash-flow statement"
+    source: "4321_CENOMI_CENTERS/2024_Annual_filed2025-03-19.pdf"
+    page: 13
+    quote: "Net cash generated from operating activities 1,006,385,476 1,390,236,167"
+  - period_restated: "FY2024"
+    item: "Finance income on time deposits (2,396,382) moved from other operating income (FY2024 FS: 15,428,124) into net finance costs; operating subtotal 1,965,365,971 -> 1,962,969,589; profit unchanged"
+    from: 1965365971
+    to: 1962969589
+    unit: "SAR"
+    reason: "Re-presentation in the FY2025 FS income statement (no note)"
+    source: "4321_CENOMI_CENTERS/2025_Annual_filed2026-04-05.pdf"
+    page: 11
+    quote: "Finance income on time deposits 13,010,755 2,396,382"
+
+significant_events:
+  - date: "2022-12-29"
+    event: "Shareholders approved changing the financial year-end from 31 March to 31 December; FY2022 is a nine-month period"
+    financial_effect: "FY2022 not comparable with 12-month years"
+    source: "4321_CENOMI_CENTERS/2023_Annual_filed2024-04-03.pdf"
+    page: 15
+    quote: "On 29 December 2022, the shareholders approved the change of the fiscal year of the Company to 31 December from 31 March."
+  - date: "2022-05-15"
+    event: "Partial fire at the Mall of Dhahran; mall reopened 7 June 2022; insurance claim of SAR 250m accepted and recognised in 2025"
+    financial_effect: "SAR 250m other operating income in FY2025 (Q3 2025)"
+    source: "4321_CENOMI_CENTERS/2025_Annual_filed2026-04-05.pdf"
+    page: 34
+    quote: "insurance claim of SR 250 million has been accepted by the insurer and recognized in the consolidated statement of profit or loss"
+  - date: "2025-2026"
+    event: "Mall of Dhahran landlord claims SAR 788.3m (fair rent SAR 103.4m, shop revenues SAR 523.0m, excess area SAR 161.9m); no provision booked; on 21 Oct 2026 a ruling dismissed the revenue claim"
+    financial_effect: "Contingent liability; auditor emphasis of matter in FY2025 and 9M2026"
+    source: "4321_CENOMI_CENTERS/2026_Q3_filed2026-11-16.pdf"
+    page: 36
+    quote: "on 21 October 2026, a court ruling was issued dismissing the Landlord's claim in respect of entitlement of operating revenue from the property"
+  - date: "2025"
+    event: "Franchise agreement: intangible asset of SAR 279.9m recognised against a liability presented in lease and other financial liabilities (SAR 260.9m at end-2025)"
+    financial_effect: "Amortisation SAR 14.1m in FY2025; liability excluded from LEASE_LIAB"
+    source: "4321_CENOMI_CENTERS/2025_Annual_filed2026-04-05.pdf"
+    page: 50
+    quote: "The Group started franchise agreement during the year ended 31 December 2025."
+  - date: "2026 (H1 and Q3)"
+    event: "Promise-to-lease with Saudi Downtown Company (PIF) for new destinations in Al Khobar and Madinah (25-year lease after handover), plus a development services agreement for the Al Madinah Downtown retail component"
+    financial_effect: "Development revenue SAR 35.6m in 9M2026"
+    source: "4321_CENOMI_CENTERS/2026_Q3_filed2026-11-16.pdf"
+    page: 11
+    quote: "The Company has signed a development services agreement (“DSA”) with Saudi Downtown Company to provide development services for the retail and shopping mall components"
+  - date: "2026"
+    event: "Additional USD 150m sukuk (SAR 562.5m) issued, maturing 2030, 8.875% yield; profit-rate swaps entered on fund financing facilities (notional SAR 2.7bn and SAR 187m; fair-value gains of SAR 86.23m and SAR 5.7m in profit or loss)"
+    financial_effect: "Borrowings SAR 16,066m at 30 Sep 2026"
+    source: "4321_CENOMI_CENTERS/2026_Q3_filed2026-11-16.pdf"
+    page: 26
+    quote: "the Group issued additional USD Sukuk amounting to USD 150 million (equivalent to SR 562.5 million), maturing in 2030"
+  - date: "2026"
+    event: "Capital increase to SAR 5,176.6m: 1 bonus share per 12 held (39,583,333 shares) plus 3,075,429 ESOP shares, from retained earnings"
+    financial_effect: "No change in equity; 9M2025 EPS restated (2.51 -> 2.31)"
+    source: "4321_CENOMI_CENTERS/2026_Q3_filed2026-11-16.pdf"
+    page: 24
+    quote: "the issuance of 39,583,333 new shares as bonus shares to the shareholders at ratio of 1 bonus share for every 12"
+  - date: "2026-Q3"
+    event: "Completion of major construction works on one project under construction announced; tenant fit-out in progress"
+    financial_effect: "No revenue yet; finance costs of SAR 372m capitalised in 9M2026 (9M2025: SAR 325.6m)"
+    source: "4321_CENOMI_CENTERS/2026_Q3_filed2026-11-16.pdf"
+    page: 17
+    quote: "the Group announced completion of major construction works on one of its project under construction"
+
+audit_opinion:
+  - {period: "FY2022 (nine months)", opinion: "Unmodified (KPMG)", emphasis_of_matter: "Two: change in accounting policy for investment properties (cost to fair value, comparatives restated) and change in reporting period (year-end 31 March to 31 December)", source: "4321_CENOMI_CENTERS/2022_Annual_filed2023-04-09.pdf", page: 4}
+  - {period: "FY2023", opinion: "Unmodified (KPMG); no emphasis of matter found", emphasis_of_matter: none, source: "4321_CENOMI_CENTERS/2023_Annual_filed2024-04-03.pdf", page: 4}
+  - {period: "FY2024", opinion: "Unmodified (KPMG); no emphasis of matter found", emphasis_of_matter: none, source: "4321_CENOMI_CENTERS/2024_Annual_filed2025-03-19.pdf", page: 4}
+  - {period: "FY2025", opinion: "Unmodified (EY); other matter: FY2024 audited by another auditor", emphasis_of_matter: "Legal claims filed by a counterparty (note 32, Mall of Dhahran landlord)", source: "4321_CENOMI_CENTERS/2025_Annual_filed2026-04-05.pdf", page: 4}
+  - {period: "9M2026", opinion: "Review conclusion unmodified (EY, 15 Nov 2026)", emphasis_of_matter: "Claims filed by the landlord of the Mall of Dhahran (note 22)", source: "4321_CENOMI_CENTERS/2026_Q3_filed2026-11-16.pdf", page: 4}
+
+kpis_in_filings:
+  - {period: "31 Dec 2025", kpi: "Occupancy assumption used by valuers for shopping malls (range; not a reported KPI)", value: "69%-99%", unit: "%", source: "4321_CENOMI_CENTERS/2025_Annual_filed2026-04-05.pdf", page: 35}
+  - {period: "31 Dec 2024", kpi: "Occupancy assumption used by valuers for shopping malls (range; not a reported KPI)", value: "64%-99%", unit: "%", source: "4321_CENOMI_CENTERS/2025_Annual_filed2026-04-05.pdf", page: 35}
+  - {period: "31 Dec 2025", kpi: "Fair value of operating shopping malls (FY2024: SAR 19,785m); projects under construction SAR 8,937m (FY2024: SAR 7,098m)", value: 20085, unit: "SAR m", source: "4321_CENOMI_CENTERS/2025_Annual_filed2026-04-05.pdf", page: 35}
+  - {period: "FY2022-9M2026", kpi: "Gross leasable area, mall count, visitors (footfall), same-mall rent growth", value: null, unit: "count", status: "not found", source: "4321_CENOMI_CENTERS/2025_Annual_filed2026-04-05.pdf", page: null}
+
+special_extractions:
+  - name: "Finance-line layout used for FIN_COST / FIN_INC (stage A)"
+    note: "FIN_COST = finance costs over loans and borrowings + finance costs over lease and other financial liabilities + contract modification loss on related-party receivables (inside 'net finance costs'); FIN_INC = finance income on related-party balances + finance income on time deposits. Our operating income then equals the printed 'Profit before net finance costs, share of loss of EAI and zakat' (FY2025 SAR 2,015,142,759, p.11)."
+    source: "4321_CENOMI_CENTERS/2025_Annual_filed2026-04-05.pdf"
+    page: 11
+
+open_questions:
+  - "Revenue of the Mall of Dhahran (handed back around February 2025) and of the mall sold in 2025 is not disclosed, so the perimeter effect on FY2025 and 9M2026 revenue cannot be measured."
+  - "The FY2025 FS (p.63) date the court termination of the Mall of Dhahran lease to July 2025; the 2026 Q3 interim (p.36) says December 2024."
+  - "No gross leasable area, occupancy, visitor numbers or like-for-like rent growth in the financial statements; occupancy appears only as a valuation input range."
+  - "The 9M2026 swap fair-value gain (cash-flow add-back SAR 92,963,657) is not shown separately on the face; we assume it is netted in 'finance costs over loans and borrowings' (note 14 says it was recognised in profit or loss)."

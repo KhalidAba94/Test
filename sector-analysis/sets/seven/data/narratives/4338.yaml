@@ -1,0 +1,76 @@
+ticker: "4338"
+headline: >-
+  Revenue edged up from SAR 185m (FY2022) to SAR 197m (FY2025), but net profit fell every year from SAR 66.1m to SAR 18.4m and
+  funds from operations (FFO, we calculate) from SAR 90.1m to SAR 49.8m as finance cost more than doubled on borrowings that rose
+  to SAR 743m; distributions exceeded FFO in every year. The unaudited 9M 2026 fact sheet shows revenue up 23.4% to SAR 173m and
+  net profit of SAR 48.2m (SAR 17.9m).
+lfl_basis:
+  definition_used: >-
+    Revenue is rental revenue from AlAndalus Mall, Salama Tower and Qbic Plaza plus revenue from the AlAndalus Mall Hotel
+    (DoubleTree), as in the segment note; rebate income and fair-value gains are excluded. The fund bought or
+    sold no property from FY2022 to 9M 2026, so perimeter effects are nil and organic growth equals reported growth. New capacity is
+    the AlAndalus Mall expansion, completed in 2024; its revenue is not disclosed, so like-for-like growth is not determinable and
+    organic growth is the closest measure. 9M figures are from unaudited fact sheets.
+  perimeter_changes:
+    - {event: "No acquisitions or disposals; same four properties throughout (last acquisition Qbic Plaza, 22 Jun 2020)", date: "FY2022 to 9M 2026", effect: "nil", source: "4338_ALAHLI_REIT_1/2025_Annual_filed2026-09-14.pdf p.26; 4338_ALAHLI_REIT_1/2026_Q3_filed2026-10-13.pdf p.1"}
+  capacity_changes:
+    - {event: "AlAndalus Mall expansion completed: SAR 163.8m moved from construction in progress to buildings", date: "2024", effect: "revenue not disclosed; retail segment revenue +2.5% in FY2024 and +10.1% in FY2025", source: "4338_ALAHLI_REIT_1/2024_Annual_filed2026-09-14.pdf p.24; 4338_ALAHLI_REIT_1/2025_Annual_filed2026-09-14.pdf p.35"}
+    - {event: "New AlAndalus Mall expansion works under construction (SAR 20.9m at end-2025)", date: "2025", effect: "no revenue yet", source: "4338_ALAHLI_REIT_1/2025_Annual_filed2026-09-14.pdf p.27"}
+  fx_exposure: "All properties are in Saudi Arabia and revenue is in SAR; no FX effect."
+  price_volume_support: >-
+    Not determinable. The filings give revenue by segment (retail, hospitality, offices) and occupancy rates from the valuation notes
+    and fact sheets, but no rents per square metre, leasable area or hotel room rates, so rent and occupancy effects cannot be separated.
+  confidence: "Medium (perimeter nil with High confidence; the expansion's revenue is not determinable)"
+price_volume:
+  - period: "FY2025 vs FY2024"
+    text: >-
+      Retail (AlAndalus Mall) revenue rose 10.1% (SAR 125.0m to SAR 137.6m, we calculate) as the valuers' mall occupancy rose to
+      99.02% from 86% (second valuer: 89% from 88%). Hotel revenue fell 19.7% (SAR 19.2m to SAR 15.4m) with the valuer's hotel occupancy
+      assumption unchanged at 65%, and offices were flat at SAR 43.7m after Salama Tower moved from a SAR 23.1m-a-year net lease to third-party
+      management in February 2025. Rents per square metre are not disclosed.
+    basis: "disclosed (segment revenue, occupancy); split not determinable"
+    confidence: "High for the amounts; the split is not determinable"
+    source: "4338_ALAHLI_REIT_1/2025_Annual_filed2026-09-14.pdf p.35 (segments), p.29-30 (occupancy), p.26 (Salama Tower)"
+    refs: ["4338-FY2025-REV", "4338-FY2024-REV"]
+  - period: "9M 2026 vs 9M 2025"
+    text: >-
+      The fact sheets show direct revenues up 23.4% (SAR 140m to SAR 173m). They give no split by property; their occupancy charts
+      show the hotel at 73% at 30 Sep 2026 against 47% a year earlier and the mall at 99% against 97%. No property was bought or sold.
+    basis: "disclosed (fact-sheet totals and occupancy); split not determinable"
+    confidence: "Low (unaudited fact sheets, no property split)"
+    source: "4338_ALAHLI_REIT_1/2026_Q3_filed2026-10-13.pdf p.1; 4338_ALAHLI_REIT_1/2025_Q3_filed2026-09-13.pdf p.1"
+    refs: ["4338-9M2026-REV", "4338-9M2025-REV"]
+profit_and_margin:
+  drivers:
+    - {period: "FY2023", driver: "Revenue -1.1% (SAR 185m to SAR 183m): retail revenue fell 2.7% and hotel revenue rose 8.7%, offices flat at SAR 45.4m (we calculate from the segment note). Net profit fell 38.7% to SAR 40.6m as finance cost rose to SAR 37.2m (SAR 20.9m) and the receivables impairment to SAR 8.5m (SAR 4.0m). FFO fell 28.3% to SAR 64.5m; net margin 22.2%; ROE 3.2%.", source: "4338_ALAHLI_REIT_1/2023_Annual_filed2026-09-14.pdf p.8 (P&L), p.31 (segments)", refs: ["4338-FY2023-REV", "4338-FY2023-NI_ATTR", "4338-FY2023-FFO", "4338-FY2022-FFO"]}
+    - {period: "FY2024", driver: "Revenue +2.5% to SAR 188m: hotel +21.9% and retail +2.5% in the year the mall expansion was completed, offices -4.3%. Net profit fell 34.2% to SAR 26.7m: finance cost rose to SAR 45.1m, operating expenses to SAR 56.1m (SAR 48.6m) and an SAR 8.0m impairment was booked on the hotel. FFO SAR 60.9m (-5.6%); net margin 14.2%; ROE 2.2%.", source: "4338_ALAHLI_REIT_1/2024_Annual_filed2026-09-14.pdf p.8 (P&L), p.33 (segments)", refs: ["4338-FY2024-REV", "4338-FY2024-NI_ATTR", "4338-FY2024-FFO", "4338-FY2024-IMPAIR_CF"]}
+    - {period: "FY2025", driver: "Revenue +4.8% to SAR 197m on retail +10.1%, while hotel revenue fell 19.7% and the hotel segment lost SAR 10.3m. Net profit fell 31.1% to SAR 18.4m: finance cost SAR 49.8m, operating expenses SAR 61.5m, receivables impairment SAR 8.7m (SAR 1.3m) and a further SAR 3.0m hotel impairment. FFO SAR 49.8m (-18.2%), FFO margin 25.3%; net margin 9.3%; ROE 1.6%.", source: "4338_ALAHLI_REIT_1/2025_Annual_filed2026-09-14.pdf p.10 (P&L, scanned), p.35 (segments)", refs: ["4338-FY2025-REV", "4338-FY2025-NI_ATTR", "4338-FY2025-FFO", "4338-FY2025-IMPAIR_CF"]}
+    - {period: "FY2022-FY2025", driver: "Distributions declared fell from SAR 96.3m to SAR 61.9m but stayed above calculated FFO every year (distributions / FFO 106.9% in FY2022 and 124.3% in FY2025), so net assets fell from SAR 1,273m to SAR 1,152m. Borrowings rose from SAR 589m to SAR 743m and LTV from 30.4% to 37.3%; NAV at fair value was SAR 1,403m at end-2025 (SAR 1,440m at end-2022).", source: "4338_ALAHLI_REIT_1/2025_Annual_filed2026-09-14.pdf p.9, p.11, p.37", refs: ["4338-FY2025-DIST", "4338-FY2022-DIST", "4338-FY2025-DEBT", "4338-FY2025-TA", "4338-FY2025-NAV_FV", "4338-FY2025-EQ_ATTR"]}
+    - {period: "9M2026", driver: "Fact-sheet figures only (unaudited): direct revenues SAR 173m (SAR 140m), net profit SAR 48.2m (SAR 17.9m) and Islamic financing charge SAR 34.6m (SAR 37.3m). Net margin 27.8% (12.8%); annualised ROE 5.6% (2.0%). We calculate FFO of SAR 70.1m (SAR 38.9m) from net profit and the depreciation footnote (SAR 21.9m and SAR 21m); no impairment figure is printed. Distributions declared were SAR 64.6m (SAR 61.9m).", source: "4338_ALAHLI_REIT_1/2026_Q3_filed2026-10-13.pdf p.1; 4338_ALAHLI_REIT_1/2025_Q3_filed2026-09-13.pdf p.1", refs: ["4338-9M2026-REV", "4338-9M2026-NI_ATTR", "4338-9M2026-FFO", "4338-9M2026-DIST", "4338-9M2025-NI_ATTR"]}
+  one_offs:
+    - {item: "Impairment loss on the hotel (property and equipment); already excluded from FFO", period: "FY2024", amount_sar_m: -8.0, line: "Impairment loss on property and equipment", source: "4338_ALAHLI_REIT_1/2024_Annual_filed2026-09-14.pdf p.8", tax_nci: "No zakat charge (the fund deregistered from zakat from 2023) and no non-controlling interests; net profit kept as reported, the item is outside FFO"}
+    - {item: "Impairment loss on the hotel (property and equipment); already excluded from FFO", period: "FY2025", amount_sar_m: -3.0, line: "Impairment loss on property and equipment", source: "4338_ALAHLI_REIT_1/2025_Annual_filed2026-09-14.pdf p.10", tax_nci: "No zakat charge and no non-controlling interests; net profit kept as reported, the item is outside FFO"}
+    - {item: "No non-recurring item identified inside FFO (receivables impairment of SAR 8.5m in FY2023 and SAR 8.7m in FY2025 is an ordinary operating provision and is kept)", period: "FY2022-9M2026", amount_sar_m: null, line: "n/a", source: "4338_ALAHLI_REIT_1/2025_Annual_filed2026-09-14.pdf p.35", tax_nci: "not applicable"}
+developments:
+  - {date: "2023-04-06", category: "financing", text: "The SNB facility was changed from Ijarah to Murabaha and the whole balance became due in July 2026.", source: "4338_ALAHLI_REIT_1/2023_Annual_filed2026-09-14.pdf p.28"}
+  - {date: "2023-10-05", category: "financing", text: "The facility limit was raised from SAR 650m to SAR 760m; SAR 17m was unused at end-2025.", source: "4338_ALAHLI_REIT_1/2025_Annual_filed2026-09-14.pdf p.32"}
+  - {date: "2024", category: "capacity", text: "The AlAndalus Mall expansion was completed (SAR 163.8m transferred from construction in progress); new expansion works started in 2025 (SAR 20.9m in progress at end-2025).", source: "4338_ALAHLI_REIT_1/2024_Annual_filed2026-09-14.pdf p.24; 4338_ALAHLI_REIT_1/2025_Annual_filed2026-09-14.pdf p.27"}
+  - {date: "2024", category: "strategy", text: "The hotel was reclassified from investment property to property and equipment; it was impaired by SAR 8.0m in FY2024 and SAR 3.0m in FY2025.", source: "4338_ALAHLI_REIT_1/2024_Annual_filed2026-09-14.pdf p.40-41; 4338_ALAHLI_REIT_1/2025_Annual_filed2026-09-14.pdf p.12"}
+  - {date: "2025-02-19", category: "operations", text: "Salama Tower moved from a five-year net lease to the seller (SAR 23.1m a year) to management by a third party.", source: "4338_ALAHLI_REIT_1/2025_Annual_filed2026-09-14.pdf p.26"}
+  - {date: "2025-12", category: "financing", text: "The facility tenure was revised so that the outstanding balance is payable in July 2029; the Qbic Plaza net lease (SAR 21.6m a year) was extended for five years from 10 Dec 2025.", source: "4338_ALAHLI_REIT_1/2025_Annual_filed2026-09-14.pdf p.32, p.26"}
+  - {date: "2026-10-05", category: "financing", text: "The fund paid SAR 0.25 per unit (SAR 34.4m) for Q2 2026, after SAR 0.22 (SAR 30.3m) for Q4 2025 and SAR 0.20 (SAR 27.5m) for Q2 2025.", source: "4338_ALAHLI_REIT_1/2026_Q3_filed2026-10-13.pdf p.1"}
+what_it_means:
+  improved: "The mall filled up: retail revenue rose 10.1% in FY2025 with valuer occupancy of 99.02%, and the unaudited 9M 2026 fact sheet shows revenue up 23.4% and net profit of SAR 48.2m against SAR 17.9m."
+  weakened: "From FY2022 to FY2025 net profit fell from SAR 66.1m to SAR 18.4m, FFO from SAR 90.1m to SAR 49.8m and the net margin from 35.7% to 9.3%, while LTV rose from 30.4% to 37.3% and distributions exceeded FFO each year."
+  why: "Finance cost rose from SAR 20.9m to SAR 49.8m as borrowings grew from SAR 589m to SAR 743m to fund the mall expansion, and the hotel lost money and was impaired by SAR 11.0m over FY2024-FY2025."
+  uncertain: "The 9M 2026 figures are unaudited fact-sheet numbers whose full-year totals have differed from the audited statements (FY2025 net profit 23.4m vs 18.4m), and the revenue of the mall expansion is not disclosed."
+confidence_overall: "Medium"
+data_notes:
+  - "9M 2025 and 9M 2026 come from unaudited quarterly fact sheets (year-to-date income statement and balance sheet; no interim statements in the archive and no comparative column). They are partial: no cash, borrowings or impairment are printed, so 9M LTV and net debt are blank and 9M FFO is net profit plus the rounded depreciation footnote (SAR 21m and SAR 21.9m) without impairments. 9M NAV at fair value is NAV per unit at market value x 137.5m units (calculated). Fact-sheet full-year totals differ from the audited statements (FY2025 direct revenues SAR 190.0m and net profit SAR 23.4m vs SAR 196.7m and SAR 18.4m)."
+  - "Revenue basis (the same for all eight REITs): revenue is rental income plus other property operating income (hotel revenue, service charges, finance-lease income on leased property) and excludes Murabaha, deposit and other finance income, fair-value gains, disposal gains, dividends and other income. For this fund REV is the segment-note revenue (rental plus hotel): FY2022 SAR 185.1m, FY2023 183.1m, FY2024 187.6m, FY2025 196.7m. The total revenue line, which adds rebate income and fair-value gains of SAR 0.2m to 0.4m a year (FY2025 SAR 196.9m), is not used. The fact sheets' 'Direct Revenues' used for 9M are on the same basis (other income shown separately)."
+  - "The depreciation and impairment added back include those of the hotel, which the FY2024 annual reclassified from investment property to property and equipment (note 27), so FFO is on the same basis as FY2022-FY2023."
+  - "Restated or re-presented figures: FY2023 NAV at fair value SAR 1,406.6m (FY2023 annual: SAR 1,413.6m) because the FY2024 annual measures the fair-value uplift on investment properties only; FY2024 total assets SAR 1,993.0m (FY2024 annual: SAR 1,986.5m) after prepayments and unearned rentals were grossed up (FY2025 annual note 28)."
+  - "Cross-holding: the fund is 68.73% owned and consolidated by Alandalus Property (4320, in the Malls group), so its revenue (SAR 185.2m in FY2022, SAR 183.5m in FY2023, SAR 187.9m in FY2024 and SAR 196.8m in FY2025 as Alandalus reports it) and 68.73% of its profit (SAR 45.4m, SAR 27.9m, SAR 18.3m and SAR 12.6m) are counted in both the REIT and the Malls group totals."
+  - "No FY2022 annual is in the archive: FY2022 is the FY2023 annual's comparative column and FY2021 opening balances come from its 2022 column; FY2021 total assets and NAV at fair value are not printed."
+  - "Distributions (DIST) are those declared in the period (statement of changes in net assets), i.e. the prior second-half dividend plus the current first-half dividend; 9M figures sum the declarations in the fact-sheet dividend table."
+  - "The FY2025 primary statements (pp.9-12) are scanned images, read by OCR and checked visually. The FY2023-FY2025 annual files were filed on the exchange in September 2026. Ernst & Young audited FY2025; FY2024 was audited by another auditor (Other Matter, unmodified)."

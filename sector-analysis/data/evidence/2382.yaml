@@ -1,0 +1,390 @@
+# Evidence extracted from ADES Holding Company filings (archive: 2382_ADES). Facts only; page = physical PDF page (1-based).
+# Units: FY2024 AFS onward and interims in SAR '000; FY2023 AFS and 2022 special-purpose FS in full SAR ("SAR").
+ticker: "2382"
+company: "ADES Holding Company"
+
+perimeter_changes:
+  - event: "Acquisition of four jack-up rigs with Saudi Aramco contracts from Noble Finance Company (asset/business acquisition)"
+    type: acquisition
+    date: "2021-11-03"
+    consideration: "SAR 1,096,556,250 cash; bargain purchase gain SAR 491,247,285"
+    revenue_contribution: 64544329
+    profit_contribution: null
+    pro_forma_revenue: null
+    period: "FY2021"
+    unit: "SAR"
+    source: "2382_ADES/2022_Annual_filed2024-10-09.pdf"
+    page: 37
+    quote: "It is impracticable to disclose the revenue and profit, or loss of the rigs acquired for the year ended 31 December 2021"
+  - event: "Acquisition of Emerald Driller Company (3 offshore rigs, Qatar) by ADES Arabia Holding, then transferred into the Group under common control (pooling)"
+    type: acquisition
+    date: "2022-05-27"
+    consideration: "SAR 745,113,894 non-cash (paid by ADES Arabia Holding); bargain purchase gain SAR 244,945,552"
+    revenue_contribution: 201116853
+    profit_contribution: 27744358
+    pro_forma_revenue: 254814963
+    pro_forma_profit: 52187730
+    period: "FY2022"
+    unit: "SAR"
+    source: "2382_ADES/2022_Annual_filed2024-10-09.pdf"
+    page: 36
+    quote: "From the date of acquisition to 27 May 2022, the acquired assets contributed SAR 201,116,853 of revenue"
+    note: "Filing text reads 'to 27 May 2022' (acquisition date) - likely means to 31 Dec 2022; Qatar segment revenue FY2022 equals 201,116,853."
+  - event: "Acquisition of Seadrill GCC Operations Ltd and 7 subsidiaries (7 offshore rigs, KSA)"
+    type: acquisition
+    date: "2022-10-18"
+    consideration: "SAR 2,554,848,900 cash; bargain purchase gain SAR 177,321,855; SAR 122,029,770 reimbursed by Seadrill in 2023 as final settlement"
+    revenue_contribution: 98203601
+    profit_contribution: 37051196
+    pro_forma_revenue: 484382624
+    pro_forma_profit: 182752523
+    period: "FY2022"
+    unit: "SAR"
+    source: "2382_ADES/2022_Annual_filed2024-10-09.pdf"
+    page: 37
+    quote: "the acquired business would have contributed SAR 484,382,624 of revenue of continuing operations and would have reported profit SAR 182,752,523."
+  - event: "Group reorganisation: ADES Holding Company incorporated 28 Dec 2022 as new holding company of ADES International Holding (common control; not IFRS 3; pooling, continuation of existing group)"
+    type: new_subsidiary
+    date: "2022-12-28"
+    consideration: "Share swap; SAR 857,087,510 shares issued at par"
+    revenue_contribution: null
+    profit_contribution: null
+    pro_forma_revenue: null
+    period: "FY2022/FY2023"
+    unit: "SAR"
+    source: "2382_ADES/2023_Annual_filed2024-03-07.pdf"
+    page: 12
+    quote: "the reorganisation did not result in any change of economic substance, it is not considered as a business combination as defined by IFRS 3"
+  - event: "Acquisition of Topaz jack-up (direct) and Rig Finance Ltd (Soehanah jack-up) from Vantage, Southeast Asia"
+    type: acquisition
+    date: "2024-10-30"
+    consideration: "SAR 726,078k (cash 711,130k + price adjustment 14,948k); bargain purchase gain SAR 7,500k"
+    revenue_contribution: 40542
+    profit_contribution: 22173
+    pro_forma_revenue: 243253
+    pro_forma_profit: 133039
+    period: "FY2024"
+    unit: "SAR '000"
+    source: "2382_ADES/2025_Annual_filed2026-03-29.pdf"
+    page: 45
+    quote: "the acquired business would have contributed SAR 243,253 thousand of revenue of continuing operations and would have reported profit SAR 133,039 thousand."
+  - event: "Acquisition of 100% of Shelf Drilling Ltd (international shallow-water jack-up contractor); prior 16.5% stake (Aug 2025) remeasured"
+    type: acquisition
+    date: "2025-11-25"
+    consideration: "Purchase consideration SAR 1,922,557k (cash 1,442,123k incl. 231,360k for prior stake; payable 391,656k; FV gain 88,778k); borrowings assumed SAR 5,096,826k; bargain purchase gain SAR 21,209k"
+    revenue_contribution: 388923
+    profit_contribution: 93280
+    pro_forma_revenue: 3871760
+    pro_forma_profit: 461620
+    period: "FY2025"
+    unit: "SAR '000"
+    source: "2382_ADES/2025_Annual_filed2026-03-29.pdf"
+    page: 44
+    quote: "If the combination had taken place at the beginning of the year the acquired business would have contributed SAR 3,871,760 thousand of revenue"
+  - event: "Acquisition of 100% of Saudi Arabian Saipem Ltd (renamed ADES Advanced Limited): 3 owned + 2 leased premium jack-ups with customer contracts"
+    type: acquisition
+    date: "2026-09-15"
+    consideration: "SAR 1,133,903k (cash 1,068,750k + price adjustment 65,153k); net cash outflow 1,125,083k; provisional bargain purchase gain SAR 77,809k"
+    revenue_contribution: 26127
+    profit_contribution: 404
+    pro_forma_revenue: 627049
+    pro_forma_profit: 44387
+    period: "9M2026"
+    unit: "SAR '000"
+    source: "2382_ADES/2026_Q3_filed2026-11-09.pdf"
+    page: 21
+    quote: "If the combination had taken place at the beginning of the year the acquired business would have contributed SAR 627,049 thousand of revenue"
+
+segments:
+  # Geographic operating segments (CEO views business geographically). revenue = external customers; profit = segment profit/(loss) after tax per note.
+  # FY2021 / FY2022 (special purpose FS, SAR)
+  - {period: "FY2021", segment: "Egypt", basis: geographic, revenue: 251163915, profit: -322117126, unit: "SAR", source: "2382_ADES/2022_Annual_filed2024-10-09.pdf", page: 33}
+  - {period: "FY2021", segment: "Algeria", basis: geographic, revenue: 28778591, profit: -65392834, unit: "SAR", source: "2382_ADES/2022_Annual_filed2024-10-09.pdf", page: 33}
+  - {period: "FY2021", segment: "Kingdom of Saudi Arabia", basis: geographic, revenue: 909131040, profit: 137586111, unit: "SAR", source: "2382_ADES/2022_Annual_filed2024-10-09.pdf", page: 33}
+  - {period: "FY2021", segment: "Kuwait", basis: geographic, revenue: 321028313, profit: 24717266, unit: "SAR", source: "2382_ADES/2022_Annual_filed2024-10-09.pdf", page: 33}
+  - {period: "FY2021", segment: "Tunisia", basis: geographic, revenue: 4103771, profit: -7579808, unit: "SAR", source: "2382_ADES/2022_Annual_filed2024-10-09.pdf", page: 33}
+  - {period: "FY2021", segment: "Corporate (incl. bargain purchase gain)", basis: geographic, revenue: 0, profit: 347214981, unit: "SAR", source: "2382_ADES/2022_Annual_filed2024-10-09.pdf", page: 33}
+  - {period: "FY2021", segment: "Total", basis: geographic, revenue: 1514205630, profit: 114428590, unit: "SAR", source: "2382_ADES/2022_Annual_filed2024-10-09.pdf", page: 33}
+  - {period: "FY2022", segment: "Egypt", basis: geographic, revenue: 341610747, profit: -204916692, unit: "SAR", source: "2382_ADES/2022_Annual_filed2024-10-09.pdf", page: 32}
+  - {period: "FY2022", segment: "Algeria", basis: geographic, revenue: 25585373, profit: -8187236, unit: "SAR", source: "2382_ADES/2022_Annual_filed2024-10-09.pdf", page: 32}
+  - {period: "FY2022", segment: "Kingdom of Saudi Arabia", basis: geographic, revenue: 1571548155, profit: 332716520, unit: "SAR", source: "2382_ADES/2022_Annual_filed2024-10-09.pdf", page: 32}
+  - {period: "FY2022", segment: "Kuwait", basis: geographic, revenue: 313126416, profit: 41268776, unit: "SAR", source: "2382_ADES/2022_Annual_filed2024-10-09.pdf", page: 32}
+  - {period: "FY2022", segment: "Tunisia", basis: geographic, revenue: 14213257, profit: -7070627, unit: "SAR", source: "2382_ADES/2022_Annual_filed2024-10-09.pdf", page: 32}
+  - {period: "FY2022", segment: "Qatar (Emerald Driller)", basis: geographic, revenue: 201116853, profit: 27744357, unit: "SAR", source: "2382_ADES/2022_Annual_filed2024-10-09.pdf", page: 32}
+  - {period: "FY2022", segment: "Corporate (incl. bargain purchase gains)", basis: geographic, revenue: 0, profit: 216066844, unit: "SAR", source: "2382_ADES/2022_Annual_filed2024-10-09.pdf", page: 32}
+  - {period: "FY2022", segment: "Total", basis: geographic, revenue: 2467200801, profit: 397621942, unit: "SAR", source: "2382_ADES/2022_Annual_filed2024-10-09.pdf", page: 32}
+  # FY2023 (as presented in FY2024 AFS, SAR '000)
+  - {period: "FY2023", segment: "Egypt", basis: geographic, revenue: 534911, profit: 129162, unit: "SAR '000", source: "2382_ADES/2024_Annual_filed2025-03-04.pdf", page: 37}
+  - {period: "FY2023", segment: "Algeria & Tunisia", basis: geographic, revenue: 101940, profit: -4409, unit: "SAR '000", source: "2382_ADES/2024_Annual_filed2025-03-04.pdf", page: 37}
+  - {period: "FY2023", segment: "Kingdom of Saudi Arabia", basis: geographic, revenue: 2860918, profit: 253810, unit: "SAR '000", source: "2382_ADES/2024_Annual_filed2025-03-04.pdf", page: 37}
+  - {period: "FY2023", segment: "Kuwait", basis: geographic, revenue: 471211, profit: 55320, unit: "SAR '000", source: "2382_ADES/2024_Annual_filed2025-03-04.pdf", page: 37}
+  - {period: "FY2023", segment: "Qatar", basis: geographic, revenue: 344942, profit: 81988, unit: "SAR '000", source: "2382_ADES/2024_Annual_filed2025-03-04.pdf", page: 37}
+  - {period: "FY2023", segment: "India", basis: geographic, revenue: 17981, profit: 5518, unit: "SAR '000", source: "2382_ADES/2024_Annual_filed2025-03-04.pdf", page: 37}
+  - {period: "FY2023", segment: "Corporate", basis: geographic, revenue: 0, profit: -69311, unit: "SAR '000", source: "2382_ADES/2024_Annual_filed2025-03-04.pdf", page: 37}
+  - {period: "FY2023", segment: "Total", basis: geographic, revenue: 4331903, profit: 452078, unit: "SAR '000", source: "2382_ADES/2024_Annual_filed2025-03-04.pdf", page: 37}
+  # FY2024 (as presented in FY2025 AFS)
+  - {period: "FY2024", segment: "Egypt", basis: geographic, revenue: 486016, profit: 165759, unit: "SAR '000", source: "2382_ADES/2025_Annual_filed2026-03-29.pdf", page: 42}
+  - {period: "FY2024", segment: "Algeria & Tunisia", basis: geographic, revenue: 197466, profit: 61683, unit: "SAR '000", source: "2382_ADES/2025_Annual_filed2026-03-29.pdf", page: 42}
+  - {period: "FY2024", segment: "Kingdom of Saudi Arabia", basis: geographic, revenue: 4142669, profit: 515745, unit: "SAR '000", source: "2382_ADES/2025_Annual_filed2026-03-29.pdf", page: 42}
+  - {period: "FY2024", segment: "Kuwait", basis: geographic, revenue: 615425, profit: 69473, unit: "SAR '000", source: "2382_ADES/2025_Annual_filed2026-03-29.pdf", page: 42}
+  - {period: "FY2024", segment: "Qatar", basis: geographic, revenue: 356135, profit: 97177, unit: "SAR '000", source: "2382_ADES/2025_Annual_filed2026-03-29.pdf", page: 42}
+  - {period: "FY2024", segment: "India", basis: geographic, revenue: 220266, profit: 63331, unit: "SAR '000", source: "2382_ADES/2025_Annual_filed2026-03-29.pdf", page: 42}
+  - {period: "FY2024", segment: "Southeast Asia", basis: geographic, revenue: 181045, profit: 73797, unit: "SAR '000", source: "2382_ADES/2025_Annual_filed2026-03-29.pdf", page: 42}
+  - {period: "FY2024", segment: "Corporate", basis: geographic, revenue: 0, profit: -230770, unit: "SAR '000", source: "2382_ADES/2025_Annual_filed2026-03-29.pdf", page: 42}
+  - {period: "FY2024", segment: "Total", basis: geographic, revenue: 6199022, profit: 816195, unit: "SAR '000", source: "2382_ADES/2025_Annual_filed2026-03-29.pdf", page: 42}
+  # FY2025
+  - {period: "FY2025", segment: "Egypt", basis: geographic, revenue: 641328, profit: 318814, unit: "SAR '000", source: "2382_ADES/2025_Annual_filed2026-03-29.pdf", page: 41}
+  - {period: "FY2025", segment: "Algeria & Tunisia", basis: geographic, revenue: 253465, profit: -25539, unit: "SAR '000", source: "2382_ADES/2025_Annual_filed2026-03-29.pdf", page: 41}
+  - {period: "FY2025", segment: "Kingdom of Saudi Arabia", basis: geographic, revenue: 3611510, profit: 306865, unit: "SAR '000", source: "2382_ADES/2025_Annual_filed2026-03-29.pdf", page: 41}
+  - {period: "FY2025", segment: "Kuwait", basis: geographic, revenue: 649637, profit: 2267, unit: "SAR '000", source: "2382_ADES/2025_Annual_filed2026-03-29.pdf", page: 41}
+  - {period: "FY2025", segment: "Qatar", basis: geographic, revenue: 309216, profit: 65593, unit: "SAR '000", source: "2382_ADES/2025_Annual_filed2026-03-29.pdf", page: 41}
+  - {period: "FY2025", segment: "India", basis: geographic, revenue: 276780, profit: 78427, unit: "SAR '000", source: "2382_ADES/2025_Annual_filed2026-03-29.pdf", page: 41}
+  - {period: "FY2025", segment: "Southeast Asia", basis: geographic, revenue: 609952, profit: 231713, unit: "SAR '000", source: "2382_ADES/2025_Annual_filed2026-03-29.pdf", page: 41}
+  - {period: "FY2025", segment: "West/Central Africa (Nigeria, Angola)", basis: geographic, revenue: 171891, profit: -24578, unit: "SAR '000", source: "2382_ADES/2025_Annual_filed2026-03-29.pdf", page: 41}
+  - {period: "FY2025", segment: "Norway", basis: geographic, revenue: 40163, profit: -4709, unit: "SAR '000", source: "2382_ADES/2025_Annual_filed2026-03-29.pdf", page: 41}
+  - {period: "FY2025", segment: "Other (Brazil, Italy, Netherlands, UK)", basis: geographic, revenue: 125017, profit: 82259, unit: "SAR '000", source: "2382_ADES/2025_Annual_filed2026-03-29.pdf", page: 41}
+  - {period: "FY2025", segment: "Corporate (incl. bargain purchase 21,209)", basis: geographic, revenue: 0, profit: -198251, unit: "SAR '000", source: "2382_ADES/2025_Annual_filed2026-03-29.pdf", page: 41}
+  - {period: "FY2025", segment: "Total", basis: geographic, revenue: 6688959, profit: 832861, unit: "SAR '000", source: "2382_ADES/2025_Annual_filed2026-03-29.pdf", page: 41}
+  # 9M2026 / 9M2025
+  - {period: "9M2026", segment: "Egypt", basis: geographic, revenue: 696034, profit: 92784, unit: "SAR '000", source: "2382_ADES/2026_Q3_filed2026-11-09.pdf", page: 18}
+  - {period: "9M2026", segment: "Algeria & Tunisia", basis: geographic, revenue: 163640, profit: -7838, unit: "SAR '000", source: "2382_ADES/2026_Q3_filed2026-11-09.pdf", page: 18}
+  - {period: "9M2026", segment: "Kingdom of Saudi Arabia (incl. bargain purchase 77,809)", basis: geographic, revenue: 2395473, profit: 201859, unit: "SAR '000", source: "2382_ADES/2026_Q3_filed2026-11-09.pdf", page: 18}
+  - {period: "9M2026", segment: "Kuwait", basis: geographic, revenue: 588269, profit: 15928, unit: "SAR '000", source: "2382_ADES/2026_Q3_filed2026-11-09.pdf", page: 18}
+  - {period: "9M2026", segment: "Qatar", basis: geographic, revenue: 191311, profit: -1029, unit: "SAR '000", source: "2382_ADES/2026_Q3_filed2026-11-09.pdf", page: 18}
+  - {period: "9M2026", segment: "India", basis: geographic, revenue: 425995, profit: 76926, unit: "SAR '000", source: "2382_ADES/2026_Q3_filed2026-11-09.pdf", page: 18}
+  - {period: "9M2026", segment: "Southeast Asia", basis: geographic, revenue: 701494, profit: 93575, unit: "SAR '000", source: "2382_ADES/2026_Q3_filed2026-11-09.pdf", page: 18}
+  - {period: "9M2026", segment: "West/Central Africa", basis: geographic, revenue: 918112, profit: 132540, unit: "SAR '000", source: "2382_ADES/2026_Q3_filed2026-11-09.pdf", page: 18}
+  - {period: "9M2026", segment: "Norway", basis: geographic, revenue: 292420, profit: 25823, unit: "SAR '000", source: "2382_ADES/2026_Q3_filed2026-11-09.pdf", page: 18}
+  - {period: "9M2026", segment: "Other (Brazil, Italy, Netherlands, UK, Mexico)", basis: geographic, revenue: 400338, profit: 52236, unit: "SAR '000", source: "2382_ADES/2026_Q3_filed2026-11-09.pdf", page: 18}
+  - {period: "9M2026", segment: "Corporate", basis: geographic, revenue: 0, profit: -209468, unit: "SAR '000", source: "2382_ADES/2026_Q3_filed2026-11-09.pdf", page: 18}
+  - {period: "9M2026", segment: "Total", basis: geographic, revenue: 6773086, profit: 473336, unit: "SAR '000", source: "2382_ADES/2026_Q3_filed2026-11-09.pdf", page: 18}
+  - {period: "9M2025", segment: "Egypt", basis: geographic, revenue: 458185, profit: 196831, unit: "SAR '000", source: "2382_ADES/2026_Q3_filed2026-11-09.pdf", page: 19}
+  - {period: "9M2025", segment: "Algeria & Tunisia", basis: geographic, revenue: 172707, profit: -25381, unit: "SAR '000", source: "2382_ADES/2026_Q3_filed2026-11-09.pdf", page: 19}
+  - {period: "9M2025", segment: "Kingdom of Saudi Arabia", basis: geographic, revenue: 2755450, profit: 257628, unit: "SAR '000", source: "2382_ADES/2026_Q3_filed2026-11-09.pdf", page: 19}
+  - {period: "9M2025", segment: "Kuwait", basis: geographic, revenue: 447478, profit: -23295, unit: "SAR '000", source: "2382_ADES/2026_Q3_filed2026-11-09.pdf", page: 19}
+  - {period: "9M2025", segment: "Qatar", basis: geographic, revenue: 245639, profit: 61210, unit: "SAR '000", source: "2382_ADES/2026_Q3_filed2026-11-09.pdf", page: 19}
+  - {period: "9M2025", segment: "India", basis: geographic, revenue: 177821, profit: 51040, unit: "SAR '000", source: "2382_ADES/2026_Q3_filed2026-11-09.pdf", page: 19}
+  - {period: "9M2025", segment: "Southeast Asia", basis: geographic, revenue: 405169, profit: 141557, unit: "SAR '000", source: "2382_ADES/2026_Q3_filed2026-11-09.pdf", page: 19}
+  - {period: "9M2025", segment: "Nigeria", basis: geographic, revenue: 40449, profit: -14841, unit: "SAR '000", source: "2382_ADES/2026_Q3_filed2026-11-09.pdf", page: 19}
+  - {period: "9M2025", segment: "Corporate", basis: geographic, revenue: 0, profit: -37243, unit: "SAR '000", source: "2382_ADES/2026_Q3_filed2026-11-09.pdf", page: 19}
+  - {period: "9M2025", segment: "Total", basis: geographic, revenue: 4702898, profit: 607506, unit: "SAR '000", source: "2382_ADES/2026_Q3_filed2026-11-09.pdf", page: 19}
+
+revenue_drivers:
+  - {period: "FY2022", driver: "Units operations (drilling services) revenue", value: 2364063031, unit: "SAR", source: "2382_ADES/2022_Annual_filed2024-10-09.pdf", page: 38, quote: "Units operations 2,364,063,031 1,445,627,743 1,597,974,503"}
+  - {period: "FY2023", driver: "Units operations revenue", value: 4118768993, unit: "SAR", source: "2382_ADES/2023_Annual_filed2024-03-07.pdf", page: 33, quote: "Units operations 4,118,768,993"}
+  - {period: "FY2024", driver: "Units operations revenue", value: 5919699, unit: "SAR '000", source: "2382_ADES/2025_Annual_filed2026-03-29.pdf", page: 46, quote: "Units operations 6,037,994 5,919,699"}
+  - {period: "FY2025", driver: "Units operations revenue", value: 6037994, unit: "SAR '000", source: "2382_ADES/2025_Annual_filed2026-03-29.pdf", page: 46, quote: "Units operations 6,037,994 5,919,699"}
+  - {period: "FY2025", driver: "Revenue from lease (FY2024: 15,078)", value: 164296, unit: "SAR '000", source: "2382_ADES/2025_Annual_filed2026-03-29.pdf", page: 46, quote: "Revenue from lease 164,296 15,078"}
+  - {period: "FY2025", driver: "Projects income, Egypt oilfield enhancement (FY2024: 35,878)", value: 223625, unit: "SAR '000", source: "2382_ADES/2025_Annual_filed2026-03-29.pdf", page: 46, quote: "Projects income* 223,625 35,878"}
+  - {period: "9M2026", driver: "Units operations revenue", value: 6056418, unit: "SAR '000", source: "2382_ADES/2026_Q3_filed2026-11-09.pdf", page: 23, quote: "Units operations 2,005,827 1,488,674 6,056,418 4,266,269"}
+  - {period: "9M2025", driver: "Units operations revenue", value: 4266269, unit: "SAR '000", source: "2382_ADES/2026_Q3_filed2026-11-09.pdf", page: 23, quote: "Units operations 2,005,827 1,488,674 6,056,418 4,266,269"}
+  - {period: "9M2026", driver: "Revenue from lease (9M2025: 100,539)", value: 166350, unit: "SAR '000", source: "2382_ADES/2026_Q3_filed2026-11-09.pdf", page: 23, quote: "Revenue from lease 43,566 51,886 166,350 100,539"}
+  - {period: "9M2026", driver: "Number of geographic segments (9M2025: nine)", value: 11, unit: "count", source: "2382_ADES/2026_Q3_filed2026-11-09.pdf", page: 18, quote: "has identified eleven geographical segments (30 September 2025: nine geographical segments)."}
+  - {period: "FY2022-9M2026", driver: "Total rig fleet count, utilisation, day rates or backlog figures", value: null, unit: "count", status: "not found", source: "2382_ADES/2025_Annual_filed2026-03-29.pdf", page: null, quote: "Only acquired-rig counts disclosed (Noble 4, EDC 3, Seadrill 7, Vantage 2, Saipem 3 owned + 2 leased); Shelf fleet size not stated."}
+
+one_offs:
+  - {period: "FY2021", item: "Bargain purchase gain - Noble rigs", amount: 491247285, unit: "SAR", pnl_line: "Bargain purchase gain", recurring: false, source: "2382_ADES/2022_Annual_filed2024-10-09.pdf", page: 5, quote: "Bargain purchase gain 5 422,267,407 491,247,285 -"}
+  - {period: "FY2022", item: "Bargain purchase gains - Emerald Driller 244.9m + Seadrill 177.3m", amount: 422267407, unit: "SAR", pnl_line: "Bargain purchase gain", recurring: false, source: "2382_ADES/2022_Annual_filed2024-10-09.pdf", page: 5, quote: "Bargain purchase gain 5 422,267,407 491,247,285 -"}
+  - {period: "FY2022", item: "Provision for impairment of trade receivables", amount: -236564520, unit: "SAR", pnl_line: "Provision for impairment of trade receivables", recurring: false, source: "2382_ADES/2022_Annual_filed2024-10-09.pdf", page: 5, quote: "Provision for impairment of trade receivables 13 (236,564,520) (215,916,135) (9,594,934)"}
+  - {period: "FY2023", item: "IPO expenses", amount: -15980048, unit: "SAR", pnl_line: "IPO expenses", recurring: false, source: "2382_ADES/2023_Annual_filed2024-03-07.pdf", page: 8, quote: "IPO expenses (15,980,048)"}
+  - {period: "FY2024", item: "Share-based payments expense (FY2025: 40,381)", amount: -110647, unit: "SAR '000", pnl_line: "Share-based payments expense", recurring: false, source: "2382_ADES/2025_Annual_filed2026-03-29.pdf", page: 10, quote: "Share-based payments expense 24 (40,381) (110,647)"}
+  - {period: "FY2024", item: "Reversal of impairment of property and equipment", amount: 38913, unit: "SAR '000", pnl_line: "within cost of revenue/other (cash-flow add-back)", recurring: false, source: "2382_ADES/2024_Annual_filed2025-03-04.pdf", page: 12, quote: "Reversal for impairment of Property and equipment 17 (38,913) -"}
+  - {period: "FY2024", item: "Provision for other taxes (FY2025: 873)", amount: -30448, unit: "SAR '000", pnl_line: "Provision for other taxes", recurring: false, source: "2382_ADES/2025_Annual_filed2026-03-29.pdf", page: 10, quote: "Provision for other taxes 21-a (873) (30,448)"}
+  - {period: "FY2024", item: "Bargain purchase gain - Topaz / Rig Finance", amount: 7500, unit: "SAR '000", pnl_line: "Bargain purchase gain", recurring: false, source: "2382_ADES/2025_Annual_filed2026-03-29.pdf", page: 10, quote: "Bargain purchase gain 5 21,209 7,500"}
+  - {period: "FY2025", item: "Bargain purchase gain - Shelf Drilling", amount: 21209, unit: "SAR '000", pnl_line: "Bargain purchase gain", recurring: false, source: "2382_ADES/2025_Annual_filed2026-03-29.pdf", page: 10, quote: "Bargain purchase gain 5 21,209 7,500"}
+  - {period: "FY2025", item: "Gain on remeasurement of previously held 16.5% Shelf stake (FVTPL)", amount: 88778, unit: "SAR '000", pnl_line: "Gain on equity instruments designated at FVTPL", recurring: false, source: "2382_ADES/2025_Annual_filed2026-03-29.pdf", page: 10, quote: "Gain on equity instruments designated at fair value through profit and loss 5 88,778 -"}
+  - {period: "FY2025", item: "Acquisition transaction cost (FY2024: 6,142)", amount: -79225, unit: "SAR '000", pnl_line: "Acquisition transaction cost", recurring: false, source: "2382_ADES/2025_Annual_filed2026-03-29.pdf", page: 10, quote: "Acquisition transaction cost (79,225) (6,142)"}
+  - {period: "FY2025", item: "Income from insurance claim (cash received in investing)", amount: 93749, unit: "SAR '000", pnl_line: "Other income, net (cash-flow add-back)", recurring: false, source: "2382_ADES/2025_Annual_filed2026-03-29.pdf", page: 13, quote: "Income from insurance claim (93,749) -"}
+  - {period: "FY2025", item: "Impairment and retirement of property and equipment", amount: -28123, unit: "SAR '000", pnl_line: "not separately presented (cash-flow add-back)", recurring: false, source: "2382_ADES/2025_Annual_filed2026-03-29.pdf", page: 13, quote: "Impairment and retirement/(reversal) of Property and equipment 28,123 (38,913)"}
+  - {period: "9M2026", item: "Bargain purchase gain - Saudi Arabian Saipem (provisional)", amount: 77809, unit: "SAR '000", pnl_line: "Bargain purchase gain", recurring: false, source: "2382_ADES/2026_Q3_filed2026-11-09.pdf", page: 7, quote: "Bargain purchase gain 4 77,809 - 77,809 -"}
+  - {period: "9M2026", item: "Reversal of tax provisions", amount: 64098, unit: "SAR '000", pnl_line: "not specified (cash-flow add-back)", recurring: false, source: "2382_ADES/2026_Q3_filed2026-11-09.pdf", page: 10, quote: "Reversal of tax provisions (64,098) -"}
+  - {period: "9M2025", item: "Gain on equity instruments at FVTPL (Shelf stake) 85,744 and share-based payments (40,381)", amount: 85744, unit: "SAR '000", pnl_line: "Gain on equity instruments at FVTPL", recurring: false, source: "2382_ADES/2026_Q3_filed2026-11-09.pdf", page: 7, quote: "Gain on equity instruments designated at fair value through profit and loss - 85,744 - 85,744"}
+  - {period: "9M2025", item: "Impairment of property and equipment", amount: -11513, unit: "SAR '000", pnl_line: "not separately presented (cash-flow add-back)", recurring: false, source: "2382_ADES/2026_Q3_filed2026-11-09.pdf", page: 10, quote: "Impairment of property and equipment - 11,513"}
+
+restatements:
+  - period_restated: "FY2024"
+    item: "Capex (XBRL value 3,087.2m -> 2,376.3m)"
+    from: 3087244
+    to: 2376335
+    unit: "SAR '000"
+    reason: "Not a PDF restatement. Purchase of PP&E is SAR 2,375,110k in BOTH the FY2024 AFS (p12) and FY2025 AFS comparative (p13). 3,087,244 = PP&E 2,375,110 + acquisition of business 712,134 (FY2024 AFS); 2,376,335 = PP&E 2,375,110 + intangibles 1,225 (FY2025 AFS). Difference is a capex-definition/tagging change; no reason stated in filings."
+    source: "2382_ADES/2025_Annual_filed2026-03-29.pdf"
+    page: 13
+    quote: "Purchase of property and equipment (1,837,878) (2,375,110) Purchase of intangible assets (253) (1,225)"
+    original_source: "2382_ADES/2024_Annual_filed2025-03-04.pdf p12: Purchase of property and equipment (2,375,110); Acquisition of business, net of cash acquired (712,134)"
+  - period_restated: "FY2024"
+    item: "Acquisition of business, net of cash acquired; net cash from operating activities"
+    from: "acquisition -712,134; operating CF 2,998,780"
+    to: "acquisition -709,266; operating CF 2,995,912"
+    unit: "SAR '000"
+    reason: "Not explained (difference 2,868 in both lines; FY2025 note shows cash acquired 1,864 for Topaz/Rig Finance)."
+    source: "2382_ADES/2025_Annual_filed2026-03-29.pdf"
+    page: 13
+    quote: "Acquisition of business, net of cash acquired 5 (1,062,856) (709,266)"
+  - period_restated: "FY2024"
+    item: "Cost of revenue / Other income, net"
+    from: "cost of revenue -3,839,972; other income 31,292"
+    to: "cost of revenue -3,841,373; other income 32,693"
+    unit: "SAR '000"
+    reason: "Reclassification of 1,401 (inventory allowance) to conform to current presentation; trade receivables and unbilled receivables combined. No impact on profit or equity."
+    source: "2382_ADES/2025_Annual_filed2026-03-29.pdf"
+    page: 82
+    quote: "Such reclassifications have not impacted the previously reported profit or equity."
+  - period_restated: "FY2023 (period 28 Dec 2022 - 31 Dec 2023)"
+    item: "Other expenses (loss on disposal, impairment of investment, other income, other taxes folded in)"
+    from: -22974
+    to: -41743
+    unit: "SAR '000"
+    reason: "Presentation reclassification; no impact on profit or equity."
+    source: "2382_ADES/2024_Annual_filed2025-03-04.pdf"
+    page: 73
+    quote: "Certain comparative figures have been reclassified to conform with current period presentation."
+  - period_restated: "FY2022"
+    item: "Profit before income tax / Other taxes / Income tax expense"
+    from: "PBT 468,344,359; other taxes -1,284,618; income tax -70,722,417 (special-purpose FS)"
+    to: "PBT 452,952,702; other taxes -16,676,275; income tax -55,330,760 (FY2023 AFS note 30)"
+    unit: "SAR"
+    reason: "SAR 15,391,657 moved from income tax to other taxes (presentation); revenue and net profit unchanged. No reason stated."
+    source: "2382_ADES/2023_Annual_filed2024-03-07.pdf"
+    page: 60
+    quote: "PROFIT FOR THE YEAR BEFORE INCOME TAX 529,379,815 452,952,702"
+  - period_restated: "9M2025 / Q3 2025"
+    item: "EPS"
+    from: null
+    to: 0.27
+    unit: "SAR"
+    reason: "Comparative EPS restated under IAS 33 for 1:1 bonus share issue approved 29 Oct 2026."
+    source: "2382_ADES/2026_Q3_filed2026-11-09.pdf"
+    page: 30
+    quote: "The comparative EPS has therefore been restated accordingly."
+
+significant_events:
+  - date: "2023-10-11"
+    event: "IPO on Tadawul: 237,103,128 new shares issued (21%) plus 9% sale shares; net proceeds from issuance SAR 3,129,836k"
+    financial_effect: "Share capital to SAR 1,129.1m, share premium SAR 2,890.4m"
+    source: "2382_ADES/2024_Annual_filed2025-03-04.pdf"
+    page: 13
+    quote: "Net proceeds from issuance of shares, net of transaction costs - 3,129,836"
+  - date: "2025"
+    event: "Borrowings drawn SAR 10,727,743k and repaid SAR 7,652,658k, incl. settlement of full Shelf bond balance acquired; borrowings SAR 20,249,665k at YE2025 (YE2024 12,056,690k)"
+    financial_effect: "Refinancing of acquired debt"
+    source: "2382_ADES/2025_Annual_filed2026-03-29.pdf"
+    page: 61
+    quote: "This includes settlement of the full outstanding bond balance acquired through the business combination."
+  - date: "2026-03"
+    event: "Regional situation: temporary suspensions affecting a handful of offshore rigs in the GCC"
+    financial_effect: "Described as immaterial to financial position; expected short-term"
+    source: "2382_ADES/2025_Annual_filed2026-03-29.pdf"
+    page: 83
+    quote: "the Group experienced temporary suspensions affecting a handful of offshore rigs operating in the GCC with immaterial impact on the group financial position."
+  - date: "2026 9M"
+    event: "Geopolitical tensions caused temporary suspensions of certain rigs in the GCC; management assessed revenue streams, asset recoverability, contractual commitments"
+    financial_effect: "No quantification; KSA segment 9M revenue 2,395,473k vs 2,755,450k in 9M2025"
+    source: "2382_ADES/2026_Q3_filed2026-11-09.pdf"
+    page: 34
+    quote: "geopolitical tensions in certain parts of the Middle East resulted in temporary suspensions of certain rigs operating within the GCC region."
+  - date: "2026-10-29"
+    event: "EGM approved 100% capital increase via bonus shares (capitalising SAR 1,129,062,513 of share premium); shares 1,129,062,513 -> 2,258,125,026"
+    financial_effect: "Non-adjusting; EPS restated"
+    source: "2382_ADES/2026_Q3_filed2026-11-09.pdf"
+    page: 34
+    quote: "the Extraordinary General Assembly approved the Board of Director's recommendation to increase the Company's capital by 100% via granting bonus shares."
+  - date: "FY2024-9M2026"
+    event: "Dividends paid: FY2024 SAR 237,498k (0.216/share); FY2025 SAR 473,404k (0.22 + 0.21); 9M2026 SAR 485,826k (0.24 + 0.20)"
+    financial_effect: "Cash dividends"
+    source: "2382_ADES/2026_Q3_filed2026-11-09.pdf"
+    page: 30
+    quote: "Total dividends declared and paid 485,826 473,404 0.44 0.43"
+
+audit_opinion:
+  - {period: "FY2022/2021/2020 special-purpose FS", opinion: "Unmodified (EY) with Emphasis of Matter on basis of accounting / restriction on use (prepared solely for IPO application to CMA)", emphasis_of_matter: "Note 2.1 basis of preparation; should not be used for any other purpose; opinion not modified", source: "2382_ADES/2022_Annual_filed2024-10-09.pdf", page: 2}
+  - {period: "FY2023 (period 28 Dec 2022 - 31 Dec 2023)", opinion: "Unmodified; no EoM found", emphasis_of_matter: none, source: "2382_ADES/2023_Annual_filed2024-03-07.pdf", page: 2}
+  - {period: "FY2024", opinion: "Unmodified; no EoM found", emphasis_of_matter: none, source: "2382_ADES/2024_Annual_filed2025-03-04.pdf", page: 2}
+  - {period: "FY2025", opinion: "Unmodified (new auditor); Other Matter: FY2024 audited by another auditor (unmodified, 3 Mar 2025)", emphasis_of_matter: none, source: "2382_ADES/2025_Annual_filed2026-03-29.pdf", page: 3}
+  - {period: "9M2026", opinion: "Review conclusion unmodified; no EoM found", emphasis_of_matter: none, source: "2382_ADES/2026_Q3_filed2026-11-09.pdf", page: 4}
+
+kpis_in_filings:
+  - {period: "FY2022-9M2026", kpi: "Rig count / utilisation / backlog", value: null, unit: "count", status: "not found", source: "2382_ADES/2026_Q3_filed2026-11-09.pdf", page: null}
+  - {period: "9M2026", kpi: "Countries of operation (stated)", value: 20, unit: "count", source: "2382_ADES/2026_Q3_filed2026-11-09.pdf", page: 34}
+  - {period: "2026-09-15", kpi: "Jack-ups acquired with Saudi Arabian Saipem (3 owned + 2 leased)", value: 5, unit: "count", source: "2382_ADES/2026_Q3_filed2026-11-09.pdf", page: 20}
+
+special_extractions:
+  - name: "ADES 2026_Q3 interim - income statement (no XBRL)"
+    unit: "SAR '000"
+    source: "2382_ADES/2026_Q3_filed2026-11-09.pdf"
+    page: 7
+    columns: ["9M2026", "9M2025", "Q3 2026 (3M)", "Q3 2025 (3M)"]
+    revenue: [6773086, 4702898, 2229021, 1653934]
+    cost_of_revenue: [-4461810, -2914465, -1524494, -1048518]
+    gross_profit: [2311276, 1788433, 704527, 605416]
+    general_and_administrative: [-587953, -327101, -190530, -107181]
+    end_of_service_benefits: [-42526, -40839, -15800, -11920]
+    bargain_purchase_gain: [77809, 0, 77809, 0]
+    share_based_payments: [0, -40381, 0, -40381]
+    gain_on_equity_instruments_FVTPL: [0, 85744, 0, 85744]
+    other_expenses_net: [-154194, -42449, -89084, -26964]
+    operating_profit: "not presented - ADES income statement has no operating profit subtotal"
+    derived_profit_before_finance_costs_and_tax: {values: [1604412, 1423407, 486922, 504714], note: "arithmetic only: profit before income tax and zakat + finance costs, net; not a reported line"}
+    finance_costs_net: [-976294, -668235, -332352, -231885]
+    profit_before_zakat_and_tax: [628118, 755172, 154570, 272829]
+    zakat_and_income_tax: [-154782, -147666, -55355, -53684]
+    zakat_and_tax_split_page23: {current_income_tax: [116915, 63766, 40876, 24830], deferred_tax: [2652, 41840, 3572, 15721], zakat: [35215, 42060, 10907, 13133]}
+    net_profit: [473336, 607506, 99215, 219145]
+    net_profit_attributable_to_shareholders: [459843, 597331, 94870, 214573]
+    non_controlling_interests: [13493, 10175, 4345, 4572]
+    eps_restated_for_bonus_shares_SAR: [0.21, 0.27, 0.04, 0.10]
+  - name: "ADES 2026_Q3 interim - balance sheet"
+    unit: "SAR '000"
+    source: "2382_ADES/2026_Q3_filed2026-11-09.pdf"
+    page: 5
+    columns: ["30 Sep 2026", "31 Dec 2025"]
+    total_assets: [33269812, 31411709]
+    total_equity: [6867360, 6812994]
+    equity_attributable_to_parent: [6835881, 6780163]
+    interest_bearing_borrowings_noncurrent: [19256172, 17959462]
+    interest_bearing_borrowings_current_page6: [2431982, 2290203]
+    cash_and_equivalents: [2023897, 2458449]
+  - name: "ADES 2026_Q3 interim - cash flow"
+    unit: "SAR '000"
+    source: "2382_ADES/2026_Q3_filed2026-11-09.pdf"
+    page: 10
+    columns: ["9M2026", "9M2025"]
+    net_cash_from_operating_activities: [2185052, 1934896]
+    capex_purchase_of_property_and_equipment: [-1219071, -1377272]
+    purchase_of_intangibles: [-276, -253]
+    acquisition_of_business_net_of_cash: [-1125083, 0]
+    payment_of_consideration_payable_for_acquisitions: [-296388, -18222]
+    depreciation_property_and_equipment: [1260297, 950654]
+    depreciation_right_of_use_assets: [187496, 162874]
+    amortization_intangibles: [808, 817]
+    note: "PP&E additions per note 9 (p25) were 1,275,960 for 9M2026 (accrual basis) vs cash capex 1,219,071."
+  - name: "ADES 2022 special-purpose consolidated FS (filed 2024-10-09)"
+    source: "2382_ADES/2022_Annual_filed2024-10-09.pdf"
+    page: 5
+    unit: "SAR"
+    revenue: {FY2022: 2467200801, FY2021: 1514205630, FY2020: 1695407138}
+    net_profit: {FY2022: 397621942, FY2021: 114428590, FY2020: 82580678}
+    net_profit_attributable_to_parent: {FY2022: 390448249, FY2021: 107810728, FY2020: 73580576}
+    profit_before_income_tax: {FY2022: 468344359, FY2021: 149059886}
+    bargain_purchase_gain_in_profit: {FY2022: 422267407, FY2021: 491247285}
+    basis_of_preparation: "IFRS as endorsed in KSA; prepared solely for inclusion in the IPO application to the CMA; reorganisation (ADES Holding Co. incorporated 28 Dec 2022 as new parent of ADES International Holding) treated as continuation of existing group as if the Company had always owned the group entities; Emerald Driller transferred under common control (pooling)."
+    basis_page: 13
+    basis_quote: "have been prepared solely for inclusion in the initial public offering application of the Company to be filed with the CMA"
+    comparison_with_FY2023_AFS:
+      fy2023_afs_presentation: "FY2023 AFS covers only 28 Dec 2022 - 31 Dec 2023 with no comparative (SOCPA first-period rule, p14). FY2022 figures appear only as 'additional financial information' in Note 30 (p60): results of subsidiaries acquired under common control for year ended 31 Dec 2022."
+      fy2022_revenue_in_fy2023_afs: 2467200801
+      fy2022_attributable_profit_in_fy2023_afs: 390448249
+      fy2022_net_profit_in_fy2023_afs: 397621942
+      difference_revenue: 0
+      difference_attributable_profit: 0
+      explanation: "No difference in revenue or net/attributable profit; same perimeter (Existing Group Entities incl. Emerald Driller and Seadrill GCC). Only presentation differs: SAR 15,391,657 shifted from income tax to other taxes (PBT 468.3m vs 453.0m) and other income shown gross (2,485,731)."
+      source: "2382_ADES/2023_Annual_filed2024-03-07.pdf"
+      page: 60
+      quote: "The results of the subsidiaries acquired under common control as part of reorganization for the year ended 31 December 2022 are presented below"
+
+open_questions:
+  - "Capex definition: XBRL FY2024 capex 3,087.2m appears to include acquisition of business (712,134k) whereas 2,376.3m = PP&E + intangibles; the PDFs show PP&E purchases 2,375,110k in both filings. Analyst must pick a consistent definition."
+  - "ADES income statement has no operating profit line; 'operating profit' for 9M2026 must be defined by the analyst (derived pre-finance-cost profit provided)."
+  - "Shelf Drilling consolidated from 25 Nov 2025 only (FY2025 contribution 388.9m revenue); 9M2026 includes full Shelf period, so 9M2026 vs 9M2025 growth is largely acquisition-driven (pro-forma full-year Shelf revenue 3,871.8m)."
+  - "Saudi Arabian Saipem and Shelf PPAs are provisional; bargain purchase gains may be adjusted within 12 months."
+  - "Emerald Driller contribution text says 'to 27 May 2022' (acquisition date) - drafting inconsistency."

@@ -1,0 +1,370 @@
+ticker: '4161'
+company: BinDawood Holding Company
+perimeter_changes:
+- event: International Applications Trading Company (IATC, 62%, with Amjad United) acquired by Future Retail
+  type: acquisition
+  date: '2022-07-31'
+  consideration: 107.24
+  revenue_contribution: null
+  profit_contribution: null
+  pro_forma_revenue: null
+  period: FY2022
+  unit: SAR m
+  source: 4161_BINDAWOOD/2022_Annual_filed2023-04-05.pdf
+  page: 64
+  quote: The legal formalities related to the acquisition of IATC and its subsidiary were completed on 31 July 2022.
+  note: Scanned page (OCR). No post-acquisition revenue disclosed in FY2022; PPA completed in FY2023 (FY2023 annual note 8.2, p.44).
+- event: Ykone S.A.S (France, influencer marketing; 80.46%, then 98.6% by end-2022) acquired by Future Tech Retail France
+  type: acquisition
+  date: '2022-07-27'
+  consideration: 129.75
+  revenue_contribution: null
+  profit_contribution: null
+  pro_forma_revenue: null
+  period: FY2022
+  unit: SAR m
+  source: 4161_BINDAWOOD/2022_Annual_filed2023-04-05.pdf
+  page: 65
+  quote: The related legal formalities were completed on 27 July 2022.
+  note: Scanned page (OCR). No post-acquisition revenue disclosed.
+- event: Barcode (India, influencer marketing; 100% via Ykone, effective 70%)
+  type: acquisition
+  date: '2024-03-15'
+  consideration: null
+  revenue_contribution: 24.24
+  profit_contribution: 2.67
+  pro_forma_revenue: 24.24
+  period: FY2024
+  unit: SAR m
+  source: 4161_BINDAWOOD/2024_Annual_filed2025-03-24.pdf
+  page: 67
+  quote: acquiree contributed revenue of SR 24.24 million and a profit of SR 2.67 million to the Group’s results.
+- event: Jumairah Trading Company (JTC; luggage and consumer goods retail and wholesale) bought from a board member
+  type: acquisition
+  date: '2024-07-31'
+  consideration: 186.27
+  revenue_contribution: 32.56
+  profit_contribution: 14.35
+  pro_forma_revenue: 102.32
+  period: FY2024
+  unit: SAR m
+  source: 4161_BINDAWOOD/2024_Annual_filed2025-03-24.pdf
+  page: 69
+  quote: acquiree contributed revenue of SR 32.56 million and a profit of SR 14.35 million to the Group’s results.
+  note: Pro forma full-year FY2024 revenue SAR 102.32m (same page).
+- event: Ghalya (loyalty engine) acquired by IATC from a related party; no business operations at acquisition
+  type: acquisition
+  date: '2024-01-01'
+  consideration: null
+  revenue_contribution: null
+  profit_contribution: null
+  pro_forma_revenue: null
+  period: FY2024
+  unit: SAR m
+  source: 4161_BINDAWOOD/2024_Annual_filed2025-03-24.pdf
+  page: 66
+  quote: On the date of acquisition, the Ghalya had no business operations
+- event: Zahrat Al Rawdah Pharmacies (100%)
+  type: acquisition
+  date: 2025-02
+  consideration: 452.51
+  revenue_contribution: 419.84
+  profit_contribution: 41.03
+  pro_forma_revenue: 459.69
+  period: FY2025
+  unit: SAR m
+  source: 4161_BINDAWOOD/2025_Annual_filed2026-03-18.pdf
+  page: 67
+  quote: From the date of acquisition to the year ended 31 December 2025 acquiree contributed revenue of [SAR] 419.84 million
+  note: (currency symbol rendered as [SAR]). 9M 2025 contribution SAR 306.72m, 9M pro forma SAR 346.56m (2025 Q3 interim p.21).
+- event: Toy Triangle Closed Joint Stock Company (51%; toy distribution)
+  type: acquisition
+  date: 2025-10
+  consideration: 32.95
+  revenue_contribution: 20.37
+  profit_contribution: 0.62
+  pro_forma_revenue: 102.01
+  period: FY2025
+  unit: SAR m
+  source: 4161_BINDAWOOD/2025_Annual_filed2026-03-18.pdf
+  page: 69
+  quote: The related legal formalities were completed in October 2025.
+  note: (currency symbol rendered as [SAR])
+- event: The Digital Prototype (51% via Ykone, with put option over 25%)
+  type: acquisition
+  date: '2025-07-11'
+  consideration: 2.5
+  revenue_contribution: 7.23
+  profit_contribution: 0.23
+  pro_forma_revenue: 11.53
+  period: FY2025
+  unit: SAR m
+  source: 4161_BINDAWOOD/2025_Annual_filed2026-03-18.pdf
+  page: 72
+  quote: Ykone S.A.S entered into a Share Purchase Agreement (“SPA”) with individual shareholders to acquire 51% shareholding in The Digital Prototype
+  note: (currency symbol rendered as [SAR])
+- event: Alaska (100%), Mirror Mirror (67%) and Lovecraft (67%), France, via Future Tech Retail France
+  type: acquisition
+  date: '2025'
+  consideration: 40.78
+  revenue_contribution: 1.07
+  profit_contribution: 0.14
+  pro_forma_revenue: 50.79
+  period: FY2025
+  unit: SAR m
+  source: 4161_BINDAWOOD/2025_Annual_filed2026-03-18.pdf
+  page: 70
+  quote: acquire 100% equity interest in Alaska, 67% in Mirror Mirror, and 67% in Lovecraft.
+  note: (currency symbol rendered as [SAR]); contribution figures on p.71.
+- event: 'Saudi Convenience Company: 50% joint venture (equity-accounted), three convenience stores in Riyadh from October 2025'
+  type: new_subsidiary
+  date: 2025-10
+  consideration: 15.1
+  revenue_contribution: null
+  profit_contribution: -1.0
+  pro_forma_revenue: null
+  period: FY2025
+  unit: SAR m
+  source: 4161_BINDAWOOD/2025_Annual_filed2026-03-18.pdf
+  page: 53
+  quote: The Company commenced operations in October 2025 and currently operates three convenience stores in Riyadh.
+  note: 'Equity-accounted: no revenue effect; share of loss SAR 7.4m in 9M 2026.'
+- event: Wonder Bakery LLC (UAE, 51%); SPA 23 Dec 2025, completed August 2026
+  type: acquisition
+  date: 2026-08
+  consideration: 118.01
+  revenue_contribution: 15.39
+  profit_contribution: 2.61
+  pro_forma_revenue: 66.58
+  period: 9M2026
+  unit: SAR m
+  source: 4161_BINDAWOOD/2026_Q3_filed2026-11-16.pdf
+  page: 29
+  quote: acquiree contributed revenue of [SAR] 15.39 million and a profit of [SAR] 2.61 million to the Group’s results.
+  note: (currency symbol rendered as [SAR])
+- event: Vaza Food Company (51%)
+  type: acquisition
+  date: '2026-06-01'
+  consideration: 217.9
+  revenue_contribution: 64.35
+  profit_contribution: 7.34
+  pro_forma_revenue: 150.07
+  period: 9M2026
+  unit: SAR m
+  source: 4161_BINDAWOOD/2026_Q3_filed2026-11-16.pdf
+  page: 27
+  quote: acquiree contributed revenue of [SAR] 64.35 million and a profit of [SAR] 7.34 million to the Group’s results.
+  note: (currency symbol rendered as [SAR])
+- event: 'Juust & Jubn OU (Estonia): dairy production assets of AS E-Piim Tootmine bought out of bankruptcy for EUR 135.25m'
+  type: acquisition
+  date: '2026-08-31'
+  consideration: 596.56
+  revenue_contribution: 25.97
+  profit_contribution: 0.03
+  pro_forma_revenue: null
+  period: 9M2026
+  unit: SAR m
+  source: 4161_BINDAWOOD/2026_Q3_filed2026-11-16.pdf
+  page: 17
+  quote: it contributed revenue of [SAR] 25.97 million and a profit of [SAR] 0.03 million to the Group’s results.
+  note: (currency symbol rendered as [SAR]); transaction described on p.16-17.
+- event: No Border (Italy, 51% via Future Tech Retail France; put option over 49%)
+  type: acquisition
+  date: '2026-06-18'
+  consideration: 32.12
+  revenue_contribution: 13.85
+  profit_contribution: 0.75
+  pro_forma_revenue: null
+  period: 9M2026
+  unit: SAR m
+  source: 4161_BINDAWOOD/2026_Q3_filed2026-11-16.pdf
+  page: 30
+  quote: acquiree contributed revenue of [SAR] 13.85 million and a profit of [SAR] 0.75 million to the Group’s results.
+  note: (currency symbol rendered as [SAR])
+segments:
+- period: FY2022-9M2026
+  segment: Single operating segment (retailing); more than 90% of operations in Saudi Arabia
+  basis: operating
+  revenue: null
+  profit: null
+  unit: SAR
+  source: 4161_BINDAWOOD/2025_Annual_filed2026-03-18.pdf
+  page: 41
+  quote: The Directors’ conclusion is that the Group has one operating segment, that of retailing.
+- period: FY2025
+  segment: Sale of goods
+  basis: product
+  revenue: 5889196440
+  profit: null
+  unit: SAR
+  source: 4161_BINDAWOOD/2025_Annual_filed2026-03-18.pdf
+  page: 59
+- period: FY2025
+  segment: Services rendered
+  basis: product
+  revenue: 458762167
+  profit: null
+  unit: SAR
+  source: 4161_BINDAWOOD/2025_Annual_filed2026-03-18.pdf
+  page: 59
+- period: FY2024
+  segment: Sale of goods
+  basis: product
+  revenue: 5330526275
+  profit: null
+  unit: SAR
+  source: 4161_BINDAWOOD/2025_Annual_filed2026-03-18.pdf
+  page: 59
+- period: FY2024
+  segment: Services rendered
+  basis: product
+  revenue: 347159487
+  profit: null
+  unit: SAR
+  source: 4161_BINDAWOOD/2025_Annual_filed2026-03-18.pdf
+  page: 59
+revenue_drivers:
+- period: FY2025
+  driver: Retail chains BinDawood and Danube plus Zahrat Al Rawdah pharmacies from 2025
+  value: null
+  unit: count
+  source: 4161_BINDAWOOD/2025_Annual_filed2026-03-18.pdf
+  page: 59
+  quote: a chain of retail stores under its two brand names BinDawood and Danube and pharmacies under the brand name of Zahrat Al Rawdah.
+- period: FY2025
+  driver: Zahrat Al Rawdah revenue contribution (2025 acquisition)
+  value: 419.84
+  unit: SAR m
+  source: 4161_BINDAWOOD/2025_Annual_filed2026-03-18.pdf
+  page: 67
+  quote: acquiree contributed revenue of [SAR] 419.84 million
+- period: FY2022-9M2026
+  driver: Store count, openings and like-for-like (same-store) sales
+  status: not found
+  value: null
+  unit: count
+  source: 4161_BINDAWOOD/2025_Annual_filed2026-03-18.pdf
+  page: null
+  quote: Not disclosed in the annual or interim financial statements in the archive.
+one_offs:
+- period: FY2022
+  item: COVID-19 related rent concessions recognised in other income
+  amount: 57199547
+  unit: SAR
+  pnl_line: Other income
+  recurring: false
+  source: 4161_BINDAWOOD/2023_Annual_filed2024-04-02.pdf
+  page: 59
+  quote: Rent concession (note 9.5) -- 57,199,547
+- period: FY2025
+  item: 'Other income SAR 23.4m (FY2024: SAR 8.9m); composition not disclosed'
+  amount: 23432711
+  unit: SAR
+  pnl_line: Other income
+  recurring: null
+  source: 4161_BINDAWOOD/2025_Annual_filed2026-03-18.pdf
+  page: 9
+  quote: Other income 23,432,711 8,914,415
+  note: 8.7% of attributable profit; not identified as a one-off because the filing gives no breakdown.
+restatements:
+- period_restated: 31 Dec 2022 balance sheet
+  item: Purchase price allocation for IATC and Ykone completed; provisional goodwill reallocated to intangibles, NCI adjusted (total assets 4,802,800,892 -> 4,841,515,327)
+  from: 4802800892
+  to: 4841515327
+  unit: SAR
+  reason: IFRS 3 measurement-period adjustments (notes 8.2, 31)
+  source: 4161_BINDAWOOD/2023_Annual_filed2024-04-02.pdf
+  page: 44
+  quote: These adjustments are recognized retrospectively, and comparative information was revised which is in line with the requirements of IFRS 3
+- period_restated: FY2023
+  item: Finance income on term deposits (15,095,533) split from other income; CFO 776,066,311 -> 760,970,778 (interest received moved to investing)
+  from: 776066311
+  to: 760970778
+  unit: SAR
+  reason: Re-presentation of comparatives
+  source: 4161_BINDAWOOD/2024_Annual_filed2025-03-24.pdf
+  page: 24
+  quote: Certain comparatives amounts have been, reclassified, or re-presented, for the fair presentation
+significant_events:
+- date: 2025-2026
+  event: 'Bank borrowings drawn to fund acquisitions: SAR 316.6m at end-2025 and SAR 1,264.4m at 30 Sep 2026 (nil at end-2024)'
+  financial_effect: Net debt incl. leases SAR 3,752m at 30 Sep 2026
+  source: 4161_BINDAWOOD/2026_Q3_filed2026-11-16.pdf
+  page: 4
+  quote: Bank borrowings 15 1,091,666,668 150,000,000
+- date: 2026 (9M)
+  event: Acquisitions, net of cash acquired, of SAR 954.6m in 9M 2026 (SAR 437.3m in 9M 2025)
+  financial_effect: Investing outflow
+  source: 4161_BINDAWOOD/2026_Q3_filed2026-11-16.pdf
+  page: 9
+  quote: Acquisitions – net of cash acquired (954,596,369) (437,265,057)
+- date: 2022-2025
+  event: Compulsory convertible debentures carried at fair value through profit or loss (SAR 11.9m end-2024, SAR 11.3m end-2025, SAR 10.7m 30 Sep 2026)
+  financial_effect: Not included in our debt
+  source: 4161_BINDAWOOD/2025_Annual_filed2026-03-18.pdf
+  page: 7
+  quote: Compulsory convertible debentures 11,284,085 11,865,042
+audit_opinion:
+- period: FY2022
+  opinion: Unmodified (KPMG); scanned report
+  emphasis_of_matter: none found
+  source: 4161_BINDAWOOD/2022_Annual_filed2023-04-05.pdf
+  page: 3
+- period: FY2023
+  opinion: Unmodified (KPMG)
+  emphasis_of_matter: none
+  source: 4161_BINDAWOOD/2023_Annual_filed2024-04-02.pdf
+  page: 3
+- period: FY2024
+  opinion: Unmodified (KPMG)
+  emphasis_of_matter: none
+  source: 4161_BINDAWOOD/2024_Annual_filed2025-03-24.pdf
+  page: 3
+- period: FY2025
+  opinion: Unmodified (KPMG)
+  emphasis_of_matter: none
+  source: 4161_BINDAWOOD/2025_Annual_filed2026-03-18.pdf
+  page: 3
+- period: 9M2026
+  opinion: Review conclusion unmodified (KPMG)
+  emphasis_of_matter: none
+  source: 4161_BINDAWOOD/2026_Q3_filed2026-11-16.pdf
+  page: 3
+kpis_in_filings:
+- period: FY2022-9M2026
+  kpi: Store count and like-for-like sales
+  value: null
+  unit: count
+  source: 4161_BINDAWOOD/2025_Annual_filed2026-03-18.pdf
+  page: null
+  status: not found
+- period: FY2025
+  kpi: Saudi Convenience Company (50% JV) convenience stores
+  value: 3
+  unit: count
+  source: 4161_BINDAWOOD/2025_Annual_filed2026-03-18.pdf
+  page: 53
+special_extractions:
+- name: Acquired revenue disclosed (post-acquisition, SAR m)
+  values:
+    FY2024:
+      Barcode: 24.24
+      JTC: 32.56
+    FY2025:
+      Zahrat Al Rawdah: 419.84
+      Toy Triangle: 20.37
+      The Digital Prototype: 7.23
+      Alaska group: 1.07
+    9M2026:
+      Juust & Jubn: 25.97
+      Vaza Food: 64.35
+      Wonder Bakery: 15.39
+      No Border: 13.85
+  source: 4161_BINDAWOOD/2024_Annual_filed2025-03-24.pdf p.67, p.69; 4161_BINDAWOOD/2025_Annual_filed2026-03-18.pdf p.67, p.69, p.71, p.72; 4161_BINDAWOOD/2026_Q3_filed2026-11-16.pdf
+    p.17, p.27, p.29, p.30
+open_questions:
+- Revenue of IATC and Ykone (acquired end-July 2022) for January-July 2023 is not disclosed, so the FY2023/FY2022 perimeter effect is not determinable.
+- Revenue for the months not owned in the prior period is not disclosed for JTC (Jan-Jul 2025), Barcode (Jan-Mar 2025), Zahrat Al Rawdah (Jan 2026), Toy Triangle, The Digital Prototype
+  and the Alaska group (2026 months).
+- Composition of other income (FY2025 SAR 23.4m; 9M 2025 SAR 12.1m) is not disclosed.
+- Store openings, store count and same-store sales are not in the statements.

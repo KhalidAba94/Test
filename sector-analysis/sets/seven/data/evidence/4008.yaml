@@ -1,0 +1,304 @@
+# Evidence extracted from Saudi Company for Hardware (SACO) filings (archive: 4008_SACO). Facts only; page = physical PDF page (1-based).
+# Units: SAR (full riyals). Primary statements are scanned images (read by OCR).
+ticker: '4008'
+company: Saudi Company for Hardware (SACO)
+perimeter_changes:
+- event: Only subsidiary is Medscan Terminal Company (logistics), acquired in November 2016; unchanged FY2022-9M2026
+  type: acquisition
+  status: no change in the window
+  date: '2016-11-23'
+  consideration: null
+  revenue_contribution: null
+  profit_contribution: null
+  pro_forma_revenue: null
+  period: FY2022
+  unit: SAR
+  source: 4008_SACO/2022_Annual_filed2023-03-26.pdf
+  page: 36
+  quote: the Group acquired Medscan Terminal Company Limited (Medscan) as 100% owned subsidiary.
+- event: Business combinations or disposals of businesses in FY2022-9M2026
+  type: acquisition
+  status: not found
+  period: FY2022-9M2026
+  source: 4008_SACO/2025_Annual_filed2026-03-10.pdf
+  page: null
+  quote: No business combination note in the FY2022-FY2025 annuals or the 2026 Q3 interim; subsidiary list unchanged (Medscan 100%).
+segments:
+- period: FY2023
+  segment: Sales and services (external revenue)
+  basis: operating
+  revenue: 909230932
+  profit: null
+  unit: SAR
+  source: 4008_SACO/2024_Annual_filed2025-03-12.pdf
+  page: 45
+- period: FY2023
+  segment: Logistics (external revenue)
+  basis: operating
+  revenue: 20888526
+  profit: null
+  unit: SAR
+  source: 4008_SACO/2024_Annual_filed2025-03-12.pdf
+  page: 45
+- period: FY2024
+  segment: Sales and services
+  basis: operating
+  revenue: 951288214
+  profit: 12694583
+  unit: SAR
+  source: 4008_SACO/2025_Annual_filed2026-03-10.pdf
+  page: 45
+  note: profit = profit from operations
+- period: FY2024
+  segment: Logistics (external revenue; total incl. inter-segment 86,354,427)
+  basis: operating
+  revenue: 42351794
+  profit: 5223845
+  unit: SAR
+  source: 4008_SACO/2025_Annual_filed2026-03-10.pdf
+  page: 45
+- period: FY2025
+  segment: Sales and services
+  basis: operating
+  revenue: 1026970784
+  profit: 20877524
+  unit: SAR
+  source: 4008_SACO/2025_Annual_filed2026-03-10.pdf
+  page: 44
+  quote: Revenue from external customers 1,026,970,784 40,135,746 1,067,106,530
+- period: FY2025
+  segment: Logistics (external revenue; total incl. inter-segment 76,983,706)
+  basis: operating
+  revenue: 40135746
+  profit: 6646033
+  unit: SAR
+  source: 4008_SACO/2025_Annual_filed2026-03-10.pdf
+  page: 44
+- period: 9M2025
+  segment: Sales and services
+  basis: operating
+  revenue: 744103522
+  profit: null
+  unit: SAR
+  source: 4008_SACO/2026_Q3_filed2026-11-12.pdf
+  page: 21
+- period: 9M2025
+  segment: Logistics (external revenue)
+  basis: operating
+  revenue: 32000171
+  profit: null
+  unit: SAR
+  source: 4008_SACO/2026_Q3_filed2026-11-12.pdf
+  page: 21
+- period: 9M2026
+  segment: Sales and services
+  basis: operating
+  revenue: 669739755
+  profit: 3154942
+  unit: SAR
+  source: 4008_SACO/2026_Q3_filed2026-11-12.pdf
+  page: 20
+  note: profit = operating profit
+- period: 9M2026
+  segment: Logistics (external revenue)
+  basis: operating
+  revenue: 18676964
+  profit: -5407970
+  unit: SAR
+  source: 4008_SACO/2026_Q3_filed2026-11-12.pdf
+  page: 20
+- period: FY2025
+  segment: 'Geography: both segments operate inside Saudi Arabia'
+  basis: geographic
+  revenue: 1067106530
+  profit: null
+  unit: SAR
+  source: 4008_SACO/2025_Annual_filed2026-03-10.pdf
+  page: 44
+  quote: The Group has two major operating segments namely, sales and services and logistic services and both are operating inside Saudi Arabia.
+revenue_drivers:
+- period: 31 Dec 2022
+  driver: 'Leased stores (31 Dec 2021: 33)'
+  value: 33
+  unit: count
+  source: 4008_SACO/2022_Annual_filed2023-03-26.pdf
+  page: 13
+  quote: 'Company and its 33 leased stores (31 December 2021: 33 stores) located in various cities'
+- period: 31 Dec 2023
+  driver: 'Leased stores (31 Dec 2022: 33)'
+  value: 32
+  unit: count
+  source: 4008_SACO/2023_Annual_filed2024-03-12.pdf
+  page: 13
+  quote: 'Company and its 32 leased stores (31 December 2022: 33 stores) located in various cities'
+- period: 31 Dec 2025
+  driver: 'Leased stores (31 Dec 2024: 32) plus one franchisee store in Tabuk'
+  value: 32
+  unit: count
+  source: 4008_SACO/2025_Annual_filed2026-03-10.pdf
+  page: 12
+  quote: '32 leased stores (31 December 2024: 32 stores) located in various cities in the Kingdom of Saudi Arabia, one franchisee store located in Tabuk'
+- period: 30 Sep 2026
+  driver: 'Leased stores (30 Sep 2025 and 31 Dec 2025: 32)'
+  value: 32
+  unit: count
+  source: 4008_SACO/2026_Q3_filed2026-11-12.pdf
+  page: 9
+  quote: 'the Company and its 32 leased stores (30 September 2025: 32 stores and 31 December 2025: 32 stores)'
+- period: FY2022-9M2026
+  driver: Store openings and closures within each year, revenue by store and like-for-like (same-store) sales
+  value: null
+  unit: count
+  status: not found
+  source: 4008_SACO/2025_Annual_filed2026-03-10.pdf
+  page: null
+  quote: Only period-end store counts are disclosed.
+one_offs:
+- period: FY2025
+  item: Gain on sale of the Al-Mashael warehouse (investment property) for SAR 140.43m; carrying amount SAR 93.0m
+  amount: 42220856
+  unit: SAR
+  pnl_line: Gain on sale of investment property, net
+  recurring: false
+  source: 4008_SACO/2025_Annual_filed2026-03-10.pdf
+  page: 32
+  quote: resulting in a net gain on disposal of SAR 42.2 million
+- period: 9M2025
+  item: Same gain (sale completed 14 July 2025)
+  amount: 42220856
+  unit: SAR
+  pnl_line: Gain on sale of investment property, net
+  recurring: false
+  source: 4008_SACO/2026_Q3_filed2026-11-12.pdf
+  page: 6
+  quote: Gain on sale of investment property, net - 42,220,856 - 42,220,856
+- period: FY2022-FY2023
+  item: Impairment loss on non-financial assets shown above gross profit (FY2022 29.7m, FY2023 8.2m); already outside EBITDA, not a one-off here
+  amount: -8184895
+  unit: SAR
+  pnl_line: Impairment loss on non-financial assets
+  recurring: false
+  source: 4008_SACO/2023_Annual_filed2024-03-12.pdf
+  page: 9
+  quote: Impairment loss on non-financial assets 5,6 (8,184,895) (29,735,366)
+- period: FY2023
+  item: 'Gain on lease modification (13.95m) and loss on disposal of PP&E (6.0m): recur in most years with store changes; treated as recurring'
+  amount: 13950823
+  unit: SAR
+  pnl_line: not named (cash-flow add-backs)
+  recurring: true
+  source: 4008_SACO/2023_Annual_filed2024-03-12.pdf
+  page: 11
+  quote: Gain on lease modification (13,950,823) (6,185,277)
+restatements:
+- period_restated: FY2023
+  item: Operating cash flow
+  from: 134332634
+  to: 114773576
+  unit: SAR
+  reason: 'FY2024 annual: interest paid on lease liabilities (19,559,058) moved from financing into operating activities (note 36, generic comparative statement).'
+  source: 4008_SACO/2024_Annual_filed2025-03-12.pdf
+  page: 52
+  quote: Comparatives information for the previous year has been reclassified, where necessary, in order to conform to the current year's presentation.
+- period_restated: FY2025 (31 Dec 2025)
+  item: Total assets
+  from: 1075944124
+  to: 1074979073
+  unit: SAR
+  reason: '9M 2026 interim comparative: due from a related party (965,051) netted against accrued liabilities; 0.09%, no note.'
+  source: 4008_SACO/2026_Q3_filed2026-11-12.pdf
+  page: 5
+  quote: Total assets 985,307,143 1,074,979,073
+significant_events:
+- date: '2024'
+  event: Warehouse transferred from property and equipment to investment property (SAR 96.8m), then sold on 14 July 2025 for SAR 140.43m
+  financial_effect: Net gain SAR 42.2m; proceeds used to repay all borrowings
+  source: 4008_SACO/2025_Annual_filed2026-03-10.pdf
+  page: 32
+  quote: On 14 July 2025, the Group management signed and completed the sale of its warehouse in Al-Mashael district, Riyadh
+- date: '2025'
+  event: 'All borrowings repaid: short-term borrowings 123.2m and long-term borrowings 25.0m'
+  financial_effect: No borrowings at 31 Dec 2025 and 30 Sep 2026
+  source: 4008_SACO/2025_Annual_filed2026-03-10.pdf
+  page: 11
+  quote: Change in short-term borrowings, net (123,153,130) 103,153,070
+- date: 2026 (9M)
+  event: Cash dividend of SAR 8.95m approved and paid; 224,448 shares bought back as treasury shares
+  financial_effect: Cash returned to shareholders
+  source: 4008_SACO/2026_Q3_filed2026-11-12.pdf
+  page: 21
+  quote: proposed and approved a cash dividend distribution to Company's shareholders totaling SAR 8,951,737
+audit_opinion:
+- period: FY2022
+  opinion: Unmodified (KPMG); Other Matter paragraph present (prior-year auditor)
+  emphasis_of_matter: none
+  source: 4008_SACO/2022_Annual_filed2023-03-26.pdf
+  page: 3
+- period: FY2023
+  opinion: Unmodified (KPMG); no emphasis of matter found
+  emphasis_of_matter: none
+  source: 4008_SACO/2023_Annual_filed2024-03-12.pdf
+  page: 3
+- period: FY2024
+  opinion: Unmodified (KPMG); no emphasis of matter found
+  emphasis_of_matter: none
+  source: 4008_SACO/2024_Annual_filed2025-03-12.pdf
+  page: 3
+- period: FY2025
+  opinion: Unmodified (KPMG); no emphasis of matter found
+  emphasis_of_matter: none
+  source: 4008_SACO/2025_Annual_filed2026-03-10.pdf
+  page: 3
+- period: 9M2026
+  opinion: Review conclusion unmodified (KPMG; scanned page)
+  emphasis_of_matter: none
+  source: 4008_SACO/2026_Q3_filed2026-11-12.pdf
+  page: 3
+kpis_in_filings:
+- period: 31 Dec 2021
+  kpi: Leased stores
+  value: 33
+  unit: count
+  source: 4008_SACO/2022_Annual_filed2023-03-26.pdf
+  page: 13
+- period: 31 Dec 2022
+  kpi: Leased stores
+  value: 33
+  unit: count
+  source: 4008_SACO/2022_Annual_filed2023-03-26.pdf
+  page: 13
+- period: 31 Dec 2023
+  kpi: Leased stores
+  value: 32
+  unit: count
+  source: 4008_SACO/2023_Annual_filed2024-03-12.pdf
+  page: 13
+- period: 31 Dec 2024
+  kpi: Leased stores
+  value: 32
+  unit: count
+  source: 4008_SACO/2025_Annual_filed2026-03-10.pdf
+  page: 12
+- period: 31 Dec 2025
+  kpi: Leased stores (plus 1 franchisee store, Tabuk)
+  value: 32
+  unit: count
+  source: 4008_SACO/2025_Annual_filed2026-03-10.pdf
+  page: 12
+- period: 30 Sep 2025
+  kpi: Leased stores
+  value: 32
+  unit: count
+  source: 4008_SACO/2026_Q3_filed2026-11-12.pdf
+  page: 9
+- period: 30 Sep 2026
+  kpi: Leased stores
+  value: 32
+  unit: count
+  source: 4008_SACO/2026_Q3_filed2026-11-12.pdf
+  page: 9
+special_extractions:
+- item: Primary statements of all annuals and interims are scanned images (FY2025 P&L page is text); values read by OCR and checked to subtotals in stage A.
+open_questions:
+- 'The FY2023 gross-profit recovery coincided with a swing in inventory provisions (FY2022: charges of SAR 38.5m slow-moving and SAR 5.4m shrinkage; FY2023: release of SAR 45.0m and shrinkage loss of SAR 34.4m, cash-flow add-backs); the line in which they sit is not stated.'
+- The 9M 2026 revenue fall (sales and services -10.0%, logistics external revenue -41.6%) is not explained in the interim notes.

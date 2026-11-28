@@ -1,0 +1,199 @@
+# Evidence extracted from Saudi Arabian Refineries Company (SARCO) filings (archive: 2030_SARCO). Facts only; page = physical PDF page (1-based).
+# Units: full Saudi Riyals ("SAR") as presented. FY2023 AFS PDF is entirely scanned (viewed pp2-3, 8); FY2022 AFS statements pp3-10 scanned (viewed pp6-8).
+ticker: "2030"
+company: "Saudi Arabian Refineries Company (SARCO)"
+
+perimeter_changes:
+  - event: "Al-Sadu Investments Company (100% subsidiary, SAR 5m capital, never started, capital unpaid) dissolved; CR cancelled"
+    type: deconsolidation
+    date: "2024-07-31 (board decision)"
+    consideration: null
+    revenue_contribution: 0
+    profit_contribution: null
+    pro_forma_revenue: null
+    period: "FY2024"
+    unit: "SAR"
+    source: "2030_SARCO/2025_Annual_filed2026-04-02.pdf"
+    page: 11
+    quote: "On 31 July 2024, the board of directors voted to dissolve the Al-Sadu Investments company."
+  - event: "Disposal of entire FVTOCI equity portfolio (incl. 15.19m Saudi Industrial Investment Group shares; small Aramco, Southern Cement, Aqua Power holdings); proceeds reinvested in a discretionary FVTPL portfolio"
+    type: disposal
+    date: "2024"
+    consideration: "Proceeds SAR 306,846,451; FV reserve SAR 180,100,429 transferred to retained earnings (no P&L gain under FVTOCI)"
+    revenue_contribution: null
+    profit_contribution: null
+    pro_forma_revenue: null
+    period: "FY2024"
+    unit: "SAR"
+    source: "2030_SARCO/2024_Annual_filed2025-04-09.pdf"
+    page: 25
+    quote: "During the year the Company sold all its shares held at FVTOCI amounting in SR 306,846,451 and entered into a new investment in portfolio"
+  - event: "New subsidiary Clean Energy Company (100%, Bish City; green ammonia project, MoU with AGR Renewable Energy after year-end)"
+    type: new_subsidiary
+    date: "2025-12-09"
+    consideration: null
+    revenue_contribution: 0
+    profit_contribution: null
+    pro_forma_revenue: null
+    period: "FY2025"
+    unit: "SAR"
+    source: "2030_SARCO/2025_Annual_filed2026-04-02.pdf"
+    page: 11
+    quote: "Clean Energy Company, has entered into a non-binding Memorandum of Understanding with AGR Renewable Energy for the purpose of purchasing one hundred percent"
+  - event: "New subsidiaries 2026: Masafi Ventures Holding Company (100%, 3 Feb 2026) and Refineries Storage Services Company (100%, 17 Jan 2026)"
+    type: new_subsidiary
+    date: "2026-01/02"
+    consideration: null
+    revenue_contribution: null
+    profit_contribution: null
+    pro_forma_revenue: null
+    period: "9M2026"
+    unit: "SAR"
+    source: "2030_SARCO/2026_Q3_filed2026-11-18.pdf"
+    page: 9
+    quote: "Masafi Ventures Holding Company is a limited liability company incorporated in the Kingdom of Saudi Arabia under Commercial Registration No. 7053585555 dated 3 February 2026"
+  - event: "Acquisition of 85% of Lawazem Al-Mutatawira Lilsinaa Qabida (kitchens, caravans, doors - manufacturing) via Masafi; first revenue-generating subsidiary"
+    type: acquisition
+    date: "2026-07-23"
+    consideration: "SAR 12,000,000 (cash 4,000,000 + deferred 8,000,000); net identifiable assets 1,841,021; provisional goodwill 10,435,132"
+    revenue_contribution: 1075024
+    profit_contribution: -814643
+    pro_forma_revenue: null
+    period: "9M2026"
+    unit: "SAR"
+    source: "2030_SARCO/2026_Q3_filed2026-11-18.pdf"
+    page: 14
+    quote: "the Group acquired 85% of the issued share capital of Lawazem for a total consideration of SAR 12 million."
+    note: "Contribution = Manufacturing segment revenue and net loss (p19-20). Pro-forma full-period figures: status not found."
+  - event: "New associates 2026: 35% Raya Al-Tajdeed Contracting (SAR 4.9m, 4 May 2026; gain on acquisition SAR 468,050) and 33% Global Waste Solutions (SAR 2.0m, 29 Jun 2026)"
+    type: acquisition
+    date: "2026-05-04 / 2026-06-29"
+    consideration: "SAR 6,900,000 total"
+    revenue_contribution: null
+    profit_contribution: 178837
+    pro_forma_revenue: null
+    period: "9M2026"
+    unit: "SAR"
+    source: "2030_SARCO/2026_Q3_filed2026-11-18.pdf"
+    page: 15
+    quote: "Masafi Ventures Holding Company, entered into an agreement to acquire a 35% equity interest in Raya Al-Tajdeed Contracting Company for SAR 4.9 million."
+
+segments:
+  - {period: "FY2022-FY2025", segment: "Single investment activity (no other business sectors)", basis: operating, revenue: 0, profit: null, unit: "SAR", source: "2030_SARCO/2025_Annual_filed2026-04-02.pdf", page: 11, note: "Company states present activity is investing in local companies; no segment table"}
+  - {period: "9M2026", segment: "Investment and holding", basis: operating, revenue: 0, profit: -26653112, unit: "SAR", source: "2030_SARCO/2026_Q3_filed2026-11-18.pdf", page: 20}
+  - {period: "9M2026", segment: "Manufacturing (Lawazem, from 23 Jul 2026)", basis: operating, revenue: 1075024, profit: -814643, unit: "SAR", source: "2030_SARCO/2026_Q3_filed2026-11-18.pdf", page: 20}
+  - {period: "9M2026", segment: "Total", basis: operating, revenue: 1075024, profit: -27467755, unit: "SAR", source: "2030_SARCO/2026_Q3_filed2026-11-18.pdf", page: 20}
+  - {period: "9M2025", segment: "Investment and holding (only segment)", basis: operating, revenue: 0, profit: -22078546, unit: "SAR", source: "2030_SARCO/2026_Q3_filed2026-11-18.pdf", page: 20}
+  - {period: "FY2022-9M2026", segment: "Geographic", basis: geographic, revenue: null, profit: null, unit: "SAR", note: "Single geographic market: Kingdom of Saudi Arabia", source: "2030_SARCO/2026_Q3_filed2026-11-18.pdf", page: 19}
+
+revenue_drivers:
+  # SARCO has no operating revenue until Q3 2026; results are driven by investment income lines.
+  - {period: "FY2022", driver: "Investment (dividend) income", value: 34478958, unit: "SAR", source: "2030_SARCO/2022_Annual_filed2023-03-31.pdf", page: 8, quote: "Investment income 13 34,478,958 8,099,667"}
+  - {period: "FY2022", driver: "Share of results of associate", value: -124784, unit: "SAR", source: "2030_SARCO/2022_Annual_filed2023-03-31.pdf", page: 8, quote: "Company's share from results of investment in associate 14 (124,784) 78,784"}
+  - {period: "FY2023", driver: "Dividends income", value: 15362270, unit: "SAR", source: "2030_SARCO/2024_Annual_filed2025-04-09.pdf", page: 8, quote: "Dividends income 9,629,810 15,362,270"}
+  - {period: "FY2023", driver: "Share of results of associate (Arab Tank Terminals, 27%)", value: 236855, unit: "SAR", source: "2030_SARCO/2024_Annual_filed2025-04-09.pdf", page: 8, quote: "Share of results of investment in associates 6 1,968,105 236,855"}
+  - {period: "FY2024", driver: "Dividends income", value: 9629810, unit: "SAR", source: "2030_SARCO/2025_Annual_filed2026-04-02.pdf", page: 8, quote: "Dividends income 4,242,101 9,629,810"}
+  - {period: "FY2024", driver: "Share of results of associate", value: 1968105, unit: "SAR", source: "2030_SARCO/2025_Annual_filed2026-04-02.pdf", page: 8, quote: "Share of results of investment in associates 7 5,290,919 1,968,105"}
+  - {period: "FY2024", driver: "Losses on financial assets mandatorily measured at FVTPL", value: -44945573, unit: "SAR", source: "2030_SARCO/2025_Annual_filed2026-04-02.pdf", page: 8, quote: "Losses arising on financial assets mandatorily measured at FVTPL 8 (51,478,977) (44,945,573)"}
+  - {period: "FY2025", driver: "Dividends income", value: 4242101, unit: "SAR", source: "2030_SARCO/2025_Annual_filed2026-04-02.pdf", page: 8, quote: "Dividends income 4,242,101 9,629,810"}
+  - {period: "FY2025", driver: "Share of results of associate", value: 5290919, unit: "SAR", source: "2030_SARCO/2025_Annual_filed2026-04-02.pdf", page: 8, quote: "Share of results of investment in associates 7 5,290,919 1,968,105"}
+  - {period: "FY2025", driver: "Losses on financial assets mandatorily measured at FVTPL", value: -51478977, unit: "SAR", source: "2030_SARCO/2025_Annual_filed2026-04-02.pdf", page: 8, quote: "Losses arising on financial assets mandatorily measured at FVTPL 8 (51,478,977) (44,945,573)"}
+  - {period: "9M2026", driver: "Dividends income (9M2025: 3,681,177)", value: 2589949, unit: "SAR", source: "2030_SARCO/2026_Q3_filed2026-11-18.pdf", page: 5, quote: "Dividends income 622,193 883,320 2,589,949 3,681,177"}
+  - {period: "9M2026", driver: "Share of results of associates (9M2025: 3,997,459)", value: 4114902, unit: "SAR", source: "2030_SARCO/2026_Q3_filed2026-11-18.pdf", page: 5, quote: "Share of results of associates 5 1,476,688 1,498,565 4,114,902 3,997,459"}
+  - {period: "9M2026", driver: "Net losses on investments at FVTPL (9M2025: -16,798,712)", value: -22502677, unit: "SAR", source: "2030_SARCO/2026_Q3_filed2026-11-18.pdf", page: 5, quote: "investments at FVTPL (19,212,276) 4,059,282 (22,502,677) (16,798,712)"}
+  - {period: "9M2026", driver: "Revenue (Lawazem, over time; first revenue)", value: 1075024, unit: "SAR", source: "2030_SARCO/2026_Q3_filed2026-11-18.pdf", page: 5, quote: "Revenue 10 1,075,024 - 1,075,024 -"}
+
+one_offs:
+  - {period: "FY2024", item: "Reclassification of FVTOCI reserve on portfolio disposal (equity only, not P&L)", amount: 180100429, unit: "SAR", pnl_line: "Equity (retained earnings)", recurring: false, source: "2030_SARCO/2025_Annual_filed2026-04-02.pdf", page: 9, quote: "Transfer of fair value reserve on disposal of equity Instruments designated at FVTOCI (note 6) - - 180,100,429 (180,100,429) -"}
+  - {period: "FY2024", item: "FVTOCI fair-value loss before disposal (OCI)", amount: -37061902, unit: "SAR", pnl_line: "OCI", recurring: false, source: "2030_SARCO/2025_Annual_filed2026-04-02.pdf", page: 8, quote: "Changes in the fair value of investments at FVTOCI 6 - (37,061,902)"}
+  - {period: "FY2025", item: "Prior-year zakat charge (ZATCA 2023 assessment settled)", amount: -387722, unit: "SAR", pnl_line: "Zakat", recurring: false, source: "2030_SARCO/2025_Annual_filed2026-04-02.pdf", page: 30, quote: "ZATCA issued a draft assessment for the year 2023 amounting SAR 387,722"}
+  - {period: "FY2024", item: "Zakat charge step-up (FY2024 7,799,680 vs FY2023 1,677,461)", amount: -7799680, unit: "SAR", pnl_line: "Zakat", recurring: true, source: "2030_SARCO/2024_Annual_filed2025-04-09.pdf", page: 8, quote: "Zakat 15 (7,799,680) (1,677,461)"}
+  - {period: "9M2026", item: "Gain on acquisition of an associate (Raya Al-Tajdeed)", amount: 468050, unit: "SAR", pnl_line: "Investment in associates (share/gain)", recurring: false, source: "2030_SARCO/2026_Q3_filed2026-11-18.pdf", page: 15, quote: "Gain on acquisition of an associate - 468,050 - - 468,050"}
+  - {period: "FY2022", item: "Expected credit losses", amount: -304570, unit: "SAR", pnl_line: "Expected credit losses", recurring: false, source: "2030_SARCO/2022_Annual_filed2023-03-31.pdf", page: 8, quote: "Expected credit losses 7 (304,570) -"}
+
+restatements:
+  - period_restated: "FY2024"
+    item: "General and administrative expenses"
+    from: -12549367
+    to: -12648437
+    unit: "SAR"
+    reason: "Not explained in a note; difference 99,070 equals 'Depreciation of right-of-use assets' shown as a separate P&L line in FY2024 AFS and folded into G&A in FY2025 AFS comparative. Net loss unchanged (-53,487,697)."
+    source: "2030_SARCO/2025_Annual_filed2026-04-02.pdf"
+    page: 8
+    quote: "General and administrative expenses 16 (12,284,484) (12,648,437)"
+    original_source: "2030_SARCO/2024_Annual_filed2025-04-09.pdf p8: G&A (12,549,367); Depreciation of right-of-use assets (99,070)"
+  - period_restated: "FY2022 (in FY2023 AFS)"
+    item: "Comparative P&L"
+    from: 28230062
+    to: 28230062
+    unit: "SAR"
+    reason: "No change to FY2022 net profit in FY2023 AFS; 'zakat for previous years' line absent in both years."
+    source: "2030_SARCO/2023_Annual_filed2024-03-21.pdf"
+    page: 8
+    quote: "Net profit for the year 7,701,643 28,230,062"
+
+significant_events:
+  - date: "2026-03-26"
+    event: "Board recommended capital increase of SAR 300m (200% of current capital) via rights issue; subject to EGM and regulatory approval (not yet approved at 30 Sep 2026)"
+    financial_effect: "Proposed capital raise"
+    source: "2030_SARCO/2026_Q3_filed2026-11-18.pdf"
+    page: 8
+    quote: "to increase the Company's share capital by SAR 300 million, representing 200% of its current share capital through the offering of a rights issue."
+  - date: "2026-03-26"
+    event: "FY2025 AFS approved same day; subsequent-events note mentions only the AGR MoU (rights-issue recommendation not mentioned)"
+    financial_effect: "None"
+    source: "2030_SARCO/2025_Annual_filed2026-04-02.pdf"
+    page: 33
+    quote: "Except for the non-binding Memorandum of Understanding with AGR Renewable Energy as mentioned in note 1, there are no major subsequent events"
+  - date: "2026 (regional conflict from 28 Feb 2026)"
+    event: "No disclosure of the regional conflict / Hormuz / attacks found in FY2025 AFS or 2026 interims"
+    financial_effect: "not found"
+    source: "2030_SARCO/2026_Q3_filed2026-11-18.pdf"
+    page: null
+    quote: "searched: hormuz, conflict, geopolit, attack, war - no matches"
+  - date: "2018 onward"
+    event: "Arab Sulfonate Company (34% associate) in court-ordered liquidation since 2018; fully provided"
+    financial_effect: "Carried at nil"
+    source: "2030_SARCO/2026_Q3_filed2026-11-18.pdf"
+    page: 16
+    quote: "The Group has recorded full provision against its investment in the associate."
+  - date: "FY2022-FY2025"
+    event: "No dividends declared in the periods reviewed (dividends payable SAR 2.2m relates to old unclaimed balances held in bank)"
+    financial_effect: "None"
+    source: "2030_SARCO/2025_Annual_filed2026-04-02.pdf"
+    page: 27
+    quote: "an amount of SR 2.2 million (2024: 2.1 million) kept in accounts for dividends payable."
+
+audit_opinion:
+  - {period: "FY2022", opinion: "Unmodified (Moore / El Sayed El Ayouty, signed 29 Mar 2023); scanned pages viewed; no EoM or material uncertainty paragraph on p3 or p6", emphasis_of_matter: none, source: "2030_SARCO/2022_Annual_filed2023-03-31.pdf", page: 3}
+  - {period: "FY2023", opinion: "Unmodified (Moore / El Sayed El Ayouty); KAMs listed; no EoM seen on opinion page", emphasis_of_matter: none, source: "2030_SARCO/2023_Annual_filed2024-03-21.pdf", page: 3}
+  - {period: "FY2024", opinion: "Unmodified (new auditor); Other Matter: FY2023 audited by another auditor (unmodified, 17 Mar 2024)", emphasis_of_matter: none, source: "2030_SARCO/2024_Annual_filed2025-04-09.pdf", page: 3}
+  - {period: "FY2025", opinion: "Unmodified; KAM on valuation of quoted equity securities (FVTPL); no EoM found", emphasis_of_matter: none, source: "2030_SARCO/2025_Annual_filed2026-04-02.pdf", page: 3}
+  - {period: "9M2026", opinion: "Review conclusion unmodified; no EoM found", emphasis_of_matter: none, source: "2030_SARCO/2026_Q3_filed2026-11-18.pdf", page: 3}
+
+kpis_in_filings:
+  - {period: "FY2022-9M2026", kpi: "Operational KPIs (no operating business until Lawazem acquisition)", value: null, unit: "count", status: "not found", source: "2030_SARCO/2025_Annual_filed2026-04-02.pdf", page: null}
+  - {period: "31 Dec 2025", kpi: "Investments at FVTPL (discretionary Tadawul portfolio + fund)", value: 238763462, unit: "SAR", source: "2030_SARCO/2025_Annual_filed2026-04-02.pdf", page: 7}
+  - {period: "30 Sep 2026", kpi: "Investments at FVTPL", value: 160221127, unit: "SAR", source: "2030_SARCO/2026_Q3_filed2026-11-18.pdf", page: 4}
+  - {period: "30 Sep 2026", kpi: "Investments in associates (Arab Tank Terminals 60,880,952; Raya 5,652,333; Global Waste 1,894,554)", value: 68427839, unit: "SAR", source: "2030_SARCO/2026_Q3_filed2026-11-18.pdf", page: 15}
+
+special_extractions:
+  - name: "SARCO nature of business and result drivers"
+    description: "Licensed for refining/petrochemicals etc. but present activity limited to investing in local companies. Until Q3 2026 it had no revenue. Results come from (1) dividend income on listed equities (FY2022 34.5m, mainly SIIG shares held at FVTOCI until 2024), (2) equity-accounted share of Arab Tank Terminals Ltd (27%) - small (FY2022 -0.12m to FY2025 +5.29m), and (3) from 2024, fair-value swings on a discretionary Tadawul share portfolio at FVTPL (losses 44.9m FY2024, 51.5m FY2025, 22.5m 9M2026), which drove net losses. In 2026 it started diversifying (Lawazem manufacturing, Clean Energy green ammonia project, new associates) and proposed a SAR 300m rights issue."
+    source: "2030_SARCO/2025_Annual_filed2026-04-02.pdf"
+    page: 11
+    quote: "its activity is limited to the investments sector, and it has no other business sectors."
+    net_profit_by_period:
+      FY2022: {value: 28230062, source: "2030_SARCO/2022_Annual_filed2023-03-31.pdf", page: 8}
+      FY2023: {value: 7701643, source: "2030_SARCO/2023_Annual_filed2024-03-21.pdf", page: 8}
+      FY2024: {value: -53487697, source: "2030_SARCO/2025_Annual_filed2026-04-02.pdf", page: 8}
+      FY2025: {value: -60182955, source: "2030_SARCO/2025_Annual_filed2026-04-02.pdf", page: 8}
+      9M2026: {value: -27467755, attributable_to_owners: -27352248, source: "2030_SARCO/2026_Q3_filed2026-11-18.pdf", page: 5}
+      9M2025: {value: -22078546, source: "2030_SARCO/2026_Q3_filed2026-11-18.pdf", page: 5}
+    unit: "SAR"
+    note: "The brief's description ('profit comes from the share of results of an investee') is only partly borne out: associate share is a minor line; dividends (to 2023) and FVTPL losses (2024 on) dominate."
+
+open_questions:
+  - "FY2022 auditor report p4-5 (scanned KAM pages) not viewed; opinion (p3) and closing page (p6) viewed."
+  - "Pro-forma (full-period) revenue/profit for Lawazem not disclosed in 2026_Q3."
+  - "FY2023 AFS is fully scanned; FY2023 figures taken from the scanned P&L page (p8) and from FY2024 AFS comparatives (text)."

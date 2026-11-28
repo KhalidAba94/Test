@@ -1,0 +1,21 @@
+ticker,period,metric_code,kind,values,used_file,used,original
+2030,9M2025,SHARE_JV,restated (like documents),2025_Q3_filed2025-11-14.xls=3.997 | 2026_Q3_filed2026-11-19.xls=-9.120,2026_Q3_filed2026-11-19.xls,-9.120076,3.9974589999999997
+2222,9M2025,DA_CF,restated (like documents),2025_Q3_filed2025-11-18.xls=77601.000 | 2026_Q3_filed2026-11-16.xls=68715.000,2026_Q3_filed2026-11-16.xls,68715.0,77601.0
+2222,FY2024,DA_CF,restated (like documents),2024_Annual_filed2025-04-13.xls=103209.000 | 2025_Annual_filed2026-04-02.xls=91679.000,2025_Annual_filed2026-04-02.xls,91679.0,103209.0
+2380,FY2022,TA,possible unit error,2022_Annual_filed2023-03-19.xls=65578.732 | 2023_Q1_filed2023-05-15.xls=65578.732 | 2023_Q2_filed2023-08-13.xls=65.579 | 2023_Q3_filed2023-11-12.xls=65578.732 | 2023_Annual_filed2024-03-25.xls=65578.732,2023_Annual_filed2024-03-25.xls,65578.732,65578.732
+2380,FY2022,TE,possible unit error,2022_Annual_filed2023-03-19.xls=15254.861 | 2023_Q1_filed2023-05-15.xls=15254.861 | 2023_Q2_filed2023-08-13.xls=15.255 | 2023_Q3_filed2023-11-12.xls=15254.861 | 2023_Annual_filed2024-03-25.xls=15254.861,2023_Annual_filed2024-03-25.xls,15254.861,15254.861
+2380,FY2024,GP,restated (like documents),2024_Annual_filed2025-03-19.xls=-985.022 | 2025_Annual_filed2026-03-16.xls=-1671.955,2025_Annual_filed2026-03-16.xls,-1671.955,-985.022
+2380,FY2024,REV,restated (like documents),2024_Annual_filed2025-03-19.xls=39349.068 | 2025_Annual_filed2026-03-16.xls=38662.135,2025_Annual_filed2026-03-16.xls,38662.135,39349.068
+2381,FY2022,IMPAIR_CF,restated (like documents),2022_Annual_filed2023-03-29.xls=0.047 | 2023_Annual_filed2024-03-24.xls=20.629,2023_Annual_filed2024-03-24.xls,20.628701,0.047306
+2381,FY2023,IMPAIR_CF,restated (like documents),2023_Annual_filed2024-03-24.xls=15.027 | 2024_Annual_filed2025-03-17.xls=0.000,2024_Annual_filed2025-03-17.xls,0.0,15.027317
+2381,FY2025,TA,restated (like documents),2025_Annual_filed2026-03-08.xls=10089.404 | 2026_Q1_filed2026-05-10.xls=10089.404 | 2026_Q2_filed2026-08-13.xls=10177.200 | 2026_Q3_filed2026-11-12.xls=10177.200,2026_Q3_filed2026-11-12.xls,10177.200463,10089.404462999999
+2382,FY2024,CAPEX,restated (like documents),2024_Annual_filed2025-03-18.xls=3088.469 | 2025_Annual_filed2026-04-22.xls=2376.335,2025_Annual_filed2026-04-22.xls,2376.335,3088.469
+4030,9M2025,COGS,restated (like documents),2025_Q3_filed2025-11-04.xls=5394.224 | 2026_Q3_filed2026-11-03.xls=5281.929,2026_Q3_filed2026-11-03.xls,5281.929,5394.224
+4030,9M2025,GP,restated (like documents),2025_Q3_filed2025-11-04.xls=1689.529 | 2026_Q3_filed2026-11-03.xls=1801.824,2026_Q3_filed2026-11-03.xls,1801.824,1689.529
+4030,9M2025,OPINC_REP,restated (like documents),2025_Q3_filed2025-11-04.xls=1605.468 | 2026_Q3_filed2026-11-03.xls=1654.468,2026_Q3_filed2026-11-03.xls,1654.468,1605.468
+4030,FY2021,CAPEX,differs across document types (not a restatement),2022_Q4_filed2023-02-08.xls=222.727 | 2022_Annual_filed2023-03-21.xls=1150.964,2022_Annual_filed2023-03-21.xls,1150.964,1150.964
+4030,FY2022,CAPEX,differs across document types (not a restatement),2022_Q4_filed2023-02-08.xls=225.496 | 2022_Annual_filed2023-03-21.xls=1310.352 | 2023_Q4_filed2024-02-05.xls=1310.352 | 2023_Annual_filed2024-03-25.xls=1310.352,2023_Annual_filed2024-03-25.xls,1310.352,1310.352
+4030,FY2022,CFO,differs across document types (not a restatement),2022_Q4_filed2023-02-08.xls=1989.685 | 2022_Annual_filed2023-03-21.xls=2003.760 | 2023_Q4_filed2024-02-05.xls=2003.760 | 2023_Annual_filed2024-03-25.xls=2003.760,2023_Annual_filed2024-03-25.xls,2003.76,2003.76
+4030,FY2023,CFO,restated (like documents),2023_Q4_filed2024-02-05.xls=3671.427 | 2023_Annual_filed2024-03-25.xls=3642.919 | 2024_Q4_filed2025-02-05.xls=3560.560 | 2024_Annual_filed2025-03-25.xls=3560.560,2024_Annual_filed2025-03-25.xls,3560.56,3642.919
+4030,FY2024,CFO,differs across document types (not a restatement),2024_Q4_filed2025-02-05.xls=3468.461 | 2024_Annual_filed2025-03-25.xls=3405.523 | 2025_Q4_filed2026-02-16.xls=3405.523 | 2025_Annual_filed2026-03-16.xls=3405.523,2025_Annual_filed2026-03-16.xls,3405.523,3405.523
+4030,FY2025,CFO,differs across document types (not a restatement),2025_Q4_filed2026-02-16.xls=3256.845 | 2025_Annual_filed2026-03-16.xls=3214.077,2025_Annual_filed2026-03-16.xls,3214.077,3214.077

@@ -1,0 +1,273 @@
+ticker: '6001'
+headline: >-
+  Revenue fell from SAR 1,024m (FY2022) to SAR 904m (FY2025), mostly in the Egyptian business as the pound weakened, but HB recovered
+  from a SAR 98.0m loss in FY2023 to profits of SAR 44.7m and SAR 42.6m, cut borrowings from SAR 357m to SAR 153m, and in 9M 2026 raised
+  attributable profit 24.9% to SAR 33.7m on 3.3% higher revenue.
+lfl_basis:
+  definition_used: >-
+    Standard bridge on IFRS revenue in SAR. The group did not change: the parent (Saudi Arabia) and its wholly owned Egyptian subsidiary,
+    plus two non-operating Cayman holding companies. About half of revenue (49% in FY2025, 60% in FY2023) is earned in Egyptian pounds
+    and translated into riyals, so reported and organic growth both include the effect of the weaker pound. HB gives neither EGP revenue
+    nor average exchange rates, and reports no capacity or same-store measure, so the FX step and like-for-like growth are not determinable;
+    organic growth in SAR is the closest measure.
+  perimeter_changes:
+  - event: 'None: same consolidated group FY2022-9M2026; no business combination, disposal or discontinued operation'
+    date: FY2022-9M2026
+    effect: nil
+    source: 6001_HB/2025_Annual_filed2026-02-11.pdf p.13; 6001_HB/2026_Q3_filed2026-11-05.pdf p.11
+  capacity_changes:
+  - event: No plant openings or capacity additions disclosed; capex SAR 7-30m a year
+    date: FY2022-9M2026
+    effect: not determinable
+    source: 6001_HB/2025_Annual_filed2026-02-11.pdf p.32 (capex by segment)
+  fx_exposure: >-
+    Egyptian pound: the Egyptian subsidiary reports in EGP and was 49% of FY2025 revenue (51% in FY2024). The pound fell against the
+    riyal in 2023 and was floated on 6 Mar 2024. The translation effect on revenue cannot be calculated from the filings. Transaction
+    FX losses sit below operating profit (FY2024: SAR 27.6m).
+  price_volume_support: >-
+    Not determinable. The filings split revenue by country, product (sesame, meat, other) and customer type, but give no volumes, prices
+    or EGP amounts.
+  confidence: Medium (perimeter nil with High confidence; FX and new capacity not determinable)
+price_volume:
+- period: FY2025 vs FY2024
+  text: >-
+    Revenue fell SAR 65m (-6.7%). Sesame products fell 13.7% (SAR 362m to SAR 313m), meat products 1.9% and other products 3.7%. Sales
+    to other markets (exports) fell 25.6% (SAR 123.8m to SAR 92.2m). The Saudi segment fell 3.1% and the Egyptian segment 10.2% in riyals.
+    Volumes and prices are not disclosed, so the split is not determinable.
+  basis: disclosed (revenue by product and market); split not determinable
+  confidence: High for the amounts; the split is not determinable
+  source: 6001_HB/2025_Annual_filed2026-02-11.pdf p.32-34
+  refs:
+  - 6001-FY2025-REV
+  - 6001-FY2024-REV
+- period: 9M 2026 vs 9M 2025
+  text: >-
+    Revenue rose SAR 22.6m (+3.3%). Meat products rose 16.4% (SAR 276m to SAR 322m), mainly in Egypt, while sesame products fell 11.1%
+    and exports fell from SAR 78.5m to SAR 58.8m. The Egyptian segment grew 6.9% in riyals and the Saudi segment was flat (-0.3%). Volumes
+    and prices are not disclosed.
+  basis: disclosed (revenue by product and segment); split not determinable
+  confidence: High for the amounts; the split is not determinable
+  source: 6001_HB/2026_Q3_filed2026-11-05.pdf p.12-13
+  refs:
+  - 6001-9M2026-REV
+  - 6001-9M2025-REV
+profit_and_margin:
+  drivers:
+  - period: FY2023
+    driver: >-
+      Revenue fell 13.8% to SAR 883m (restated): the Saudi segment fell 18.5% and the Egyptian segment 10.3% in riyals as the pound
+      weakened. Gross margin fell to 19.4% (26.4%, we calculate) and EBITDA margin to -1.3%. Net finance cost rose to SAR 22.8m (SAR
+      12.7m) and income tax on the Egyptian profit was SAR 17.6m. The group lost SAR 98.0m; the Egyptian subsidiary earned SAR 51.7m,
+      so the Saudi operations lost about SAR 149.7m (we calculate). Net margin -11.1%.
+    source: 6001_HB/2024_Annual_filed2025-03-04.pdf p.7, p.34; 6001_HB/2023_Annual_filed2024-03-18.pdf p.35
+    refs:
+    - 6001-FY2023-REV
+    - 6001-FY2023-GP
+    - 6001-FY2023-EBITDA_C
+    - 6001-FY2023-FIN_COST
+    - 6001-FY2023-NI_ATTR
+  - period: FY2024
+    driver: >-
+      Revenue rose 9.8% to SAR 969m: the Saudi segment rose 35.9% (SAR 354m to SAR 481m) while the Egyptian segment fell 7.5% in riyals
+      after the pound was floated in March 2024. Gross profit rose 69.0% and EBITDA was SAR 131m, an EBITDA margin of 13.5%. A SAR 27.6m
+      loss on foreign currency differences (restated) and SAR 27.4m net finance cost sat below operating profit, while SAR 13.5m of
+      provisions were written back. Attributable profit was SAR 44.7m, a net margin of 4.6%, and ROE 15.0%.
+    source: 6001_HB/2025_Annual_filed2026-02-11.pdf p.7, p.32; 6001_HB/2024_Annual_filed2025-03-04.pdf p.10
+    refs:
+    - 6001-FY2024-REV
+    - 6001-FY2024-GP
+    - 6001-FY2024-EBITDA_C
+    - 6001-FY2024-FIN_COST
+    - 6001-FY2024-NI_ATTR
+  - period: FY2025
+    driver: >-
+      Revenue fell 6.7% to SAR 904m: the Saudi segment fell 3.1% and the Egyptian segment 10.2%; exports fell 25.6%. Gross margin was
+      28.6% (29.8%). EBITDA fell 5.2% to SAR 124m but the EBITDA margin edged up to 13.7%, helped by an SAR 8.8m gain on selling property,
+      plant and equipment and SAR 4.4m of Egyptian export support. FX losses fell to SAR 0.8m. Attributable profit fell 4.6% to SAR
+      42.6m, a net margin of 4.7%; ROE 13.6%.
+    source: 6001_HB/2025_Annual_filed2026-02-11.pdf p.7, p.32-35
+    refs:
+    - 6001-FY2025-REV
+    - 6001-FY2025-GP
+    - 6001-FY2025-EBITDA_C
+    - 6001-FY2025-NI_ATTR
+  - period: 9M2026
+    driver: >-
+      Revenue rose 3.3% to SAR 705m and gross profit 2.7%. The EBITDA margin was 12.4% against 13.0% in 9M 2025, as selling costs rose
+      7.8%. Finance costs fell to SAR 16.0m (SAR 24.5m) as borrowings came down, which offset a larger FX loss (SAR 3.1m vs SAR 1.0m)
+      and a SAR 2.6m impairment. Attributable profit rose 24.9% to SAR 33.7m, a net margin of 4.8% (3.9%); annualised ROE 12.8%.
+    source: 6001_HB/2026_Q3_filed2026-11-05.pdf p.4, p.7
+    refs:
+    - 6001-9M2026-REV
+    - 6001-9M2026-GP
+    - 6001-9M2026-EBITDA_C
+    - 6001-9M2026-FIN_COST
+    - 6001-9M2026-NI_ATTR
+    - 6001-9M2025-NI_ATTR
+  - period: FY2022-9M2026
+    driver: >-
+      Cash flow turned positive and debt fell. Free cash flow was -SAR 59.0m in FY2022, then SAR 48.0m, SAR 76.9m and SAR 108m in FY2023-FY2025
+      (we calculate), with capex of only SAR 7-15m a year. Borrowings fell from SAR 357m (end-2023) to SAR 153m (end-2025) and SAR 128m
+      (30 Sep 2026); net debt including leases was SAR 121m.
+    source: 6001_HB/2025_Annual_filed2026-02-11.pdf p.8, p.10; 6001_HB/2026_Q3_filed2026-11-05.pdf p.5, p.7
+    refs:
+    - 6001-FY2022-FCF
+    - 6001-FY2025-FCF
+    - 6001-FY2023-DEBT
+    - 6001-FY2025-DEBT
+    - 6001-9M2026-DEBT
+    - 6001-9M2026-NET_DEBT
+  one_offs:
+  - item: Gain on disposal of assets available for sale
+    period: FY2022
+    amount_sar_m: 8.5
+    line: Other income, net (inside operating profit)
+    source: 6001_HB/2023_Annual_filed2024-03-18.pdf p.38
+    tax_nci: >-
+      A disposal gain on assets held for sale, outside normal operations (FY2022 attributable profit was only SAR 2.9m); tax effect not disclosed (Egyptian income tax and Saudi zakat apply); no non-controlling interests: after-tax effect not
+      determinable, profit kept as reported
+  - item: Loss on foreign currency differences
+    period: FY2022
+    amount_sar_m: -5.2
+    line: Below profit from operations, above PBT (inside our operating income)
+    source: 6001_HB/2023_Annual_filed2024-03-18.pdf p.7
+    tax_nci: >-
+      FX differences are shown below HB's profit from operations and are listed in every period; tax effect not disclosed (Egyptian income tax and Saudi zakat apply); no non-controlling interests: after-tax effect not
+      determinable, profit kept as reported
+  - item: Gain on derivative instruments at fair value through profit or loss
+    period: FY2022
+    amount_sar_m: 0.3
+    line: Below profit from operations, above PBT
+    source: 6001_HB/2023_Annual_filed2024-03-18.pdf p.7
+    tax_nci: A derivative fair-value result, outside normal operations (11% of the small FY2022 profit); profit kept as reported
+  - item: Gain on foreign currency differences
+    period: FY2023
+    amount_sar_m: 0.3
+    line: Below profit from operations, above PBT
+    source: 6001_HB/2024_Annual_filed2025-03-04.pdf p.7
+    tax_nci: Under 5% but FX differences are listed in every period; profit kept as reported
+  - item: 'Derivative instruments: loss on sale (SAR 0.32m) less fair-value gain (SAR 0.04m)'
+    period: FY2023
+    amount_sar_m: -0.3
+    line: Below profit from operations, above PBT
+    source: 6001_HB/2024_Annual_filed2025-03-04.pdf p.7
+    tax_nci: Under 5% but derivative fair-value results are outside normal operations; profit kept as reported
+  - item: Loss on foreign currency differences after the EGP float (restated from SAR 26.2m)
+    period: FY2024
+    amount_sar_m: -27.6
+    line: Below profit from operations, above PBT
+    source: 6001_HB/2025_Annual_filed2026-02-11.pdf p.7, p.55
+    tax_nci: >-
+      62% of attributable profit; FX differences are listed in every period; tax effect not disclosed (Egyptian income tax and Saudi zakat apply); no non-controlling interests: after-tax effect not
+      determinable, profit kept as reported
+  - item: >-
+      Provisions no longer required (SAR 13.5m cash-flow add-back; SAR 11.0m after the ordinary inventory and receivables releases;
+      P&L line not named)
+    period: FY2024
+    amount_sar_m: 11.0
+    line: not named (we assume other income, net)
+    source: 6001_HB/2024_Annual_filed2025-03-04.pdf p.10, p.48, p.51, p.55
+    tax_nci: >-
+      25% of attributable profit, a release of provisions no longer required beyond the ordinary inventory and receivable releases; tax effect not disclosed (Egyptian income tax and Saudi zakat apply); no non-controlling interests: after-tax effect not
+      determinable, profit kept as reported
+  - item: Gain on disposal of property, plant and equipment
+    period: FY2025
+    amount_sar_m: 8.8
+    line: Other income, net
+    source: 6001_HB/2025_Annual_filed2026-02-11.pdf p.35
+    tax_nci: >-
+      21% of attributable profit, a property disposal (other years' disposal gains were small); tax effect not disclosed (Egyptian income tax and Saudi zakat apply); no non-controlling interests: after-tax effect not
+      determinable, profit kept as reported
+  - item: Loss on foreign currency differences
+    period: FY2025
+    amount_sar_m: -0.8
+    line: Below profit from operations, above PBT
+    source: 6001_HB/2025_Annual_filed2026-02-11.pdf p.7
+    tax_nci: Under 5% but FX differences are listed in every period; profit kept as reported
+  - item: Loss on foreign currency differences
+    period: 9M2025
+    amount_sar_m: -1.0
+    line: Below profit from operations, above PBT
+    source: 6001_HB/2026_Q3_filed2026-11-05.pdf p.4
+    tax_nci: 3.9% of attributable profit; FX differences are listed in every period; profit kept as reported
+  - item: Foreign currency differences, net
+    period: 9M2026
+    amount_sar_m: -3.1
+    line: Below profit from operations, above PBT
+    source: 6001_HB/2026_Q3_filed2026-11-05.pdf p.4
+    tax_nci: >-
+      9% of attributable profit; FX differences are listed in every period; tax effect not disclosed (Egyptian income tax and Saudi zakat apply); no non-controlling interests: after-tax effect not
+      determinable, profit kept as reported
+developments:
+- date: '2023'
+  category: event
+  text: >-
+    The Egyptian pound fell against the riyal; HB booked a SAR 27.4m translation loss in other comprehensive income (FY2022: SAR 71.3m).
+  source: 6001_HB/2023_Annual_filed2024-03-18.pdf p.63, p.7
+- date: '2024-03-06'
+  category: event
+  text: >-
+    The Central Bank of Egypt floated the pound. HB booked a SAR 27.6m loss on foreign currency differences in FY2024 (restated) and
+    a SAR 62.7m translation loss in other comprehensive income.
+  source: 6001_HB/2023_Annual_filed2024-03-18.pdf p.63; 6001_HB/2025_Annual_filed2026-02-11.pdf p.7
+- date: '2024'
+  category: financing
+  text: >-
+    Al Rajhi Bank converted SAR 65m of working-capital facilities into a medium-term murabaha repayable quarterly to September 2028.
+  source: 6001_HB/2025_Annual_filed2026-02-11.pdf p.48
+- date: '2024-06-25'
+  category: regulation
+  text: >-
+    Shareholders transferred the SAR 106.1m statutory reserve to retained earnings after the new Companies Law removed the requirement.
+  source: 6001_HB/2024_Annual_filed2025-03-04.pdf p.52
+- date: '2025'
+  category: operations
+  text: HB sold property, plant and equipment for SAR 10.0m, booking an SAR 8.8m gain.
+  source: 6001_HB/2025_Annual_filed2026-02-11.pdf p.10, p.35
+- date: 2023-2026
+  category: financing
+  text: >-
+    Borrowings fell from SAR 357m at end-2023 to SAR 128m at 30 Sep 2026; short-term murabaha fell from SAR 353m to SAR 95.5m.
+  source: 6001_HB/2024_Annual_filed2025-03-04.pdf p.8; 6001_HB/2026_Q3_filed2026-11-05.pdf p.5
+what_it_means:
+  improved: >-
+    HB moved from a SAR 98.0m loss in FY2023 to profits of SAR 44.7m (FY2024) and SAR 42.6m (FY2025), with EBITDA margin rising from
+    -1.3% to 13.7%; free cash flow reached SAR 108m in FY2025 and borrowings fell from SAR 357m to SAR 128m by 30 Sep 2026.
+  weakened: >-
+    Revenue fell 4.1% a year from FY2022 to FY2025 (CAGR) and the Egyptian segment fell in riyals every year to FY2025; FY2025 profit
+    included an SAR 8.8m disposal gain and SAR 4.4m export support.
+  why: >-
+    The weaker Egyptian pound cut the riyal value of half the business, and the FY2023 loss came from the Saudi operations (about SAR
+    150m, we calculate); the recovery came with gross margin rising from 19.4% to 29.8% in FY2024 and lower finance costs as debt was
+    repaid.
+  uncertain: >-
+    The filings do not show how much of the revenue decline is currency translation rather than lower volumes, or why the Saudi segment
+    grew 35.9% in FY2024.
+confidence_overall: Medium
+data_notes:
+- >-
+  Corrected from the PDF statements (image pages read by OCR, checked against printed subtotals; e.g. FY2025 annual p.8 and p.10): borrowings
+  include all Islamic murabaha contracts (the XBRL kept only term loans or the current portion, e.g. FY2025 SAR 16.5m vs SAR 153m); lease
+  liabilities are read for FY2024 to 9M 2026; D&A includes depreciation of right-of-use assets; PP&E impairments are in the impairment add-back.
+- >-
+  PP&E impairments (FY2023 SAR 3.7m, FY2025 SAR 2.3m, 9M 2026 SAR 2.6m) are outside EBITDA and are not one-offs under the one-off rule.
+- >-
+  FY2022 borrowings exclude letters-of-credit liabilities of SAR 18.3m, which the company shows apart from interest-bearing loans (FY2022
+  annual note 30).
+- >-
+  Restatements: FY2023 comparatives reclassified in the FY2024 annual (note 36): revenue SAR 889.0m to SAR 882.7m, total assets SAR
+  902.3m to SAR 951.6m, operating cash flow SAR 34.1m to SAR 55.2m. FY2024 comparatives reclassified in the FY2025 annual (note 32):
+  SAR 3.0m from G&A to income tax (PBT SAR 61.8m to SAR 64.7m) and SAR 1.4m from finance cost to FX losses. Net profit unchanged.
+- >-
+  Basis break: FY2022 operating cash flow (-SAR 28.8m) is after finance cost paid of SAR 11.4m; FY2023 onward (restated) shows finance
+  cost paid in financing activities.
+- >-
+  FIN_COST is the "net finance cost" line on the face; FY2023 includes treasury-bill income of SAR 4.5m netted inside it (note 10).
+  FIN_INC is not shown separately.
+- >-
+  Our operating income (PBT + finance cost) includes the FX differences and derivative results shown below HB's "profit from operations".
+  EBITDA excluding one-offs removes FX differences and derivative results in every period (FY2022 -SAR 5.2m to FY2024 -SAR 27.6m), the
+  FY2022 gain on assets held for sale, the FY2024 provisions written back and the FY2025 SAR 8.8m disposal gain. Egyptian export support
+  (every year: SAR 1.4m, 0.9m, 0.1m and 4.4m in FY2022-FY2025) and the small yearly PP&E disposal gains are recurring and stay in EBITDA.
+- >-
+  The FY2021 balance sheet is the FY2022 annual comparative. No hyperinflation accounting (IAS 29) is applied to the Egyptian subsidiary.

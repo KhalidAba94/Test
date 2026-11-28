@@ -1,0 +1,116 @@
+{
+ "as_of": "26 Nov 2026",
+ "universe": 273,
+ "sectors": [
+  {
+   "name": "Energy",
+   "companies": 6,
+   "wave": 0
+  },
+  {
+   "name": "Materials",
+   "companies": 49,
+   "wave": 2
+  },
+  {
+   "name": "Capital Goods",
+   "companies": 18,
+   "wave": 3
+  },
+  {
+   "name": "Commercial & Professional Svc",
+   "companies": 7,
+   "wave": 3
+  },
+  {
+   "name": "Transportation",
+   "companies": 9,
+   "wave": 3
+  },
+  {
+   "name": "Consumer Durables & Apparel",
+   "companies": 5,
+   "wave": 4
+  },
+  {
+   "name": "Consumer Services",
+   "companies": 19,
+   "wave": 4
+  },
+  {
+   "name": "Media and Entertainment",
+   "companies": 4,
+   "wave": 4
+  },
+  {
+   "name": "Consumer Discretionary Distribution & Retail",
+   "companies": 12,
+   "wave": 4
+  },
+  {
+   "name": "Consumer Staples Distribution & Retail",
+   "companies": 8,
+   "wave": 5
+  },
+  {
+   "name": "Food & Beverages",
+   "companies": 22,
+   "wave": 5
+  },
+  {
+   "name": "Household & Personal Products",
+   "companies": 1,
+   "wave": 5
+  },
+  {
+   "name": "Health Care Equipment & Svc",
+   "companies": 12,
+   "wave": 6
+  },
+  {
+   "name": "Pharma, Biotech & Life Science",
+   "companies": 3,
+   "wave": 6
+  },
+  {
+   "name": "Banks",
+   "companies": 10,
+   "wave": 0
+  },
+  {
+   "name": "Financial Services",
+   "companies": 10,
+   "wave": 8
+  },
+  {
+   "name": "Insurance",
+   "companies": 26,
+   "wave": 8
+  },
+  {
+   "name": "Software & Services",
+   "companies": 7,
+   "wave": 6
+  },
+  {
+   "name": "Telecommunication Services",
+   "companies": 4,
+   "wave": 1
+  },
+  {
+   "name": "Utilities",
+   "companies": 6,
+   "wave": 1
+  },
+  {
+   "name": "REITs",
+   "companies": 19,
+   "wave": 7
+  },
+  {
+   "name": "Real Estate Mgmt & Dev't",
+   "companies": 16,
+   "wave": 7
+  }
+ ]
+}

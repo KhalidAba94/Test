@@ -1,0 +1,273 @@
+# Evidence from Armah Sports Company filings (archive: 6022_ARMAH; Nomu symbol 9590 until 30 Aug 2026). Facts only; page = physical PDF page. Units: SR.
+# FY2024 annual and 2023 Q2 interim are scanned; FY2024 annual pages read visually or by OCR.
+ticker: '6022'
+company: Armah Sports Company
+perimeter_changes:
+- event: Single entity with branches (Riyadh, Jeddah); no subsidiaries, business combinations or disposals
+  type: acquisition
+  status: not found
+  date: null
+  consideration: null
+  revenue_contribution: null
+  profit_contribution: null
+  pro_forma_revenue: null
+  period: FY2022-9M2026
+  unit: SR
+  source: 6022_ARMAH/2025_Annual_filed2026-05-07.pdf
+  page: 12
+  quote: 'The financial statements include the Company’s accounts and its following branches:'
+- event: Sublease of leased land at Al Wadi District for 20 years 11 months (total rentals SR 127.6m); right-of-use asset of SR 56.3m
+    derecognised
+  type: disposal
+  date: '2025'
+  consideration: 127600000
+  revenue_contribution: null
+  profit_contribution: 9506244
+  pro_forma_revenue: null
+  period: FY2025
+  unit: SR
+  source: 6022_ARMAH/2025_Annual_filed2026-05-07.pdf
+  page: 26
+  quote: derecognition of the right of use asset of SR 56.3 million and recognition of gain amounting to SR 9.5
+  note: Finance income on the sublease, not revenue.
+segments:
+- period: FY2025
+  segment: 'Single segment (fitness centres): subscriptions 193,709,523; personal training 25,095,715; other 6,097,738'
+  basis: product
+  revenue: 224902976
+  profit: null
+  unit: SR
+  source: 6022_ARMAH/2025_Annual_filed2026-05-07.pdf
+  page: 31
+- period: FY2024
+  segment: Subscriptions 156,312,699; personal training 16,630,633; other 4,516,236
+  basis: product
+  revenue: 177459568
+  profit: null
+  unit: SR
+  source: 6022_ARMAH/2025_Annual_filed2026-05-07.pdf
+  page: 31
+- period: 9M2026
+  segment: Subscriptions 153,363,228; personal training 21,591,621; other 5,083,257
+  basis: product
+  revenue: 180038106
+  profit: null
+  unit: SR
+  source: 6022_ARMAH/2026_Q3_filed2026-11-02.pdf
+  page: 11
+- period: 9M2025
+  segment: Subscriptions 139,872,188; personal training 18,405,239; other 4,540,249 (unaudited and unreviewed)
+  basis: product
+  revenue: 162817676
+  profit: null
+  unit: SR
+  source: 6022_ARMAH/2026_Q3_filed2026-11-02.pdf
+  page: 11
+revenue_drivers:
+- period: FY2025
+  driver: 'Subscription and membership fees (FY2024: 156,312,699)'
+  value: 193709523
+  unit: SR
+  source: 6022_ARMAH/2025_Annual_filed2026-05-07.pdf
+  page: 31
+  quote: Subscription and membership fees 193,709,523 156,312,699
+- period: FY2025
+  driver: 'Personal training fees (FY2024: 16,630,633)'
+  value: 25095715
+  unit: SR
+  source: 6022_ARMAH/2025_Annual_filed2026-05-07.pdf
+  page: 31
+  quote: Personal training fees 25,095,715 16,630,633
+- period: 9M2026
+  driver: 'Subscription and membership (9M2025: 139,872,188)'
+  value: 153363228
+  unit: SR
+  source: 6022_ARMAH/2026_Q3_filed2026-11-02.pdf
+  page: 11
+  quote: Subscription and membership 56,187,748 51,296,717 153,363,228 139,872,188
+- period: FY2025
+  driver: 'Depreciation of right-of-use assets for centres under construction, in other expenses (FY2024: 5,735,122)'
+  value: 5050890
+  unit: SR
+  source: 6022_ARMAH/2025_Annual_filed2026-05-07.pdf
+  page: 33
+  quote: Depreciation of right of use assets (Note 7) * 5,050,890 5,735,122
+- period: 9M2026
+  driver: 'New leases: right-of-use assets added 63,596,789 (9M2025: nil)'
+  value: 63596789
+  unit: SR
+  source: 6022_ARMAH/2026_Q3_filed2026-11-02.pdf
+  page: 7
+  quote: Addition of right of use assets 10 63,596,789 -
+one_offs:
+- period: FY2022
+  item: Rent concessions
+  amount: 6000000
+  unit: SR
+  pnl_line: Other income, net
+  recurring: false
+  source: 6022_ARMAH/2022_Annual_filed2023-11-30.pdf
+  page: 27
+  quote: Rent concessions 6,000,000 -
+- period: FY2022
+  item: Gain on disposal of lease contracts
+  amount: 1284340
+  unit: SR
+  pnl_line: Other income, net
+  recurring: false
+  source: 6022_ARMAH/2022_Annual_filed2023-11-30.pdf
+  page: 27
+  quote: Gain on disposal of lease contracts 1,284,340 -
+- period: FY2022
+  item: Loss on modification of financial liability (loan rescheduled twice in 2022; SR 5.46m of a SR 9.22m loss capitalised)
+  amount: -3753314
+  unit: SR
+  pnl_line: Other income, net
+  recurring: false
+  source: 6022_ARMAH/2022_Annual_filed2023-11-30.pdf
+  page: 27
+  quote: Loss on modification of financial liability (3,753,314) -
+- period: FY2024
+  item: Gain on modification of loans and borrowings
+  amount: 4509242
+  unit: SR
+  pnl_line: Gain on modification of loans and borrowings (below operating profit)
+  recurring: false
+  source: 6022_ARMAH/2025_Annual_filed2026-05-07.pdf
+  page: 8
+  quote: Gain on modification of loans and borrowings - 4,509,242
+- period: FY2025
+  item: Gain on commencement of sublease
+  amount: 9506244
+  unit: SR
+  pnl_line: Gain on commencement of sublease (below operating profit)
+  recurring: false
+  source: 6022_ARMAH/2025_Annual_filed2026-05-07.pdf
+  page: 8
+  quote: Gain on commencement of sublease 8 9,506,244 -
+- period: FY2025
+  item: Listing fees and related expenses
+  amount: -1458358
+  unit: SR
+  pnl_line: Other expenses, net
+  recurring: false
+  source: 6022_ARMAH/2025_Annual_filed2026-05-07.pdf
+  page: 33
+  quote: Listing fees and related expenses 1,458,358 -
+- period: 9M2025
+  item: Gain on commencement of sublease (in operating profit in the 2026 Q3 presentation)
+  amount: 9506244
+  unit: SR
+  pnl_line: Gain on commencement of sublease
+  recurring: false
+  source: 6022_ARMAH/2026_Q3_filed2026-11-02.pdf
+  page: 4
+  quote: Gain on commencement of sublease 11 - - - 9,506,244
+- period: 9M2026
+  item: Listing fees and related expenses (transfer to the Main Market)
+  amount: -4197481
+  unit: SR
+  pnl_line: Listing fees and related expenses
+  recurring: false
+  source: 6022_ARMAH/2026_Q3_filed2026-11-02.pdf
+  page: 4
+  quote: Listing fees and related expenses (3,152,861) - (4,197,481) -
+- period: FY2023
+  item: Other income of 1,886,477 (re-presented in the FY2024 annual) is not explained; not treated as a one-off
+  amount: 1886477
+  unit: SR
+  pnl_line: Other (expense) / income, net
+  recurring: null
+  source: 6022_ARMAH/2024_Annual_filed2025-03-05.pdf
+  page: 32
+  quote: Other expense / (income) 390,645 (1,886,477)
+restatements:
+- period_restated: FY2022 and 1 Jan 2022 (in FY2023 annual)
+  item: Statements restated (note 29)
+  from: null
+  to: null
+  unit: SR
+  reason: FY2023 annual note 29; FY2022 revenue, profit and balance sheet used are the restated columns
+  source: 6022_ARMAH/2023_Annual_filed2024-04-02.pdf
+  page: 7
+  quote: December 31, December 31, January 1,
+- period_restated: FY2023 (in FY2024 annual)
+  item: Cost of revenue 49,457,277 to 51,634,369 (re-presentation, note 31); profit unchanged
+  from: -49457277
+  to: -51634369
+  unit: SR
+  reason: FY2024 annual note 31 (reclassification)
+  source: 6022_ARMAH/2024_Annual_filed2025-03-05.pdf
+  page: 8
+  quote: (Refer Note 31)
+- period_restated: FY2024 and 1 Jan 2024 (in FY2025 annual)
+  item: PP&E, equity, cost of revenue, CFO
+  from: 37841863
+  to: 38251674
+  unit: SR
+  reason: 'FY2025 annual note 32: loan-modification effects and right-of-use depreciation capitalised during construction reversed (CMA/SOCPA);
+    finance income received moved to investing'
+  source: 6022_ARMAH/2025_Annual_filed2026-05-07.pdf
+  page: 40
+  quote: the Company received official communication from the Capital Market Authority (CMA)
+significant_events:
+- date: '2023'
+  event: 'Capital increase: proceeds from issuance of new shares SR 109.9m'
+  financial_effect: Share capital 287.5m to 328.6m; share premium 68.9m
+  source: 6022_ARMAH/2023_Annual_filed2024-04-02.pdf
+  page: 10
+  quote: Proceeds from issuance of new shares 109,922,083 -
+- date: '2026-08-30'
+  event: Shares started trading on the Main Market (symbol 6022) after transfer from Nomu
+  financial_effect: Listing fees SR 4.2m in 9M 2026
+  source: 6022_ARMAH/2026_Q3_filed2026-11-02.pdf
+  page: 8
+  quote: the Company's shares commenced trading on the
+- date: FY2022-FY2025
+  event: Land carried under the revaluation model; revaluation gains in OCI of SR 14.1m (2022), 20.8m (2023), 62.1m (2024), 20.4m (2025)
+  financial_effect: Revaluation surplus SR 117.5m at end-2025
+  source: 6022_ARMAH/2025_Annual_filed2026-05-07.pdf
+  page: 8
+  quote: Gain on revaluation of land 6 20,359,910 62,138,438
+audit_opinion:
+- period: FY2022
+  opinion: Unmodified (Baker Tilly)
+  emphasis_of_matter: null
+  source: 6022_ARMAH/2022_Annual_filed2023-11-30.pdf
+  page: 3
+- period: FY2023
+  opinion: Unmodified (Baker Tilly)
+  emphasis_of_matter: null
+  source: 6022_ARMAH/2023_Annual_filed2024-04-02.pdf
+  page: 3
+- period: FY2024
+  opinion: Unmodified (Baker Tilly)
+  emphasis_of_matter: null
+  source: 6022_ARMAH/2024_Annual_filed2025-03-05.pdf
+  page: 3
+- period: FY2025
+  opinion: Unmodified (Baker Tilly)
+  emphasis_of_matter: null
+  source: 6022_ARMAH/2025_Annual_filed2026-05-07.pdf
+  page: 3
+- period: 9M2025
+  opinion: Comparative column labelled unaudited and unreviewed (no interim was filed for Q3 2025 while on Nomu)
+  emphasis_of_matter: null
+  source: 6022_ARMAH/2026_Q3_filed2026-11-02.pdf
+  page: 4
+kpis_in_filings:
+- period: FY2022-9M2026
+  kpi: Number of fitness centres, members, same-centre revenue
+  value: null
+  unit: count
+  source: 6022_ARMAH/2025_Annual_filed2026-05-07.pdf
+  page: 12
+  status: not found
+special_extractions:
+- item: No 30 Sep 2025 balance sheet is printed in any PDF; 9M 2025 total assets, borrowings and lease liabilities come only from the
+    2026 Q3 XBRL file; 9M 2025 equity is in the SOCE (p.6) and cash in the cash-flow statement (p.7)
+  source: 6022_ARMAH/2026_Q3_filed2026-11-02.pdf
+  page: 5
+open_questions:
+- Centre openings and member numbers are not disclosed, so the ramp-up of new centres cannot be separated from growth in existing centres.
+- FY2023 other income of SR 1.9m (larger than FY2023 net profit of SR 0.8m) is not explained in the notes.

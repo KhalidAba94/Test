@@ -1,0 +1,496 @@
+ticker: '4190'
+company: Jarir Marketing Company
+perimeter_changes:
+- event: Acquisitions or disposals of consolidated businesses
+  type: acquisition
+  status: not found
+  period: FY2022-9M2026
+  source: 4190_JARIR/2025_Annual_filed2026-03-31.pdf
+  page: 14
+  quote: Subsidiaries in Qatar, UAE, Kuwait, Egypt and Bahrain unchanged (100%) in FY2022-FY2025 note 1; no business combination note.
+- event: Investment of SAR 24.5m for 49% of RIFD Integrated Company, a consumer microfinance start-up (joint venture with Aman and Al Manea)
+  type: new_subsidiary
+  date: 2026 (9M)
+  consideration: 24.5
+  revenue_contribution: null
+  profit_contribution: null
+  pro_forma_revenue: null
+  period: 9M2026
+  unit: SAR m
+  source: 4190_JARIR/2026_Q3_filed2026-11-09.pdf
+  page: 25
+  quote: the Group contributed Saudi Riyals 24.5 million representing a 49% equity interest in RIFD Integrated Company (“RIFD”), a consumer microfinance company
+  note: 'Equity-accounted joint venture: no revenue effect; no share of results shown yet.'
+segments:
+- period: FY2022
+  segment: Retail outlets
+  basis: operating
+  revenue: 7781
+  profit: null
+  unit: SAR m
+  source: 4190_JARIR/2023_Annual_filed2024-03-10.pdf
+  page: 46
+- period: FY2022
+  segment: Wholesale
+  basis: operating
+  revenue: 297
+  profit: null
+  unit: SAR m
+  source: 4190_JARIR/2023_Annual_filed2024-03-10.pdf
+  page: 46
+- period: FY2022
+  segment: E-commerce
+  basis: operating
+  revenue: 1192
+  profit: null
+  unit: SAR m
+  source: 4190_JARIR/2023_Annual_filed2024-03-10.pdf
+  page: 46
+- period: FY2022
+  segment: All other segments
+  basis: operating
+  revenue: 122
+  profit: null
+  unit: SAR m
+  source: 4190_JARIR/2023_Annual_filed2024-03-10.pdf
+  page: 46
+- period: FY2023
+  segment: Retail outlets (gross basis)
+  basis: operating
+  revenue: 8155
+  profit: null
+  unit: SAR m
+  source: 4190_JARIR/2024_Annual_filed2025-03-25.pdf
+  page: 51
+- period: FY2023
+  segment: Wholesale
+  basis: operating
+  revenue: 290
+  profit: null
+  unit: SAR m
+  source: 4190_JARIR/2024_Annual_filed2025-03-25.pdf
+  page: 51
+- period: FY2023
+  segment: E-commerce (gross basis)
+  basis: operating
+  revenue: 2006
+  profit: null
+  unit: SAR m
+  source: 4190_JARIR/2024_Annual_filed2025-03-25.pdf
+  page: 51
+- period: FY2023
+  segment: All other segments
+  basis: operating
+  revenue: 144
+  profit: null
+  unit: SAR m
+  source: 4190_JARIR/2024_Annual_filed2025-03-25.pdf
+  page: 51
+- period: FY2024
+  segment: Retail outlets (net basis; gross 7,957)
+  basis: operating
+  revenue: 7766
+  profit: 730
+  unit: SAR m
+  source: 4190_JARIR/2025_Annual_filed2026-03-31.pdf
+  page: 46
+- period: FY2024
+  segment: Wholesale
+  basis: operating
+  revenue: 264
+  profit: 46
+  unit: SAR m
+  source: 4190_JARIR/2025_Annual_filed2026-03-31.pdf
+  page: 46
+- period: FY2024
+  segment: E-commerce (net basis; gross 2,510)
+  basis: operating
+  revenue: 2489
+  profit: 127
+  unit: SAR m
+  source: 4190_JARIR/2025_Annual_filed2026-03-31.pdf
+  page: 46
+- period: FY2024
+  segment: All other segments
+  basis: operating
+  revenue: 100
+  profit: 102
+  unit: SAR m
+  source: 4190_JARIR/2025_Annual_filed2026-03-31.pdf
+  page: 46
+- period: FY2025
+  segment: Retail outlets
+  basis: operating
+  revenue: 7319
+  profit: 687
+  unit: SAR m
+  source: 4190_JARIR/2025_Annual_filed2026-03-31.pdf
+  page: 46
+- period: FY2025
+  segment: Wholesale
+  basis: operating
+  revenue: 256
+  profit: 45
+  unit: SAR m
+  source: 4190_JARIR/2025_Annual_filed2026-03-31.pdf
+  page: 46
+- period: FY2025
+  segment: E-commerce
+  basis: operating
+  revenue: 3665
+  profit: 230
+  unit: SAR m
+  source: 4190_JARIR/2025_Annual_filed2026-03-31.pdf
+  page: 46
+- period: FY2025
+  segment: All other segments
+  basis: operating
+  revenue: 125
+  profit: 115
+  unit: SAR m
+  source: 4190_JARIR/2025_Annual_filed2026-03-31.pdf
+  page: 46
+- period: 9M2025
+  segment: Retail outlets (net basis)
+  basis: operating
+  revenue: 5464
+  profit: 490
+  unit: SAR m
+  source: 4190_JARIR/2026_Q3_filed2026-11-09.pdf
+  page: 29
+- period: 9M2025
+  segment: Wholesale
+  basis: operating
+  revenue: 205
+  profit: 39
+  unit: SAR m
+  source: 4190_JARIR/2026_Q3_filed2026-11-09.pdf
+  page: 29
+- period: 9M2025
+  segment: E-commerce (net basis)
+  basis: operating
+  revenue: 2402
+  profit: 145
+  unit: SAR m
+  source: 4190_JARIR/2026_Q3_filed2026-11-09.pdf
+  page: 29
+- period: 9M2025
+  segment: All other segments
+  basis: operating
+  revenue: 99
+  profit: 85
+  unit: SAR m
+  source: 4190_JARIR/2026_Q3_filed2026-11-09.pdf
+  page: 29
+- period: 9M2026
+  segment: Retail outlets
+  basis: operating
+  revenue: 5704
+  profit: 553
+  unit: SAR m
+  source: 4190_JARIR/2026_Q3_filed2026-11-09.pdf
+  page: 29
+- period: 9M2026
+  segment: Wholesale
+  basis: operating
+  revenue: 212
+  profit: 43
+  unit: SAR m
+  source: 4190_JARIR/2026_Q3_filed2026-11-09.pdf
+  page: 29
+- period: 9M2026
+  segment: E-commerce
+  basis: operating
+  revenue: 2953
+  profit: 222
+  unit: SAR m
+  source: 4190_JARIR/2026_Q3_filed2026-11-09.pdf
+  page: 29
+- period: 9M2026
+  segment: All other segments
+  basis: operating
+  revenue: 97
+  profit: 68
+  unit: SAR m
+  source: 4190_JARIR/2026_Q3_filed2026-11-09.pdf
+  page: 29
+- period: FY2025
+  segment: 'Smartphones, electronics and accessories (FY2024: 6,270)'
+  basis: product
+  revenue: 7042
+  profit: null
+  unit: SAR m
+  source: 4190_JARIR/2025_Annual_filed2026-03-31.pdf
+  page: 43
+- period: FY2025
+  segment: 'Other IT and digital products and services (FY2024: 3,245)'
+  basis: product
+  revenue: 3250
+  profit: null
+  unit: SAR m
+  source: 4190_JARIR/2025_Annual_filed2026-03-31.pdf
+  page: 43
+- period: FY2025
+  segment: 'Books and office, school and arts supplies (FY2024: 1,104)'
+  basis: product
+  revenue: 1073
+  profit: null
+  unit: SAR m
+  source: 4190_JARIR/2025_Annual_filed2026-03-31.pdf
+  page: 43
+- period: FY2022
+  segment: Kingdom of Saudi Arabia
+  basis: geographic
+  revenue: 8907
+  profit: null
+  unit: SAR m
+  source: 4190_JARIR/2023_Annual_filed2024-03-10.pdf
+  page: 44
+- period: FY2022
+  segment: Other Gulf countries and Egypt
+  basis: geographic
+  revenue: 485
+  profit: null
+  unit: SAR m
+  source: 4190_JARIR/2023_Annual_filed2024-03-10.pdf
+  page: 44
+- period: FY2023
+  segment: Kingdom of Saudi Arabia (gross basis)
+  basis: geographic
+  revenue: 10074
+  profit: null
+  unit: SAR m
+  source: 4190_JARIR/2024_Annual_filed2025-03-25.pdf
+  page: 48
+- period: FY2023
+  segment: Other Gulf countries and Egypt
+  basis: geographic
+  revenue: 521
+  profit: null
+  unit: SAR m
+  source: 4190_JARIR/2024_Annual_filed2025-03-25.pdf
+  page: 48
+- period: FY2024
+  segment: Kingdom of Saudi Arabia (net basis)
+  basis: geographic
+  revenue: 9839
+  profit: null
+  unit: SAR m
+  source: 4190_JARIR/2025_Annual_filed2026-03-31.pdf
+  page: 44
+- period: FY2024
+  segment: Other Gulf countries and Egypt (net basis)
+  basis: geographic
+  revenue: 780
+  profit: null
+  unit: SAR m
+  source: 4190_JARIR/2025_Annual_filed2026-03-31.pdf
+  page: 44
+- period: FY2025
+  segment: Kingdom of Saudi Arabia
+  basis: geographic
+  revenue: 10291
+  profit: null
+  unit: SAR m
+  source: 4190_JARIR/2025_Annual_filed2026-03-31.pdf
+  page: 44
+- period: FY2025
+  segment: Other Gulf countries and Egypt
+  basis: geographic
+  revenue: 1074
+  profit: null
+  unit: SAR m
+  source: 4190_JARIR/2025_Annual_filed2026-03-31.pdf
+  page: 44
+revenue_drivers:
+- period: FY2025
+  driver: E-commerce segment revenue rose to SAR 3,665m from SAR 2,489m; retail outlets fell to SAR 7,319m from SAR 7,766m
+  value: 3665
+  unit: SAR m
+  source: 4190_JARIR/2025_Annual_filed2026-03-31.pdf
+  page: 46
+  quote: Revenue 7,319 256 3,665 125 11,365
+- period: FY2025
+  driver: 'Revenue from other Gulf countries and Egypt SAR 1,074m (FY2024: SAR 780m)'
+  value: 1074
+  unit: SAR m
+  source: 4190_JARIR/2025_Annual_filed2026-03-31.pdf
+  page: 44
+  quote: 10,291 1,074 11,365
+- period: 9M2026
+  driver: 'E-commerce SAR 2,953m (9M 2025: SAR 2,402m); retail outlets SAR 5,704m (SAR 5,464m)'
+  value: 2953
+  unit: SAR m
+  source: 4190_JARIR/2026_Q3_filed2026-11-09.pdf
+  page: 29
+  quote: Revenue 5,704 212 2,953 97 8,966
+- period: FY2022-9M2026
+  driver: Like-for-like (same-showroom) sales
+  status: not found
+  value: null
+  unit: '%'
+  source: 4190_JARIR/2025_Annual_filed2026-03-31.pdf
+  page: null
+  quote: Not disclosed in the annual or interim financial statements in the archive.
+one_offs:
+- period: FY2022
+  item: Capital gain on disposal of the Khobar building (sale and leaseback; price SAR 178.0m)
+  amount: 10.2
+  unit: SAR m
+  pnl_line: Other income, net
+  recurring: false
+  source: 4190_JARIR/2023_Annual_filed2024-03-10.pdf
+  page: 45
+  quote: a capital gain of Saudi Riyals 10.2 million on the disposal of a building owned by the Group, located in Khobar
+  note: '1.1% of FY2022 profit: below the 5% threshold.'
+- period: FY2025
+  item: Gain on disposal of property and equipment (proceeds SAR 45.5m)
+  amount: 10454
+  unit: SAR '000
+  pnl_line: Other income, net
+  recurring: false
+  source: 4190_JARIR/2025_Annual_filed2026-03-31.pdf
+  page: 13
+  quote: Gain on disposal of property and equipment (10,454) (67)
+  note: 1.0% of FY2025 profit; booked in 9M 2025 (SAR 10.9m, 2026 Q3 p.8).
+- period: 9M2025
+  item: Gain on sale of property and equipment (proceeds SAR 45.5m)
+  amount: 10868
+  unit: SAR '000
+  pnl_line: Other income, net
+  recurring: false
+  source: 4190_JARIR/2026_Q3_filed2026-11-09.pdf
+  page: 8
+  quote: Gain on sale of property and equipment (166) (10,868)
+restatements:
+- period_restated: FY2024
+  item: Revenue and cost of revenue re-presented on a net (agent) basis for certain service-provider and vendor arrangements (revenue 10,830,921 -> 10,619,263)
+  from: 10830921
+  to: 10619263
+  unit: SAR '000
+  reason: IFRS 15 principal/agent reassessment; gross profit unchanged (note 38)
+  source: 4190_JARIR/2025_Annual_filed2026-03-31.pdf
+  page: 58
+  quote: the presentation of revenue on a net basis, reflecting the margin earned by the Group, would reflect the economic substance
+- period_restated: 9M2025
+  item: Same re-presentation (revenue 8,353,051 -> 8,169,883)
+  from: 8353051
+  to: 8169883
+  unit: SAR '000
+  reason: IFRS 15 net presentation; gross profit unchanged (note 16)
+  source: 4190_JARIR/2026_Q3_filed2026-11-09.pdf
+  page: 32
+  quote: Certain comparative information for the three-month and nine-month periods ended September 30, 2025 has been re-presented
+- period_restated: FY2022-FY2023
+  item: 'Not re-presented: FY2022 and FY2023 revenue remain on the gross basis'
+  from: null
+  to: null
+  unit: SAR '000
+  reason: Only the immediately preceding year was re-presented
+  source: 4190_JARIR/2025_Annual_filed2026-03-31.pdf
+  page: 58
+  quote: Comparative information (for the year ended December 31, 2024) has been re-presented to conform with the current-period presentation
+significant_events:
+- date: '2024'
+  event: 'Auditor change: FY2023 audited by another auditor (PwC); EY from FY2024'
+  financial_effect: None
+  source: 4190_JARIR/2024_Annual_filed2025-03-25.pdf
+  page: 6
+  quote: The consolidated financial statements of the Group for the year ended 31 December 2023 were audited by another auditor
+- date: '2025-12-31'
+  event: Egypt subsidiary (real estate) not treated as hyperinflationary; IAS 29 may apply in future
+  financial_effect: None in FY2022-FY2025
+  source: 4190_JARIR/2025_Annual_filed2026-03-31.pdf
+  page: 56
+  quote: it is our view that Egypt was not considered hyperinflationary as at December 31, 2025
+- date: 2025-2026
+  event: Dividends paid SAR 1,032m in FY2025 (SAR 996m FY2024) and SAR 804m in 9M 2026 (SAR 696m)
+  financial_effect: Equity stable at about SAR 1.8bn
+  source: 4190_JARIR/2026_Q3_filed2026-11-09.pdf
+  page: 8
+  quote: Dividends paid 6 (804,000) (696,000)
+audit_opinion:
+- period: FY2022
+  opinion: Unmodified (PricewaterhouseCoopers)
+  emphasis_of_matter: none
+  source: 4190_JARIR/2022_Annual_filed2023-03-16.pdf
+  page: 3
+- period: FY2023
+  opinion: Unmodified (PricewaterhouseCoopers)
+  emphasis_of_matter: none
+  source: 4190_JARIR/2023_Annual_filed2024-03-10.pdf
+  page: 3
+- period: FY2024
+  opinion: 'Unmodified (EY); Other Matter: FY2023 audited by another auditor'
+  emphasis_of_matter: none
+  source: 4190_JARIR/2024_Annual_filed2025-03-25.pdf
+  page: 6
+- period: FY2025
+  opinion: Unmodified (EY)
+  emphasis_of_matter: none
+  source: 4190_JARIR/2025_Annual_filed2026-03-31.pdf
+  page: 3
+- period: 9M2026
+  opinion: Review conclusion unmodified (EY)
+  emphasis_of_matter: none
+  source: 4190_JARIR/2026_Q3_filed2026-11-09.pdf
+  page: 3
+kpis_in_filings:
+- period: 31 Dec 2021
+  kpi: Retail showrooms (Saudi Arabia and other Gulf countries)
+  value: 67
+  unit: count
+  source: 4190_JARIR/2022_Annual_filed2023-03-16.pdf
+  page: 12
+- period: 31 Dec 2022
+  kpi: Retail showrooms
+  value: 68
+  unit: count
+  source: 4190_JARIR/2022_Annual_filed2023-03-16.pdf
+  page: 12
+- period: 31 Dec 2023
+  kpi: Retail showrooms
+  value: 70
+  unit: count
+  source: 4190_JARIR/2023_Annual_filed2024-03-10.pdf
+  page: 13
+- period: 31 Dec 2024
+  kpi: Retail showrooms (the 2025 Q3 interim gives 72 for end-2024)
+  value: 73
+  unit: count
+  source: 4190_JARIR/2024_Annual_filed2025-03-25.pdf
+  page: 14
+- period: 31 Dec 2025
+  kpi: Retail showrooms
+  value: 75
+  unit: count
+  source: 4190_JARIR/2025_Annual_filed2026-03-31.pdf
+  page: 14
+- period: 30 Sep 2025
+  kpi: Retail showrooms
+  value: 74
+  unit: count
+  source: 4190_JARIR/2025_Q3_filed2025-11-06.pdf
+  page: 9
+- period: 30 Sep 2026
+  kpi: Retail showrooms
+  value: 79
+  unit: count
+  source: 4190_JARIR/2026_Q3_filed2026-11-09.pdf
+  page: 9
+special_extractions:
+- name: Investment-property spend (IP_CAPEX, cash line)
+  unit: SAR '000
+  values:
+    FY2022: 6063
+    FY2023: 3980
+    FY2024: 393
+    FY2025: 0
+    9M2025: 0
+    9M2026: 390
+  source: 4190_JARIR/2023_Annual_filed2024-03-10.pdf p.12; 4190_JARIR/2024_Annual_filed2025-03-25.pdf p.13; 4190_JARIR/2025_Annual_filed2026-03-31.pdf p.13; 4190_JARIR/2026_Q3_filed2026-11-09.pdf
+    p.8
+open_questions:
+- Revenue from new showrooms and same-showroom sales growth are not disclosed.
+- The end-2024 showroom count is 73 in the FY2024 and FY2025 annuals but 72 in the 2025 Q3 interim.
+- Kuwaiti dinar and Egyptian pound translation effects are not disclosed (other Gulf countries and Egypt were 9.5% of FY2025 revenue).

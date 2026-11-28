@@ -1,0 +1,212 @@
+ticker: '2050'
+headline: 'Savola became a smaller, Saudi-focused food and retail group: revenue fell from SAR 28,055m (FY2022) to SAR 23,046m (FY2024) as Iran, Sudan and Turkey were exited and shown
+  as discontinued, then rose 13.2% to SAR 26,081m in FY2025 after United Sugar Egypt was consolidated; FY2024 attributable profit of SAR 9,974m was mostly the SAR 11,555m gain on handing
+  the Almarai stake to shareholders, and in 9M 2026 revenue rose 3.1% while attributable profit fell 22.2% against a period that held a SAR 247m zakat reversal.'
+lfl_basis:
+  definition_used: Standard bridge on IFRS revenue from continuing operations. Each year is taken from the latest filing, and each later filing re-presented the prior year for newly
+    discontinued businesses, so the FY2023/FY2022 and FY2024/FY2023 comparisons mix perimeters (Iran and Sudan in FY2022 only; Turkey in FY2023 only). The removed prior-year revenue
+    is not disclosed, so organic growth is not determinable for those years; the company-consistent growth on one filing is given in the bridge notes. FY2025 includes United Sugar Company
+    Egypt from 31 Dec 2024 without its revenue being disclosed. Hyperinflation (IAS 29) uplifts are disclosed by country and are bridged for Turkey. No store or restaurant data are given,
+    so like-for-like growth is not determinable.
+  perimeter_changes:
+  - event: Savola Morocco sold (held for sale at end-2022)
+    date: '2023'
+    effect: revenue not disclosed; gain SAR 18.7m
+    source: 2050_SAVOLA_GROUP/2023_Annual_filed2024-03-26.pdf p.66
+  - event: Iran (Central Asian subsidiaries) sold and Sudan abandoned; both discontinued and FY2023 re-presented
+    date: '2024-12-31'
+    effect: FY2023 revenue removed SAR 2,668.8m (Iran 2,519.9m, Sudan 148.9m); FY2022 amount not disclosed
+    source: 2050_SAVOLA_GROUP/2024_Annual_filed2025-03-15.pdf p.75-78
+  - event: United Sugar Company Egypt consolidated (step acquisition)
+    date: '2024-12-31'
+    effect: FY2025 revenue contribution not disclosed
+    source: 2050_SAVOLA_GROUP/2024_Annual_filed2025-03-15.pdf p.67-68
+  - event: Almarai stake (34.52% associate) distributed in kind
+    date: '2024-12-12'
+    effect: no revenue effect; share of results falls; gain SAR 11,554.7m
+    source: 2050_SAVOLA_GROUP/2024_Annual_filed2025-03-15.pdf p.58
+  - event: KUGU (Turkey) exchanged for 15% of Tiryaki; discontinued and FY2024 re-presented
+    date: '2025'
+    effect: FY2024 revenue removed SAR 941.1m; FY2023 amount not disclosed
+    source: 2050_SAVOLA_GROUP/2025_Annual_filed2026-03-09.pdf p.77
+  - event: Sudan operations sold for SAR 52.5m
+    date: '2026'
+    effect: discontinued in both 9M periods; gain SAR 42.6m
+    source: 2050_SAVOLA_GROUP/2026_Q3_filed2026-11-09.pdf p.16
+  - event: Al Mehbaj (spices and nuts) acquired for SAR 11.4m
+    date: '2026-07-12'
+    effect: immaterial
+    source: 2050_SAVOLA_GROUP/2026_Q3_filed2026-11-09.pdf p.33
+  capacity_changes:
+  - event: Panda and Herfy network changes
+    date: 2022 to 2026
+    effect: not disclosed in the financial statements
+    source: 2050_SAVOLA_GROUP/2025_Annual_filed2026-03-09.pdf p.89-91
+  fx_exposure: 'Revenue by region (rounded, as printed): FY2025 Arabia (GCC and Levant) SAR 19.7bn, Egypt SAR 5.7bn, other SAR 0.7bn. Egypt (pound devaluation) and until their exit Turkey,
+    Iran and Sudan (IAS 29) carry the currency exposure; no constant-currency figures.'
+  price_volume_support: 'Not determinable: no volumes, prices, store counts or like-for-like sales in the filings.'
+  confidence: Low (perimeter not determinable in three of four comparisons)
+price_volume:
+- period: 9M 2026 vs 9M 2025
+  text: Food Processing external revenue rose 7.0% (SAR 9,604m to 10,272m), Retail (Panda) was flat at -0.3% (SAR 8,562m to 8,534m), Food Services (Herfy) fell 4.7% and Frozen Food rose
+    0.5%. Prices, volumes and store counts are not disclosed.
+  basis: disclosed (segment revenue); split not determinable
+  confidence: High for the amounts
+  source: 2050_SAVOLA_GROUP/2026_Q3_filed2026-11-09.pdf p.28-29
+  refs:
+  - 2050-9M2026-REV
+  - 2050-9M2025-REV
+- period: FY2025 vs FY2024
+  text: Food Processing rose 22.0% (SAR 10,606m to 12,943m), including United Sugar Egypt for the first time; Retail rose 6.6% (SAR 10,620m to 11,323m); Food Services fell 4.1% and Frozen
+    Food rose 5.5%. Egypt revenue rose from SAR 3.8bn to SAR 5.7bn.
+  basis: disclosed (segment and regional revenue); split not determinable
+  confidence: High for the amounts
+  source: 2050_SAVOLA_GROUP/2025_Annual_filed2026-03-09.pdf p.90-91
+  refs:
+  - 2050-FY2025-REV
+  - 2050-FY2024-REV
+profit_and_margin:
+  drivers:
+  - period: FY2023
+    driver: 'Reported revenue -13.9%, mostly because FY2023 (as re-presented) excludes Iran and Sudan; on the original FY2023 basis revenue fell 4.4%. Attributable profit rose 21.1%
+      to SAR 899m: gross margin rose to 20.9% (17.4%), the share of equity-accounted results (mainly Almarai) rose to SAR 719m (SAR 661m) and an impairment reversal of SAR 130m was booked.
+      We calculate an EBITDA margin of 9.8% and a net margin of 3.7%.'
+    source: 2050_SAVOLA_GROUP/2024_Annual_filed2025-03-15.pdf p.10-11, p.93; 2050_SAVOLA_GROUP/2023_Annual_filed2024-03-26.pdf p.9
+    refs:
+    - 2050-FY2023-REV
+    - 2050-FY2023-NI_ATTR
+    - 2050-FY2023-GP
+    - 2050-FY2023-SHARE_JV
+  - period: FY2024
+    driver: Revenue -4.6% as re-presented (Turkey removed from FY2024 only); Retail rose 2.8%. Attributable profit of SAR 9,974m includes the SAR 11,555m gain on distributing the Almarai
+      stake, a SAR 139m loss on remeasuring USCE, impairments of SAR 386m in continuing operations (goodwill SAR 254m) and a SAR 1,383m attributable loss from discontinued operations
+      (Iran sale and Sudan abandonment, including recycled translation reserves). The company reports attributable profit from continuing operations of SAR 11,357m. Margins and ROE for
+      FY2024 are distorted by the gain.
+    source: 2050_SAVOLA_GROUP/2025_Annual_filed2026-03-09.pdf p.11-12, p.77, p.95
+    refs:
+    - 2050-FY2024-NI_ATTR
+    - 2050-FY2024-PBT
+    - 2050-FY2024-IMPAIR_CF
+    - 2050-FY2024-REV
+  - period: FY2025
+    driver: Revenue +13.2%, led by Food Processing (+22.0%, with United Sugar Egypt consolidated) and Retail (+6.6%). Without Almarai the share of equity-accounted results fell to SAR
+      51.8m (SAR 809m); finance cost fell to SAR 481m (SAR 993m) after borrowings were cut to SAR 1,894m. A net zakat credit of SAR 217m (ZATCA reversal of SAR 247m) lifted attributable
+      profit to SAR 874m. Herfy lost SAR 77m. We calculate an EBITDA margin of 8.9% and ROE of 17.3%.
+    source: 2050_SAVOLA_GROUP/2025_Annual_filed2026-03-09.pdf p.11-12, p.86-87, p.90
+    refs:
+    - 2050-FY2025-REV
+    - 2050-FY2025-NI_ATTR
+    - 2050-FY2025-ZAKAT_TAX
+    - 2050-FY2025-SHARE_JV
+    - 2050-FY2025-FIN_COST
+  - period: 9M2026
+    driver: Revenue +3.1%; profit before zakat and tax rose 9.3% (SAR 660m to SAR 721m) as administrative expenses fell SAR 50m, but zakat and tax was a SAR 154m charge against a SAR
+      97m credit in 9M 2025 (the ZATCA reversal), so attributable profit fell 22.2% to SAR 530m despite a SAR 43.6m profit from discontinued Sudan. Retail segment profit fell to SAR
+      15.5m (SAR 72.2m). We calculate an EBITDA margin of 9.2% (9.1%); operating cash flow rose to SAR 1,469m (SAR 526m).
+    source: 2050_SAVOLA_GROUP/2026_Q3_filed2026-11-09.pdf p.6-7, p.10, p.28-29
+    refs:
+    - 2050-9M2026-REV
+    - 2050-9M2026-NI_ATTR
+    - 2050-9M2026-PBT
+    - 2050-9M2026-ZAKAT_TAX
+    - 2050-9M2025-ZAKAT_TAX
+    - 2050-9M2026-CFO
+  one_offs:
+  - item: Gain on sale of investments (KECD)
+    period: FY2022
+    amount_sar_m: 41.9
+    line: Gain on sale of investments (below net finance cost)
+    source: 2050_SAVOLA_GROUP/2023_Annual_filed2024-03-26.pdf p.9
+    tax_nci: '5.6% of attributable profit, an investment disposal; zakat effect and minority share not disclosed: not determinable, profit kept as reported'
+  - item: Gain on sale of Savola Morocco (held for sale)
+    period: FY2023
+    amount_sar_m: 18.7
+    line: Gain on sale of assets and liabilities held for sale
+    source: 2050_SAVOLA_GROUP/2024_Annual_filed2025-03-15.pdf p.10
+    tax_nci: 'Under 5% of attributable profit (2.1%), listed because the disposal of a business is outside normal operations; zakat effect not disclosed: profit kept as reported'
+  - item: Gain on in-kind distribution of the Almarai stake
+    period: FY2024
+    amount_sar_m: 11554.7
+    line: Gain on distribution of investment in equity-accounted investee
+    source: 2050_SAVOLA_GROUP/2025_Annual_filed2026-03-09.pdf p.11; 2050_SAVOLA_GROUP/2024_Annual_filed2025-03-15.pdf p.58
+    tax_nci: 'Booked in the Investments segment, where profit before and after non-controlling interests is the same (SAR 11,593.7m), so the minority share is nil; the zakat effect is
+      not disclosed (FY2024 zakat SAR 350.0m is not split): not determinable, profit kept as reported'
+  - item: Loss on derecognition of the USCE associate (step acquisition)
+    period: FY2024
+    amount_sar_m: -139.0
+    line: Loss on derecognition of investment in equity-accounted investee
+    source: 2050_SAVOLA_GROUP/2025_Annual_filed2026-03-09.pdf p.11
+    tax_nci: 'A loss on an investment stake (remeasurement on the step acquisition), outside normal operations; tax effect and minority share not disclosed: not determinable, profit kept as reported'
+developments:
+- date: '2022-12-29'
+  category: M&A
+  text: Sold its stakes in Knowledge Economic City and KEC Developers to Taiba for SAR 459m.
+  source: 2050_SAVOLA_GROUP/2022_Annual_filed2023-03-30.pdf p.59
+- date: '2023'
+  category: M&A
+  text: Completed the sale of Savola Morocco (net consideration SAR 41.4m).
+  source: 2050_SAVOLA_GROUP/2023_Annual_filed2024-03-26.pdf p.66
+- date: '2024'
+  category: financing
+  text: Raised SAR 6.0bn through a rights issue and bought back its SAR 1bn sukuk; borrowings fell from SAR 8,644m to SAR 3,404m.
+  source: 2050_SAVOLA_GROUP/2024_Annual_filed2025-03-15.pdf p.13, p.75
+- date: '2024-12-12'
+  category: M&A
+  text: Cut share capital from SAR 11.3bn to SAR 3bn and distributed its whole Almarai stake to shareholders (fair value SAR 21.1bn plus SAR 12.75bn in-kind dividend).
+  source: 2050_SAVOLA_GROUP/2024_Annual_filed2025-03-15.pdf p.58
+- date: '2024-12-31'
+  category: M&A
+  text: Sold the Iran operations for SAR 705m, abandoned Sudan and took control of United Sugar Company Egypt.
+  source: 2050_SAVOLA_GROUP/2024_Annual_filed2025-03-15.pdf p.67, p.76, p.78
+- date: '2025'
+  category: M&A
+  text: Exchanged KUGU (Turkey) for a 15% stake in Tiryaki Anadolu Holding (agreed equity value SAR 274.6m).
+  source: 2050_SAVOLA_GROUP/2025_Annual_filed2026-03-09.pdf p.77
+- date: '2025'
+  category: regulation
+  text: ZATCA finalised the Company's zakat for 2019-2024, reversing SAR 247.3m of accruals.
+  source: 2050_SAVOLA_GROUP/2025_Annual_filed2026-03-09.pdf p.87
+- date: '2026'
+  category: M&A
+  text: Sold the Sudan operations (SAR 52.5m, gain SAR 42.6m) and bought Al Mehbaj (SAR 11.4m).
+  source: 2050_SAVOLA_GROUP/2026_Q3_filed2026-11-09.pdf p.16, p.33
+what_it_means:
+  improved: Borrowings fell from SAR 8,644m (FY2023) to SAR 1,894m (FY2025) and finance cost halved; FY2025 revenue rose 13.2% and ROE was 17.3%.
+  weakened: Herfy's revenue fell every year (SAR 1,213m in FY2022 to SAR 1,057m in FY2025) with segment losses in FY2024 and FY2025, Panda's 9M 2026 revenue was flat, and 9M 2026 attributable
+    profit fell 22.2%.
+  why: The group exited Iran, Sudan, Turkey and Almarai, which removed revenue, the share of Almarai's profit and hyperinflation effects; the Almarai distribution produced a one-off
+    SAR 11,555m gain in FY2024, and FY2025 profit relied on a SAR 247m zakat reversal.
+  uncertain: How much FY2025 growth came from consolidating United Sugar Egypt is not disclosed, and the changing perimeter leaves organic growth not determinable for FY2023 to FY2025.
+confidence_overall: Medium
+data_notes:
+- >-
+  Discontinued operations are below operating income, so they are not in EBITDA and are not one-offs in the One_offs register; they are
+  shown here for information: FY2024 loss from discontinued operations SAR -1,440.2m after tax (Iran sale, Sudan abandonment, Turkey;
+  attributable share SAR -1,383.0m; 2025 annual p.11-12, p.77) and a 9M 2026 gain of SAR 42.6m on disposing of the Sudan operations
+  (2026 Q3 p.16). Profit is kept as reported.
+- 'Discontinued operations change the perimeter between years: FY2023 (FY2024 annual) excludes Iran and Sudan, FY2024 (FY2025 annual) excludes Turkey, 9M 2025 (2026 Q3 interim) excludes Turkey
+  and Sudan; FY2022 includes all three. Reported growth for FY2023/FY2022 (-13.9%) and FY2024/FY2023 (-4.6%) therefore mixes perimeters.'
+- 'Restated figures (R): FY2022 finance cost and CFO (reclassifications, FY2023 annual); FY2023 income statement (Iran and Sudan discontinued), CFO (lease interest paid moved into operating),
+  equity attributable (NCI reallocation) and current borrowings (accrued financial charges); FY2024 income statement (Turkey discontinued); 9M 2025 income statement and impairment (Turkey
+  and Sudan discontinued). The reasons are given in the Restatements sheet.'
+- The FY2025 annual restates FY2024 non-controlling interests by SAR -10.4m (total equity 5,579.1 to 5,568.6, also at 1 Jan 2024) without a note; FY2023 equity is kept from the FY2024
+  annual per the latest-restated rule.
+- 'Corrected from the PDF balance sheets (e.g. FY2023 annual p.8, FY2025 annual p.9-10): debt includes current loans and borrowings (the XBRL had the non-current line only; e.g. FY2025 SAR 1,893.9m,
+  where the XBRL had nil); lease liabilities are read for every period (missing from the XBRL); FY2022 cash is cash and cash equivalents of SAR 812.5m (the XBRL value was the term deposits); FY2021
+  cash is calculated as cash and bank balances less deposits over three months (C).'
+- 'Net debt deducts deposits with commercial banks held outside cash (original maturities over three months): SAR 623m at end-2022 (FY2023 annual note 13, p.61), SAR 738m at end-2023 (FY2024
+  annual note 13, p.67), SAR 547m at end-2024 and SAR 53.5m at end-2025 (FY2025 annual note 11, p.63; the end-2025 line also holds Treasury bills). Net debt was therefore SAR 10,432m, SAR 10,215m,
+  SAR 4,214m and SAR 4,889m, and net debt to EBITDA 5.1x (FY2022), 4.3x (FY2023), 0.3x (FY2024, on EBITDA that includes the Almarai gain) and 2.1x (FY2025). No deposit is deducted at 30 Sep 2026: the SAR 665.2m of current investments at amortised cost mixes Ministry of Finance sukuk, Treasury bills and term deposits with no split (the cash flow suggests about SAR 144m of deposits).'
+- Share of results of equity-accounted investees is shown inside "results from operating activities" on the face; our operating income removes it. Gains below net finance cost (FY2022
+  investments SAR 41.9m, FY2023 Morocco SAR 18.7m, FY2024 Almarai SAR 11,554.7m and USCE -SAR 139.0m) sit inside our operating income and are listed as one-offs; FY2024 operating margin
+  (52.0%) and EBITDA are distorted by the Almarai gain, which EBITDA excluding one-offs removes (SAR 2,122m in FY2024).
+- Cash flow statements include discontinued operations; the income statement shows continuing operations only. FY2023 CFO (SAR 1,539.4m) includes lease interest paid in operating activities
+  (re-presented).
+- Primary statements are scanned in the FY2024 and FY2025 annuals and both Q3 interims; the 2026 Q3 segment note (p.28-29) is printed sideways.
+- 'Not treated as one-offs under the one-off rule (shown for information): FY2024 impairments of PP&E, right-of-use assets and goodwill of SAR 390.4m (SAR 386.4m in continuing operations; outside
+  EBITDA; FY2025 annual p.95), and the SAR 247.3m reversal of prior-year zakat accruals after the ZATCA final assessment, booked in FY2025 and 9M 2025 (FY2025 annual p.87). We calculate attributable
+  profit excluding the zakat reversal at SAR 627m for FY2025 and SAR 433m for 9M 2025.'
+- 'Cross-holdings with other listed companies: Savola equity-accounted 34.52% of Almarai until 12 Dec 2024, so its share of Almarai''s profit, SAR 607.5m (FY2022), SAR 707.4m (FY2023) and about
+  SAR 771m (FY2024, to 12 Dec 2024), is also in Almarai''s profit (15.9%, 16.7% and 5.2% of Supporting group profit), and the FY2024 distribution gain of SAR 11,554.7m is a gain on that stake;
+  Savola consolidates Herfy (49%), whose revenue (SAR 1,213.4m, SAR 1,148.0m, SAR 1,101.8m and SAR 1,056.7m in FY2022-FY2025) is also in the FnB group; and Panda''s grocery-retail revenue (SAR 10.1bn
+  to SAR 11.3bn a year) sits in the Supporting group, not with the Retailers.'

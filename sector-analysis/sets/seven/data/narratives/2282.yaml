@@ -1,0 +1,232 @@
+ticker: '2282'
+headline: >-
+  Revenue fell every year from SAR 284m (FY2022) to SAR 187m (FY2025) as wholesale bottled-water sales collapsed, and a SAR 13.7m loss
+  on its share portfolio turned FY2025 into a SAR 2.7m loss; in 9M 2026 revenue rose 21.1% to SAR 175m on retail water and egg sales
+  and attributable profit rose 51.2% to SAR 18.0m.
+lfl_basis:
+  definition_used: >-
+    Standard bridge on IFRS revenue. Naqi is a single Saudi company operating through branches, with no subsidiaries, acquisitions or
+    disposals, and all business in SAR, so perimeter and FX effects are nil and organic growth equals reported growth. FY2022 revenue
+    is the FY2023 annual comparative, which already includes transportation revenue reclassified from other income. Naqi gives no volumes,
+    capacity or same-store measure, so the new-capacity step and like-for-like growth are not determinable.
+  perimeter_changes:
+  - event: >-
+      None: single legal entity; branch registrations added in Jeddah, Jazan and Dammam (2023) and Hail and Tabuk (2024)
+    date: 2023-2024
+    effect: nil (no acquisitions)
+    source: 2282_NAQI/2025_Annual_filed2026-04-08.pdf p.12
+  capacity_changes:
+  - event: >-
+      Egg production (breeder hens) started in 2023, reduced in 2025 and expanded again in 2026 (breeder purchases SAR 7.4m in 9M 2026)
+    date: 2023-2026
+    effect: >-
+      egg revenue SAR 1.4m (FY2023), SAR 9.3m (FY2024), SAR 1.9m (FY2025), SAR 16.1m (9M 2026) vs SAR 2.0m (9M 2025), disclosed
+    source: 2282_NAQI/2025_Annual_filed2026-04-08.pdf p.46; 2282_NAQI/2026_Q3_filed2026-11-16.pdf p.17
+  - event: >-
+      Two new bottling lines and a Riyadh plant under construction with related-party contractors (Riyadh plant due Q1 2027)
+    date: 2025-2027
+    effect: not yet in service
+    source: 2282_NAQI/2026_Q3_filed2026-11-16.pdf p.13
+  fx_exposure: 'None: all operations in Saudi Arabia; export sales SAR 3.1m in FY2025.'
+  price_volume_support: >-
+    Not determinable: revenue is split by channel (retail, wholesale, export), eggs and logistics, but no volumes or prices are given.
+  confidence: Medium (perimeter and FX nil with High confidence; new capacity not determinable)
+price_volume:
+- period: FY2025 vs FY2024
+  text: >-
+    Revenue fell SAR 32.4m (-14.8%). Wholesale bottled water fell 49.3% (SAR 67.7m to SAR 34.3m) and egg sales fell from SAR 9.3m to
+    SAR 1.9m, while retail bottled water rose 7.4% (SAR 133.4m to SAR 143.3m). Volumes and prices are not disclosed, so the split is
+    not determinable.
+  basis: disclosed (revenue by channel); split not determinable
+  confidence: High for the amounts; the split is not determinable
+  source: 2282_NAQI/2025_Annual_filed2026-04-08.pdf p.46
+  refs:
+  - 2282-FY2025-REV
+  - 2282-FY2024-REV
+- period: 9M 2026 vs 9M 2025
+  text: >-
+    Revenue rose SAR 30.4m (+21.1%). Retail bottled water rose 31.8% (SAR 106.2m to SAR 140.0m) and egg sales rose from SAR 2.0m to
+    SAR 16.1m, while wholesale bottled water fell 50.7% (SAR 30.2m to SAR 14.9m). Volumes and prices are not disclosed.
+  basis: disclosed (revenue by channel); split not determinable
+  confidence: High for the amounts; the split is not determinable
+  source: 2282_NAQI/2026_Q3_filed2026-11-16.pdf p.17
+  refs:
+  - 2282-9M2026-REV
+  - 2282-9M2025-REV
+profit_and_margin:
+  drivers:
+  - period: FY2023
+    driver: >-
+      Revenue fell 16.0% to SAR 239m: wholesale bottled water fell 19.0% and retail 14.5%. Gross margin rose to 35.7% (31.7%, we calculate)
+      and the EBITDA margin to 28.0%. Time-deposit income rose to SAR 4.0m (SAR 0.2m). Attributable profit fell 11.8% to SAR 43.0m,
+      a net margin of 18.0%.
+    source: 2282_NAQI/2024_Annual_filed2025-04-10.pdf p.8, p.43; 2282_NAQI/2023_Annual_filed2024-03-07.pdf p.9, p.43
+    refs:
+    - 2282-FY2023-REV
+    - 2282-FY2023-GP
+    - 2282-FY2023-EBITDA_C
+    - 2282-FY2023-FIN_INC
+    - 2282-FY2023-NI_ATTR
+  - period: FY2024
+    driver: >-
+      Revenue fell 8.2% to SAR 219m: wholesale water fell 35.2% while retail water rose 10.5% and egg sales reached SAR 9.3m. The EBITDA
+      margin fell to 24.9%, including an SAR 3.7m gain on selling property, plant and equipment. Attributable profit fell 29.7% to SAR
+      30.2m, a net margin of 13.8%; ROE 11.5%.
+    source: 2282_NAQI/2025_Annual_filed2026-04-08.pdf p.8, p.46, p.48
+    refs:
+    - 2282-FY2024-REV
+    - 2282-FY2024-EBITDA_C
+    - 2282-FY2024-NI_ATTR
+  - period: FY2025
+    driver: >-
+      Revenue fell 14.8% to SAR 187m as wholesale water halved. Gross margin held at 35.9%, but selling costs rose 13.3% and credit-loss
+      provisions to SAR 3.7m (SAR 1.3m). An unrealised loss of SAR 13.7m on the listed-share portfolio, partly offset by SAR 2.0m dividends,
+      cut the EBITDA margin to 11.4% (we calculate, portfolio results included). Naqi reported a loss of SAR 2.7m, a net margin of -1.4%.
+    source: 2282_NAQI/2025_Annual_filed2026-04-08.pdf p.8, p.41, p.46
+    refs:
+    - 2282-FY2025-REV
+    - 2282-FY2025-GP
+    - 2282-FY2025-EBITDA_C
+    - 2282-FY2025-NI_ATTR
+  - period: 9M2026
+    driver: >-
+      Revenue rose 21.1% to SAR 175m and gross profit 15.2%, though gross margin eased to 35.5% (37.3%). The EBITDA margin rose to 22.4%
+      (20.2%), helped by SAR 2.4m of portfolio gains and dividends and an SAR 1.1m gain on selling equipment (disposal gains recur most
+      years); time-deposit income fell to SAR 0.8m (SAR 2.5m). Attributable profit rose 51.2% to SAR 18.0m, a net margin of 10.3%; annualised
+      ROE 8.7%.
+    source: 2282_NAQI/2026_Q3_filed2026-11-16.pdf p.5, p.17
+    refs:
+    - 2282-9M2026-REV
+    - 2282-9M2026-GP
+    - 2282-9M2026-EBITDA_C
+    - 2282-9M2026-FIN_INC
+    - 2282-9M2026-NI_ATTR
+  - period: 9M2026
+    driver: >-
+      Operating cash flow was -SAR 9.8m (9M 2025: +SAR 32.8m) because advances to the main shareholder and raw-material supplier, Saqa
+      United Group, raised the amount due from it to SAR 34.5m (end-2025: SAR 7.3m). With capex of SAR 27.7m, free cash flow was -SAR
+      37.5m (we calculate), and cash fell to SAR 6.6m after the company sold SAR 52.1m of its share portfolio and paid SAR 13.0m of
+      dividends.
+    source: 2282_NAQI/2026_Q3_filed2026-11-16.pdf p.7, p.16
+    refs:
+    - 2282-9M2026-CFO
+    - 2282-9M2025-CFO
+    - 2282-9M2026-FCF
+    - 2282-9M2026-CASH
+  one_offs:
+  - item: Initial public offering costs and first year expenses
+    period: FY2022
+    amount_sar_m: -3.2
+    line: Within operating profit
+    source: 2282_NAQI/2023_Annual_filed2024-03-07.pdf p.9
+    tax_nci: >-
+      IPO costs, 6.6% of attributable profit; zakat effect not disclosed; no non-controlling interests: after-zakat effect not determinable, profit kept as reported
+  - item: Capital gains from disposal of property, plant and equipment
+    period: FY2024
+    amount_sar_m: 3.7
+    line: Other income (re-presented in the FY2025 annual)
+    source: 2282_NAQI/2025_Annual_filed2026-04-08.pdf p.48
+    tax_nci: >-
+      A property, plant and equipment disposal gain of 12.3% of attributable profit (smaller disposal gains recur and are not listed); zakat effect not disclosed; no non-controlling interests: after-zakat effect not determinable, profit kept as reported
+  - item: 'FVTPL shares: unrealised gain (SAR 0.4m) and dividends (SAR 0.2m)'
+    period: FY2024
+    amount_sar_m: 0.6
+    line: Below operating profit, above profit before zakat
+    source: 2282_NAQI/2025_Annual_filed2026-04-08.pdf p.8
+    tax_nci: >-
+      Under 5% of attributable profit but listed because fair-value results on financial investments are outside normal operations (listed in every period); zakat effect not disclosed; no non-controlling interests: after-zakat effect not determinable, profit kept as reported
+  - item: Unrealised loss on listed shares held at fair value through profit or loss
+    period: FY2025
+    amount_sar_m: -13.7
+    line: Below operating profit, above profit before zakat
+    source: 2282_NAQI/2025_Annual_filed2026-04-08.pdf p.8, p.41
+    tax_nci: >-
+      A fair-value result on financial investments; it turns the year into a loss; zakat effect not disclosed; no non-controlling interests: after-zakat effect not determinable, profit kept as reported
+  - item: Dividends (SAR 2.0m) and realised gain on FVTPL shares
+    period: FY2025
+    amount_sar_m: 2.0
+    line: Below operating profit, above profit before zakat
+    source: 2282_NAQI/2025_Annual_filed2026-04-08.pdf p.8
+    tax_nci: >-
+      Results on the listed-share portfolio, listed in every period; zakat effect not disclosed; no non-controlling interests: after-zakat effect not determinable, profit kept as reported
+  - item: Foreign exchange gains
+    period: FY2025
+    amount_sar_m: 1.3
+    line: Other income (note 27)
+    source: 2282_NAQI/2025_Annual_filed2026-04-08.pdf p.48
+    tax_nci: >-
+      Larger than the FY2025 attributable loss of SAR 2.7m; zakat effect not disclosed; no non-controlling interests: after-zakat effect not determinable, profit kept as reported
+  - item: 'FVTPL portfolio: revaluation loss, dividends and realised gain, net'
+    period: 9M2025
+    amount_sar_m: 0.5
+    line: Below operating profit, above profit before zakat
+    source: 2282_NAQI/2026_Q3_filed2026-11-16.pdf p.5
+    tax_nci: >-
+      4.6% of attributable profit, listed so that 9M 2026 and 9M 2025 compare on the same basis; zakat effect not disclosed; no non-controlling interests: after-zakat effect not determinable, profit kept as reported
+  - item: 'FVTPL portfolio: revaluation gain, dividends and realised loss'
+    period: 9M2026
+    amount_sar_m: 2.4
+    line: Below operating profit, above profit before zakat
+    source: 2282_NAQI/2026_Q3_filed2026-11-16.pdf p.5
+    tax_nci: >-
+      13.6% of attributable profit, a fair-value result on financial investments; zakat effect not disclosed; no non-controlling interests: after-zakat effect not determinable, profit kept as reported
+developments:
+- date: '2022-08-15'
+  category: financing
+  text: >-
+    Listing of 30% of the shares on the Saudi Exchange (Tadawul) approved; IPO costs and first-year expenses were SAR 3.2m in FY2022.
+  source: 2282_NAQI/2025_Annual_filed2026-04-08.pdf p.12; 2282_NAQI/2023_Annual_filed2024-03-07.pdf p.9
+- date: 2023-2024
+  category: capacity
+  text: >-
+    New branch registrations in Jeddah, Jazan and Dammam (2023) and Hail and Tabuk (2024); egg production added to the activities.
+  source: 2282_NAQI/2025_Annual_filed2026-04-08.pdf p.12
+- date: '2025-03-27'
+  category: strategy
+  text: >-
+    The board raised the share-portfolio limit to SAR 50m (and to SAR 70m on 19 Nov 2025); the portfolio was SAR 53.4m at end-2025 and
+    SAR 6.4m at 30 Sep 2026 after SAR 52.1m of sales.
+  source: 2282_NAQI/2025_Annual_filed2026-04-08.pdf p.41; 2282_NAQI/2026_Q3_filed2026-11-16.pdf p.16
+- date: 2025-2027
+  category: capacity
+  text: >-
+    Contracts with related parties for two bottling lines (52,000 and 120,000 bottles an hour) and a SAR 19.0m Riyadh plant due in Q1
+    2027.
+  source: 2282_NAQI/2026_Q3_filed2026-11-16.pdf p.13
+- date: '2026-03-03'
+  category: financing
+  text: >-
+    The EGM approved dividends of SAR 2, 3 and 4 per share for 2026-2028; major shareholders holding 70% waived 50-60% of their entitlements.
+  source: 2282_NAQI/2025_Annual_filed2026-04-08.pdf p.53
+what_it_means:
+  improved: >-
+    In 9M 2026 revenue rose 21.1% and attributable profit 51.2%, with retail bottled water up 31.8% and egg sales up from SAR 2.0m to
+    SAR 16.1m.
+  weakened: >-
+    Revenue fell 13.0% a year from FY2022 to FY2025 (CAGR) and the EBITDA margin fell from 26.2% to 11.4%; FY2025 ended in a SAR 2.7m
+    loss, and 9M 2026 operating cash flow was negative.
+  why: >-
+    Wholesale bottled water fell from SAR 128.9m (FY2022) to SAR 34.3m (FY2025) while retail grew only slowly; in FY2025 a SAR 13.7m
+    unrealised loss on listed shares added to the fall in operating profit.
+  uncertain: >-
+    The filings do not explain the wholesale decline or give volumes and prices, and part of 9M 2026 profit came from portfolio gains
+    (SAR 2.4m) and a disposal gain (SAR 1.1m).
+confidence_overall: Medium
+data_notes:
+- >-
+  Corrected from the PDF statements: cash and cash equivalents include short-term time deposits (the XBRL took only bank balances, e.g. FY2024 SAR
+  35.5m vs SAR 77.6m); capex includes intangible purchases (FY2023 SAR 4.1m); D&A includes right-of-use and biological-asset (breeder-hen)
+  amortisation, which we keep in D&A (FY2024 SAR 2.2m); finance income (time/murabaha deposits) added for every period; the FY2022 IPO-cost
+  add-back was removed from impairments.
+- >-
+  Re-presentations: FY2022 revenue SAR 274.6m became SAR 284.3m in the FY2023 annual (transportation revenue moved from other income,
+  note 31); FY2024 disposal gains moved into other income in the FY2025 annual (note 34); FY2023 advance payments moved into property,
+  plant and equipment (FY2024 note 31). Net profit unchanged.
+- >-
+  Our operating income (PBT + finance cost - time-deposit income) includes the listed-share portfolio results (revaluation, dividends,
+  realised gains) and disposal gains shown below Naqi's "profit from operation"; EBITDA excluding one-offs removes the portfolio results
+  in every period from FY2024, the FY2022 IPO costs, the FY2024 SAR 3.7m disposal gain and the FY2025 FX gain; smaller disposal gains
+  (FY2025 SAR 0.8m, 9M 2026 SAR 1.1m) recur most years and stay in EBITDA.
+- 'Capex excludes purchases of biological assets (breeder hens: SAR 2.6m in FY2025, SAR 7.4m in 9M 2026).'
+- >-
+  Primary statements in all annuals and the 2026 Q3 interim are image pages, read by OCR and checked against printed subtotals.

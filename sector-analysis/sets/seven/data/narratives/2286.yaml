@@ -1,0 +1,171 @@
+ticker: '2286'
+headline: Revenue rose from SAR 578m (FY2022) to SAR 660m (FY2025) and attributable profit from SAR 163m to SAR 201m with no borrowings and an
+  EBITDA margin of about 40%; in 9M 2026 revenue grew 12.6% and profit 15.0%, and capex rose to SAR 85.0m for the Al-Kharj expansion.
+lfl_basis:
+  definition_used: 'Standard bridge on IFRS revenue. Fourth Milling is a stand-alone company with no subsidiaries, acquisitions or disposals,
+    so perimeter effects are nil. Revenue presentation changed twice: FY2023 was re-presented with rebates deducted (-SAR 7.5m) and FY2024 with
+    transport costs netted (-SAR 11.5m), while the earlier year of each comparison was not, so these are shown as accounting steps. No volumes,
+    capacity or same-store measure are disclosed, so the new-capacity step is not determinable.'
+  perimeter_changes:
+  - event: No subsidiaries, acquisitions or disposals FY2022-9M2026
+    date: 2022 to 2026
+    effect: none
+    source: 2286_FOURTH_MILLING/2025_Annual_filed2026-03-15.pdf p.3
+  capacity_changes:
+  - event: Expansion of the Al-Kharj flour mill and feed plant under construction (completion expected H2 2027)
+    date: 2025 to 2026
+    effect: no revenue in the periods covered
+    source: 2286_FOURTH_MILLING/2026_Q3_filed2026-11-04.pdf p.17
+  fx_exposure: 'None: no foreign operations; exports were SAR 1.6m in 9M 2026.'
+  price_volume_support: Not determinable. Revenue is split by product only up to FY2024 and by region and customer sector; no tonnes or prices
+    are disclosed. Subsidised wheat costs SAR 180 a tonne, unchanged since 2017.
+  confidence: Medium (perimeter nil with High confidence; presentation steps calculated; new-capacity effect not determinable)
+price_volume:
+- period: 9M 2026 vs 9M 2025
+  text: Revenue rose SAR 58.9m. Dammam grew 25.8%, Madinah 6.4% and Al-Kharj 3.5%; corporate customers 14.1%. No volumes or prices are disclosed,
+    so price and volume cannot be separated.
+  basis: disclosed (segment and sector revenue); split not determinable
+  confidence: High for the amounts; the split is not determinable
+  source: 2286_FOURTH_MILLING/2026_Q3_filed2026-11-04.pdf p.15-16 (segments), p.23 (sectors)
+  refs:
+  - 2286-9M2026-REV
+  - 2286-9M2025-REV
+- period: FY2024 vs FY2023
+  text: On the FY2024 annual's basis, gross flour revenue rose 14.9%, bran 13.1% and feed 8.1%, while discounts and promotions deducted from revenue
+    rose to SAR 32.8m (SAR 23.4m). Al-Kharj grew 29.5% and Madinah 15.2%.
+  basis: disclosed; split not determinable
+  confidence: High for the amounts; the split is not determinable
+  source: 2286_FOURTH_MILLING/2024_Annual_filed2025-03-16.pdf p.45 (products), p.29-30 (segments)
+  refs:
+  - 2286-FY2024-REV
+  - 2286-FY2023-REV
+profit_and_margin:
+  drivers:
+  - period: FY2023
+    driver: 'Revenue fell 3.5% (2.2% before the rebate re-presentation, we calculate): feed fell 26.1%, flour rose 3.4% and discounts grew, and
+      Al-Kharj revenue fell. Selling costs rose to SAR 36.6m (SAR 32.0m) and G&A to SAR 45.7m (SAR 38.5m), and a SAR 4.1m fine was booked, so
+      operating income fell 16.4%; lower lease finance cost (SAR 7.9m vs SAR 14.9m) and higher finance income (SAR 5.5m vs SAR 0.3m) limited the
+      fall in attributable profit to 12.4%. EBITDA margin 38.5% (we calculate).'
+    source: 2286_FOURTH_MILLING/2024_Annual_filed2025-03-16.pdf p.9 (P&L), p.45-46; 2286_FOURTH_MILLING/2023_Annual_filed2024-11-07.pdf p.7, p.27,
+      p.40
+    refs:
+    - 2286-FY2023-REV
+    - 2286-FY2023-OPINC
+    - 2286-FY2023-NI_ATTR
+    - 2286-FY2023-FIN_COST
+    - 2286-FY2023-FIN_INC
+  - period: FY2024
+    driver: Revenue +10.6% (+12.7% on the FY2024 annual basis, we calculate), led by Al-Kharj and Madinah and by flour. Gross margin rose to 45.8%
+      (44.1%). Other expenses of SAR 8.1m included a SAR 4.4m write-off of capital work in progress and a SAR 4.0m GFSA fine provision. Attributable
+      profit +19.7% to SAR 171m; net margin 27.7%.
+    source: 2286_FOURTH_MILLING/2025_Annual_filed2026-03-15.pdf p.8 (P&L, re-presented); 2286_FOURTH_MILLING/2024_Annual_filed2025-03-16.pdf p.9,
+      p.29-30, p.45-46
+    refs:
+    - 2286-FY2024-REV
+    - 2286-FY2024-GP
+    - 2286-FY2024-NI_ATTR
+    - 2286-FY2024-IMPAIR_CF
+  - period: FY2025
+    driver: 'Revenue +7.0% to SAR 660m: Madinah +14.7% and Al-Kharj +13.5%, Dammam -3.6%. Gross margin 46.4%. Selling costs rose to SAR 35.5m
+      (SAR 25.7m) with transport and marketing, but other items swung from an SAR 8.1m expense to SAR 1.2m of income and finance income rose to
+      SAR 9.9m (SAR 7.3m); zakat and tax fell to SAR 10.9m (SAR 15.2m) with a deferred tax credit. Attributable profit +17.5% to SAR 201m; EBITDA
+      margin 40.6% (we calculate).'
+    source: 2286_FOURTH_MILLING/2025_Annual_filed2026-03-15.pdf p.8 (P&L), p.23 (segments), p.37 (selling expenses)
+    refs:
+    - 2286-FY2025-REV
+    - 2286-FY2025-GP
+    - 2286-FY2025-FIN_INC
+    - 2286-FY2025-ZAKAT_TAX
+    - 2286-FY2025-NI_ATTR
+  - period: 9M2026
+    driver: Revenue +12.6% to SAR 528m, mostly Dammam (+25.8%). Gross margin rose to 49.3% (45.4%), while selling costs rose to SAR 40.3m (SAR
+      25.7m) and G&A to SAR 48.4m (SAR 42.7m). Zakat and tax rose to SAR 10.8m (SAR 6.0m, which had a deferred tax credit). Attributable profit
+      +15.0% to SAR 160m; net margin 30.3% (29.6%); annualised ROE 26.5%.
+    source: 2286_FOURTH_MILLING/2026_Q3_filed2026-11-04.pdf p.7 (P&L), p.15-16 (segments)
+    refs:
+    - 2286-9M2026-REV
+    - 2286-9M2026-GP
+    - 2286-9M2026-ZAKAT_TAX
+    - 2286-9M2026-NI_ATTR
+  - period: FY2022-9M2026
+    driver: The company has no borrowings; net debt is lease liabilities (SAR 376m at end-2025) less cash and short-term murabaha deposits, SAR 156m
+      at end-2025, and net debt to EBITDA was 0.6x in FY2025 and 0.6x in 9M 2026 (annualised). Capex rose from SAR 10.2m (FY2023) to SAR 85.0m in 9M 2026 for the Al-Kharj expansion, and dividends
+      paid were SAR 140.4m in 9M 2026.
+    source: balance sheets and cash-flow statements (FY2024-FY2025 annuals; 2026 Q3 p.6, p.9, p.21)
+    refs:
+    - 2286-FY2025-LEASE_LIAB
+    - 2286-FY2025-NET_DEBT
+    - 2286-FY2023-CAPEX
+    - 2286-9M2026-CAPEX
+    - 2286-9M2026-DEBT
+  one_offs:
+  - item: Fines and penalties (nature not described)
+    period: FY2023
+    amount_sar_m: -4.08
+    line: Other expense
+    source: 2286_FOURTH_MILLING/2024_Annual_filed2025-03-16.pdf p.46; 2286_FOURTH_MILLING/2023_Annual_filed2024-11-07.pdf p.7
+    tax_nci: 'Under 5% of attributable profit but listed as a regulatory penalty outside normal operations; zakat and tax effect not disclosed, no minority interests: profit kept as reported'
+  - item: Provision for a GFSA fine (inspection of 24 Oct 2024), annulled by a final court judgment on 27 Oct 2026
+    period: FY2024
+    amount_sar_m: -4.0
+    line: Other expenses, net
+    source: 2286_FOURTH_MILLING/2024_Annual_filed2025-03-16.pdf p.46; 2286_FOURTH_MILLING/2026_Q3_filed2026-11-04.pdf p.22
+    tax_nci: 'Under 5% of attributable profit but listed as a regulatory penalty outside normal operations; zakat and tax effect not disclosed, no minority interests: profit kept as reported'
+developments:
+- date: '2024-01-09'
+  category: financing
+  text: Raised share capital to SAR 540m by capitalising reserves.
+  source: 2286_FOURTH_MILLING/2024_Annual_filed2025-03-16.pdf p.40
+- date: '2024-10-27'
+  category: event
+  text: Listed on the Saudi Exchange.
+  source: 2286_FOURTH_MILLING/2025_Annual_filed2026-03-15.pdf p.12
+- date: '2025-02-17'
+  category: regulation
+  text: GFSA claimed a SAR 4m fine after an October 2024 inspection; the company provided it in FY2024, and a final court judgment annulled the
+    fine on 27 Oct 2026.
+  source: 2286_FOURTH_MILLING/2025_Annual_filed2026-03-15.pdf p.36; 2286_FOURTH_MILLING/2026_Q3_filed2026-11-04.pdf p.22
+- date: 2025 to 2027
+  category: capacity
+  text: Expanding the Al-Kharj flour mill and feed plant, expected to be completed in the second half of 2027; projects under progress were SAR
+    91.5m and advances to contractors SAR 65.1m at 30 Sep 2026.
+  source: 2286_FOURTH_MILLING/2026_Q3_filed2026-11-04.pdf p.17, p.6
+- date: '2026'
+  category: financing
+  text: Paid interim dividends of SAR 70.2m in April and SAR 70.2m in September 2026.
+  source: 2286_FOURTH_MILLING/2026_Q3_filed2026-11-04.pdf p.21
+what_it_means:
+  improved: Revenue grew 4.5% a year from FY2022 to FY2025 and attributable profit 7.2% a year; the net margin rose to 30.4% in FY2025 and the
+    EBITDA margin was 40.5% in 9M 2026, with no borrowings.
+  weakened: Selling costs rose faster than revenue in FY2025 and 9M 2026, and capex for the Al-Kharj expansion kept 9M 2026 free cash flow flat
+    at SAR 126m (SAR 127m) despite higher operating cash flow.
+  why: Growth came from all three mills, led by Madinah and Al-Kharj in FY2025 and Dammam in 9M 2026; fewer fines and write-offs and higher finance
+    income lifted FY2025 profit.
+  uncertain: Revenue presentation changed twice (rebates in FY2023, transport costs in FY2024), product revenue is not given after FY2024, and
+    no volumes or prices are disclosed, so price, volume and capacity effects are not determinable.
+confidence_overall: Medium
+data_notes:
+- 'No borrowings: the XBRL ''current portion of long-term loans'' was the current portion of lease liabilities, so DEBT is 0 and LEASE_LIAB is
+  the total of current and non-current leases (corrected from the PDF balance sheets, FY2023 to 9M 2026). Net debt is leases less cash and short-term
+  deposits.'
+- 'FY2022 and 1 Jan 2022 were restated in the FY2023 annual (note 29): leases +SAR 111.8m, PP&E -SAR 16.4m, FY2022 net profit SAR 164.9m to SAR
+  163.0m (R).'
+- 'FY2023 revenue was re-presented in the FY2024 annual (note 30): SAR 7.5m of rebates deducted from revenue (SAR 565.6m to SAR 558.1m, R); FY2022
+  was not, so FY2023/FY2022 growth is 1.3 points lower than on a like basis.'
+- 'FY2024 revenue was re-presented in the FY2025 annual (note 31): SAR 11.5m of transport costs netted against revenue (SAR 629.0m to SAR 617.5m,
+  R) and operating cash flow raised by SAR 6.69m (advances moved to investing); FY2023 was not, so FY2024/FY2023 growth is 2.1 points lower than
+  on a like basis. 9M 2025 was re-presented the same way (-SAR 10.8m, 2026 Q3 note 27).'
+- FY2025 cash is the 2026 Q3 comparative (SAR 63.75m, R), which includes SAR 0.65m of accrued finance income reclassified from prepayments (note
+  27); the FY2025 annual shows SAR 63.10m.
+- 'Net debt deducts short-term murabaha deposits held outside cash: SAR 74.1m at end-2024 (FY2025 annual note 14, p.32), SAR 156.2m at end-2025 and
+  SAR 21.1m at 30 Sep 2026 (2026 Q3 interim note 14.2, p.20), and SAR 44.4m at 30 Sep 2025 (2025 Q3 interim). Net debt was therefore SAR 197m, SAR 156m,
+  SAR 184m and SAR 207m.'
+- Capex excludes advances to contractors and suppliers for the Al-Kharj expansion (SAR 6.7m FY2024, SAR 43.0m FY2025, SAR 12.6m 9M 2026).
+- Zakat and tax includes current and deferred income tax (part of the shareholding is foreign-owned).
+- IMPAIR_CF FY2024 is the SAR 4.4m write-off of capital work in progress; other years are nil (the XBRL rows were receivable credit losses,
+  corrected to nil).
+- Operating cash flow is before lease interest paid (shown in financing); the 2026 Q3 cash-flow statement starts from profit for the period.
+- Primary statements in the FY2022, FY2024 and FY2025 annuals and the interims are scanned images (read by OCR; totals cross-checked).
+- Listed on 27 Oct 2024; the archive holds statements from FY2022 (with FY2021 comparatives); the FY2025 auditor replaced the FY2024 auditor.
+- 'Cross-holding: Fourth Milling is held by Gulf Flour Milling Industrial Co. (100% until the October 2024 IPO, 70% after), a joint venture owned one third by Othaim (Retailers group), so part of
+  its profit is also in Othaim''s: Othaim''s share of the joint venture''s results was SAR 46.0m (FY2022), SAR 30.1m (FY2023), SAR 28.7m (FY2024) and SAR 46.6m (FY2025).'

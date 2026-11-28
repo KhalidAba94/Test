@@ -1,0 +1,155 @@
+ticker: '4190'
+headline: Jarir grew revenue from SAR 9,392m (FY2022) to SAR 11,365m (FY2025) and 9.7% in 9M 2026 with steady margins and almost no borrowings; growth has shifted from showrooms to online sales (e-commerce
+  rose from SAR 1,192m in FY2022 to SAR 3,665m in FY2025) and attributable profit reached SAR 1,049m in FY2025 and SAR 863m in 9M 2026 (+16.7%).
+lfl_basis:
+  definition_used: 'Standard bridge on IFRS revenue. Jarir made no acquisitions or disposals of consolidated businesses, so perimeter effects are nil. From FY2024 revenue is on a net (agent) basis for certain
+    service-provider and vendor arrangements: FY2024 was re-presented down by SAR 211.7m in the FY2025 annual and 9M 2025 by SAR 183.2m in the 2026 Q3 interim, but FY2022 and FY2023 stay gross, so FY2024/FY2023
+    growth carries a -SAR 211.7m accounting step. The showroom count is disclosed (67 at end-2021 to 79 at 30 Sep 2026) but not the revenue of new showrooms or same-showroom sales, so new capacity and like-for-like
+    growth are not determinable; organic growth is the closest measure.'
+  perimeter_changes:
+  - event: No business combinations; 49% RIFD Integrated Company joint venture (consumer microfinance) set up in 2026
+    date: 2026 (9M)
+    effect: equity-accounted; no revenue effect
+    source: 4190_JARIR/2026_Q3_filed2026-11-09.pdf p.25
+  capacity_changes:
+  - event: Retail showrooms 67 to 68
+    date: '2022'
+    effect: revenue not disclosed
+    source: 4190_JARIR/2022_Annual_filed2023-03-16.pdf p.12
+  - event: Retail showrooms 68 to 70
+    date: '2023'
+    effect: revenue not disclosed
+    source: 4190_JARIR/2023_Annual_filed2024-03-10.pdf p.13
+  - event: Retail showrooms 70 to 73
+    date: '2024'
+    effect: revenue not disclosed
+    source: 4190_JARIR/2024_Annual_filed2025-03-25.pdf p.14
+  - event: Retail showrooms 73 to 75
+    date: '2025'
+    effect: revenue not disclosed
+    source: 4190_JARIR/2025_Annual_filed2026-03-31.pdf p.14
+  - event: Retail showrooms 74 (30 Sep 2025) to 79 (30 Sep 2026)
+    date: 2026 (9M)
+    effect: revenue not disclosed
+    source: 4190_JARIR/2025_Q3_filed2025-11-06.pdf p.9; 4190_JARIR/2026_Q3_filed2026-11-09.pdf p.9
+  fx_exposure: Most revenue is in Saudi Arabia (SAR 10,291m of SAR 11,365m in FY2025); Qatar, UAE and Bahrain currencies are pegged to the US dollar, but Kuwait (dinar) and the Egypt real-estate subsidiary
+    (pound) are not. The translation effect is not disclosed and is not determinable; IAS 29 is not applied to Egypt.
+  price_volume_support: 'Not determinable: revenue is given by channel (showrooms, wholesale, e-commerce), product group and region, but not by price or units.'
+  confidence: Medium (perimeter nil and accounting step disclosed with High confidence; new showrooms not determinable)
+price_volume:
+- period: FY2025 vs FY2024
+  text: Revenue rose SAR 746m. E-commerce rose 47.2% (SAR 2,489m to SAR 3,665m) while showroom revenue fell 5.8% (SAR 7,766m to SAR 7,319m), so sales moved online. By product, smartphones and electronics
+    rose 12.3% (SAR 6,270m to SAR 7,042m); by region, other Gulf countries and Egypt rose 37.7% to SAR 1,074m. Prices and units are not disclosed.
+  basis: disclosed (segment, product and regional revenue); price/volume split not determinable
+  confidence: High for the amounts
+  source: 4190_JARIR/2025_Annual_filed2026-03-31.pdf p.43-44 (revenue note), p.46 (segments)
+  refs:
+  - 4190-FY2025-REV
+  - 4190-FY2024-REV
+- period: 9M 2026 vs 9M 2025
+  text: 'Revenue rose SAR 796m: e-commerce +22.9% (SAR 2,402m to SAR 2,953m) and showrooms +4.4% (SAR 5,464m to SAR 5,704m), with 79 showrooms at 30 Sep 2026 against 74 a year earlier.'
+  basis: disclosed (segments, showroom count); split not determinable
+  confidence: High for the amounts
+  source: 4190_JARIR/2026_Q3_filed2026-11-09.pdf p.29 (segments), p.9 (showrooms)
+  refs:
+  - 4190-9M2026-REV
+  - 4190-9M2025-REV
+profit_and_margin:
+  drivers:
+  - period: FY2023
+    driver: 'Revenue rose 12.8% to SAR 10,595m (gross basis): e-commerce rose 68.3% to SAR 2,006m and showrooms 4.8% to SAR 8,155m. The gross margin fell to 12.0% (13.7%), so profit before zakat rose only
+      2.5%, and zakat rose to SAR 29.0m (SAR 8.0m); attributable profit rose 0.3% to SAR 973m. Net margin 9.2%; ROE 54.5%.'
+    source: 4190_JARIR/2024_Annual_filed2025-03-25.pdf p.10 (P&L), p.51 (segments); 4190_JARIR/2023_Annual_filed2024-03-10.pdf p.9
+    refs:
+    - 4190-FY2023-REV
+    - 4190-FY2023-GP
+    - 4190-FY2023-NI_ATTR
+    - 4190-FY2023-PBT
+  - period: FY2024
+    driver: Reported revenue rose 0.2% to SAR 10,619m because FY2024 is on the new net basis and FY2023 is not; on the old gross basis growth was 2.2% (we calculate), with e-commerce +25.1% and showrooms
+      -2.4%. The gross margin recovered to 12.5% and attributable profit was flat at SAR 974m (+0.1%). Cash ended the year at SAR 32.8m after SAR 996m of dividends, and SAR 39.7m of short-term bank borrowings
+      were drawn.
+    source: 4190_JARIR/2025_Annual_filed2026-03-31.pdf p.10, p.58 (note 38); 4190_JARIR/2024_Annual_filed2025-03-25.pdf p.51 (segments)
+    refs:
+    - 4190-FY2024-REV
+    - 4190-FY2024-GP
+    - 4190-FY2024-NI_ATTR
+    - 4190-FY2024-DEBT
+    - 4190-FY2024-CASH
+  - period: FY2025
+    driver: Revenue rose 7.0% to SAR 11,365m, led by e-commerce (+47.2%) and smartphones and electronics (+12.3%), while showroom revenue fell 5.8%. The gross margin held at 12.5%; selling and marketing
+      costs rose 9.4% to SAR 222m. Attributable profit rose 7.7% to SAR 1,049m (it includes a SAR 10.5m gain on selling property). Operating cash flow rose 30.9% to SAR 1,458m as inventories fell. Net margin
+      9.2%; ROE 59.8%.
+    source: 4190_JARIR/2025_Annual_filed2026-03-31.pdf p.10 (P&L), p.13 (cash flow), p.43-46 (revenue and segments)
+    refs:
+    - 4190-FY2025-REV
+    - 4190-FY2025-NI_ATTR
+    - 4190-FY2025-CFO
+    - 4190-FY2025-GP
+  - period: 9M2026
+    driver: Revenue rose 9.7% to SAR 8,966m and the gross margin rose to 13.2% (12.4%). Other income fell to SAR 43.4m (SAR 65.8m, which included a SAR 10.9m gain on selling property) and finance income
+      rose to SAR 5.2m (SAR 0.8m). Attributable profit rose 16.7% to SAR 863m. Net margin 9.6%; ROE 64.3% (annualised).
+    source: 4190_JARIR/2026_Q3_filed2026-11-09.pdf p.5 (P&L), p.8 (cash flow), p.29 (segments)
+    refs:
+    - 4190-9M2026-REV
+    - 4190-9M2026-GP
+    - 4190-9M2026-NI_ATTR
+    - 4190-9M2026-FIN_INC
+  one_offs:
+  - item: Capital gain on disposal of the Khobar building (sale and seven-year leaseback, price SAR 178.0m)
+    period: FY2022
+    amount_sar_m: 10.2
+    line: Other income, net
+    source: 4190_JARIR/2023_Annual_filed2024-03-10.pdf p.45 (note 24)
+    tax_nci: 'Under 5% of profit, listed because a property disposal is outside normal retail operations; tax effect not disclosed, no minority interests: profit kept as reported'
+  - item: Gain on disposal of property and equipment (proceeds SAR 45.5m; asset not named)
+    period: FY2025
+    amount_sar_m: 10.5
+    line: Other income, net
+    source: 4190_JARIR/2025_Annual_filed2026-03-31.pdf p.13
+    tax_nci: 'Under 5% of profit, listed because a property disposal is outside normal retail operations (other disposal gains were SAR 0.1m-0.3m a year); tax effect not disclosed, no minority interests:
+      profit kept as reported'
+  - item: Same disposal gain in the 9M 2025 comparative
+    period: 9M2025
+    amount_sar_m: 10.9
+    line: Other income, net
+    source: 4190_JARIR/2026_Q3_filed2026-11-09.pdf p.8
+    tax_nci: 'Under 5% of profit, listed so that 9M 2026 and 9M 2025 compare on the same basis; tax effect not disclosed, no minority interests: profit kept as reported'
+developments:
+- date: '2022'
+  category: operations
+  text: Sold its Khobar building for SAR 178.0m and leased back the bookstore space for seven years (capital gain SAR 10.2m).
+  source: 4190_JARIR/2023_Annual_filed2024-03-10.pdf p.45
+- date: '2024'
+  category: event
+  text: EY replaced PwC as auditor from FY2024.
+  source: 4190_JARIR/2024_Annual_filed2025-03-25.pdf p.6
+- date: 2025 (FY2025 annual)
+  category: regulation
+  text: Moved certain service-provider and vendor arrangements to net (agent) revenue under IFRS 15, cutting FY2024 revenue by SAR 211.7m with no effect on gross profit.
+  source: 4190_JARIR/2025_Annual_filed2026-03-31.pdf p.57-58
+- date: 2022-2026
+  category: capacity
+  text: Retail showrooms rose from 67 (end-2021) to 75 (end-2025) and 79 (30 Sep 2026) in Saudi Arabia and other Gulf countries.
+  source: 4190_JARIR/2022_Annual_filed2023-03-16.pdf p.12; 4190_JARIR/2025_Annual_filed2026-03-31.pdf p.14; 4190_JARIR/2026_Q3_filed2026-11-09.pdf p.9
+- date: 2026 (9M)
+  category: strategy
+  text: Invested SAR 24.5m for 49% of RIFD Integrated Company, a consumer microfinance start-up with preliminary central-bank approval, to finance customer purchases.
+  source: 4190_JARIR/2026_Q3_filed2026-11-09.pdf p.25-26
+what_it_means:
+  improved: Revenue grew 6.6% a year from FY2022 to FY2025 and 9.7% in 9M 2026, and attributable profit rose 7.7% in FY2025 and 16.7% in 9M 2026, with an ROE of 59.8% in FY2025.
+  weakened: Showroom revenue has fallen in both FY2024 (-2.4%, gross basis) and FY2025 (-5.8%) and the gross margin is lower than in FY2022 (12.5% against 13.7%).
+  why: Sales moved to the website and app (e-commerce from SAR 1,192m in FY2022 to SAR 3,665m in FY2025) and to smartphones and electronics, which carry lower margins, while showroom numbers grew slowly;
+    high payouts (SAR 1,032m in FY2025) keep equity near SAR 1.8bn.
+  uncertain: Same-showroom sales and the revenue of new showrooms are not disclosed, and FY2022-FY2023 revenue is on the old gross basis, so long-run growth is slightly overstated against FY2024-FY2025.
+confidence_overall: High
+data_notes:
+- 'Revenue basis break: FY2024 (FY2025 annual note 38) and 9M 2025 (2026 Q3 interim note 16) are re-presented on a net (agent) basis, by -SAR 211.7m and -SAR 183.2m; FY2022 and FY2023 remain gross. Gross
+  profit is unchanged by the change, so gross margins are slightly higher on the net basis.'
+- 'Corrected from the PDF cash-flow statements (FY2023 annual p.12, FY2024 annual p.13, FY2025 annual p.13, 2026 Q3 interim p.8): the impairment add-back holds only reversals of impairment on investment
+  property (FY2022 -SAR 2.6m, FY2023 -SAR 0.4m); trade-receivable credit losses, which the XBRL had included, are excluded.'
+- Investment-property spend is kept out of capex and deducted in free cash flow (IP_CAPEX SAR 6.1m FY2022, SAR 4.0m FY2023, SAR 0.4m FY2024, nil FY2025, SAR 0.4m 9M 2026).
+- Other income, net includes rental income from investment properties and subleases and administrative fees from financing companies; it is inside our operating income.
+- Operating cash flow is after finance costs paid and zakat paid.
+- 'All attributable to shareholders: no non-controlling interests. The FY2023 annual was audited by PwC and later years by EY.'
+- Primary statements are scanned images with old-style numerals; OCR readings were checked visually where they differed from XBRL.

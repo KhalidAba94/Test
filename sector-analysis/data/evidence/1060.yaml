@@ -1,0 +1,264 @@
+ticker: "1060"
+company: "Saudi Awwal Bank (SAB; formerly The Saudi British Bank, SABB)"
+# Units: SAR '000 unless stated. Pages are physical PDF pages (1-based).
+# FY2022-FY2024 and FY2025 AFS primary statements are image pages; values marked [image] were read visually.
+
+restatements:
+  - period_restated: "1 Jan 2024, 30 Sep 2024 and 31 Dec 2024"
+    item: "Investments, net (two equity investments)"
+    from: 98412224
+    to: 99572794
+    unit: "SAR '000"
+    reason: "Two corrections of prior-period errors under IAS 8 (not a change in accounting policy): (1) FVOCI equity investment valued at net asset value instead of fair value: +918,484 to investments and other reserves; (2) an equity investment not recorded in prior years, now classified FVSI: +242,086 to investments and retained earnings. Total +1,160,570 to investments and equity at 1 Jan 2024 and 31 Dec 2024. P&L/OCI impact for 2024 deemed insignificant, comparatives not restated."
+    source: "1060_SAB/2025_Q3_filed2025-11-02.pdf"
+    page: 30
+    quote: "the Bank corrected the valuation of its interest in an equity investment ... historically valued at net asset value instead of fair value"
+  - period_restated: "31 Dec 2024"
+    item: "Other reserves"
+    from: -2818768
+    to: -1900284
+    unit: "SAR '000"
+    reason: "FVOCI equity revaluation +918,484 (IAS 8)."
+    source: "1060_SAB/2025_Annual_filed2026-02-15.pdf"
+    page: 118
+    quote: "Other reserves (2,818,768) 918,484 (1,900,284)"
+  - period_restated: "31 Dec 2024"
+    item: "Retained earnings"
+    from: 11464384
+    to: 11706470
+    unit: "SAR '000"
+    reason: "Previously unrecorded equity investment recognised at FVSI +242,086 (IAS 8)."
+    source: "1060_SAB/2025_Annual_filed2026-02-15.pdf"
+    page: 118
+    quote: "Management has identified an equity investment held by the Bank that was not recorded in prior years."
+  - period_restated: "1 Jan 2024"
+    item: "Investments, net / equity attributable"
+    from: 96566836
+    to: 97727406
+    unit: "SAR '000"
+    reason: "Same two IAS 8 corrections applied at 1 Jan 2024 (retained earnings 9,708,134 -> 9,950,220; other reserves (1,414,343) -> (495,859)); 1 Jan 2025 equity attributable 60,321,183 -> 61,481,753."
+    source: "1060_SAB/2025_Annual_filed2026-02-15.pdf"
+    page: 118
+    quote: "Investments, net 96,566,836 1,160,570 97,727,406"
+  - period_restated: "FY2024 and 9M2025 income statement"
+    item: "Corporate management fees reclassified from fee and commission income to special commission income"
+    from: 1449562
+    to: 1341957
+    unit: "SAR '000"
+    reason: "IFRS 9 requirement; FY2024 net fees reduced by SAR 107.6m net (gross fee income 3,997,013 -> 3,880,761; fee expense 2,547,451 -> 2,538,804). 9M2025 net fees reduced by SAR 108.3m (1,168,064 -> 1,059,711). Net income unchanged."
+    source: "1060_SAB/2025_Annual_filed2026-02-15.pdf"
+    page: 118
+    quote: "the Bank has reclassified corporate management fee previously recorded in fee and commission income to special commission income amounting to SAR107.6 million, net"
+  - period_restated: "FY2022 (in FY2023 AFS)"
+    item: "Net income FY2022 after zakat and tax"
+    from: 4872148
+    to: 4825595
+    unit: "SAR '000"
+    reason: "Completion of purchase price allocation for the 15 Sep 2022 acquisition of HSBC Saudi Arabia business lines: bargain purchase gain reduced from provisional SAR 155.4m to SAR 108.6m. Total operating income 9,697,028 -> 9,650,228 (-46,800); goodwill and intangibles, retained earnings and total equity -46,553 (54,683,204 -> 54,636,651); EPS 2.40 -> 2.38."
+    source: "1060_SAB/2023_Annual_filed2024-02-15.pdf"
+    page: 95
+    quote: "Net income for the year after Zakat and tax 4,872,148 (46,553) 4,825,595"
+  - period_restated: "31 Dec 2023 and 1 Jan 2023 (in FY2024 AFS)"
+    item: "SAR 12.5bn (1 Jan 2023: SAR 8.1bn) reclassified from due to banks to customers' deposits"
+    from: null
+    to: null
+    unit: "SAR '000"
+    reason: "IAS 8 presentation change after management re-evaluation found balances were customer deposits; 30 Sep 2024 equivalent SAR 15.77bn (9M2025 note 22). No P&L/equity effect."
+    source: "1060_SAB/2024_Annual_filed2025-02-10.pdf"
+    page: 114
+    quote: "the liability balances amounting to SAR 12.5 billion as of 31 December 2023 (1 January 2023: SAR 8.1 billion) were reclassified"
+  - period_restated: "FY2021 (in FY2022 AFS)"
+    item: "Certain G&A expenses reclassified to fee and commission expense and other operating income"
+    from: null
+    to: null
+    unit: "SAR '000"
+    reason: "Presentation change from expense allocation review; related party note also restated."
+    source: "1060_SAB/2022_Annual_filed2023-02-14.pdf"
+    page: 96
+    quote: "Certain expenses which had previously been included in general and administrative expenses, are now included in fee and commission expense"
+  - period_restated: "31 Dec 2024 capital ratios"
+    item: "CET1 / Tier 1 / total capital ratio comparatives"
+    from: "15.43% / 17.90% / 19.69% (FY2024 AFS)"
+    to: "15.61% / 18.06% / 19.84% (FY2025 AFS)"
+    unit: "%"
+    reason: "No reason stated; coincides with the +1,160,570 equity restatement."
+    source: "1060_SAB/2025_Annual_filed2026-02-15.pdf"
+    page: 116
+    quote: "Common Equity Tier 1 Capital (CET1) 14.84% 15.61%"
+
+special_extractions:
+  tier1_sukuk:
+    equity_attributable_includes_tier1: false
+    equity_attributable_note: "SFP line 'Total equity attributable to equity holders of the Bank' excludes 'Additional Tier 1 Sukuk', which is shown separately before 'Total equity'."
+    equity_attributable_source: {source: "1060_SAB/2026_Q3_filed2026-10-28.pdf", page: 4, quote: "Total equity attributable to equity holders of the Bank 68,072,000 ... Additional Tier 1 Sukuk 13 12,386,500"}
+    carrying_amounts:
+      - {period: "31 Dec 2021", amount: 0, unit: "SAR '000", source: "1060_SAB/2022_Annual_filed2023-02-14.pdf", page: null, quote: "no Tier 1 sukuk disclosure found in FY2022 AFS; Tier 1 ratio equals CET1 (17.65%) for 2022 per FY2023 AFS p93"}
+      - {period: "31 Dec 2022", amount: 0, unit: "SAR '000", source: "1060_SAB/2023_Annual_filed2024-02-15.pdf", page: 93, quote: "Tier I ratio 17.69% 17.65% ... CET1 16.34% 17.65%"}
+      - {period: "31 Dec 2023", amount: 3985000, unit: "SAR '000", source: "1060_SAB/2024_Annual_filed2025-02-10.pdf", page: 16, quote: "Additional Tier 1 Sukuk 3,980,000 3,985,000 (cash flow); 1 Jan 2024 AT1 balance 3,985,000 per 9M2025 equity statement p7"}
+      - {period: "31 Dec 2024", amount: 7965000, unit: "SAR '000", source: "1060_SAB/2025_Annual_filed2026-02-15.pdf", page: 14, quote: "Balance at the beginning of the year ... 7,965,000 [image]"}
+      - {period: "31 Dec 2025", amount: 12386500, unit: "SAR '000", source: "1060_SAB/2025_Annual_filed2026-02-15.pdf", page: 14, quote: "Balance at the end of the year ... 12,386,500 79,338,539 [image]"}
+      - {period: "30 Sep 2025", amount: 12386500, unit: "SAR '000", source: "1060_SAB/2026_Q3_filed2026-10-28.pdf", page: 4, quote: "Additional Tier 1 Sukuk 13 12,386,500 12,386,500 12,386,500"}
+      - {period: "30 Sep 2026", amount: 12386500, unit: "SAR '000", source: "1060_SAB/2026_Q3_filed2026-10-28.pdf", page: 4, quote: "Additional Tier 1 Sukuk 13 12,386,500 12,386,500 12,386,500"}
+    distributions_charged_to_equity:
+      - {period: "FY2022", amount: 0, unit: "SAR '000", line: "none (no AT1 outstanding)", source: "1060_SAB/2022_Annual_filed2023-02-14.pdf", page: null}
+      - {period: "FY2023", amount: 0, unit: "SAR '000", line: "Tier 1 Sukuk payment nil; issuance cost 16,956 (cash flow)", source: "1060_SAB/2024_Annual_filed2025-02-10.pdf", page: 16, quote: "Tier 1 Sukuk payment (304,617) - ... Additional Tier 1 Sukuk issuance cost (14,289) (16,956)"}
+      - {period: "FY2024", amount: 304617, unit: "SAR '000", line: "Profit paid on Additional Tier 1 Sukuk (plus issuance cost 14,289)", source: "1060_SAB/2024_Annual_filed2025-02-10.pdf", page: 83, quote: "Profit paid on additional Tier 1 Sukuk (304,617) -"}
+      - {period: "FY2025", amount: 625238, unit: "SAR '000", line: "Additional Tier 1 Sukuk payments (plus issuance cost 20,505)", source: "1060_SAB/2025_Annual_filed2026-02-15.pdf", page: 14, quote: "Additional Tier 1 Sukuk payments (625,238) ... Additional Tier 1 Sukuk issuance cost (20,505) [image]"}
+      - {period: "9M2025", amount: 387504, unit: "SAR '000", line: "Additional Tier 1 Sukuk payments (plus issuance cost 20,019)", source: "1060_SAB/2026_Q3_filed2026-10-28.pdf", page: 7, quote: "Additional Tier 1 Sukuk payments - - - - (387,504)"}
+      - {period: "9M2026", amount: 545029, unit: "SAR '000", line: "Additional Tier 1 Sukuk payments (plus issuance cost 3,615)", source: "1060_SAB/2026_Q3_filed2026-10-28.pdf", page: 7, quote: "Additional Tier 1 Sukuk payments - - - - (545,029)"}
+    issuances_redemptions:
+      - {date: "31 Oct 2023", event: "Issued SAR 4.0bn AT1 sukuk, floating 3M SAIBOR+125bps (carried at 3,985,000)", amount: 3985000, unit: "SAR '000", source: "1060_SAB/2023_Annual_filed2024-02-15.pdf", page: 60, quote: "On 31 October 2023, the Bank has issued SAR 4 billion Additional Tier 1 Capital Sukuk (SAR-denominated) by way of private placement"}
+      - {date: "12 Dec 2024", event: "Issued SAR 3.65bn fixed 6.07% + SAR 0.35bn floating SAIBOR+134bps AT1 sukuk (carried at 3,980,000)", amount: 3980000, unit: "SAR '000", source: "1060_SAB/2025_Annual_filed2026-02-15.pdf", page: 74, quote: "12 December 2024 3.65 SAR Fixed 6.07%"}
+      - {date: "21 May 2025", event: "Issued USD AT1 sukuk, SAR 2.44bn equivalent, fixed 6.50%", amount: null, unit: "SAR '000", source: "1060_SAB/2025_Annual_filed2026-02-15.pdf", page: 74, quote: "21 May 2025 2.44 USD Fixed 6.50%"}
+      - {date: "24 Jul 2025", event: "Issued SAR 2.0bn AT1 sukuk, fixed 6.30%; FY2025 total AT1 issued 4,421,500", amount: 4421500, unit: "SAR '000", source: "1060_SAB/2025_Annual_filed2026-02-15.pdf", page: 14, quote: "Additional Tier 1 Sukuk issued 19 ... 4,421,500 [image]"}
+      - {date: "FY2022-9M2026", event: "No AT1 redemptions; no AT1 issuance in 9M2026", amount: null, status: "not found", source: "1060_SAB/2026_Q3_filed2026-10-28.pdf", page: 26}
+  net_fees:
+    - {period: "FY2021", gross_fee_income: 2448995, fee_expense: 1477112, net_fees: 971883, unit: "SAR '000", source: "1060_SAB/2022_Annual_filed2023-02-14.pdf", page: 65}
+    - {period: "FY2022", gross_fee_income: 2770173, fee_expense: 1884517, net_fees: 885656, unit: "SAR '000", source: "1060_SAB/2022_Annual_filed2023-02-14.pdf", page: 65}
+    - {period: "FY2023", gross_fee_income: 3255403, fee_expense: 2110865, net_fees: 1144538, unit: "SAR '000", source: "1060_SAB/2023_Annual_filed2024-02-15.pdf", page: 65}
+    - {period: "FY2024 (as reported)", gross_fee_income: 3997013, fee_expense: 2547451, net_fees: 1449562, unit: "SAR '000", source: "1060_SAB/2024_Annual_filed2025-02-10.pdf", page: 78}
+    - {period: "FY2024 (restated in FY2025 AFS)", gross_fee_income: 3880761, fee_expense: 2538804, net_fees: 1341957, unit: "SAR '000", source: "1060_SAB/2025_Annual_filed2026-02-15.pdf", page: 80}
+    - {period: "FY2025", gross_fee_income: 4247539, fee_expense: 2920915, net_fees: 1326624, unit: "SAR '000", source: "1060_SAB/2025_Annual_filed2026-02-15.pdf", page: 80}
+    - {period: "9M2025 (as reported)", gross_fee_income: 3316010, fee_expense: 2147946, net_fees: 1168064, unit: "SAR '000", source: "1060_SAB/2025_Q3_filed2025-11-02.pdf", page: 5}
+    - {period: "9M2025 (restated in 9M2026)", gross_fee_income: 3196128, fee_expense: 2136417, net_fees: 1059711, unit: "SAR '000", source: "1060_SAB/2026_Q3_filed2026-10-28.pdf", page: 5}
+    - {period: "9M2026", gross_fee_income: 3182316, fee_expense: 2350598, net_fees: 831718, unit: "SAR '000", source: "1060_SAB/2026_Q3_filed2026-10-28.pdf", page: 5}
+  impairments:
+    # P&L line 'Provision for expected credit losses, net'. Components (charge shown positive): loans = 'Loans and advances' ECL; commitments = loan commitments/guarantees; other = banks + investments; recoveries = 'Write-offs net, recoveries of debts previously written-off' (credit), incl. PPA release from POCI accounts (Alawwal merger)
+    - {period: "FY2021", ecl_loans: 604260, commitments_guarantees: 87237, other_financial_assets: -4669, recoveries_net: -233085, of_which_POCI_PPA_release: -273000, total_line: 453743, unit: "SAR '000", source: "1060_SAB/2022_Annual_filed2023-02-14.pdf", page: 73}
+    - {period: "FY2022", ecl_loans: 906110, commitments_guarantees: 219390, other_financial_assets: -4291, recoveries_net: -675948, of_which_POCI_PPA_release: -616000, total_line: 445261, unit: "SAR '000", source: "1060_SAB/2022_Annual_filed2023-02-14.pdf", page: 73}
+    - {period: "FY2023", ecl_loans: 931617, commitments_guarantees: 72240, other_financial_assets: 3584, recoveries_net: -444999, of_which_POCI_PPA_release: -486000, total_line: 562442, unit: "SAR '000", source: "1060_SAB/2023_Annual_filed2024-02-15.pdf", page: 73}
+    - {period: "FY2024", ecl_loans: 575962, commitments_guarantees: 111945, other_financial_assets: -1064, recoveries_net: -120780, of_which_POCI_PPA_release: -248000, total_line: 566063, unit: "SAR '000", source: "1060_SAB/2025_Annual_filed2026-02-15.pdf", page: 91}
+    - {period: "FY2025", ecl_loans: 1402925, commitments_guarantees: -43259, other_financial_assets: 4413, recoveries_net: -660565, of_which_POCI_PPA_release: -721000, total_line: 703514, unit: "SAR '000", source: "1060_SAB/2025_Annual_filed2026-02-15.pdf", page: 91}
+    - {period: "9M2025", ecl_loans: 968601, commitments_guarantees: -2980, other_financial_assets: 833, recoveries_net: -526113, of_which_POCI_PPA_release: null, total_line: 440341, unit: "SAR '000", source: "1060_SAB/2026_Q3_filed2026-10-28.pdf", page: 29}
+    - {period: "9M2026", ecl_loans: 1176523, commitments_guarantees: 130094, other_financial_assets: -13887, recoveries_net: -758914, of_which_POCI_PPA_release: null, total_line: 533816, unit: "SAR '000", source: "1060_SAB/2026_Q3_filed2026-10-28.pdf", page: 29}
+
+perimeter_changes:
+  - event: "Acquisition by Alawwal Invest (SAB Invest) of HSBC Saudi Arabia's asset management, margin lending and retail brokerage business lines (IFRS 3); provisional bargain purchase SAR 155.4m, final SAR 108.6m; customer relationships 228.6m"
+    type: "acquisition"
+    date: "15 Sep 2022"
+    consideration: 1216800
+    revenue_contribution: null
+    profit_contribution: 108600
+    pro_forma_revenue: 233000
+    period: "FY2022"
+    unit: "SAR '000"
+    source: "1060_SAB/2022_Annual_filed2023-02-14.pdf"
+    page: 94
+    quote: "The purchase consideration for sale and transfer of the business lines amounted to SAR 1,216.8 million."
+  - event: "SABB Takaful merged into Walaa (19 Oct 2022); SABB Takaful ceased to exist; Walaa stake classified FVOCI; presented as discontinued operations (net loss 53,860 incl. loss on disposal 6,563; FY2021 loss 30,167)"
+    type: "discontinued"
+    date: "19 Oct 2022"
+    consideration: null
+    revenue_contribution: 17403
+    profit_contribution: -53860
+    pro_forma_revenue: null
+    period: "FY2022"
+    unit: "SAR '000"
+    source: "1060_SAB/2022_Annual_filed2023-02-14.pdf"
+    page: 96
+    quote: "Net loss from discontinued operations for the year (53,860) (30,167)"
+  - event: "Elimination of SAB's 49% share of HSBC Saudi Arabia's gain on sale of business lines (associate)"
+    type: null
+    date: "FY2022"
+    consideration: null
+    profit_contribution: -58800
+    period: "FY2022"
+    unit: "SAR '000"
+    source: "1060_SAB/2022_Annual_filed2023-02-14.pdf"
+    page: 94
+    quote: "the gain recognized by HSBC Saudi Arabia on sale and transfer of business lines has been eliminated ... amounting to SAR 58.8 million"
+  - event: "Perimeter changes FY2023-9M2026 (acquisitions, disposals, discontinued)"
+    type: null
+    status: "not found"
+    source: "SAB FY2023-FY2025 AFS; 9M2025 and 9M2026 interims"
+    page: null
+
+segments:
+  - {period: "FY2022 (as originally reported, pre-PPA restatement)", segment: "Wealth and Personal Banking", basis: operating, revenue: 2825977, profit: 1142340, unit: "SAR '000", source: "1060_SAB/2022_Annual_filed2023-02-14.pdf", page: 71}
+  - {period: "FY2022 (as originally reported, pre-PPA restatement)", segment: "Corporate and Institutional Banking", basis: operating, revenue: 4858650, profit: 2895685, unit: "SAR '000", source: "1060_SAB/2022_Annual_filed2023-02-14.pdf", page: 71}
+  - {period: "FY2022 (as originally reported, pre-PPA restatement)", segment: "Treasury", basis: operating, revenue: 1828228, profit: 1470781, unit: "SAR '000", source: "1060_SAB/2022_Annual_filed2023-02-14.pdf", page: 71}
+  - {period: "FY2022 (as originally reported, pre-PPA restatement)", segment: "Capital markets", basis: operating, revenue: 257890, profit: 110819, unit: "SAR '000", source: "1060_SAB/2022_Annual_filed2023-02-14.pdf", page: 71}
+  - {period: "FY2022 (as originally reported, pre-PPA restatement)", segment: "Others", basis: operating, revenue: -73717, profit: 142193, unit: "SAR '000", source: "1060_SAB/2022_Annual_filed2023-02-14.pdf", page: 71}
+  - {period: "FY2022 (as originally reported, pre-PPA restatement)", segment: "Total (continuing)", basis: operating, revenue: 9697028, profit: 5761818, unit: "SAR '000", source: "1060_SAB/2022_Annual_filed2023-02-14.pdf", page: 71}
+  - {period: "FY2025", segment: "Wealth and Personal Banking", basis: operating, revenue: 4410141, profit: 2074832, unit: "SAR '000", source: "1060_SAB/2025_Annual_filed2026-02-15.pdf", page: 89}
+  - {period: "FY2025", segment: "Corporate and Institutional Banking", basis: operating, revenue: 7949621, profit: 5700740, unit: "SAR '000", source: "1060_SAB/2025_Annual_filed2026-02-15.pdf", page: 89}
+  - {period: "FY2025", segment: "Treasury", basis: operating, revenue: 1673424, profit: 1361300, unit: "SAR '000", source: "1060_SAB/2025_Annual_filed2026-02-15.pdf", page: 89}
+  - {period: "FY2025", segment: "Capital markets", basis: operating, revenue: 456749, profit: 180260, unit: "SAR '000", source: "1060_SAB/2025_Annual_filed2026-02-15.pdf", page: 89}
+  - {period: "FY2025", segment: "Others", basis: operating, revenue: 234028, profit: 382023, unit: "SAR '000", source: "1060_SAB/2025_Annual_filed2026-02-15.pdf", page: 89}
+  - {period: "FY2025", segment: "Total", basis: operating, revenue: 14723963, profit: 9699155, unit: "SAR '000", source: "1060_SAB/2025_Annual_filed2026-02-15.pdf", page: 89}
+  - {period: "9M2025 (restated)", segment: "Wealth and Personal Banking", basis: operating, revenue: 3318559, profit: 1615046, unit: "SAR '000", source: "1060_SAB/2026_Q3_filed2026-10-28.pdf", page: 28, note: "segment totals equal original 9M2025 interim p24"}
+  - {period: "9M2025 (restated)", segment: "Corporate and Institutional Banking", basis: operating, revenue: 5953632, profit: 4355275, unit: "SAR '000", source: "1060_SAB/2026_Q3_filed2026-10-28.pdf", page: 28}
+  - {period: "9M2025 (restated)", segment: "Treasury", basis: operating, revenue: 1223350, profit: 1009640, unit: "SAR '000", source: "1060_SAB/2026_Q3_filed2026-10-28.pdf", page: 28}
+  - {period: "9M2025 (restated)", segment: "Capital markets", basis: operating, revenue: 357020, profit: 152209, unit: "SAR '000", source: "1060_SAB/2026_Q3_filed2026-10-28.pdf", page: 28}
+  - {period: "9M2025 (restated)", segment: "Others", basis: operating, revenue: 137633, profit: 247301, unit: "SAR '000", source: "1060_SAB/2026_Q3_filed2026-10-28.pdf", page: 28}
+  - {period: "9M2025", segment: "Total", basis: operating, revenue: 10990194, profit: 7379471, unit: "SAR '000", source: "1060_SAB/2026_Q3_filed2026-10-28.pdf", page: 28}
+  - {period: "9M2026", segment: "Wealth and Personal Banking", basis: operating, revenue: 3064789, profit: 1362826, unit: "SAR '000", source: "1060_SAB/2026_Q3_filed2026-10-28.pdf", page: 28}
+  - {period: "9M2026", segment: "Corporate and Institutional Banking", basis: operating, revenue: 6071985, profit: 4343694, unit: "SAR '000", source: "1060_SAB/2026_Q3_filed2026-10-28.pdf", page: 28}
+  - {period: "9M2026", segment: "Treasury", basis: operating, revenue: 1697995, profit: 1462702, unit: "SAR '000", source: "1060_SAB/2026_Q3_filed2026-10-28.pdf", page: 28}
+  - {period: "9M2026", segment: "Capital markets", basis: operating, revenue: 292198, profit: 78466, unit: "SAR '000", source: "1060_SAB/2026_Q3_filed2026-10-28.pdf", page: 28}
+  - {period: "9M2026", segment: "Others", basis: operating, revenue: -10482, profit: 65316, unit: "SAR '000", source: "1060_SAB/2026_Q3_filed2026-10-28.pdf", page: 28}
+  - {period: "9M2026", segment: "Total", basis: operating, revenue: 11116485, profit: 7313004, unit: "SAR '000", source: "1060_SAB/2026_Q3_filed2026-10-28.pdf", page: 28}
+
+revenue_drivers: []
+
+one_offs:
+  - {period: "FY2022", item: "Bargain purchase gain on HSBC Saudi Arabia business lines (provisional 155.4m; restated to 108.6m in FY2023 AFS)", amount: 108600, unit: "SAR '000", pnl_line: "Other operating income", recurring: false, source: "1060_SAB/2023_Annual_filed2024-02-15.pdf", page: 94, quote: "The completion of purchase price allocation exercise resulted in a bargain purchase of SAR 108.6 million."}
+  - {period: "FY2022", item: "Business acquisition integration and transaction costs (FY2021: 37m)", amount: 54000, unit: "SAR '000", pnl_line: "Salaries (7m) and G&A (47m)", recurring: false, source: "1060_SAB/2022_Annual_filed2023-02-14.pdf", page: 95, quote: "amounting to SAR 54 million (2021: SAR 37 million)"}
+  - {period: "FY2022", item: "Net loss from discontinued operations (SABB Takaful) incl. loss on disposal 6,563", amount: -53860, unit: "SAR '000", pnl_line: "Net loss from discontinued operations", recurring: false, source: "1060_SAB/2022_Annual_filed2023-02-14.pdf", page: 96, quote: "Loss on disposal (6,563) - Net loss from discontinued operations for the year (53,860) (30,167)"}
+  - {period: "FY2021-FY2025", item: "PPA release from POCI accounts (Alawwal merger) within recoveries: FY2021 273m, FY2022 616m, FY2023 486m, FY2024 248m, FY2025 721m", amount: 721000, unit: "SAR '000", pnl_line: "Provision for expected credit losses, net", recurring: false, source: "1060_SAB/2025_Annual_filed2026-02-15.pdf", page: 91, quote: "include purchase price allocation release from POCI accounts of SAR721 million (2024: SAR248 million)"}
+  - {period: "FY2023", item: "Prior-year zakat (109,169) and income tax (297) charge after ZATCA 2019-2020 assessments settled", amount: 109466, unit: "SAR '000", pnl_line: "Zakat and income tax", recurring: false, source: "1060_SAB/2023_Annual_filed2024-02-15.pdf", page: 68, quote: "Charged for the prior year 109,466 -"}
+  - {period: "9M2026", item: "Gain on FVOCI debt instruments (9M2025: 49,182)", amount: 238619, unit: "SAR '000", pnl_line: "Gain / (loss) on FVOCI debt instruments, net", recurring: false, source: "1060_SAB/2026_Q3_filed2026-10-28.pdf", page: 5, quote: "Gain / (loss) on FVOCI debt instruments, net 18,494 (428) 238,619 49,182"}
+  - {period: "9M2026", item: "Loss on amortised cost investments", amount: -16260, unit: "SAR '000", pnl_line: "(Loss) / gain on amortised cost investments, net", recurring: false, source: "1060_SAB/2026_Q3_filed2026-10-28.pdf", page: 5, quote: "(Loss) / gain on amortised cost investments, net (16,260) - (16,260) 2,021"}
+  - {period: "9M2026", item: "Recoveries net of write-offs (9M2025: 526,113)", amount: 758914, unit: "SAR '000", pnl_line: "Provision for expected credit losses, net", recurring: false, source: "1060_SAB/2026_Q3_filed2026-10-28.pdf", page: 29, quote: "Recoveries net of (write-offs) 758,914 526,113"}
+  - {period: "FY2022-9M2026", item: "Hyperinflation adjustments / items labelled non-recurring", amount: null, status: "not found"}
+
+significant_events:
+  - {date: "2026 (Q3)", event: "Volatile regional geopolitical environment; targeted portfolio assessments for SICR; macro models updated and macroeconomic forecast provider changed in Q3 2026; no quantified overlay disclosed", financial_effect: "9M2026 ECL 533,816 vs 440,341; Q3 2026 ECL 361,898 vs 82,498", source: "1060_SAB/2026_Q3_filed2026-10-28.pdf", page: 29, quote: "During Q3 2026, the bank has updated its macroeconomic models and changed the macroeconomic forecast provider."}
+  - {date: "30 Sep 2026", event: "Geopolitical ECL note: impact uncertain; will reassess and determine if further ECL adjustment required (no post-period escalation language unlike peers)", financial_effect: null, source: "1060_SAB/2026_Q3_filed2026-10-28.pdf", page: 34, quote: "The potential financial impact of such situation is uncertain as the situation is still evolving"}
+  - {date: "9M2026", event: "Syndicated term loan USD 1.25bn (SAR 4.69bn), 3 years, SOFR+75bps; term loans 942,587 -> 5,640,159", financial_effect: null, source: "1060_SAB/2026_Q3_filed2026-10-28.pdf", page: 24, quote: "SAB entered an arrangement of the syndicated borrowings (term loans) of USD 1.25 billion (equivalent to SAR4.69 billion)"}
+  - {date: "FY2025", event: "Called SAR 5bn Tier 2 sukuk at par; issued USD 1.25bn (SAR 4.688bn) Tier 2 notes due 2035 at 5.95%", financial_effect: null, source: "1060_SAB/2026_Q3_filed2026-10-28.pdf", page: 24, quote: "SAB obtained the necessary approvals from SAMA for exercising its call option on its SAR5 billion Tier 2"}
+  - {date: "9M2026", event: "Due to banks 25,700,960 -> 37,357,338; debt securities and term loans 7,895,554 -> 11,616,786", financial_effect: null, source: "1060_SAB/2026_Q3_filed2026-10-28.pdf", page: 4, quote: "Debt securities in issue and term loans 11 11,616,786 7,895,554 7,798,790"}
+  - {date: "9M2026", event: "Income tax provision fell to 236,780 from 456,045 (no explanation found)", financial_effect: null, source: "1060_SAB/2026_Q3_filed2026-10-28.pdf", page: 5, quote: "Provision for income tax 14 (52,821) (160,615) (236,780) (456,045)"}
+  - {date: "9M2026", event: "Zakat/income tax: assessments 2019-2023 closed and settled; 2024 under ZATCA review", financial_effect: null, source: "1060_SAB/2026_Q3_filed2026-10-28.pdf", page: 26, quote: "The assessment of Zakat and Income tax for 2019 up to 2023 are closed and settled."}
+  - {date: "9M2026", event: "Subsequent events note", financial_effect: null, status: "not found", source: "1060_SAB/2026_Q3_filed2026-10-28.pdf", page: null}
+
+audit_opinion:
+  - {period: "FY2022", opinion: "unmodified (PwC, KPMG)", emphasis_of_matter: "none", source: "1060_SAB/2022_Annual_filed2023-02-14.pdf", page: 3}
+  - {period: "FY2023", opinion: "unmodified (PwC, KPMG)", emphasis_of_matter: "none (FY2022 PPA restatement not referenced in opinion section)", source: "1060_SAB/2023_Annual_filed2024-02-15.pdf", page: 3, note: "image page"}
+  - {period: "FY2024", opinion: "unmodified (PwC, EY)", emphasis_of_matter: "none; Other Matter: FY2023 jointly audited by another auditor (unmodified, 15 Feb 2024)", source: "1060_SAB/2024_Annual_filed2025-02-10.pdf", page: 3, note: "image page"}
+  - {period: "FY2025", opinion: "unmodified (PwC, EY)", emphasis_of_matter: "none", source: "1060_SAB/2025_Annual_filed2026-02-15.pdf", page: 3}
+  - {period: "9M2025", opinion: "unmodified review conclusion (PwC, EY)", emphasis_of_matter: "none", source: "1060_SAB/2025_Q3_filed2025-11-02.pdf", page: 3}
+  - {period: "9M2026", opinion: "unmodified review conclusion (PwC, EY)", emphasis_of_matter: "none", source: "1060_SAB/2026_Q3_filed2026-10-28.pdf", page: 3, note: "image page"}
+
+kpis_in_filings:
+  - {period: "31 Dec 2021", kpi: "Tier 1 ratio", value: 19.29, unit: "%", source: "1060_SAB/2022_Annual_filed2023-02-14.pdf", page: 93}
+  - {period: "31 Dec 2021", kpi: "Total capital adequacy ratio", value: 21.84, unit: "%", source: "1060_SAB/2022_Annual_filed2023-02-14.pdf", page: 93}
+  - {period: "31 Dec 2022", kpi: "CET1 ratio", value: 17.65, unit: "%", source: "1060_SAB/2023_Annual_filed2024-02-15.pdf", page: 93}
+  - {period: "31 Dec 2022", kpi: "Tier 1 ratio", value: 17.65, unit: "%", source: "1060_SAB/2022_Annual_filed2023-02-14.pdf", page: 93}
+  - {period: "31 Dec 2022", kpi: "Total capital adequacy ratio", value: 19.91, unit: "%", source: "1060_SAB/2022_Annual_filed2023-02-14.pdf", page: 93}
+  - {period: "31 Dec 2023", kpi: "CET1 ratio", value: 16.34, unit: "%", source: "1060_SAB/2023_Annual_filed2024-02-15.pdf", page: 93}
+  - {period: "31 Dec 2023", kpi: "Tier 1 ratio", value: 17.69, unit: "%", source: "1060_SAB/2023_Annual_filed2024-02-15.pdf", page: 93}
+  - {period: "31 Dec 2023", kpi: "Total capital adequacy ratio", value: 19.72, unit: "%", source: "1060_SAB/2023_Annual_filed2024-02-15.pdf", page: 93}
+  - {period: "31 Dec 2024 (as reported)", kpi: "CET1 ratio", value: 15.43, unit: "%", source: "1060_SAB/2024_Annual_filed2025-02-10.pdf", page: 112}
+  - {period: "31 Dec 2024 (as reported)", kpi: "Tier 1 ratio", value: 17.90, unit: "%", source: "1060_SAB/2024_Annual_filed2025-02-10.pdf", page: 112}
+  - {period: "31 Dec 2024 (as reported)", kpi: "Total capital adequacy ratio", value: 19.69, unit: "%", source: "1060_SAB/2024_Annual_filed2025-02-10.pdf", page: 112}
+  - {period: "31 Dec 2024 (FY2025 AFS comparative)", kpi: "CET1 ratio", value: 15.61, unit: "%", source: "1060_SAB/2025_Annual_filed2026-02-15.pdf", page: 116}
+  - {period: "31 Dec 2024 (FY2025 AFS comparative)", kpi: "Tier 1 ratio", value: 18.06, unit: "%", source: "1060_SAB/2025_Annual_filed2026-02-15.pdf", page: 116}
+  - {period: "31 Dec 2024 (FY2025 AFS comparative)", kpi: "Total capital adequacy ratio", value: 19.84, unit: "%", source: "1060_SAB/2025_Annual_filed2026-02-15.pdf", page: 116}
+  - {period: "31 Dec 2025", kpi: "CET1 ratio", value: 14.84, unit: "%", source: "1060_SAB/2025_Annual_filed2026-02-15.pdf", page: 116}
+  - {period: "31 Dec 2025", kpi: "Tier 1 ratio", value: 18.13, unit: "%", source: "1060_SAB/2025_Annual_filed2026-02-15.pdf", page: 116}
+  - {period: "31 Dec 2025", kpi: "Total capital adequacy ratio", value: 19.65, unit: "%", source: "1060_SAB/2025_Annual_filed2026-02-15.pdf", page: 116}
+  - {period: "30 Sep 2025", kpi: "CET1 ratio", value: 14.39, unit: "%", source: "1060_SAB/2026_Q3_filed2026-10-28.pdf", page: 33}
+  - {period: "30 Sep 2025", kpi: "Tier 1 ratio", value: 17.67, unit: "%", source: "1060_SAB/2026_Q3_filed2026-10-28.pdf", page: 33}
+  - {period: "30 Sep 2025", kpi: "Total capital adequacy ratio", value: 19.17, unit: "%", source: "1060_SAB/2026_Q3_filed2026-10-28.pdf", page: 33}
+  - {period: "30 Sep 2026", kpi: "CET1 ratio", value: 14.39, unit: "%", source: "1060_SAB/2026_Q3_filed2026-10-28.pdf", page: 33}
+  - {period: "30 Sep 2026", kpi: "Tier 1 ratio", value: 17.52, unit: "%", source: "1060_SAB/2026_Q3_filed2026-10-28.pdf", page: 33}
+  - {period: "30 Sep 2026", kpi: "Total capital adequacy ratio", value: 19.13, unit: "%", source: "1060_SAB/2026_Q3_filed2026-10-28.pdf", page: 33}
+  - {period: "all", kpi: "LCR / NSFR", value: null, unit: "%", status: "not found", source: "all focus PDFs searched", page: null}
+  - {period: "all", kpi: "NPL ratio / coverage ratio", value: null, unit: "%", status: "not found", source: "all focus PDFs searched", page: null}
+
+open_questions:
+  - "AT1 carrying amounts are below face value (SAR 4.0bn -> 3,985,000; SAR 4.0bn -> 3,980,000; SAR 4.44bn -> 4,421,500); the filings do not explain the difference (possibly holdings by group entities or netting of costs)."
+  - "31 Dec 2021/2022 AT1 = 0 inferred from absence of any Tier 1 sukuk line/note in FY2022 AFS and Tier 1 ratio equal to CET1 for 2022; FY2022 equity statement image not viewed."
+  - "FY2023 and FY2024 AT1 issuance costs (16,956 and 14,289) taken from FY2024 cash flow statement text; FY2023/FY2024 equity statement images not viewed."
+  - "SAB 2025 equity restatement combines two items (FVOCI NAV->fair value +918,484; unrecorded FVSI investment +242,086 to retained earnings) = 1,160,570, matching the brief's +1,160m."

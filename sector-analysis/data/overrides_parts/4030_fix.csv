@@ -1,0 +1,2 @@
+sector,ticker,period,metric_code,value_sar_m,value_original,unit_original,provenance,source,page,label,reason,assurance
+Energy,4030,FY2022,CFO,1989.531,1989531,Thousands,R,4030_BAHRI/2023_Annual_filed2024-03-21.pdf,10,Net cash flows from operating activities (FY2022 comparative in FY2023 AFS),"Latest restated comparative: the FY2023 AFS reclassified 14.2m; the XBRL comparative was not updated (originally 2,003.760 in the FY2022 AFS)",Audited

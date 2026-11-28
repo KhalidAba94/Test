@@ -1,0 +1,878 @@
+{
+ "Entertainment": {
+  "name": "Entertainment and leisure operators",
+  "slug": "seven_ent",
+  "template": "corporate",
+  "archive": "SEVEN_ENT",
+  "code": "ENT",
+  "top_line": "REV",
+  "top_line_name": "Revenue",
+  "profit": "NI_ATTR",
+  "constituents": {
+   "1830": {
+    "name": "Leejam Sports (Fitness Time)",
+    "sub_industry": "Fitness clubs",
+    "short": "Leejam"
+   },
+   "4170": {
+    "name": "TECO (Tourism Enterprise Co., Shams)",
+    "sub_industry": "Entertainment and resorts",
+    "short": "TECO"
+   },
+   "1820": {
+    "name": "Baan (Al Hokair Group for Tourism and Development)",
+    "sub_industry": "Hotels and entertainment centres",
+    "short": "Baan"
+   },
+   "6018": {
+    "name": "Sport Clubs",
+    "sub_industry": "Sports clubs",
+    "short": "Sport Clubs"
+   },
+   "6022": {
+    "name": "Armah Sports",
+    "sub_industry": "Fitness clubs",
+    "short": "Armah",
+    "assurance_override": {
+     "9M2025": "Unaudited and not reviewed (Armah reported half-yearly on Nomu; nine-month comparative in the 2026 Q3 interim)"
+    }
+   }
+  },
+  "table_metrics": [
+   "REV",
+   "GP",
+   "OPINC",
+   "EBITDA_C",
+   "EBITDA_U",
+   "NI_ATTR",
+   "CFO",
+   "CAPEX",
+   "FCF",
+   "DEBT",
+   "LEASE_LIAB",
+   "CASH",
+   "NET_DEBT",
+   "TA",
+   "EQ_ATTR"
+  ],
+  "ratios": {
+   "GP_M": [
+    "GP",
+    "REV_M",
+    "Gross margin"
+   ],
+   "EBITDA_M": [
+    "EBITDA_C",
+    "REV_M",
+    "EBITDA margin (calculated)"
+   ],
+   "EBITDA_M_U": [
+    "EBITDA_U",
+    "REV_M",
+    "EBITDA margin excl. identified one-offs"
+   ],
+   "OP_M": [
+    "OPINC",
+    "REV_M",
+    "Operating margin"
+   ],
+   "NET_M": [
+    "NI_ATTR",
+    "REV_M",
+    "Net margin (attributable)"
+   ],
+   "ROE": [
+    "NI_ATTR",
+    "avg:EQ_ATTR",
+    "Return on equity (attributable; YTD annualised)"
+   ],
+   "CAPEX_INT": [
+    "CAPEX",
+    "REV_M",
+    "Capex / revenue"
+   ],
+   "ND_EBITDA": [
+    "NET_DEBT",
+    "ann:EBITDA_C",
+    "Net debt / EBITDA (x; 9M EBITDA annualised)"
+   ]
+  },
+  "classification_note": "Direct entertainment and leisure operators on the SEVEN priority list (benchmark document of 15 Nov 2026), matched to the Main Market archive. MAF Entertainment and TIME Entertainment are in the benchmark but not listed on the Main Market, so they are not covered.",
+  "fy2021_balance_only": true
+ },
+ "Media": {
+  "name": "Media-adjacent (not an attraction operator)",
+  "slug": "seven_med",
+  "template": "corporate",
+  "archive": "SEVEN_MED",
+  "code": "MED",
+  "top_line": "REV",
+  "top_line_name": "Revenue",
+  "profit": "NI_ATTR",
+  "constituents": {
+   "4072": {
+    "name": "MBC Group",
+    "sub_industry": "Media and advertising",
+    "short": "MBC",
+    "short_periods": {
+     "FY2023": 8
+    },
+    "period_note": "Incorporated 20 April 2023; subsidiaries consolidated from 30 June 2023, so FY2023 is a short first period (about six months of operations). No FY2021-FY2022 figures.",
+    "period_labels": {
+     "FY2023": "FY2023 (8m)"
+    }
+   }
+  },
+  "table_metrics": [
+   "REV",
+   "GP",
+   "OPINC",
+   "EBITDA_C",
+   "EBITDA_U",
+   "NI_ATTR",
+   "CFO",
+   "CAPEX",
+   "FCF",
+   "DEBT",
+   "LEASE_LIAB",
+   "CASH",
+   "NET_DEBT",
+   "TA",
+   "EQ_ATTR"
+  ],
+  "ratios": {
+   "GP_M": [
+    "GP",
+    "REV_M",
+    "Gross margin"
+   ],
+   "EBITDA_M": [
+    "EBITDA_C",
+    "REV_M",
+    "EBITDA margin (calculated)"
+   ],
+   "EBITDA_M_U": [
+    "EBITDA_U",
+    "REV_M",
+    "EBITDA margin excl. identified one-offs"
+   ],
+   "OP_M": [
+    "OPINC",
+    "REV_M",
+    "Operating margin"
+   ],
+   "NET_M": [
+    "NI_ATTR",
+    "REV_M",
+    "Net margin (attributable)"
+   ],
+   "ROE": [
+    "NI_ATTR",
+    "avg:EQ_ATTR",
+    "Return on equity (attributable; YTD annualised)"
+   ],
+   "CAPEX_INT": [
+    "CAPEX",
+    "REV_M",
+    "Capex / revenue"
+   ],
+   "ND_EBITDA": [
+    "NET_DEBT",
+    "ann:EBITDA_C",
+    "Net debt / EBITDA (x; 9M EBITDA annualised)"
+   ]
+  },
+  "classification_note": "MBC Group sits in the benchmark's entertainment table but is a media and advertising company, not an attraction operator; it is kept as its own group so it does not distort the operators' totals.",
+  "fy2021_balance_only": true
+ },
+ "FnB": {
+  "name": "F&B operators",
+  "slug": "seven_fnb",
+  "template": "corporate",
+  "archive": "SEVEN_FNB",
+  "code": "FNB",
+  "top_line": "REV",
+  "top_line_name": "Revenue",
+  "profit": "NI_ATTR",
+  "constituents": {
+   "6015": {
+    "name": "Americana Restaurants",
+    "sub_industry": "Restaurants (reports in USD)",
+    "short": "Americana"
+   },
+   "6002": {
+    "name": "Herfy Food Services",
+    "sub_industry": "Restaurants",
+    "short": "Herfy"
+   },
+   "6014": {
+    "name": "Alamar Foods",
+    "sub_industry": "Restaurants (master franchisee)",
+    "short": "Alamar"
+   },
+   "6016": {
+    "name": "Burgerizzr",
+    "sub_industry": "Restaurants",
+    "short": "Burgerizzr",
+    "legal_name": "Bait Alshateera Fast Food Restaurants Co. (Burgerizzr)"
+   },
+   "6012": {
+    "name": "Raydan Food",
+    "sub_industry": "Restaurants",
+    "short": "Raydan",
+    "legal_name": "Raydan Food Company"
+   }
+  },
+  "table_metrics": [
+   "REV",
+   "GP",
+   "OPINC",
+   "EBITDA_C",
+   "EBITDA_U",
+   "NI_ATTR",
+   "CFO",
+   "CAPEX",
+   "FCF",
+   "DEBT",
+   "LEASE_LIAB",
+   "CASH",
+   "NET_DEBT",
+   "TA",
+   "EQ_ATTR"
+  ],
+  "ratios": {
+   "GP_M": [
+    "GP",
+    "REV_M",
+    "Gross margin"
+   ],
+   "EBITDA_M": [
+    "EBITDA_C",
+    "REV_M",
+    "EBITDA margin (calculated)"
+   ],
+   "EBITDA_M_U": [
+    "EBITDA_U",
+    "REV_M",
+    "EBITDA margin excl. identified one-offs"
+   ],
+   "OP_M": [
+    "OPINC",
+    "REV_M",
+    "Operating margin"
+   ],
+   "NET_M": [
+    "NI_ATTR",
+    "REV_M",
+    "Net margin (attributable)"
+   ],
+   "ROE": [
+    "NI_ATTR",
+    "avg:EQ_ATTR",
+    "Return on equity (attributable; YTD annualised)"
+   ],
+   "CAPEX_INT": [
+    "CAPEX",
+    "REV_M",
+    "Capex / revenue"
+   ],
+   "ND_EBITDA": [
+    "NET_DEBT",
+    "ann:EBITDA_C",
+    "Net debt / EBITDA (x; 9M EBITDA annualised)"
+   ]
+  },
+  "classification_note": "Restaurant operators on the SEVEN list. Americana reports in US dollars; its figures are converted to SAR at the fixed peg of 3.75.",
+  "fy2021_balance_only": true
+ },
+ "Platform": {
+  "name": "Adjacent platform (delivery)",
+  "slug": "seven_plt",
+  "template": "corporate",
+  "archive": "SEVEN_PLT",
+  "code": "PLT",
+  "top_line": "REV",
+  "top_line_name": "Revenue",
+  "profit": "NI_ATTR",
+  "constituents": {
+   "6017": {
+    "name": "Jahez International",
+    "sub_industry": "Delivery platform",
+    "short": "Jahez"
+   }
+  },
+  "table_metrics": [
+   "REV",
+   "GP",
+   "OPINC",
+   "EBITDA_C",
+   "EBITDA_U",
+   "NI_ATTR",
+   "CFO",
+   "CAPEX",
+   "FCF",
+   "DEBT",
+   "LEASE_LIAB",
+   "CASH",
+   "NET_DEBT",
+   "TA",
+   "EQ_ATTR"
+  ],
+  "ratios": {
+   "GP_M": [
+    "GP",
+    "REV_M",
+    "Gross margin"
+   ],
+   "EBITDA_M": [
+    "EBITDA_C",
+    "REV_M",
+    "EBITDA margin (calculated)"
+   ],
+   "EBITDA_M_U": [
+    "EBITDA_U",
+    "REV_M",
+    "EBITDA margin excl. identified one-offs"
+   ],
+   "OP_M": [
+    "OPINC",
+    "REV_M",
+    "Operating margin"
+   ],
+   "NET_M": [
+    "NI_ATTR",
+    "REV_M",
+    "Net margin (attributable)"
+   ],
+   "ROE": [
+    "NI_ATTR",
+    "avg:EQ_ATTR",
+    "Return on equity (attributable; YTD annualised)"
+   ],
+   "CAPEX_INT": [
+    "CAPEX",
+    "REV_M",
+    "Capex / revenue"
+   ],
+   "ND_EBITDA": [
+    "NET_DEBT",
+    "ann:EBITDA_C",
+    "Net debt / EBITDA (x; 9M EBITDA annualised)"
+   ]
+  },
+  "classification_note": "Jahez is a delivery platform, not a restaurant operator; kept separate from the F&B operators.",
+  "fy2021_balance_only": true
+ },
+ "Malls": {
+  "name": "Mall operators and landlords",
+  "slug": "seven_mal",
+  "template": "corporate",
+  "archive": "SEVEN_MAL",
+  "code": "MAL",
+  "top_line": "REV",
+  "top_line_name": "Revenue",
+  "profit": "NI_ATTR",
+  "constituents": {
+   "4321": {
+    "name": "Cenomi Centers",
+    "sub_industry": "Malls",
+    "short": "Cenomi Centers",
+    "short_periods": {
+     "FY2022": 9
+    },
+    "period_note": "Year-end changed from 31 March to 31 December (approved 29 Dec 2022): FY2022 is the nine-month transition period 1 Apr-31 Dec 2022; FY2021 opening balances are at 31 Mar 2022.",
+    "period_labels": {
+     "FY2021": "31 Mar 2022",
+     "FY2022": "FY2022 (Apr–Dec 22, 9m)"
+    }
+   },
+   "4320": {
+    "name": "Alandalus Property",
+    "sub_industry": "Malls",
+    "short": "Alandalus"
+   },
+   "4150": {
+    "name": "ARDCO (Arriyadh Development)",
+    "sub_industry": "Centres and markets",
+    "short": "ARDCO",
+    "legal_name": "Arriyadh Development Company"
+   }
+  },
+  "table_metrics": [
+   "REV",
+   "GP",
+   "OPINC",
+   "EBITDA_C",
+   "EBITDA_U",
+   "NI_ATTR",
+   "CFO",
+   "CAPEX",
+   "IP_CAPEX",
+   "FCF",
+   "DEBT",
+   "LEASE_LIAB",
+   "CASH",
+   "NET_DEBT",
+   "TA",
+   "EQ_ATTR"
+  ],
+  "ratios": {
+   "GP_M": [
+    "GP",
+    "REV_M",
+    "Gross margin"
+   ],
+   "EBITDA_M": [
+    "EBITDA_C",
+    "REV_M",
+    "EBITDA margin (calculated)"
+   ],
+   "EBITDA_M_U": [
+    "EBITDA_U",
+    "REV_M",
+    "EBITDA margin excl. identified one-offs"
+   ],
+   "OP_M": [
+    "OPINC",
+    "REV_M",
+    "Operating margin"
+   ],
+   "NET_M": [
+    "NI_ATTR",
+    "REV_M",
+    "Net margin (attributable)"
+   ],
+   "ROE": [
+    "NI_ATTR",
+    "avg:EQ_ATTR",
+    "Return on equity (attributable; YTD annualised)"
+   ],
+   "CAPEX_INT": [
+    "CAPEX_TOT",
+    "REV_M",
+    "Capex incl. investment property / revenue"
+   ],
+   "ND_EBITDA": [
+    "NET_DEBT",
+    "ann:EBITDA_C",
+    "Net debt / EBITDA (x; 9M EBITDA annualised)"
+   ]
+  },
+  "classification_note": "Mall operators and landlords on the SEVEN list.",
+  "fy2021_balance_only": true
+ },
+ "REITs": {
+  "name": "Retail REITs (selected by the benchmark; not pure-play retail)",
+  "slug": "seven_reit",
+  "template": "reit",
+  "archive": "SEVEN_REIT",
+  "code": "REIT",
+  "top_line": "REV",
+  "top_line_name": "Revenue (rental income)",
+  "profit": "NI_ATTR",
+  "constituents": {
+   "4338": {
+    "name": "Alahli REIT 1",
+    "sub_industry": "REIT",
+    "short": "Alahli REIT",
+    "legal_name": "Alahli REIT Fund (1)"
+   },
+   "4336": {
+    "name": "Mulkia REIT",
+    "sub_industry": "REIT",
+    "short": "Mulkia",
+    "legal_name": "Mulkia Gulf Real Estate REIT Fund"
+   },
+   "4345": {
+    "name": "Alinma Retail REIT",
+    "sub_industry": "REIT",
+    "short": "Alinma Retail",
+    "legal_name": "Alinma Retail REIT Fund"
+   },
+   "4335": {
+    "name": "Musharaka REIT",
+    "sub_industry": "REIT",
+    "short": "Musharaka",
+    "legal_name": "Musharaka REIT Fund"
+   },
+   "4347": {
+    "name": "Bonyan REIT",
+    "sub_industry": "REIT",
+    "short": "Bonyan",
+    "legal_name": "Bonyan REIT Fund"
+   },
+   "4344": {
+    "name": "SEDCO Capital REIT",
+    "sub_industry": "REIT",
+    "short": "SEDCO Capital",
+    "legal_name": "SEDCO Capital REIT Fund"
+   },
+   "4339": {
+    "name": "Derayah REIT",
+    "sub_industry": "REIT",
+    "short": "Derayah",
+    "legal_name": "Derayah REIT Fund"
+   },
+   "4346": {
+    "name": "MEFIC REIT",
+    "sub_industry": "REIT",
+    "short": "MEFIC",
+    "legal_name": "MEFIC REIT Fund"
+   }
+  },
+  "table_metrics": [
+   "REV",
+   "NI_ATTR",
+   "FFO",
+   "DIST",
+   "TA",
+   "DEBT",
+   "CASH",
+   "NET_DEBT",
+   "EQ_ATTR",
+   "NAV_FV"
+  ],
+  "ratios": {
+   "NET_M": [
+    "NI_ATTR",
+    "REV_M",
+    "Net margin"
+   ],
+   "FFO_M": [
+    "FFO",
+    "REV_M",
+    "FFO margin"
+   ],
+   "LTV": [
+    "DEBT",
+    "TA",
+    "Loan to value (borrowings / total assets)"
+   ],
+   "ROE": [
+    "NI_ATTR",
+    "avg:EQ_ATTR",
+    "Return on net assets (YTD annualised)"
+   ],
+   "PAYOUT": [
+    "DIST",
+    "FFO",
+    "Distributions / FFO"
+   ]
+  },
+  "classification_note": "REITs selected by the benchmark; their portfolios are not pure-play retail. The archive holds the funds' audited annual and reviewed half-yearly statements and quarterly fact sheets, and no XBRL, so every figure is read from the PDFs. Nine-month figures come from the unaudited fact sheets and are partial (several funds print no nine-month rental income).",
+  "fy2021_balance_only": true
+ },
+ "Retailers": {
+  "name": "Retailers",
+  "slug": "seven_ret",
+  "template": "corporate",
+  "archive": "SEVEN_RET",
+  "code": "RET",
+  "top_line": "REV",
+  "top_line_name": "Revenue",
+  "profit": "NI_ATTR",
+  "constituents": {
+   "4001": {
+    "name": "Abdullah Al Othaim Markets",
+    "sub_industry": "Grocery",
+    "short": "Othaim"
+   },
+   "4161": {
+    "name": "BinDawood Holding",
+    "sub_industry": "Grocery",
+    "short": "BinDawood"
+   },
+   "4190": {
+    "name": "Jarir Marketing",
+    "sub_industry": "Electronics, books and office",
+    "short": "Jarir"
+   },
+   "4003": {
+    "name": "United Electronics (eXtra)",
+    "sub_industry": "Electronics",
+    "short": "eXtra"
+   },
+   "4164": {
+    "name": "Nahdi Medical",
+    "sub_industry": "Pharmacy",
+    "short": "Nahdi"
+   },
+   "4163": {
+    "name": "Aldawaa Medical Services",
+    "sub_industry": "Pharmacy",
+    "short": "Aldawaa"
+   },
+   "4240": {
+    "name": "Cenomi Retail (AFG International)",
+    "sub_industry": "Mall franchise retail",
+    "short": "Cenomi Retail",
+    "short_periods": {
+     "FY2022": 9
+    },
+    "period_note": "Year-end changed from 31 March to 31 December: FY2022 is the nine-month period April-December 2022 (an unaudited 12-month calendar-2022 view is in the FY2023 annual, Annex 1); FY2021 opening balances are at 31 March 2022.",
+    "period_labels": {
+     "FY2021": "31 Mar 2022",
+     "FY2022": "FY2022 (Apr–Dec 22, 9m)"
+    },
+    "cell_notes": {
+     "GP_M|9M2025": "Nine-month gross profit is on the restated cost-of-revenue basis (2026 Q3 note 23); full years are not, so they are not comparable.",
+     "GP_M|9M2026": "Nine-month gross profit is on the restated cost-of-revenue basis (2026 Q3 note 23); full years are not, so they are not comparable."
+    }
+   },
+   "4008": {
+    "name": "SACO (Saudi Company for Hardware)",
+    "sub_industry": "Hardware and home",
+    "short": "SACO"
+   },
+   "4192": {
+    "name": "Alsaif Stores (Alsaif Gallery)",
+    "sub_industry": "Home goods",
+    "short": "Alsaif"
+   },
+   "4193": {
+    "name": "Nice One Beauty",
+    "sub_industry": "Beauty, online-led",
+    "short": "Nice One"
+   },
+   "4011": {
+    "name": "Lazurde",
+    "sub_industry": "Jewellery",
+    "short": "Lazurde",
+    "cell_notes": {
+     "ND_EBITDA|FY2025": "Borrowings include gold loans repaid in gold and matched by gold inventory; without them net debt is about nil (see data notes)."
+    }
+   }
+  },
+  "table_metrics": [
+   "REV",
+   "GP",
+   "OPINC",
+   "EBITDA_C",
+   "EBITDA_U",
+   "NI_ATTR",
+   "CFO",
+   "CAPEX",
+   "FCF",
+   "DEBT",
+   "LEASE_LIAB",
+   "CASH",
+   "NET_DEBT",
+   "TA",
+   "EQ_ATTR"
+  ],
+  "ratios": {
+   "GP_M": [
+    "GP",
+    "REV_M",
+    "Gross margin"
+   ],
+   "EBITDA_M": [
+    "EBITDA_C",
+    "REV_M",
+    "EBITDA margin (calculated)"
+   ],
+   "EBITDA_M_U": [
+    "EBITDA_U",
+    "REV_M",
+    "EBITDA margin excl. identified one-offs"
+   ],
+   "OP_M": [
+    "OPINC",
+    "REV_M",
+    "Operating margin"
+   ],
+   "NET_M": [
+    "NI_ATTR",
+    "REV_M",
+    "Net margin (attributable)"
+   ],
+   "ROE": [
+    "NI_ATTR",
+    "avg:EQ_ATTR",
+    "Return on equity (attributable; YTD annualised)"
+   ],
+   "CAPEX_INT": [
+    "CAPEX",
+    "REV_M",
+    "Capex / revenue"
+   ],
+   "ND_EBITDA": [
+    "NET_DEBT",
+    "ann:EBITDA_C",
+    "Net debt / EBITDA (x; 9M EBITDA annualised)"
+   ]
+  },
+  "classification_note": "Retailers on the SEVEN list. Panda Retail, Lulu Retail and RATIO are in the benchmark but not listed on the Main Market, so they are not covered.",
+  "fy2021_balance_only": true,
+  "cell_notes": {
+   "GP_M|9M2025": "Cenomi Retail's nine-month gross profit is on a different cost-of-revenue basis from its full years (2026 Q3 restatement, note 23), so 9M gross margins are not comparable with full years.",
+   "GP_M|9M2026": "Cenomi Retail's nine-month gross profit is on a different cost-of-revenue basis from its full years (2026 Q3 restatement, note 23), so 9M gross margins are not comparable with full years.",
+   "ND_EBITDA|FY2025": "Net debt includes Lazurde's gold loans (repaid in gold and matched by gold inventory); see Lazurde's page."
+  }
+ },
+ "Supporting": {
+  "name": "Supporting consumer goods (second tier, not in the benchmark)",
+  "slug": "seven_sup",
+  "template": "corporate",
+  "archive": "SEVEN_SUP",
+  "code": "SUP",
+  "top_line": "REV",
+  "top_line_name": "Revenue",
+  "profit": "NI_ATTR",
+  "constituents": {
+   "2280": {
+    "name": "Almarai",
+    "sub_industry": "Dairy and food",
+    "short": "Almarai"
+   },
+   "2050": {
+    "name": "Savola Group",
+    "sub_industry": "Foods",
+    "short": "Savola",
+    "cell_notes": {
+     "ROE|FY2024": "Includes the SAR 11,554.7m gain on the in-kind distribution of Almarai shares to shareholders (one-off).",
+     "NET_M|FY2024": "Includes the SAR 11,554.7m Almarai distribution gain (one-off).",
+     "OP_M|FY2024": "Includes the SAR 11,554.7m Almarai distribution gain (one-off).",
+     "EBITDA_M|FY2024": "Includes the SAR 11,554.7m gain on the in-kind distribution of Almarai shares (one-off); see EBITDA margin excl. one-offs.",
+     "ND_EBITDA|FY2024": "EBITDA includes the SAR 11,554.7m Almarai distribution gain (one-off), so the multiple is understated."
+    }
+   },
+   "2270": {
+    "name": "SADAFCO",
+    "sub_industry": "Dairy and food",
+    "short": "SADAFCO",
+    "short_periods": {
+     "FY2023": 9
+    },
+    "period_note": "Year-end changed from 31 March to 31 December: FY2022 = April 2022-March 2023; FY2023 = the nine-month period April-December 2023.",
+    "period_labels": {
+     "FY2021": "31 Mar 2022",
+     "FY2022": "FY2022 (Apr 22–Mar 23)",
+     "FY2023": "FY2023 (Apr–Dec 23, 9m)"
+    },
+    "exclude_from_totals": {
+     "FY2022": "SADAFCO's FY2022 is the year to 31 March 2023 (not a calendar year) and exists in the archive only as an XBRL file, so it is left out of group totals."
+    }
+   },
+   "6010": {
+    "name": "NADEC",
+    "sub_industry": "Dairy and agriculture",
+    "short": "NADEC"
+   },
+   "6001": {
+    "name": "Halwani Bros (HB)",
+    "sub_industry": "Food",
+    "short": "Halwani"
+   },
+   "2281": {
+    "name": "Tanmiah Food",
+    "sub_industry": "Poultry and food",
+    "short": "Tanmiah"
+   },
+   "2282": {
+    "name": "Naqi Water",
+    "sub_industry": "Water",
+    "short": "Naqi"
+   },
+   "2287": {
+    "name": "Entaj",
+    "sub_industry": "Poultry",
+    "short": "Entaj"
+   },
+   "2283": {
+    "name": "First Milling",
+    "sub_industry": "Flour",
+    "short": "First Mills"
+   },
+   "2284": {
+    "name": "Modern Mills",
+    "sub_industry": "Flour",
+    "short": "Modern Mills",
+    "legal_name": "Modern Mills Company"
+   },
+   "2285": {
+    "name": "Arabian Mills",
+    "sub_industry": "Flour",
+    "short": "Arabian Mills"
+   },
+   "2286": {
+    "name": "Fourth Milling",
+    "sub_industry": "Flour",
+    "short": "Fourth Milling"
+   },
+   "4165": {
+    "name": "Almajed Oud",
+    "sub_industry": "Household and personal products",
+    "short": "Almajed Oud"
+   }
+  },
+  "table_metrics": [
+   "REV",
+   "GP",
+   "OPINC",
+   "EBITDA_C",
+   "EBITDA_U",
+   "NI_ATTR",
+   "CFO",
+   "CAPEX",
+   "FCF",
+   "DEBT",
+   "LEASE_LIAB",
+   "CASH",
+   "NET_DEBT",
+   "TA",
+   "EQ_ATTR"
+  ],
+  "ratios": {
+   "GP_M": [
+    "GP",
+    "REV_M",
+    "Gross margin"
+   ],
+   "EBITDA_M": [
+    "EBITDA_C",
+    "REV_M",
+    "EBITDA margin (calculated)"
+   ],
+   "EBITDA_M_U": [
+    "EBITDA_U",
+    "REV_M",
+    "EBITDA margin excl. identified one-offs"
+   ],
+   "OP_M": [
+    "OPINC",
+    "REV_M",
+    "Operating margin"
+   ],
+   "NET_M": [
+    "NI_ATTR",
+    "REV_M",
+    "Net margin (attributable)"
+   ],
+   "ROE": [
+    "NI_ATTR",
+    "avg:EQ_ATTR",
+    "Return on equity (attributable; YTD annualised)"
+   ],
+   "CAPEX_INT": [
+    "CAPEX",
+    "REV_M",
+    "Capex / revenue"
+   ],
+   "ND_EBITDA": [
+    "NET_DEBT",
+    "ann:EBITDA_C",
+    "Net debt / EBITDA (x; 9M EBITDA annualised)"
+   ]
+  },
+  "classification_note": "Second-tier consumer-goods companies added to the SEVEN list for context; not in the benchmark.",
+  "fy2021_balance_only": true,
+  "cell_notes": {
+   "ROE|FY2024": "Includes Savola's SAR 11,554.7m gain on the in-kind distribution of its Almarai shares (a one-off on another company in this group); see the One_offs register and Savola's page.",
+   "ND_EBITDA|FY2024": "EBITDA includes Savola's SAR 11,554.7m Almarai distribution gain; on EBITDA excluding one-offs the multiple is higher (see the group commentary).",
+   "NET_M|FY2024": "Includes Savola's SAR 11,554.7m Almarai distribution gain.",
+   "OP_M|FY2024": "Includes Savola's SAR 11,554.7m Almarai distribution gain.",
+   "EBITDA_M|FY2024": "Includes Savola's SAR 11,554.7m Almarai distribution gain; see EBITDA margin excl. one-offs."
+  }
+ }
+}

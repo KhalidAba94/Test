@@ -1,0 +1,225 @@
+# Evidence extracted from Raydan Food Company filings (archive: SEVEN_FNB/6012_RAYDAN). Facts only; page = physical PDF page (1-based).
+# Units: SAR (full riyals) as presented. Annual primary statements FY2022-FY2025 and the 9M 2025 interim statements are scanned images
+# (read by OCR and checked against printed subtotals); the 9M 2026 interim has a text layer. The FY2025 annual prints the name as "Ridan Company Food".
+ticker: "6012"
+company: "Raydan Food Company (Ridan Company Food)"
+
+perimeter_changes:
+  - event: "Deconsolidation of the Egyptian subsidiary (Raydan Egypt Kitchens and Restaurants, 100%) on the appointment of a liquidator; FY2025 statements are stand-alone"
+    type: deconsolidation
+    date: "2025-01-07"
+    consideration: null
+    revenue_contribution: 0
+    profit_contribution: -14139
+    pro_forma_revenue: null
+    period: "FY2025"
+    unit: "SAR"
+    source: "6012_RAYDAN/2025_Annual_filed2026-04-09.pdf"
+    page: 57
+    quote: "presented on a stand-alone basis for the year ended 31 December, 2025, as the Company lost control over Ridan Egypt Restaurants and Kitchens Company"
+    note: "The subsidiary had no revenue: FY2024 revenue was earned entirely in Saudi regions (Western region 153,639,755; other KSA regions 1,728,005; FY2025 AFS p.58). Its costs are shown on the line 'Liquidation deficit of a subsidiary' (FY2025 (14,139); FY2024 re-presented (626,190)). Its Egyptian branches had been sold on 29 Sep 2021 (FY2024 AFS p.15)."
+  - event: "Remaining 1% non-controlling interest in the Egyptian subsidiary waived to the company (EGM 25 Oct 2023); no consideration"
+    type: acquisition
+    date: "2023-10-25"
+    consideration: 0
+    revenue_contribution: 0
+    profit_contribution: null
+    pro_forma_revenue: null
+    period: "FY2023"
+    unit: "SAR"
+    source: "6012_RAYDAN/2024_Annual_filed2025-04-18.pdf"
+    page: 15
+    quote: "decided to relinquish his entire share in the Company’s capital, amounting to 1%, in favor of the first partner"
+    note: "Non-controlling interests of 3,452 transferred to accumulated losses (FY2023 AFS p.11, statement of changes in equity)."
+  - event: "Branches exited in 2026 and the Jabal Omar branch (held for sale) presented as discontinued operations; 9M 2025 comparatives re-presented"
+    type: discontinued
+    date: "2026 (9M)"
+    consideration: null
+    revenue_contribution: 7956290
+    profit_contribution: -16348214
+    pro_forma_revenue: null
+    period: "9M2026"
+    unit: "SAR"
+    source: "6012_RAYDAN/2026_Q3_filed2026-11-18.pdf"
+    page: 24
+    quote: "management exited and disposed of several branches during the period (Note 4), while Jabal Omar Branch was disposed of during the subsequent period."
+    note: "Discontinued revenue 9M 2026 7,956,290 and 9M 2025 33,726,056; discontinued loss (16,348,214) and (3,087,908) (segment note p.34-35; note 7 p.24). 9M 2025 continuing revenue re-presented to 60,697,670 from 94,423,726 first reported (2025_Q3 p.6)."
+  - event: "Branch disposals listed for 9M 2026 (Al-Haramain, Al-Tayseer, Al-Zaydi, Al-Madinah 2, Al-Waziriyah, Al-Samer, Al-Shara'i, Al-Sanabel, Al-Majed, Al-Hamdaniyah, Riyadh Plan, Abhur)"
+    type: disposal
+    date: "2026 (9M)"
+    consideration: 10149216
+    revenue_contribution: null
+    profit_contribution: -17864421
+    pro_forma_revenue: null
+    period: "9M2026"
+    unit: "SAR"
+    source: "6012_RAYDAN/2026_Q3_filed2026-11-18.pdf"
+    page: 18
+    quote: "The Company fully exited those branches and derecognized their assets from its books."
+    note: "Consideration = selling price of PP&E disposed of; the net disposal loss sits in discontinued operations (note 7)."
+  - event: "Disposals in FY2025: land in Al-Jamea district, main warehouse, Riyadh villa, Al-Qunfudhah branch and Al-Zaydi catering kitchen"
+    type: disposal
+    date: "2025"
+    consideration: 9688148
+    revenue_contribution: null
+    profit_contribution: -636890
+    pro_forma_revenue: null
+    period: "FY2025"
+    unit: "SAR"
+    source: "6012_RAYDAN/2026_Q3_filed2026-11-18.pdf"
+    page: 18
+    quote: "in addition to the disposal of Al-Qunfudhah branch and Al-Zaydi catering kitchen."
+    note: "Revenue of the Al-Qunfudhah branch is not disclosed."
+  - event: "Acquisitions of businesses (IFRS 3)"
+    type: acquisition
+    status: "not found"
+    period: "FY2022-9M2026"
+    source: "6012_RAYDAN/2025_Annual_filed2026-04-09.pdf"
+    page: null
+    quote: "No business combination note in the FY2022-FY2025 annual statements or the 9M 2026 interim."
+
+segments:
+  # Operating segments: traditional meals (branches), catering services, other. 'profit' = segment net result as printed.
+  - {period: "FY2022", segment: "Traditional meals", basis: operating, revenue: 148956869, profit: -24017713, unit: "SAR", source: "6012_RAYDAN/2023_Annual_filed2024-04-02.pdf", page: 52}
+  - {period: "FY2022", segment: "Catering services", basis: operating, revenue: 7481997, profit: 1870499, unit: "SAR", source: "6012_RAYDAN/2023_Annual_filed2024-04-02.pdf", page: 52}
+  - {period: "FY2022", segment: "Other segments (incl. share of associate)", basis: operating, revenue: 2738737, profit: -2474325, unit: "SAR", source: "6012_RAYDAN/2023_Annual_filed2024-04-02.pdf", page: 52}
+  - {period: "FY2022", segment: "Total", basis: operating, revenue: 159177603, profit: -24621539, unit: "SAR", source: "6012_RAYDAN/2023_Annual_filed2024-04-02.pdf", page: 52}
+  - {period: "FY2023", segment: "Traditional meals", basis: operating, revenue: 146174675, profit: -39265779, unit: "SAR", source: "6012_RAYDAN/2024_Annual_filed2025-04-18.pdf", page: 56}
+  - {period: "FY2023", segment: "Catering services", basis: operating, revenue: 27772535, profit: 6943134, unit: "SAR", source: "6012_RAYDAN/2024_Annual_filed2025-04-18.pdf", page: 56}
+  - {period: "FY2023", segment: "Other segments", basis: operating, revenue: 3426524, profit: 1433479, unit: "SAR", source: "6012_RAYDAN/2024_Annual_filed2025-04-18.pdf", page: 56}
+  - {period: "FY2023", segment: "Total", basis: operating, revenue: 177373734, profit: -30889166, unit: "SAR", source: "6012_RAYDAN/2024_Annual_filed2025-04-18.pdf", page: 56}
+  - {period: "FY2024", segment: "Traditional meals", basis: operating, revenue: 142620441, profit: -68986481, unit: "SAR", source: "6012_RAYDAN/2025_Annual_filed2026-04-09.pdf", page: 62}
+  - {period: "FY2024", segment: "Catering services", basis: operating, revenue: 11019314, profit: -1770330, unit: "SAR", source: "6012_RAYDAN/2025_Annual_filed2026-04-09.pdf", page: 62}
+  - {period: "FY2024", segment: "Other segments", basis: operating, revenue: 1728005, profit: -1422201, unit: "SAR", source: "6012_RAYDAN/2025_Annual_filed2026-04-09.pdf", page: 62}
+  - {period: "FY2024", segment: "Total (segment result before zakat and the liquidation line)", basis: operating, revenue: 155367760, profit: -72179012, unit: "SAR", source: "6012_RAYDAN/2025_Annual_filed2026-04-09.pdf", page: 62}
+  - {period: "FY2025", segment: "Traditional meals", basis: operating, revenue: 103151353, profit: -43595711, unit: "SAR", source: "6012_RAYDAN/2025_Annual_filed2026-04-09.pdf", page: 62}
+  - {period: "FY2025", segment: "Catering services", basis: operating, revenue: 10780198, profit: -758532, unit: "SAR", source: "6012_RAYDAN/2025_Annual_filed2026-04-09.pdf", page: 62}
+  - {period: "FY2025", segment: "Other segments (incl. associate impairment)", basis: operating, revenue: 148701, profit: -20360741, unit: "SAR", source: "6012_RAYDAN/2025_Annual_filed2026-04-09.pdf", page: 62}
+  - {period: "FY2025", segment: "Total", basis: operating, revenue: 114080252, profit: -64714984, unit: "SAR", source: "6012_RAYDAN/2025_Annual_filed2026-04-09.pdf", page: 62}
+  - {period: "9M2025", segment: "Traditional meals (continuing)", basis: operating, revenue: 51626538, profit: -26755583, unit: "SAR", source: "6012_RAYDAN/2026_Q3_filed2026-11-18.pdf", page: 35}
+  - {period: "9M2025", segment: "Catering services (continuing)", basis: operating, revenue: 8922431, profit: 2122563, unit: "SAR", source: "6012_RAYDAN/2026_Q3_filed2026-11-18.pdf", page: 35}
+  - {period: "9M2025", segment: "Other segments (continuing)", basis: operating, revenue: 148701, profit: -731921, unit: "SAR", source: "6012_RAYDAN/2026_Q3_filed2026-11-18.pdf", page: 35}
+  - {period: "9M2025", segment: "Total continuing operations", basis: operating, revenue: 60697670, profit: -25364941, unit: "SAR", source: "6012_RAYDAN/2026_Q3_filed2026-11-18.pdf", page: 35}
+  - {period: "9M2025", segment: "Discontinued operations", basis: operating, revenue: 33726056, profit: -3087908, unit: "SAR", source: "6012_RAYDAN/2026_Q3_filed2026-11-18.pdf", page: 35}
+  - {period: "9M2026", segment: "Traditional meals (continuing)", basis: operating, revenue: 18002879, profit: -21558732, unit: "SAR", source: "6012_RAYDAN/2026_Q3_filed2026-11-18.pdf", page: 34}
+  - {period: "9M2026", segment: "Catering services (continuing)", basis: operating, revenue: 3006873, profit: -526429, unit: "SAR", source: "6012_RAYDAN/2026_Q3_filed2026-11-18.pdf", page: 34}
+  - {period: "9M2026", segment: "Other segments (continuing; printed as 'Revenue/ Losses')", basis: operating, revenue: -1245654, profit: -1245654, unit: "SAR", source: "6012_RAYDAN/2026_Q3_filed2026-11-18.pdf", page: 34}
+  - {period: "9M2026", segment: "Total continuing operations", basis: operating, revenue: 19764098, profit: -23330815, unit: "SAR", source: "6012_RAYDAN/2026_Q3_filed2026-11-18.pdf", page: 34}
+  - {period: "9M2026", segment: "Discontinued operations", basis: operating, revenue: 7956290, profit: -16348214, unit: "SAR", source: "6012_RAYDAN/2026_Q3_filed2026-11-18.pdf", page: 34}
+  - {period: "FY2022-FY2025", segment: "Geographic", basis: geographic, revenue: null, profit: null, unit: "SAR", source: "6012_RAYDAN/2024_Annual_filed2025-04-18.pdf", page: 52, note: "All revenue earned in Saudi Arabia (Western region 153,639,755 in FY2024 and 173,947,209 in FY2023; the rest in other KSA regions)"}
+
+revenue_drivers:
+  - {period: "FY2025", driver: "Branch sales (FY2024: 128,714,683)", value: 100733996, unit: "SAR", source: "6012_RAYDAN/2025_Annual_filed2026-04-09.pdf", page: 58, quote: "Branch sales 100,733,996 128,714,683"}
+  - {period: "FY2025", driver: "Catering contract sales (FY2024: 18,760,067)", value: 14226391, unit: "SAR", source: "6012_RAYDAN/2025_Annual_filed2026-04-09.pdf", page: 58, quote: "Catering contract sales 14,226,391 18,760,067"}
+  - {period: "FY2025", driver: "Hajj contract sales (FY2024: 8,534,287)", value: 0, unit: "SAR", source: "6012_RAYDAN/2025_Annual_filed2026-04-09.pdf", page: 58, quote: "Hajj contract sales -- 8,534,287"}
+  - {period: "FY2024", driver: "Revenue in the Western region (FY2023: 173,947,209)", value: 153639755, unit: "SAR", source: "6012_RAYDAN/2024_Annual_filed2025-04-18.pdf", page: 52, quote: "Western region 153,639,755 173,947,209"}
+  - {period: "9M2026", driver: "Management states continuing revenue fell 67.6% (we calculate 67.4% from the rounded figures it quotes, 60.7m to 19.8m)", value: 19764098, unit: "SAR", source: "6012_RAYDAN/2026_Q3_filed2026-11-18.pdf", page: 38, quote: "The Company’s revenue decreased significantly from approximately SAR 60.7 million for the nine-month period ended 30 September 2025 to approximately SAR 19.8 million"}
+  - {period: "9M2026", driver: "Two branches closed during the period to reduce operating losses", value: 2, unit: "count", source: "6012_RAYDAN/2026_Q3_filed2026-11-18.pdf", page: 39, quote: "During the current period, management closed two branches to reduce operating losses"}
+  - {period: "9M2026", driver: "First franchise agreement: Jabal Omar branch (Makkah) converted to a franchise-operated branch", value: null, unit: "count", source: "6012_RAYDAN/2026_Q3_filed2026-11-18.pdf", page: 39, quote: "the Company signed its first franchise agreement by converting its Jabal Omar branch in Makkah into a franchise-operated branch"}
+
+one_offs:
+  - {period: "FY2022", item: "Loss on disposal of property, plant and equipment", amount: -2422834, unit: "SAR", pnl_line: "Gain/ Loss on disposal of PP&E (inside operating loss)", recurring: false, source: "6012_RAYDAN/2023_Annual_filed2024-04-02.pdf", page: 10, quote: "Gain/ Loss on disposal of property, plant and equipment 5 7,438 (2,422,834)"}
+  - {period: "FY2022", item: "Profit from disposal of right-of-use assets", amount: 175544, unit: "SAR", pnl_line: "Profit from disposal of right of use assets (inside operating loss)", recurring: false, source: "6012_RAYDAN/2023_Annual_filed2024-04-02.pdf", page: 10, quote: "Profit from disposal of right of use assets -- 175,544"}
+  - {period: "FY2022", item: "Currency valuation differences (FX loss below finance costs)", amount: -258218, unit: "SAR", pnl_line: "Currency valuation differences (between finance costs and profit before zakat)", recurring: false, source: "6012_RAYDAN/2023_Annual_filed2024-04-02.pdf", page: 10, quote: "Currency valuation differences (107,313) (258,218)"}
+  - {period: "FY2023", item: "Gain on disposal of property, plant and equipment", amount: 7438, unit: "SAR", pnl_line: "Gain on disposal of PP&E (inside operating loss)", recurring: false, source: "6012_RAYDAN/2024_Annual_filed2025-04-18.pdf", page: 10, quote: "Gain on disposal of property, plant and equipment 5 5,000 7,438"}
+  - {period: "FY2023", item: "Expropriation compensation losses", amount: -102079, unit: "SAR", pnl_line: "Expropriation compensation losses (inside operating loss)", recurring: false, source: "6012_RAYDAN/2024_Annual_filed2025-04-18.pdf", page: 10, quote: "Expropriation compensation losses -- (102,079)"}
+  - {period: "FY2023", item: "Impairment of investment in associate (excluded from EBITDA as an impairment)", amount: -15687536, unit: "SAR", pnl_line: "Impairment in Investment through equity method", recurring: false, source: "6012_RAYDAN/2024_Annual_filed2025-04-18.pdf", page: 10, quote: "Impairment in Investment through equity method 8 (2,685,020) (15,687,536)"}
+  - {period: "FY2023", item: "Reversal of impairment on right-of-use assets (excluded from EBITDA as an impairment)", amount: 9356932, unit: "SAR", pnl_line: "Charged/ Reversal of impairment on right-of-use assets", recurring: false, source: "6012_RAYDAN/2024_Annual_filed2025-04-18.pdf", page: 10, quote: "Charged/ Reversal of impairment on right-of-use assets 7 (4,771,687) 9,356,932"}
+  - {period: "FY2024", item: "Impairment charge on property, plant and equipment (excluded from EBITDA as an impairment)", amount: -32707509, unit: "SAR", pnl_line: "Impairment charge on property, plant and equipment", recurring: false, source: "6012_RAYDAN/2025_Annual_filed2026-04-09.pdf", page: 10, quote: "Impairment charge on property, plant and equipment 5 (5,551,671) (32,707,509)"}
+  - {period: "FY2024", item: "Gain on disposal of property, plant and equipment", amount: 5000, unit: "SAR", pnl_line: "(Loss) Gain on disposal of PP&E (inside operating loss)", recurring: false, source: "6012_RAYDAN/2025_Annual_filed2026-04-09.pdf", page: 10, quote: "(Loss) Gain on disposal of property, plant and equipment 5 (636,890) 5,000"}
+  - {period: "FY2025", item: "Loss on disposal of property, plant and equipment (land plots, warehouse, Riyadh villa, Al-Qunfudhah branch, Al-Zaydi kitchen)", amount: -636890, unit: "SAR", pnl_line: "(Loss) Gain on disposal of PP&E (inside operating loss)", recurring: false, source: "6012_RAYDAN/2025_Annual_filed2026-04-09.pdf", page: 10, quote: "(Loss) Gain on disposal of property, plant and equipment 5 (636,890) 5,000"}
+  - {period: "FY2025", item: "Gain on derecognition of right-of-use assets", amount: 321935, unit: "SAR", pnl_line: "Other income, net (note 25)", recurring: false, source: "6012_RAYDAN/2025_Annual_filed2026-04-09.pdf", page: 60, quote: "Gain on derecognition of right-of-use assets (Note 7) 321,935 --"}
+  - {period: "FY2025", item: "Impairment of investment in associate (excluded from EBITDA as an impairment)", amount: -15885894, unit: "SAR", pnl_line: "Impairment of investment in associates Company through equity method", recurring: false, source: "6012_RAYDAN/2025_Annual_filed2026-04-09.pdf", page: 10, quote: "through equity method (15,885,894) (2,685,020)"}
+  - {period: "9M2026", item: "Net loss on disposal of branch PP&E (in discontinued operations, not in operating income)", amount: -17864421, unit: "SAR", pnl_line: "Loss of discontinued operations", recurring: false, source: "6012_RAYDAN/2026_Q3_filed2026-11-18.pdf", page: 18, quote: "Net disposal loss recognized in the statement of profit or loss 7 (17,864,421) (636,890)"}
+  - {period: "9M2026", item: "Gain on derecognition of lease contracts of exited branches (in discontinued operations)", amount: 5539426, unit: "SAR", pnl_line: "Loss of discontinued operations", recurring: false, source: "6012_RAYDAN/2026_Q3_filed2026-11-18.pdf", page: 24, quote: "Derecognition of lease contracts (Note 5) 5,539,426 --"}
+  - {period: "9M2026", item: "Provision for potential claims (cash-flow add-back; P&L line not stated)", amount: -4059550, unit: "SAR", pnl_line: "not stated", recurring: false, source: "6012_RAYDAN/2026_Q3_filed2026-11-18.pdf", page: 7, quote: "Provision for potential claims 4,059,550 --"}
+
+restatements:
+  - period_restated: "FY2022"
+    item: "Net cash from operating activities"
+    from: -18586904
+    to: -24650997
+    unit: "SAR"
+    reason: "FY2022 cash-flow statement re-presented in the FY2023 annual; note 32 discloses only the reclassification of assets held for sale (8,328,290) to prepayments and other receivables. D&A add-backs also changed (11,938,604 to 12,732,946)."
+    source: "6012_RAYDAN/2023_Annual_filed2024-04-02.pdf"
+    page: 56
+    quote: "Certain comparative figures have been reclassified to conform to the presentation of the current year."
+  - period_restated: "FY2023"
+    item: "Cash and cash equivalents; net cash from operating activities"
+    from: 6585363
+    to: 6476639
+    unit: "SAR"
+    reason: "108,724 reclassified from cash to prepayments and other receivables in the FY2024 annual; operating cash flow 5,082,168 to 4,973,444."
+    source: "6012_RAYDAN/2024_Annual_filed2025-04-18.pdf"
+    page: 60
+    quote: "Certain comparative figures have been reclassified to conform to the presentation of the current year."
+  - period_restated: "FY2023"
+    item: "Finance costs"
+    from: 5022000
+    to: 5129313
+    unit: "SAR"
+    reason: "Currency valuation differences (107,313), a separate face line in the FY2023 annual, shown as 'Other finance costs' in the FY2024 annual; other receivable impairment (1,084,911) merged into G&A. PBT unchanged."
+    source: "6012_RAYDAN/2024_Annual_filed2025-04-18.pdf"
+    page: 54
+    quote: "Other finance costs 895,288 107,313"
+  - period_restated: "FY2024"
+    item: "Finance costs; general and administrative expenses"
+    from: 5169400
+    to: 5018989
+    unit: "SAR"
+    reason: "FY2025 annual moved the Egyptian subsidiary's 2024 costs (G&A 475,779; finance costs 150,411) to 'Liquidation deficit of a subsidiary' (626,190) and showed ECL (600,778) separately. PBT unchanged."
+    source: "6012_RAYDAN/2025_Annual_filed2026-04-09.pdf"
+    page: 67
+    quote: "The comparative figures for the previous year presented in these financial statements have not been subject to any material reclassifications."
+  - period_restated: "9M2025"
+    item: "Revenue, cost of revenue, finance costs and loss before zakat re-presented for discontinued operations; operating cash flow"
+    from: 94423726
+    to: 60697670
+    unit: "SAR"
+    reason: "Revenue re-presented to continuing operations (IFRS 5); loss before zakat (28,432,631) to (25,364,941); finance costs 2,425,146 to 1,301,496; operating cash flow 6,632,364 to 4,501,401 (finance costs paid moved into operating activities). Net loss unchanged."
+    source: "6012_RAYDAN/2026_Q3_filed2026-11-18.pdf"
+    page: 5
+    quote: "Net loss from continuing operations (9,694,956) (10,273,218) (23,330,815) (25,364,941)"
+
+significant_events:
+  - {date: "2022-10-05", event: "EGM approved a capital reduction from SAR 337.5m to SAR 158.1m to absorb accumulated losses of SAR 179.4m", financial_effect: "No cash effect", source: "6012_RAYDAN/2025_Annual_filed2026-04-09.pdf", page: 14, quote: "it was approved to reduce the Company capital from SR 337,500,000 to become after the reduction by SR 158,084,670"}
+  - {date: "2023-10-10", event: "Statutory reserve of SAR 27.4m transferred to accumulated losses", financial_effect: "No effect on total equity", source: "6012_RAYDAN/2023_Annual_filed2024-04-02.pdf", page: 11, quote: "the company’s statutory reserve balance, amounting to 27,413,798 SR"}
+  - {date: "2025-01-07", event: "Egyptian subsidiary placed under liquidation; control lost and statements prepared stand-alone", financial_effect: "Liquidation deficit (14,139) in FY2025; liability 452,758 at 31 Dec 2025", source: "6012_RAYDAN/2025_Annual_filed2026-04-09.pdf", page: 57, quote: "the Company’s Board of Directors decided to liquidate its investment in the Arab Republic of Egypt"}
+  - {date: "2025-03-16 to 2025-12-10", event: "Sale of four land plots (Riyadh and Jeddah) with carrying amounts of SAR 3.8m, 1.0m and 4.6m", financial_effect: "Proceeds from PP&E disposals 9,688,148 in FY2025; net disposal loss (636,890)", source: "6012_RAYDAN/2025_Annual_filed2026-04-09.pdf", page: 66, quote: "On March 16, 2025, the Company sold a plot of land owned by it"}
+  - {date: "2025-11-02", event: "EGM approved a capital reduction cancelling 8,494,864 shares (share capital SAR 158.1m to SAR 73.1m)", financial_effect: "Accumulated losses of SAR 84.9m absorbed", source: "6012_RAYDAN/2025_Annual_filed2026-04-09.pdf", page: 49, quote: "resulting in the share capital being reduced to 7,313,603 shares with a nominal value of SAR 10 per share"}
+  - {date: "2026-01-22", event: "Sale and leaseback of the Heraa branch (Jeddah) for SAR 8.0m", financial_effect: "Loss on rights transferred (816,998); loss of 1,169,336 deferred in right-of-use assets", source: "6012_RAYDAN/2026_Q3_filed2026-11-18.pdf", page: 19, quote: "a binding agreement was signed to sell an operating branch located in Al-Nuzhah District, Jeddah (Heraa Branch)"}
+  - {date: "2026-04-14", event: "Board approved a study of exiting branches; exits from several branches followed", financial_effect: "Discontinued operations loss (16,348,214) in 9M 2026", source: "6012_RAYDAN/2026_Q3_filed2026-11-18.pdf", page: 18, quote: "On 14 April 2026, the Company's Board of Directors approved a study of the options presented regarding a number of the Company's branches"}
+  - {date: "2026 (9M)", event: "Long-term loan fully repaid and mortgage released", financial_effect: "Borrowings nil at 30 Sep 2026", source: "6012_RAYDAN/2026_Q3_filed2026-11-18.pdf", page: 29, quote: "During the period ended 30 September 2026, the loan was repaid and the mortgage was released."}
+  - {date: "2026-09-09", event: "Franchise agreement and sale of Jabal Omar branch assets to New Supply Trading Establishment for SAR 3.45m including VAT", financial_effect: "Assets held for sale 2,809,949 at 30 Sep 2026", source: "6012_RAYDAN/2026_Q3_filed2026-11-18.pdf", page: 40, quote: "together with the sale of the branch's assets for total consideration of SAR 3,450,000 inclusive of value added tax"}
+  - {date: "2026-11-05", event: "Applications filed with the CMA for a capital reduction of SAR 58.5m and a SAR 105m rights issue (after the period end)", financial_effect: "Subject to CMA and EGM approval", source: "6012_RAYDAN/2026_Q3_filed2026-11-18.pdf", page: 40, quote: "an application file for approval to increase the Company's share capital through a SAR 105,000,000 rights issue"}
+
+audit_opinion:
+  - {period: "FY2022", opinion: "unmodified", emphasis_of_matter: "none", source: "6012_RAYDAN/2022_Annual_filed2023-04-06.pdf", page: 3}
+  - {period: "FY2023", opinion: "unmodified", emphasis_of_matter: "none", source: "6012_RAYDAN/2023_Annual_filed2024-04-02.pdf", page: 3}
+  - {period: "FY2024", opinion: "unmodified", emphasis_of_matter: "Material uncertainty related to going concern: accumulated losses 48.9% of share capital; working capital deficit SAR 35.2m", source: "6012_RAYDAN/2024_Annual_filed2025-04-18.pdf", page: 3}
+  - {period: "FY2025", opinion: "unmodified (PKF Al-Bassam)", emphasis_of_matter: "Material uncertainty related to going concern: accumulated losses 76.6% of share capital; working capital deficit SAR 60.0m", source: "6012_RAYDAN/2025_Annual_filed2026-04-09.pdf", page: 3}
+  - {period: "9M2025", opinion: "unmodified review conclusion", emphasis_of_matter: "Material uncertainty related to going concern: accumulated losses 66.8% of share capital", source: "6012_RAYDAN/2025_Q3_filed2025-11-16.pdf", page: 3}
+  - {period: "9M2026", opinion: "unmodified review conclusion (PKF Al-Bassam)", emphasis_of_matter: "Material uncertainty related to going concern: accumulated losses SAR 95.7m (130.8% of share capital); working capital deficit SAR 70.1m", source: "6012_RAYDAN/2026_Q3_filed2026-11-18.pdf", page: 3}
+
+kpis_in_filings:
+  - {period: "30 Sep 2026", kpi: "Branch commercial registrations active (6) and deregistered during the period (11); registrations are not restaurant counts", value: 6, unit: "count", source: "6012_RAYDAN/2026_Q3_filed2026-11-18.pdf", page: 10}
+  - {period: "FY2022-FY2025", kpi: "Branch commercial registrations listed in note 1 (FY2022 15, FY2023 16, FY2024 19, FY2025 17); not restaurant counts", value: 17, unit: "count", source: "6012_RAYDAN/2025_Annual_filed2026-04-09.pdf", page: 14}
+  - {period: "FY2022-9M2026", kpi: "Restaurant count, same-store sales, covers or average spend", value: null, unit: "count", status: "not found", source: "6012_RAYDAN/2025_Annual_filed2026-04-09.pdf", page: null}
+
+special_extractions:
+  - name: "Finance items outside the finance lines (for operating income)"
+    unit: "SAR"
+    items:
+      - {period: "FY2022", item: "Currency valuation differences below finance costs (inside our operating income)", value: -258218, source: "6012_RAYDAN/2023_Annual_filed2024-04-02.pdf", page: 10}
+      - {period: "FY2023", item: "Bank returns (finance income) inside other income", value: 299504, source: "6012_RAYDAN/2024_Annual_filed2025-04-18.pdf", page: 54}
+      - {period: "FY2023", item: "Other finance costs (FX) inside finance costs after re-presentation", value: 107313, source: "6012_RAYDAN/2024_Annual_filed2025-04-18.pdf", page: 54}
+      - {period: "FY2024", item: "Egyptian subsidiary finance costs moved into the liquidation-deficit line (we calculate 5,169,400 - 5,018,989)", value: 150411, source: "6012_RAYDAN/2025_Annual_filed2026-04-09.pdf", page: 60}
+      - {period: "9M2026", item: "Finance costs in the cash-flow statement (total) vs continuing face line 1,241,460; the difference sits in discontinued operations", value: 1811428, source: "6012_RAYDAN/2026_Q3_filed2026-11-18.pdf", page: 7}
+
+open_questions:
+  - "The 9M 2026 interim does not explain why continuing revenue fell 67.4% (traditional meals 51.6m to 18.0m; catering 8.9m to 3.0m) beyond the branch exits and restructuring; branch-level revenue and the number of restaurants trading are not disclosed."
+  - "The P&L line holding the 9M 2026 provision for potential claims (4,059,550 cash-flow add-back; balance 28,908,395, note 11/1) is not stated; it may be in continuing G&A or in discontinued operations."
+  - "FY2025 share of the associate's loss is (4,623,548) on the face but 4,241,015 in the cash-flow add-back; no reconciliation is given."
+  - "9M 2026 'other segments' revenue is printed as negative (1,245,654) in the segment note (p.34)."
+  - "The FY2022 cash-flow re-presentation in the FY2023 annual (operating cash flow (18.6m) to (24.7m)) is not explained beyond the held-for-sale reclassification."
+  - "The FY2025 annual note 34 says comparatives were not materially reclassified, yet FY2024 G&A, finance costs and the new liquidation line differ from the FY2024 annual."

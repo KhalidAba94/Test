@@ -1,0 +1,248 @@
+# Evidence from Tourism Enterprise Company (Shams) filings (archive: 4170_TECO). Facts only; page = physical PDF page. Units: SR.
+# Primary statements of the FY2022, FY2023 and FY2024 annuals and of the 2026 Q3 interim are scanned images (read visually).
+ticker: '4170'
+company: Tourism Enterprise Company (Shams)
+perimeter_changes:
+- event: Business combinations, subsidiaries or disposals
+  type: acquisition
+  status: not found
+  date: null
+  consideration: null
+  revenue_contribution: null
+  profit_contribution: null
+  pro_forma_revenue: null
+  period: FY2022-9M2026
+  unit: SR
+  source: 4170_TECO/2025_Annual_filed2026-04-07.pdf
+  page: 12
+  quote: Currently, the main activity of the Company is to manage tourism project (Palm Beach Resort)
+  note: Single entity (stand-alone statements, one branch in Dhahran); no consolidation.
+- event: Investment of SR 243.8m (plus SR 5.6m costs) in a closed SEDCO Capital real estate fund developing a Fairmont hotel in Al Khobar;
+    2,438 units; measured at fair value through OCI
+  type: acquisition
+  date: '2024'
+  consideration: 249407400
+  revenue_contribution: null
+  profit_contribution: null
+  pro_forma_revenue: null
+  period: FY2024
+  unit: SR
+  source: 4170_TECO/2025_Annual_filed2026-04-07.pdf
+  page: 24
+  quote: This fund is dedicated to developing a five-star hotel along the Al Khobar corniche, to be operated under the "Fairmont" brand.
+  note: 'Financial asset, not a business: no revenue effect. Fair-value losses in OCI: 9,130,277 (FY2024), 6,578,037 (FY2025).'
+segments:
+- period: FY2025
+  segment: 'Single segment (Palm Beach Resort); revenue: rooms 5,791,446, food and beverages 1,061,641, chalet rent and other 2,482,057'
+  basis: product
+  revenue: 9335144
+  profit: null
+  unit: SR
+  source: 4170_TECO/2025_Annual_filed2026-04-07.pdf
+  page: 29
+- period: FY2024
+  segment: Single segment; rooms 5,510,088, food and beverages 446,029, chalet rent and other 4,021,433
+  basis: product
+  revenue: 9977550
+  profit: null
+  unit: SR
+  source: 4170_TECO/2025_Annual_filed2026-04-07.pdf
+  page: 29
+- period: 9M2026
+  segment: Rooms 3,737,183; services fee and other 1,911,969; food and beverages 1,179,713
+  basis: product
+  revenue: 6828865
+  profit: null
+  unit: SR
+  source: 4170_TECO/2026_Q3_filed2026-11-09.pdf
+  page: 15
+- period: 9M2025
+  segment: Rooms 3,988,243; services fee and other 983,924; food and beverages 1,490,988
+  basis: product
+  revenue: 6463155
+  profit: null
+  unit: SR
+  source: 4170_TECO/2026_Q3_filed2026-11-09.pdf
+  page: 15
+- period: FY2022-9M2026
+  segment: Geographic
+  basis: geographic
+  revenue: null
+  profit: null
+  unit: SR
+  source: 4170_TECO/2025_Annual_filed2026-04-07.pdf
+  page: 29
+  note: All revenue in Saudi Arabia
+revenue_drivers:
+- period: FY2025
+  driver: 'Revenue from rooms (FY2024: 5,510,088)'
+  value: 5791446
+  unit: SR
+  source: 4170_TECO/2025_Annual_filed2026-04-07.pdf
+  page: 29
+  quote: Revenue from rooms 5,791,446 5,510,088
+- period: FY2025
+  driver: 'Chalet rent and other revenue (FY2024: 4,021,433)'
+  value: 2482057
+  unit: SR
+  source: 4170_TECO/2025_Annual_filed2026-04-07.pdf
+  page: 29
+  quote: Challet rent and other revenue 2,482,057 4,021,433
+- period: 9M2026
+  driver: 'Services fee and other revenue (9M2025: 983,924)'
+  value: 1911969
+  unit: SR
+  source: 4170_TECO/2026_Q3_filed2026-11-09.pdf
+  page: 15
+  quote: Services fee and other revenue 1,253,796 438,136 1,911,969 983,924
+- period: FY2025
+  driver: 'Finance income from time deposits (FY2024: 30,995,489), larger than revenue'
+  value: 14870945
+  unit: SR
+  source: 4170_TECO/2025_Annual_filed2026-04-07.pdf
+  page: 9
+  quote: Finance income from time deposits 14 14,870,945 30,995,489
+- period: FY2022-2029
+  driver: The resort stands on land leased from Dammam Municipality for 40 years to 14 May 2029, with no renewal right stated
+  value: null
+  unit: SR
+  source: 4170_TECO/2025_Annual_filed2026-04-07.pdf
+  page: 12
+  quote: ending on 30 Dhul Hijjah 1450H (corresponding to 14 May 2029), without specifying in the contract on
+one_offs:
+- period: FY2023
+  item: Impairment of property and equipment (Palm Beach Resort CGU; outside EBITDA)
+  amount: 38837906
+  unit: SR
+  pnl_line: Impairment of property and equipment
+  recurring: false
+  source: 4170_TECO/2025_Annual_filed2026-04-07.pdf
+  page: 23
+  quote: the Company recorded an impairment loss of approximately ^ 38.8 million during the year
+- period: FY2024
+  item: Fair value loss on financial assets at FVTPL
+  amount: -1285970
+  unit: SR
+  pnl_line: Fair value loss on financial assets at fair value through profit or loss
+  recurring: false
+  source: 4170_TECO/2025_Annual_filed2026-04-07.pdf
+  page: 9
+  quote: Fair value loss on financial assets at fair value through profit or loss 11 (2,658,089) (1,285,970)
+- period: FY2025
+  item: Fair value loss on financial assets at FVTPL
+  amount: -2658089
+  unit: SR
+  pnl_line: Fair value loss on financial assets at fair value through profit or loss
+  recurring: false
+  source: 4170_TECO/2025_Annual_filed2026-04-07.pdf
+  page: 9
+  quote: Fair value loss on financial assets at fair value through profit or loss 11 (2,658,089) (1,285,970)
+- period: 9M2025
+  item: Fair value gain on financial assets at FVTPL
+  amount: 520411
+  unit: SR
+  pnl_line: Unrealised (loss)/gain from fair value remeasurement on financial assets at FVTPL
+  recurring: false
+  source: 4170_TECO/2026_Q3_filed2026-11-09.pdf
+  page: 5
+  quote: Unrealised (loss)/gain from fair value remeasurement on financial assets at FVTPL (280,914) 520,411
+- period: 9M2026
+  item: Realised loss (3,193,046) and unrealised loss (280,914) on financial assets at FVTPL
+  amount: -3473960
+  unit: SR
+  pnl_line: Realised / unrealised loss from financial assets at FVTPL
+  recurring: false
+  source: 4170_TECO/2026_Q3_filed2026-11-09.pdf
+  page: 13
+  quote: Realized losses during the period/year (3,193,046) -
+- period: 9M2026
+  item: Dividend income from financial assets carried at FVTPL
+  amount: 612474
+  unit: SR
+  pnl_line: Dividend income from financial assets carried at FVTPL
+  recurring: false
+  source: 4170_TECO/2026_Q3_filed2026-11-09.pdf
+  page: 5
+  quote: Dividend income from financial assets carried at FVTPL 612,474
+- period: FY2022-FY2024
+  item: 'Claims provisions: reversal 1,972,827 (FY2022), provision (879,961) (FY2023), provision (433,624) (FY2024); recurring provision
+    movements, not treated as one-offs'
+  amount: null
+  unit: SR
+  pnl_line: Provision for legal claims / reversal of provision for claims
+  recurring: true
+  source: 4170_TECO/2024_Annual_filed2025-04-06.pdf
+  page: 9
+  quote: Provision for legal claims (433,624) (879,961)
+restatements:
+- period_restated: FY2024
+  item: Cost of revenue and gross profit (reclassification, no profit effect)
+  from: -8914256
+  to: -11844861
+  unit: SR
+  reason: 'Note 27: 2,930,605 moved into cost of revenue from sales and marketing (618,177) and G&A (2,312,428)'
+  source: 4170_TECO/2025_Annual_filed2026-04-07.pdf
+  page: 35
+  quote: Certain items in the statement of profit or loss and other comprehensive income have been reclassified for better
+- period_restated: 9M2025
+  item: Finance income (XBRL only)
+  from: 542672
+  to: 11228075
+  unit: SR
+  reason: 'NOT A RESTATEMENT: the 2025 Q3 XBRL tagged the FVTPL gain plus disposal gain as finance income; both PDFs print 11,228,075'
+  source: 4170_TECO/2025_Q3_filed2025-11-05.pdf
+  page: 5
+  quote: Finance income from time deposits 8 3,986,157 8,341,842 11,228,075 25,162,237
+significant_events:
+- date: '2022'
+  event: 'Rights issue: share capital raised from SR 52.6m to SR 578.2m; net proceeds SR 502.4m'
+  financial_effect: Cash SR 509.7m at end-2022 (SR 13.3m at end-2021)
+  source: 4170_TECO/2023_Annual_filed2024-04-04.pdf
+  page: 11
+  quote: Issued shares net of underwriting commission 502,439,422
+- date: '2023'
+  event: Impairment test on the Palm Beach Resort CGU (value in use, 11.2% discount rate, no terminal growth)
+  financial_effect: Impairment SR 38.8m
+  source: 4170_TECO/2025_Annual_filed2026-04-07.pdf
+  page: 23
+  quote: Management used a discount rate of 11.2% with no terminal growth rate in estimating the value in use.
+- date: '2025-10-16'
+  event: Nominal value changed from SR 0.5 to SR 10 per share (shares 1,156,472,460 to 57,823,623)
+  financial_effect: null
+  source: 4170_TECO/2026_Q3_filed2026-11-09.pdf
+  page: 14
+  quote: the number of shares has been adjusted from 1,156,472,460 shares to 57,823,623 shares.
+audit_opinion:
+- period: FY2022
+  opinion: Unmodified (Al Kharashi & Co.)
+  emphasis_of_matter: null
+  source: 4170_TECO/2022_Annual_filed2023-04-04.pdf
+  page: 3
+- period: FY2023
+  opinion: Unmodified
+  emphasis_of_matter: null
+  source: 4170_TECO/2023_Annual_filed2024-04-04.pdf
+  page: 3
+- period: FY2024
+  opinion: Unmodified
+  emphasis_of_matter: null
+  source: 4170_TECO/2024_Annual_filed2025-04-06.pdf
+  page: 3
+- period: FY2025
+  opinion: Unmodified
+  emphasis_of_matter: null
+  source: 4170_TECO/2025_Annual_filed2026-04-07.pdf
+  page: 3
+kpis_in_filings:
+- period: FY2022-9M2026
+  kpi: Occupancy, room nights, average room rate, visitors
+  value: null
+  unit: count
+  source: 4170_TECO/2025_Annual_filed2026-04-07.pdf
+  page: 29
+  status: not found
+special_extractions: []
+open_questions:
+- The land lease for the Palm Beach Resort ends on 14 May 2029 and the contract does not specify renewal; the filings do not say what
+  happens after.
+- The real estate fund (SR 233.7m) is a Level 3 fair value; its value fell SR 15.7m in two years (OCI).

@@ -1,0 +1,50 @@
+ticker,period,metric_code,kind,values,used_file,used,original
+1820,9M2025,COGS,restated (like documents),2025_Q3_filed2025-11-18.xls=383.580 | 2026_Q3_filed2026-11-22.xls=385.666,2026_Q3_filed2026-11-22.xls,385.666,383.58
+1820,9M2025,EQ_ATTR,restated (like documents),2025_Q3_filed2025-11-18.xls=164.687 | 2026_Q3_filed2026-11-22.xls=177.370,2026_Q3_filed2026-11-22.xls,177.37,164.687
+1820,9M2025,FIN_COST,restated (like documents),2025_Q3_filed2025-11-18.xls=56.946 | 2026_Q3_filed2026-11-22.xls=52.137,2026_Q3_filed2026-11-22.xls,52.137,56.946
+1820,9M2025,GP,restated (like documents),2025_Q3_filed2025-11-18.xls=114.238 | 2026_Q3_filed2026-11-22.xls=112.152,2026_Q3_filed2026-11-22.xls,112.152,114.238
+1820,9M2025,LEASE_LIAB,restated (like documents),2025_Q3_filed2025-11-18.xls=904.281 | 2026_Q3_filed2026-11-22.xls=754.135,2026_Q3_filed2026-11-22.xls,754.135,904.2810000000001
+1820,9M2025,NI,restated (like documents),2025_Q3_filed2025-11-18.xls=-43.198 | 2026_Q3_filed2026-11-22.xls=-40.475,2026_Q3_filed2026-11-22.xls,-40.475,-43.198
+1820,9M2025,NI_ATTR,restated (like documents),2025_Q3_filed2025-11-18.xls=-43.125 | 2026_Q3_filed2026-11-22.xls=-40.475,2026_Q3_filed2026-11-22.xls,-40.475,-43.125
+1820,9M2025,NI_NCI,restated (like documents),2025_Q3_filed2025-11-18.xls=-0.073 | 2026_Q3_filed2026-11-22.xls=0.000,2026_Q3_filed2026-11-22.xls,0.0,-0.073
+1820,9M2025,OPINC_REP,restated (like documents),2025_Q3_filed2025-11-18.xls=2.757 | 2026_Q3_filed2026-11-22.xls=0.671,2026_Q3_filed2026-11-22.xls,0.671,2.757
+1820,9M2025,PBT,restated (like documents),2025_Q3_filed2025-11-18.xls=-44.949 | 2026_Q3_filed2026-11-22.xls=-42.226,2026_Q3_filed2026-11-22.xls,-42.226,-44.949
+1820,9M2025,TA,restated (like documents),2025_Q3_filed2025-11-18.xls=1859.537 | 2026_Q3_filed2026-11-22.xls=1722.074,2026_Q3_filed2026-11-22.xls,1722.074,1859.537
+1820,9M2025,TE,restated (like documents),2025_Q3_filed2025-11-18.xls=164.687 | 2026_Q3_filed2026-11-22.xls=177.370,2026_Q3_filed2026-11-22.xls,177.37,164.687
+1820,FY2021,EQ_ATTR,restated (like documents),2022_Q1_filed2022-05-30.xls=377.880 | 2022_Q2_filed2022-09-29.xls=377.880 | 2022_Q3_filed2022-11-16.xls=377.880 | 2022_Annual_filed2023-04-11.xls=372.044,2022_Annual_filed2023-04-11.xls,372.044,377.88
+1820,FY2021,TA,restated (like documents),2022_Q1_filed2022-05-30.xls=2081.394 | 2022_Q2_filed2022-09-29.xls=2081.394 | 2022_Q3_filed2022-11-16.xls=2081.394 | 2022_Annual_filed2023-04-11.xls=2158.149,2022_Annual_filed2023-04-11.xls,2158.149,2081.3940000000002
+1820,FY2021,TE,restated (like documents),2022_Q1_filed2022-05-30.xls=377.880 | 2022_Q2_filed2022-09-29.xls=377.880 | 2022_Q3_filed2022-11-16.xls=377.880 | 2022_Annual_filed2023-04-11.xls=372.044,2022_Annual_filed2023-04-11.xls,372.044,377.88
+1820,FY2023,TE,restated (like documents),2024_Q1_filed2024-05-30.xls=203.433 | 2024_Q2_filed2024-08-21.xls=203.433 | 2024_Q3_filed2024-11-20.xls=203.433 | 2024_Annual_filed2025-04-16.xls=201.705,2024_Annual_filed2025-04-16.xls,201.705,203.433
+1820,FY2024,DA_CF,restated (like documents),2024_Annual_filed2025-04-16.xls=74.698 | 2025_Annual_filed2026-04-13.xls=80.139,2025_Annual_filed2026-04-13.xls,80.139,74.69800000000001
+1820,FY2025,EQ_ATTR,restated (like documents),2025_Annual_filed2026-04-13.xls=2.791 | 2026_Q1_filed2026-05-14.xls=2.791 | 2026_Q2_filed2026-08-16.xls=2.791 | 2026_Q3_filed2026-11-22.xls=16.569,2026_Q3_filed2026-11-22.xls,16.569,2.791
+1820,FY2025,LEASE_LIAB,restated (like documents),2025_Annual_filed2026-04-13.xls=826.423 | 2026_Q1_filed2026-05-14.xls=826.423 | 2026_Q2_filed2026-08-16.xls=826.423 | 2026_Q3_filed2026-11-22.xls=674.427,2026_Q3_filed2026-11-22.xls,674.427,826.423
+1820,FY2025,TA,restated (like documents),2025_Annual_filed2026-04-13.xls=1621.539 | 2026_Q1_filed2026-05-14.xls=1621.539 | 2026_Q2_filed2026-08-16.xls=1621.539 | 2026_Q3_filed2026-11-22.xls=1483.321,2026_Q3_filed2026-11-22.xls,1483.3210000000001,1621.539
+1820,FY2025,TE,restated (like documents),2025_Annual_filed2026-04-13.xls=2.791 | 2026_Q1_filed2026-05-14.xls=2.791 | 2026_Q2_filed2026-08-16.xls=2.791 | 2026_Q3_filed2026-11-22.xls=16.569,2026_Q3_filed2026-11-22.xls,16.569,2.791
+1830,FY2022,CFO,restated (like documents),2022_Annual_filed2023-03-09.xls=669.174 | 2023_Annual_filed2024-03-26.xls=673.400,2023_Annual_filed2024-03-26.xls,673.4001539999999,669.173857
+1830,FY2022,DA_CF,restated (like documents),2022_Annual_filed2023-03-09.xls=229.904 | 2023_Annual_filed2024-03-26.xls=152.987,2023_Annual_filed2024-03-26.xls,152.987431,229.90389
+1830,FY2022,EQ_ATTR,restated (like documents),2022_Annual_filed2023-03-09.xls=938.539 | 2023_Q1_filed2023-05-15.xls=938.539 | 2023_Q2_filed2023-08-09.xls=938.539 | 2023_Q3_filed2023-11-13.xls=938.539 | 2023_Annual_filed2024-03-26.xls=914.773,2023_Annual_filed2024-03-26.xls,914.772965,938.5391079999999
+1830,FY2022,NI,restated (like documents),2022_Annual_filed2023-03-09.xls=257.259 | 2023_Annual_filed2024-03-26.xls=254.758,2023_Annual_filed2024-03-26.xls,254.758323,257.25913199999997
+1830,FY2022,NI_ATTR,restated (like documents),2022_Annual_filed2023-03-09.xls=257.259 | 2023_Annual_filed2024-03-26.xls=254.758,2023_Annual_filed2024-03-26.xls,254.758323,257.25913199999997
+1830,FY2022,PBT,restated (like documents),2022_Annual_filed2023-03-09.xls=264.614 | 2023_Annual_filed2024-03-26.xls=262.113,2023_Annual_filed2024-03-26.xls,262.112792,264.61360099999996
+1830,FY2022,TA,restated (like documents),2022_Annual_filed2023-03-09.xls=2698.150 | 2023_Q1_filed2023-05-15.xls=2698.150 | 2023_Q2_filed2023-08-09.xls=2698.150 | 2023_Q3_filed2023-11-13.xls=2698.150 | 2023_Annual_filed2024-03-26.xls=2674.384,2023_Annual_filed2024-03-26.xls,2674.383841,2698.1499839999997
+1830,FY2022,TE,restated (like documents),2022_Annual_filed2023-03-09.xls=938.539 | 2023_Q1_filed2023-05-15.xls=938.539 | 2023_Q2_filed2023-08-09.xls=938.539 | 2023_Q3_filed2023-11-13.xls=938.539 | 2023_Annual_filed2024-03-26.xls=914.773,2023_Annual_filed2024-03-26.xls,914.772965,938.5391079999999
+1830,FY2023,CAPEX,restated (like documents),2023_Annual_filed2024-03-26.xls=307.068 | 2024_Annual_filed2025-04-21.xls=309.082,2024_Annual_filed2025-04-21.xls,309.08153999999996,307.067584
+1830,FY2023,DA_CF,restated (like documents),2023_Annual_filed2024-03-26.xls=155.339 | 2024_Annual_filed2025-04-21.xls=157.841,2024_Annual_filed2025-04-21.xls,157.84080699999998,155.33899499999998
+1830,FY2024,DA_CF,restated (like documents),2024_Annual_filed2025-04-21.xls=181.785 | 2025_Annual_filed2026-02-25.xls=294.495,2025_Annual_filed2026-02-25.xls,294.49505999999997,181.78499
+4170,9M2025,FIN_INC,restated (like documents),2025_Q3_filed2025-11-06.xls=0.543 | 2026_Q3_filed2026-11-10.xls=11.228,2026_Q3_filed2026-11-10.xls,11.228074999999999,0.5426719999999999
+4170,9M2025,IMPAIR_CF,restated (like documents),2025_Q3_filed2025-11-06.xls=-0.913 | 2026_Q3_filed2026-11-10.xls=-0.393,2026_Q3_filed2026-11-10.xls,-0.39291099999999995,-0.913322
+4170,FY2023,IMPAIR_CF,restated (like documents),2023_Annual_filed2024-04-06.xls=5.473 | 2024_Annual_filed2025-04-07.xls=5.672,2024_Annual_filed2025-04-07.xls,5.672206999999999,5.473071
+4170,FY2024,COGS,restated (like documents),2024_Annual_filed2025-04-07.xls=8.914 | 2025_Annual_filed2026-04-08.xls=11.845,2025_Annual_filed2026-04-08.xls,11.844861,8.914256
+4170,FY2024,GP,restated (like documents),2024_Annual_filed2025-04-07.xls=1.063 | 2025_Annual_filed2026-04-08.xls=-1.867,2025_Annual_filed2026-04-08.xls,-1.867311,1.063294
+6018,FY2024,EQ_ATTR,restated (like documents),2025_Q2_filed2025-08-03.xls=168.809 | 2025_Q3_filed2025-11-10.xls=168.809 | 2025_Annual_filed2026-03-16.xls=164.732,2025_Annual_filed2026-03-16.xls,164.73165799999998,168.80886999999998
+6018,FY2024,TA,restated (like documents),2025_Q2_filed2025-08-03.xls=798.407 | 2025_Q3_filed2025-11-10.xls=798.407 | 2025_Annual_filed2026-03-16.xls=794.329,2025_Annual_filed2026-03-16.xls,794.329395,798.406606
+6018,FY2024,TE,restated (like documents),2025_Q2_filed2025-08-03.xls=168.809 | 2025_Q3_filed2025-11-10.xls=168.809 | 2025_Annual_filed2026-03-16.xls=164.732,2025_Annual_filed2026-03-16.xls,164.73165799999998,168.80886999999998
+6022,FY2024,CFO,restated (like documents),2024_Annual_filed2025-12-11.xls=95.779 | 2025_Annual_filed2026-03-10.xls=92.915,2025_Annual_filed2026-03-10.xls,92.914762,95.77886799999999
+6022,FY2024,DA_CF,restated (like documents),2024_Annual_filed2025-12-11.xls=30.210 | 2025_Annual_filed2026-03-10.xls=29.800,2025_Annual_filed2026-03-10.xls,29.800345,30.210155999999998
+6022,FY2024,EQ_ATTR,restated (like documents),2024_Annual_filed2025-12-11.xls=477.951 | 2025_Annual_filed2026-03-10.xls=470.735,2025_Annual_filed2026-03-10.xls,470.734854,477.95142
+6022,FY2024,NI,restated (like documents),2024_Annual_filed2025-12-11.xls=37.842 | 2025_Annual_filed2026-03-10.xls=38.252,2025_Annual_filed2026-03-10.xls,38.251674,37.841863
+6022,FY2024,NI_ATTR,restated (like documents),2024_Annual_filed2025-12-11.xls=37.842 | 2025_Annual_filed2026-03-10.xls=38.252,2025_Annual_filed2026-03-10.xls,38.251674,37.841863
+6022,FY2024,OPINC_REP,restated (like documents),2024_Annual_filed2025-12-11.xls=54.346 | 2025_Annual_filed2026-03-10.xls=54.756,2025_Annual_filed2026-03-10.xls,54.755716,54.345904999999995
+6022,FY2024,PBT,restated (like documents),2024_Annual_filed2025-12-11.xls=38.813 | 2025_Annual_filed2026-03-10.xls=39.223,2025_Annual_filed2026-03-10.xls,39.223169999999996,38.813359
+6022,FY2024,TA,restated (like documents),2024_Annual_filed2025-12-11.xls=988.619 | 2025_Annual_filed2026-03-10.xls=981.403,2025_Annual_filed2026-03-10.xls,981.4028109999999,988.619377
+6022,FY2024,TE,restated (like documents),2024_Annual_filed2025-12-11.xls=477.951 | 2025_Annual_filed2026-03-10.xls=470.735,2025_Annual_filed2026-03-10.xls,470.734854,477.95142

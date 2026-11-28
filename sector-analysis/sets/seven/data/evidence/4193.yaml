@@ -1,0 +1,198 @@
+# Evidence extracted from Nice One Beauty Digital Marketing Company filings (archive: 4193_NICE_ONE). Facts only; page = physical PDF page (1-based).
+# Units: SAR as presented. The company was called Product Sea Trading Company until 30 March 2024 and listed on 8 January 2025.
+# Scanned documents: the FY2023 annual (all pages; read by OCR and checked visually), the FY2025 annual primary statements (pp8-12),
+# and the 2025 Q3 / 2026 Q3 primary statements (pp4-7). The FY2022 annual is the separate (unconsolidated) statements of Product Sea Trading Company.
+ticker: "4193"
+company: "Nice One Beauty Digital Marketing Company (formerly Product Sea Trading Company)"
+
+perimeter_changes:
+  - event: "Subsidiary Bahr Al-Montajat General Trading Co. (Egypt, 100%) established 4 Aug 2022; it has not started commercial operations"
+    type: new_subsidiary
+    date: "2022-08-04"
+    consideration: null
+    revenue_contribution: 0
+    profit_contribution: null
+    pro_forma_revenue: null
+    period: "FY2022"
+    unit: "SAR"
+    source: "4193_NICE_ONE/2026_Q3_filed2026-11-02.pdf"
+    page: 8
+    quote: "subsidiary has not commenced yet the commercial business operations."
+    note: "Not consolidated in the FY2022 comparatives on materiality grounds (FY2023 annual p.10); its share of loss (SAR 432,819 in FY2022) was equity-accounted."
+  - event: "Subsidiary Nice one Perfumes and Cosmetic Trading LLC (UAE, 100%) established 4 May 2023; not yet operating"
+    type: new_subsidiary
+    date: "2023-05-04"
+    consideration: null
+    revenue_contribution: 0
+    profit_contribution: null
+    pro_forma_revenue: null
+    period: "FY2023"
+    unit: "SAR"
+    source: "4193_NICE_ONE/2026_Q3_filed2026-11-02.pdf"
+    page: 8
+    quote: "subsidiary has not commenced yet the commercial business operations."
+  - event: "Subsidiary Creative Reflection Marketing Co. (KSA, 100%) established 25 Dec 2024; not yet operating"
+    type: new_subsidiary
+    date: "2024-12-25"
+    consideration: null
+    revenue_contribution: 0
+    profit_contribution: null
+    pro_forma_revenue: null
+    period: "FY2024"
+    unit: "SAR"
+    source: "4193_NICE_ONE/2026_Q3_filed2026-11-02.pdf"
+    page: 8
+    quote: "commenced yet the commercial business operations."
+  - event: "FY2022 comparatives in the FY2023 annual were not consolidated (Egyptian subsidiary immaterial)"
+    type: deconsolidation
+    date: "2022"
+    consideration: null
+    revenue_contribution: null
+    profit_contribution: -432819
+    pro_forma_revenue: null
+    period: "FY2022"
+    unit: "SAR"
+    source: "4193_NICE_ONE/2023_Annual_filed2025-01-07.pdf"
+    page: 10
+    quote: "During 2022, the financial statements of the Egyptian subsidiary mentioned above were not consolidated within the Company's financial statements."
+  - event: "Acquisitions or disposals of businesses"
+    type: acquisition
+    status: "not found"
+    period: "FY2022-9M2026"
+    source: "4193_NICE_ONE/2025_Annual_filed2026-03-31.pdf"
+    page: 13
+    quote: "No business-combination note in the FY2022-FY2025 annuals or 2026 interims; all three subsidiaries are start-ups that have not commenced operations."
+
+segments:
+  - {period: "FY2025", segment: "Single operating segment; revenue monitored by region", basis: operating, revenue: 1016659141, profit: null, unit: "SAR", source: "4193_NICE_ONE/2025_Annual_filed2026-03-31.pdf", page: 47, quote: "operations as one single operating segment."}
+  - {period: "FY2023", segment: "Central / Western (incl. southern and northern) / Eastern / International", basis: geographic, revenue: 782355101, profit: null, unit: "SAR", source: "4193_NICE_ONE/2024_Annual_filed2025-03-10.pdf", page: 47, note: "296,763,916 / 348,708,051 / 104,041,416 / 32,841,718"}
+  - {period: "FY2024", segment: "Central / Western / Eastern / International", basis: geographic, revenue: 1003512887, profit: null, unit: "SAR", source: "4193_NICE_ONE/2025_Annual_filed2026-03-31.pdf", page: 47, note: "378,567,957 / 448,036,067 / 130,259,867 / 46,648,996"}
+  - {period: "FY2025", segment: "Central / Western / Eastern / International", basis: geographic, revenue: 1016659141, profit: null, unit: "SAR", source: "4193_NICE_ONE/2025_Annual_filed2026-03-31.pdf", page: 47, note: "400,948,872 / 428,419,107 / 131,445,050 / 55,846,112"}
+  - {period: "9M2025", segment: "Central / Western / Eastern / International (re-presented)", basis: geographic, revenue: 767780196, profit: null, unit: "SAR", source: "4193_NICE_ONE/2026_Q3_filed2026-11-02.pdf", page: 18, note: "301,624,962 / 327,207,638 / 98,723,455 / 40,224,141"}
+  - {period: "9M2026", segment: "Central / Western / Eastern / International", basis: geographic, revenue: 741429132, profit: null, unit: "SAR", source: "4193_NICE_ONE/2026_Q3_filed2026-11-02.pdf", page: 18, note: "297,898,304 / 308,476,462 / 91,601,793 / 43,452,573"}
+  - {period: "FY2022", segment: "Local sales / International sales", basis: geographic, revenue: 613631362, profit: null, unit: "SAR", source: "4193_NICE_ONE/2023_Annual_filed2025-01-07.pdf", page: 40, note: "594,435,101 / 19,196,261"}
+  - {period: "FY2023", segment: "Local sales / International sales", basis: geographic, revenue: 782355101, profit: null, unit: "SAR", source: "4193_NICE_ONE/2023_Annual_filed2025-01-07.pdf", page: 40, note: "749,513,383 / 32,841,718"}
+  - {period: "FY2024", segment: "Local sales / International sales", basis: geographic, revenue: 1003512887, profit: null, unit: "SAR", source: "4193_NICE_ONE/2025_Annual_filed2026-03-31.pdf", page: 43, note: "956,863,891 / 46,648,996"}
+  - {period: "FY2025", segment: "Local sales / International sales", basis: geographic, revenue: 1016659141, profit: null, unit: "SAR", source: "4193_NICE_ONE/2025_Annual_filed2026-03-31.pdf", page: 43, note: "960,813,029 / 55,846,112"}
+  - {period: "9M2026", segment: "Local sales / International sales (9M2025: 727,556,055 / 40,224,141)", basis: geographic, revenue: 741429132, profit: null, unit: "SAR", source: "4193_NICE_ONE/2026_Q3_filed2026-11-02.pdf", page: 16, note: "697,976,559 / 43,452,573"}
+  - {period: "FY2025", segment: "Sale of goods / rendering of services (delivery)", basis: product, revenue: 1016659141, profit: null, unit: "SAR", source: "4193_NICE_ONE/2025_Annual_filed2026-03-31.pdf", page: 42, note: "974,642,326 / 42,016,815 (FY2024: 965,462,352 / 38,050,535)"}
+  - {period: "9M2026", segment: "Sale of goods / rendering of services (9M2025: 736,546,543 / 31,233,653)", basis: product, revenue: 741429132, profit: null, unit: "SAR", source: "4193_NICE_ONE/2026_Q3_filed2026-11-02.pdf", page: 16, note: "712,772,492 / 28,656,640"}
+
+revenue_drivers:
+  - {period: "FY2025", driver: "Business model: online e-commerce in perfumes and cosmetics; offline outlets added during 2025 (number and revenue not disclosed)", value: null, unit: "count", source: "4193_NICE_ONE/2025_Annual_filed2026-03-31.pdf", page: 19, quote: "During the year, the Group also expanded its activities to include offline sales though outlets and marketing services."}
+  - {period: "FY2024", driver: "Delivery revenue earned on orders below SAR 300 (service revenue FY2024: 38,050,535)", value: 38050535, unit: "SAR", source: "4193_NICE_ONE/2024_Annual_filed2025-03-10.pdf", page: 20, quote: "The Group earns delivery revenue on orders below a threshold of SAR 300."}
+  - {period: "FY2025", driver: "Advertisement expense (FY2024: 114,441,571)", value: 151765189, unit: "SAR", source: "4193_NICE_ONE/2025_Annual_filed2026-03-31.pdf", page: 43, quote: "Advertisement 151,765,189 114,441,571"}
+  - {period: "FY2025", driver: "Robotics for warehouse operations under construction (capital work in progress), completion expected by end-2026", value: null, unit: "SAR", source: "4193_NICE_ONE/2025_Annual_filed2026-03-31.pdf", page: 30, quote: "capital expenditure incurred for the purchase and installations of robotics technology for warehouse operations and improvements"}
+  - {period: "9M2026", driver: "Allowance for slow-moving and obsolete inventory: charge 12,514,289 (FY2025: 6,447,390); allowance 25,849,638 at 30 Sep 2026", value: 12514289, unit: "SAR", source: "4193_NICE_ONE/2026_Q3_filed2026-11-02.pdf", page: 14, quote: "Charge during the period/year 12,514,289 6,447,390"}
+
+one_offs:
+  - {period: "FY2023", item: "Gain on disposal of property and equipment", amount: 2286625, unit: "SAR", pnl_line: "Other income - net", recurring: false, source: "4193_NICE_ONE/2024_Annual_filed2025-03-10.pdf", page: 44, quote: "(Loss)/gain on disposal of property and equipment (74,617) 2,286,625"}
+  - {period: "FY2024", item: "IPO costs charged to profit (indirect costs of the primary offering); total IPO cost estimated at SAR 14.8m, the rest borne by selling shareholders or charged to equity", amount: 448513, unit: "SAR", pnl_line: "General and administrative expenses", recurring: false, source: "4193_NICE_ONE/2025_Annual_filed2026-03-31.pdf", page: 43, quote: "IPO costs* - 448,513"}
+  - {period: "FY2025", item: "Exchange loss (FY2024: 481,743); recurs every year with international sales, so not treated as a one-off", amount: -747118, unit: "SAR", pnl_line: "Other (expenses) income, net", recurring: true, source: "4193_NICE_ONE/2025_Annual_filed2026-03-31.pdf", page: 44, quote: "Exchange loss (747,118) (481,743)"}
+  - {period: "FY2025", item: "Gain on termination of lease (FY2024: 975,706; FY2023: 349,958; FY2022: 236,527); recurs every year, so not treated as a one-off", amount: 315590, unit: "SAR", pnl_line: "Other (expenses) income, net", recurring: true, source: "4193_NICE_ONE/2025_Annual_filed2026-03-31.pdf", page: 44, quote: "Gain on termination of lease 315,590 975,706"}
+  - {period: "9M2026", item: "Loss on disposal of leasehold improvements, furniture and capital work in progress (NBV SAR 2.6m), linked to the 2026 lease exits; disposal results recur every year (FY2024 -74,617; FY2025 +21,753), treated as recurring", amount: -2567952, unit: "SAR", pnl_line: "Other income (expenses), net", recurring: true, source: "4193_NICE_ONE/2026_Q3_filed2026-11-02.pdf", page: 12, quote: "resulting in a loss from disposal amounting to 2.6 million, which was recognized in the other income"}
+  - {period: "9M2026", item: "Gain on termination of five leases (2,845,665; 9M2025: 54,899) and key money of SAR 1m on transfer of a lease; with the disposal loss above the lease exits added a net SAR 1.3m (we calculate); lease-termination gains recur every year, treated as recurring", amount: 3845665, unit: "SAR", pnl_line: "Other income (expenses), net", recurring: true, source: "4193_NICE_ONE/2026_Q3_filed2026-11-02.pdf", page: 13, quote: "the Group terminated five lease agreements, resulting in a gain on lease termination of 2.8 million"}
+  - {period: "FY2025", item: "Allowance for expected credit losses on advances to suppliers (operating provision; not listed as a one-off)", amount: -2485236, unit: "SAR", pnl_line: "General and administrative expenses", recurring: false, source: "4193_NICE_ONE/2025_Annual_filed2026-03-31.pdf", page: 43, quote: "Allowance for expected credit losses on advances to suppliers (note 9) 2,485,236 -"}
+  - {period: "FY2025", item: "Reversal of excess zakat provision from prior years (below profit before zakat)", amount: 996920, unit: "SAR", pnl_line: "Zakat", recurring: false, source: "4193_NICE_ONE/2025_Annual_filed2026-03-31.pdf", page: 42, quote: "Reversal of excess provision from prior years (996,920) -"}
+
+restatements:
+  - period_restated: "FY2022"
+    item: "FY2022 comparatives re-arranged in the FY2023 consolidated statements (note 30): cost of sales 416,294,206 -> 451,917,614; finance cost 6,832,732 -> 2,331,782 (bank charges 4,500,950 moved to selling and marketing); total assets 294,082,477 -> 289,535,767; share of loss of the unconsolidated subsidiary (432,819) netted in other income"
+    from: -416294206
+    to: -451917614
+    unit: "SAR"
+    reason: "Presentation conformed to the FY2023 statements; revenue (613,631,362), profit before zakat and net profit unchanged."
+    source: "4193_NICE_ONE/2023_Annual_filed2025-01-07.pdf"
+    page: 45
+    quote: "Certain of the prior year amounts have been rearranged to conform to the presentation in the current year."
+  - period_restated: "FY2023"
+    item: "Operating cash flow re-presented in the FY2024 annual: finance cost paid on leases (1,052,370) moved into operating activities; 47,385,161 -> 46,332,791"
+    from: 47385161
+    to: 46332791
+    unit: "SAR"
+    reason: "Cash-flow presentation change; no note"
+    source: "4193_NICE_ONE/2024_Annual_filed2025-03-10.pdf"
+    page: 11
+    quote: "Finance cost paid on leases (1,181,839) (1,052,370)"
+  - period_restated: "FY2024"
+    item: "Cost of sales 734,334,014 -> 735,425,226 and gross profit 269,178,873 -> 268,087,660 in the FY2025 annual (selling and marketing 141,377,056 -> 146,239,809; G&A 48,850,201 -> 42,896,236); below the 0.5% R threshold"
+    from: -734334014
+    to: -735425226
+    unit: "SAR"
+    reason: "Comparative presentation change in the FY2025 annual; operating profit unchanged at 78,951,616"
+    source: "4193_NICE_ONE/2025_Annual_filed2026-03-31.pdf"
+    page: 9
+    quote: "Cost of sales (771,633,844) (735,425,226)"
+  - period_restated: "9M2025"
+    item: "Revenue 772,747,485 -> 767,780,196 and cost of sales 573,561,550 -> 576,726,000 (note 18: payroll, depreciation and amortisation reallocated); operating cash flow 18,768,232 -> 16,324,247 (finance income received moved to investing)"
+    from: 772747485
+    to: 767780196
+    unit: "SAR"
+    reason: "Re-presentation in the 9M 2026 interim; no effect on net income. The 4,967,289 revenue change (netted against selling and marketing) is not itemised in note 18."
+    source: "4193_NICE_ONE/2026_Q3_filed2026-11-02.pdf"
+    page: 19
+    quote: "These reclassifications related to allocation of payroll, depreciation and amortization listed below have no impact on previously reported net income"
+
+significant_events:
+  - date: "2024-03-30"
+    event: "Name changed from Product Sea Trading Company to Nice One Beauty Digital Marketing Company"
+    financial_effect: "None"
+    source: "4193_NICE_ONE/2023_Annual_filed2025-01-07.pdf"
+    page: 10
+    quote: "subsequently changed to \"Nice One Beauty Digital Marketing Company\" with effect from 30 March 2024"
+  - date: "2024-12-24 to 2025-01-08"
+    event: "IPO at SAR 35 per share: 34.65m shares (30% post-listing), of which 29.15m sold by existing shareholders and 5.5m new shares issued on 8 Jan 2025 when trading began"
+    financial_effect: "Share capital +SAR 5.5m and share premium SAR 187m received in 2025 (cash-flow statement); indirect IPO costs of SAR 0.4m expensed in FY2024"
+    source: "4193_NICE_ONE/2025_Annual_filed2026-03-31.pdf"
+    page: 14
+    quote: "Company's 5,500,000 new ordinary shares are issued on 8 January 2025 on listing and commencement of trading on the Saudi Stock Exchange."
+  - date: "2025"
+    event: "All borrowings repaid (long-term SAR 13.2m and short-term SAR 61.1m in 2025)"
+    financial_effect: "Borrowings nil at 31 Dec 2025 and 30 Sep 2026; finance income SAR 3.3m in FY2025"
+    source: "4193_NICE_ONE/2025_Annual_filed2026-03-31.pdf"
+    page: 47
+    quote: "borrowings are fully paid during the year."
+  - date: "2025"
+    event: "New leases: right-of-use additions SAR 58.7m in 2025 (warehouses/properties), after the move into offline outlets"
+    financial_effect: "Lease liabilities SAR 58.8m at end-2025 (SAR 12.1m a year earlier); ROU depreciation SAR 11.0m (FY2024: SAR 3.8m)"
+    source: "4193_NICE_ONE/2025_Annual_filed2026-03-31.pdf"
+    page: 19
+    quote: "During the year, the Group also expanded its activities to include offline sales though outlets and marketing services."
+  - date: "2026 (9M)"
+    event: "Five leases terminated and one transferred for key money of SAR 1m; leasehold improvements and capital work in progress with NBV SAR 2.6m disposed"
+    financial_effect: "Gain on lease termination SAR 2.8m, key money SAR 1m, loss on disposal SAR 2.6m, all in other income (expense), net"
+    source: "4193_NICE_ONE/2026_Q3_filed2026-11-02.pdf"
+    page: 13
+    quote: "received a transfer fee (key money) of 1 million (2025: nil)."
+
+audit_opinion:
+  - {period: "FY2022", opinion: "Unmodified (Ernst & Young), separate statements of Product Sea Trading Company; no EoM found", emphasis_of_matter: none, source: "4193_NICE_ONE/2022_Annual_filed2025-01-29.pdf", page: 3}
+  - {period: "FY2023", opinion: "Unmodified (Ernst & Young), consolidated; no EoM found (scanned)", emphasis_of_matter: none, source: "4193_NICE_ONE/2023_Annual_filed2025-01-07.pdf", page: 3}
+  - {period: "FY2024", opinion: "Unmodified (Ernst & Young); no EoM found", emphasis_of_matter: none, source: "4193_NICE_ONE/2024_Annual_filed2025-03-10.pdf", page: 3}
+  - {period: "FY2025", opinion: "Unmodified (Ernst & Young); no EoM found", emphasis_of_matter: none, source: "4193_NICE_ONE/2025_Annual_filed2026-03-31.pdf", page: 3}
+  - {period: "9M2026", opinion: "Review conclusion unmodified (Ernst & Young); no EoM found", emphasis_of_matter: none, source: "4193_NICE_ONE/2026_Q3_filed2026-11-02.pdf", page: 3}
+
+kpis_in_filings:
+  - {period: "FY2022-9M2026", kpi: "Orders, active customers, average order value, gross merchandise value (GMV), app users", value: null, unit: "count", status: "not found", source: "4193_NICE_ONE/2025_Annual_filed2026-03-31.pdf", page: 20, note: "Searched all annual and interim statements; only the SAR 300 free-delivery threshold and the 14-day return right are given."}
+  - {period: "FY2025-9M2026", kpi: "Number of offline outlets", value: null, unit: "count", status: "not found", source: "4193_NICE_ONE/2025_Annual_filed2026-03-31.pdf", page: 19}
+  - {period: "FY2025", kpi: "International share of revenue (we calculate from 55,846,112 / 1,016,659,141)", value: 5.5, unit: "%", source: "4193_NICE_ONE/2025_Annual_filed2026-03-31.pdf", page: 43}
+
+special_extractions:
+  - name: "FY2022 original vs re-presented income statement (SAR)"
+    unit: "SAR"
+    source: "4193_NICE_ONE/2022_Annual_filed2025-01-29.pdf (p.6) vs 4193_NICE_ONE/2023_Annual_filed2025-01-07.pdf (p.7)"
+    page: 6
+    revenue: [613631362, 613631362]
+    cost_of_sales: [-416294206, -451917614]
+    selling_and_marketing: [-140346946, -111208993]
+    general_and_administrative: [-31104938, -29120433]
+    finance_cost: [-6832732, -2331782]
+    other_income: [514811, 81992]
+    share_of_loss_of_subsidiary: [-432819, 0]
+    profit_before_zakat: [19134532, 19134532]
+
+open_questions:
+  - "No operating KPIs (orders, customers, average basket, GMV, outlet count) are printed in any filing in the archive, so revenue cannot be split into volume and price."
+  - "The 9M2025 revenue re-presentation (SAR 4.97m netted against Q3 2025 selling and marketing) is not explained in note 18 of the 9M 2026 interim."
+  - "The number, opening dates and revenue of the offline outlets opened in 2025, and which leases were terminated in 9M2026, are not disclosed."
+  - "International sales (SAR 55.8m in FY2025) are booked while the Egyptian and UAE subsidiaries have not started operations; the selling entity and currency are not stated."

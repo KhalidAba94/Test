@@ -1,0 +1,321 @@
+# Evidence from Tanmiah Food (archive 2281_TANMIAH). Facts only; page = physical PDF page (1-based).
+# Annual statements and notes are image files (read by OCR; sideways segment pages rotated); the 2026 Q3 notes are text but its statements are images.
+ticker: '2281'
+company: Tanmiah Food Co.
+perimeter_changes:
+- event: >-
+    Sale of 60% of Supreme Foods Processing Company (SFPC), completed 2 Nov 2022 (effective 1 Nov); remaining 40% equity-accounted as
+    an associate; SFPC presented as a discontinued operation
+  type: discontinued
+  date: '2022-11-01'
+  consideration: proceeds from disposal of equity interest 282,945,727 (cash flow)
+  revenue_contribution: 324235793
+  profit_contribution: 12368946
+  pro_forma_revenue: null
+  period: FY2022
+  unit: SAR
+  source: 2281_TANMIAH/2023_Annual_filed2024-02-15.pdf
+  page: 36
+  quote: After the transaction, the Group maintains a 40% ownership in SFPC.
+  note: >-
+    Revenue and profit are SFPC for the ten months to 31 Oct 2022 (excluded from continuing revenue in both FY2022 and FY2023). Gain
+    on disposal 101,927,470 = 69.0m on the 60% sold + 32.9m fair-value gain on the 40% retained.
+- event: >-
+    MHP Desert Hills for Poultry Company established in 2024 with MHP SE (Group 55%, MHP 45%; capital 59.58m, NCI contribution 26.81m)
+    to build a greenfield hatchery
+  type: new_subsidiary
+  date: '2024'
+  consideration: null
+  revenue_contribution: null
+  profit_contribution: null
+  pro_forma_revenue: null
+  period: FY2024
+  unit: SAR
+  source: 2281_TANMIAH/2024_Annual_filed2025-02-20.pdf
+  page: 14
+  quote: >-
+    the Group has established a new subsidiary namely, MHP Desert Hills for Poultry Company Limited through one of its subsidiaries
+- event: >-
+    Restaurant subsidiaries: Tanmiah Restaurants for Fast Food (new in 2023); Nola (Bahrain) dormant in 2023, operating from 2024; Gulf
+    Brands Restaurants Management (Kuwait) dormant to 2024, operating in 2025 - start-ups, not acquisitions
+  type: new_subsidiary
+  date: 2023-2025
+  consideration: null
+  revenue_contribution: null
+  profit_contribution: null
+  pro_forma_revenue: null
+  period: FY2023-FY2025
+  unit: SAR
+  source: 2281_TANMIAH/2025_Annual_filed2026-02-19.pdf
+  page: 13
+  quote: Gulf Brands Restaurants State of 100% 100% Restaurant outlets with related
+- event: No acquisitions (no business-combination note) FY2022-9M2026; subsidiary list unchanged in 9M2026
+  type: acquisition
+  status: not found
+  period: FY2022-9M2026
+  source: 2281_TANMIAH/2026_Q3_filed2026-11-12.pdf
+  page: 9
+  quote: The Group’s principal subsidiaries at 30 September 2026 and 31 December 2025 are set out below.
+segments:
+- period: FY2022
+  segment: >-
+    Single segment (poultry, food and agriculture); by area: Saudi Arabia 1,628,414,487, UAE 4,392,007, Bahrain 93,335,151, other GCC
+    900,100
+  basis: geographic
+  revenue: 1727041745
+  profit: null
+  unit: SAR
+  source: 2281_TANMIAH/2023_Annual_filed2024-02-15.pdf
+  page: 65
+- period: FY2023
+  segment: Single segment; Saudi Arabia 1,995,816,610, Bahrain 96,886,152, other GCC 390,045
+  basis: geographic
+  revenue: 2093092807
+  profit: null
+  unit: SAR
+  source: 2281_TANMIAH/2024_Annual_filed2025-02-20.pdf
+  page: 62
+- period: FY2024
+  segment: Poultry, food and agriculture (FY2025 annual comparative)
+  basis: operating
+  revenue: 2422091991
+  profit: 153277352
+  unit: SAR
+  source: 2281_TANMIAH/2025_Annual_filed2026-02-19.pdf
+  page: 63
+  note: profit = profit before zakat and income tax
+- period: FY2024
+  segment: Restaurant outlets
+  basis: operating
+  revenue: 141392233
+  profit: -26592109
+  unit: SAR
+  source: 2281_TANMIAH/2025_Annual_filed2026-02-19.pdf
+  page: 63
+- period: FY2025
+  segment: Poultry, food and agriculture
+  basis: operating
+  revenue: 2452976745
+  profit: 46391579
+  unit: SAR
+  source: 2281_TANMIAH/2025_Annual_filed2026-02-19.pdf
+  page: 63
+- period: FY2025
+  segment: Restaurant outlets
+  basis: operating
+  revenue: 200504153
+  profit: -55656606
+  unit: SAR
+  source: 2281_TANMIAH/2025_Annual_filed2026-02-19.pdf
+  page: 63
+- period: 9M2025
+  segment: Poultry, food and agriculture
+  basis: operating
+  revenue: 1815196037
+  profit: 59541576
+  unit: SAR
+  source: 2281_TANMIAH/2026_Q3_filed2026-11-12.pdf
+  page: 21
+- period: 9M2025
+  segment: Restaurant outlets
+  basis: operating
+  revenue: 144894790
+  profit: -41246341
+  unit: SAR
+  source: 2281_TANMIAH/2026_Q3_filed2026-11-12.pdf
+  page: 21
+- period: 9M2026
+  segment: Poultry, food and agriculture
+  basis: operating
+  revenue: 2135108294
+  profit: 60909096
+  unit: SAR
+  source: 2281_TANMIAH/2026_Q3_filed2026-11-12.pdf
+  page: 21
+- period: 9M2026
+  segment: Restaurant outlets
+  basis: operating
+  revenue: 187836738
+  profit: -26760447
+  unit: SAR
+  source: 2281_TANMIAH/2026_Q3_filed2026-11-12.pdf
+  page: 21
+revenue_drivers:
+- period: FY2025
+  driver: >-
+    Restaurant revenue by country: Saudi Arabia 186,544,475 (FY2024 139,674,000), Bahrain 6,089,869 (1,718,233), Kuwait 7,869,809 (nil)
+  value: 200504153
+  unit: SAR
+  source: 2281_TANMIAH/2025_Annual_filed2026-02-19.pdf
+  page: 64
+  quote: 186,544,475, 6,089,869 7,869,809 200,504,153
+- period: FY2025
+  driver: >-
+    Poultry revenue by country: Saudi Arabia 2,272,953,636 (2,247,722,431), Bahrain 115,574,026 (119,614,669), other GCC 64,449,083
+    (54,754,891)
+  value: 2452976745
+  unit: SAR
+  source: 2281_TANMIAH/2025_Annual_filed2026-02-19.pdf
+  page: 64
+  quote: 2,272,953,636 115,574,026 64,449,083 2,452,976,745
+- period: FY2025
+  driver: Government (feed) subsidy accrued 45,733,597 (FY2024 42,723,435)
+  value: 45733597
+  unit: SAR
+  source: 2281_TANMIAH/2025_Annual_filed2026-02-19.pdf
+  page: 11
+  quote: Government subsidy accrued during the year 45 (45,733,597} (42,723,435)
+- period: 9M2026
+  driver: Sales to the associate SFPC 26,164,928 (9M2025 8,054,730)
+  value: 26164928
+  unit: SAR
+  source: 2281_TANMIAH/2026_Q3_filed2026-11-12.pdf
+  page: 18
+  quote: Sales to an associate 11,775,294 1,928,984 26,164,928 8,054,730
+- period: FY2022-9M2026
+  driver: Volumes, prices and restaurant counts
+  value: null
+  unit: count
+  source: 2281_TANMIAH/2025_Annual_filed2026-02-19.pdf
+  page: null
+  status: not found
+one_offs:
+- period: FY2022
+  item: Gain on disposal of discontinued operations (SFPC), below PBT
+  amount: 101927470
+  unit: SAR
+  pnl_line: Discontinued operations
+  recurring: false
+  source: 2281_TANMIAH/2023_Annual_filed2024-02-15.pdf
+  page: 8
+  quote: Gain on disposal of discontinued operations 11 - 101,927,470
+- period: FY2025
+  item: 'Exchange fluctuation loss inside finance costs (FY2024: gain 3,200,000)'
+  amount: -8000000
+  unit: SAR
+  pnl_line: Finance costs (note 29)
+  recurring: false
+  source: 2281_TANMIAH/2025_Annual_filed2026-02-19.pdf
+  page: 11
+  quote: Exchange fluctuation loss (gain) 29 8,000,000 (3,200,000)
+- period: 9M2026
+  item: 'Exchange fluctuation gain inside finance costs (9M2025: loss 7,500,000)'
+  amount: 2000000
+  unit: SAR
+  pnl_line: Finance costs
+  recurring: false
+  source: 2281_TANMIAH/2026_Q3_filed2026-11-12.pdf
+  page: 7
+  quote: Exchange fluctuation (gain) / loss (2,000,000) 7,500,000
+- period: 9M2026
+  item: >-
+    Property, plant and equipment written off (write-offs recur most years: FY2023 gain 48,300, FY2024 loss 351,766, FY2025 gain 217,905)
+  amount: -1614164
+  unit: SAR
+  pnl_line: not named (operating expenses)
+  recurring: true
+  source: 2281_TANMIAH/2026_Q3_filed2026-11-12.pdf
+  page: 7
+  quote: Property, plant and equipment written off 1,614,164 -
+restatements:
+- period_restated: 9M2025
+  item: >-
+    Operating cash flow: finance costs paid on borrowings (34,011,739) moved to financing; lease interest shown separately
+  from: 236963852
+  to: 270975591
+  unit: SAR
+  reason: 2026 Q3 note 16 (IAS 8 restatement of presentation)
+  source: 2281_TANMIAH/2026_Q3_filed2026-11-12.pdf
+  page: 23
+  quote: Net cash generated from operating activities 236,963,852 34,011,739 270,975,591
+- period_restated: FY2022
+  item: Share of results of associate moved below operating profit; G&A re-presented (no effect on PBT)
+  from: 113653759
+  to: 113369435
+  unit: SAR
+  reason: FY2023 annual presentation
+  source: 2281_TANMIAH/2023_Annual_filed2024-02-15.pdf
+  page: 8
+  quote: Operating profit 136,737,094 113,369,435
+significant_events:
+- date: '2022-11-02'
+  event: Completed the sale of 60% of SFPC; 40% retained as an associate
+  financial_effect: gain 101.9m in FY2022 (discontinued operations)
+  source: 2281_TANMIAH/2023_Annual_filed2024-02-15.pdf
+  page: 36
+  quote: management has announced the completion of the transaction on the Tadawul stock exchange on November 2, 2022.
+- date: '2024'
+  event: Joint venture subsidiary with MHP SE (55%) for a greenfield hatchery
+  financial_effect: NCI contribution 26.8m
+  source: 2281_TANMIAH/2024_Annual_filed2025-02-20.pdf
+  page: 14
+  quote: The subsidiary’s paid up share capital amounts to SR 59.58 million, with a 55% ownership held by the Group
+- date: '2026-04-01'
+  event: Useful lives of restaurant machinery extended from 5.5 to 8 years
+  financial_effect: 9M2026 depreciation 1.8m lower
+  source: 2281_TANMIAH/2026_Q3_filed2026-11-12.pdf
+  page: 13
+  quote: >-
+    Had there been no revision to the useful lives, the depreciation charge for the three-month and nine-month periods ended 30 September
+    2026
+- date: '2026'
+  event: 'Auditor change: 2026 interims reviewed by PricewaterhouseCoopers (FY2022-FY2025 audited by Deloitte)'
+  financial_effect: null
+  source: 2281_TANMIAH/2026_Q3_filed2026-11-12.pdf
+  page: 3
+  quote: Branch of PricewaterhouseCoopers Public Accountants
+audit_opinion:
+- period: FY2022
+  opinion: unmodified (Deloitte and Touche & Co.)
+  emphasis_of_matter: none
+  source: 2281_TANMIAH/2022_Annual_filed2023-02-20.pdf
+  page: 3
+- period: FY2023
+  opinion: unmodified (Deloitte and Touche & Co.)
+  emphasis_of_matter: none
+  source: 2281_TANMIAH/2023_Annual_filed2024-02-15.pdf
+  page: 3
+- period: FY2024
+  opinion: unmodified (Deloitte and Touche & Co.)
+  emphasis_of_matter: none
+  source: 2281_TANMIAH/2024_Annual_filed2025-02-20.pdf
+  page: 3
+- period: FY2025
+  opinion: unmodified (Deloitte and Touche & Co.)
+  emphasis_of_matter: none
+  source: 2281_TANMIAH/2025_Annual_filed2026-02-19.pdf
+  page: 3
+- period: 9M2026
+  opinion: review conclusion unmodified (PricewaterhouseCoopers)
+  emphasis_of_matter: none
+  source: 2281_TANMIAH/2026_Q3_filed2026-11-12.pdf
+  page: 3
+kpis_in_filings:
+- period: FY2025
+  kpi: Restaurant outlets segment revenue
+  value: 200504153
+  unit: SAR
+  source: 2281_TANMIAH/2025_Annual_filed2026-02-19.pdf
+  page: 63
+- period: 9M2026
+  kpi: 'Restaurant outlets segment revenue (9M2025: 144,894,790)'
+  value: 187836738
+  unit: SAR
+  source: 2281_TANMIAH/2026_Q3_filed2026-11-12.pdf
+  page: 21
+- period: FY2022-9M2026
+  kpi: Restaurant count, same-store sales, poultry volumes
+  value: null
+  unit: count
+  source: 2281_TANMIAH/2025_Annual_filed2026-02-19.pdf
+  page: null
+  status: not found
+special_extractions:
+- item: Stage A
+  detail: >-
+    9M2026 read from the PDF (no XBRL); D&A includes right-of-use depreciation; receivable ECL removed from IMPAIR_CF; borrowings include
+    non-current; lease liabilities added; FY2025 and 9M2025 COGS/GP added.
+open_questions:
+- Restaurant counts and openings are not disclosed, so new-capacity revenue in Saudi Arabia cannot be separated.
+- >-
+  Sales to SFPC were intra-group until 31 Oct 2022 and external afterwards; the effect on FY2023/FY2022 revenue growth is not disclosed.

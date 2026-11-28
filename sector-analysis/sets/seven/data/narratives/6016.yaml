@@ -1,0 +1,71 @@
+ticker: "6016"
+headline: >-
+  Burgerizzr's revenue grew every year from SAR 250m (FY2022) to SAR 366m (FY2025), 13.5% a year, and attributable profit rose from
+  SAR 2.7m to SAR 10.9m; in 9M 2026 revenue rose 27.5% to SAR 332m, with SAR 55.7m from the SHOVEL café chain bought in October 2025,
+  and attributable profit reached SAR 14.5m (SAR 6.5m).
+lfl_basis:
+  definition_used: >-
+    Standard bridge on IFRS revenue. Burgerizzr was a single company with one segment until 2025. The only acquisition is 60% of SHOVEL
+    (Coffee Bean Trading Company), consolidated from 27 Oct 2025; its revenue is disclosed (SAR 7.1m in FY2025, SAR 55.7m in 9M 2026)
+    and is the perimeter step. Two new subsidiaries formed in 2025 were dormant. Organic growth is therefore +12.2% (FY2023), +6.6%
+    (FY2024), +20.0% (FY2025) and +6.1% (9M 2026). The filings give no restaurant count, openings or same-store sales, so the
+    new-capacity step and like-for-like growth are not determinable; organic growth is the closest available measure.
+  perimeter_changes:
+    - {event: "Acquisition of 60% of SHOVEL (Coffee Bean Trading Company), seven café branches at acquisition and nine at 30 Sep 2026; consideration SAR 10.3m including a SAR 1.5m capital injection; provisional goodwill SAR 8.0m", date: "2025-10-27", effect: "revenue SAR 7.1m in FY2025 (from 27 Oct) and SAR 55.7m in 9M 2026, nil in the prior periods (disclosed)", source: "6016_BURGERIZZR/2025_Annual_filed2026-03-29.pdf p.25-26, p.30; 6016_BURGERIZZR/2026_Q3_filed2026-11-15.pdf p.14, p.18"}
+    - {event: "Hadaf Bas for Real Estate and Qemam Bas for Investment incorporated (wholly owned)", date: "2025-03-02", effect: "dormant, no revenue", source: "6016_BURGERIZZR/2025_Annual_filed2026-03-29.pdf p.11"}
+  capacity_changes:
+    - {event: "New restaurants (management cites a rising number of branches; additions to assets under construction SAR 14.4m in FY2022, SAR 1.6m in FY2023, SAR 6.9m in FY2024, SAR 18.1m in FY2025)", date: "FY2022-9M2026", effect: "not determinable: no restaurant count or revenue of new restaurants disclosed", source: "6016_BURGERIZZR/2023_Annual_filed2024-02-18.pdf p.9; 6016_BURGERIZZR/2025_Annual_filed2026-03-29.pdf p.10; 6016_BURGERIZZR/2026_Q3_filed2026-11-15.pdf p.10"}
+  fx_exposure: "All revenue is earned in Saudi Arabia in riyals. No FX translation effect."
+  price_volume_support: >-
+    Not determinable. The filings give gross revenue, returns and (from 2026) revenue by brand segment, but no transactions, average
+    ticket or restaurant count.
+  confidence: "Medium (perimeter step disclosed, High; new capacity not determinable)"
+price_volume:
+  - period: "9M 2026 vs 9M 2025"
+    text: >-
+      Revenue rose SAR 71.5m (27.5%). SHOVEL (QSR-Coffee segment) added SAR 55.7m; the burger business (QSR-Burger) grew from SAR 260m to
+      SAR 276m (+6.1%, we calculate). The filings do not split burger growth between prices, transactions and new restaurants.
+    basis: "disclosed (segment revenue); price/volume split not determinable"
+    confidence: "High for the segment amounts; the split is not determinable"
+    source: "6016_BURGERIZZR/2026_Q3_filed2026-11-15.pdf p.18 (segments)"
+    refs: ["6016-9M2026-REV", "6016-9M2025-REV"]
+  - period: "FY2025 vs FY2024"
+    text: >-
+      Revenue rose SAR 66.9m (22.3%). Gross revenue was SAR 370m (SAR 303m) and returns SAR 3.0m (SAR 3.4m). SHOVEL contributed SAR 7.1m,
+      so organic growth was 20.0% (we calculate). Transactions, average ticket and restaurant numbers are not disclosed.
+    basis: "disclosed (gross revenue, returns, acquired revenue); split not determinable"
+    confidence: "High for the amounts; the split is not determinable"
+    source: "6016_BURGERIZZR/2025_Annual_filed2026-03-29.pdf p.30 (note 22), p.26 (note 10)"
+    refs: ["6016-FY2025-REV", "6016-FY2024-REV"]
+profit_and_margin:
+  drivers:
+    - {period: "FY2023", driver: "Revenue +12.2% to SAR 281m and gross margin up to 30.2% (27.3%). We calculate operating income of SAR 14.9m (SAR 5.4m) and EBITDA up 30.6% to SAR 39.4m (margin 14.0%). Attributable profit rose to SAR 12.3m (SAR 2.7m), a net margin of 4.4%; ROE 19.8%. Operating cash flow was SAR 41.0m.", source: "6016_BURGERIZZR/2024_Annual_filed2025-03-09.pdf p.7 (P&L), p.9 (cash flow)", refs: ["6016-FY2023-REV", "6016-FY2023-GP", "6016-FY2023-OPINC", "6016-FY2023-EBITDA_C", "6016-FY2023-NI_ATTR", "6016-FY2023-CFO"]}
+    - {period: "FY2024", driver: "Revenue +6.6% to SAR 300m with gross margin steady at 30.3%, but administrative expenses rose 26.9% (SAR 24.8m to SAR 31.4m) and selling expenses 10.0% (we calculate). Operating income fell 27.1% to SAR 10.9m, EBITDA 11.6% to SAR 34.9m (margin 11.6%) and attributable profit 33.4% to SAR 8.2m (restated; SAR 8.4m first reported).", source: "6016_BURGERIZZR/2025_Annual_filed2026-03-29.pdf p.8 (P&L, restated); 6016_BURGERIZZR/2024_Annual_filed2025-03-09.pdf p.7", refs: ["6016-FY2024-REV", "6016-FY2024-GP", "6016-FY2024-OPINC", "6016-FY2024-EBITDA_C", "6016-FY2024-NI_ATTR"]}
+    - {period: "FY2025", driver: "Revenue +22.3% to SAR 366m (organic +20.0%; SHOVEL SAR 7.1m from 27 Oct) and gross margin 32.3%. Selling expenses rose 39.6% to SAR 67.8m (we calculate). Operating income rose 41.5% to SAR 15.4m and EBITDA 19.3% to SAR 41.6m (margin 11.4%); attributable profit was SAR 10.9m (SAR 8.2m), ROE 14.5%. Capex rose to SAR 33.1m and, with SHOVEL's leases, net debt doubled to SAR 56.9m (1.4x EBITDA).", source: "6016_BURGERIZZR/2025_Annual_filed2026-03-29.pdf p.7 (balance sheet), p.8 (P&L), p.10 (cash flow), p.26 (SHOVEL)", refs: ["6016-FY2025-REV", "6016-FY2025-GP", "6016-FY2025-OPINC", "6016-FY2025-EBITDA_C", "6016-FY2025-NI_ATTR", "6016-FY2025-CAPEX", "6016-FY2025-NET_DEBT"]}
+    - {period: "9M2026", driver: "Revenue +27.5% to SAR 332m and gross margin 33.4% (31.5%). We calculate operating income of SAR 23.4m (SAR 9.2m) and EBITDA up 73.7% to SAR 48.3m (margin 14.6% vs 10.7%). The company reports SHOVEL net profit of SAR 9.5m, above the burger segment's SAR 8.8m (SAR 6.5m); minority shareholders took SAR 3.7m, leaving attributable profit of SAR 14.5m (SAR 6.5m) and an annualised ROE of 22.9%.", source: "6016_BURGERIZZR/2026_Q3_filed2026-11-15.pdf p.6 (P&L), p.18 (segments)", refs: ["6016-9M2026-REV", "6016-9M2026-GP", "6016-9M2026-OPINC", "6016-9M2026-EBITDA_C", "6016-9M2026-NI_NCI", "6016-9M2026-NI_ATTR"]}
+    - {period: "FY2022-FY2025", driver: "Operating cash flow rose from SAR 32.8m (FY2022) to SAR 57.8m (FY2025) and free cash flow was positive every year (SAR 24.7m in FY2025). Part of the FY2025 rise reflects SAR 19.6m more trade and other payables; FY2025 CFO also includes finance cost paid (SAR 1.4m), which earlier years show in financing. Losses on disposal of restaurant assets recur every year inside operating income (SAR 1.0m in FY2022, SAR 1.7m in FY2023, SAR 1.3m in FY2024, SAR 1.7m in FY2025, SAR 0.6m in 9M 2026) and are treated as normal operations, not one-offs.", source: "6016_BURGERIZZR/2025_Annual_filed2026-03-29.pdf p.8, p.10; 6016_BURGERIZZR/2024_Annual_filed2025-03-09.pdf p.7; 6016_BURGERIZZR/2023_Annual_filed2024-02-18.pdf p.7, p.9; 6016_BURGERIZZR/2026_Q3_filed2026-11-15.pdf p.6", refs: ["6016-FY2022-CFO", "6016-FY2025-CFO", "6016-FY2025-FCF"]}
+  one_offs: []
+developments:
+  - {date: "2021-09-08", category: "financing", text: "Shares listed on Nomu, the parallel market.", source: "6016_BURGERIZZR/2025_Annual_filed2026-03-29.pdf p.11"}
+  - {date: "2023-05-31", category: "financing", text: "Shareholders approved a ten-for-one share split (3.5m to 35m shares).", source: "6016_BURGERIZZR/2023_Annual_filed2024-02-18.pdf p.30"}
+  - {date: "2024-10-13", category: "regulation", text: "Approval received to move the listing from Nomu to the Main Market.", source: "6016_BURGERIZZR/2025_Annual_filed2026-03-29.pdf p.11"}
+  - {date: "2024", category: "financing", text: "Paid a SAR 4.9m dividend (SAR 0.14 per share) for FY2023.", source: "6016_BURGERIZZR/2024_Annual_filed2025-03-09.pdf p.30"}
+  - {date: "2025-10-27", category: "M&A", text: "Acquired 60% of SHOVEL (Coffee Bean Trading Company), a café chain with seven branches, for SAR 8.8m plus a SAR 1.5m capital injection; goodwill of SAR 8.0m is provisional. SHOVEL had SAR 27.0m of revenue in FY2025 and nine branches at 30 Sep 2026.", source: "6016_BURGERIZZR/2025_Annual_filed2026-03-29.pdf p.25-26; 6016_BURGERIZZR/2026_Q3_filed2026-11-15.pdf p.14"}
+  - {date: "2026-01", category: "financing", text: "Bonus issue raised share capital from SAR 35m to SAR 56m.", source: "6016_BURGERIZZR/2025_Annual_filed2026-03-29.pdf p.36"}
+  - {date: "2026-06-30", category: "financing", text: "Paid a SAR 5.6m dividend and bought back 66,080 shares for SAR 0.5m during 9M 2026.", source: "6016_BURGERIZZR/2026_Q3_filed2026-11-15.pdf p.15, p.8"}
+  - {date: "2026", category: "event", text: "PKF Al-Bassam replaced BDO Dr. Mohamed Al-Amri & Co. as auditor; the 9M 2026 review conclusion is unmodified.", source: "6016_BURGERIZZR/2026_Q3_filed2026-11-15.pdf p.3-4"}
+what_it_means:
+  improved: "Revenue rose 13.5% a year from FY2022 to FY2025 and 27.5% in 9M 2026, and the gross margin widened from 27.3% (FY2022) to 32.3% (FY2025) and 33.4% (9M 2026); EBITDA rose 73.7% in 9M 2026."
+  weakened: "Operating costs grew faster than revenue in FY2024 (administrative expenses +26.9%), cutting attributable profit 33.4%; net debt doubled to SAR 56.9m in FY2025 as lease liabilities rose to SAR 54.0m with SHOVEL."
+  why: "SHOVEL provided SAR 55.7m of the SAR 71.5m rise in 9M 2026 revenue and the burger business grew 6.1%; the company reports SHOVEL's 9M 2026 net profit (SAR 9.5m) above the burger segment's (SAR 8.8m), with 40% of SHOVEL owned by minority shareholders."
+  uncertain: "No restaurant count or same-store sales are disclosed, so growth from new burger restaurants cannot be separated; SHOVEL's purchase price allocation is provisional and its post-acquisition FY2025 revenue differs between filings (SAR 7.1m vs SAR 8.3m)."
+confidence_overall: "Medium"
+data_notes:
+  - "No XBRL filing: every figure was read from the PDF statements. All primary statements used are scanned images, read by OCR and checked against the printed subtotals."
+  - "Listed on Nomu from 8 Sep 2021; moved to the Main Market after approval on 13 Oct 2024. FY2021-FY2024 figures come from audited Nomu-period statements, which are stand-alone; FY2025 onward is consolidated."
+  - "Restatement (FY2025 annual note 30, correction of an error: employee Iqama fees expensed rather than deferred): FY2024 cost of revenue +SAR 0.26m, so FY2024 GP, PBT, net and attributable profit (SAR 8.2m vs SAR 8.4m first reported), total assets (SAR 149m vs SAR 151m) and equity (SAR 70.3m vs SAR 72.1m) are shown as restated; the 1 Jan 2024 balance sheet (our FY2023: total assets SAR 144m, equity SAR 67.3m) is restated by -SAR 1.5m. FY2023 profit was not restated, so FY2023 and FY2024 profit are on different bases."
+  - "9M 2025 cost of revenue, GP, PBT and profit are restated (9M 2026 interim note 14, described there as a change in accounting policy; profit SAR 6.5m vs SAR 6.9m first reported). The 30 Sep 2025 balance sheet was not re-presented, so 9M 2025 total assets and equity are about SAR 2.2m higher than on the restated basis."
+  - "CFO basis differs: the FY2025 annual shows finance cost paid inside operating activities (FY2025 SAR 1.4m; FY2024 restated SAR 1.1m, CFO SAR 34.9m vs SAR 36.0m first reported); FY2022-FY2023 and both 9M periods keep it in financing (9M 2026 SAR 2.3m; 9M 2025 SAR 1.0m)."
+  - "Capex = purchases of property and equipment + additions to assets under construction + intangibles; the SHOVEL acquisition (SAR 10.3m) is excluded. D&A excludes transfers from assets under construction to cost of revenue (FY2025 SAR 1.4m)."
+  - "No finance-income line and no associates; operating income = PBT + finance cost. Our tables show attributable-profit growth as n.m. for FY2023, FY2025 and 9M 2026 because the prior value is below SAR 10m; absolute changes are quoted instead."
+  - "SHOVEL's post-acquisition FY2025 revenue is SAR 7.1m in the audited FY2025 annual (used here) but SAR 8.3m in the 9M 2026 interim note 7."

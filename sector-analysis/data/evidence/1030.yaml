@@ -1,0 +1,253 @@
+ticker: "1030"
+company: "The Saudi Investment Bank (SAIB)"
+# Units: SAR '000 unless stated. Pages are physical PDF pages (1-based).
+# Primary statements are image-only in all focus PDFs; values marked [image] were read visually.
+
+restatements:
+  - period_restated: "31 Dec 2024 (and 30 Sep 2024)"
+    item: "Investments (FVOCI equity investment)"
+    from: 40431316
+    to: 40834059
+    unit: "SAR '000"
+    reason: "Correction under IAS 8 (presented as correction of error, not a change in accounting policy): an FVOCI equity investment historically valued at cost was revalued to fair value. +402,743 to investments and other reserves at 31 Dec 2024 and 30 Sep 2024. Of this, +361,725 relates to 1 Jan 2024 opening other reserves ((1,008,408) -> (646,683)) and +41,018 to FY2024/9M2024 OCI (232,161 -> 273,179 FY2024; 187,131 -> 228,149 9M2024). No effect on net income. The 9M2025 interim (note 7, p18) lists SIMAH among SAIB strategic equity holdings, but the restatement note does not name the investee."
+    source: "1030_SAIB/2025_Q3_filed2025-10-30.pdf"
+    page: 38
+    quote: "the Group corrected its valuation of its equity interest in an equity investment that is classified as investment at Fair Value through Other Comprehensive Income which was historically valued at cost"
+  - period_restated: "31 Dec 2024"
+    item: "Other reserves (equity)"
+    from: -967752
+    to: -565009
+    unit: "SAR '000"
+    reason: "Same IAS 8 correction; total equity at 31 Dec 2024 restated to 21,131,357."
+    source: "1030_SAIB/2025_Annual_filed2026-02-08.pdf"
+    page: 106
+    quote: "These adjustments are considered as correction as per IAS 8"
+  - period_restated: "1 Jan 2024"
+    item: "Other reserves opening balance"
+    from: -1008408
+    to: -646683
+    unit: "SAR '000"
+    reason: "Opening effect of the FVOCI equity revaluation (+361,725); restated opening total equity 17,596,778."
+    source: "1030_SAIB/2025_Annual_filed2026-02-08.pdf"
+    page: 13
+    quote: "Balances at the beginning of the year - restated ... (646,683) ... 17,596,778 [image]"
+  - period_restated: "31 Dec 2024 capital ratios"
+    item: "CET1 / Tier 1 / total capital ratio comparatives"
+    from: "14.19% / 19.09% / 19.71% (FY2024 AFS)"
+    to: "14.48% / 19.35% / 19.96% (FY2025 AFS comparatives)"
+    unit: "%"
+    reason: "No reason stated; consistent in direction with the +402,743 equity restatement (not confirmed by filing)."
+    source: "1030_SAIB/2025_Annual_filed2026-02-08.pdf"
+    page: 101
+    quote: "CET I Ratio 14.31% 14.48%"
+  - period_restated: "FY2021 (comparatives in FY2022 AFS)"
+    item: "Income statement reclassification: fees -> special commission income; Deposit Insurance Premium -> special commission expense; IT technical services from rent to G&A"
+    from: null
+    to: null
+    unit: "SAR '000"
+    reason: "Fee income net 333,771 -> 326,423 (-7,348 EIR-integral fees to special commission income 2,812,644 -> 2,819,992); special commission expense 452,930 -> 467,594 (+14,664 deposit insurance premium from G&A); rent 137,745 -> 69,581; other G&A 308,111 -> 361,611; total operating income 2,767,712 -> 2,753,048; net income unchanged 1,061,656. Also balance-sheet reclassifications at 31 Dec 2021 (cash management accounts, retail receivables, goodwill 18.29m to intangibles, dividends payable)."
+    source: "1030_SAIB/2022_Annual_filed2023-03-05.pdf"
+    page: 111
+    quote: "Expenses pertaining to Deposit Insurance Premium Fund were reclassified from Other general and administrative expenses to Special commission expense."
+  - period_restated: "30 Sep 2025 / 31 Dec 2025 comparatives in 9M2026"
+    item: "SAR 135m reclassified from cash and balances with SAMA to due to banks/SAMA"
+    from: null
+    to: null
+    unit: "SAR '000"
+    reason: "Presentation; no impact on net income, equity or cash flows."
+    source: "1030_SAIB/2026_Q3_filed2026-11-01.pdf"
+    page: 44
+    quote: "An amount of 135 million has been reclassified from cash and balances with Saudi Central Bank"
+  - period_restated: "9M2025 segments (in 9M2026 interim)"
+    item: "'Other' segment eliminated and 9M2025 segment totals re-presented"
+    from: null
+    to: null
+    unit: "SAR '000"
+    reason: "No reason stated; see segments."
+    source: "1030_SAIB/2026_Q3_filed2026-11-01.pdf"
+    page: 26
+    quote: "Total operating income 1,008,003 1,352,466 595,500 210,171 3,166,140"
+
+special_extractions:
+  tier1_sukuk:
+    equity_attributable_includes_tier1: true
+    equity_attributable_note: "SFP shows 'Equity attributable to bank's shareholders' (excludes sukuk), then 'Tier I Sukuk', then 'Equity attributable to bank's equity holders' (INCLUDES Tier I sukuk), then NCI and Total Equity. Statement of changes in equity column 'Shareholders' equity' excludes sukuk."
+    equity_attributable_source: {source: "1030_SAIB/2026_Q3_filed2026-11-01.pdf", page: 3, quote: "Equity attributable to bank's shareholders 17,418,417 ... Tier I Sukuk 7,162,500 ... Equity attributable to bank's equity holders 24,580,917 [image]"}
+    carrying_amounts:
+      - {period: "31 Dec 2021", amount: 1500000, unit: "SAR '000", source: "1030_SAIB/2022_Annual_filed2023-03-05.pdf", page: 106, quote: "Total 3,215,000 1,500,000", note: "note 35 Tier I Sukuk page; tranches 2017 285,000; 2018 1,000,000; 2019 215,000"}
+      - {period: "31 Dec 2022", amount: 3215000, unit: "SAR '000", source: "1030_SAIB/2022_Annual_filed2023-03-05.pdf", page: 106, quote: "Total 3,215,000 1,500,000"}
+      - {period: "31 Dec 2023", amount: 2715000, unit: "SAR '000", source: "1030_SAIB/2023_Annual_filed2024-02-12.pdf", page: 110, quote: "Total 2,715,000 3,215,000"}
+      - {period: "31 Dec 2024", amount: 5312500, unit: "SAR '000", source: "1030_SAIB/2025_Annual_filed2026-02-08.pdf", page: 104, quote: "Total 5,312,500 5,312,500"}
+      - {period: "31 Dec 2025", amount: 5312500, unit: "SAR '000", source: "1030_SAIB/2025_Annual_filed2026-02-08.pdf", page: 104, quote: "Total 5,312,500 5,312,500"}
+      - {period: "30 Sep 2025", amount: 5312500, unit: "SAR '000", source: "1030_SAIB/2026_Q3_filed2026-11-01.pdf", page: 42, quote: "Total 7,162,500 5,312,500 5,312,500"}
+      - {period: "30 Sep 2026", amount: 7162500, unit: "SAR '000", source: "1030_SAIB/2026_Q3_filed2026-11-01.pdf", page: 42, quote: "Total 7,162,500 5,312,500 5,312,500"}
+    distributions_charged_to_equity:
+      - {period: "FY2021", amount: 110699, unit: "SAR '000", line: "Tier I Sukuk costs (EPS note)", source: "1030_SAIB/2022_Annual_filed2023-03-05.pdf", page: 63, quote: "Tier I Sukuk costs (142,471) (110,699)"}
+      - {period: "FY2022", amount: 142471, unit: "SAR '000", line: "Tier I Sukuk costs (EPS note)", source: "1030_SAIB/2022_Annual_filed2023-03-05.pdf", page: 63, quote: "Tier I Sukuk costs (142,471) (110,699)"}
+      - {period: "FY2023", amount: 167428, unit: "SAR '000", line: "Tier I Sukuk costs (EPS note)", source: "1030_SAIB/2023_Annual_filed2024-02-12.pdf", page: 66, quote: "Tier I Sukuk costs (167,428) (142,471)"}
+      - {period: "FY2024", amount: 169558, unit: "SAR '000", line: "Tier I Sukuk costs (statement of changes in equity)", source: "1030_SAIB/2025_Annual_filed2026-02-08.pdf", page: 13, quote: "Tier I Sukuk costs (169,558) (169,558) (169,558) [image]"}
+      - {period: "FY2025", amount: 334731, unit: "SAR '000", line: "Tier I Sukuk costs (statement of changes in equity)", source: "1030_SAIB/2025_Annual_filed2026-02-08.pdf", page: 12, quote: "Tier I Sukuk costs (334,731) (334,731) (334,731) [image]"}
+      - {period: "9M2025", amount: 184664, unit: "SAR '000", line: "Tier I Sukuk costs (statement of changes in equity)", source: "1030_SAIB/2025_Q3_filed2025-10-30.pdf", page: 6, quote: "Tier I Sukuk costs (184,664) (184,664) (184,664) [image]"}
+      - {period: "9M2026", amount: 189920, unit: "SAR '000", line: "Tier I Sukuk costs (EPS note)", source: "1030_SAIB/2026_Q3_filed2026-11-01.pdf", page: 41, quote: "Tier I Sukuk costs (18,710) (17,761) (189,920) (184,664)"}
+    issuances_redemptions:
+      - {date: "FY2021", event: "Redemption of Tier I sukuk", amount: -500000, unit: "SAR '000", source: "1030_SAIB/2022_Annual_filed2023-03-05.pdf", page: 108, quote: "Redemption of Tier I Sukuk 35 - - (500,000) (500,000)"}
+      - {date: "FY2022", event: "Redeemed 6 Jun 2017 tranche", amount: -285000, unit: "SAR '000", source: "1030_SAIB/2023_Annual_filed2024-02-12.pdf", page: 111, quote: "Redemption of Tier I Sukuk (285,000)"}
+      - {date: "29 Jun 2022", event: "Issued Tier I sukuk tranche", amount: 2000000, unit: "SAR '000", source: "1030_SAIB/2022_Annual_filed2023-03-05.pdf", page: 106, quote: "June 29, 2022 2,000,000 -"}
+      - {date: "6 Feb 2023", event: "Issued second tranche SAR 500m (subsequent event in FY2022 AFS)", amount: 500000, unit: "SAR '000", source: "1030_SAIB/2022_Annual_filed2023-03-05.pdf", page: 112, quote: "the Bank has completed the offer of the second tranche of Tier I Sukuk amounting to SAR 500 million. The settlement of Sukuk issuance was on February 6, 2023."}
+      - {date: "FY2023", event: "Redeemed 21 Mar 2018 tranche", amount: -1000000, unit: "SAR '000", source: "1030_SAIB/2024_Annual_filed2025-02-04.pdf", page: 111, quote: "Redemption of Tier I Sukuk (1,000,000)"}
+      - {date: "FY2024", event: "Redeemed 15 Apr 2019 tranche", amount: -215000, unit: "SAR '000", source: "1030_SAIB/2025_Annual_filed2026-02-08.pdf", page: 13, quote: "Repayment of Tier I Sukuk (215,000) (215,000) [image]"}
+      - {date: "28 Nov 2024", event: "Issued USD-denominated AT1 capital sustainable sukuk", amount: 2812500, unit: "SAR '000", source: "1030_SAIB/2025_Annual_filed2026-02-08.pdf", page: 104, quote: "November 28, 2024 2,812,500 2,812,500"}
+      - {date: "3 May 2026", event: "Issued Tier I sukuk tranche", amount: 1850000, unit: "SAR '000", source: "1030_SAIB/2026_Q3_filed2026-11-01.pdf", page: 42, quote: "May 3,2026 1,850,000 - -"}
+  net_fees:
+    # Captions: 'Fee income from banking services' / 'Fee expense from banking services' / 'Net fee income from banking services'
+    - {period: "FY2021 (reclassified)", gross_fee_income: 523588, fee_expense: 197165, net_fees: 326423, unit: "SAR '000", source: "1030_SAIB/2022_Annual_filed2023-03-05.pdf", page: 61}
+    - {period: "FY2022", gross_fee_income: 560240, fee_expense: 264770, net_fees: 295470, unit: "SAR '000", source: "1030_SAIB/2022_Annual_filed2023-03-05.pdf", page: 61}
+    - {period: "FY2023", gross_fee_income: 638867, fee_expense: 336622, net_fees: 302245, unit: "SAR '000", source: "1030_SAIB/2023_Annual_filed2024-02-12.pdf", page: 64}
+    - {period: "FY2024", gross_fee_income: 757594, fee_expense: 414740, net_fees: 342854, unit: "SAR '000", source: "1030_SAIB/2025_Annual_filed2026-02-08.pdf", page: 61}
+    - {period: "FY2025", gross_fee_income: 709724, fee_expense: 335497, net_fees: 374227, unit: "SAR '000", source: "1030_SAIB/2025_Annual_filed2026-02-08.pdf", page: 61}
+    - {period: "9M2025", gross_fee_income: 541575, fee_expense: 268737, net_fees: 272838, unit: "SAR '000", source: "1030_SAIB/2026_Q3_filed2026-11-01.pdf", page: 4, note: "[image]"}
+    - {period: "9M2026", gross_fee_income: 535165, fee_expense: 245424, net_fees: 289741, unit: "SAR '000", source: "1030_SAIB/2026_Q3_filed2026-11-01.pdf", page: 4, note: "[image]"}
+  impairments:
+    # P&L line 'Provisions for credit and other losses' (9M2026: 'Impairment charge for credit and other losses'); split per credit-risk note
+    - {period: "FY2021", loans_and_advances: 254432, other_credit: -6374, real_estate_and_other: 23008, total_line: 271066, unit: "SAR '000", source: "1030_SAIB/2022_Annual_filed2023-03-05.pdf", page: 107, note: "other credit = banks 5,430; investments (5,200); guarantees (6,423); other assets (181)"}
+    - {period: "FY2022", loans_and_advances: 150673, other_credit: 15123, real_estate_and_other: 25773, total_line: 191569, unit: "SAR '000", source: "1030_SAIB/2022_Annual_filed2023-03-05.pdf", page: 107, note: "banks (6,881); investments (15,747); financial guarantees 37,557; other assets 194"}
+    - {period: "FY2023", loans_and_advances: 362863, other_credit: -4206, real_estate_and_other: 0, total_line: 358657, unit: "SAR '000", source: "1030_SAIB/2023_Annual_filed2024-02-12.pdf", page: 110, note: "banks (956); investments 433; guarantees (3,745); other assets 62"}
+    - {period: "FY2024", loans_and_advances: 275722, other_credit: 14182, real_estate_and_other: 50, total_line: 289954, unit: "SAR '000", source: "1030_SAIB/2025_Annual_filed2026-02-08.pdf", page: 104, note: "banks 261; investments 3,799; guarantees 10,079; other assets 43"}
+    - {period: "FY2025", loans_and_advances: 379332, other_credit: -24407, real_estate_and_other: -67, total_line: 354858, unit: "SAR '000", source: "1030_SAIB/2025_Annual_filed2026-02-08.pdf", page: 104, note: "banks 790; investments 5,579; guarantees (30,882); other assets 106. Loan allowance movement shows 'charge' 530,319 incl. SAR 151m recoveries of written-off loans"}
+    - {period: "9M2025", loans_and_advances: null, other_credit: null, real_estate_and_other: null, total_line: 186170, unit: "SAR '000", source: "1030_SAIB/2026_Q3_filed2026-11-01.pdf", page: 21, note: "no P&L split in interim; loan allowance movement 'charge' 286,471 including SAR 120m recoveries; debt securities ECL +298 (p19); commitments ECL +18,852 (p25)"}
+    - {period: "9M2026", loans_and_advances: null, other_credit: null, real_estate_and_other: null, total_line: 181953, unit: "SAR '000", source: "1030_SAIB/2026_Q3_filed2026-11-01.pdf", page: 21, note: "no P&L split in interim; loan allowance movement 'charge' 299,605 including SAR 170m recoveries; debt securities ECL (2,259) (p19); commitments ECL +53,414 (p25)"}
+
+perimeter_changes:
+  - event: "Binding agreement (2 Sep 2026) to sell entire 50% shareholding in associate American Express Saudi Arabia to Amex (Middle East) B.S.C.(C); reclassified to assets held for sale (691,779 at 30 Sep 2026), equity accounting discontinued; follows exercise of contractual put option"
+    type: "disposal"
+    date: "2 Sep 2026 (signing; completion pending)"
+    consideration: 1430110
+    revenue_contribution: null
+    profit_contribution: null
+    pro_forma_revenue: null
+    period: "9M2026"
+    unit: "SAR '000"
+    source: "1030_SAIB/2026_Q3_filed2026-11-01.pdf"
+    page: 47
+    quote: "The purchase consideration payable upon completion amounts to 1,430.11 million, together with additional deferred consideration"
+  - event: "Assets held for sale on SFP; investments in associates fell 1,083,124 -> 665,501; put option (level 3) of 234,480 transferred to held for sale"
+    type: "disposal"
+    date: "30 Sep 2026"
+    consideration: null
+    period: "9M2026"
+    unit: "SAR '000"
+    source: "1030_SAIB/2026_Q3_filed2026-11-01.pdf"
+    page: 3
+    quote: "Assets held for sale 28 691,779 - - [image]"
+  - event: "New consolidated fund ICAP fund 63 (100%); ICAP fund RE 4 ownership reduced to 86.8%, creating non-controlling interest of 39,333"
+    type: "new_subsidiary"
+    date: "9M2026"
+    consideration: null
+    period: "9M2026"
+    unit: "SAR '000"
+    source: "1030_SAIB/2026_Q3_filed2026-11-01.pdf"
+    page: 11
+    quote: "ICAP fund RE 4 86.8% 100% ... ICAP fund 63 100% -"
+  - event: "Acquisitions/discontinued operations FY2022-FY2025"
+    type: null
+    status: "not found"
+    source: "SAIB FY2022-FY2025 AFS"
+    page: null
+
+segments:
+  - {period: "FY2022", segment: "Retail banking", basis: operating, revenue: 1248712, profit: 453197, unit: "SAR '000", source: "1030_SAIB/2022_Annual_filed2023-03-05.pdf", page: 65}
+  - {period: "FY2022", segment: "Corporate banking", basis: operating, revenue: 1260379, profit: 897224, unit: "SAR '000", source: "1030_SAIB/2022_Annual_filed2023-03-05.pdf", page: 65}
+  - {period: "FY2022", segment: "Treasury and investments", basis: operating, revenue: 788786, profit: 498691, unit: "SAR '000", source: "1030_SAIB/2022_Annual_filed2023-03-05.pdf", page: 65}
+  - {period: "FY2022", segment: "Asset management and brokerage", basis: operating, revenue: 186525, profit: 81959, unit: "SAR '000", source: "1030_SAIB/2022_Annual_filed2023-03-05.pdf", page: 65}
+  - {period: "FY2022", segment: "Other", basis: operating, revenue: -219106, profit: -219106, unit: "SAR '000", source: "1030_SAIB/2022_Annual_filed2023-03-05.pdf", page: 65}
+  - {period: "FY2022", segment: "Total", basis: operating, revenue: 3265296, profit: 1711965, unit: "SAR '000", source: "1030_SAIB/2022_Annual_filed2023-03-05.pdf", page: 65}
+  - {period: "FY2025", segment: "Retail banking", basis: operating, revenue: 1297674, profit: 317627, unit: "SAR '000", source: "1030_SAIB/2025_Annual_filed2026-02-08.pdf", page: 64}
+  - {period: "FY2025", segment: "Corporate banking", basis: operating, revenue: 2325963, profit: 1682097, unit: "SAR '000", source: "1030_SAIB/2025_Annual_filed2026-02-08.pdf", page: 64}
+  - {period: "FY2025", segment: "Treasury and investments", basis: operating, revenue: 1218450, profit: 1014594, unit: "SAR '000", source: "1030_SAIB/2025_Annual_filed2026-02-08.pdf", page: 64}
+  - {period: "FY2025", segment: "Asset management and brokerage", basis: operating, revenue: 269900, profit: 143940, unit: "SAR '000", source: "1030_SAIB/2025_Annual_filed2026-02-08.pdf", page: 64}
+  - {period: "FY2025", segment: "Other", basis: operating, revenue: -317805, profit: -317738, unit: "SAR '000", source: "1030_SAIB/2025_Annual_filed2026-02-08.pdf", page: 64}
+  - {period: "FY2025", segment: "Total", basis: operating, revenue: 4794182, profit: 2840520, unit: "SAR '000", source: "1030_SAIB/2025_Annual_filed2026-02-08.pdf", page: 64}
+  - {period: "9M2025 (as originally reported)", segment: "Retail banking", basis: operating, revenue: 1021047, profit: 335529, unit: "SAR '000", source: "1030_SAIB/2025_Q3_filed2025-10-30.pdf", page: 24}
+  - {period: "9M2025 (as originally reported)", segment: "Corporate banking", basis: operating, revenue: 1359661, profit: 910793, unit: "SAR '000", source: "1030_SAIB/2025_Q3_filed2025-10-30.pdf", page: 24}
+  - {period: "9M2025 (as originally reported)", segment: "Treasury and investments", basis: operating, revenue: 780104, profit: 624441, unit: "SAR '000", source: "1030_SAIB/2025_Q3_filed2025-10-30.pdf", page: 24}
+  - {period: "9M2025 (as originally reported)", segment: "Asset management and brokerage", basis: operating, revenue: 210171, profit: 117952, unit: "SAR '000", source: "1030_SAIB/2025_Q3_filed2025-10-30.pdf", page: 24}
+  - {period: "9M2025 (as originally reported)", segment: "Other", basis: operating, revenue: -204843, profit: -204776, unit: "SAR '000", source: "1030_SAIB/2025_Q3_filed2025-10-30.pdf", page: 24}
+  - {period: "9M2025", segment: "Total", basis: operating, revenue: 3166140, profit: 1783939, unit: "SAR '000", source: "1030_SAIB/2025_Q3_filed2025-10-30.pdf", page: 24}
+  - {period: "9M2025 (re-presented in 9M2026, no Other segment)", segment: "Retail banking", basis: operating, revenue: 1008003, profit: 314488, unit: "SAR '000", source: "1030_SAIB/2026_Q3_filed2026-11-01.pdf", page: 26}
+  - {period: "9M2025 (re-presented in 9M2026, no Other segment)", segment: "Corporate banking", basis: operating, revenue: 1352466, profit: 907585, unit: "SAR '000", source: "1030_SAIB/2026_Q3_filed2026-11-01.pdf", page: 26}
+  - {period: "9M2025 (re-presented in 9M2026, no Other segment)", segment: "Treasury and investments", basis: operating, revenue: 595500, profit: 443914, unit: "SAR '000", source: "1030_SAIB/2026_Q3_filed2026-11-01.pdf", page: 26}
+  - {period: "9M2025 (re-presented in 9M2026, no Other segment)", segment: "Asset management and brokerage", basis: operating, revenue: 210171, profit: 117952, unit: "SAR '000", source: "1030_SAIB/2026_Q3_filed2026-11-01.pdf", page: 26}
+  - {period: "9M2026", segment: "Retail banking", basis: operating, revenue: 761600, profit: 88320, unit: "SAR '000", source: "1030_SAIB/2026_Q3_filed2026-11-01.pdf", page: 26}
+  - {period: "9M2026", segment: "Corporate banking", basis: operating, revenue: 1101803, profit: 636740, unit: "SAR '000", source: "1030_SAIB/2026_Q3_filed2026-11-01.pdf", page: 26}
+  - {period: "9M2026", segment: "Treasury and investments", basis: operating, revenue: 1099844, profit: 934999, unit: "SAR '000", source: "1030_SAIB/2026_Q3_filed2026-11-01.pdf", page: 26}
+  - {period: "9M2026", segment: "Asset management and brokerage", basis: operating, revenue: 248606, profit: 151478, unit: "SAR '000", source: "1030_SAIB/2026_Q3_filed2026-11-01.pdf", page: 26}
+  - {period: "9M2026", segment: "Total", basis: operating, revenue: 3211853, profit: 1811537, unit: "SAR '000", source: "1030_SAIB/2026_Q3_filed2026-11-01.pdf", page: 26}
+
+revenue_drivers: []
+
+one_offs:
+  - {period: "2018-2023 (historical)", item: "ZATCA settlement of zakat assessments 2006-2017 for SAR 775.5m (discounted SAR 711.8m charged to income in 2018); instalments paid through 1 Dec 2023", amount: 775500, unit: "SAR '000", pnl_line: "Provisions for Zakat (2018)", recurring: false, source: "1030_SAIB/2024_Annual_filed2025-02-04.pdf", page: 68, quote: "In December 2018, the Bank agreed with the ZATCA to a settlement of Zakat assessments for the years 2006 to 2017 for SAR 775.5 million."}
+  - {period: "FY2021", item: "Reversal of prior-period zakat on SAMA long-term commission-free deposits", amount: -33782, unit: "SAR '000", pnl_line: "Provisions for Zakat", recurring: false, source: "1030_SAIB/2022_Annual_filed2023-03-05.pdf", page: 63, quote: "Reversal of Zakat - prior period (note 24b) - (33,782)"}
+  - {period: "FY2021", item: "Unrealized loss on FVTPL financial instruments", amount: -182991, unit: "SAR '000", pnl_line: "Unrealized loss on FVTPL financial instruments, net", recurring: false, source: "1030_SAIB/2022_Annual_filed2023-03-05.pdf", page: 111, quote: "Unrealized loss on FVTPL financial instruments, net (182,991) - (182,991)"}
+  - {period: "FY2021", item: "Gains on disposals of FVOCI debt securities", amount: 74106, unit: "SAR '000", pnl_line: "Gains on disposals of FVOCI debt securities, net", recurring: false, source: "1030_SAIB/2022_Annual_filed2023-03-05.pdf", page: 61, quote: "Total 10,791 74,106"}
+  - {period: "FY2022", item: "Gains on disposals of FVOCI debt securities", amount: 10791, unit: "SAR '000", pnl_line: "Gains on disposals of FVOCI debt securities, net", recurring: false, source: "1030_SAIB/2022_Annual_filed2023-03-05.pdf", page: 61, quote: "Total 10,791 74,106"}
+  - {period: "FY2022", item: "Provisions for real estate and other losses", amount: 25773, unit: "SAR '000", pnl_line: "Provisions for credit and other losses", recurring: false, source: "1030_SAIB/2022_Annual_filed2023-03-05.pdf", page: 107, quote: "Provisions for real estate and other losses 25,773 23,008"}
+  - {period: "FY2023", item: "Gains on disposals of FVOCI debt securities", amount: 15234, unit: "SAR '000", pnl_line: "Gains on disposals of FVOCI debt securities, net", recurring: false, source: "1030_SAIB/2023_Annual_filed2024-02-12.pdf", page: 64, quote: "Gains on disposals of FVOCI debt securities, net 15,234 10,791"}
+  - {period: "FY2025", item: "Gains on disposals of FVOCI debt securities", amount: 11123, unit: "SAR '000", pnl_line: "Gains on disposals of FVOCI debt securities, net", recurring: false, source: "1030_SAIB/2025_Annual_filed2026-02-08.pdf", page: 61, quote: "Gains on the sale of FVOCI debt securities 11,123 1,215"}
+  - {period: "FY2025", item: "Recoveries of previously written-off loans (within loan ECL charge)", amount: 151000, unit: "SAR '000", pnl_line: "Provisions for credit and other losses", recurring: false, source: "1030_SAIB/2026_Q3_filed2026-11-01.pdf", page: 21, quote: "December 31, 2025: 151 million, September 30, 2025: 120 million) relating to recoveries of previously written off loans"}
+  - {period: "9M2025", item: "Recoveries of previously written-off loans (within loan ECL charge)", amount: 120000, unit: "SAR '000", pnl_line: "Impairment charge for credit and other losses", recurring: false, source: "1030_SAIB/2026_Q3_filed2026-11-01.pdf", page: 21, quote: "September 30, 2025: 120 million) relating to recoveries of previously written off loans and advances"}
+  - {period: "9M2026", item: "Recoveries of previously written-off loans (within loan ECL charge)", amount: 170000, unit: "SAR '000", pnl_line: "Impairment charge for credit and other losses", recurring: false, source: "1030_SAIB/2026_Q3_filed2026-11-01.pdf", page: 21, quote: "The charge for the year / period includes an amount of 170 million"}
+  - {period: "9M2026", item: "Gains on disposals of FVOCI debt securities", amount: 13110, unit: "SAR '000", pnl_line: "Gains on disposals of FVOCI debt securities, net", recurring: false, source: "1030_SAIB/2026_Q3_filed2026-11-01.pdf", page: 4, quote: "Gains on disposals of FVOCI debt securities, net 3,437 342 13,110 10,930 [image]"}
+  - {period: "FY2022-9M2026", item: "Hyperinflation adjustments / items labelled non-recurring / ZATCA settlements in period", amount: null, status: "not found"}
+
+significant_events:
+  - {date: "28 Feb 2026 onward", event: "Regional geopolitical deterioration (Strait of Hormuz); stress tests, granular review of exposures, rating actions; expert credit judgement and ECL overlays recorded (amount not disclosed)", financial_effect: "overlays recorded, not quantified", source: "1030_SAIB/2026_Q3_filed2026-11-01.pdf", page: 45, quote: "cannot be fully incorporated into the ECL model calculations, thereby necessitating overlays to be recorded"}
+  - {date: "After 30 Sep 2026", event: "Subsequent escalation of geopolitical situation in KSA; financial impact uncertain", financial_effect: null, source: "1030_SAIB/2026_Q3_filed2026-11-01.pdf", page: 45, quote: "Subsequent to the period ended 30 September 2026, the volatility of the ongoing geopolitical situation in Kingdom of Saudi Arabia has escalated significantly"}
+  - {date: "1 Oct 2026", event: "EGM approved bonus issue: capitalise SAR 1.5bn statutory reserve and SAR 1bn retained earnings, one bonus share for every five shares (subsequent event)", financial_effect: "no change in total equity", source: "1030_SAIB/2026_Q3_filed2026-11-01.pdf", page: 45, quote: "increase the Bank's share capital through the capitalization of 1.5 billion from statutory reserve and 1 billion from retained earnings"}
+  - {date: "3 May 2026", event: "AT1 sukuk issuance 1,850,000", financial_effect: "Tier 1 ratio 18.74% at 30 Sep 2026", source: "1030_SAIB/2026_Q3_filed2026-11-01.pdf", page: 42, quote: "May 3,2026 1,850,000"}
+  - {date: "9M2026", event: "Term loans increased 2,789,722 -> 3,363,562; customers' deposits 109.6bn -> 120.8bn", financial_effect: null, source: "1030_SAIB/2026_Q3_filed2026-11-01.pdf", page: 3, quote: "Term Loans, net 12 3,363,562 2,789,722 [image]"}
+  - {date: "9M2026", event: "IFRS 18 implementation programme disclosed (effective 1 Jan 2027)", financial_effect: "total profit and equity not expected to change", source: "1030_SAIB/2026_Q3_filed2026-11-01.pdf", page: 46, quote: "The total profit for the period and total equity is not expected to change as a result of adopting IFRS 18."}
+
+audit_opinion:
+  - {period: "FY2022", opinion: "unmodified (EY, Deloitte)", emphasis_of_matter: "none", source: "1030_SAIB/2022_Annual_filed2023-03-05.pdf", page: 2}
+  - {period: "FY2023", opinion: "unmodified (Deloitte, EY)", emphasis_of_matter: "none", source: "1030_SAIB/2023_Annual_filed2024-02-12.pdf", page: 2}
+  - {period: "FY2024", opinion: "unmodified (Deloitte, EY)", emphasis_of_matter: "none", source: "1030_SAIB/2024_Annual_filed2025-02-04.pdf", page: 2}
+  - {period: "FY2025", opinion: "unmodified (EY, Deloitte)", emphasis_of_matter: "none", source: "1030_SAIB/2025_Annual_filed2026-02-08.pdf", page: 2, note: "image page"}
+  - {period: "9M2025", opinion: "unmodified review conclusion (EY, Deloitte)", emphasis_of_matter: "none", source: "1030_SAIB/2025_Q3_filed2025-10-30.pdf", page: 2, note: "image page"}
+  - {period: "9M2026", opinion: "unmodified review conclusion (EY, Deloitte)", emphasis_of_matter: "none", source: "1030_SAIB/2026_Q3_filed2026-11-01.pdf", page: 2, note: "image page"}
+
+kpis_in_filings:
+  - {period: "31 Dec 2021", kpi: "Tier 1 ratio", value: 20.09, unit: "%", source: "1030_SAIB/2022_Annual_filed2023-03-05.pdf", page: 104}
+  - {period: "31 Dec 2021", kpi: "Total capital adequacy ratio", value: 20.84, unit: "%", source: "1030_SAIB/2022_Annual_filed2023-03-05.pdf", page: 104}
+  - {period: "31 Dec 2022", kpi: "CET1 ratio", value: 13.80, unit: "%", source: "1030_SAIB/2023_Annual_filed2024-02-12.pdf", page: 107}
+  - {period: "31 Dec 2022", kpi: "Tier 1 ratio", value: 17.64, unit: "%", source: "1030_SAIB/2022_Annual_filed2023-03-05.pdf", page: 104}
+  - {period: "31 Dec 2022", kpi: "Total capital adequacy ratio", value: 18.22, unit: "%", source: "1030_SAIB/2022_Annual_filed2023-03-05.pdf", page: 104}
+  - {period: "31 Dec 2023", kpi: "CET1 ratio", value: 16.08, unit: "%", source: "1030_SAIB/2023_Annual_filed2024-02-12.pdf", page: 107}
+  - {period: "31 Dec 2023", kpi: "Tier 1 ratio", value: 19.39, unit: "%", source: "1030_SAIB/2023_Annual_filed2024-02-12.pdf", page: 107}
+  - {period: "31 Dec 2023", kpi: "Total capital adequacy ratio", value: 20.06, unit: "%", source: "1030_SAIB/2023_Annual_filed2024-02-12.pdf", page: 107, note: "narrative on p108 says 20.09%"}
+  - {period: "31 Dec 2024 (as reported)", kpi: "CET1 ratio", value: 14.19, unit: "%", source: "1030_SAIB/2024_Annual_filed2025-02-04.pdf", page: 107}
+  - {period: "31 Dec 2024 (as reported)", kpi: "Tier 1 ratio", value: 19.09, unit: "%", source: "1030_SAIB/2024_Annual_filed2025-02-04.pdf", page: 107}
+  - {period: "31 Dec 2024 (as reported)", kpi: "Total capital adequacy ratio", value: 19.71, unit: "%", source: "1030_SAIB/2024_Annual_filed2025-02-04.pdf", page: 107}
+  - {period: "31 Dec 2024 (FY2025 AFS comparative)", kpi: "CET1 ratio", value: 14.48, unit: "%", source: "1030_SAIB/2025_Annual_filed2026-02-08.pdf", page: 101}
+  - {period: "31 Dec 2024 (FY2025 AFS comparative)", kpi: "Tier 1 ratio", value: 19.35, unit: "%", source: "1030_SAIB/2025_Annual_filed2026-02-08.pdf", page: 101}
+  - {period: "31 Dec 2024 (FY2025 AFS comparative)", kpi: "Total capital adequacy ratio", value: 19.96, unit: "%", source: "1030_SAIB/2025_Annual_filed2026-02-08.pdf", page: 101}
+  - {period: "31 Dec 2025", kpi: "CET1 ratio", value: 14.31, unit: "%", source: "1030_SAIB/2025_Annual_filed2026-02-08.pdf", page: 101}
+  - {period: "31 Dec 2025", kpi: "Tier 1 ratio", value: 18.76, unit: "%", source: "1030_SAIB/2025_Annual_filed2026-02-08.pdf", page: 101}
+  - {period: "31 Dec 2025", kpi: "Total capital adequacy ratio", value: 19.32, unit: "%", source: "1030_SAIB/2025_Annual_filed2026-02-08.pdf", page: 101}
+  - {period: "30 Sep 2025", kpi: "CET1 ratio", value: 13.21, unit: "%", source: "1030_SAIB/2026_Q3_filed2026-11-01.pdf", page: 41}
+  - {period: "30 Sep 2025", kpi: "Tier 1 ratio", value: 17.48, unit: "%", source: "1030_SAIB/2026_Q3_filed2026-11-01.pdf", page: 41}
+  - {period: "30 Sep 2025", kpi: "Total capital adequacy ratio", value: 18.06, unit: "%", source: "1030_SAIB/2026_Q3_filed2026-11-01.pdf", page: 41}
+  - {period: "30 Sep 2026", kpi: "CET1 ratio", value: 13.28, unit: "%", source: "1030_SAIB/2026_Q3_filed2026-11-01.pdf", page: 41}
+  - {period: "30 Sep 2026", kpi: "Tier 1 ratio", value: 18.74, unit: "%", source: "1030_SAIB/2026_Q3_filed2026-11-01.pdf", page: 41}
+  - {period: "30 Sep 2026", kpi: "Total capital adequacy ratio", value: 19.41, unit: "%", source: "1030_SAIB/2026_Q3_filed2026-11-01.pdf", page: 41}
+  - {period: "30 Sep 2026", kpi: "Non-performing gross loans (commercial 1,037,139 + retail 78,131; ratio not disclosed)", value: 1115270, unit: "SAR '000", source: "1030_SAIB/2026_Q3_filed2026-11-01.pdf", page: 21}
+  - {period: "30 Sep 2026", kpi: "Allowance for credit losses on loans", value: 1953584, unit: "SAR '000", source: "1030_SAIB/2026_Q3_filed2026-11-01.pdf", page: 21}
+  - {period: "31 Dec 2025", kpi: "Allowance for credit losses on loans", value: 1993090, unit: "SAR '000", source: "1030_SAIB/2026_Q3_filed2026-11-01.pdf", page: 21}
+  - {period: "all", kpi: "LCR / NSFR (values)", value: null, unit: "%", status: "not found", source: "LCR and NSFR named as monitoring metrics only, e.g. 1030_SAIB/2025_Annual_filed2026-02-08.pdf p73", page: 73}
+  - {period: "all", kpi: "NPL ratio / coverage ratio (as ratios)", value: null, unit: "%", status: "not found", source: "all focus PDFs searched", page: null}
+
+open_questions:
+  - "The task brief refers to SAIB 'FY2022 fee, opex and special commission expense reclassified'. The filing evidence is the FY2022 AFS note 41 reclassifying FY2021 comparatives (fee -> special commission income; deposit insurance premium from G&A -> special commission expense; rent -> G&A). FY2022 figures are identical in FY2022 and FY2023 AFS fee notes."
+  - "Interim (9M) impairment split by asset class is not given on a P&L basis; only allowance movements (loans charge includes recoveries of written-off loans of SAR 120m/170m)."
+  - "FY2023 total capital ratio shown as 20.06% in table but 20.09% in narrative."
+  - "Restatement note does not name the FVOCI investee; brief describes it as SIMAH-related for other banks."

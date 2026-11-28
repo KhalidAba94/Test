@@ -1,0 +1,101 @@
+ticker: "6002"
+headline: >-
+  Revenue fell every year, from SAR 1,244m in FY2022 to SAR 1,083m in FY2025 (-4.5% a year), and a further 4.1% in 9M 2026 as the
+  restaurant count fell from 393 at end-2023 to 370; after losses of SAR 117m in FY2024 and SAR 77.5m in FY2025 (including a SAR 35.0m
+  impairment), Herfy made a small profit of SAR 2.1m in 9M 2026.
+lfl_basis:
+  definition_used: >-
+    Standard bridge on IFRS revenue (restaurant, meat-factory and bakery sales plus rental income from investment properties). Herfy is a
+    single Saudi entity with no subsidiaries, no acquisitions or disposals, SAR as its functional currency and no hyperinflationary
+    operations, so perimeter, FX and hyperinflation effects are nil and organic growth equals reported growth (High confidence).
+    New capacity would be the revenue of restaurants opened in the period, but Herfy reports no like-for-like or same-store sales growth
+    and no revenue for opened or closed restaurants; the estate shrank on a net basis from FY2024. Like-for-like growth is therefore not
+    determinable, and reported (= organic) growth is the closest measure.
+  perimeter_changes:
+    - {event: "None: single entity (head office, restaurants, bakeries, shops and two factory branches), no business combinations FY2022-9M 2026", date: "FY2022-9M2026", effect: "none identified", source: "6002_HERFY_FOODS/2025_Annual_filed2026-03-11.pdf p.13; 6002_HERFY_FOODS/2026_Q3_filed2026-11-05.pdf p.8"}
+  capacity_changes:
+    - {event: "Restaurants (owned + leased) 386 at end-2021 and 391 at end-2022", date: "2022", effect: "revenue of new restaurants not disclosed", source: "6002_HERFY_FOODS/2022_Annual_filed2023-03-29.pdf p.11"}
+    - {event: "Restaurants 393 at end-2023; Herfy Tower let from 1 March 2022 and a SAR 14m building reclassified to investment property in 2023", date: "2023", effect: "rental income SAR 26.0m (FY2022: SAR 21.8m); restaurant openings revenue not disclosed", source: "6002_HERFY_FOODS/2023_Annual_filed2024-03-13.pdf p.11, p.38, p.47"}
+    - {event: "Restaurants 382 at end-2024 (net 11 closures)", date: "2024", effect: "revenue lost from closures not disclosed", source: "6002_HERFY_FOODS/2024_Annual_filed2025-03-11.pdf p.12"}
+    - {event: "Restaurants 372 at end-2025 (owned 41, leased 331)", date: "2025", effect: "not determinable", source: "6002_HERFY_FOODS/2025_Annual_filed2026-03-11.pdf p.13"}
+    - {event: "Restaurants 370 at 30 Sep 2026 (372 at 30 Sep 2025)", date: "2026 (9M)", effect: "not determinable", source: "6002_HERFY_FOODS/2026_Q3_filed2026-11-05.pdf p.8; 6002_HERFY_FOODS/2025_Q3_filed2025-11-09.pdf p.8"}
+  fx_exposure: "None identified: all restaurants are in Saudi Arabia, the functional currency is SAR and the company reports transactions principally in SAR and USD with no significant currency exposure (FY2025 annual p.51)."
+  price_volume_support: >-
+    Partial. The filings give segment revenue, gross sales before discounts, rebates and returns, and period-end restaurant counts, but no
+    transactions or average ticket. We can calculate restaurant revenue per average restaurant and the discount rate on gross sales; price and
+    volume cannot be separated.
+  confidence: "Medium (perimeter, FX and hyperinflation nil with High confidence; new capacity not determinable)"
+price_volume:
+  - period: "9M 2026 vs 9M 2025"
+    text: >-
+      Restaurants and catering revenue fell 8.8% (SAR 648m to SAR 591m) while the average restaurant count fell about 1.6% (377 to 371,
+      mean of the opening and closing counts, we calculate), so revenue per average restaurant fell about 7.4%. Discounts fell to 5.0% of
+      gross sales from 6.1%. Bakeries revenue rose 15.4% and meat-factory external sales 11.4%.
+    basis: "calculated"
+    confidence: "Medium (the restaurants segment also includes catering, rental income and corporate items)"
+    source: "6002_HERFY_FOODS/2026_Q3_filed2026-11-05.pdf p.20 (segments), p.18 (revenue note), p.8 (counts); 6002_HERFY_FOODS/2025_Q3_filed2025-11-09.pdf p.8"
+    refs: ["6002-9M2026-REV", "6002-9M2025-REV"]
+  - period: "FY2025 vs FY2024"
+    text: >-
+      Restaurants and catering revenue fell 2.4% and the average restaurant count 2.7% (387.5 to 377), so revenue per average restaurant was
+      flat (+0.3%, about SAR 2.25m, we calculate). Gross sales fell 5.3%, but returns fell to SAR 13.7m (SAR 32.1m). Bakeries revenue fell 14.3%.
+    basis: "calculated"
+    confidence: "Medium"
+    source: "6002_HERFY_FOODS/2025_Annual_filed2026-03-11.pdf p.47 (segments), p.44 (revenue note), p.13 (counts)"
+    refs: ["6002-FY2025-REV", "6002-FY2024-REV"]
+  - period: "FY2024 vs FY2023"
+    text: >-
+      Restaurants and catering revenue fell 3.1% and the average restaurant count 1.1%, so revenue per average restaurant fell 2.0% (we
+      calculate). Discounts rose to 6.1% of gross sales (5.5%). Bakeries revenue fell 12.0%.
+    basis: "calculated"
+    confidence: "Medium"
+    source: "6002_HERFY_FOODS/2025_Annual_filed2026-03-11.pdf p.47; 6002_HERFY_FOODS/2024_Annual_filed2025-03-11.pdf p.42, p.45, p.12"
+    refs: ["6002-FY2024-REV", "6002-FY2023-REV"]
+  - period: "FY2023 vs FY2022"
+    text: >-
+      Restaurants revenue fell 8.7% while the average restaurant count rose 0.9% (388.5 to 392), so revenue per average restaurant fell 9.5%
+      (SAR 2.53m to SAR 2.29m, we calculate). Meat-factory external sales rose 14.6% and rental income SAR 4.1m.
+    basis: "calculated"
+    confidence: "Medium"
+    source: "6002_HERFY_FOODS/2023_Annual_filed2024-03-13.pdf p.50 (segments), p.47 (revenue note), p.11 (counts); 6002_HERFY_FOODS/2022_Annual_filed2023-03-29.pdf p.11"
+    refs: ["6002-FY2023-REV", "6002-FY2022-REV"]
+profit_and_margin:
+  drivers:
+    - {period: "FY2023", driver: "Revenue fell 5.6% to SAR 1,174m: restaurants and catering -8.7%, meat-factory external sales +14.6%, bakeries +2.4%. Gross profit fell 7.4% (gross margin 24.2% vs 24.7%). Attributable profit rose to SAR 8.4m (SAR 3.5m) mainly because FY2022 carried a SAR 17.5m impairment of non-financial assets; finance cost fell to SAR 31.8m (SAR 37.3m). We calculate EBITDA down 4.4% and an EBITDA margin of 18.6% (FY2022: 18.3%); operating margin 3.7%.", source: "6002_HERFY_FOODS/2024_Annual_filed2025-03-11.pdf p.9 (P&L), p.45 (segments); 6002_HERFY_FOODS/2023_Annual_filed2024-03-13.pdf p.8, p.10", refs: ["6002-FY2023-REV", "6002-FY2023-GP", "6002-FY2023-NI_ATTR", "6002-FY2022-IMPAIR_CF", "6002-FY2023-FIN_COST", "6002-FY2023-EBITDA_C"]}
+    - {period: "FY2024", driver: "Revenue fell 4.2% to SAR 1,125m (restaurants and catering -3.1%, bakeries -12.0%) as restaurants fell from 393 to 382. Gross profit fell 23.6% to SAR 217m (gross margin 19.3%): restaurants and catering gross profit fell from SAR 159m to SAR 98.1m, while rent expenses in cost of revenues rose to SAR 21.4m (SAR 7.3m) and utilities to SAR 64.0m (SAR 57.0m); the filings give no fuller explanation. A SAR 12.5m provision on trade receivables and zakat of SAR 14.9m, including SAR 7.8m for 2014-2022 after a ZATCA assessment, took the net loss to SAR 117m. We calculate EBITDA down 49.8% and an EBITDA margin of 9.7%; net margin -10.4%.", source: "6002_HERFY_FOODS/2025_Annual_filed2026-03-11.pdf p.10 (P&L), p.47 (segments); 6002_HERFY_FOODS/2024_Annual_filed2025-03-11.pdf p.43 (cost of revenues), p.37, p.42", refs: ["6002-FY2024-REV", "6002-FY2024-GP", "6002-FY2024-NI_ATTR", "6002-FY2024-ZAKAT_TAX", "6002-FY2024-EBITDA_C"]}
+    - {period: "FY2025", driver: "Revenue fell 3.8% to SAR 1,083m (restaurants and catering -2.4%, bakeries -14.3%, meat-factory +2.7%) as restaurants fell to 372. Gross profit rose 19.0% to SAR 259m (gross margin 23.9%): employee costs in cost of revenues fell to SAR 203m (SAR 249m) and sales returns to SAR 13.7m (SAR 32.1m). The net loss narrowed to SAR 77.5m after a SAR 35.0m net impairment of non-financial assets, mainly SAR 35.7m on the Sudair factory, built on land leased from Modon but never brought into service; other income also carried a SAR 2.8m loss on PP&E disposals (a recurring item). We calculate EBITDA up 48.3% and an EBITDA margin of 15.0%; operating margin -3.9%.", source: "6002_HERFY_FOODS/2025_Annual_filed2026-03-11.pdf p.10 (P&L), p.12 (cash flows), p.33 (impairment), p.44-45 (revenue and cost notes), p.47 (segments)", refs: ["6002-FY2025-REV", "6002-FY2025-GP", "6002-FY2025-NI_ATTR", "6002-FY2025-IMPAIR_CF", "6002-FY2025-EBITDA_C"]}
+    - {period: "9M2026", driver: "Revenue fell 4.1% to SAR 784m: restaurants and catering -8.8%, bakeries +15.4%, meat-factory external sales +11.4%. Gross profit rose 10.7% (gross margin 28.2% vs 24.5%), with discounts down to 5.0% of gross sales (6.1%, we calculate). Profit before zakat was SAR 3.7m against a SAR 64.0m loss; SAR 40.6m of the swing is the move from a SAR 38.3m impairment in 9M 2025 (Sudair factory) to a SAR 2.2m reversal. The result also includes a SAR 1.2m gain on PP&E disposals (9M 2025: SAR 0.9m loss); such gains and losses arise every year as restaurants are refurbished or closed, so they are not treated as one-offs. We calculate EBITDA up 15.5% and an EBITDA margin of 18.7% (9M 2025: 15.5%); net margin 0.3%.", source: "6002_HERFY_FOODS/2026_Q3_filed2026-11-05.pdf p.5 (P&L), p.7 (cash flows), p.14 (reversal), p.18 (revenue note), p.20 (segments)", refs: ["6002-9M2026-REV", "6002-9M2026-GP", "6002-9M2026-PBT", "6002-9M2025-PBT", "6002-9M2026-IMPAIR_CF", "6002-9M2026-EBITDA_C", "6002-9M2026-NI_ATTR"]}
+    - {period: "FY2022-9M2026", driver: "Operating cash flow fell from SAR 251m (FY2022) to SAR 135m (FY2024) and SAR 144m (FY2025), but capex was cut from SAR 110m to SAR 14.1m, so free cash flow stayed between SAR 116m and SAR 141m a year and was SAR 121m in 9M 2026 (SAR 94.1m). Borrowings were repaid in 2024 and lease liabilities fell to SAR 416m at 30 Sep 2026, so net debt (all of it leases) fell from SAR 580m to SAR 379m; net debt / EBITDA was 1.9x annualised (we calculate).", source: "6002_HERFY_FOODS/2025_Annual_filed2026-03-11.pdf p.12; 6002_HERFY_FOODS/2026_Q3_filed2026-11-05.pdf p.4, p.7", refs: ["6002-FY2022-CFO", "6002-FY2025-CFO", "6002-FY2025-CAPEX", "6002-9M2026-FCF", "6002-9M2026-LEASE_LIAB", "6002-9M2026-NET_DEBT"]}
+  one_offs:
+    - {item: "Gains on financial assets held at FVTPL", period: "FY2022", amount_sar_m: 0.5, line: "Gains on financial assets held at FVTPL (inside operating profit)", source: "6002_HERFY_FOODS/2023_Annual_filed2024-03-13.pdf p.8", tax_nci: "Zakat effect not disclosed (zakat is levied on the zakat base); no minority interests (single entity): after-tax effect not determinable, profit kept as reported"}
+    - {item: "Rent concessions", period: "FY2022", amount_sar_m: 0.5, line: "Other income, net", source: "6002_HERFY_FOODS/2023_Annual_filed2024-03-13.pdf p.47", tax_nci: "Zakat effect not disclosed; no minority interests (single entity): after-tax effect not determinable, profit kept as reported"}
+    - {item: "Gains on financial assets held at FVTPL", period: "FY2023", amount_sar_m: 0.7, line: "Gains on financial assets held at FVTPL (inside operating profit)", source: "6002_HERFY_FOODS/2024_Annual_filed2025-03-11.pdf p.9", tax_nci: "Zakat effect not disclosed; no minority interests (single entity): after-tax effect not determinable, profit kept as reported"}
+    - {item: "Not treated as one-offs because they recur every year in normal operations: gains and losses on PP&E disposals (FY2022 +SAR 0.7m, FY2023 +SAR 0.7m, FY2024 -SAR 0.1m, FY2025 -SAR 2.8m, 9M 2025 -SAR 0.9m, 9M 2026 +SAR 1.2m) and gains on lease terminations (SAR 0.04m-1.2m a year)", period: "FY2022-9M2026", amount_sar_m: null, line: "Other income, net", source: "6002_HERFY_FOODS/2025_Annual_filed2026-03-11.pdf p.12, p.45; 6002_HERFY_FOODS/2026_Q3_filed2026-11-05.pdf p.7", tax_nci: "Not adjusted; profit kept as reported"}
+    - {item: "Not treated as one-offs in operating income: impairments of non-financial assets (already outside EBITDA: FY2022 SAR 17.5m, FY2025 SAR 35.0m, 9M 2025 SAR 38.3m, 9M 2026 reversal SAR 2.2m), the FY2024 receivable provision (SAR 12.5m, an ordinary provision) and the FY2024 prior-year zakat (SAR 7.8m, in the zakat line)", period: "FY2022-9M2026", amount_sar_m: null, line: "Impairment lines; impairment on financial assets; zakat", source: "6002_HERFY_FOODS/2025_Annual_filed2026-03-11.pdf p.10, p.12; 6002_HERFY_FOODS/2024_Annual_filed2025-03-11.pdf p.37, p.42", tax_nci: "Not adjusted; profit kept as reported"}
+developments:
+  - {date: "2022-03-01", category: "capacity", text: "Herfy Tower (SAR 113.8m) was moved from property, plant and equipment to investment property and let to a third party; rental income is part of revenue (SAR 26.8m in FY2025).", source: "6002_HERFY_FOODS/2023_Annual_filed2024-03-13.pdf p.38; 6002_HERFY_FOODS/2025_Annual_filed2026-03-11.pdf p.44"}
+  - {date: "2023-03", category: "regulation", text: "The FY2022 annual restated the FY2021 opening balance sheet under IAS 8 (note 34): mainly IFRS 16 lease terms and discount rates, and grossing up supplier advances; total assets rose from SAR 1,845m to SAR 2,000m.", source: "6002_HERFY_FOODS/2022_Annual_filed2023-03-29.pdf p.57-59"}
+  - {date: "2023-12-18", category: "regulation", text: "Under the new Companies Law the General Assembly removed the statutory reserve; SAR 101.8m was moved to retained earnings. A dividend of SAR 32.3m was paid in 2023; none since.", source: "6002_HERFY_FOODS/2023_Annual_filed2024-03-13.pdf p.42; 6002_HERFY_FOODS/2024_Annual_filed2025-03-11.pdf p.11"}
+  - {date: "2024", category: "regulation", text: "ZATCA reduced its additional zakat claim for 2014-2022 from SAR 21.5m to SAR 7.8m on appeal; the full SAR 7.8m was provided in FY2024.", source: "6002_HERFY_FOODS/2024_Annual_filed2025-03-11.pdf p.42"}
+  - {date: "2024", category: "financing", text: "Murabaha borrowings were repaid; the company had no borrowings at end-2024, end-2025 or 30 Sep 2026 (a SAR 10m short-term loan was drawn and repaid in 2026).", source: "6002_HERFY_FOODS/2024_Annual_filed2025-03-11.pdf p.8, p.11; 6002_HERFY_FOODS/2026_Q3_filed2026-11-05.pdf p.7"}
+  - {date: "2025 (Q3)", category: "capacity", text: "The Sudair factory, built on land leased from Modon but not brought into service, was written down by SAR 35.7m because Modon is expected to terminate the lease; the lease liability stays on the balance sheet.", source: "6002_HERFY_FOODS/2025_Annual_filed2026-03-11.pdf p.15, p.33"}
+  - {date: "2022-2026", category: "operations", text: "The restaurant estate went from 391 (end-2022) and 393 (end-2023) to 382, 372 and 370 (30 Sep 2026); the number of bakery and Doka shops is not disclosed.", source: "6002_HERFY_FOODS/2026_Q3_filed2026-11-05.pdf p.8; 6002_HERFY_FOODS/2024_Annual_filed2025-03-11.pdf p.12"}
+  - {date: "2026 (9M)", category: "operations", text: "The company reversed SAR 2.25m of impairment on idle assets redeployed to profitable restaurant branches.", source: "6002_HERFY_FOODS/2026_Q3_filed2026-11-05.pdf p.14"}
+what_it_means:
+  improved: "Margins recovered after FY2024: we calculate that the EBITDA margin rose from 9.7% in FY2024 to 15.0% in FY2025 and 18.7% in 9M 2026, and the gross margin reached 28.2% in 9M 2026; net debt fell to SAR 379m as capex was cut and borrowings repaid."
+  weakened: "Revenue fell in every period (-4.5% a year from FY2022 to FY2025 and -4.1% in 9M 2026) as the estate shrank from 393 to 370 restaurants, and losses of SAR 117m (FY2024) and SAR 77.5m (FY2025) cut equity from SAR 1,057m to SAR 849m."
+  why: "Restaurant revenue per outlet fell in FY2023 and 9M 2026 (we calculate) and costs rose in FY2024 (rent, utilities, receivable provisions, prior-year zakat); FY2025 and 9M 2025 losses were mostly the SAR 35.7m Sudair factory write-down, and FY2025 gross profit benefited from lower staff costs and returns."
+  uncertain: "The filings give no like-for-like sales and do not explain the FY2024 gross-profit fall or the later recovery, so the roles of pricing, mix and cost cuts in the 9M 2026 margin cannot be separated."
+confidence_overall: "Medium"
+data_notes:
+  - "Cross-holding: Savola (2050, in the Supporting group) consolidates Herfy at 49%, so Herfy's revenue as included in Savola's (SAR 1,213.4m in FY2022, SAR 1,148.0m in FY2023, SAR 1,101.8m in FY2024 and SAR 1,056.7m in FY2025, after Savola's intra-group eliminations) is counted in both the FnB and the Supporting group totals."
+  - "Herfy prepares stand-alone (not consolidated) statements: attributable profit equals net profit, attributable equity equals total equity, and there are no non-controlling interests."
+  - "Corrected from the PDF cash-flow statements: D&A is the four depreciation and amortisation lines only; the XBRL values had netted in the non-financial impairment line (e.g. FY2025 SAR 204.7m corrected to SAR 169.6m). The impairment add-back is the non-financial impairment line (9M 2025 SAR 38.3m, not the SAR 1.9m receivable provision). FY2022 capex is as first reported; the FY2022 annual prints the same figures. Borrowings are nil for FY2025 and 9M 2026."
+  - "The FY2021 opening balance sheet is restated (FY2022 annual note 34, IAS 8): total assets SAR 1,845m to SAR 2,000m and lease liabilities SAR 517m to SAR 619m (shown as restated); total equity changed by only -0.44% and is kept as first reported. No later restatement was found."
+  - "There is no finance-income line on the face: interest income on finance leases sits in 'Other income, net' (FY2025 SAR 0.19m, 9M 2026 SAR 0.08m), so our operating income includes it. Finance cost is almost all interest on lease liabilities (FY2025 SAR 32.5m)."
+  - "Revenue includes rental income from investment properties (FY2025 SAR 26.8m), reclassified from other income in the FY2022 annual."
+  - "All primary statements are scanned images and were read visually; in the FY2023 annual the cash-flow page carries the heading 'Statement of changes in equity'."
+  - "Restaurant counts are owned plus leased HERFY restaurants from note 1; bakeries and Doka shops are not counted. Per-restaurant figures use the restaurants and catering segment, which also holds catering, rental income and corporate items."
+  - "EBITDA excluding one-offs removes the one-offs listed here (FY2022 SAR 1.1m and FY2023 SAR 0.7m, all gains: FVTPL investment gains and rent concessions), giving margins excluding one-offs of 18.2% (FY2022) and 18.5% (FY2023); the EBITDA margins quoted above are on reported EBITDA. Recurring PP&E disposal results are not treated as one-offs."
+  - "Net debt is lease liabilities less cash (no bank debt since 2024). Growth in attributable profit is n.m. in every comparison because of losses or a base below SAR 10m."
+  - "Year-end 31 December; Main Market listing; not a Nomu company."

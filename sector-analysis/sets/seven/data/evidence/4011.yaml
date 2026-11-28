@@ -1,0 +1,183 @@
+# Evidence extracted from L'azurde Company for Jewelry filings (archive: 4011_LAZURDE). Facts only; page = physical PDF page (1-based).
+# Units: SAR as presented. Scanned documents: the FY2022 annual (all pages; OCR checked visually), the FY2023 annual primary statements (pp9-13),
+# the FY2025 annual audit report (pp3-8) and the 2026 Q3 review report (p3). Everything else is a text PDF.
+# Revenue = gold revenue (value of the gold weight in jewellery sold, mainly wholesale in Egypt) + operations revenue (value added: labour charges, stones, retail).
+ticker: "4011"
+company: "L'azurde Company for Jewelry"
+
+perimeter_changes:
+  - event: "L'azurde Group for Gold and Jewellery DMCC (UAE trading subsidiary) liquidated; net assets of SAR 1.2m transferred to the parent"
+    type: disposal
+    date: "2024"
+    consideration: "SAR 1.2m net assets transferred to the parent (no sale)"
+    revenue_contribution: null
+    profit_contribution: null
+    pro_forma_revenue: null
+    period: "FY2024"
+    unit: "SAR"
+    source: "4011_LAZURDE/2024_Annual_filed2025-03-17.pdf"
+    page: 15
+    quote: "During the year, the Group liquidated this subsidiary and the net assets"
+    note: "Revenue of the subsidiary not disclosed; SAR 1.2m is 0.06% of FY2023 revenue."
+  - event: "Almujwharat Almasiah LLC (KSA) under liquidation; still listed as a subsidiary"
+    type: disposal
+    date: "2025-2026"
+    consideration: null
+    revenue_contribution: null
+    profit_contribution: null
+    pro_forma_revenue: null
+    period: "9M2026"
+    unit: "SAR"
+    source: "4011_LAZURDE/2026_Q3_filed2026-11-12.pdf"
+    page: 9
+    quote: "Almujwharat Almasiah LLC (\"AA\") – (Under liquidation)"
+  - event: "Acquisitions of businesses"
+    type: acquisition
+    status: "not found"
+    period: "FY2022-9M2026"
+    source: "4011_LAZURDE/2025_Annual_filed2026-03-26.pdf"
+    page: 12
+    quote: "Subsidiary list unchanged FY2022-FY2025 apart from the DMCC liquidation; the last acquisition was Izdiad in 2018 (goodwill SAR 110m)."
+
+segments:
+  - {period: "FY2022", segment: "Operations revenue: Wholesale / Retail (old basis)", basis: operating, revenue: 518728317, profit: 327043223, unit: "SAR", source: "4011_LAZURDE/2023_Annual_filed2024-04-07.pdf", page: 46, note: "291,318,482 / 227,409,835; profit = gross profit 207,029,231 / 120,013,992"}
+  - {period: "FY2023", segment: "Operations revenue: Wholesale / Retail (restated, note 40)", basis: operating, revenue: 460384999, profit: 288718928, unit: "SAR", source: "4011_LAZURDE/2024_Annual_filed2025-03-17.pdf", page: 47, note: "241,110,828 / 219,274,171; gross profit from operations 166,859,048 / 121,859,880"}
+  - {period: "FY2024", segment: "Operations revenue: Wholesale / Retail", basis: operating, revenue: 462409636, profit: 283800748, unit: "SAR", source: "4011_LAZURDE/2025_Annual_filed2026-03-26.pdf", page: 47, note: "220,762,563 / 241,647,073; gross profit from operations 150,573,087 / 133,227,661"}
+  - {period: "FY2025", segment: "Operations revenue: Wholesale / Retail", basis: operating, revenue: 540449392, profit: 323595100, unit: "SAR", source: "4011_LAZURDE/2025_Annual_filed2026-03-26.pdf", page: 47, note: "254,800,305 / 285,649,087; gross profit from operations 186,114,417 / 137,480,683"}
+  - {period: "9M2025", segment: "Operations revenue: Wholesale / Retail", basis: operating, revenue: 422321762, profit: 258133097, unit: "SAR", source: "4011_LAZURDE/2026_Q3_filed2026-11-12.pdf", page: 17, note: "209,662,677 / 212,659,085"}
+  - {period: "9M2026", segment: "Operations revenue: Wholesale / Retail", basis: operating, revenue: 448001211, profit: 273633911, unit: "SAR", source: "4011_LAZURDE/2026_Q3_filed2026-11-12.pdf", page: 16, note: "232,254,707 / 215,746,504"}
+  - {period: "FY2022", segment: "Operations revenue by location: GCC / Egypt (old basis)", basis: geographic, revenue: 518728317, profit: null, unit: "SAR", source: "4011_LAZURDE/2023_Annual_filed2024-04-07.pdf", page: 46, note: "227,638,772 / 291,089,545"}
+  - {period: "FY2023", segment: "Operations revenue by location: KSA / Egypt / other GCC (restated)", basis: geographic, revenue: 460384999, profit: null, unit: "SAR", source: "4011_LAZURDE/2024_Annual_filed2025-03-17.pdf", page: 48, note: "232,613,486 / 226,253,105 / 1,518,408"}
+  - {period: "FY2024", segment: "Operations revenue by location: KSA / Egypt / other GCC", basis: geographic, revenue: 462409636, profit: null, unit: "SAR", source: "4011_LAZURDE/2025_Annual_filed2026-03-26.pdf", page: 48, note: "229,484,915 / 230,308,589 / 2,616,132"}
+  - {period: "FY2025", segment: "Operations revenue by location: KSA / Egypt / other GCC", basis: geographic, revenue: 540449392, profit: null, unit: "SAR", source: "4011_LAZURDE/2025_Annual_filed2026-03-26.pdf", page: 48, note: "243,889,883 / 290,688,971 / 5,870,538"}
+  - {period: "9M2026", segment: "Operations revenue by location: KSA / Egypt / other Gulf (9M2025: 198,793,266 / 219,454,117 / 4,074,379)", basis: geographic, revenue: 448001211, profit: null, unit: "SAR", source: "4011_LAZURDE/2026_Q3_filed2026-11-12.pdf", page: 17, note: "184,978,252 / 258,512,274 / 4,510,685"}
+
+revenue_drivers:
+  - {period: "9M2026", driver: "Gold revenue is mainly the wholesale channel in Egypt; management assesses segments on operations revenue only", value: null, unit: "SAR", source: "4011_LAZURDE/2026_Q3_filed2026-11-12.pdf", page: 16, quote: "who do not consider gold revenue which mainly pertains to wholesale channel in Arab Republic of Egypt"}
+  - {period: "FY2025", driver: "International gold price change in the year (FY2024: +27%)", value: 65, unit: "%", source: "4011_LAZURDE/2025_Annual_filed2026-03-26.pdf", page: 46, quote: "International gold price increased by 65% in the year 2025 (2024: 27%)."}
+  - {period: "FY2025", driver: "Gold calibration charges deducted from gold revenue (FY2024: 60,769,963)", value: -102933283, unit: "SAR", source: "4011_LAZURDE/2025_Annual_filed2026-03-26.pdf", page: 38, quote: "Gold calibration charges (102,933,283) (60,769,963)"}
+  - {period: "FY2025", driver: "Operations revenue on cash basis 56.7% (306,291,052) and on credit 43.3% (FY2024: 56.6% / 43.4%)", value: 306291052, unit: "SAR", source: "4011_LAZURDE/2025_Annual_filed2026-03-26.pdf", page: 38, quote: "On cash basis 306,291,052 56.7% 261,548,633 56.6%"}
+  - {period: "FY2025", driver: "Average devaluation of the Egyptian pound against the riyal (2024: 39.2%)", value: 6.6, unit: "%", source: "4011_LAZURDE/2025_Annual_filed2026-03-26.pdf", page: 48, quote: "During 2025, the Egyptian Pound (EGP) recorded an average 6.6% devaluation (2024: 39.2%"}
+  - {period: "FY2023", driver: "Average devaluation of the Egyptian pound against the riyal (2022: 36.5%)", value: 20.0, unit: "%", source: "4011_LAZURDE/2023_Annual_filed2024-04-07.pdf", page: 47, quote: "During 2023, the Egyptian Pound (EGP) recorded an average 20.0% devaluation (2022: 36.5%"}
+  - {period: "FY2024", driver: "Further 35% EGP devaluation after the FY2023 year-end (subsequent event in the FY2023 annual)", value: 35, unit: "%", source: "4011_LAZURDE/2023_Annual_filed2024-04-07.pdf", page: 47, quote: "the Egyptian Pound has been devalued by 35% since the closure of financial year 31 December 2023"}
+
+one_offs:
+  - {period: "FY2023", item: "Gain on disposal of property and equipment (proceeds SAR 18.3m in the cash-flow statement)", amount: 12682154, unit: "SAR", pnl_line: "Other expenses - net", recurring: false, source: "4011_LAZURDE/2024_Annual_filed2025-03-17.pdf", page: 39, quote: "Gain on disposal of property and equipment 424,089 12,682,154"}
+  - {period: "FY2024", item: "Gain on forward contract arranged for expected credit losses (gold forward bought to hedge ECL; none in 2023 or 2025)", amount: 10567806, unit: "SAR", pnl_line: "Operating expenses (separate line)", recurring: false, source: "4011_LAZURDE/2025_Annual_filed2026-03-26.pdf", page: 41, quote: "In 2025, the Group did not enter a forward contract."}
+  - {period: "FY2024", item: "Gain from foreign exchange differences, net (FY2023: loss 6,592,612); FX differences recur every year with the Egyptian operations, so not treated as a one-off", amount: 17611126, unit: "SAR", pnl_line: "Other expenses - net", recurring: true, source: "4011_LAZURDE/2024_Annual_filed2025-03-17.pdf", page: 39, quote: "Gain / (loss) from foreign exchange differences – net 17,611,126 (6,592,612)"}
+  - {period: "FY2024", item: "Others miscellaneous (FY2023: 3,913,012), not explained", amount: -14268790, unit: "SAR", pnl_line: "Other expenses - net", recurring: true, source: "4011_LAZURDE/2024_Annual_filed2025-03-17.pdf", page: 39, quote: "Others miscellaneous (14,268,790) (3,913,012)"}
+  - {period: "FY2025", item: "Gold accounts and other receivables written off (charged through the ECL provision of 47.1m; ordinary operating provision, not treated as a one-off)", amount: -49159156, unit: "SAR", pnl_line: "Provision for expected credit losses", recurring: false, source: "4011_LAZURDE/2025_Annual_filed2026-03-26.pdf", page: 36, quote: "Write off during the year (49,159,156) (244,843)"}
+  - {period: "FY2025", item: "Impairment loss on gold inventories (inventory write-down in the cash-flow reconciliation; also in 9M2025); not an IMPAIR_CF item and not treated as a one-off", amount: -8807454, unit: "SAR", pnl_line: "not named (cost of gold assumed)", recurring: false, source: "4011_LAZURDE/2025_Annual_filed2026-03-26.pdf", page: 13, quote: "Impairment loss on gold inventories 8,807,454 -"}
+
+restatements:
+  - period_restated: "FY2023"
+    item: "Revenue 1,916,964,277 -> 1,864,233,575; gross profit 299,904,809 -> 247,174,107; finance costs 36,237,568 -> 33,369,216 (note 40)"
+    from: 1916964277
+    to: 1864233575
+    unit: "SAR"
+    reason: "Gold calibration expenses (41,544,821) treated as variable consideration and deducted from gold revenue (IAS 8, IFRS 15); customer cash discount (2.9m, from finance costs) and promotional discount (8.4m, from selling and marketing) deducted from operations revenue. No effect on profit. FY2022 is not re-presented."
+    source: "4011_LAZURDE/2024_Annual_filed2025-03-17.pdf"
+    page: 49
+    quote: "the Group has restated the \"Gold calibration expenses\" from separate line item within the operating expenses to \"Net revenue from Gold\""
+  - period_restated: "FY2023"
+    item: "Operating cash flow 60,354,067 -> 57,485,715: 2,868,352 of finance costs paid moved from financing (cash facilities) to operating (accounts payable - gold)"
+    from: 60354067
+    to: 57485715
+    unit: "SAR"
+    reason: "Cash-flow re-presentation consistent with the note 40 reclassification; no separate note"
+    source: "4011_LAZURDE/2024_Annual_filed2025-03-17.pdf"
+    page: 13
+    quote: "Finance costs paid – Accounts Payable – Gold (32,574,012) (30,320,447)"
+  - period_restated: "FY2023 and FY2024 (balance sheet)"
+    item: "Statutory reserve 32,060,606 -> 27,807,194 and retained earnings 36,989,846 -> 41,243,258 at 31 Dec 2024 (note 39); total equity unchanged"
+    from: 32060606
+    to: 27807194
+    unit: "SAR"
+    reason: "Transfers to statutory reserve for 2023 and 2024 made in error after the bylaws removed the requirement; reversed. The remaining 27.8m reserve was moved to retained earnings in June 2026."
+    source: "4011_LAZURDE/2025_Annual_filed2026-03-26.pdf"
+    page: 48
+    quote: "However, the transfer was erroneously made for FY 2023 and 2024"
+  - period_restated: "FY2021 (balance sheet)"
+    item: "31 Dec 2021 'Short-term murabaha facilities' 529,677,916 (2022 Q1 interim p.4) shown in the FY2022 annual within 'Accounts payable for gold from banks' 941,384,536"
+    from: 529677916
+    to: 941384536
+    unit: "SAR"
+    reason: "Re-presentation of gold-related bank liabilities; no reclassification note found"
+    source: "4011_LAZURDE/2022_Annual_filed2023-03-30.pdf"
+    page: 33
+    quote: "Accounts payable for gold from banks 1,143,586,093 941,384,536"
+
+significant_events:
+  - date: "2023-03-23"
+    event: "FY2022 audit opinion qualified (Baker Tilly MKM): gold calibration costs of SAR 37.2m (2021: SAR 30.7m) expensed in selling and marketing instead of inventory cost"
+    financial_effect: "Adjustments to cost of revenue and inventory not determined; FY2023 auditor (PKF Al-Bassam) repeated the matter as an Other Matter"
+    source: "4011_LAZURDE/2022_Annual_filed2023-03-30.pdf"
+    page: 3
+    quote: "selling and marketing expenses in the consolidated statement of profit and loss for the year ended 31 December 2022 include gold calibration costs"
+  - date: "2022-2026"
+    event: "Gold-loan funding: the group buys all its gold from banks on 1-9 month terms with agreed profit rates, repaid in gold; the company calls this the majority of its debt and reports net debt of SAR 1,900m and gearing of 773% at end-2025 (463% at end-2024)"
+    financial_effect: "Accounts payable - Gold SAR 1,931.6m and murabaha SAR 39.0m at 31 Dec 2025; in grams the gold liability fell from 4,185,079 g to 3,719,063 g while its value rose 46.6% with the gold price"
+    source: "4011_LAZURDE/2025_Annual_filed2026-03-26.pdf"
+    page: 46
+    quote: "As the majority of the Group's debt is made of gold borrowing, any increase in the international prices of the gold metal"
+  - date: "2024"
+    event: "Forward contract with a bank to buy 1,833 ounces of gold in four quarterly tranches, to hedge the rise in expected credit losses on gold receivables"
+    financial_effect: "Realized gain SAR 10.6m in FY2024; no contract in 2025"
+    source: "4011_LAZURDE/2025_Annual_filed2026-03-26.pdf"
+    page: 41
+    quote: "The Group realized a gain of 10.6 million for the period ended 31 December 2024."
+  - date: "2025"
+    event: "Gold receivables of SAR 49.2m written off; ECL charge SAR 47.1m (FY2024: SAR 8.7m)"
+    financial_effect: "Main reason operating income fell to SAR 12.1m"
+    source: "4011_LAZURDE/2025_Annual_filed2026-03-26.pdf"
+    page: 36
+    quote: "Write off during the year (49,159,156) (244,843)"
+  - date: "2026 (9M)"
+    event: "Purchase of gold for a gold reserve SAR 63.75m; short-term murabaha facilities raised to SAR 76.7m (end-2025: SAR 39.0m)"
+    financial_effect: "Operating cash flow -SAR 2.6m in 9M2026"
+    source: "4011_LAZURDE/2026_Q3_filed2026-11-12.pdf"
+    page: 8
+    quote: "Inventories – Gold (Purchase for Gold reserve) (63,750,000) -"
+  - date: "2026-06-28"
+    event: "Remaining statutory reserve of SAR 27.8m transferred to retained earnings"
+    financial_effect: "None on total equity"
+    source: "4011_LAZURDE/2026_Q3_filed2026-11-12.pdf"
+    page: 13
+    quote: "approved the transfer of SAR 27.8 million from the statutory reserve to retained earnings"
+  - date: "2024-05-21"
+    event: "Dividend for 2023 of SAR 17.25m (SAR 0.3 per share) paid 10 Jun 2024; same amount for 2022 paid Jul 2023; no dividend for 2024 or 2025 disclosed"
+    financial_effect: "Cash dividends"
+    source: "4011_LAZURDE/2025_Annual_filed2026-03-26.pdf"
+    page: 48
+    quote: "approved distribution of cash dividends for the year 2023 amounting to 17,250,000 (at 0.3 per share)"
+
+audit_opinion:
+  - {period: "FY2022", opinion: "QUALIFIED (Baker Tilly MKM & Co.): gold calibration costs expensed in selling and marketing rather than capitalised in inventory; effect not determined", emphasis_of_matter: none, source: "4011_LAZURDE/2022_Annual_filed2023-03-30.pdf", page: 3}
+  - {period: "FY2023", opinion: "Unmodified (PKF Al-Bassam); Other Matter repeats the predecessor's FY2022 qualification", emphasis_of_matter: none, source: "4011_LAZURDE/2023_Annual_filed2024-04-07.pdf", page: 5}
+  - {period: "FY2024", opinion: "Unmodified (PKF Al-Bassam); no EoM found", emphasis_of_matter: none, source: "4011_LAZURDE/2024_Annual_filed2025-03-17.pdf", page: 3}
+  - {period: "FY2025", opinion: "Unmodified (PKF Al-Bassam); no EoM found (scanned)", emphasis_of_matter: none, source: "4011_LAZURDE/2025_Annual_filed2026-03-26.pdf", page: 3}
+  - {period: "9M2026", opinion: "Review conclusion unmodified; no EoM found (scanned)", emphasis_of_matter: none, source: "4011_LAZURDE/2026_Q3_filed2026-11-12.pdf", page: 3}
+
+kpis_in_filings:
+  - {period: "31 Dec 2025", kpi: "Gold liabilities - accounts payable in grams (24 karat); 31 Dec 2024: 4,185,079; 31 Dec 2023: 4,905,160", value: 3719063, unit: "count", source: "4011_LAZURDE/2025_Annual_filed2026-03-26.pdf", page: 43}
+  - {period: "31 Dec 2025", kpi: "Gold inventories in grams (24 karat); 31 Dec 2024: 3,140,908; 31 Dec 2023: 3,068,477", value: 2842408, unit: "count", source: "4011_LAZURDE/2025_Annual_filed2026-03-26.pdf", page: 43}
+  - {period: "FY2022-9M2026", kpi: "Store count, openings, same-store sales, gold volume sold", value: null, unit: "count", status: "not found", source: "4011_LAZURDE/2025_Annual_filed2026-03-26.pdf", page: 47}
+
+special_extractions:
+  - name: "Net debt with and without gold loans (we calculate from the balance sheets)"
+    unit: "SAR m"
+    columns: ["FY2022", "FY2023", "FY2024", "FY2025", "9M2026"]
+    accounts_payable_gold: [1143.6, 1219.7, 1317.3, 1931.6, 1719.7]
+    murabaha: [0.0, 0.0, 37.0, 39.0, 76.7]
+    lease_liabilities: [33.5, 40.0, 36.9, 27.0, 35.7]
+    cash: [59.1, 47.8, 61.3, 70.6, 81.9]
+    net_debt_excluding_gold_loans: [-25.6, -7.8, 12.7, -4.6, 30.5]
+    source: "4011_LAZURDE/2025_Annual_filed2026-03-26.pdf"
+    page: 9
+
+open_questions:
+  - "FY2024 'Others miscellaneous' expense of SAR 14.3m (FY2023: SAR 3.9m) is not explained; it roughly offsets the SAR 17.6m FX gain in the same line."
+  - "The FY2023 annual mentions a SAR 4.0m fair-value adjustment on a 2023 gold forward contract without saying whether it was a gain or a loss or which line it sits in (FY2024 annual p.43)."
+  - "Egypt's share of gold revenue, the average EGP rates used for translation and the basis of the 'average devaluation' figures are not disclosed, so the FX effect on revenue cannot be calculated."
+  - "Store counts and like-for-like sales are not disclosed; capital work in progress relates to retail stores due in 2026."
+  - "Line in which the FY2025 impairment loss on gold inventories (SAR 8.8m) sits is not named."

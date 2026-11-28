@@ -1,0 +1,77 @@
+headline: >-
+  The 11 listed retailers grew revenue 6.8% a year from FY2022 to FY2025 (10 companies; Cenomi Retail's nine-month FY2022 is
+  left out) to SAR 64.0bn, but attributable profit fell 5.1% a year to SAR 2,778m. FY2022 profit held SAR 719m of Othaim disposal
+  gains and Cenomi Retail lost money in every year from FY2023; excluding identified one-offs, EBITDA grew 5.1% a year while its
+  margin narrowed from 12.1% to 11.4%. Net debt including leases grew 9.5% a year (all 11 companies) to SAR 18.6bn at end-2025,
+  2.5x EBITDA. In 9M 2026 revenue rose 5.1% but attributable profit fell 19.6% to SAR 1,735m: Othaim, Cenomi Retail, SACO and
+  Nice One made losses and Aldawaa earned much less, while Jarir's profit rose 16.7%.
+main_changes:
+  - change: "Revenue grew every year (6.3% in FY2023, 6.0% in FY2024, 7.8% in FY2025 and 5.1% in 9M 2026), but part of it is gold prices, acquisitions and accounting. In FY2025 Lazurde, Nahdi and Jarir each added 1.3 points of group growth and BinDawood and eXtra 1.1 points each."
+    driver: "Lazurde's revenue includes the value of the gold it sells: its gold revenue rose 43.6% in FY2025, a year in which, the company reports, the international gold price rose 65%. BinDawood's disclosed acquisitions added SAR 449m of FY2025 revenue (Zahrat Al Rawdah pharmacies SAR 420m), about 0.8 points of group growth (we calculate). Jarir's e-commerce rose 47.2% while its showroom revenue fell 5.8%; Nahdi's pharma and clinic sales grew fastest; eXtra's consumer-finance revenue rose 23.2%. No retailer reports same-store sales, so like-for-like growth is not determinable."
+    evidence: "Sector contributions to REV growth; company narratives 4011, 4161, 4190, 4164, 4003; adjustments register (BinDawood perimeter)"
+    refs: ["4011-FY2025-REV", "4161-FY2025-REV", "4190-FY2025-REV", "4164-FY2025-REV", "4003-FY2025-REV"]
+  - change: "Profit moved with one-off gains and with Cenomi Retail's losses. Group attributable profit fell 10.5% in FY2023, rose 48.8% in FY2024 and fell 17.3% in FY2025."
+    driver: "FY2022 included Othaim's SAR 608.5m gain on selling its associate stake in Abdullah Al-Othaim for Investment Company and a SAR 110.6m land-sale gain, so Othaim alone took 15.6 points off FY2023 profit growth. Cenomi Retail's attributable loss narrowed from SAR 1,178m (FY2023, after a SAR 370m goodwill impairment) to SAR 204m (FY2024, helped by a SAR 210m gain on brand disposals), which added 43.1 points in FY2024; it widened to SAR 506m in FY2025 (−9.0 points). Identified one-offs inside FY2022 EBITDA were SAR 885m (we calculate), mostly Othaim's; excluding all identified one-offs, group EBITDA grew 7.1%, 8.9% and 1.4% in FY2023–FY2025."
+    evidence: "One-offs register O-4001-01, O-4001-02, O-4240-06; sector contributions to NI_ATTR growth; EBITDA_U totals"
+    refs: ["4001-FY2022-NI_ATTR", "4001-FY2022-EBITDA_U", "4240-FY2023-NI_ATTR", "4240-FY2024-NI_ATTR", "4240-FY2025-NI_ATTR"]
+  - change: "Margins narrowed. The group gross margin fell from 25.7% (FY2022) to 24.0% (FY2025), and the EBITDA margin excluding one-offs from 12.1% to 11.4%, then to 10.3% in 9M 2026 (11.2% in 9M 2025)."
+    driver: "Sales moved towards lower-margin lines: pharma at Nahdi (gross margin 41.1% to 37.3%), smartphones and electronics at Jarir, and gold at Lazurde, whose gross profit fell every year while its revenue rose from SAR 2,000m (FY2022) to SAR 2,905m (FY2025). Othaim's retail margin narrowed (EBITDA margin excluding one-offs 8.2% to 7.4%), and in 9M 2026 it booked SAR 153.8m of inventory provisions after a stock count. Nice One's advertising and overheads outgrew flat sales (EBITDA margin 8.6% in FY2024, 2.9% in FY2025). BinDawood was the exception: its gross margin widened from 29.3% to 34.1%, helped by acquired pharmacies."
+    evidence: "Ratios of totals (GP_M, EBITDA_M_U); company narratives 4164, 4190, 4011, 4001, 4193, 4161"
+    refs: ["4164-FY2025-GP", "4001-FY2025-EBITDA_U", "4001-9M2026-EBITDA_U", "4011-FY2025-GP", "4193-FY2025-EBITDA_C", "4161-FY2025-GP"]
+  - change: "Borrowing and leases rose. Net debt including leases grew 9.5% a year (all 11 companies) to SAR 18.6bn at end-2025 and was SAR 20.2bn at 30 Sep 2026; net debt to EBITDA went from 1.3x (FY2022, 10 companies) to 2.5x (FY2025) and 2.9x on annualised 9M 2026 EBITDA."
+    driver: "Lease liabilities were SAR 12.5bn of the end-2025 total. Borrowings rose 40.3% in FY2025: BinDawood took bank loans to pay for acquisitions (from nil at end-2024 to SAR 1,264m at 30 Sep 2026); Cenomi Retail refinanced with a SAR 1,600m Emirates NBD facility and a SAR 1,350m shareholder loan from Al Futtaim (borrowings SAR 2,993m at end-2025); Othaim's short-term loans went from nil (end-2023) to SAR 665m (30 Sep 2026); and Lazurde's gold loans rose in value with the gold price. Of the 20.8% rise in FY2025, Cenomi Retail gave 5.9 points, BinDawood 4.4, Nahdi (leases only) 4.3, eXtra 4.0 and Lazurde 3.9."
+    evidence: "Sector NET_DEBT, DEBT and LEASE_LIAB totals and contributions; company narratives 4161, 4240, 4001, 4011, 4164"
+    refs: ["4161-9M2026-DEBT", "4240-FY2025-DEBT", "4001-9M2026-DEBT", "4011-FY2025-DEBT", "4164-FY2025-NET_DEBT"]
+  - change: "Cash flow swung with working capital. Free cash flow fell 38.8% in FY2025 to SAR 3,084m and rose 59.2% in 9M 2026 to SAR 4,072m; capex fell 28.6% in both periods."
+    driver: "Cenomi Retail's operating cash flow went from SAR 1,336m (FY2024) to −SAR 513m (FY2025) as trade and other payables fell SAR 943m, then to SAR 331m in 9M 2026 (−SAR 598m a year earlier). That was 26.4 points of the 36.2% fall in group operating cash flow in FY2025 and 26.0 points of the 34.1% rise in 9M 2026. Nahdi's inventories absorbed SAR 628m in FY2025 and released SAR 104m in 9M 2026. Capex fell from 3.2% of revenue in FY2024 to 2.1% in FY2025 and 1.4% in 9M 2026."
+    evidence: "Sector CFO, FCF and CAPEX totals and contributions; company narratives 4240, 4164"
+    refs: ["4240-FY2024-CFO", "4240-FY2025-CFO", "4240-9M2026-CFO", "4164-FY2025-CFO", "4164-9M2026-CFO"]
+  - change: "In 9M 2026 attributable profit fell 19.6% although revenue rose 5.1%. Four retailers made losses: Othaim, Cenomi Retail, SACO and Nice One."
+    driver: "Othaim (−10.6 points) moved to a SAR 92.7m loss after SAR 153.8m of inventory provisions, as its retail and wholesale sales fell 6.0%. Aldawaa (−7.4 points) earned 61.6% less as its retail revenue fell 10.1% and it booked a SAR 24.4m credit-loss charge. SACO (−3.0 points) no longer had the SAR 42.2m warehouse gain of 9M 2025. Jarir added 5.7 points (profit +16.7%), and Lazurde returned to a small profit (SAR 0.2m)."
+    evidence: "Sector contributions to 9M 2026 NI_ATTR growth; company narratives 4001, 4163, 4008, 4190, 4011"
+    refs: ["4001-9M2026-NI_ATTR", "4163-9M2026-NI_ATTR", "4008-9M2026-NI_ATTR", "4190-9M2026-NI_ATTR", "4011-9M2026-NI_ATTR"]
+takeaways:
+  improved: "Sales and underlying EBITDA. Revenue grew 6.8% a year from FY2022 to FY2025 and 5.1% in 9M 2026, and EBITDA excluding identified one-offs grew 5.1% a year. Free cash flow rose 59.2% in 9M 2026 as capex fell. Jarir, the largest retailer, raised profit 7.7% in FY2025 and 16.7% in 9M 2026 with almost no borrowings."
+  weakened: "Profitability and leverage. Attributable profit fell 5.1% a year from FY2022 to FY2025 and 19.6% in 9M 2026. Group ROE (which leaves out Cenomi Retail and its negative equity) fell from 38.4% to 28.3% (22.3% annualised in 9M 2026, against 28.0%), and net debt to EBITDA rose from 1.3x to 2.5x (2.9x in 9M 2026)."
+  why: "Lower-margin pharma, electronics and gold sales grew fastest, lease and finance costs rose with larger networks and more debt, and Othaim's retail margin fell. FY2022 profit also held SAR 719m of Othaim disposal gains, and Cenomi Retail lost money every year from FY2023 through goodwill impairments, write-offs, FX losses and finance costs."
+  concentration: "Jarir is the largest retailer by FY2025 revenue, but only just: 17.7%, against Othaim 17.3% and Nahdi 15.9% (revenue HHI about 1,300, unconcentrated). Profit is more concentrated: Jarir earned 37.8% of FY2025 group profit and 49.7% in 9M 2026 (HHI about 2,100 and 2,900). Excluding Jarir, revenue grew at about the same pace (6.9% a year), but profit fell 8.0% a year and 38.5% in 9M 2026, ROE was 22.7% in FY2025 and net debt was 3.0x EBITDA (3.6x in 9M 2026). Loss-makers took SAR 548m off FY2025 group profit (we calculate from the profit-makers' total of SAR 3,325m)."
+  ytd_2026: "9M 2026 vs 9M 2025: revenue +5.1%, gross profit +2.2%, EBITDA −3.0% (−3.1% excluding identified one-offs), attributable profit −19.6% (SAR 2,158m to SAR 1,735m) and free cash flow +59.2%. The EBITDA margin excluding one-offs was 10.3% (11.2%). Net debt including leases was SAR 20.2bn at 30 Sep 2026, 13.9% more than a year earlier."
+  uncertain: "No retailer reports same-store sales or the revenue of new stores in its statements, so like-for-like growth is not determinable for any of them. Other open points: Cenomi Retail's going-concern material uncertainty, which rests on Al Futtaim's support; whether Othaim's 2026 shrinkage charge recurs; Aldawaa's receivables build (SAR 998m at 30 Sep 2026 against SAR 575m at end-2025); and Lazurde's exposure to the gold price and the Egyptian pound."
+data_notes:
+- 'Left out of totals: Cenomi Retail''s FY2022 flows (revenue, profit, EBITDA, cash flow), because FY2022 is a nine-month period (April–December 2022) after
+  its year-end moved from 31 March. Its 31 Dec 2022 balance sheet stays in. So FY2022 flow totals and the ratios built on them (margins, ROE, net debt to
+  EBITDA), FY2023/FY2022 flow growth and the 2022–2025 flow CAGRs cover 10 companies, while balance-sheet totals, growth and CAGRs (debt, leases, cash,
+  net debt, total assets, equity) cover all 11. FY2023 to FY2025 and both 9M periods cover all 11 (every retailer files reviewed 9M statements).'
+- 'Cenomi Retail (AFG International) has negative attributable equity from FY2023 (−SAR 779m at end-2023, −SAR 1,838m at 30 Sep 2026), so its own ROE is
+  n.m. Group ROE is a ratio of totals that leaves out companies with zero or negative average equity, so it covers 10 companies in every period: Cenomi
+  Retail is out in FY2022 (nine-month year) and from FY2023 (negative equity). On that basis group ROE was 38.4% in FY2022, 32.5% in FY2023, 32.2% in FY2024
+  and 28.3% in FY2025, and 28.0% and 22.3% (annualised) in 9M 2025 and 9M 2026.'
+- 'Lazurde''s DEBT includes gold borrowed from banks and repaid in gold (''accounts payable – gold'', SAR 1,932m at end-2025), matched by gold inventories
+  (SAR 1,476m) and gold receivables (SAR 487m). It inflates group net debt: Lazurde''s net debt was SAR 1,927m, 10.4% of the group''s SAR 18.6bn at end-2025
+  (we calculate). Excluding the gold loans, group net debt would be about SAR 16.7bn and 2.3x EBITDA rather than 2.5x (we calculate).'
+- 'Nahdi''s finance costs include bank charges (SAR 32.6m in FY2023, SAR 42.1m in FY2024 and SAR 53.8m in FY2025) as well as lease interest. Our operating
+  income adds back all finance costs, so Nahdi''s operating income and EBITDA are slightly higher than on a peer basis by those amounts; other retailers
+  book such charges in operating costs (in FY2025 Nice One SAR 6.0m in selling and marketing, Lazurde SAR 4.6m in other expenses). The effect on the group
+  EBITDA margin is under 0.1 pp (we calculate). On Nahdi''s own FY2025 margin the effect is about 0.5 pp: 16.3% if the SAR 53.8m were treated as an operating
+  cost, against 16.9% reported (we calculate); the Overview and this sheet keep the reported figure. The 9M interims do not split finance costs.'
+- 'Revenue basis breaks: Jarir moved certain service-provider and vendor arrangements to net (agent) revenue from FY2024. FY2024 was re-presented down by
+  SAR 211.7m and 9M 2025 by SAR 183.2m, while FY2022 and FY2023 stay gross; this takes about 0.4 pp off group revenue growth in FY2024 (we calculate) and
+  does not change gross profit. Smaller steps not applied to the earlier year: Othaim FY2024 +SAR 47.2m (mainly the Mueen IFRS 15 change) and Lazurde FY2023
+  −SAR 52.7m (gold calibration and discounts deducted).'
+- 'Group growth is reported growth. BinDawood''s acquisitions are perimeter effects: disclosed post-acquisition revenue was SAR 56.8m in FY2024, SAR 448.5m
+  in FY2025 and SAR 119.6m in 9M 2026. Cenomi Retail''s brand disposals are shown as discontinued in some filings but not others, so its perimeter effect
+  is not determinable.'
+- No retailer reports same-store (like-for-like) sales in its statements. Store counts appear only for Jarir, eXtra, SACO and Alsaif, without the revenue
+  of new stores.
+- 'Cenomi Retail''s 9M gross margins are on a new basis from the 2026 Q3 interim (D&A, store and utility costs moved out of cost of revenue: 32.4% and 31.3%,
+  against 11.4%–12.8% for its full years), so the group''s 9M gross margins (25.5% and 24.7%) are not comparable with full-year figures (24.0% in FY2025).
+  Its balance sheets from FY2024 are on a restated lease basis.'
+- Net debt deducts short-term bank deposits held outside cash (term and murabaha deposits). This matters mainly for Othaim at end-2022 (SAR 375m), so group
+  net debt at end-2022 is SAR 14.2bn and 1.3x EBITDA; at other period ends deposits were SAR 35m or less (Othaim, BinDawood, eXtra).
+- 'Cross-holding: Othaim owns a third of Gulf Flour Milling Industrial Co., which holds Fourth Milling (in the Supporting group; 100% until its October
+  2024 IPO, 70% after). Othaim''s share of that joint venture''s results, SAR 46.0m (FY2022), SAR 30.1m (FY2023), SAR 28.7m (FY2024) and SAR 46.6m (FY2025),
+  is profit also counted in Fourth Milling''s figures; Othaim''s FY2024 profit also holds SAR 161.3m of its share of the joint venture''s gain on the IPO,
+  which is not Fourth Milling profit.'
+- Net debt includes lease liabilities (SAR 12.5bn of SAR 18.6bn at end-2025), and EBITDA is before rent under IFRS 16. eXtra's revenue includes consumer-finance
+  income (SAR 769m in FY2025), whose funding cost sits in cost of revenue, and its borrowings mainly fund those receivables, so its net debt is not comparable
+  with a pure retailer's.

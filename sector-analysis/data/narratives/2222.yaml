@@ -1,0 +1,76 @@
+ticker: "2222"
+headline: >-
+  Revenue and profit fell every year from the 2022 peak as crude prices and the government's price-equalisation income declined;
+  9M 2026 rebounded (revenue +15.2%, attributable profit +36.1%) because a 29% higher realised crude price and much stronger
+  downstream earnings outweighed a 15% fall in liquids output during the Hormuz disruption, helped by a SAR 25.9bn one-off gain.
+lfl_basis:
+  definition_used: >-
+    Standard bridge on IFRS revenue (other income related to sales excluded). Perimeter = revenue of acquired businesses for the
+    months not owned in the prior period (Valvoline global products from 1 Mar 2023, Aramco Fuels Poland from 30 Nov 2022, Esmax
+    from 1 Mar 2024) less revenue of disposed businesses for the months not owned in the current period (Hadeed, sold 31 May 2024).
+    Disposals below the 0.5% materiality threshold (SABIC Film & Sheet, SABIC ETP) are not adjusted. New capacity (e.g. Jafurah gas,
+    first gas Dec 2025) is not separately disclosed, so like-for-like is not determinable and organic growth is the closest measure.
+  perimeter_changes:
+    - {event: "Aramco Fuels Poland acquired", date: "2022-11-30", effect: "SAR 2,043m revenue in Dec 2022; full-year 2023 contribution not disclosed (estimated)", source: "2222_SAUDI_ARAMCO/2023_Annual_filed2024-03-11.pdf p.72"}
+    - {event: "Valvoline global products business acquired", date: "2023-03-01", effect: "SAR 9,428m revenue Mar–Dec 2023; full-year pro-forma SAR 11,189m", source: "2222_SAUDI_ARAMCO/2023_Annual_filed2024-03-11.pdf p.71"}
+    - {event: "Esmax (Chile fuels retail) acquired", date: "2024-03-01", effect: "SAR 7,796m revenue Mar–Dec 2024; Jan–Feb pro-forma SAR 1,564m", source: "2222_SAUDI_ARAMCO/2025_Annual_filed2026-03-10.pdf p.73"}
+    - {event: "Hadeed (SABIC steel) sold to PIF", date: "2024-05-31", effect: "metal products revenue SAR 13,054m in FY2023, SAR 5,211m in FY2024 (Jan–May)", source: "2222_SAUDI_ARAMCO/2025_Annual_filed2026-03-10.pdf p.67, p.73"}
+    - {event: "PRefChem (Malaysia joint operation) stake sold to PETRONAS", date: "2026-09-02", effect: "revenue for the lost month not disclosed; SAR 25,902m gain", source: "2222_SAUDI_ARAMCO/2026_Q3_filed2026-11-03.pdf"}
+  capacity_changes:
+    - {event: "Jafurah unconventional gas: first gas", date: "2025-12", effect: "revenue contribution not disclosed", source: "sector policy fact base (E-series)"}
+  fx_exposure: "Revenue is largely USD-linked and the riyal is pegged; non-pegged currency effects are not disclosed and are not material at group level."
+  price_volume_support: >-
+    Annual filings in the archive contain financial statements only (no realised prices or volumes), so an annual price/volume split
+    is not determinable. The 9M 2026 interim report discloses the realised crude price and liquids production, which supports a split
+    of crude oil revenue for 9M 2026 vs 9M 2025.
+  confidence: "Medium (perimeter effects are at most 1.6 pp in any year; one estimate is Low confidence)"
+price_volume:
+  - period: "9M 2026 vs 9M 2025"
+    text: >-
+      Crude oil revenue rose SAR 40.1bn (+7.6%) to SAR 570.3bn. The realised crude price rose 29.2% ($91.7 vs $71.0/bbl), so we
+      calculate a price effect of about +SAR 154.6bn (+13.2 pp of group revenue) and an implied volume effect of about −SAR 114.4bn
+      (−9.8 pp), consistent with liquids production down 15.2% (8,934 vs 10,536 thousand b/d). Refined and chemical product revenue
+      added a further SAR 124.6bn (+10.6 pp), which the filings do not split between price and volume.
+    basis: "calculated (price effect = prior crude revenue x price change; volume = remainder)"
+    confidence: "Medium"
+    source: "2222_SAUDI_ARAMCO/2026_Q3_filed2026-11-03.pdf p.1 (prices), p.6 (production), p.40 (revenue by product)"
+    refs: ["2222-9M2026-REV", "2222-9M2025-REV"]
+profit_and_margin:
+  drivers:
+    - {period: "FY2023", driver: "Revenue −17.6% and attributable profit −24.2%: crude oil revenue fell 22.1% (SAR 1,076.7bn → 838.6bn) and other income related to sales fell 21.7%. EBITDA margin (on revenue plus other income related to sales) eased from 54.5% to 52.0%.", source: "2023_Annual_filed2024-03-11.pdf p.65", refs: ["2222-FY2023-REV", "2222-FY2023-NI_ATTR"]}
+    - {period: "FY2024", driver: "Revenue −1.0% but attributable profit −13.0%: crude revenue −4.2% while refined and chemical revenue +2.4%; downstream EBIT turned negative (−SAR 11.0bn) and impairments of SAR 11.8bn were recognised. EBITDA margin (same base) 48.7%.", source: "2025_Annual_filed2026-03-10.pdf p.36, p.67", refs: ["2222-FY2024-NI_ATTR"]}
+    - {period: "FY2025", driver: "Revenue −4.8% and attributable profit −11.6%: crude revenue −12.1% to SAR 706.0bn, price-equalisation income −31.9% to SAR 111.9bn, and impairment and held-for-sale losses of SAR 32.4bn (mostly downstream and SABIC Europe / ETP). Upstream EBIT SAR 731.9bn; downstream EBIT −SAR 9.6bn after SAR 20.4bn of losses on assets held for sale.", source: "2025_Annual_filed2026-03-10.pdf p.36, p.66", refs: ["2222-FY2025-NI_ATTR", "2222-FY2025-EBITDA_C"]}
+    - {period: "9M2026", driver: "Attributable profit +36.1% (management's adjusted net income +22.0% to SAR 368.9bn). Upstream EBIT rose only 3.1% (higher prices offset by lower volumes and higher royalties); downstream EBIT rose from SAR 9.1bn to SAR 138.2bn, including the SAR 25.9bn PRefChem gain. Other income related to sales doubled (+99.0%) as the gap between international and regulated domestic prices widened.", source: "2026_Q3_filed2026-11-03.pdf p.15, p.35–36", refs: ["2222-9M2026-NI_ATTR", "2222-9M2026-OIRS"]}
+    - {period: "FY2022–FY2025", driver: "Capex rose 34.9% (SAR 141.2bn → 190.4bn) while operating cash flow fell 26.8%, so free cash flow fell from SAR 557.0bn to 320.4bn; capex rose from 6.2% to 11.4% of revenue plus other income related to sales.", source: "cash-flow statements (XBRL section 300700)", refs: ["2222-FY2025-CAPEX", "2222-FY2025-FCF"]}
+  one_offs:
+    - {item: "PP&E impairment, mainly downstream", period: "FY2022", amount_sar_m: 3690, line: "within D&A as then presented", source: "2022 AFS", tax_nci: "Under 5% of attributable profit: tax effect not checked; profit kept as reported"}
+    - {item: "Hadeed fair-value loss on classification as held for sale", period: "FY2023", amount_sar_m: 3219, line: "loss on remeasurement of assets held for sale", source: "2023 AFS", tax_nci: "Under 5% of attributable profit: tax effect not checked; profit kept as reported"}
+    - {item: "Impairment and held-for-sale remeasurement losses (as re-presented)", period: "FY2024", amount_sar_m: 11834, line: "Impairment and held for sale remeasurement losses", source: "2025_Annual_filed2026-03-10.pdf", tax_nci: "Under 5% of attributable profit: tax effect not checked; profit kept as reported"}
+    - {item: "Impairment and held-for-sale losses: downstream PP&E SAR 14.6bn, facility closure SAR 4.5bn, SABIC Europe SAR 8.6bn, SABIC ETP SAR 4.8bn", period: "FY2025", amount_sar_m: 32425, line: "Impairment and held for sale remeasurement losses", source: "2025_Annual_filed2026-03-10.pdf", tax_nci: "Tax/zakat effect not disclosed; minority share not disclosed: after-tax effect not determinable, profit kept as reported (checked in the notes)"}
+    - {item: "Impairment and held-for-sale losses (9M 2025, as re-presented)", period: "9M2025", amount_sar_m: 8886, line: "Impairment and held for sale remeasurement losses", source: "2026_Q3_filed2026-11-03.pdf", tax_nci: "Under 5% of attributable profit: tax effect not checked; profit kept as reported"}
+    - {item: "Gain on sale of PRefChem equity interest", period: "9M2026", amount_sar_m: 25902, line: "gain on sale of equity interest in an affiliate (operating income)", source: "2026_Q3_filed2026-11-03.pdf", tax_nci: "Tax/zakat effect not disclosed; minority share not disclosed. Only the company's own adjusted net income (non-IFRS, before minority interests) removes it: quoted, not adopted"}
+    - {item: "Management adjusting items, net (gain) — excluded from adjusted net income", period: "9M2026", amount_sar_m: -21844, line: "non-IFRS reconciliation", source: "2026_Q3_filed2026-11-03.pdf p.15", tax_nci: "Company measure (adjusted net income, non-IFRS, before minority interests): quoted, not adopted"}
+developments:
+  - {date: "2022-02", category: "financing", text: "Sold 49% of Aramco Gas Pipelines Company to GreenSaif for SAR 58.1bn upfront; control retained, so no revenue effect.", source: "2023_Annual_filed2024-03-11.pdf p.71"}
+  - {date: "2022-11", category: "M&A", text: "Acquired Aramco Fuels Poland (ex-LOTOS assets) for SAR 0.9bn plus stakes in two LOTOS affiliates.", source: "2023_Annual_filed2024-03-11.pdf p.72"}
+  - {date: "2023-03", category: "M&A", text: "Acquired Valvoline's global products (lubricants) business for SAR 10.3bn, adding SAR 9.4bn of 2023 revenue.", source: "2023_Annual_filed2024-03-11.pdf p.71"}
+  - {date: "2023-07", category: "M&A", text: "Bought 10% of Rongsheng Petrochemical for SAR 12.8bn (investment, not consolidated).", source: "2023_Annual_filed2024-03-11.pdf p.73"}
+  - {date: "2024-03", category: "M&A", text: "Acquired Esmax (Chile fuel retail) for SAR 1.4bn.", source: "2025_Annual_filed2026-03-10.pdf p.73"}
+  - {date: "2024-05 to 2026-08", category: "mix", text: "SABIC portfolio pruning: Hadeed steel sold to PIF (May 2024), Film & Sheet (Sep 2024), ALBA stake (Feb 2025); SABIC Europe and ETP classified held for sale (Dec 2025); ETP sale closed Aug 2026.", source: "2025_Annual_filed2026-03-10.pdf p.73; 2026_Q3 interim"}
+  - {date: "2024–2025", category: "financing", text: "Dividends paid fell from SAR 465.9bn in 2024 (incl. SAR 161.6bn performance-linked) to SAR 320.4bn in 2025 (performance-linked SAR 3.3bn).", source: "2025_Annual_filed2026-03-10.pdf p.75"}
+  - {date: "2025-10", category: "financing", text: "Sold 49% of Jafurah Midstream Gas Company to a GIP/BlackRock consortium for SAR 41.8bn upfront (control retained).", source: "2025_Annual_filed2026-03-10.pdf"}
+  - {date: "2025-10", category: "M&A", text: "Raised its holding in Petro Rabigh (additional 22.5% Class A shares from Sumitomo plus Class B subscription, SAR 5.3bn); Petro Rabigh remains an associate.", source: "2025_Annual_filed2026-03-10.pdf"}
+  - {date: "2026-03 onward", category: "event", text: "Regional conflict disrupted Strait of Hormuz shipping; exports rerouted through the East-West pipeline, run at its 7.0 million b/d maximum in Q1; attacks on facilities reported as not material at 31 Mar 2026. Liquids output averaged 8,934 thousand b/d in 9M 2026 vs 10,536 in 9M 2025 (Q2 2026: 7,566).", source: "2026_Q1_filed2026-05-11.pdf p.1, p.28; 2026_Q3_filed2026-11-03.pdf p.6"}
+  - {date: "2026-09", category: "M&A", text: "Sold its PRefChem (Malaysia) interests to PETRONAS, recognising a SAR 25.9bn gain.", source: "2026_Q3_filed2026-11-03.pdf"}
+  - {date: "2026-02 / 2026-03", category: "financing", text: "Issued USD 4bn of bonds (Feb) and started a buy-back of up to SAR 11.25bn (SAR 2.3bn executed by 30 Sep).", source: "2025_Annual_filed2026-03-10.pdf p.86; 2026_Q3 interim"}
+what_it_means:
+  improved: "2026 so far: attributable profit up 36.1% (22.0% on management's adjusted basis), with downstream earnings recovering strongly and price-equalisation income doubling."
+  weakened: "2022–2025: revenue fell at an 8.1% annual rate and attributable profit at 16.5%; EBITDA margin fell from 54.5% to 49.8% (on revenue plus other income related to sales) and free cash flow from SAR 557bn to SAR 320bn as capex rose to 11.4% of that base."
+  why: "Lower crude prices and lower price-equalisation income drove most of the 2022–2025 decline (crude revenue −34%, other income related to sales −57%), while downstream losses and SAR 32.4bn of 2025 impairments widened the profit fall. Acquisitions and disposals moved revenue by at most 1.6 pp in any year (FY2023, including a Low-confidence estimate for Aramco Fuels Poland)."
+  uncertain: "The 2026 rebound rests on conflict-driven prices with volumes constrained, and includes a one-off gain; the annual split of price versus volume, and new-capacity contributions, cannot be determined from the archive."
+confidence_overall: "Medium-High"
+data_notes:
+  - "Operating income uses the analysis-wide definition (PBT + finance costs − finance and other income − share of results of joint ventures and associates); for Aramco it equals the operating income line printed on the income statement. 9M 2026 operating income includes the SAR 25.9bn PRefChem gain."
+  - "FY2024 and 9M 2025 depreciation were restated in later filings to move impairments into a separate line (FY2024: SAR 103.2bn → 91.7bn); EBITDA adds back both, so it is unaffected."
+  - "Other income related to sales (government compensation for regulated domestic prices) is shown separately and excluded from sector revenue; Aramco's own top line (revenue + this income) fell 26.3% from FY2022 to FY2025."
+  - "Operating KPIs come from the 9M 2026 interim report's management pages; the annual files in the archive contain financial statements only."

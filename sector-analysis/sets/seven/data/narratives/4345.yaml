@@ -1,0 +1,71 @@
+ticker: "4345"
+headline: >-
+  The fund turned from regional malls to Riyadh office buildings bought with debt: revenue rose from SAR 48.7m (FY2022) to SAR 102m
+  (FY2025) and funds from operations (FFO, we calculate) to SAR 41.4m, but net profit was negative in three of four years, with mall
+  impairments of SAR 125.0m over FY2023-FY2025; borrowings went from nil to SAR 655m (LTV 44.8%) and net assets fell. In Q2 2026
+  units in issue fell to 113.91m without a stated reason.
+lfl_basis:
+  definition_used: >-
+    Revenue is rental income from investment properties as audited. In FY2024 the statement adds a SAR 107.9m gain on the disposal of
+    Al Khair Mall into an unlabelled revenue subtotal; we exclude it. Perimeter = buildings bought or sold: Signature (Q1 2023), Sifr
+    and Aljawhara (Q2 2024), Jazl for Al Khair Mall (28 Oct 2024), Bin Jalawi (Q1 2025). Only Bin Jalawi's 2025 revenue is disclosed
+    (fund report), so organic and like-for-like growth are not determinable in every comparison. There were no developments, so the
+    new-capacity step is nil. 9M figures sum quarterly rental income from unaudited unitholder statements.
+  perimeter_changes:
+    - {event: "Signature Building bought (SAR 52m)", date: "2023-Q1", effect: "revenue not disclosed", source: "4345_ALINMA_RETAIL_REIT/2023_Q1_filed2023-04-13.pdf p.1; 4345_ALINMA_RETAIL_REIT/2024_Annual_filed2025-03-27.pdf p.20"}
+    - {event: "Sifr (SAR 80m) and Aljawhara (SAR 110m) office buildings bought", date: "2024-Q2", effect: "revenue not disclosed for 2024; 2025 revenue SAR 8.14m and SAR 9.86m", source: "4345_ALINMA_RETAIL_REIT/2024_Annual_filed2025-04-08.pdf p.3; 4345_ALINMA_RETAIL_REIT/2025_Annual_filed2026-03-31_t16-28-46.pdf p.15"}
+    - {event: "Al Khair Mall exchanged for the Jazl office building (SAR 368m) plus SAR 25m cash; gain SAR 107.9m", date: "2024-10-28", effect: "revenue removed and added not disclosed; Jazl 2025 revenue SAR 33.51m", source: "4345_ALINMA_RETAIL_REIT/2024_Annual_filed2025-03-27.pdf p.22; 4345_ALINMA_RETAIL_REIT/2025_Annual_filed2026-03-31_t16-28-46.pdf p.15"}
+    - {event: "Bin Jalawi office building bought (SAR 399m)", date: "2025-Q1", effect: "2025 revenue SAR 25.16m (fund report)", source: "4345_ALINMA_RETAIL_REIT/2025_Annual_filed2026-03-31_t16-28-46.pdf p.15"}
+    - {event: "Units fell from 118.0m to 113.91m and Almakan Mall Tabuk left the asset list", date: "2026-Q2", effect: "not explained; Tabuk earned SAR 0.46m in 2025", source: "4345_ALINMA_RETAIL_REIT/2026_Q2_filed2026-08-30.pdf p.1; 4345_ALINMA_RETAIL_REIT/2026_Q3_filed2026-10-14.pdf p.1"}
+  capacity_changes:
+    - {event: "No development projects; all additions were completed buildings", date: "FY2022-9M2026", effect: "nil", source: "4345_ALINMA_RETAIL_REIT/2025_Annual_filed2026-03-31_t16-30-17.pdf p.22"}
+  fx_exposure: "All properties are in Saudi Arabia and revenue is in SAR; no FX effect."
+  price_volume_support: >-
+    Not determinable. The filings give occupancy by property and, for 2025 only, revenue by property, but no rents per square metre,
+    so rent and occupancy effects cannot be separated.
+  confidence: "Low (perimeter effects not determinable except for Bin Jalawi in FY2025)"
+price_volume:
+  - period: "FY2025 vs FY2024"
+    text: >-
+      Revenue rose 27.4% to SAR 102m. The fund report's 2025 property revenues show the office buildings bought since 2024 producing
+      SAR 76.7m (Jazl 33.51, Bin Jalawi 25.16, Aljawhara 9.86, Sifr 8.14) and the three remaining malls SAR 19.6m (Hafr Al-Batin 11.04,
+      Dawadmi 8.09, Tabuk 0.46), we calculate. Hafr Al-Batin occupancy fell from 64% to 57% and Tabuk Mall was closed. 2024 revenue by
+      property is not disclosed.
+    basis: "disclosed (property revenue 2025, occupancy); split not determinable"
+    confidence: "Medium (unaudited fund report)"
+    source: "4345_ALINMA_RETAIL_REIT/2025_Annual_filed2026-03-31_t16-28-46.pdf p.15, p.4; 4345_ALINMA_RETAIL_REIT/2024_Annual_filed2025-04-08.pdf p.4"
+    refs: ["4345-FY2025-REV", "4345-FY2024-REV"]
+profit_and_margin:
+  drivers:
+    - {period: "FY2023", driver: "Revenue +5.9% to SAR 51.6m with Signature Building bought in Q1 2023. The net loss widened to SAR 10.2m: an SAR 11.5m impairment replaced the FY2022 reversal of SAR 19.4m, depreciation rose to SAR 38.2m and finance charges to SAR 4.5m, while expected credit losses were reversed by SAR 22.5m (FY2022: SAR 10.7m charge) and settlement discounts cost SAR 2.1m. FFO rose to SAR 39.4m from SAR 8.8m (growth n.m., prior below SAR 10m), FFO margin 76.4%, lifted by the credit-loss reversal; net margin -19.8%; ROE -1.2%.", source: "4345_ALINMA_RETAIL_REIT/2024_Annual_filed2025-03-27.pdf p.9-10; 4345_ALINMA_RETAIL_REIT/2023_Annual_filed2024-03-31.pdf p.9", refs: ["4345-FY2023-REV", "4345-FY2023-NI_ATTR", "4345-FY2023-FFO", "4345-FY2022-FFO", "4345-FY2023-IMPAIR_CF"]}
+    - {period: "FY2024", driver: "Revenue +54.6% to SAR 79.8m after three office buildings were added and Al Khair Mall was exchanged. Net profit of SAR 8.1m combined the SAR 107.9m disposal gain with an SAR 88.6m impairment, mainly on the Hafr Al-Batin and Dawadmi malls (we calculate from note 6), a SAR 14.4m credit-loss charge and finance charges of SAR 17.6m. FFO, which excludes both the gain and the impairment, fell 39.1% to SAR 24.0m (FFO margin 30.1%); net margin 10.2%; ROE 1.0%. Borrowings rose to SAR 257m and LTV to 22.3%.", source: "4345_ALINMA_RETAIL_REIT/2025_Annual_filed2026-03-31_t16-30-17.pdf p.9 (FY2024 column); 4345_ALINMA_RETAIL_REIT/2024_Annual_filed2025-03-27.pdf p.19-22", refs: ["4345-FY2024-REV", "4345-FY2024-NI_ATTR", "4345-FY2024-GAIN_DISP", "4345-FY2024-IMPAIR_CF", "4345-FY2024-FFO", "4345-FY2024-DEBT"]}
+    - {period: "FY2025", driver: "Revenue +27.4% to SAR 102m, of which Bin Jalawi added SAR 25.2m (fund report). A SAR 24.9m impairment, mostly on the Tabuk and Hafr Al-Batin malls, and finance charges of SAR 43.0m (SAR 17.6m) turned the result into a SAR 21.0m loss (net margin -20.7%, ROE -2.6%). FFO rose 72.4% to SAR 41.4m (FFO margin 40.7%) and distributions of SAR 41.3m were 99.8% of FFO. Borrowings reached SAR 655m (LTV 44.8%); NAV at fair value rose 3.3% to SAR 899m.", source: "4345_ALINMA_RETAIL_REIT/2025_Annual_filed2026-03-31_t16-30-17.pdf p.8-11, p.21, p.24; 4345_ALINMA_RETAIL_REIT/2025_Annual_filed2026-03-31_t16-28-46.pdf p.15", refs: ["4345-FY2025-REV", "4345-FY2025-NI_ATTR", "4345-FY2025-FFO", "4345-FY2025-DIST", "4345-FY2025-DEBT", "4345-FY2025-NAV_FV"]}
+    - {period: "9M2026", driver: "Quarterly statements only (unaudited; no profit printed): summed rental income SAR 81.6m against SAR 79.2m (+3.1%); distributions declared SAR 41.7m (SAR 41.3m). Total assets were SAR 1,399m at 30 Sep 2026 against SAR 1,498m a year earlier and net assets SAR 699m against SAR 796m, after units fell to 113.91m and Tabuk Mall left the asset list. FFO, margins, ROE and LTV cannot be calculated for 9M.", source: "4345_ALINMA_RETAIL_REIT/2026_Q3_filed2026-10-14.pdf p.1; 4345_ALINMA_RETAIL_REIT/2025_Q3_filed2025-10-14.pdf p.1", refs: ["4345-9M2026-REV", "4345-9M2025-REV", "4345-9M2026-DIST", "4345-9M2026-TA", "4345-9M2026-EQ_ATTR", "4345-9M2025-EQ_ATTR"]}
+  one_offs:
+    - {item: "Settlement discounts (separate line in FY2023 only; not explained in the notes)", period: "FY2023", amount_sar_m: -2.1, line: "Settlement discounts (inside operating income and FFO)", source: "4345_ALINMA_RETAIL_REIT/2023_Annual_filed2024-03-31.pdf p.9", tax_nci: "No zakat charge in FY2023 and no non-controlling interests; the item is a loss, but with no note we keep net profit and FFO as reported (adjusted FFO not shown)"}
+    - {item: "Gain on disposal of Al Khair Mall (excluded from REV and deducted in FFO)", period: "FY2024", amount_sar_m: 107.9, line: "Gain on disposal of investment property (revenue section)", source: "4345_ALINMA_RETAIL_REIT/2024_Annual_filed2025-03-27.pdf p.9", tax_nci: "No zakat or tax charge in FY2024 and no non-controlling interests; net profit kept as reported (a pre-tax gain is never subtracted from net profit); FFO excludes it"}
+    - {item: "Impairment of investment properties (excluded from FFO)", period: "FY2024", amount_sar_m: -88.6, line: "Charge for impairment on investment properties", source: "4345_ALINMA_RETAIL_REIT/2024_Annual_filed2025-03-27.pdf p.9", tax_nci: "No zakat charge and no non-controlling interests; net profit kept as reported; FFO excludes it"}
+    - {item: "Impairment of investment properties (excluded from FFO)", period: "FY2025", amount_sar_m: -24.9, line: "Charge for impairment on investment properties", source: "4345_ALINMA_RETAIL_REIT/2025_Annual_filed2026-03-31_t16-30-17.pdf p.9", tax_nci: "No zakat charge and no non-controlling interests; net profit kept as reported; FFO excludes it"}
+developments:
+  - {date: "2021-11-30", category: "strategy", text: "Unitholders replaced the previous fund manager (Swicorp) with Alinma Investment Company, now Alinma Capital.", source: "4345_ALINMA_RETAIL_REIT/2023_Annual_filed2024-04-01_t09-53-33.pdf p.3"}
+  - {date: "2022-11-07", category: "financing", text: "Signed a SAR 750m facility with Alinma Bank to fund acquisitions (SAR 93.6m unused at end-2025; bullet repayment on 30 Nov 2030).", source: "4345_ALINMA_RETAIL_REIT/2025_Annual_filed2026-03-31_t16-30-17.pdf p.27"}
+  - {date: "2023-Q1", category: "M&A", text: "Bought the Signature office and commercial building in Riyadh for SAR 52m.", source: "4345_ALINMA_RETAIL_REIT/2023_Q1_filed2023-04-13.pdf p.1"}
+  - {date: "2024-Q2", category: "M&A", text: "Bought the Sifr (SAR 80m) and Aljawhara (SAR 110m) office buildings in Riyadh, financed from the facility.", source: "4345_ALINMA_RETAIL_REIT/2024_Annual_filed2025-04-08.pdf p.3"}
+  - {date: "2024-10-28", category: "M&A", text: "Exchanged Al Khair Mall (SAR 393m) for the Jazl office building (SAR 368m) plus SAR 25m in cash, booking a SAR 107.9m gain.", source: "4345_ALINMA_RETAIL_REIT/2024_Annual_filed2025-03-27.pdf p.22"}
+  - {date: "2025-Q1", category: "M&A", text: "Bought the Bin Jalawi office building in Riyadh for SAR 399m; it produced SAR 25.16m of revenue in 2025.", source: "4345_ALINMA_RETAIL_REIT/2025_Annual_filed2026-03-31_t16-30-17.pdf p.22; 4345_ALINMA_RETAIL_REIT/2025_Annual_filed2026-03-31_t16-28-46.pdf p.15"}
+  - {date: "2025", category: "operations", text: "Wrote off SAR 9.8m of rental receivables, recovering 45.18% through a settlement with the buyer of Al Khair Mall; Hafr Al-Batin Mall carried SAR 9.23m of generator costs pending a grid connection.", source: "4345_ALINMA_RETAIL_REIT/2025_Annual_filed2026-03-31_t16-28-46.pdf p.15"}
+  - {date: "2026-Q2", category: "event", text: "Units in issue fell from 118,000,000 to 113,910,000 and Almakan Mall Tabuk no longer appears in the asset list; the statement refers to a 'specific event' announcement without details. The H1 2026 distribution was SAR 0.19 per unit (SAR 21.6m).", source: "4345_ALINMA_RETAIL_REIT/2026_Q2_filed2026-08-30.pdf p.1; 4345_ALINMA_RETAIL_REIT/2026_Q3_filed2026-10-14.pdf p.1"}
+what_it_means:
+  improved: "Revenue grew 27.8% a year from FY2022 to FY2025 to SAR 102m as Riyadh office buildings were bought, and FFO reached SAR 41.4m in FY2025 (FFO margin 40.7%), enough to cover distributions (99.8%)."
+  weakened: "Net profit was negative in FY2022, FY2023 and FY2025 (net margin -20.7% in FY2025), borrowings rose from nil to SAR 655m (LTV 44.8%), and net assets fell from SAR 906m (FY2022) to SAR 773m (FY2025) and SAR 699m at 30 Sep 2026."
+  why: "The office purchases were debt-funded, so finance charges rose to SAR 43.0m in FY2025, while the regional malls lost tenants and value (impairments of SAR 125.0m over FY2023-FY2025, we calculate)."
+  uncertain: "The fall in units and the exit of Tabuk Mall in Q2 2026 are unexplained, the revenue of most acquired and sold buildings is not disclosed, and the 9M figures are partial quarterly-statement data without profit."
+confidence_overall: "Medium"
+data_notes:
+  - 'Revenue basis (the same for all eight REITs): revenue is rental income plus other property operating income (hotel revenue, service charges, finance-lease income on leased property) and excludes Murabaha, deposit and other finance income, fair-value gains, disposal gains, dividends and other income. For this fund revenue is rental income from investment properties only (special commission income, FVTPL income, other income and the FY2024 disposal gain are excluded).'
+  - "9M 2025 and 9M 2026 are partial: the archive holds one-page quarterly statements only. 9M revenue sums 'Rental Income During the Period' for three quarters; total assets and net assets are the statements' period-end figures (book basis). No profit, depreciation, impairment, cash, borrowings or fair-value NAV are printed, so 9M FFO, margins, ROE and LTV are blank. The Q3 2026 NAV per unit (6.47) does not reconcile with net assets over 113.91m units (6.14); the total is used."
+  - "FY2024 revenue excludes the SAR 107.9m gain on disposal of Al Khair Mall that the income statement places in the revenue section (treated as a disposal gain and deducted in FFO)."
+  - "The depreciation added back includes depreciation of the Dawadmi right-of-use asset (about SAR 0.48m a year), shown separately in FY2022-FY2024 and combined in FY2025."
+  - "Restated: FY2023 NAV at fair value SAR 938.6m in the FY2024 statements (FY2023 statements: SAR 944.8m) because note 7.2 now measures the uplift against the full carrying value of investment properties. FY2024 total assets, net assets and net profit differ by SAR 1 in the FY2025 statements (rounding, not a restatement)."
+  - "The audited statements for FY2023-FY2025 are scanned images, read by OCR and checked visually. No FY2022 annual is in the archive: FY2022 is the FY2023 annual's comparative column; FY2021 total assets, borrowings and fair-value NAV are not printed."
+  - "Distributions are those declared in the year (prior second half plus current first half). The fund has no zakat charge from FY2023 and no non-controlling interests."

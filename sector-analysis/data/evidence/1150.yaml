@@ -1,0 +1,211 @@
+# Evidence file: Alinma Bank. Amounts SAR '000 unless stated. Pages = physical PDF page (1-based).
+# Alinma primary statements (BS, IS, SoCE, CF) are image-only pages in all focus PDFs; values from those pages were read visually.
+ticker: "1150"
+company: "Alinma Bank"
+
+perimeter_changes:
+  - event: "Alinma Fund for Private Equity Investments (held 50% of International Water Distribution Co. 'Tawzea', received in a financing settlement) acquired 18 Dec 2023 (99.9% units); ownership reduced to 20.25% on 31 Dec 2024, losing control; reclassified to associate"
+    type: deconsolidation
+    date: "2024-12-31"
+    consideration: null
+    revenue_contribution: null
+    profit_contribution: {FY2024_share_of_income_from_Tawzea: 6800}
+    pro_forma_revenue: null
+    period: FY2024
+    unit: "SAR '000"
+    source: "1150_ALINMA/2024_Annual_filed2025-02-06.pdf"
+    page: 44
+    quote: "On December 31, 2024, the Bank reduced its ownership in the Fund to 20.25% which resulted to the Bank losing control"
+  - event: "Dhahban Real Estate Fund (previously fully owned, est. Sep 2023): control lost during FY2025"
+    type: deconsolidation
+    date: "FY2025"
+    consideration: null
+    revenue_contribution: null
+    profit_contribution: null
+    pro_forma_revenue: null
+    period: FY2025
+    unit: "SAR '000"
+    source: "1150_ALINMA/2026_Q3_filed2026-10-28.pdf"
+    page: 12
+    quote: "The Bank lost control of the Fund during the year ended December 31, 2025."
+  - event: "Alinma IPO fund deconsolidated in 9M2026 after disposal of part of units; retained stake at fair value (IFRS 9). Amounts not disclosed."
+    type: deconsolidation
+    date: "9M2026"
+    consideration: null
+    revenue_contribution: null
+    profit_contribution: null
+    pro_forma_revenue: null
+    period: 9M2026
+    unit: "SAR '000"
+    source: "1150_ALINMA/2026_Q3_filed2026-10-28.pdf"
+    page: 12
+    quote: "During the period ended September 30, 2026, the Bank lost control of its Alinma IPO fund following the disposal of a portion of its units."
+  - event: "New consolidated funds: Alinma Digital Fund (control 12 Oct 2025, 100%); Alinma 8th Opportunities Real Estate Fund (control 26 Mar 2026, 100%)"
+    type: new_subsidiary
+    date: "2025-10-12 / 2026-03-26"
+    consideration: null
+    revenue_contribution: null
+    profit_contribution: null
+    pro_forma_revenue: null
+    period: "FY2025-9M2026"
+    unit: "SAR '000"
+    source: "1150_ALINMA/2026_Q3_filed2026-10-28.pdf"
+    page: 12
+    quote: "Alinma 8th Opportunities Real Estate Fund ... November 2, 2025 March 26, 2026"
+
+segments:
+  - {period: FY2022, segment: "Retail", basis: operating, revenue: 3247037, profit: 1277122, unit: "SAR '000", source: "1150_ALINMA/2022_Annual_filed2023-02-12.pdf", page: 69, note: "revenue = total operating income; profit = net income before zakat"}
+  - {period: FY2022, segment: "Corporate", basis: operating, revenue: 2812791, profit: 1349219, unit: "SAR '000", source: "1150_ALINMA/2022_Annual_filed2023-02-12.pdf", page: 69}
+  - {period: FY2022, segment: "Treasury", basis: operating, revenue: 1185403, profit: 923116, unit: "SAR '000", source: "1150_ALINMA/2022_Annual_filed2023-02-12.pdf", page: 69}
+  - {period: FY2022, segment: "Investment and brokerage", basis: operating, revenue: 717829, profit: 463442, unit: "SAR '000", source: "1150_ALINMA/2022_Annual_filed2023-02-12.pdf", page: 69}
+  - {period: FY2022, segment: "Total", basis: operating, revenue: 7963060, profit: 4012899, unit: "SAR '000", source: "1150_ALINMA/2022_Annual_filed2023-02-12.pdf", page: 69}
+  - {period: FY2025, segment: "Retail", basis: operating, revenue: 5544986, profit: 3151413, unit: "SAR '000", source: "1150_ALINMA/2025_Annual_filed2026-02-05.pdf", page: 79}
+  - {period: FY2025, segment: "Corporate", basis: operating, revenue: 3226215, profit: 1551601, unit: "SAR '000", source: "1150_ALINMA/2025_Annual_filed2026-02-05.pdf", page: 79}
+  - {period: FY2025, segment: "Treasury", basis: operating, revenue: 2005589, profit: 1771930, unit: "SAR '000", source: "1150_ALINMA/2025_Annual_filed2026-02-05.pdf", page: 79}
+  - {period: FY2025, segment: "Investment and brokerage", basis: operating, revenue: 1128540, profit: 651007, unit: "SAR '000", source: "1150_ALINMA/2025_Annual_filed2026-02-05.pdf", page: 79}
+  - {period: FY2025, segment: "Total", basis: operating, revenue: 11905330, profit: 7125951, unit: "SAR '000", source: "1150_ALINMA/2025_Annual_filed2026-02-05.pdf", page: 79}
+  - {period: 9M2026, segment: "Retail", basis: operating, revenue: 4198935, profit: null, unit: "SAR '000", source: "1150_ALINMA/2026_Q3_filed2026-10-28.pdf", page: 28}
+  - {period: 9M2026, segment: "Corporate", basis: operating, revenue: 2534528, profit: null, unit: "SAR '000", source: "1150_ALINMA/2026_Q3_filed2026-10-28.pdf", page: 28}
+  - {period: 9M2026, segment: "Treasury", basis: operating, revenue: 1671063, profit: null, unit: "SAR '000", source: "1150_ALINMA/2026_Q3_filed2026-10-28.pdf", page: 28}
+  - {period: 9M2026, segment: "Investment and brokerage", basis: operating, revenue: 855388, profit: null, unit: "SAR '000", source: "1150_ALINMA/2026_Q3_filed2026-10-28.pdf", page: 28}
+  - {period: 9M2026, segment: "Total", basis: operating, revenue: 9259914, profit: 5420949, unit: "SAR '000", source: "1150_ALINMA/2026_Q3_filed2026-10-28.pdf", page: 28}
+  - {period: 9M2025, segment: "Retail", basis: operating, revenue: 4051929, profit: null, unit: "SAR '000", source: "1150_ALINMA/2026_Q3_filed2026-10-28.pdf", page: 28}
+  - {period: 9M2025, segment: "Corporate", basis: operating, revenue: 2396638, profit: null, unit: "SAR '000", source: "1150_ALINMA/2026_Q3_filed2026-10-28.pdf", page: 28}
+  - {period: 9M2025, segment: "Treasury", basis: operating, revenue: 1440423, profit: null, unit: "SAR '000", source: "1150_ALINMA/2026_Q3_filed2026-10-28.pdf", page: 28}
+  - {period: 9M2025, segment: "Investment and brokerage", basis: operating, revenue: 835941, profit: null, unit: "SAR '000", source: "1150_ALINMA/2026_Q3_filed2026-10-28.pdf", page: 28}
+  - {period: 9M2025, segment: "Total", basis: operating, revenue: 8724931, profit: 5203904, unit: "SAR '000", source: "1150_ALINMA/2026_Q3_filed2026-10-28.pdf", page: 28}
+
+revenue_drivers:
+  - {period: FY2021, driver: "Fee income gross / expense / net", value: "1,560,543 / (486,223) / 1,074,320", unit: "SAR '000", source: "1150_ALINMA/2022_Annual_filed2023-02-12.pdf", page: 61}
+  - {period: FY2022, driver: "Fees from banking services income (gross)", value: 1901510, unit: "SAR '000", source: "1150_ALINMA/2022_Annual_filed2023-02-12.pdf", page: 61, quote: "1,901,510 1,560,543"}
+  - {period: FY2022, driver: "Fees from banking services expense", value: -692578, unit: "SAR '000", source: "1150_ALINMA/2022_Annual_filed2023-02-12.pdf", page: 61, quote: "(692,578) (486,223)"}
+  - {period: FY2022, driver: "Fees from banking services, net", value: 1208932, unit: "SAR '000", source: "1150_ALINMA/2022_Annual_filed2023-02-12.pdf", page: 61, quote: "1,208,932 1,074,320"}
+  - {period: FY2023, driver: "Fees from banking services income (gross)", value: 2426703, unit: "SAR '000", source: "1150_ALINMA/2023_Annual_filed2024-02-13.pdf", page: 59, quote: "2,426,703 1,901,510"}
+  - {period: FY2023, driver: "Fees from banking services expense", value: -967712, unit: "SAR '000", source: "1150_ALINMA/2023_Annual_filed2024-02-13.pdf", page: 59, quote: "(967,712) (692,578)"}
+  - {period: FY2023, driver: "Fees from banking services, net", value: 1458991, unit: "SAR '000", source: "1150_ALINMA/2023_Annual_filed2024-02-13.pdf", page: 59, quote: "1,458,991 1,208,932"}
+  - {period: FY2024, driver: "Fees from banking services income (gross)", value: 2921597, unit: "SAR '000", source: "1150_ALINMA/2024_Annual_filed2025-02-06.pdf", page: 66, quote: "2,921,597 2,426,703"}
+  - {period: FY2024, driver: "Fees from banking services expense", value: -1313278, unit: "SAR '000", source: "1150_ALINMA/2024_Annual_filed2025-02-06.pdf", page: 66, quote: "(1,313,278) (967,712)"}
+  - {period: FY2024, driver: "Fees from banking services, net", value: 1608319, unit: "SAR '000", source: "1150_ALINMA/2024_Annual_filed2025-02-06.pdf", page: 66, quote: "1,608,319 1,458,991"}
+  - {period: FY2025, driver: "Fees from banking services income (gross)", value: 3203015, unit: "SAR '000", source: "1150_ALINMA/2025_Annual_filed2026-02-05.pdf", page: 70, quote: "3,203,015 2,921,597"}
+  - {period: FY2025, driver: "Fees from banking services expense", value: -1470687, unit: "SAR '000", source: "1150_ALINMA/2025_Annual_filed2026-02-05.pdf", page: 70, quote: "(1,470,687) (1,313,278)"}
+  - {period: FY2025, driver: "Fees from banking services, net", value: 1732328, unit: "SAR '000", source: "1150_ALINMA/2025_Annual_filed2026-02-05.pdf", page: 70, quote: "1,732,328 1,608,319"}
+  - {period: 9M2025, driver: "Fee from banking services income (gross) (image page, comparative)", value: 2359977, unit: "SAR '000", source: "1150_ALINMA/2026_Q3_filed2026-10-28.pdf", page: 5, quote: "Fee from banking services - income 723,602 781,556 2,064,613 2,359,977"}
+  - {period: 9M2025, driver: "Fee from banking services expense", value: -1106330, unit: "SAR '000", source: "1150_ALINMA/2026_Q3_filed2026-10-28.pdf", page: 5, quote: "Fee from banking services - expense (321,046) (373,665) (931,866) (1,106,330)"}
+  - {period: 9M2025, driver: "Fees from banking services, net", value: 1253647, unit: "SAR '000", source: "1150_ALINMA/2026_Q3_filed2026-10-28.pdf", page: 5, quote: "Fees from banking services, net 402,556 407,891 1,132,747 1,253,647"}
+  - {period: 9M2026, driver: "Fee from banking services income (gross) (image page)", value: 2064613, unit: "SAR '000", source: "1150_ALINMA/2026_Q3_filed2026-10-28.pdf", page: 5, quote: "Fee from banking services - income 723,602 781,556 2,064,613 2,359,977"}
+  - {period: 9M2026, driver: "Fee from banking services expense", value: -931866, unit: "SAR '000", source: "1150_ALINMA/2026_Q3_filed2026-10-28.pdf", page: 5, quote: "Fee from banking services - expense (321,046) (373,665) (931,866) (1,106,330)"}
+  - {period: 9M2026, driver: "Fees from banking services, net", value: 1132747, unit: "SAR '000", source: "1150_ALINMA/2026_Q3_filed2026-10-28.pdf", page: 5, quote: "Fees from banking services, net 402,556 407,891 1,132,747 1,253,647"}
+  # Impairment split
+  - {period: FY2022, driver: "Impairment of financing net of recoveries: financing 1,068,676; non-funded 172,060; recoveries (43,036); total 1,197,700", value: 1197700, unit: "SAR '000", source: "1150_ALINMA/2022_Annual_filed2023-02-12.pdf", page: 51, quote: "Recoveries of previously written off bad debts (43,036) (31,855)"}
+  - {period: FY2023, driver: "Impairment of financing net of recoveries: financing 1,277,185; non-funded 136,624; recoveries (141,705); total 1,272,104", value: 1272104, unit: "SAR '000", source: "1150_ALINMA/2023_Annual_filed2024-02-13.pdf", page: 49, quote: "Recoveries of previously written off bad debts (141,705) (43,036)"}
+  - {period: FY2024, driver: "Impairment on financing net of recoveries 1,049,809 (financing 791,260; non-funded 455,686; recoveries (197,137)); other financial assets reversal (550)", value: 1049809, unit: "SAR '000", source: "1150_ALINMA/2025_Annual_filed2026-02-05.pdf", page: 58, quote: "Charge for impairment on financing 2,133,699 791,260"}
+  - {period: FY2025, driver: "Impairment on financing net of recoveries 1,030,365 (financing 2,133,699; non-funded reversal (875,238); recoveries (228,096)); other financial assets charge 29,706", value: 1030365, unit: "SAR '000", source: "1150_ALINMA/2025_Annual_filed2026-02-05.pdf", page: 58, quote: "Net (reversal) / charge for impairment of non-funded financing and credit related commitments (Note 19.3) (875,238) 455,686"}
+  - {period: 9M2025, driver: "Financing 1,609,490; non-funded (684,564); other exposures 11,445; other financial assets 5,471; recoveries (177,927); total 763,915 (IS: financing 746,999 + other 16,916)", value: 763915, unit: "SAR '000", source: "1150_ALINMA/2026_Q3_filed2026-10-28.pdf", page: 38, quote: "Total impairment charge for period, net of recoveries 955,746 763,915"}
+  - {period: 9M2026, driver: "Financing 1,538,679; non-funded 34,832; other exposures 5,216; other financial assets 7,290; recoveries (630,271); total 955,746 (IS: financing 943,240 + other 12,506)", value: 955746, unit: "SAR '000", source: "1150_ALINMA/2026_Q3_filed2026-10-28.pdf", page: 38, quote: "Recoveries from written off bad debts (630,271) (177,927)"}
+
+one_offs:
+  - {period: 9M2026, item: "Recoveries from written-off bad debts (9M2025: 177,927)", amount: 630271, unit: "SAR '000", pnl_line: "Impairment charge on financing, net of recoveries", recurring: false, source: "1150_ALINMA/2026_Q3_filed2026-10-28.pdf", page: 38, quote: "Recoveries from written off bad debts (630,271) (177,927)"}
+  - {period: 9M2026, item: "Change in accounting estimate: useful lives of buildings (33->40 yrs) and software (5-10 -> 6-15 yrs); D&A reduced by SAR 50m in 9M2026 (SAR 76.2m expected for 2026; SAR 106m in 2027)", amount: -50000, unit: "SAR '000", pnl_line: "Depreciation and amortization", recurring: false, source: "1150_ALINMA/2026_Q3_filed2026-10-28.pdf", page: 14, quote: "The net effect of the changes is a decrease in depreciation and amortization expense of SAR 50 million"}
+  - {period: FY2025, item: "Net reversal of impairment on non-funded financing and credit related commitments", amount: -875238, unit: "SAR '000", pnl_line: "Impairment charge on financing, net of recoveries", recurring: false, source: "1150_ALINMA/2025_Annual_filed2026-02-05.pdf", page: 58, quote: "Net (reversal) / charge for impairment of non-funded financing and credit related commitments (Note 19.3) (875,238) 455,686"}
+  - {period: FY2023, item: "Recoveries of previously written-off bad debts", amount: 141705, unit: "SAR '000", pnl_line: "Impairment charge on financing, net", recurring: false, source: "1150_ALINMA/2023_Annual_filed2024-02-13.pdf", page: 49, quote: "Recoveries of previously written off bad debts (141,705) (43,036)"}
+  - {period: FY2024, item: "Recoveries of previously written-off bad debts", amount: 197137, unit: "SAR '000", pnl_line: "Impairment charge on financing, net", recurring: false, source: "1150_ALINMA/2025_Annual_filed2026-02-05.pdf", page: 58, quote: "Recoveries of previously written off bad debts (228,096) (197,137)"}
+  - {period: FY2025, item: "Recoveries of previously written-off bad debts", amount: 228096, unit: "SAR '000", pnl_line: "Impairment charge on financing, net", recurring: false, source: "1150_ALINMA/2025_Annual_filed2026-02-05.pdf", page: 58, quote: "Recoveries of previously written off bad debts (228,096) (197,137)"}
+  - {period: "FY2022-9M2026", item: "Zakat settlements / prior-year zakat adjustments; hyperinflation", amount: null, unit: "SAR '000", pnl_line: "Zakat", recurring: false, status: "not found", source: null, page: null, quote: null}
+
+restatements:
+  - period_restated: "9M2025 interim / FY2025 annual / 9M2026 interim"
+    item: "No IAS 8 restatement found; only rearrangement/reclassification of comparatives and disaggregation of financing categories"
+    from: null
+    to: null
+    unit: "SAR '000"
+    reason: "Reclassification for better presentation"
+    source: "1150_ALINMA/2025_Q3_filed2025-10-29.pdf"
+    page: 39
+    quote: "Certain comparative figures have been rearranged or reclassified, wherever necessary, for the purpose of better presentation."
+  - period_restated: "FY2024 EPS"
+    item: "Weighted average shares restated to 2,487.3m for bonus shares"
+    from: null
+    to: null
+    unit: "count"
+    reason: "Bonus issue (5,000,000 capitalised in 2024)"
+    source: "1150_ALINMA/2024_Annual_filed2025-02-06.pdf"
+    page: 71
+    quote: "2,487.3 million shares restated to give a retroactive effect of change in the number of shares"
+
+significant_events:
+  - {date: "2024-03-06", event: "Issued USD 1bn AT1 sukuk, 6.5% semi-annual (SoCE issuance 3,750,500; transaction costs 15,149 to retained earnings)", financial_effect: 3750500, source: "1150_ALINMA/2025_Annual_filed2026-02-05.pdf", page: 67, quote: "On March 6, 2024, the Bank issued additional Tier 1 sukuk of USD 1 billion with a profit rate of 6.5%"}
+  - {date: "2025-05-28 / 2025-09-03", event: "Issued two USD 500m sustainable AT1 sukuk (6.5% and 6.25%); FY2025 SoCE issuance 3,751,550 (costs 20,952)", financial_effect: 3751550, source: "1150_ALINMA/2025_Annual_filed2026-02-05.pdf", page: 67, quote: "On September 3, 2025, the Bank has issued additional sustainable Tier 1 Sukuk of USD 500 million with a profit rate of 6.25%"}
+  - {date: "2026-07-01", event: "Redeemed SAR 5bn AT1 sukuk (issued 1 Jul 2021, 4%) at face value on first call date", financial_effect: -5000000, source: "1150_ALINMA/2026_Q3_filed2026-10-28.pdf", page: 26, quote: "the Bank redeemed the Sukuk at face value on its first call date of July 1, 2026."}
+  - {date: "2026-05-21 / 2026-06-03 / 2026-09-03", event: "Issued AT1: SAR 3bn (6.5%), USD 500m sustainable (6.625%), SAR 2bn (6.5%); SoCE issuance 6,877,025 (costs 24,171)", financial_effect: 6877025, source: "1150_ALINMA/2026_Q3_filed2026-10-28.pdf", page: 27, quote: "On May 21, 2026, the Bank issued Additional Tier 1 Sukuk of SAR 3 billion with a profit rate of 6.5%"}
+  - {date: "2026-02-28 onward", event: "Geopolitical situation: ECL scenario weights changed (Downturn 20%->30%, Upturn 30%->20%), 'modest increase in ECL' (amount not disclosed)", financial_effect: null, source: "1150_ALINMA/2026_Q3_filed2026-10-28.pdf", page: 39, quote: "The Downturn weighting was increased to 30% (from 20%), while the Upturn weighting was reduced to 20% (from 30%)."}
+  - {date: "after 2026-09-30", event: "Post-period escalation of geopolitical situation in KSA noted; heightened credit, liquidity, operational risk; impact uncertain", financial_effect: null, source: "1150_ALINMA/2026_Q3_filed2026-10-28.pdf", page: 39, quote: "Subsequent to the period ended 30 September 2026, the volatility of the ongoing geopolitical situation in Kingdom of Saudi Arabia has escalated significantly"}
+  - {date: "9M2026", event: "Events after reporting period note: none significant", financial_effect: null, source: "1150_ALINMA/2026_Q3_filed2026-10-28.pdf", page: 42, quote: "There have been no events subsequent to the reporting date that would significantly affect the amounts reported"}
+  - {date: "9M2026", event: "Bonus issue 5,000,000 (statutory reserve 2,500,000 and retained earnings 2,500,000); share capital 30,000,000", financial_effect: 5000000, source: "1150_ALINMA/2026_Q3_filed2026-10-28.pdf", page: 7, quote: "Issuance of bonus shares 13 5,000,000 - (2,500,000) - (2,500,000)"}
+
+audit_opinion:
+  - {period: FY2022, opinion: "unmodified (KPMG, EY)", emphasis_of_matter: "none found in text", source: "1150_ALINMA/2022_Annual_filed2023-02-12.pdf", page: 2}
+  - {period: FY2023, opinion: "not checked page-by-page (image-only audit report pp.2-7); no unmodified/modified evidence extracted", emphasis_of_matter: "not checked", source: "1150_ALINMA/2023_Annual_filed2024-02-13.pdf", page: null}
+  - {period: FY2024, opinion: "unmodified (KPMG, EY)", emphasis_of_matter: "none observed (Basis for Opinion followed directly by Key Audit Matters)", source: "1150_ALINMA/2024_Annual_filed2025-02-06.pdf", page: 2}
+  - {period: FY2025, opinion: "unmodified (KPMG, PwC)", emphasis_of_matter: "none observed on opinion page; later image pages not checked for an Other Matter on the change of joint auditor", source: "1150_ALINMA/2025_Annual_filed2026-02-05.pdf", page: 3}
+  - {period: 9M2025, opinion: "unmodified review conclusion (KPMG, PwC)", emphasis_of_matter: "none in text", source: "1150_ALINMA/2025_Q3_filed2025-10-29.pdf", page: 3}
+  - {period: 9M2026, opinion: "unmodified review conclusion (KPMG, PwC)", emphasis_of_matter: "none in text", source: "1150_ALINMA/2026_Q3_filed2026-10-28.pdf", page: 3}
+
+kpis_in_filings:
+  - {period: "31 Dec 2021", kpi: "Tier I ratio / Tier I + Tier II ratio (rounded)", value: "22 / 23", unit: "%", source: "1150_ALINMA/2022_Annual_filed2023-02-12.pdf", page: 99}
+  - {period: "31 Dec 2022", kpi: "Tier I ratio / Tier I + Tier II ratio (rounded)", value: "19 / 20", unit: "%", source: "1150_ALINMA/2022_Annual_filed2023-02-12.pdf", page: 99}
+  - {period: "31 Dec 2023", kpi: "CET1 / Tier I / Tier I + Tier II (rounded)", value: "14 / 16 / 17", unit: "%", source: "1150_ALINMA/2024_Annual_filed2025-02-06.pdf", page: 108}
+  - {period: "31 Dec 2024", kpi: "CET1 / Tier I / Tier I + Tier II (rounded)", value: "13 / 17 / 18", unit: "%", source: "1150_ALINMA/2024_Annual_filed2025-02-06.pdf", page: 108}
+  - {period: "30 Sep 2025", kpi: "CET1 / Tier I / Tier I + Tier II (rounded)", value: "13 / 18 / 19", unit: "%", source: "1150_ALINMA/2025_Q3_filed2025-10-29.pdf", page: 38}
+  - {period: "31 Dec 2025", kpi: "CET1 / Tier I / Tier I + Tier II (rounded)", value: "14 / 18 / 20", unit: "%", source: "1150_ALINMA/2025_Annual_filed2026-02-05.pdf", page: 112}
+  - {period: "30 Sep 2026", kpi: "CET1 / Tier I / Tier I + Tier II (rounded)", value: "14 / 19 / 21", unit: "%", source: "1150_ALINMA/2026_Q3_filed2026-10-28.pdf", page: 42}
+  - {period: "31 Dec 2022", kpi: "Stage 3 gross financing / total gross financing / allowance", value: "2,919,914 / 150,473,212 / 3,981,256", unit: "SAR '000", source: "1150_ALINMA/2022_Annual_filed2023-02-12.pdf", page: 47}
+  - {period: "31 Dec 2023", kpi: "Stage 3 gross financing / total gross financing", value: "2,862,461 / 178,056,745", unit: "SAR '000", source: "1150_ALINMA/2023_Annual_filed2024-02-13.pdf", page: 45}
+  - {period: "31 Dec 2024", kpi: "Stage 3 gross financing / total gross / allowance", value: "2,182,236 / 206,067,158 / 3,759,064", unit: "SAR '000", source: "1150_ALINMA/2025_Q3_filed2025-10-29.pdf", page: 19}
+  - {period: "30 Sep 2025", kpi: "Stage 3 gross financing / total gross / allowance", value: "2,753,739 / 230,040,162 / 4,356,184", unit: "SAR '000", source: "1150_ALINMA/2025_Q3_filed2025-10-29.pdf", page: 19}
+  - {period: "31 Dec 2025", kpi: "Stage 3 gross financing / total gross / allowance", value: "2,134,663 / 232,955,242 / 3,208,404", unit: "SAR '000", source: "1150_ALINMA/2026_Q3_filed2026-10-28.pdf", page: 22}
+  - {period: "30 Sep 2026", kpi: "Stage 3 gross financing / total gross / allowance", value: "2,381,519 / 257,214,817 / 4,504,385", unit: "SAR '000", source: "1150_ALINMA/2026_Q3_filed2026-10-28.pdf", page: 22}
+  - {period: "all", kpi: "NPL ratio, coverage ratio, LCR, NSFR stated as ratios", value: null, unit: "%", status: "not found", source: null, page: null}
+
+special_extractions:
+  - name: "Tier 1 sukuk carrying amount (equity)"
+    unit: "SAR '000"
+    items:
+      - {date: "31 Dec 2021", value: 5000000, source: "1150_ALINMA/2023_Annual_filed2024-02-13.pdf", page: 12, quote: "Balance at the beginning of the year ... 25,711,027 5,000,000 30,711,027"}
+      - {date: "31 Dec 2022", value: 5000000, source: "1150_ALINMA/2023_Annual_filed2024-02-13.pdf", page: 12}
+      - {date: "31 Dec 2023", value: 5000000, source: "1150_ALINMA/2023_Annual_filed2024-02-13.pdf", page: 11}
+      - {date: "31 Dec 2024", value: 8750500, source: "1150_ALINMA/2025_Annual_filed2026-02-05.pdf", page: 9}
+      - {date: "30 Sep 2025", value: 12502050, source: "1150_ALINMA/2026_Q3_filed2026-10-28.pdf", page: 4}
+      - {date: "31 Dec 2025", value: 12502050, source: "1150_ALINMA/2025_Annual_filed2026-02-05.pdf", page: 9, quote: "Tier 1 Sukuk 18.2 12,502,050 8,750,500"}
+      - {date: "30 Sep 2026", value: 14379075, source: "1150_ALINMA/2026_Q3_filed2026-10-28.pdf", page: 4, quote: "Tier 1 Sukuk 11.2 14,379,075 12,502,050 12,502,050"}
+  - name: "Tier 1 sukuk costs charged to retained earnings (SoCE), issuances and redemptions"
+    unit: "SAR '000"
+    items:
+      - {period: FY2022, issued: 0, costs: 150000, source: "1150_ALINMA/2023_Annual_filed2024-02-13.pdf", page: 12}
+      - {period: FY2023, issued: 0, costs: 200000, source: "1150_ALINMA/2023_Annual_filed2024-02-13.pdf", page: 11}
+      - {period: FY2024, issued: 3750500, issue_costs_to_RE: 15149, costs: 321921, source: "1150_ALINMA/2025_Annual_filed2026-02-05.pdf", page: 13}
+      - {period: 9M2025, issued: 3751550, issue_costs_to_RE: 13881, costs: 393529, source: "1150_ALINMA/2026_Q3_filed2026-10-28.pdf", page: 8}
+      - {period: FY2025, issued: 3751550, issue_costs_to_RE: 20952, costs: 504538, source: "1150_ALINMA/2025_Annual_filed2026-02-05.pdf", page: 12}
+      - {period: 9M2026, issued: 6877025, redeemed: 5000000, issue_costs_to_RE: 24171, costs: 621620, source: "1150_ALINMA/2026_Q3_filed2026-10-28.pdf", page: 7}
+  - name: "Is Tier 1 sukuk inside 'total equity attributable to shareholders'?"
+    answer: "No. 'Total equity attributable to the shareholders of the Bank' (35,739,072 at 31 Dec 2025) excludes Tier 1 Sukuk (12,502,050); both sum to 'Total equity' (48,241,122)."
+    source: "1150_ALINMA/2025_Annual_filed2026-02-05.pdf"
+    page: 9
+    quote: "Equity attributable to the shareholders of the Bank 35,739,072 ... Tier 1 Sukuk 18.2 12,502,050 ... TOTAL EQUITY 48,241,122"
+  - name: "Alinma headline totals"
+    unit: "SAR '000"
+    items:
+      - {period: FY2022, total_operating_income: 7963060, impairment_financing_net: 1197700, net_income_after_zakat: 3599140, source: "1150_ALINMA/2022_Annual_filed2023-02-12.pdf", page: 69}
+      - {period: FY2023, total_operating_income: 9725657, impairment_financing_net: 1272104, net_income_after_zakat: 4839206, source: "1150_ALINMA/2023_Annual_filed2024-02-13.pdf", page: 68}
+      - {period: FY2024, total_operating_income: 10940076, impairment_financing_net: 1049809, net_income_after_zakat: 5831661, total_assets: 276827481, source: "1150_ALINMA/2025_Annual_filed2026-02-05.pdf", page: 10}
+      - {period: FY2025, total_operating_income: 11905330, impairment_financing_net: 1030365, impairment_other: 29706, net_income_after_zakat: 6397149, total_assets: 311067148, source: "1150_ALINMA/2025_Annual_filed2026-02-05.pdf", page: 10}
+      - {period: 9M2025, total_operating_income: 8724931, impairment_financing_net: 746999, impairment_other: 16916, net_income_after_zakat: 4673279, source: "1150_ALINMA/2026_Q3_filed2026-10-28.pdf", page: 5}
+      - {period: 9M2026, total_operating_income: 9259914, impairment_financing_net: 943240, impairment_other: 12506, net_income_after_zakat: 4862009, total_assets: 341415298, source: "1150_ALINMA/2026_Q3_filed2026-10-28.pdf", page: 5}
+      - {period: "31 Dec 2025", item: "Investments in Tier 1 sukuk held (FVOCI) 4,513m (2024: 3,578m)", source: "1150_ALINMA/2025_Annual_filed2026-02-05.pdf", page: 44}
+
+open_questions:
+  - "Capital ratios are disclosed only as rounded whole percentages."
+  - "FY2023 audit report (image pages) not reviewed. The FY2025 report is by KPMG and PwC (FY2024: KPMG and EY); an Other Matter paragraph on the prior joint auditor is likely but was not seen on the opinion page."
+  - "FY2025 impairment shows a large shift between funded (charge 2,133,699) and non-funded (reversal 875,238) lines; the filing does not explain whether this is reclassification."
+  - "9M2026 impairment includes unusually large recoveries of written-off debts (630,271 vs 177,927)."
+  - "The financial effect of the Alinma IPO fund deconsolidation in 9M2026 is not quantified."
+  - "LCR/NSFR are not disclosed in the financial statements."

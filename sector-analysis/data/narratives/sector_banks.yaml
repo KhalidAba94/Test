@@ -1,0 +1,45 @@
+headline: >-
+  Saudi banks grew total operating income 10.0% a year and attributable profit 14.0% a year from FY2022 to FY2025. Loans grew 12.3% a
+  year, faster than customer deposits (8.7%) and far faster than costs (5.9%). Returns rose (ROE on ordinary equity 13.3% → 15.1%),
+  but the margin on assets narrowed and loans now exceed customer deposits. In 9M 2026 growth slowed to 6.8% and impairments rose 18.3%
+  as the regional conflict hit.
+main_changes:
+  - change: "Volume-led income growth: net financing income rose SAR 27.8bn between FY2022 and FY2025, 70% of the SAR 39.5bn rise in total operating income."
+    driver: "Lending grew 12.3% a year while the margin on average assets narrowed from 2.9% to 2.7%. Deposit costs rose with the rate cycle (SAMA repo peaked at 6.00% in Jul 2023), and funding shifted towards time deposits. Growth was therefore volume, not price."
+    evidence: "Sector totals NSCI, LOANS, TA; policy rate history"
+    refs: ["B-002", "B-004", "B-007"]
+  - change: "Cost discipline: operating expenses before impairment grew 5.9% a year against 10.0% income growth, so cost-to-income fell from 32.5% to 29.0%."
+    driver: "The improvement was broad. SAB (37.9% → 30.3%), SAIB (44.1% → 35.9%) and SNB (29.6% → 25.2%) improved most; BSF was the exception (33.1% → 33.8%)."
+    evidence: "Company cost-to-income ratios (calculated)"
+    refs: ["1060-FY2025-OPEX_PRE", "1030-FY2025-OPEX_PRE", "1180-FY2025-OPEX_PRE"]
+  - change: "Low credit costs, lowest in FY2024: on a comparable basis (ECL on loans and financing ÷ average loans) sector cost of risk was 44 bp in FY2022, 32 bp in FY2024 and 35 bp in FY2025 (28 bp annualised in 9M 2026 vs 29 bp). ECL on loans rose 4.2% a year in SAR terms, but loans grew 12.3% a year."
+    driver: "Banks report large recoveries of written-off loans (Al Rajhi SAR 3.1bn in FY2025) and releases of acquired-loan fair-value marks (SAB, from purchased credit-impaired loans of its 2019 merger with Alawwal Bank). These are netted in the impairment line. The FY2025 rise is mostly Alinma (88 bp vs 32 bp): its charge on funded financing rose to SAR 2,134m while a SAR 875m reversal on commitments kept its income-statement line flat."
+    evidence: "Bank evidence files (impairment notes)"
+    refs: ["1120-FY2025-IMPAIR_TOTAL", "1060-FY2025-IMPAIR_TOTAL"]
+  - change: "A funding gap opened: loans moved from 96.7% of customer deposits at end-2022 to 106.5% at end-2025 and 107.0% at 30 Sep 2026 (simple ratio; SAMA's regulatory ratio uses a different definition). Deposit series breaks at Al Rajhi and SAB make the reported rise slightly smaller than the like-for-like rise (see data notes)."
+    driver: "Credit demand outpaced deposit growth. Banks filled the gap with debt and Tier 1 sukuk: Tier 1 balances rose from SAR 53.6bn at end-2022 to SAR 145.7bn at 30 Sep 2026. Their distributions are deducted when we calculate ROE on ordinary equity."
+    evidence: "Sector LOANS/DEPOSITS; T1_SUKUK overrides from statements of changes in equity"
+    refs: ["B-012", "B-026"]
+  - change: "Non-interest income grew too: net fees rose 10.0% a year as reported (re-presentations at SAB, SNB and ANB affect only the latest comparative years, so this is not fully like-for-like) and other operating income (FX, investment gains, dividends) 17.6% a year, so fees held at about 13% of income."
+    driver: "Fees grew from card, trade and asset-management activity; other income was more volatile (+30.2% in FY2025, −1.9% in 9M 2026)."
+    evidence: "Sector FEES_NET, OTHER_OI"
+    refs: []
+  - change: "Little perimeter change: sector growth is essentially organic."
+    driver: "SAB's 2022 purchase of HSBC Saudi Arabia's asset-management, margin-lending and brokerage businesses is the main acquisition. ANB's leasing subsidiary and SAIB's American Express stake are held for sale but still small. No bank merger occurred in the window."
+    evidence: "Adjustments register; bank evidence files"
+    refs: []
+takeaways:
+  improved: "Profitability and efficiency. Sector ROE on ordinary equity rose from 13.3% to 15.1% and cost-to-income fell from 32.5% to 29.0%. Every bank except Al Rajhi (22.5% → 21.8%, still the highest) improved its ROE between FY2022 and FY2025."
+  weakened: "Funding and margins. Loans now exceed customer deposits by 7%, and the margin on assets is down 0.2 pp. Smaller banks funded mainly by term deposits were squeezed most: SAIB's margin fell from 2.7% to 2.1% and Bank Aljazira's from 2.4% to 1.9%."
+  why: "Strong credit demand met a rate cycle that raised deposit costs. Banks protected profit through cost control and low credit costs rather than through pricing."
+  concentration: "SNB and Al Rajhi together earn 49.2% of sector income and 53.8% of profit (HHI about 1,600, moderately concentrated). Without SNB, which is the largest by a whisker, income grew 11.5% a year rather than 10.0%: SNB was the slowest grower (5.9% a year) but is among the most efficient (cost-to-income 25.2%). Al Rajhi delivered 25% of the FY2022–FY2025 profit increase and over half of 9M 2026 profit growth (3.6 of 6.8 points)."
+  ytd_2026: "9M 2026 vs 9M 2025: income +6.8%, profit +6.8%, net fees −0.6%, impairments +18.3%. Loans were up 6.4% year on year, about half the FY2025 pace, and several banks recorded management overlays for the conflict. Four banks report a further escalation after 30 Sep 2026 as a subsequent event."
+  uncertain: "Credit quality if the conflict escalates; the size and domestic share of 2027 government borrowing; and the US rate path that SAMA follows."
+data_notes:
+  - "Six banks restated their 31 Dec 2024 equity in their 9M 2025 interims, all as IAS 8 corrections for unlisted equity stakes (e.g. SIMAH) carried at cost instead of fair value. Profit was not affected, and restated figures are used."
+  - "Tier 1 sukuk are presented differently: some banks show them inside 'equity attributable to equity holders', others below it. We include them consistently and then deduct them, with their distributions, for ROE on ordinary equity."
+  - "Fee lines are presented net by some banks and as gross income plus expense by others, and the presentation changed over time. Net fees are rebuilt from the statement layout and corrected from the PDFs where the XBRL is mis-tagged."
+  - "Deposit series breaks: Al Rajhi moved SAR 26.75bn from 'due to banks' into customer deposits from 31 Dec 2024 and SAB restated FY2023 deposits, without re-presenting earlier years. Like-for-like sector deposit growth was about 7.8% in FY2023 and 7.9% in FY2024 (vs 8.4% and 8.9% reported), so the rise in the loan-to-deposit ratio is slightly understated."
+  - "Fee re-presentations apply only to the latest comparative year (SAB FY2024 −SAR 108m to financing income; SNB FY2024 −SAR 223m to other income; ANB FY2023 −SAR 122m to financing income), so fee growth across those years is not fully like-for-like."
+  - "Cost of risk is on one basis for every bank: the ECL charge on loans and financing to customers, net of recoveries, read from each bank's credit-risk note (data/banks/ecl_loans.csv, with page), divided by average net loans and financing from the balance sheet; 9M figures are annualised. It replaces the earlier use of each bank's income-statement credit-loss line, which mixed loans with investments, banks and commitments (e.g. Alinma FY2025: income-statement line SAR 1,030m, loans SAR 1,906m after a SAR 875m reversal on commitments). Remaining differences are labelled and are small against the sector total: Riyad's loan charge includes off-balance-sheet commitments (not separable); Albilad is gross of recoveries (not disclosed); SAB's write-off and recovery line is attributed to loans; SNB's 9M figures are the income-statement line less the investment ECL; SAIB 9M 2026 is approximate (recoveries given as SAR 170 million). On the old basis the sector trend was a steady fall (46 bp to 30 bp, FY2022-FY2025); on the comparable basis it fell to 32 bp in FY2024 and rose to 35 bp in FY2025."
+  - "SNB's very low 9M impairment charges (SAR 93m and SAR 3m) are confirmed in its PDFs: net reversals and settlements of purchased credit-impaired loans."

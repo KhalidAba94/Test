@@ -1,0 +1,392 @@
+# Evidence extracted from Nahdi Medical Company filings (archive: 4164_NAHDI). Facts only; page = physical PDF page (1-based).
+# Units: SAR (full riyals) as presented. Primary statements are scanned images; FY2025 annual is fully scanned (read by OCR).
+ticker: '4164'
+company: Nahdi Medical Company
+perimeter_changes:
+- event: Rawa Alsihha Company established (supply chain, logistics, distribution and delivery); start-up, no acquisition
+  type: new_subsidiary
+  date: '2026-07-16'
+  consideration: share capital SAR 100,000
+  revenue_contribution: null
+  profit_contribution: null
+  pro_forma_revenue: null
+  period: 9M2026
+  unit: SAR
+  source: 4164_NAHDI/2026_Q3_filed2026-10-29.pdf
+  page: 11
+  quote: the Company established Rawa Alsihha Company as a Limited Liability Company registered in the Kingdom of Saudi Arabia
+- event: 'Subsidiaries unchanged FY2023-FY2025: Nahdi Care (clinics), Al Sakhaa Golden Trading and Contracting (labour services) with Al Sakhaa Integrated Solutions (Egypt, IT consulting), Nahdi Investment (UAE) with Nahdi Drug Store and Nahdi Pharmacy (UAE)'
+  type: new_subsidiary
+  status: no change
+  date: FY2023-FY2025
+  consideration: null
+  revenue_contribution: null
+  profit_contribution: null
+  pro_forma_revenue: null
+  period: FY2024
+  unit: SAR
+  source: 4164_NAHDI/2024_Annual_filed2025-03-12.pdf
+  page: 12
+  quote: Nahdi Care Limited Company KSA Clinics 100% 100%
+- event: Acquisitions or disposals of businesses (IFRS 3 note)
+  type: acquisition
+  status: not found
+  period: FY2022-9M2026
+  source: 4164_NAHDI/2025_Annual_filed2026-03-16.pdf
+  page: null
+  quote: No business combination note in the FY2022-FY2025 annuals or the 2026 Q3 interim; intangibles include acquired pharmacy licences (no additions after 2022).
+segments:
+- period: FY2025
+  segment: Single operating segment (retailing); UAE operations and clinics below 10%
+  basis: operating
+  revenue: 10213238401
+  profit: null
+  unit: SAR
+  source: 4164_NAHDI/2025_Annual_filed2026-03-16.pdf
+  page: 52
+  quote: The Directors' conclusion is that the Group has one operating segment, that of retailing.
+- period: FY2022
+  segment: Front Shop
+  basis: product
+  revenue: 4278503386
+  profit: null
+  unit: SAR
+  source: 4164_NAHDI/2023_Annual_filed2024-03-18.pdf
+  page: 46
+- period: FY2022
+  segment: Pharma
+  basis: product
+  revenue: 4263058013
+  profit: null
+  unit: SAR
+  source: 4164_NAHDI/2023_Annual_filed2024-03-18.pdf
+  page: 46
+- period: FY2022
+  segment: Others (mainly clinics)
+  basis: product
+  revenue: 74626417
+  profit: null
+  unit: SAR
+  source: 4164_NAHDI/2023_Annual_filed2024-03-18.pdf
+  page: 46
+- period: FY2023
+  segment: Front Shop (non-pharma)
+  basis: product
+  revenue: 4129870375
+  profit: null
+  unit: SAR
+  source: 4164_NAHDI/2024_Annual_filed2025-03-12.pdf
+  page: 43
+- period: FY2023
+  segment: Pharma
+  basis: product
+  revenue: 4411731880
+  profit: null
+  unit: SAR
+  source: 4164_NAHDI/2024_Annual_filed2025-03-12.pdf
+  page: 43
+- period: FY2023
+  segment: Others (mainly clinics)
+  basis: product
+  revenue: 172073735
+  profit: null
+  unit: SAR
+  source: 4164_NAHDI/2024_Annual_filed2025-03-12.pdf
+  page: 43
+- period: FY2024
+  segment: Front Shop (non-pharma)
+  basis: product
+  revenue: 3907159466
+  profit: null
+  unit: SAR
+  source: 4164_NAHDI/2025_Annual_filed2026-03-16.pdf
+  page: 45
+- period: FY2024
+  segment: Pharma
+  basis: product
+  revenue: 5183203623
+  profit: null
+  unit: SAR
+  source: 4164_NAHDI/2025_Annual_filed2026-03-16.pdf
+  page: 45
+- period: FY2024
+  segment: Others (mainly clinics)
+  basis: product
+  revenue: 356056957
+  profit: null
+  unit: SAR
+  source: 4164_NAHDI/2025_Annual_filed2026-03-16.pdf
+  page: 45
+- period: FY2025
+  segment: Front Shop (non-pharma)
+  basis: product
+  revenue: 4195406412
+  profit: null
+  unit: SAR
+  source: 4164_NAHDI/2025_Annual_filed2026-03-16.pdf
+  page: 45
+- period: FY2025
+  segment: Pharma
+  basis: product
+  revenue: 5439997089
+  profit: null
+  unit: SAR
+  source: 4164_NAHDI/2025_Annual_filed2026-03-16.pdf
+  page: 45
+- period: FY2025
+  segment: Others (mainly clinics)
+  basis: product
+  revenue: 577834900
+  profit: null
+  unit: SAR
+  source: 4164_NAHDI/2025_Annual_filed2026-03-16.pdf
+  page: 45
+- period: 9M2025
+  segment: Front Shop (non-pharma)
+  basis: product
+  revenue: 3229710990
+  profit: null
+  unit: SAR
+  source: 4164_NAHDI/2026_Q3_filed2026-10-29.pdf
+  page: 25
+- period: 9M2025
+  segment: Pharma
+  basis: product
+  revenue: 3980513625
+  profit: null
+  unit: SAR
+  source: 4164_NAHDI/2026_Q3_filed2026-10-29.pdf
+  page: 25
+- period: 9M2025
+  segment: Others (mainly clinics)
+  basis: product
+  revenue: 413750663
+  profit: null
+  unit: SAR
+  source: 4164_NAHDI/2026_Q3_filed2026-10-29.pdf
+  page: 25
+- period: 9M2026
+  segment: Front Shop (non-pharma)
+  basis: product
+  revenue: 3272169846
+  profit: null
+  unit: SAR
+  source: 4164_NAHDI/2026_Q3_filed2026-10-29.pdf
+  page: 25
+- period: 9M2026
+  segment: Pharma
+  basis: product
+  revenue: 4324222181
+  profit: null
+  unit: SAR
+  source: 4164_NAHDI/2026_Q3_filed2026-10-29.pdf
+  page: 25
+- period: 9M2026
+  segment: Others (mainly clinics)
+  basis: product
+  revenue: 564265500
+  profit: null
+  unit: SAR
+  source: 4164_NAHDI/2026_Q3_filed2026-10-29.pdf
+  page: 25
+revenue_drivers:
+- period: 9M2026
+  driver: 'Pharma revenue (9M 2025: 3,980,513,625)'
+  value: 4324222181
+  unit: SAR
+  source: 4164_NAHDI/2026_Q3_filed2026-10-29.pdf
+  page: 25
+  quote: Pharma 1,427,860,581 1,262,654,907 4,324,222,181 3,980,513,625
+- period: 9M2026
+  driver: '"Others" are mainly clinic services of Nahdi Care'
+  value: 564265500
+  unit: SAR
+  source: 4164_NAHDI/2026_Q3_filed2026-10-29.pdf
+  page: 25
+  quote: Others mainly include revenue generated from services provided by the clinics under Nahdi Care Limited Company.
+- period: FY2024
+  driver: 'Front-shop revenue fell (FY2023: 4,129,870,375) while pharma rose'
+  value: 3907159466
+  unit: SAR
+  source: 4164_NAHDI/2024_Annual_filed2025-03-12.pdf
+  page: 43
+  quote: Front Shop (non-pharma) 3,907,159,466 4,129,870,375
+- period: FY2025
+  driver: 'Pharmacy leases terminated early (2024: 39); count of pharmacies and openings not disclosed'
+  value: 49
+  unit: count
+  source: 4164_NAHDI/2025_Annual_filed2026-03-16.pdf
+  page: 36
+  quote: 'The lease terminations during the year mainly relates to 49 pharmacies (2024: 39 pharmacies) lease contracts terminated before the expiry date'
+- period: FY2025
+  driver: 'Lease modifications with lower rent (2024: 38 pharmacies)'
+  value: 63
+  unit: count
+  source: 4164_NAHDI/2025_Annual_filed2026-03-16.pdf
+  page: 36
+  quote: 'The lease modifications during the year mainly relates to a reduction of lease payments for 63 pharmacies (2024: 38 pharmacies)'
+- period: FY2022-9M2026
+  driver: Like-for-like (same-store) sales growth
+  value: null
+  unit: '%'
+  status: not found
+  source: 4164_NAHDI/2025_Annual_filed2026-03-16.pdf
+  page: null
+  quote: Not disclosed in the annual or interim financial statements.
+one_offs:
+- period: 9M2026
+  item: Unrealised fair-value gain on a money market fund measured at FVTPL (separate line above profit before zakat, outside finance income)
+  amount: 12522336
+  unit: SAR
+  pnl_line: Unrealized gain on financial assets measured at FVTPL
+  recurring: false
+  source: 4164_NAHDI/2026_Q3_filed2026-10-29.pdf
+  page: 21
+  quote: 'the Group recognized fair value gain of ⃁ 12.5 million (30 September 2025: nil), as presented in the condensed consolidated statement of profit or loss.'
+- period: FY2022
+  item: Loss on write-off of old distribution centre (below 5% of attributable profit; listed for transparency)
+  amount: -6950568
+  unit: SAR
+  pnl_line: Loss against write off for old distribution centre
+  recurring: false
+  source: 4164_NAHDI/2023_Annual_filed2024-03-18.pdf
+  page: 8
+  quote: Loss against write off for old distribution centre - (6,950,568)
+- period: FY2023
+  item: Gain on termination of right-of-use assets (below 5% of attributable profit)
+  amount: 29242978
+  unit: SAR
+  pnl_line: not named (cash-flow add-back)
+  recurring: false
+  source: 4164_NAHDI/2023_Annual_filed2024-03-18.pdf
+  page: 10
+  quote: Gain on termination of right-of-use assets (29,242,978) 3,482,510
+restatements:
+- period_restated: FY2024
+  item: Cost of revenue / selling and distribution expenses
+  from: 5913553658
+  to: 5934073050
+  unit: SAR
+  reason: 'FY2025 annual note 33: D&A of medical services (20,519,392) reclassified from selling and distribution expenses to cost of revenue; gross profit 3,532,866,388 -> 3,512,346,996. No effect on profit.'
+  source: 4164_NAHDI/2025_Annual_filed2026-03-16.pdf
+  page: 52
+  quote: Depreciation and amortization expenses of ⃁ 20.52 million directly related to medical services have been reclassified from Selling and distribution expenses to Cost of revenue
+- period_restated: FY2023
+  item: Net cash flows from operating activities
+  from: 1368728218
+  to: 1316026804
+  unit: SAR
+  reason: 'FY2024 annual cash-flow statement: finance income deducted in operating activities and interest received (52,701,414) shown in investing activities.'
+  source: 4164_NAHDI/2024_Annual_filed2025-03-12.pdf
+  page: 10
+  quote: Interest received 54,917,083 52,701,414
+- period_restated: FY2022
+  item: Finance costs and finance income
+  from: 79375137
+  to: 81173620
+  unit: SAR
+  reason: 'FY2023 annual: finance costs and finance income both grossed up by 1,798,483 (finance income 12,128,998 -> 13,927,481); generic comparative note 32; net finance cost unchanged.'
+  source: 4164_NAHDI/2023_Annual_filed2024-03-18.pdf
+  page: 46
+  quote: Certain prior year information has been reclassified/represented to conform with the presentation in the current year.
+significant_events:
+- date: 2026 (9M)
+  event: 'Treasury investments: SAR 200m in sukuk and SAR 342m in a money market fund (FVTPL), funded from cash'
+  financial_effect: 'Cash fell to SAR 159m at 30 Sep 2026 (31 Dec 2025: SAR 554m)'
+  source: 4164_NAHDI/2026_Q3_filed2026-10-29.pdf
+  page: 8
+  quote: Investment in Sukuk 7 (200,000,000) -
+- date: 2025 and 2026
+  event: Dividends paid of SAR 728m in 9M 2025 and SAR 728m in 9M 2026 (SAR 715m in FY2024)
+  financial_effect: Cash returned to shareholders
+  source: 4164_NAHDI/2026_Q3_filed2026-10-29.pdf
+  page: 8
+  quote: Dividend paid 13-B (728,000,000) (728,000,000)
+- date: '2025'
+  event: Statutory reserve of SAR 369.2m transferred to retained earnings
+  financial_effect: No change in total equity
+  source: 4164_NAHDI/2026_Q3_filed2026-10-29.pdf
+  page: 7
+  quote: Transfer of statutory reserve to retained earnings (note 13-C) - (369,207,440) 369,207,440
+- date: '2026-03-08'
+  event: Board announced a cash dividend of SAR 390m (SAR 3 per share) for H2 2025
+  financial_effect: Dividend
+  source: 4164_NAHDI/2025_Annual_filed2026-03-16.pdf
+  page: 53
+  quote: 'announced the distribution of # 390 million as cash dividends (4 3 per share) for the second half of the year 2025'
+- date: 2026-03
+  event: Regional geopolitical developments treated as a non-adjusting subsequent event; possible supply-chain and cost effects noted
+  financial_effect: None quantified
+  source: 4164_NAHDI/2025_Annual_filed2026-03-16.pdf
+  page: 53
+  quote: these events represent non-modifying subsequent events, as they arose as a result of circumstances that did not exist at the financial reporting date
+audit_opinion:
+- period: FY2022
+  opinion: Unmodified (Ernst & Young); no emphasis of matter found
+  emphasis_of_matter: none
+  source: 4164_NAHDI/2022_Annual_filed2023-03-19.pdf
+  page: 3
+- period: FY2023
+  opinion: Unmodified (Ernst & Young); no emphasis of matter found
+  emphasis_of_matter: none
+  source: 4164_NAHDI/2023_Annual_filed2024-03-18.pdf
+  page: 3
+- period: FY2024
+  opinion: Unmodified (KPMG); no emphasis of matter found
+  emphasis_of_matter: none
+  source: 4164_NAHDI/2024_Annual_filed2025-03-12.pdf
+  page: 3
+- period: FY2025
+  opinion: Unmodified (KPMG, scanned report read by OCR); no emphasis of matter found
+  emphasis_of_matter: none
+  source: 4164_NAHDI/2025_Annual_filed2026-03-16.pdf
+  page: 3
+- period: 9M2026
+  opinion: Review conclusion unmodified (KPMG)
+  emphasis_of_matter: none
+  source: 4164_NAHDI/2026_Q3_filed2026-10-29.pdf
+  page: 4
+kpis_in_filings:
+- period: FY2024
+  kpi: Pharmacy leases terminated before expiry
+  value: 39
+  unit: count
+  source: 4164_NAHDI/2024_Annual_filed2025-03-12.pdf
+  page: 35
+- period: FY2025
+  kpi: Pharmacy leases terminated before expiry
+  value: 49
+  unit: count
+  source: 4164_NAHDI/2025_Annual_filed2026-03-16.pdf
+  page: 36
+- period: FY2022-9M2026
+  kpi: Number of pharmacies, openings, like-for-like sales
+  value: null
+  unit: count
+  status: not found
+  source: 4164_NAHDI/2025_Annual_filed2026-03-16.pdf
+  page: null
+special_extractions:
+- item: 'Finance cost composition: interest on lease liabilities and bank charges (no borrowings)'
+  period: FY2024
+  values:
+    lease_interest: 73719319
+    bank_charges: 42147857
+    FY2023_bank_charges: 32558609
+  unit: SAR
+  source: 4164_NAHDI/2024_Annual_filed2025-03-12.pdf
+  page: 45
+  quote: Bank charges 42,147,857 32,558,609
+- item: Finance cost composition FY2025
+  period: FY2025
+  values:
+    lease_interest: 88014420
+    bank_charges: 53849400
+  unit: SAR
+  source: 4164_NAHDI/2025_Annual_filed2026-03-16.pdf
+  page: 46
+  quote: Bank charges 53,849,400 42,147,857
+- item: Primary statements of all annuals and both Q3 interims are scanned images; values were read by OCR and checked to printed subtotals in stage A (overrides 4164.csv).
+open_questions:
+- Zakat and tax charge fell to SAR 13.8m (FY2024) and SAR 15.2m (FY2025) from SAR 51.6m (FY2023); the zakat note (FY2025 annual note 19) gives the movement but no reason.
+- Pharmacy count, openings and like-for-like sales are not in the financial statements; growth from new pharmacies and clinics is not determinable.

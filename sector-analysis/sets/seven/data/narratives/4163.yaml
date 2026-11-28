@@ -1,0 +1,140 @@
+ticker: '4163'
+headline: Revenue rose from SAR 5,372m (FY2022) to SAR 6,736m (FY2025), 7.8% a year, but attributable profit peaked at SAR 351m in FY2024 (restated) and fell to SAR 322m in FY2025 and to SAR 100m in 9M 2026 (-61.6%), when revenue fell 4.7%, a SAR 24.4m credit-loss charge was booked and operating cash flow dropped 63.8% as receivables nearly doubled.
+lfl_basis:
+  definition_used: 'Standard bridge on IFRS revenue. Al Dawaa made no acquisitions or disposals of businesses from FY2022 to 9M 2026 (foreign subsidiaries are not yet operating and held at cost; associates are equity-accounted), so perimeter effects are nil. Revenue is in SAR and Bahraini dinar (pegged), so FX is nil. One accounting/other item is quantified: revenue is shown after a voluntary social-services contribution (SAR 44.3m in FY2025, SAR 8.9m in FY2024). The statements give no pharmacy count, openings or like-for-like sales, so the new-capacity step and like-for-like growth are not determinable.'
+  perimeter_changes:
+  - event: No business combinations or disposals
+    date: FY2022-9M2026
+    effect: nil
+    source: 4163_ALDAWAA/2025_Annual_filed2026-05-11.pdf p.13-14
+  - event: 33.33% of National Parcel Stations Network Company acquired (associate)
+    date: '2025'
+    effect: equity-accounted; no revenue
+    source: 4163_ALDAWAA/2025_Annual_filed2026-05-11.pdf p.14
+  capacity_changes:
+  - event: Pharmacy openings and closures not disclosed
+    date: FY2022-9M2026
+    effect: not determinable
+    source: 4163_ALDAWAA/2025_Annual_filed2026-05-11.pdf p.45
+  fx_exposure: KSA revenue plus SAR 2.0m in Bahrain (FY2025); the Bahraini dinar is pegged to the US dollar. No FX effect.
+  price_volume_support: Not determinable. Revenue is split by type (retail, wholesale, logistics) but no prices, volumes, transactions or store counts are disclosed.
+  confidence: Medium (perimeter and FX nil with High confidence; CSR deduction disclosed; new capacity not determinable)
+price_volume:
+- period: FY2025 vs FY2024
+  text: Revenue rose SAR 282m (+4.4%). Retail rose 3.0% (SAR 6,081m to SAR 6,262m), wholesale and others 24.8% (SAR 328m to SAR 410m) and logistics 43.0% (SAR 45.0m to SAR 64.4m). The larger CSR deduction (SAR 44.3m vs SAR 8.9m) took 0.5 pp off growth (we calculate). Prices and volumes are not disclosed.
+  basis: disclosed (revenue by type); split not determinable
+  confidence: High for the amounts; the split is not determinable
+  source: 4163_ALDAWAA/2025_Annual_filed2026-05-11.pdf p.45
+  refs:
+  - 4163-FY2025-REV
+  - 4163-FY2024-REV
+- period: 9M2026 vs 9M2025
+  text: Revenue fell SAR 239m (-4.7%). The new segment note shows retail revenue down 10.1% (SAR 4,657m to SAR 4,184m) while wholesale rose 62.3% (SAR 350m to SAR 569m) and logistics 32.1% (SAR 46.0m to SAR 60.7m). The interim does not explain the retail fall.
+  basis: disclosed (segment revenue); split not determinable
+  confidence: High for the amounts
+  source: 4163_ALDAWAA/2026_Q3_filed2026-11-11.pdf p.23-24
+  refs:
+  - 4163-9M2026-REV
+  - 4163-9M2025-REV
+profit_and_margin:
+  drivers:
+  - period: FY2023
+    driver: Revenue +6.9% and gross profit +4.3% (gross margin 36.7% vs 37.6%, we calculate). Operating income rose 7.3% to SAR 467m although FY2022 had included a SAR 59.3m fair-value gain on swaps; attributable profit rose 7.8% to SAR 329m. Net margin 5.7%.
+    source: 4163_ALDAWAA/2024_Annual_filed2025-03-21.pdf p.8; 4163_ALDAWAA/2023_Annual_filed2024-03-21.pdf p.8
+    refs:
+    - 4163-FY2023-REV
+    - 4163-FY2023-GP
+    - 4163-FY2023-OPINC
+    - 4163-FY2022-OPINC
+    - 4163-FY2023-NI_ATTR
+  - period: FY2024
+    driver: Revenue +12.4%, with retail revenue up 11.7% (SAR 5,443m to SAR 6,081m) and gross profit +9.0%. Operating income rose 6.8% to SAR 499m and attributable profit 6.7% to SAR 351m (restated; SAR 370m as first reported). Net margin 5.4%. Operating cash flow fell 4.7% to SAR 692m as trade receivables rose by SAR 304m.
+    source: 4163_ALDAWAA/2025_Annual_filed2026-05-11.pdf p.8, p.11, p.55; 4163_ALDAWAA/2024_Annual_filed2025-03-21.pdf p.43
+    refs:
+    - 4163-FY2024-REV
+    - 4163-FY2024-GP
+    - 4163-FY2024-OPINC
+    - 4163-FY2024-NI_ATTR
+    - 4163-FY2024-CFO
+  - period: FY2025
+    driver: Revenue +4.4% and gross profit +3.3% (gross margin 35.2%), but selling and distribution expenses rose 6.9% to SAR 1,771m, so operating income fell 6.7% to SAR 465m. Attributable profit fell 8.4% to SAR 322m despite a lower zakat charge (SAR 10.1m vs SAR 22.1m, which included SAR 5.8m for prior years). Net margin 4.8%; ROE 23.1% (27.7%). Capex fell 36.0% to SAR 152m and free cash flow rose 11.8% to SAR 508m.
+    source: 4163_ALDAWAA/2025_Annual_filed2026-05-11.pdf p.8, p.46-47, p.11
+    refs:
+    - 4163-FY2025-REV
+    - 4163-FY2025-GP
+    - 4163-FY2025-OPINC
+    - 4163-FY2025-ZAKAT_TAX
+    - 4163-FY2025-NI_ATTR
+    - 4163-FY2025-CAPEX
+    - 4163-FY2025-FCF
+  - period: 9M2026
+    driver: Revenue -4.7% and gross profit -7.0% (gross margin 34.5% vs 35.4%, we calculate). A new SAR 24.4m provision for expected credit losses and flat selling costs cut operating income 40.6% to SAR 215m; finance costs rose to SAR 102m (SAR 92.0m) and the share of associates' losses to SAR 5.5m. Attributable profit fell 61.6% to SAR 100m; net margin 2.1% (5.2%) and annualised ROE 9.4% (25.2%).
+    source: 4163_ALDAWAA/2026_Q3_filed2026-11-11.pdf p.5
+    refs:
+    - 4163-9M2026-REV
+    - 4163-9M2026-GP
+    - 4163-9M2026-OPINC
+    - 4163-9M2026-FIN_COST
+    - 4163-9M2026-SHARE_JV
+    - 4163-9M2026-NI_ATTR
+  - period: 9M2026
+    driver: Operating cash flow fell 63.8% to SAR 171m as trade receivables rose by SAR 447m (balance SAR 998m vs SAR 575m at end-2025); borrowings rose to SAR 716m (SAR 580m) and net debt to SAR 2,395m.
+    source: 4163_ALDAWAA/2026_Q3_filed2026-11-11.pdf p.8 (cash flow), p.4, p.20-21
+    refs:
+    - 4163-9M2026-CFO
+    - 4163-9M2026-DEBT
+    - 4163-9M2026-NET_DEBT
+  - period: FY2022-FY2025
+    driver: Write-offs of property and equipment recur every year (SAR 7.8m in FY2022, SAR 5.8m in FY2023, SAR 3.5m in FY2024, SAR 7.9m in FY2025 and SAR 7.8m in 9M 2026) as pharmacies are refitted or closed; they are treated as part of normal operations, not as one-offs.
+    source: 4163_ALDAWAA/2025_Annual_filed2026-05-11.pdf p.47; 4163_ALDAWAA/2026_Q3_filed2026-11-11.pdf p.8; 4163_ALDAWAA/2023_Annual_filed2024-03-21.pdf p.11
+    refs:
+    - 4163-FY2025-OPINC
+    - 4163-9M2026-OPINC
+  one_offs:
+  - item: Fair value gain on swap derivatives (removed for EBITDA excluding one-offs)
+    period: FY2022
+    amount_sar_m: 59.3
+    line: Fair value gain on swap derivatives (below operating profit, inside our operating income)
+    source: 4163_ALDAWAA/2023_Annual_filed2024-03-21.pdf p.8
+    tax_nci: '19.4% of attributable profit, a fair-value result outside retail operations; zakat effect not disclosed; no non-controlling interests: after-tax effect not determinable, profit kept as reported'
+developments:
+- date: '2022-03-14'
+  category: event
+  text: Listed on the Saudi Exchange with a 30% free float.
+  source: 4163_ALDAWAA/2025_Annual_filed2026-05-11.pdf p.13
+- date: '2024'
+  category: strategy
+  text: Set up Modawaa and Rieaya Medical Company (49%) with Mouwasat for medical clinics; not yet operating.
+  source: 4163_ALDAWAA/2025_Annual_filed2026-05-11.pdf p.14
+- date: '2025'
+  category: M&A
+  text: Bought 33.33% of National Parcel Stations Network Company (logistics), accounted as an associate; converted its logistics branch into a subsidiary.
+  source: 4163_ALDAWAA/2025_Annual_filed2026-05-11.pdf p.14
+- date: '2026-05-03'
+  category: event
+  text: FY2025 statements approved with a restatement of FY2024 for prior-period errors (end-of-service benefits, bonus accrual, Iqama fees, import purchases, logistics revenue timing).
+  source: 4163_ALDAWAA/2025_Annual_filed2026-05-11.pdf p.7, p.50-56
+- date: 2026 (9M)
+  category: operations
+  text: The interim introduced three reported segments (retail, wholesale, logistics); wholesale revenue rose 62.3% while retail fell 10.1%.
+  source: 4163_ALDAWAA/2026_Q3_filed2026-11-11.pdf p.23-24
+- date: '2026'
+  category: event
+  text: Auditor changed from KPMG to Ernst & Young.
+  source: 4163_ALDAWAA/2026_Q3_filed2026-11-11.pdf p.3
+what_it_means:
+  improved: Revenue grew 7.8% a year from FY2022 to FY2025, with wholesale and logistics growing fastest, and free cash flow held near SAR 500m a year (SAR 508m in FY2025).
+  weakened: 'Profitability fell after FY2024: net margin 4.8% in FY2025 and 2.1% in 9M 2026, as selling costs outgrew revenue and a SAR 24.4m credit-loss charge was booked; 9M 2026 operating cash flow fell 63.8% to SAR 171m.'
+  why: In 9M 2026 retail revenue fell 10.1% while lower-margin wholesale grew, and trade receivables rose to SAR 998m, funded partly by more short-term borrowing (SAR 716m).
+  uncertain: The filings do not explain the retail decline or name the customers behind the receivables build, and give no pharmacy count or like-for-like sales; FY2024 figures were restated for prior-period errors in the FY2025 annual.
+confidence_overall: Medium
+data_notes:
+- 'FY2024 P&L and balance sheet are restated (FY2025 annual note 34, p.50-56): profit SAR 370.1m -> 351.4m; equity SAR 1,456.5m -> 1,329.8m. FY2023 balance-sheet figures (TA SAR 4,733m, equity SAR 1,210m) are the restated 1 January 2024 column of the FY2025 annual, while FY2023 profit is not restated, so FY2023-FY2024 ROE mixes restated equity with unrestated FY2023 profit.'
+- 9M 2025 P&L comparatives in the 2026 Q3 interim were not restated (impact judged immaterial, note 2.1). 9M 2025 equity (SAR 1,425m) is restated via the opening balance in the statement of changes in equity; 9M 2025 total assets (SAR 5,229m) come from the 2026 Q3 XBRL only (the 2025 Q3 PDF printed SAR 5,175m before restatement).
+- FY2024 operating cash flow (SAR 692m) is the FY2025 annual comparative, after SAR 8.3m was moved to investing activities; the FY2024 annual printed SAR 683m.
+- Capex includes additions to intangible assets and 9M D&A includes right-of-use depreciation (both corrected from the PDF cash-flow statements, p.11 of each annual and p.8 of the 2026 Q3 interim).
+- FY2025 share of associates (-SAR 3.9m) excludes a SAR 0.2m write-off of an investment in unconsolidated subsidiaries, which stays in operating income.
+- Debt at 30 Sep 2026 includes a SAR 25.5m bank overdraft; the cash-flow statement shows cash net of the overdraft (SAR 6.2m) while the balance sheet shows SAR 31.7m.
+- Revenue is shown after a voluntary social-services contribution (SAR 44.3m FY2025, SAR 8.9m FY2024; note 23).
+- The annual statements report one operating segment; the 2026 Q3 interim reports retail, wholesale and logistics segments, so segment history starts in 9M 2025.
+- There is no finance income line; finance cost includes interest on the end-of-service benefit liability (SAR 15.3m in FY2025, note 27).

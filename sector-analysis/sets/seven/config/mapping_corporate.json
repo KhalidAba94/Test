@@ -1,0 +1,231 @@
+{
+ "_comment": "Corporate template (non-financial companies): metric -> XBRL section(s) and candidate labels in priority order. 'sum' sums all listed labels found. Based on the Energy mapping, plus right-of-use depreciation in D&A (template change T-25), borrowings and lease liabilities.",
+ "_balance_sections": [
+  "300200"
+ ],
+ "REV": {
+  "sections": [
+   "300300",
+   "300400"
+  ],
+  "labels": [
+   "Total revenue",
+   "Revenue"
+  ]
+ },
+ "OIRS": {
+  "sections": [
+   "300300",
+   "300400"
+  ],
+  "labels": [
+   "Other income related to sales"
+  ]
+ },
+ "COGS": {
+  "sections": [
+   "300400"
+  ],
+  "labels": [
+   "Cost of sales"
+  ]
+ },
+ "GP": {
+  "sections": [
+   "300400"
+  ],
+  "labels": [
+   "Gross profit (loss)"
+  ]
+ },
+ "OPINC_REP": {
+  "sections": [
+   "300300",
+   "300400"
+  ],
+  "labels": [
+   "Operating profit (loss)"
+  ]
+ },
+ "PBT": {
+  "sections": [
+   "300300",
+   "300400"
+  ],
+  "labels": [
+   "Profit (loss) before zakat and income tax from continuing operations",
+   "Profit (loss) before zakat and income tax"
+  ]
+ },
+ "FIN_COST": {
+  "sections": [
+   "300300",
+   "300400"
+  ],
+  "labels": [
+   "Finance costs"
+  ]
+ },
+ "FIN_INC": {
+  "sections": [
+   "300300",
+   "300400"
+  ],
+  "labels": [
+   "Finance income",
+   "Finance and other income"
+  ]
+ },
+ "SHARE_JV": {
+  "sections": [
+   "300300",
+   "300400"
+  ],
+  "labels": [
+   "Share of profit (loss) of joint ventures and associates"
+  ]
+ },
+ "ZAKAT_TAX": {
+  "sections": [
+   "300300",
+   "300400"
+  ],
+  "labels": [
+   "Income taxes and zakat",
+   "Zakat expenses on continuing operations for period",
+   "Income tax on continuing operations for period"
+  ],
+  "sum": true
+ },
+ "NI": {
+  "sections": [
+   "300300",
+   "300400"
+  ],
+  "labels": [
+   "Profit (loss) for period"
+  ]
+ },
+ "NI_ATTR": {
+  "sections": [
+   "300300",
+   "300400"
+  ],
+  "labels": [
+   "Profit (loss), attributable to equity holders of parent company"
+  ]
+ },
+ "NI_NCI": {
+  "sections": [
+   "300300",
+   "300400"
+  ],
+  "labels": [
+   "Profit (loss), attributable to non-controlling interests"
+  ]
+ },
+ "DA_CF": {
+  "sections": [
+   "300700"
+  ],
+  "labels": [
+   "Adjustments for depreciation and impairment (reversal of impairment) of property, plant and equipments",
+   "Depreciation and amortization",
+   "Adjustments for amortization and impairment (reversal of impairment) of intangible assets",
+   "Adjustments for depreciation of right-of-use assets",
+   "Adjustments for depreciation and amortisation expense",
+   "Depreciation of right-of-use assets",
+   "Depreciation of right of use assets",
+   "Amortisation on right-of-use assets",
+   "Depreciation on right-of-use assets",
+   "Depreciation of right-of-use asset"
+  ],
+  "sum": true
+ },
+ "IMPAIR_CF": {
+  "sections": [
+   "300700"
+  ],
+  "labels": [
+   "Adjustments for impairment loss (reversal of impairment loss) recognized in statement of Income",
+   "Adjustments for Impairment and held for sale remeasurement losses"
+  ],
+  "sum": true
+ },
+ "CFO": {
+  "sections": [
+   "300700"
+  ],
+  "labels": [
+   "Net cash flows from (used in) operating activities"
+  ]
+ },
+ "CAPEX": {
+  "sections": [
+   "300700"
+  ],
+  "labels": [
+   "Purchase of property, plant and equipment",
+   "Capital expenditures",
+   "Purchase of intangible assets",
+   "Expenditure on other intangible assets"
+  ],
+  "sum": true,
+  "abs": true
+ },
+ "TA": {
+  "sections": [
+   "300200"
+  ],
+  "labels": [
+   "Total assets"
+  ]
+ },
+ "TE": {
+  "sections": [
+   "300200"
+  ],
+  "labels": [
+   "Total equity"
+  ]
+ },
+ "EQ_ATTR": {
+  "sections": [
+   "300200"
+  ],
+  "labels": [
+   "Equity attributable to owners of parent"
+  ]
+ },
+ "CASH": {
+  "sections": [
+   "300200"
+  ],
+  "labels": [
+   "Cash and cash equivalents",
+   "Bank balances and cash"
+  ]
+ },
+ "DEBT": {
+  "sections": [
+   "300200"
+  ],
+  "labels": [
+   "Debt securities, term loans, borrowings and sukuks in issue",
+   "Short term borrowings",
+   "Current portion of long term loans",
+   "Short term sukuk"
+  ],
+  "sum": true
+ },
+ "LEASE_LIAB": {
+  "sections": [
+   "300200"
+  ],
+  "labels": [
+   "Finance leases, non-current",
+   "Finance lease, current"
+  ],
+  "sum": true
+ }
+}

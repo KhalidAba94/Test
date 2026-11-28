@@ -1,0 +1,199 @@
+# Evidence extracted from Al-Andalus Property Company filings (archive: 4320_ALANDALUS). Facts only; page = physical PDF page (1-based).
+# Units: SAR (Actuals) as presented. Primary statements are scanned images (FY2022 annual fully scanned; 2023-2025 annuals pp.8-12 or 7-10;
+# Q3 interims pp.3-7), read by OCR at 300 dpi and checked visually. The FY2023 segment note (2023 annual pp.41-42) is a sideways scanned page.
+ticker: "4320"
+company: "Al-Andalus Property Company"
+
+perimeter_changes:
+  - event: "Mawared Al-Tamayuz Real Estate Company incorporated (holds the land lease for Malqa Al-Andalus Tower, under construction)"
+    type: new_subsidiary
+    date: "2022-06-26"
+    consideration: null
+    revenue_contribution: 0
+    profit_contribution: null
+    pro_forma_revenue: null
+    period: "FY2022"
+    unit: "SAR"
+    source: "4320_ALANDALUS/2025_Annual_filed2026-03-12.pdf"
+    page: 15
+    quote: "Mawared Al-Tamayuz Real Estate Company holds a lease agreement of a land located in Riyadh on which Malqa Al-Analus Tower being constructed."
+  - event: "Purchase of Yassmin Al-Andalus Tower, an administrative (office) tower in Riyadh, financed by a Saudi Awwal Bank facility; carrying amount SAR 202.9m at end-2023"
+    type: acquisition
+    date: "2023 (exact date not given)"
+    consideration: "not disclosed separately (FY2023 investment-property additions SAR 272.7m include it and the Al-Andalus Mall expansion)"
+    revenue_contribution: null
+    profit_contribution: null
+    pro_forma_revenue: null
+    period: "FY2023"
+    unit: "SAR"
+    source: "4320_ALANDALUS/2023_Annual_filed2024-03-10.pdf"
+    page: 29
+    quote: "Additions to investment properties during the year are mainly represented in the purchase of an administrative tower in Riyadh city (Yassmin Al-Andalus Tower)"
+  - event: "Sale of the 70% stake in Manafea Al-Andalus Company (leasehold mall property, investment property SAR 59.0m) to Saudi Tourism Development Company, effective on the 1 January 2025 balances"
+    type: disposal
+    date: "2025-02-27 (effective 1 Jan 2025)"
+    consideration: "SAR 15m"
+    revenue_contribution: null
+    profit_contribution: 3956055
+    pro_forma_revenue: null
+    period: "FY2025"
+    unit: "SAR"
+    source: "4320_ALANDALUS/2025_Annual_filed2026-03-12.pdf"
+    page: 50
+    quote: "the parties agreed that the sales effective transaction date and the shares shall be sold based on the balances of subsidiary as at 1st January 2025."
+    note: "Al Marwah Plaza (fair value SAR 30m at end-2024) left the valuation list in 2025 (p.31). Manafea's FY2024 revenue is not disclosed."
+  - event: "Two subsidiaries incorporated in January and February 2026 (AlAndalus Litashid Almabani Aldirasia; Marafiq AlAndalus Allujistiyah); not yet operating"
+    type: new_subsidiary
+    date: "2026-01-26 and 2026-02-16"
+    consideration: null
+    revenue_contribution: 0
+    profit_contribution: null
+    pro_forma_revenue: null
+    period: "9M2026"
+    unit: "SAR"
+    source: "4320_ALANDALUS/2026_Q3_filed2026-11-04.pdf"
+    page: 9
+    quote: "The subsidiary has not yet commenced commercial operation."
+  - event: "Al-Ahli REIT Fund 1 consolidated as a 68.73% subsidiary (Alandalus Mall, the Al-Andalus Mall hotel, Salama Tower and QBIC Plaza); the fund is also listed (SEVEN REIT 4338)"
+    type: new_subsidiary
+    date: "unchanged FY2022-9M2026"
+    consideration: null
+    revenue_contribution: null
+    profit_contribution: null
+    pro_forma_revenue: null
+    period: "FY2022-9M2026"
+    unit: "SAR"
+    source: "4320_ALANDALUS/2025_Annual_filed2026-03-12.pdf"
+    page: 15
+    quote: "Al-Ahli REIT Fund 1 (a) Kingdom of Saudi Arabia 68.73% 68.73%"
+
+segments:
+  # Operating segments; profit = net income before zakat by segment. All operations in Saudi Arabia.
+  - {period: "FY2022", segment: "Retail and operation (malls)", basis: operating, revenue: 155906282, profit: 72050262, unit: "SAR", source: "4320_ALANDALUS/2023_Annual_filed2024-03-10.pdf", page: 42}
+  - {period: "FY2022", segment: "Hospitality (Al-Andalus Mall hotel)", basis: operating, revenue: 14384456, profit: -4570370, unit: "SAR", source: "4320_ALANDALUS/2023_Annual_filed2024-03-10.pdf", page: 42}
+  - {period: "FY2022", segment: "Office (Salama Tower, QBIC Plaza)", basis: operating, revenue: 45817490, profit: 14619327, unit: "SAR", source: "4320_ALANDALUS/2023_Annual_filed2024-03-10.pdf", page: 42}
+  - {period: "FY2023", segment: "Retail and operation (malls)", basis: operating, revenue: 153749940, profit: 59758329, unit: "SAR", source: "4320_ALANDALUS/2024_Annual_filed2025-03-23.pdf", page: 42}
+  - {period: "FY2023", segment: "Hospitality", basis: operating, revenue: 15588557, profit: -4338193, unit: "SAR", source: "4320_ALANDALUS/2024_Annual_filed2025-03-23.pdf", page: 42}
+  - {period: "FY2023", segment: "Office (incl. Yassmin Al-Andalus Tower)", basis: operating, revenue: 45817490, profit: -6453385, unit: "SAR", source: "4320_ALANDALUS/2024_Annual_filed2025-03-23.pdf", page: 42}
+  - {period: "FY2024", segment: "Retail and operation (malls)", basis: operating, revenue: 159006838, profit: 38938190, unit: "SAR", source: "4320_ALANDALUS/2025_Annual_filed2026-03-12.pdf", page: 43}
+  - {period: "FY2024", segment: "Hospitality", basis: operating, revenue: 19146513, profit: -10265527, unit: "SAR", source: "4320_ALANDALUS/2025_Annual_filed2026-03-12.pdf", page: 43}
+  - {period: "FY2024", segment: "Office", basis: operating, revenue: 57734174, profit: -7181326, unit: "SAR", source: "4320_ALANDALUS/2025_Annual_filed2026-03-12.pdf", page: 43}
+  - {period: "FY2025", segment: "Retail and operation (malls)", basis: operating, revenue: 160163198, profit: 27338442, unit: "SAR", source: "4320_ALANDALUS/2025_Annual_filed2026-03-12.pdf", page: 42}
+  - {period: "FY2025", segment: "Hospitality", basis: operating, revenue: 15331011, profit: -10387308, unit: "SAR", source: "4320_ALANDALUS/2025_Annual_filed2026-03-12.pdf", page: 42}
+  - {period: "FY2025", segment: "Office", basis: operating, revenue: 61582775, profit: -5219526, unit: "SAR", source: "4320_ALANDALUS/2025_Annual_filed2026-03-12.pdf", page: 42}
+  - {period: "9M2025", segment: "Retail and operation (malls)", basis: operating, revenue: 115551432, profit: 19947754, unit: "SAR", source: "4320_ALANDALUS/2026_Q3_filed2026-11-04.pdf", page: 19}
+  - {period: "9M2025", segment: "Hospitality", basis: operating, revenue: 10660626, profit: -5723220, unit: "SAR", source: "4320_ALANDALUS/2026_Q3_filed2026-11-04.pdf", page: 19}
+  - {period: "9M2025", segment: "Office", basis: operating, revenue: 44478360, profit: -4435048, unit: "SAR", source: "4320_ALANDALUS/2026_Q3_filed2026-11-04.pdf", page: 19}
+  - {period: "9M2026", segment: "Retail and operation (malls)", basis: operating, revenue: 136979598, profit: 35495610, unit: "SAR", source: "4320_ALANDALUS/2026_Q3_filed2026-11-04.pdf", page: 18}
+  - {period: "9M2026", segment: "Hospitality", basis: operating, revenue: 17297900, profit: -3267707, unit: "SAR", source: "4320_ALANDALUS/2026_Q3_filed2026-11-04.pdf", page: 18}
+  - {period: "9M2026", segment: "Office", basis: operating, revenue: 58080504, profit: 11372893, unit: "SAR", source: "4320_ALANDALUS/2026_Q3_filed2026-11-04.pdf", page: 18}
+  - {period: "FY2022-9M2026", segment: "Geographic", basis: geographic, revenue: null, profit: null, unit: "SAR", source: "4320_ALANDALUS/2025_Annual_filed2026-03-12.pdf", page: 42, quote: "All of the Group operating sectors operate within the borders of the Kingdom of Saudi Arabia."}
+
+revenue_drivers:
+  - {period: "FY2023", driver: "Office segment revenue identical in FY2022 and FY2023 although Yassmin Al-Andalus Tower was bought in 2023 (see open questions)", value: 45817490, unit: "SAR", source: "4320_ALANDALUS/2024_Annual_filed2025-03-23.pdf", page: 42, quote: "Revenue 153,749,940 15,588,557 45,817,490 - 215,155,987"}
+  - {period: "9M2026", driver: "Revenue by segment rose: retail +18.5%, hospitality +62.3%, office +30.6% (we calculate); the interim gives no explanation", value: 212358002, unit: "SAR", source: "4320_ALANDALUS/2026_Q3_filed2026-11-04.pdf", page: 18, quote: "Revenue 136,979,598 17,297,900 58,080,504 - 212,358,002"}
+  - {period: "FY2025", driver: "Al-Andalus Mall hotel under renovation (project under construction); impairment of SAR 3m (FY2024: SAR 8m)", value: null, unit: "SAR", source: "4320_ALANDALUS/2025_Annual_filed2026-03-12.pdf", page: 29, quote: "The project under construction represents cost incurred for renovation of Al-Andalus Mall Hotel."}
+
+one_offs:
+  - {period: "FY2022", item: "Gain on investments at FVTPL (Murabaha funds); the rest of 'revenue from investments in Murabaha deposits and funds' (SAR 3.18m) is deposit income", amount: 1130559, unit: "SAR", pnl_line: "Other income", recurring: true, source: "4320_ALANDALUS/2023_Annual_filed2024-03-10.pdf", page: 11, quote: "Gain on investment at fair value through profit or loss (3,751,187) (1,130,559)"}
+  - {period: "FY2022", item: "Impairment reversal on investment properties (impairment, outside EBITDA via IMPAIR_CF)", amount: 1840443, unit: "SAR", pnl_line: "Impairment reversal in investment properties", recurring: false, source: "4320_ALANDALUS/2023_Annual_filed2024-03-10.pdf", page: 9, quote: "Impairment reversal in investment properties 8 - 1,840,443"}
+  - {period: "FY2023", item: "Gain on investments at FVTPL (Murabaha deposits and funds)", amount: 3751187, unit: "SAR", pnl_line: "Other income", recurring: true, source: "4320_ALANDALUS/2023_Annual_filed2024-03-10.pdf", page: 39, quote: "Revenue from investments in Murabaha deposits and 3,751,187 4,314,367"}
+  - {period: "FY2023", item: "Reversal of provisions no longer required", amount: 2329847, unit: "SAR", pnl_line: "Other income", recurring: true, source: "4320_ALANDALUS/2023_Annual_filed2024-03-10.pdf", page: 39, quote: "Reversal of provisions no longer required 2,329,847 -"}
+  - {period: "FY2024", item: "Reversal of provisions no longer required", amount: 2704392, unit: "SAR", pnl_line: "Other income", recurring: true, source: "4320_ALANDALUS/2025_Annual_filed2026-03-12.pdf", page: 40, quote: "Reversal of provisions no longer required - 2,704,392"}
+  - {period: "FY2024", item: "Gain on investments at FVTPL (Murabaha deposits and funds)", amount: 925075, unit: "SAR", pnl_line: "Other income", recurring: true, source: "4320_ALANDALUS/2025_Annual_filed2026-03-12.pdf", page: 40, quote: "Commission income - Murabaha deposits and funds - 925,075"}
+  - {period: "FY2024", item: "Impairment of the Al-Andalus Mall hotel property and equipment (impairment, outside EBITDA)", amount: -8000000, unit: "SAR", pnl_line: "Impairment loss on property and equipment", recurring: false, source: "4320_ALANDALUS/2024_Annual_filed2025-03-23.pdf", page: 27, quote: "During 2024, the Group tested Al-Andalus Mall Hotel for impairment and recognized an impairment loss of SAR 8 million"}
+  - {period: "FY2025", item: "Gain on disposal of a subsidiary (Manafea Al-Andalus)", amount: 3956055, unit: "SAR", pnl_line: "Gain on disposal of a subsidiary (below operating profit, inside our operating income)", recurring: false, source: "4320_ALANDALUS/2025_Annual_filed2026-03-12.pdf", page: 50, quote: "Net gain on disposal of subsidiary 3,956,055"}
+  - {period: "FY2025", item: "Impairment of the Al-Andalus Mall hotel property and equipment (impairment, outside EBITDA)", amount: -3000000, unit: "SAR", pnl_line: "Impairment loss on property and equipment", recurring: false, source: "4320_ALANDALUS/2025_Annual_filed2026-03-12.pdf", page: 29, quote: "recognized an impairment loss of 3 million (2024: 8 million) with respect to property and equipment."}
+  - {period: "9M2025", item: "Gain on disposal of a subsidiary (Manafea Al-Andalus)", amount: 3956055, unit: "SAR", pnl_line: "Gain on disposal of a subsidiary", recurring: false, source: "4320_ALANDALUS/2026_Q3_filed2026-11-04.pdf", page: 5, quote: "Gain on disposal of a subsidiary 16 - - - 3,956,055"}
+  - {period: "9M2026", item: "Gain on financial instruments at FVTPL (SAR 221,846) and loss on disposal of property and equipment (SAR 253,119)", amount: -31273, unit: "SAR", pnl_line: "Other income / operating expenses (cash-flow add-backs)", recurring: false, source: "4320_ALANDALUS/2026_Q3_filed2026-11-04.pdf", page: 7, quote: "Loss on disposal of property and equipment 253,119 -"}
+
+restatements:
+  - period_restated: "FY2023 (in the FY2024 annual)"
+    item: "Right-of-use land (SAR 70.7m) presented inside investment properties instead of a separate line; depreciation of investment properties SAR 22.8m + right-of-use SAR 6.2m shown as SAR 28.9m"
+    from: null
+    to: null
+    unit: "SAR"
+    reason: "Re-presentation only; totals and profit unchanged"
+    source: "4320_ALANDALUS/2024_Annual_filed2025-03-23.pdf"
+    page: 10
+    quote: "- Investment properties 8 35,131,876 28,923,185"
+  - period_restated: "9M2025 depreciation (DA_CF)"
+    item: "NOT A RESTATEMENT: the XBRL original (34.887) added interest on lease liabilities (5,940,024) to depreciation; printed value 28,947,413 in both interims"
+    from: 34887437
+    to: 28947413
+    unit: "SAR"
+    reason: "XBRL tagging difference"
+    source: "4320_ALANDALUS/2025_Q3_filed2025-11-06.pdf"
+    page: 7
+    quote: "Investment properties 6 24,900,848 25,216,571"
+  - period_restated: "FY2021, FY2022 lease liabilities; FY2023-9M2026 borrowings (stage A overrides)"
+    item: "XBRL had taken only one of the current / non-current lines; the printed balance sheets were used (e.g. FY2025 Islamic finance facilities 863,280,330 + 16,788,760)"
+    from: null
+    to: null
+    unit: "SAR"
+    reason: "XBRL line selection, not a restatement"
+    source: "4320_ALANDALUS/2025_Annual_filed2026-03-12.pdf"
+    page: 9
+    quote: "Islamic finance facilities 17 863,280,330 839,034,552"
+
+significant_events:
+  - date: "2024 and 2025"
+    event: "Equity-accounted West Jeddah Hospital Company (50%) loss: group share -SAR 48.2m in FY2024; the group guarantees up to SAR 766.5m of the associate's bank facilities"
+    financial_effect: "Share of results of associates -SAR 33.9m in FY2024 and -SAR 11.5m in FY2025"
+    source: "4320_ALANDALUS/2025_Annual_filed2026-03-12.pdf"
+    page: 33
+    quote: "The Group had issued a financial guarantee amounting up to 766.5 million to local bank in respect of credit facilities obtained by West Jeddah Hospital Company"
+  - date: "2025-02-27"
+    event: "Sale of the 70% stake in Manafea Al-Andalus for SAR 15m; gain SAR 3.96m; NCI of SAR 4.7m derecognised"
+    financial_effect: "Gain SAR 3,956,055 in FY2025"
+    source: "4320_ALANDALUS/2025_Annual_filed2026-03-12.pdf"
+    page: 50
+    quote: "the board of directors of the Group approved to sell the total interest owned (70%) in the subsidiary “Manafea Al-Andalus Company”"
+  - date: "2024 and 2025"
+    event: "Al-Andalus Mall hotel (DoubleTree by Hilton) impaired by SAR 8m (2024) and SAR 3m (2025); renovation in progress in 2025"
+    financial_effect: "IMPAIR_CF SAR 8.0m and SAR 3.0m"
+    source: "4320_ALANDALUS/2025_Annual_filed2026-03-12.pdf"
+    page: 29
+    quote: "The Group tested Al-Andalus Mall Hotel for impairment and recognized an impairment loss of 3 million (2024: 8 million)"
+  - date: "2026-10-19"
+    event: "Subsidiary Marafiq AlAndalus Allujistiyah bought a parcel of land in Riyadh (after the period end)"
+    financial_effect: "Not quantified here"
+    source: "4320_ALANDALUS/2026_Q3_filed2026-11-04.pdf"
+    page: 22
+    quote: "On 19 October 2026, one of the subsidiaries, Marafiq Alandalus Allujistiyah Company, acquired a parcel of land"
+  - date: "2026 (9M)"
+    event: "Part of the head office building moved from investment property to property and equipment (owner use)"
+    financial_effect: "Cost SAR 16.5m transferred; no revenue effect disclosed"
+    source: "4320_ALANDALUS/2026_Q3_filed2026-11-04.pdf"
+    page: 13
+    quote: "the management decided to use a portion of the head office building, which was previously rented out, for the Group's own operational purposes."
+
+audit_opinion:
+  - {period: "FY2022", opinion: "Unmodified (KPMG); no emphasis of matter found (scanned page)", emphasis_of_matter: none, source: "4320_ALANDALUS/2022_Annual_filed2023-03-12.pdf", page: 3}
+  - {period: "FY2023", opinion: "Unmodified (KPMG); no emphasis of matter found", emphasis_of_matter: none, source: "4320_ALANDALUS/2023_Annual_filed2024-03-10.pdf", page: 3}
+  - {period: "FY2024", opinion: "Unmodified (KPMG); no emphasis of matter found", emphasis_of_matter: none, source: "4320_ALANDALUS/2024_Annual_filed2025-03-23.pdf", page: 3}
+  - {period: "FY2025", opinion: "Unmodified (EY); other matter: FY2024 audited by another auditor", emphasis_of_matter: none, source: "4320_ALANDALUS/2025_Annual_filed2026-03-12.pdf", page: 6}
+  - {period: "9M2026", opinion: "Review conclusion unmodified (EY); no emphasis of matter", emphasis_of_matter: none, source: "4320_ALANDALUS/2026_Q3_filed2026-11-04.pdf", page: 3}
+
+kpis_in_filings:
+  - {period: "31 Dec 2025", kpi: "Occupancy assumption in the valuation of Alandalus Mall (fair value SAR 1,426.7m)", value: 99, unit: "%", source: "4320_ALANDALUS/2025_Annual_filed2026-03-12.pdf", page: 31}
+  - {period: "31 Dec 2025", kpi: "Occupancy assumption in the valuation of Yassmin Al-Andalus Tower (fair value SAR 214.0m)", value: 100, unit: "%", source: "4320_ALANDALUS/2025_Annual_filed2026-03-12.pdf", page: 31}
+  - {period: "31 Dec 2025", kpi: "Occupancy assumptions for the neighbourhood centres: Al Tilal 95%, Al Sahafa 100%, Al Yarmouk 100%", value: null, unit: "%", source: "4320_ALANDALUS/2025_Annual_filed2026-03-12.pdf", page: 31}
+  - {period: "31 Dec 2025", kpi: "Fair value of investment properties incl. lease liability add-back (FY2024: SAR 2,371.0m)", value: 2346.1, unit: "SAR m", source: "4320_ALANDALUS/2025_Annual_filed2026-03-12.pdf", page: 32}
+  - {period: "FY2022-9M2026", kpi: "Gross leasable area, visitors (footfall), hotel occupancy or room rates, like-for-like rent growth", value: null, unit: "count", status: "not found", source: "4320_ALANDALUS/2025_Annual_filed2026-03-12.pdf", page: null}
+
+special_extractions:
+  - name: "Finance income inside other income (no separate line on the face)"
+    unit: "SAR"
+    source: "4320_ALANDALUS/2025_Annual_filed2026-03-12.pdf"
+    page: 40
+    FY2022: "interest on current accounts 1,020,485 + Murabaha deposits and funds 4,314,367 (of which FVTPL gain 1,130,559) - FY2023 FS p.39"
+    FY2023: "interest on current accounts 1,253,640 + Murabaha deposits and funds 3,751,187 (FVTPL gain) - FY2024 FS p.39"
+    FY2024: "commission on current accounts 3,544,055 + Murabaha deposits and funds 925,075 (FVTPL gain)"
+    FY2025: "commission on current accounts 2,901,226"
+
+open_questions:
+  - "The FY2023 segment note shows office revenue of exactly SAR 45,817,490 in both FY2022 and FY2023, although Yassmin Al-Andalus Tower was bought in 2023; the purchase date and the tower's revenue are not disclosed."
+  - "Manafea Al-Andalus (sold effective 1 Jan 2025) revenue in FY2024 is not disclosed, so the perimeter effect on FY2025 cannot be measured."
+  - "The 24.4% revenue rise in 9M 2026 (retail +18.5%, hospitality +62.3%, office +30.6%) is not explained in the interim; we cannot tell whether the Al-Andalus Mall expansion, the hotel renovation or rent changes drove it."
+  - "No gross leasable area, visitor numbers or hotel occupancy are given; occupancy appears only as valuation inputs."

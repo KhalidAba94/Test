@@ -1,0 +1,33 @@
+# Company narrative template: one file per company in data/narratives/<ticker>.yaml.
+# Every claim must cite at least one source reference: "<source_id> p.<page>" or "<source_id> <sheet>!<cell>".
+# Leave a field as "not determinable" (with a reason) rather than guessing.
+ticker: ""
+company: ""
+sector: ""
+sub_industry: ""            # e.g. Integrated oil & gas | Drilling | Shipping | Refining | Fuel retail | Bank (Islamic/conventional)
+fiscal_year_end: "31 Dec"   # flag any change
+reporting_currency: "SAR"
+top_line_definition: ""     # e.g. "Revenue" or "Total operating income"; note any company-specific basis
+latest_ytd_period: ""       # e.g. "9M 2026 (1 Jan–30 Sep 2026) vs 9M 2025"
+
+lfl_basis:
+  definition_used: ""       # how LFL is defined for this company and why (standard bridge in METHODOLOGY s.4)
+  perimeter_changes: []     # - {event, date, effect_on, source}
+  capacity_changes: []      # - {event, date, units, source}
+  fx_exposure: ""           # non-pegged currencies and materiality
+  price_volume_support: ""  # what disclosure allows a price/volume split, or "not determinable"
+  confidence: ""            # High | Medium | Low | Not determinable
+
+profit_and_margin:
+  drivers: []               # - {period, driver, evidence, source}
+  one_offs: []              # - {period, item, amount_sar_m, line, recurring: false, source}
+
+developments:               # dated, factual, sourced
+  - {date: "", category: "operations|capacity|M&A|strategy|mix|regulation|financing", text: "", source: ""}
+
+what_it_means:              # 2-4 sentences, each tied to a figure in the tables
+  improved: ""
+  weakened: ""
+  why: ""
+  uncertain: ""
+confidence_overall: ""

@@ -1,0 +1,479 @@
+ticker: '2283'
+company: The First Milling Company (First Milling)
+perimeter_changes:
+- event: Statutory merger with the former parent company (Al Raha Al Safi Food Company), accounted for as a common-control capital reorganisation
+    from 15 Sep 2022; it brought goodwill of SAR 1,090.7m, loans and SAR 81.5m of cash but no operating revenue
+  type: acquisition
+  date: '2022-09-15'
+  consideration: null
+  revenue_contribution: null
+  profit_contribution: null
+  pro_forma_revenue: null
+  period: FY2022
+  unit: SAR m
+  source: 2283_FIRST_MILLS/2022_Annual_filed2023-06-22.pdf
+  page: 63
+  quote: the Company completed a statutory merger with its Parent Company which resulted in the Company being the surviving entity
+- event: New subsidiary First Food Supplies Company Limited (distribution, 100%) established on 17 Mar 2024; a start-up, not an acquisition
+  type: new_subsidiary
+  date: '2024'
+  consideration: null
+  revenue_contribution: null
+  profit_contribution: null
+  pro_forma_revenue: null
+  period: FY2024
+  unit: SAR m
+  source: 2283_FIRST_MILLS/2024_Annual_filed2025-03-19.pdf
+  page: 12
+  quote: The Company announced the establishment of a new limited liability company called “First Food Supplies Company”
+- event: Acquisition of 100% of Al-Manar Feed Company (feed producer, Jeddah) on 18 Sep 2025 for SAR 77m; goodwill SAR 17.0m. Its FY2025 revenue
+    (SAR 3.34m) was all intra-group and eliminated
+  type: acquisition
+  date: '2025-09-18'
+  consideration: 77.0
+  revenue_contribution: 0.0
+  profit_contribution: -0.24
+  pro_forma_revenue: 0.0
+  period: FY2025
+  unit: SAR m
+  source: 2283_FIRST_MILLS/2025_Annual_filed2026-03-17.pdf
+  page: 30
+  quote: AMFC generated revenue of SR 3.34 million, which was fully eliminated on consolidation and a loss of SR 0.24 million
+- event: Acquisition of 60% of Al-Kenan Arabia for Trading Company (feed and bran distributor, Buraydah) on 1 Dec 2025 for SAR 36m; goodwill SAR
+    31.1m; non-controlling interest 40%
+  type: acquisition
+  date: '2025-12-01'
+  consideration: 36.0
+  revenue_contribution: 2.36
+  profit_contribution: 0.81
+  pro_forma_revenue: 16.88
+  period: FY2025
+  unit: SAR m
+  source: 2283_FIRST_MILLS/2025_Annual_filed2026-03-17.pdf
+  page: 31
+  quote: From the acquisition date to 31 December 2025, AATC contributed revenue of SR 2.36 million and a profit of SR 0.81 million
+- event: Al-Kenan Arabia revenue for 9M 2026 (first full nine months in the group)
+  type: acquisition
+  status: not found
+  period: 9M2026
+  unit: SAR m
+  source: 2283_FIRST_MILLS/2026_Q3_filed2026-11-02.pdf
+  page: 10
+  quote: ''
+  note: The 2026 Q3 interim lists the subsidiaries but gives no revenue contribution for Al-Kenan Arabia or Al-Manar Feed.
+segments:
+- period: FY2024
+  segment: Jeddah
+  basis: geographic
+  revenue: 472.41
+  profit: null
+  unit: SAR m
+  source: 2283_FIRST_MILLS/2025_Annual_filed2026-03-17.pdf
+  page: 25
+- period: FY2024
+  segment: Qassim
+  basis: geographic
+  revenue: 329.6
+  profit: null
+  unit: SAR m
+  source: 2283_FIRST_MILLS/2025_Annual_filed2026-03-17.pdf
+  page: 25
+- period: FY2024
+  segment: Tabuk
+  basis: geographic
+  revenue: 117.85
+  profit: null
+  unit: SAR m
+  source: 2283_FIRST_MILLS/2025_Annual_filed2026-03-17.pdf
+  page: 25
+- period: FY2024
+  segment: Al Ahsa
+  basis: geographic
+  revenue: 129.0
+  profit: null
+  unit: SAR m
+  source: 2283_FIRST_MILLS/2025_Annual_filed2026-03-17.pdf
+  page: 25
+- period: FY2025
+  segment: Jeddah
+  basis: geographic
+  revenue: 532.44
+  profit: null
+  unit: SAR m
+  source: 2283_FIRST_MILLS/2025_Annual_filed2026-03-17.pdf
+  page: 25
+- period: FY2025
+  segment: Qassim
+  basis: geographic
+  revenue: 364.04
+  profit: null
+  unit: SAR m
+  source: 2283_FIRST_MILLS/2025_Annual_filed2026-03-17.pdf
+  page: 25
+- period: FY2025
+  segment: Tabuk
+  basis: geographic
+  revenue: 125.72
+  profit: null
+  unit: SAR m
+  source: 2283_FIRST_MILLS/2025_Annual_filed2026-03-17.pdf
+  page: 25
+- period: FY2025
+  segment: Al Ahsa
+  basis: geographic
+  revenue: 124.17
+  profit: null
+  unit: SAR m
+  source: 2283_FIRST_MILLS/2025_Annual_filed2026-03-17.pdf
+  page: 25
+- period: 9M2025
+  segment: Jeddah
+  basis: geographic
+  revenue: 375.06
+  profit: null
+  unit: SAR m
+  source: 2283_FIRST_MILLS/2026_Q3_filed2026-11-02.pdf
+  page: 18
+- period: 9M2025
+  segment: Qassim
+  basis: geographic
+  revenue: 246.77
+  profit: null
+  unit: SAR m
+  source: 2283_FIRST_MILLS/2026_Q3_filed2026-11-02.pdf
+  page: 18
+- period: 9M2025
+  segment: Tabuk
+  basis: geographic
+  revenue: 91.22
+  profit: null
+  unit: SAR m
+  source: 2283_FIRST_MILLS/2026_Q3_filed2026-11-02.pdf
+  page: 18
+- period: 9M2025
+  segment: Al Ahsa
+  basis: geographic
+  revenue: 94.58
+  profit: null
+  unit: SAR m
+  source: 2283_FIRST_MILLS/2026_Q3_filed2026-11-02.pdf
+  page: 18
+- period: 9M2026
+  segment: Jeddah
+  basis: geographic
+  revenue: 496.27
+  profit: null
+  unit: SAR m
+  source: 2283_FIRST_MILLS/2026_Q3_filed2026-11-02.pdf
+  page: 18
+- period: 9M2026
+  segment: Qassim
+  basis: geographic
+  revenue: 300.63
+  profit: null
+  unit: SAR m
+  source: 2283_FIRST_MILLS/2026_Q3_filed2026-11-02.pdf
+  page: 18
+- period: 9M2026
+  segment: Tabuk
+  basis: geographic
+  revenue: 98.4
+  profit: null
+  unit: SAR m
+  source: 2283_FIRST_MILLS/2026_Q3_filed2026-11-02.pdf
+  page: 18
+- period: 9M2026
+  segment: Al Ahsa
+  basis: geographic
+  revenue: 84.61
+  profit: null
+  unit: SAR m
+  source: 2283_FIRST_MILLS/2026_Q3_filed2026-11-02.pdf
+  page: 18
+revenue_drivers:
+- period: FY2022
+  driver: 'Revenue by type of goods: flour 507.4, feed 273.7, bran 132.6 (FY2021: 494.9, 222.5, 83.6)'
+  value: 913.65
+  unit: SAR m
+  source: 2283_FIRST_MILLS/2022_Annual_filed2023-06-22.pdf
+  page: 57
+  quote: Flour 507,425,512 494,861,208
+- period: FY2023
+  driver: 'Revenue by type of goods: flour 552.9, feed 271.0, bran 140.3'
+  value: 964.26
+  unit: SAR m
+  source: 2283_FIRST_MILLS/2023_Annual_filed2024-03-14.pdf
+  page: 44
+  quote: Flour 552,903,730 507,425,512
+- period: FY2024
+  driver: 'Revenue by type of goods: flour 599.1, feed 311.9, bran 137.8'
+  value: 1048.85
+  unit: SAR m
+  source: 2283_FIRST_MILLS/2024_Annual_filed2025-03-19.pdf
+  page: 48
+  quote: Flour 599,124,549 552,903,730
+- period: FY2025
+  driver: 'Revenue by type of goods: flour 651.8, feed 351.7, bran 142.9'
+  value: 1146.37
+  unit: SAR m
+  source: 2283_FIRST_MILLS/2025_Annual_filed2026-03-17.pdf
+  page: 48
+  quote: Flour 651,839,323 599,124,549
+- period: 9M2026
+  driver: 'Nine-month revenue by type of goods: flour 526.1 (466.2), feed 369.3 (235.0), bran 84.6 (106.4)'
+  value: 979.9
+  unit: SAR m
+  source: 2283_FIRST_MILLS/2026_Q3_filed2026-11-02.pdf
+  page: 27
+  quote: Feed 138,061,447 97,391,697 369,278,009 235,027,912
+- period: FY2025
+  driver: 'Customer concentration: one customer of the Jeddah and Qassim segments provided SAR 264.13m, 23.04% of revenue (FY2024: SAR 188.14m,
+    17.93%)'
+  value: 264.13
+  unit: SAR m
+  source: 2283_FIRST_MILLS/2025_Annual_filed2026-03-17.pdf
+  page: 27
+  quote: 'Revenue from one customer of the Group’s Jeddah and Qassim segments represented approximately SR 264.13 million (2024: SR 188.14 million)'
+- period: 9M2026
+  driver: 'Customer concentration fell: the largest customer provided SAR 55.41m, 5.65% of revenue (9M 2025: SAR 160.78m, 19.91%)'
+  value: 55.41
+  unit: SAR m
+  source: 2283_FIRST_MILLS/2026_Q3_filed2026-11-02.pdf
+  page: 20
+  quote: 'Revenue from one customer of the Group represented approximately SR 55.41 million (30 September 2025: SR 160.78 million)'
+- period: FY2025
+  driver: 'Regulated prices: GFSA sets the selling price of flour in bags of 45kg and above; other products are priced freely'
+  value: null
+  unit: SAR m
+  source: 2283_FIRST_MILLS/2025_Annual_filed2026-03-17.pdf
+  page: 11
+  quote: Selling prices for certain flour products (45kg and above) are regulated by General Food Security Authority
+- period: FY2024
+  driver: Subsidised wheat bought from GFSA at SAR 180 per tonne, unchanged since 2017 (no subsidy change disclosed through 9M 2026)
+  value: 180
+  unit: SAR per tonne
+  source: 2283_FIRST_MILLS/2024_Annual_filed2025-03-19.pdf
+  page: 11
+  quote: SR 180 per metric ton since 2017
+- period: FY2022-9M2026
+  driver: Sales volumes (tonnes milled or sold) and capacity
+  status: not found
+  value: null
+  unit: count
+  source: 2283_FIRST_MILLS/2025_Annual_filed2026-03-17.pdf
+  page: 25
+  quote: ''
+  note: No volume, capacity or utilisation figures in any statement in the archive.
+one_offs:
+- period: FY2022
+  item: Initial public offering costs, recoverable from the shareholders and recorded as a shareholders' contribution
+  amount: 4.28
+  unit: SAR m
+  pnl_line: General and administrative expenses
+  recurring: false
+  source: 2283_FIRST_MILLS/2023_Annual_filed2024-03-14.pdf
+  page: 45
+  quote: Initial public offering (IPO) costs (note 31.2) 2,472,731 4,278,483
+- period: FY2022
+  item: Loss on disposal of property, plant and equipment (part of normal asset replacement; not treated as a one-off)
+  amount: 2.51
+  unit: SAR m
+  pnl_line: General and administrative expenses (other expenses)
+  recurring: false
+  source: 2283_FIRST_MILLS/2022_Annual_filed2023-06-22.pdf
+  page: 12
+  quote: Loss on disposal of property, plant and equipment 2,514,907
+- period: FY2023
+  item: Initial public offering costs
+  amount: 2.47
+  unit: SAR m
+  pnl_line: General and administrative expenses
+  recurring: false
+  source: 2283_FIRST_MILLS/2023_Annual_filed2024-03-14.pdf
+  page: 45
+  quote: Initial public offering (IPO) costs (note 31.2) 2,472,731 4,278,483
+- period: FY2024
+  item: Provision for a GFSA fine after an October 2024 inspection under the Flour Mills Law
+  amount: 2.0
+  unit: SAR m
+  pnl_line: Cost of revenue (other expenses, note 27.1)
+  recurring: false
+  source: 2283_FIRST_MILLS/2024_Annual_filed2025-03-19.pdf
+  page: 49
+  quote: 'has made a provision of full amount of SR 2 million in these consolidated financial statements (2023: NIL)'
+- period: FY2024
+  item: Loss on disposal of property, plant and equipment (below SAR 1m; not used in EBITDA excluding one-offs)
+  amount: 0.86
+  unit: SAR m
+  pnl_line: Gain on disposals of property, plant and equipment (inside operating profit)
+  recurring: false
+  source: 2283_FIRST_MILLS/2025_Annual_filed2026-03-17.pdf
+  page: 8
+  quote: ''
+- period: FY2025
+  item: Acquisition-related costs for Al-Manar Feed (external professional and due-diligence fees)
+  amount: 2.96
+  unit: SAR m
+  pnl_line: General and administrative expenses
+  recurring: false
+  source: 2283_FIRST_MILLS/2025_Annual_filed2026-03-17.pdf
+  page: 30
+  quote: The Group incurred acquisition-related costs of SR 2.96 million
+- period: FY2025
+  item: Acquisition-related costs for Al-Kenan Arabia
+  amount: 1.88
+  unit: SAR m
+  pnl_line: General and administrative expenses
+  recurring: false
+  source: 2283_FIRST_MILLS/2025_Annual_filed2026-03-17.pdf
+  page: 31
+  quote: The Group incurred acquisition-related costs of SR 1.88 million
+restatements:
+- period_restated: FY2021
+  item: 'Lease liabilities split: SAR 11.8m moved from non-current to current (total SAR 358.7m unchanged); CFO 2021 restated for lease interest
+    paid'
+  from: 347.999
+  to: 336.229
+  unit: SAR m
+  reason: Reclassification and comparative figures, FY2022 annual note 41 (auditor emphasis of matter)
+  source: 2283_FIRST_MILLS/2022_Annual_filed2023-06-22.pdf
+  page: 75
+  quote: current portion of lease liabilities for certain contracts were erroneously classified as non-current lease liabilities in the comparative
+    period
+- period_restated: FY2023
+  item: Finance costs (cost-of-hedging amortisation SAR 1.05m moved from finance income to finance costs)
+  from: 93.688
+  to: 94.739
+  unit: SAR m
+  reason: Re-presented in the FY2024 annual (notes 30 and 31); finance income rose by the same amount, profit unchanged
+  source: 2283_FIRST_MILLS/2024_Annual_filed2025-03-19.pdf
+  page: 50
+  quote: Amortisation of cost of hedging 2,756,736 1,050,924
+- period_restated: FY2023
+  item: Finance income
+  from: 32.743
+  to: 33.794
+  unit: SAR m
+  reason: Re-presented in the FY2024 annual (note 31)
+  source: 2283_FIRST_MILLS/2024_Annual_filed2025-03-19.pdf
+  page: 50
+  quote: Finance income on cash flow hedge (Profit rate cap) 28,927,427 28,008,912
+- period_restated: FY2023
+  item: Net cash from operating activities (change in amounts due from related parties, SAR 10.4m, moved to financing)
+  from: 317.893
+  to: 307.508
+  unit: SAR m
+  reason: Re-presented in the FY2024 annual cash-flow statement (image page 10); general reclassification statement in note 2.2
+  source: 2283_FIRST_MILLS/2024_Annual_filed2025-03-19.pdf
+  page: 13
+  quote: Corresponding figures have been rearranged and reclassified, wherever necessary, for the purpose of comparison.
+significant_events:
+- date: '2023-06-22'
+  event: Listed on the Saudi Exchange (Tadawul) main market
+  financial_effect: IPO of existing shares; IPO costs recovered from shareholders
+  source: 2283_FIRST_MILLS/2025_Annual_filed2026-03-17.pdf
+  page: 11
+  quote: The Company was listed on the Saudi Exchange (Tadawul) on 22 June 2023
+- date: '2024'
+  event: Interest-free SIDF loan of SAR 150m for working capital; fully repaid in 9M 2026
+  financial_effect: Lower average borrowing cost in 2024-2025
+  source: 2283_FIRST_MILLS/2026_Q3_filed2026-11-02.pdf
+  page: 25
+  quote: the Group obtained an interest-free loan from the Saudi Industrial Development Fund (SIDF) amounting to SR 150 million to finance working
+    capital requirements
+- date: '2024-12-17'
+  event: GFSA claim after an inspection on 19 Oct 2024; SAR 2m provided in FY2024, still under review at end-2025
+  financial_effect: SAR 2.0m charge in FY2024
+  source: 2283_FIRST_MILLS/2025_Annual_filed2026-03-17.pdf
+  page: 48
+  quote: 'a provision of SR 2 million has been recognised in the consolidated financial statements (31 December 2024: SR 2 million)'
+- date: '2025'
+  event: SAB term facility of SAR 630m; SAR 54.6m drawn to fund the Al-Manar acquisition and SAR 48.55m in 2026 for the new Mill C in Al-Qassim
+  financial_effect: Debt-funded acquisitions and capacity projects
+  source: 2283_FIRST_MILLS/2026_Q3_filed2026-11-02.pdf
+  page: 25
+  quote: the Group obtained a term finance facility from Saudi Awwal Bank (SAB) amounting to SR 630 million
+- date: '2025-12-31'
+  event: 'Projects under progress: upgrade of Mill A in Jeddah and new Mill C in Qassim; commitments SAR 48.9m'
+  financial_effect: Capacity projects not yet in use at end-2025
+  source: 2283_FIRST_MILLS/2025_Annual_filed2026-03-17.pdf
+  page: 34
+  quote: As at 31 December 2025, projects under progress mainly consists of the following projects
+- date: '2026-08-30'
+  event: Dividend of SAR 99.3m for H1 2026 approved and paid on 16 Sep 2026 (FY2025 dividends paid SAR 152.9m)
+  financial_effect: Cash returned to shareholders
+  source: 2283_FIRST_MILLS/2026_Q3_filed2026-11-02.pdf
+  page: 24
+  quote: cash dividends amounting to SR 99,345,000 to shareholders for the first half of the financial year 2026
+audit_opinion:
+- period: FY2022
+  opinion: unmodified
+  emphasis_of_matter: Comparative information restated (note 41)
+  source: 2283_FIRST_MILLS/2022_Annual_filed2023-06-22.pdf
+  page: 6
+- period: FY2023
+  opinion: unmodified
+  emphasis_of_matter: null
+  source: 2283_FIRST_MILLS/2023_Annual_filed2024-03-14.pdf
+  page: 3
+- period: FY2024
+  opinion: unmodified
+  emphasis_of_matter: null
+  source: 2283_FIRST_MILLS/2024_Annual_filed2025-03-19.pdf
+  page: 3
+- period: FY2025
+  opinion: unmodified
+  emphasis_of_matter: null
+  source: 2283_FIRST_MILLS/2025_Annual_filed2026-03-17.pdf
+  page: 3
+kpis_in_filings:
+- period: FY2017-9M2026
+  kpi: Subsidised wheat purchase price from GFSA
+  value: 180
+  unit: SAR per tonne
+  source: 2283_FIRST_MILLS/2024_Annual_filed2025-03-19.pdf
+  page: 11
+- period: FY2025
+  kpi: Revenue share of the largest customer
+  value: 23.04
+  unit: '%'
+  source: 2283_FIRST_MILLS/2025_Annual_filed2026-03-17.pdf
+  page: 27
+- period: FY2024
+  kpi: Revenue share of the largest customer
+  value: 17.93
+  unit: '%'
+  source: 2283_FIRST_MILLS/2025_Annual_filed2026-03-17.pdf
+  page: 27
+- period: 9M2026
+  kpi: Revenue share of the largest customer
+  value: 5.65
+  unit: '%'
+  source: 2283_FIRST_MILLS/2026_Q3_filed2026-11-02.pdf
+  page: 20
+- period: 9M2025
+  kpi: Revenue share of the largest customer
+  value: 19.91
+  unit: '%'
+  source: 2283_FIRST_MILLS/2026_Q3_filed2026-11-02.pdf
+  page: 20
+special_extractions:
+- item: Long-term payables to Buhler AG (machinery bought on ten semi-annual instalments, with a finance cost) excluded from DEBT
+  values_sar_m:
+    FY2023: 40.55
+    FY2024: 33.13
+    FY2025: 58.56
+    9M2025: 29.4
+    9M2026: 50.57
+  source: 2283_FIRST_MILLS/2025_Annual_filed2026-03-17.pdf
+  page: 45
+  quote: Long-term payables represent the amounts payable to Buhler AG for the purchase of machinery and equipment in ten equal semi-annual instalments.
+  note: FY2023 and FY2024 from the FY2024 annual p.7 and FY2025 annual p.7; 9M2025 from 2025 Q3 p.5; 9M2026 from 2026 Q3 p.6. Adding them would
+    raise net debt by these amounts.
+open_questions:
+- Revenue of Al-Kenan Arabia in 9M 2026 (consolidated from 1 Dec 2025) is not disclosed; its pro-forma full-year 2025 revenue was SAR 16.88m (FY2025
+  annual p.31). Feed revenue rose 57.1% in 9M 2026, so part of that rise may be acquired, but the split is not determinable.
+- 'Whether new Mill C (Qassim) and the Mill A upgrade (Jeddah) started production in 2026: projects under progress fell from SAR 138.9m to SAR
+  64.6m in 9M 2026 (2026 Q3 p.17), but no commissioning date or capacity is given.'
+- Acquisition costs in 9M 2025 (Al-Manar closed on 18 Sep 2025) are not separately disclosed in the interim.
+- The GFSA claim (SAR 2m provided) was still under review at end-2025; no later outcome is disclosed.

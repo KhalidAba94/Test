@@ -1,0 +1,73 @@
+ticker: "2380"
+headline: >-
+  Petro Rabigh lost money every year from FY2022 to FY2025 (attributable loss SAR 4,693m in FY2023 and SAR 3,899m in FY2025) as revenue
+  fell from SAR 55,952m to SAR 35,008m, then earned SAR 6,702m in 9M 2026 on revenue up 113.6%, which it attributes to higher crude-linked
+  prices during the regional conflict, against a 9M 2025 base cut by a 60-day full-site shutdown.
+lfl_basis:
+  definition_used: >-
+    Standard bridge on IFRS revenue. Petro Rabigh is a single company with no subsidiaries, acquisitions or disposals, so the perimeter effect
+    is nil. The notes report no new units commissioned, but with no operating report in the archive the revenue from new capacity cannot be
+    confirmed, so like-for-like growth is not determinable and organic growth is the closest measure. The only adjustment is presentational: FY2024 revenue was
+    restated from SAR 39,349m to SAR 38,662m to net marketer re-charges against revenue (IFRS 15), while FY2023 remains on the old gross
+    basis, so the FY2024/FY2023 comparison removes the SAR 686.9m netting. Planned shutdowns (Phase II, Dec 2022 to Jan 2023; full-site
+    turnaround, Apr to Jun 2025) are volume effects inside organic growth.
+  perimeter_changes:
+    - {event: "None: single-entity company with no subsidiaries", date: "FY2022 to 9M2026", effect: "nil", source: "2380_PETRO_RABIGH/2025_Annual_filed2026-03-12.pdf p.13"}
+    - {event: "Saudi Aramco bought a further 22.5% of Class A shares from Sumitomo Chemical (Aramco 60%, Sumitomo 15%, public 25%)", date: "2025-10-08", effect: "shareholder change only; no perimeter effect", source: "2380_PETRO_RABIGH/2025_Annual_filed2026-03-12.pdf p.14"}
+  capacity_changes:
+    - {event: "Planned maintenance shutdown of the Phase II facilities", date: "2022-12-01 to 2023-01-23", effect: "lower volumes in Dec 2022 and Jan 2023, not quantified; maintenance, not a capacity change", source: "2380_PETRO_RABIGH/2023_Annual_filed2024-03-25.pdf p.30"}
+    - {event: "Full-complex Turnaround and Inspection: all units shut for about 60 days from 15 Apr 2025", date: "2025-04-15", effect: "company reports a significant decrease in revenue and cost of revenue in 9M 2025 and FY2025; not quantified", source: "2380_PETRO_RABIGH/2025_Annual_filed2026-03-12.pdf p.28; 2380_PETRO_RABIGH/2025_Q3_filed2025-11-11.pdf p.10"}
+    - {event: "No new units commissioned; capital work in progress relates to plant-enhancement projects not yet in use", date: "FY2022 to 9M2026", effect: "none identified", source: "2380_PETRO_RABIGH/2025_Annual_filed2026-03-12.pdf p.28"}
+  fx_exposure: "Products are sold through marketers at USD-linked prices and the riyal is pegged; no FX translation effect."
+  price_volume_support: >-
+    Not determinable. The financial statements disclose no production, sales volumes or realised prices. They give revenue by segment
+    (refined products, petrochemicals) and by destination, and the provisional-to-final pricing adjustment (-SAR 259m in FY2025;
+    +SAR 124m in 9M 2026 vs -SAR 124m in 9M 2025).
+  confidence: "High (no perimeter changes and the restatement amount is disclosed; that no capacity was added rests on the financial statements alone)"
+price_volume:
+  - period: "9M 2026 vs 9M 2025"
+    text: >-
+      Revenue rose SAR 27,676m: refined products +SAR 23,174m (+121.6%) and petrochemicals +SAR 4,502m (+84.9%). By destination, sales in
+      Saudi Arabia rose 132.2% and to the rest of the Middle East (mainly Egypt) 285.4%. The 9M 2025 base includes the 60-day full-site
+      shutdown, so part of the increase is volume recovery; the company attributes the improvement mainly to higher crude oil prices. Volumes
+      are not disclosed, so the split is not determinable.
+    basis: "disclosed (segment and destination revenue); price/volume split not determinable"
+    confidence: "High for the amounts; the split is not determinable"
+    source: "2380_PETRO_RABIGH/2026_Q3_filed2026-11-01.pdf p.10 (geopolitical note), p.13-14 (segments and destinations)"
+    refs: ["2380-9M2026-REV", "2380-9M2025-REV"]
+profit_and_margin:
+  drivers:
+    - {period: "FY2023", driver: "Revenue -20.3% and the operating result swung from a SAR 12.2m profit to a SAR 2,603m loss: refined products revenue fell 20.5% and its operating result went from +SAR 1,466m to -SAR 1,807m; net financial charges (PBT less operating result, we calculate) rose from SAR 1,079m to SAR 2,190m. Attributable loss SAR 4,693m (FY2022: SAR 1,115m). The filings do not explain the margin squeeze.", source: "2380_PETRO_RABIGH/2023_Annual_filed2024-03-25.pdf p.27; 2380_PETRO_RABIGH/2024_Annual_filed2025-03-19.pdf p.26 (segments)", refs: ["2380-FY2023-REV", "2380-FY2023-OPINC", "2380-FY2023-NI_ATTR", "2380-FY2023-PBT"]}
+    - {period: "FY2024", driver: "Revenue -13.3% as reported, or -11.8% before the IFRS 15 netting restatement (we calculate); operating loss SAR 2,571m, little changed; net financial charges SAR 2,175m; a tax credit of SAR 203m; attributable loss SAR 4,545m. The founding shareholders waived SAR 3,750m of loans, booked directly in equity, not in profit.", source: "2380_PETRO_RABIGH/2025_Annual_filed2026-03-12.pdf p.23-24, p.44; 2380_PETRO_RABIGH/2024_Annual_filed2025-03-19.pdf p.12", refs: ["2380-FY2024-REV", "2380-FY2024-OPINC", "2380-FY2024-NI_ATTR"]}
+    - {period: "FY2025", driver: "Revenue -9.5% in the year of the 60-day turnaround: petrochemicals revenue fell 26.6% and its operating loss widened to SAR 1,882m, while the refined products loss narrowed to SAR 577m. Net financial charges fell to SAR 1,433m; the company used the SAR 5,264m capital injection of Oct 2025 to prepay debt. Attributable loss narrowed to SAR 3,899m; EBITDA margin 2.0%.", source: "2380_PETRO_RABIGH/2025_Annual_filed2026-03-12.pdf p.23 (segments), p.14 (capital increase), p.28 (turnaround)", refs: ["2380-FY2025-REV", "2380-FY2025-NI_ATTR", "2380-FY2025-EBITDA_C"]}
+    - {period: "9M2026", driver: "Gross profit SAR 8,325m vs a loss of SAR 1,813m; refined products operating result SAR 8,770m (9M 2025: -SAR 811m) while petrochemicals still lost SAR 1,039m (-SAR 1,517m). Financial charges fell to SAR 796m (SAR 1,182m) and financial income rose to SAR 179m (SAR 15.2m). Zakat and tax were SAR 412m against a net credit of SAR 202m. Attributable profit SAR 6,702m vs a loss of SAR 3,292m; net margin 12.9%.", source: "2380_PETRO_RABIGH/2026_Q3_filed2026-11-01.pdf p.4 (P&L), p.13 (segments and reconciliation)", refs: ["2380-9M2026-GP", "2380-9M2026-NI_ATTR", "2380-9M2025-NI_ATTR"]}
+    - {period: "9M2026", driver: "Operating cash flow SAR 13,035m (9M 2025: -SAR 44.1m) and free cash flow SAR 12,016m; trade and other payables rose by SAR 8,297m to SAR 26,013m over the nine months. Retained earnings of SAR 2,768m replaced accumulated losses of SAR 9,191m after the profit and a SAR 5,264m capital reduction set against losses.", source: "2380_PETRO_RABIGH/2026_Q3_filed2026-11-01.pdf p.6 (balance sheet), p.7 (changes in equity), p.9", refs: ["2380-9M2026-CFO", "2380-9M2026-FCF"]}
+    - {period: "FY2022-FY2025", driver: "Capex rose from SAR 889m (FY2024) to SAR 3,782m in FY2025, the turnaround year, so free cash flow was -SAR 1,631m.", source: "cash-flow statements (XBRL section 300700); 2380_PETRO_RABIGH/2025_Annual_filed2026-03-12.pdf p.23", refs: ["2380-FY2025-CAPEX", "2380-FY2025-FCF"]}
+  one_offs:
+    - {item: "Waiver of revolving shareholder loans by the founding shareholders, including accrued commission (credited to accumulated losses in equity, not to profit)", period: "FY2024", amount_sar_m: 3750, line: "Statement of changes in equity", source: "2380_PETRO_RABIGH/2024_Annual_filed2025-03-19.pdf p.12", tax_nci: "Not in profit (equity or OCI): no adjustment needed"}
+    - {item: "Waiver of the remaining revolving shareholder loans (equity, not profit)", period: "FY2025", amount_sar_m: 1875, line: "Statement of changes in equity", source: "2380_PETRO_RABIGH/2025_Annual_filed2026-03-12.pdf p.13", tax_nci: "Not in profit (equity or OCI): no adjustment needed"}
+    - {item: "Gain on derecognition of right-of-use assets and lease liabilities", period: "FY2025", amount_sar_m: 40.1, line: "Other income, net", source: "2380_PETRO_RABIGH/2025_Annual_filed2026-03-12.pdf p.25", tax_nci: "Under 5% of attributable profit: tax effect not checked; profit kept as reported"}
+    - {item: "Tax credit (deferred tax), not described as non-recurring; FY2025 tax charge SAR 5.3m", period: "FY2024", amount_sar_m: 203.3, line: "Tax", source: "2380_PETRO_RABIGH/2025_Annual_filed2026-03-12.pdf p.24", tax_nci: "Itself a tax item, not described as non-recurring: not adjusted"}
+developments:
+  - {date: "2022-06-08", category: "financing", text: "Rights issue of SAR 7,950m raised share capital from SAR 8,760m to SAR 16,710m; proceeds capitalised founding-shareholder loans and partly repaid equity bridge loans.", source: "2380_PETRO_RABIGH/2022_Annual_filed2023-03-19.pdf p.39"}
+  - {date: "2023", category: "financing", text: "Equity bridge loans restructured into unequal annual instalments from Dec 2024 to Dec 2027, still guaranteed by the founding shareholders.", source: "2380_PETRO_RABIGH/2023_Annual_filed2024-03-25.pdf p.35"}
+  - {date: "2024-08-07", category: "financing", text: "Founding shareholders' support package: waiver of SAR 5,625m of revolving shareholder loans (SAR 3,750m in 2024, SAR 1,875m in Jan 2025) and a SAR 5,263.6m equity injection.", source: "2380_PETRO_RABIGH/2025_Annual_filed2026-03-12.pdf p.13"}
+  - {date: "2025-04-15", category: "operations", text: "Full-complex Turnaround and Inspection lasting about 60 days; production of refined and petrochemical products was suspended.", source: "2380_PETRO_RABIGH/2025_Annual_filed2026-03-12.pdf p.28"}
+  - {date: "2025-10-08", category: "strategy", text: "Saudi Aramco raised its holding of Class A shares to 60% by buying 22.5% from Sumitomo Chemical.", source: "2380_PETRO_RABIGH/2025_Annual_filed2026-03-12.pdf p.14"}
+  - {date: "2025-10-15", category: "financing", text: "Received SAR 5,263.6m for new unlisted Class B shares issued to Aramco and Sumitomo and used it to prepay debt.", source: "2380_PETRO_RABIGH/2025_Annual_filed2026-03-12.pdf p.14"}
+  - {date: "2026-03 onward", category: "event", text: "The company reports that the regional conflict disrupted energy markets and marine logistics but had no direct material impact on its operations, and that higher crude oil prices contributed significantly to the improved results. Its Q1 and Q2 2026 notes added that the Rabigh complex is on the Red Sea and does not depend on the affected maritime corridors; the 9M 2026 note no longer includes that sentence.", source: "2380_PETRO_RABIGH/2026_Q1_filed2026-04-30.pdf p.10; 2380_PETRO_RABIGH/2026_Q3_filed2026-11-01.pdf p.10"}
+  - {date: "2026-03-29", category: "financing", text: "Shareholders approved a capital reduction writing SAR 5,263.65m off accumulated losses (capital back to SAR 16,710m).", source: "2380_PETRO_RABIGH/2026_Q3_filed2026-11-01.pdf p.10"}
+  - {date: "2026-09-30", category: "financing", text: "Current liabilities exceeded current assets by SAR 6,321m (end-2025: SAR 13,731m).", source: "2380_PETRO_RABIGH/2026_Q3_filed2026-11-01.pdf p.9"}
+what_it_means:
+  improved: "In 9M 2026 a SAR 3,292m attributable loss turned into a SAR 6,702m profit on revenue up 113.6%, with a 12.9% net margin and SAR 12,016m of free cash flow."
+  weakened: "From FY2022 to FY2025 revenue fell 14.5% a year and the company lost money every year (attributable losses of SAR 1,115m to SAR 4,693m), with an EBITDA margin of 2.0% or less from FY2023 to FY2025."
+  why: "Refined products drove both phases: its operating result went from SAR 1,466m (FY2022) to -SAR 1,807m (FY2023) and to SAR 8,770m in 9M 2026, which the company attributes to higher crude oil prices during the regional conflict; the 9M 2025 base was also cut by a 60-day full-site turnaround, and petrochemicals stayed loss-making (-SAR 1,039m in 9M 2026)."
+  uncertain: "Volumes and prices are not disclosed, so the price, volume and turnaround effects cannot be separated, and the 9M 2026 profit rests on conflict-period market conditions."
+confidence_overall: "Medium"
+data_notes:
+  - "Restatement: FY2024 revenue restated from SAR 39,349.1m to SAR 38,662.1m and gross profit from -SAR 985.0m to -SAR 1,672.0m in the FY2025 AFS; shipping, handling, insurance, customs and storage charges re-charged by the marketers are now netted against revenue (IFRS 15) instead of being shown in selling and marketing expenses. No effect on operating or net loss; all in Petrochemicals. FY2022-FY2023 were not restated, so FY2024/FY2023 growth mixes bases (adjusted in the bridge)."
+  - "9M operating income is calculated (PBT + financial charges - financial income) and equals the reviewed P&L's operating result (9M 2026 SAR 7,731.1m; 9M 2025 -SAR 2,327.5m, p.4). The XBRL 'Operating profit' tag kept as OPINC_REP for the 9M periods excludes 'Other income, net' (SAR 56.5m and SAR 110.2m) and should not be used."
+  - "The dataset shows growth for GP (-134.4%), OPINC (-21,386.8%) and CFO (-136.2%) for FY2023/FY2022 although the sign changes; under METHODOLOGY s.1 these should read n.m. The same applies to FCF in FY2023/FY2022 and FY2025/FY2024."
+  - "Equity attributable equals total equity (no non-controlling interests); ROE is negative for FY2022-FY2025 because of the losses."
+  - "Note 4 of the FY2025 AFS gives revenue from external customers of SAR 34,871m (2024: SAR 39,087m); the 2024 figure appears to be on the pre-restatement basis and is not reconciled to the restated SAR 38,662m."
+  - "The geographic basis changed in the FY2025 AFS (Saudi Arabia shown separately from the rest of the Middle East), so destination trends before FY2024 are not comparable. Primary statements are scanned; P&L figures were checked against the segment reconciliation and, for 9M 2026, visually."

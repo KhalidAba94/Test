@@ -1,0 +1,445 @@
+# Evidence from SADAFCO filings (archive 2270_SADAFCO). Facts only; page = physical PDF page (1-based). Units SAR '000.
+# Year-end changed from 31 March to 31 December (FY2023 = Apr-Dec 2023). FY2024 annual statements are scanned (pp7-11). No PDF before the FY2024 annual.
+ticker: '2270'
+company: Saudia Dairy and Foodstuff Company (SADAFCO)
+perimeter_changes:
+- event: Purchase of the remaining 24% of the Mlekoma group (Poland) under the NCI put option; ownership 76% to 100%
+  type: acquisition
+  date: 2023 (Apr-Dec)
+  consideration: 88967
+  revenue_contribution: null
+  profit_contribution: null
+  pro_forma_revenue: null
+  period: FY2023
+  unit: SAR '000
+  source: 2270_SADAFCO/2024_Annual_filed2025-03-25.pdf
+  page: 32
+  quote: the Group acquired an additional 24% interest in “Mlekoma group” under non-controlling interest put option agreement
+  note: 'Already a subsidiary: changes NCI only, no revenue effect. Consideration = cash flow "Acquisition of non-controlling interests" (p11).'
+- event: 37% associate Mlekoma Dairy classified as held for sale (end-2023) and sold in 2024
+  type: disposal
+  date: '2024'
+  consideration: null
+  revenue_contribution: null
+  profit_contribution: null
+  pro_forma_revenue: null
+  period: FY2024
+  unit: SAR '000
+  source: 2270_SADAFCO/2024_Annual_filed2025-03-25.pdf
+  page: 32
+  quote: During the year ended December 31, 2024, the Group has disposed of its 37% shareholding in Mlekoma Dairy Sp. z o.o.
+- event: Voluntary liquidation of SADAFCO Qatar W.L.L.; deconsolidated
+  type: deconsolidation
+  date: '2024-11-17'
+  consideration: null
+  revenue_contribution: null
+  profit_contribution: -1891
+  pro_forma_revenue: null
+  period: FY2024
+  unit: SAR '000
+  source: 2270_SADAFCO/2024_Annual_filed2025-03-25.pdf
+  page: 32
+  quote: the Group will no longer control SADAFCO Qatar W.L.L. and therefore the Group will no longer consolidate SADAFCO Qatar W.L.L.
+  note: Loss on loss of control 1,891 (CF p11). Qatar revenue not disclosed; all Other GCC revenue was SAR 61.0m in FY2024 (re-presented).
+- event: Board resolved to liquidate Sadafco Jordan, Kuwait and Bahrain (distribution model); discontinued operations, FY2024 and 9M2025 re-presented
+  type: discontinued
+  date: '2025-12-25'
+  consideration: null
+  revenue_contribution: 105230
+  profit_contribution: -9633
+  pro_forma_revenue: null
+  period: FY2025
+  unit: SAR '000
+  source: 2270_SADAFCO/2025_Annual_filed2026-02-17.pdf
+  page: 49
+  quote: the Group’s Board resolved to voluntarily liquidate its foreign subsidiaries in Jordan, Kuwait and Bahrain
+  note: 'revenue_contribution = FY2024 revenue removed by the re-presentation (FY2025: 65,410).'
+segments:
+- period: FY2023
+  segment: Drinks (milk and other drinks)
+  basis: product
+  revenue: 1229150
+  unit: SAR '000
+  source: 2270_SADAFCO/2024_Annual_filed2025-03-25.pdf
+  page: 54
+  note: revenue from external customers; nine months April-December 2023
+- period: FY2023
+  segment: Non-drinks (ice cream, tomato paste, other foods)
+  basis: product
+  revenue: 882330
+  unit: SAR '000
+  source: 2270_SADAFCO/2024_Annual_filed2025-03-25.pdf
+  page: 54
+  note: revenue from external customers; nine months April-December 2023
+- period: FY2023
+  segment: Total
+  basis: product
+  revenue: 2111480
+  unit: SAR '000
+  source: 2270_SADAFCO/2024_Annual_filed2025-03-25.pdf
+  page: 54
+  note: revenue from external customers; nine months April-December 2023
+- period: FY2024
+  segment: Drinks (milk and other drinks)
+  basis: product
+  revenue: 1558525
+  unit: SAR '000
+  source: 2270_SADAFCO/2025_Annual_filed2026-02-17.pdf
+  page: 53
+  note: revenue from external customers; re-presented excl. Jordan, Kuwait and Bahrain
+- period: FY2024
+  segment: Non-drinks (ice cream, tomato paste, other foods)
+  basis: product
+  revenue: 1299127
+  unit: SAR '000
+  source: 2270_SADAFCO/2025_Annual_filed2026-02-17.pdf
+  page: 53
+  note: revenue from external customers; re-presented excl. Jordan, Kuwait and Bahrain
+- period: FY2024
+  segment: Total
+  basis: product
+  revenue: 2857652
+  unit: SAR '000
+  source: 2270_SADAFCO/2025_Annual_filed2026-02-17.pdf
+  page: 53
+  note: revenue from external customers; re-presented excl. Jordan, Kuwait and Bahrain
+- period: FY2025
+  segment: Drinks (milk and other drinks)
+  basis: product
+  revenue: 1614118
+  unit: SAR '000
+  source: 2270_SADAFCO/2025_Annual_filed2026-02-17.pdf
+  page: 52
+  note: revenue from external customers
+- period: FY2025
+  segment: Non-drinks (ice cream, tomato paste, other foods)
+  basis: product
+  revenue: 1385282
+  unit: SAR '000
+  source: 2270_SADAFCO/2025_Annual_filed2026-02-17.pdf
+  page: 52
+  note: revenue from external customers
+- period: FY2025
+  segment: Total
+  basis: product
+  revenue: 2999400
+  unit: SAR '000
+  source: 2270_SADAFCO/2025_Annual_filed2026-02-17.pdf
+  page: 52
+  note: revenue from external customers
+- period: 9M2025
+  segment: Drinks (milk and other drinks)
+  basis: product
+  revenue: 1215415
+  unit: SAR '000
+  source: 2270_SADAFCO/2026_Q3_filed2026-11-09.pdf
+  page: 14
+  note: revenue from external customers; re-presented
+- period: 9M2025
+  segment: Non-drinks (ice cream, tomato paste, other foods)
+  basis: product
+  revenue: 1102740
+  unit: SAR '000
+  source: 2270_SADAFCO/2026_Q3_filed2026-11-09.pdf
+  page: 14
+  note: revenue from external customers; re-presented
+- period: 9M2025
+  segment: Total
+  basis: product
+  revenue: 2318155
+  unit: SAR '000
+  source: 2270_SADAFCO/2026_Q3_filed2026-11-09.pdf
+  page: 14
+  note: revenue from external customers; re-presented
+- period: 9M2026
+  segment: Drinks (milk and other drinks)
+  basis: product
+  revenue: 1178240
+  unit: SAR '000
+  source: 2270_SADAFCO/2026_Q3_filed2026-11-09.pdf
+  page: 14
+  note: revenue from external customers
+- period: 9M2026
+  segment: Non-drinks (ice cream, tomato paste, other foods)
+  basis: product
+  revenue: 987853
+  unit: SAR '000
+  source: 2270_SADAFCO/2026_Q3_filed2026-11-09.pdf
+  page: 14
+  note: revenue from external customers
+- period: 9M2026
+  segment: Total
+  basis: product
+  revenue: 2166093
+  unit: SAR '000
+  source: 2270_SADAFCO/2026_Q3_filed2026-11-09.pdf
+  page: 14
+  note: revenue from external customers
+- period: FY2024
+  segment: Kingdom of Saudi Arabia
+  basis: geographic
+  revenue: 2327506
+  unit: SAR '000
+  source: 2270_SADAFCO/2025_Annual_filed2026-02-17.pdf
+  page: 53
+- period: FY2024
+  segment: Poland
+  basis: geographic
+  revenue: 355862
+  unit: SAR '000
+  source: 2270_SADAFCO/2025_Annual_filed2026-02-17.pdf
+  page: 53
+- period: FY2024
+  segment: Other GCC countries
+  basis: geographic
+  revenue: 60993
+  unit: SAR '000
+  source: 2270_SADAFCO/2025_Annual_filed2026-02-17.pdf
+  page: 53
+- period: FY2024
+  segment: Others
+  basis: geographic
+  revenue: 113291
+  unit: SAR '000
+  source: 2270_SADAFCO/2025_Annual_filed2026-02-17.pdf
+  page: 53
+- period: FY2025
+  segment: Kingdom of Saudi Arabia
+  basis: geographic
+  revenue: 2316323
+  unit: SAR '000
+  source: 2270_SADAFCO/2025_Annual_filed2026-02-17.pdf
+  page: 53
+- period: FY2025
+  segment: Poland
+  basis: geographic
+  revenue: 461867
+  unit: SAR '000
+  source: 2270_SADAFCO/2025_Annual_filed2026-02-17.pdf
+  page: 53
+- period: FY2025
+  segment: Other GCC countries
+  basis: geographic
+  revenue: 90906
+  unit: SAR '000
+  source: 2270_SADAFCO/2025_Annual_filed2026-02-17.pdf
+  page: 53
+- period: FY2025
+  segment: Others
+  basis: geographic
+  revenue: 130304
+  unit: SAR '000
+  source: 2270_SADAFCO/2025_Annual_filed2026-02-17.pdf
+  page: 53
+- period: 9M2025
+  segment: Kingdom of Saudi Arabia
+  basis: geographic
+  revenue: 1774024
+  unit: SAR '000
+  source: 2270_SADAFCO/2026_Q3_filed2026-11-09.pdf
+  page: 15
+- period: 9M2025
+  segment: Poland
+  basis: geographic
+  revenue: 373007
+  unit: SAR '000
+  source: 2270_SADAFCO/2026_Q3_filed2026-11-09.pdf
+  page: 15
+- period: 9M2025
+  segment: Other GCC countries
+  basis: geographic
+  revenue: 66433
+  unit: SAR '000
+  source: 2270_SADAFCO/2026_Q3_filed2026-11-09.pdf
+  page: 15
+- period: 9M2025
+  segment: Others
+  basis: geographic
+  revenue: 104691
+  unit: SAR '000
+  source: 2270_SADAFCO/2026_Q3_filed2026-11-09.pdf
+  page: 15
+- period: 9M2026
+  segment: Kingdom of Saudi Arabia
+  basis: geographic
+  revenue: 1764736
+  unit: SAR '000
+  source: 2270_SADAFCO/2026_Q3_filed2026-11-09.pdf
+  page: 15
+- period: 9M2026
+  segment: Poland
+  basis: geographic
+  revenue: 210280
+  unit: SAR '000
+  source: 2270_SADAFCO/2026_Q3_filed2026-11-09.pdf
+  page: 15
+- period: 9M2026
+  segment: Other GCC countries
+  basis: geographic
+  revenue: 65007
+  unit: SAR '000
+  source: 2270_SADAFCO/2026_Q3_filed2026-11-09.pdf
+  page: 15
+- period: 9M2026
+  segment: Others
+  basis: geographic
+  revenue: 126070
+  unit: SAR '000
+  source: 2270_SADAFCO/2026_Q3_filed2026-11-09.pdf
+  page: 15
+- period: FY2023
+  segment: Kingdom of Saudi Arabia / outside KSA
+  basis: geographic
+  revenue:
+    KSA: 1772878
+    outside: 338602
+  unit: SAR '000
+  source: 2270_SADAFCO/2024_Annual_filed2025-03-25.pdf
+  page: 47
+  note: nine months; includes the later-discontinued GCC subsidiaries
+revenue_drivers:
+- period: 9M2026
+  driver: Lower international sales (Poland revenue SAR 373.0m to 210.3m)
+  value: null
+  unit: SAR '000
+  source: 2270_SADAFCO/2026_Q3_filed2026-11-09.pdf
+  page: 15
+  quote: Revenue for the nine-month period ended September 30, 2026, was lower compared with the corresponding period, mainly reflecting lower sales in the international market.
+- period: FY2022-9M2026
+  driver: Volumes, prices, outlet or route counts, like-for-like sales
+  value: null
+  unit: null
+  status: not found
+  source: 2270_SADAFCO/2025_Annual_filed2026-02-17.pdf
+  page: null
+  quote: Not in the financial statements; revenue is given by drinks / non-drinks and by country only.
+one_offs:
+- period: FY2023
+  item: Impairment of goodwill (Mlekoma) and remeasurement of the disposal group
+  amount: -15901
+  unit: SAR '000
+  pnl_line: Other expenses
+  recurring: false
+  source: 2270_SADAFCO/2024_Annual_filed2025-03-25.pdf
+  page: 11
+  quote: Impairment loss on goodwill 23 - 15,753
+  note: 'Impairment: outside EBITDA. Nine-month year.'
+- period: FY2024
+  item: Loss on loss of control of SADAFCO Qatar
+  amount: -1891
+  unit: SAR '000
+  pnl_line: not named (cash-flow add-back)
+  recurring: false
+  source: 2270_SADAFCO/2025_Annual_filed2026-02-17.pdf
+  page: 11
+  quote: Loss on disposal of investment in subsidiary 5 - 1,891
+- period: 9M2025
+  item: Gain on sale of an asset held for sale (warehouse property)
+  amount: 107417
+  unit: SAR '000
+  pnl_line: Other operating income
+  recurring: false
+  source: 2270_SADAFCO/2026_Q3_filed2026-11-09.pdf
+  page: 14
+  quote: sale of an asset previously classified as held for sale for a gain of Saudi Riyals 107.4 million under other operating income.
+- period: FY2025
+  item: Gain on sale of property (former warehouse)
+  amount: 107417
+  unit: SAR '000
+  pnl_line: Other operating income
+  recurring: false
+  source: 2270_SADAFCO/2025_Annual_filed2026-02-17.pdf
+  page: 48
+  quote: Gain on sale of property (note 24.1) 107,417 -
+- period: FY2025
+  item: Impairment on property, plant and equipment
+  amount: -16359
+  unit: SAR '000
+  pnl_line: 'cost lines (segment note: drinks 3.5m, non-drinks 12.3m)'
+  recurring: false
+  source: 2270_SADAFCO/2025_Annual_filed2026-02-17.pdf
+  page: 11
+  quote: Impairment on property, plant and equipment 6 16,359 -
+  note: 'Impairment: outside EBITDA.'
+restatements:
+- period_restated: FY2024
+  item: Income statement (continuing operations)
+  from: 2962882
+  to: 2857652
+  unit: SAR '000
+  reason: Jordan, Kuwait and Bahrain discontinued (note 27)
+  source: 2270_SADAFCO/2025_Annual_filed2026-02-17.pdf
+  page: 49
+  quote: have been presented as ‘discontinued operations’ under IFRS 5
+- period_restated: 9M2025
+  item: Income statement (continuing operations)
+  from: 2370481
+  to: 2318155
+  unit: SAR '000
+  reason: same subsidiaries discontinued (note 15)
+  source: 2270_SADAFCO/2026_Q3_filed2026-11-09.pdf
+  page: 22
+  quote: 15 Discontinued operations and assets held for sale
+- period_restated: FY2023
+  item: CFO
+  from: 554711
+  to: 558584
+  unit: SAR '000
+  reason: finance costs paid moved from operating to financing (original from XBRL; no PDF of the Apr-Dec 2023 annual in the archive)
+  source: 2270_SADAFCO/2024_Annual_filed2025-03-25.pdf
+  page: 11
+  quote: Net cash from operating activities 470,435 558,584
+significant_events:
+- date: '2023-08-22'
+  event: Shareholders approved changing the financial year-end from 31 March to 31 December; FY2023 = nine months April-December 2023
+  financial_effect: short period; comparatives not comparable
+  source: 2270_SADAFCO/2024_Annual_filed2025-03-25.pdf
+  page: 12
+  quote: the comparative period for December 31, 2023, covers only nine months (April 1, 2023, to December 31, 2023).
+- date: '2024-12-31'
+  event: SADAFCO Poland and Foodexo merged into Mlekoma Sp. z o.o.
+  financial_effect: none (internal)
+  source: 2270_SADAFCO/2024_Annual_filed2025-03-25.pdf
+  page: 32
+  quote: SADAFCO Poland and Foodexo Sp. z o.o. merged into Mlekoma Sp. z o.o.
+- date: '2025'
+  event: Sale of a former warehouse property for SAR 110.25m
+  financial_effect: gain SAR 107.4m
+  source: 2270_SADAFCO/2025_Annual_filed2026-02-17.pdf
+  page: 48
+  quote: During the year, the group disposed a property, which was originally used for warehousing operations, and later vacated.
+- date: '2026'
+  event: 'Regional geopolitical events: supplier diversification, higher inventory cover, alternative logistics routes'
+  financial_effect: not quantified
+  source: 2270_SADAFCO/2026_Q3_filed2026-11-09.pdf
+  page: 15
+  quote: adopted alternative logistics routes to manage the impact of the ongoing regional geopolitical events on its operations.
+audit_opinion:
+- period: FY2024
+  opinion: unmodified (KPMG)
+  emphasis_of_matter: 'Change in reporting period: comparative (nine-month) information not comparable'
+  source: 2270_SADAFCO/2024_Annual_filed2025-03-25.pdf
+  page: 3
+- period: FY2025
+  opinion: unmodified (PricewaterhouseCoopers)
+  emphasis_of_matter: none
+  source: 2270_SADAFCO/2025_Annual_filed2026-02-17.pdf
+  page: 3
+- period: FY2022 and FY2023 (Apr-Dec)
+  opinion: 'not read: no PDF of these annual reports in the archive (XBRL only)'
+  emphasis_of_matter: null
+  source: null
+  page: null
+kpis_in_filings:
+- period: FY2023-9M2026
+  kpi: volumes, outlets, like-for-like sales
+  value: null
+  unit: null
+  source: 2270_SADAFCO/2025_Annual_filed2026-02-17.pdf
+  page: null
+  status: not found
+special_extractions: []
+open_questions:
+- 'FY2022 (Apr 2022-Mar 2023) and the 31 March 2022 balance sheet cannot be checked: the archive has no PDF for the FY Mar-2023 or the Apr-Dec 2023 annual reports.'
+- Revenue of SADAFCO Qatar until its deconsolidation on 17 Nov 2024 is not disclosed (at most SAR 61.0m, all Other GCC revenue in FY2024 as re-presented).
+- How much of the fall in Poland revenue in 9M2026 (SAR -162.7m) is volume, price or the zloty exchange rate is not disclosed.

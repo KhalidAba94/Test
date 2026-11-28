@@ -1,0 +1,160 @@
+# Evidence extracted from Alinma Retail REIT Fund filings (archive: SEVEN_REIT/4345_ALINMA_RETAIL_REIT). Facts only; page = physical PDF page (1-based).
+# Units: SAR. The audited financial statements (2023_Annual_filed2024-03-31, 2024_Annual_filed2025-03-27, 2025_Annual_filed2026-03-31_t16-30-17)
+# are fully scanned: read by OCR and checked visually (quotes below from those files are OCR text of the printed page). The fund annual reports
+# (text) and the quarterly statements (one page each) are unaudited. No FY2022 annual and no interim financial statements in the archive.
+ticker: "4345"
+company: "Alinma Retail REIT Fund (managed by Alinma Capital Company; formerly Alinma Investment Company)"
+
+perimeter_changes:
+  - event: "Signature Building (office and commercial, Riyadh) acquired for SAR 52m (excluding transaction tax); additions to investment properties SAR 57.0m in 2023"
+    type: acquisition
+    date: "2023-Q1"
+    consideration: 56976896
+    revenue_contribution: null
+    profit_contribution: null
+    pro_forma_revenue: null
+    period: "FY2023"
+    unit: "SAR"
+    source: "4345_ALINMA_RETAIL_REIT/2023_Q1_filed2023-04-13.pdf"
+    page: 1
+    quote: "Signature (As per acquisition"
+    note: "Not in the 31 Dec 2022 valuation table (FY2023 FS p.23); revenue contribution not disclosed."
+  - event: "Sifr office building (Riyadh) acquired for SAR 80m, financed from the bank facility"
+    type: acquisition
+    date: "2024-Q2"
+    consideration: 80000000
+    revenue_contribution: null
+    profit_contribution: null
+    pro_forma_revenue: null
+    period: "FY2024"
+    unit: "SAR"
+    source: "4345_ALINMA_RETAIL_REIT/2024_Annual_filed2025-04-08.pdf"
+    page: 3
+    quote: "The Fund manager completed the acquisition and ownership transfer of an office building (sifr) in Riyadh."
+  - event: "Aljawhara (Jawhara Hittin) office building (Riyadh) acquired for SAR 110m"
+    type: acquisition
+    date: "2024-Q2"
+    consideration: 110000000
+    revenue_contribution: null
+    profit_contribution: null
+    pro_forma_revenue: null
+    period: "FY2024"
+    unit: "SAR"
+    source: "4345_ALINMA_RETAIL_REIT/2024_Annual_filed2025-04-08.pdf"
+    page: 3
+    quote: "The Fund manager completed the acquisition and ownership transfer of an office building (Aljawhara) in Riyadh."
+  - event: "Al Khair Mall (Almakan Mall Riyadh) sold for SAR 393m in exchange for the Jazl office building (SAR 368m) plus SAR 25m cash; gain SAR 107.9m"
+    type: disposal
+    date: "2024-10-28"
+    consideration: 393000000
+    revenue_contribution: null
+    profit_contribution: 107894985
+    pro_forma_revenue: null
+    period: "FY2024"
+    unit: "SAR"
+    source: "4345_ALINMA_RETAIL_REIT/2024_Annual_filed2025-03-27.pdf"
+    page: 22
+    quote: "The exchange agreement and the transfer of real estate ownership was completed on 28 October 2024."
+    note: "Revenue of Al Khair Mall to 28 Oct 2024 and of Jazl after that date not disclosed; the 2024 Q2 statement notes leases not renewed ahead of the sale."
+  - event: "Bin Jalawi office building (Al Qairwan, Riyadh; 14,880 sq m) acquired for SAR 399m; 2025 revenue SAR 25.16m (part year)"
+    type: acquisition
+    date: "2025-Q1"
+    consideration: 399000000
+    revenue_contribution: 25.16
+    profit_contribution: null
+    pro_forma_revenue: null
+    period: "FY2025"
+    unit: "SAR m"
+    source: "4345_ALINMA_RETAIL_REIT/2025_Annual_filed2026-03-31_t16-28-46.pdf"
+    page: 15
+    quote: "Jalawi building was acquired during 2025; therefore, the revenue presented below does not cover a full year."
+    note: "Listed in the 31 Mar 2025 quarterly statement ('Value at acquisition')."
+  - event: "Units in issue fell from 118,000,000 (Q1 2026 statement) to 113,910,000 (Q2 and Q3 2026 statements) and Almakan Mall Tabuk no longer appears in the asset list; no explanation in the statements"
+    type: disposal
+    date: "2026-Q2"
+    consideration: null
+    revenue_contribution: null
+    profit_contribution: null
+    pro_forma_revenue: null
+    period: "9M2026"
+    unit: "count"
+    source: "4345_ALINMA_RETAIL_REIT/2026_Q2_filed2026-08-30.pdf"
+    page: 1
+    quote: "Alinma Capital Company Announces the Occurrence of Specific Event to Alinma Retail REIT Fund"
+    note: "Tabuk Mall (closed; 2025 revenue SAR 0.46m) was valued at SAR 73.2m at 31 Mar 2026."
+
+segments:
+  - {period: "FY2022-FY2025", segment: "Single segment (real estate in Saudi Arabia); no segment note", basis: operating, revenue: null, profit: null, unit: "SAR", source: "4345_ALINMA_RETAIL_REIT/2025_Annual_filed2026-03-31_t16-30-17.pdf", page: 9}
+
+revenue_drivers:
+  - {period: "FY2025", driver: "2025 revenue by property (SAR m, fund report): Jazel 33.51, Jalawi 25.16, Hafr Albatin 11.04, Aljawhrah 9.86, Dawadmi 8.09, Sifir 8.14, Signature 5.88, Tabuk 0.46", value: 102.14, unit: "SAR m", source: "4345_ALINMA_RETAIL_REIT/2025_Annual_filed2026-03-31_t16-28-46.pdf", page: 15, quote: "Revenue(Million) 11.04 0.46 8.09 25.16 33.51 9.86 8.14 5.88"}
+  - {period: "FY2025", driver: "Hafr Al-Batin Mall operating expenses included SAR 9.23m of generator costs until connection to the grid", value: 9.23, unit: "SAR m", source: "4345_ALINMA_RETAIL_REIT/2025_Annual_filed2026-03-31_t16-28-46.pdf", page: 15, quote: "The operating expenses for the Al-Hafr Al-Batin Mall in 2025 included SAR 9.23 million for generator operation."}
+  - {period: "FY2024", driver: "Almakan Mall Tabuk closed (excluded from the occupancy table)", value: null, unit: "count", source: "4345_ALINMA_RETAIL_REIT/2024_Annual_filed2025-04-08.pdf", page: 4, quote: "* Al Makan mall in Tabuk has not added due to its closure"}
+  - {period: "FY2024", driver: "Q2 2024 rental income affected by non-renewal of leases ahead of the Al Khair Mall sale and part-period revenue of new buildings", value: 11633857, unit: "SAR", source: "4345_ALINMA_RETAIL_REIT/2024_Q2_filed2024-07-14.pdf", page: 1, quote: "the rental income mentioned above was affected by the non-renewal of some tenant contracts in preparation for the sale of Al Makan Mall in Riyadh"}
+  - {period: "FY2025", driver: "SAR 9.8m of rental receivables written off; 45.18% recovered through a settlement with the buyer of Al Khair Mall", value: 9.8, unit: "SAR m", source: "4345_ALINMA_RETAIL_REIT/2025_Annual_filed2026-03-31_t16-28-46.pdf", page: 15, quote: "During the year, SAR 9.8 million of rental receivables were written off."}
+
+one_offs:
+  - {period: "FY2024", item: "Gain on disposal of investment property (Al Khair Mall), printed in the revenue section; excluded from REV and deducted in FFO", amount: 107894985, unit: "SAR", pnl_line: "Gain on disposal of investment property", recurring: false, source: "4345_ALINMA_RETAIL_REIT/2024_Annual_filed2025-03-27.pdf", page: 9, quote: "Gain on disposal of investment property 6 107,894,985 -"}
+  - {period: "FY2024", item: "Impairment of investment properties (excluded from FFO)", amount: -88615772, unit: "SAR", pnl_line: "Charge for impairment on investment properties", recurring: false, source: "4345_ALINMA_RETAIL_REIT/2024_Annual_filed2025-03-27.pdf", page: 9, quote: "Charge for impairment on investment properties 6 (88,615,772) (11,471,600)"}
+  - {period: "FY2022", item: "Reversal of impairment (excluded from FFO)", amount: 19419315, unit: "SAR", pnl_line: "(Charge for) reversal of impairment on investment properties", recurring: false, source: "4345_ALINMA_RETAIL_REIT/2023_Annual_filed2024-03-31.pdf", page: 9, quote: "(Charge for) reversal of impairment on investment properties 6 (11,471,600) 19,419,315"}
+  - {period: "FY2023", item: "Settlement discounts (separate line in FY2023 only; not explained in the notes)", amount: -2139910, unit: "SAR", pnl_line: "Settlement discounts", recurring: false, source: "4345_ALINMA_RETAIL_REIT/2023_Annual_filed2024-03-31.pdf", page: 9, quote: "Settlement discounts (2,139,910) -"}
+  - {period: "FY2023", item: "Reversal of expected credit losses (ordinary provision; kept in FFO)", amount: 22510670, unit: "SAR", pnl_line: "Reversal of (charge for) expected credit losses", recurring: true, source: "4345_ALINMA_RETAIL_REIT/2023_Annual_filed2024-03-31.pdf", page: 9, quote: "Reversal of (charge for) expected credit losses 8 22,510,670 (10,652,661)"}
+  - {period: "FY2025", item: "Impairment of investment properties (excluded from FFO)", amount: -24856673, unit: "SAR", pnl_line: "Charge for impairment on investment properties", recurring: false, source: "4345_ALINMA_RETAIL_REIT/2025_Annual_filed2026-03-31_t16-30-17.pdf", page: 9, quote: "Charge for impairment on investment properties 6 (24,856,673) (88,615,772)"}
+
+restatements:
+  - period_restated: "FY2023"
+    item: "Net assets at fair value: uplift now measured against the full carrying value of investment properties (892,137,982 incl. the Dawadmi right-of-use asset) instead of 885,933,712"
+    from: 944762028
+    to: 938557758
+    unit: "SAR"
+    reason: "Re-presentation of note 7.2 in the FY2024 statements"
+    source: "4345_ALINMA_RETAIL_REIT/2024_Annual_filed2025-03-27.pdf"
+    page: 24
+    quote: "Net asset based on fair value 869,696,779 938,557,758"
+  - period_restated: "FY2024"
+    item: "Total assets, net assets and net profit shown SAR 1 higher in the FY2025 statements (rounding); zakat and dividend payables merged into accrued expenses"
+    from: 1154728904
+    to: 1154728905
+    unit: "SAR"
+    reason: "Rounding and line merges; not a restatement"
+    source: "4345_ALINMA_RETAIL_REIT/2025_Annual_filed2026-03-31_t16-30-17.pdf"
+    page: 8
+    quote: "TOTAL ASSETS 1,460,792,499"
+
+significant_events:
+  - date: "2022-11-07"
+    event: "SAR 750m Shariah-compliant facility with Alinma Bank to finance property acquisitions; SAR 93.6m unused at end-2025; repayable 30 Nov 2030"
+    financial_effect: "Borrowings from nil (FY2022) to SAR 654.7m (FY2025)"
+    source: "4345_ALINMA_RETAIL_REIT/2025_Annual_filed2026-03-31_t16-30-17.pdf"
+    page: 27
+    quote: "amounting to SR 750 million to finance acquisition of properties."
+  - date: "2024"
+    event: "Previous manager Swicorp ordered to refund management fees for the transition period; Alinma Capital waived SAR 1.2m of fees (fund report)"
+    financial_effect: "Not identified in the audited statements (SWICORP receivable of SAR 1.2m at end-2023 was collected)"
+    source: "4345_ALINMA_RETAIL_REIT/2024_Annual_filed2025-04-08.pdf"
+    page: 3
+    quote: "Additionally, Alinma Capital waived the fund’s management fees for transaction period from the Fund amounting to"
+
+audit_opinion:
+  - {period: "FY2023", opinion: "unmodified (Alluhaid & Alyahya)", emphasis_of_matter: "none", source: "4345_ALINMA_RETAIL_REIT/2023_Annual_filed2024-03-31.pdf", page: 3}
+  - {period: "FY2024", opinion: "unmodified", emphasis_of_matter: "none", source: "4345_ALINMA_RETAIL_REIT/2024_Annual_filed2025-03-27.pdf", page: 3}
+  - {period: "FY2025", opinion: "unmodified", emphasis_of_matter: "none", source: "4345_ALINMA_RETAIL_REIT/2025_Annual_filed2026-03-31_t16-30-17.pdf", page: 3}
+
+kpis_in_filings:
+  - {period: "FY2024", kpi: "Occupancy 2024: Dawadmi 87%, Hafr Albatin 64%, Signature, Sifr, Aljawhrah and Jazel 100%; Tabuk closed", value: null, unit: "%", source: "4345_ALINMA_RETAIL_REIT/2024_Annual_filed2025-04-08.pdf", page: 4}
+  - {period: "FY2025", kpi: "Occupancy 2025: Dawadmi 84%, Hafr Albatin 57%, office buildings 100%", value: null, unit: "%", source: "4345_ALINMA_RETAIL_REIT/2025_Annual_filed2026-03-31_t16-28-46.pdf", page: 4}
+  - {period: "9M2025", kpi: "Occupancy 30 Sep 2025: Hafer Albatin 57%, Tabuk 4%, Dawadmi 84%, other buildings 100%; quarter rental income 27,534,529", value: null, unit: "%", source: "4345_ALINMA_RETAIL_REIT/2025_Q3_filed2025-10-14.pdf", page: 1}
+  - {period: "9M2026", kpi: "Occupancy 30 Sep 2026: Hafer Albatin 58%, Dawadmi 86%, Signature 98%, offices 100%; quarter rental income 27,910,057; units 113,910,000", value: null, unit: "%", source: "4345_ALINMA_RETAIL_REIT/2026_Q3_filed2026-10-14.pdf", page: 1}
+
+special_extractions:
+  - item: "Quarterly rental income ('Rental Income During the Period')"
+    detail: "2025: Q1 25,347,707; Q2 26,275,973; Q3 27,534,529 (sum 79,158,209). 2026: Q1 26,112,848; Q2 27,612,928; Q3 27,910,057 (sum 81,635,833). Unaudited quarterly statements."
+    source: "4345_ALINMA_RETAIL_REIT/2026_Q3_filed2026-10-14.pdf"
+    page: 1
+    quote: "Rental Income During the Period 27,910,057"
+
+open_questions:
+  - "Why units in issue fell by 4,090,000 to 113,910,000 and Almakan Mall Tabuk left the asset list in Q2 2026; the quarterly statements refer only to a 'specific event' announcement."
+  - "The Q3 2026 NAV per unit (book) of 6.47 does not reconcile with net assets of SAR 699.3m over 113.91m units (6.14)."
+  - "Revenue of the properties bought and sold in 2023-2024 (Signature, Sifr, Aljawhara, Jazl, Al Khair Mall) is not disclosed, so perimeter effects for FY2023-FY2025 cannot be measured except Bin Jalawi's 2025 revenue."
+  - "Whether the SAR 1.2m management fee waiver (fund report) was booked in FY2024 profit."

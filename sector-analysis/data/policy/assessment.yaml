@@ -1,0 +1,104 @@
+headline: >-
+  The FY2027 budget, approved on 24 Nov 2026, plans spending of SAR 1,392bn (3% below the 2026 estimated outturn but 6% above the
+  FY2026 budget) and a deficit of SAR 190.6bn (3.6% of GDP). It is financed by borrowing that the budget says will lean on domestic and
+  private channels. It assumes a strong rebound in oil output. For Energy, the 2027 outcome depends on whether flows normalise: a
+  recovery that lifts output clearly above the 2026 average is net positive, disruption at 2026 intensity roughly repeats 2026, and only a worsening is clearly negative. For Banks, the main effects are steady pressure on funding
+  costs, loan growth well below the 2022–25 pace, and a credit-quality risk if the escalation since 30 Sep continues. Support for
+  households and contractors partly offsets these; the Sep 2026 rate rise affects banks' margins in different directions.
+intro: >-
+  This section is forward-looking and kept separate from the historical results and like-for-like calculations. It separates the
+  confirmed final budget and enacted measures from preliminary figures, stated intentions, policy signals and our own interpretation.
+  Every fact carries a dated source; click an id to see it. Directions and significance are our assessment, each with a confidence level.
+  We quantify only where the evidence allows, and any illustration states its assumptions. An independent reviewer challenged an earlier
+  draft; the changes are listed in the review log.
+documents:
+  - {name: "Council of Ministers approves the FY2027 budget (final)", status: "Final budget", date: "2026-11-24", url: "https://www.spa.gov.sa/en/N2735111"}
+  - {name: "FY2027 Budget Statement, Ministry of Finance (143 pp)", status: "Final budget", date: "2026-11-24", url: "https://www.mof.gov.sa/documents/d/group-328541/bud-2027-eng-final?download=true"}
+  - {name: "MoF release on the final FY2027 budget (incl. Tenders and Procurement Law)", status: "Final budget", date: "2026-11-24", url: "https://www.mof.gov.sa/en/w/saudi-ministry-of-finance-announces-final-budget-statement-for-fy2027-with-expenditures-estimated-at-sar-1-392-billion-and-revenues-at-sar-1-202-billion"}
+  - {name: "Finance Minister press conference (SPA)", status: "Ministerial statement", date: "2026-11-24", url: "https://www.spa.gov.sa/en/N2735399"}
+  - {name: "Budget Forum 2027 (SPA; MoF)", status: "Ministerial statement", date: "2026-11-25", url: "https://www.spa.gov.sa/en/N2736002"}
+  - {name: "FY2027 Pre-Budget Statement (preliminary)", status: "Preliminary", date: "2026-09-30", url: "https://www.mof.gov.sa/documents/d/group-328541/pre-budget-statement-for-fy-2027"}
+  - {name: "Q3 2026 budget performance report", status: "Quarterly outturn", date: "2026-11-03", url: "https://www.mof.gov.sa/documents/328541/438987/Q3+Eng+2026++FINALL.pdf/4604908c-3f63-c0b7-ce05-d6f19e8d768a"}
+  - {name: "FY2026 Budget Statement (prior final budget)", status: "Final budget (prior year)", date: "2025-12-02", url: "https://www.mof.gov.sa/documents/d/group-328541/eng_2026-pdf"}
+  - {name: "NDMC Annual Borrowing Plan 2026 (2027 plan not yet published)", status: "Financing plan", date: "2026-01-03", url: "https://www.ndmc.gov.sa/documents/644549/645412/ABP+2026+-+English+Final.pdf/43695c8e-1f8e-00fb-c172-96066a63069d"}
+  - {name: "SAMA policy-rate decision (repo 4.50%)", status: "Regulatory measure", date: "2026-09-16", url: "https://www.sama.gov.sa/en-US/MediaCenter/News/Pages/news-1169.aspx"}
+  - {name: "ZATCA: Domestic Minimum Top-up Tax from 1 Jan 2027 (as reported)", status: "Regulatory measure", date: "2026-11-19", url: "https://saudigazette.com.sa/article/666380"}
+sections:
+  - heading: "1. What is confirmed (final budget and enacted measures; in-year data marked as comparison)"
+    paras:
+      - {text: "FY2027 final budget: expenditure SAR 1,392.1bn, revenue SAR 1,201.5bn, deficit SAR 190.6bn (3.6% of GDP). The headline figures are unchanged from the 30 Sep pre-budget statement.", refs: ["F-040", "F-023"]}
+      - {text: "2026 revised: deficit SAR 245bn (4.9% of GDP) against SAR 165bn budgeted, and real GDP −2.1% (the pre-budget statement said −3.6%), with oil activity −14.6% through Q3. Crude supply averaged 7.9 mb/d in Jan–Sep 2026 (−15%), 'primarily due to the impact of the closure of the Strait of Hormuz'.", refs: ["F-042", "F-043", "F-045", "F-053", "F-028"]}
+      - {text: "Spending mix, 2027 vs 2026 estimate: military SAR 263bn (+3%); health and social development SAR 256bn (−16%, partly a reclassification after health clusters moved to the Health Holding Company, and partly 2026 crisis spending); education SAR 195bn (−5%); municipal services SAR 93bn (+12%); economic resources SAR 98bn (−5%); infrastructure and transport SAR 38bn (−7%); general items, incl. a mega-projects allocation, SAR 272bn (+6%). Capex is SAR 178bn (−2.1% vs the 2026 estimate, which the Ministry links to military spending brought forward into 2026; +10% vs the FY2026 budget). Financing expenses rise 31.1% to SAR 93bn.", refs: ["F-050", "F-046", "F-052"]}
+      - {text: "Total government subsidies fall 61.6% to SAR 18bn, mainly lower support to electricity and water companies, as tariffs rise from 1 Jan 2027 (industrial electricity 23 halalas/kWh). Allowances for some public employees rise to offset this, and the Citizen Account is extended to end-2027.", refs: ["F-046", "F-055", "F-098", "F-097", "F-102"]}
+      - {text: "Debt is projected at SAR 1,733bn at end-2026 and SAR 1,923bn at end-2027 (35.9% of GDP). For comparison (quarterly budget report, not the budget): actual debt at end-Q3 2026 was already SAR 1,773.6bn; the budget notes that the year-end figure may differ. Government reserves at SAMA stay at SAR 399bn. For comparison (Fitch, market data, not an official figure): Fitch's measure of government-entity deposits at SAMA, defined differently (definitions not reconciled), is about SAR 370bn, near a five-year low.", refs: ["F-048", "F-079", "F-049", "B-013"]}
+      - {text: "Other enacted measures relevant to listed companies:", refs: ["F-099", "F-100", "B-018", "B-005", "B-024", "V-016", "F-097", "V-017"]}
+      - {text: "• An amended Government Tenders and Procurement Law: no new contracts while payments are outstanding, per the Implementing Regulations."}
+      - {text: "• SANED wage support, reactivated by Royal Order: GOSI pays affected private-sector workers for up to three months."}
+      - {text: "• SAMA's 1% countercyclical buffer (from 25 May 2026)."}
+      - {text: "• A +25 bp repo rise to 4.50% (16 Sep 2026)."}
+      - {text: "• Direct foreign access to listed shares (1 Feb 2026)."}
+      - {text: "• ZATCA's Domestic Minimum Top-up Tax from 1 Jan 2027 on the Saudi profits of in-scope multinational groups (detailed rules not yet reviewed)."}
+      - {text: "• Higher Nitaqat wage floors (SAR 5,000, then SAR 6,000)."}
+  - heading: "2. Stated intentions and policy signals (not yet measures)"
+    paras:
+      - {text: "Financing: the final Budget Statement says 2027 borrowing 'will focus on domestic and private market channels'. This is a stated intention; the size and mix come with the NDMC 2027 borrowing plan, not yet published. The 2027 net borrowing need (debt +SAR 190bn) is smaller than 2026's (+SAR 214bn estimated).", refs: ["F-085", "F-084", "F-048"]}
+      - {text: "The Finance Minister speaks of efforts to 'reschedule some projects, and restructure a number of projects and programs', and sets 'no upper limits' on military and security needs. He wants to avoid crowding out private borrowers and sees no need to draw on reserves. No project list or amount is published.", refs: ["F-069", "F-065"]}
+      - {text: "Crisis support: the Finance Minister says more than 200 measures have been taken since the crisis began, including development-fund financing for working capital and imports, and a government-led marine insurance pool that cut insurance costs on shipments to Saudi ports by about 50-60%. No establishing instrument for the pool was located, so it is treated as stated, not enacted.", refs: ["F-062"]}
+      - {text: "Privatisation: a move to a National Privatization Strategy with about 202 projects in the pipeline. Government share sales remain a financing option, but none is announced.", refs: ["V-019"]}
+      - {text: "Energy: plans to raise East-West Pipeline throughput to about 10 mb/d are under consideration (preliminary engineering, no final investment decision). Maximum sustainable capacity stays at 12 mb/d. OPEC+ sets 2027 levels on 29 Nov 2026.", refs: ["E-043", "V-009", "E-042", "V-007"]}
+      - {text: "Press reports of giga-project scaling-back are unverified and are not used.", refs: ["F-105"]}
+  - heading: "3. How the budget and policy reach listed companies"
+    paras:
+      - {text: "Nine channels matter for these sectors:"}
+      - {text: "1. Oil volumes and prices."}
+      - {text: "2. Government borrowing and government deposits, which reach bank liquidity and funding costs."}
+      - {text: "3. The size and timing of government, PIF and government-entity spending, which drives corporate lending and drilling demand."}
+      - {text: "4. Regulated prices, subsidies and feedstock costs."}
+      - {text: "5. Household income support and living costs, which reach retail credit."}
+      - {text: "6. Interest rates."}
+      - {text: "7. Capital rules."}
+      - {text: "8. Tax (the new minimum top-up tax)."}
+      - {text: "9. Security, which drives volumes, shipping and credit quality."}
+      - {text: "Exposure differs within each sector. In Energy:"}
+      - {text: "• Aramco carries the price and volume exposure."}
+      - {text: "• Bahri carries the freight-rate and security exposure."}
+      - {text: "• The drillers carry the activity and refinancing exposure; ADES is now diversified abroad, Arabian Drilling is Saudi-focused."}
+      - {text: "• Petro Rabigh carries the margin and feedstock exposure, with Aramco as its backstop."}
+      - {text: "In Banks, exposure depends on four things:"}
+      - {text: "• Corporate vs retail mix."}
+      - {text: "• Funding: demand vs term deposits, and how far loans exceed deposits."}
+      - {text: "• How the bank's margin has responded to rates, which differs bank by bank: in the 2024–25 cuts only Al Rajhi's margin recovered (see P-B-04)."}
+      - {text: "• Whether the group has foreign entities (the top-up tax scope test) and how much Zakat and tax it pays on Saudi profits."}
+  - heading: "4. Scenarios and what we cannot assess yet"
+    paras:
+      - {text: "Base case (our reading of the budget's growth path; Fitch for credit): the budget projects real GDP +10.9% in 2027 on an oil-output recovery and publishes no oil-price assumption; we assume the crisis premium fades. Energy revenue is then volume-led and roughly stable to higher. Shipping and refining earnings normalise down. Bank credit growth is around 8% (Fitch) with steady funding pressure.", refs: ["F-044", "B-033"]}
+      - {text: "Downside: the escalation since 30 Sep 2026 persists. Tankers were hit in Hormuz on 21 and 25 Nov, and banks report a significant escalation as a subsequent event. Then volumes stay constrained and prices high, which favours Aramco's price, Bahri's rates and refiners' margins. It also means higher credit costs for banks, weaker non-oil activity and a larger deficit and borrowing need.", refs: ["V-018", "E-021"]}
+      - {text: "Still pending, with impacts that depend on them marked as conditional:"}
+      - {text: "• The NDMC 2027 borrowing plan."}
+      - {text: "• The list of rescheduled projects."}
+      - {text: "• The 2027 oil-revenue assumption (not published in the budget)."}
+      - {text: "• OPEC+ 2027 levels."}
+      - {text: "• January 2027 fuel and feedstock price notices."}
+      - {text: "• The top-up tax regulations."}
+      - {text: "No change to Zakat rules for 2027 was found (search to 26 Nov 2026).", refs: ["F-084", "F-046", "V-007", "V-016"]}
+      - {text: "Our interpretation does not change any historical figure or like-for-like calculation in this analysis."}
+  - heading: "5. Other sectors: first map of channels (to be completed in the roll-out)"
+    paras:
+      - {text: "These are preliminary channels, Low confidence until each sector's companies are analysed:", refs: ["F-046", "F-055", "F-099", "B-028", "B-031", "F-062", "V-016"]}
+      - {text: "• Utilities: tariff rises from 1 Jan 2027 and lower government support to electricity and water companies (most of the 61.6% cut in total subsidies)."}
+      - {text: "• Materials and petrochemicals: feedstock and fuel price notices, refining margins, and the top-up tax for large groups."}
+      - {text: "• Capital goods and construction: project rescheduling, offset by the contractor-payment rule."}
+      - {text: "• Consumer sectors: household allowances against higher utility bills."}
+      - {text: "• Real estate and REITs: the rent freeze, land release and foreign ownership."}
+      - {text: "• Insurance: the marine insurance pool, and health spending, which is partly reclassified."}
+      - {text: "• Transportation: shipping security."}
+      - {text: "Aldrees (fuel retail), which the Saudi Exchange moved from Energy to Consumer Discretionary in Sep 2025, is exposed to regulated fuel prices and diesel costs; it is assessed with its current sector."}
+sector_notes:
+  Energy:
+    opportunities: ["Volume recovery towards OPEC+ required levels if flows normalise", "Bypass export capacity (East-West pipeline expansion under consideration)", "Rig reactivations (Arabian Drilling notified to resume all suspended offshore rigs in Aug 2026) and the gas programme"]
+    risks: ["Persisting disruption or renewed attacks on facilities, pipelines and tankers", "Normalisation of crisis freight rates and refining margins", "Refinancing for leveraged drillers (Arabian Drilling sukuk due Feb 2027)", "Minimum top-up tax for in-scope groups with low Saudi effective rates (detailed rules not yet reviewed)"]
+    indicators: ["Saudi crude output (one series, monthly)", "OPEC+ 29 Nov 2026 decision", "Brent and VLCC rates", "Hormuz and Red Sea traffic", "January 2027 fuel and feedstock price notices", "Aramco FY2026 results (Mar 2027)"]
+  Banks:
+    opportunities: ["Foreign demand for SAR sukuk after J.P. Morgan index inclusion (29 Jan 2027)", "Utilities and municipal lending", "Faster contractor payments if the procurement rule is enforced", "Margin support at asset-sensitive banks after the Sep 2026 hike"]
+    risks: ["Deposit competition and higher funding costs", "Credit costs if the escalation persists", "Loan growth well below the 2022–25 pace", "Top-up tax on Saudi profits for banks that are multinational groups (about 5% of pre-tax profit at current zakat and tax rates)"]
+    indicators: ["NDMC 2027 borrowing plan", "3M SAIBOR and time-deposit share", "Monthly bank credit, deposits and mortgages (SAMA)", "Quarterly impairments and overlays", "ZATCA top-up tax regulations"]

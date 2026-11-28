@@ -1,0 +1,111 @@
+# Evidence extracted from MEFIC REIT Fund filings (archive: SEVEN_REIT/4346_MEFIC_REIT). Facts only; page = physical PDF page (1-based).
+# Units: SAR (actuals). Audited statements: FY2023 (2023_Annual_filed2025-10-07_t15-46-01.pdf), FY2024 (2024_Annual_filed2025-10-07_t15-48-52.pdf;
+# audit report pages are images, read by OCR) - both filed in the archive in October 2025 - and FY2025 (2025_Annual_filed2026-04-05_t13-08-55.pdf).
+# Fund annual reports (2023_Annual_filed2025-06-16.pdf, 2024_Annual_filed2025-06-16.pdf, 2025_Annual_filed2026-04-05_t13-14-48.pdf) and quarterly reports are unaudited.
+ticker: "4346"
+company: "MEFIC REIT Fund (managed by Middle East Financial Investment Company)"
+
+perimeter_changes:
+  - event: "The Pad (Dubai): 30 apartments exchanged for 63,852,000 preferred shares in Downtown Bay Development Limited"
+    type: disposal
+    date: "2024-10-23"
+    consideration: "63,852,000 preferred shares at book value (now 'Investments at fair value through profit or loss')"
+    revenue_contribution: "rental income FY2022 4,995,183; FY2023 4,013,009; FY2024 1,609,560; FY2025 nil (notes 17/19)"
+    profit_contribution: "gain on disposal 4,396,106 (GAIN_DISP)"
+    pro_forma_revenue: null
+    period: "FY2024"
+    unit: "SAR"
+    source: "4346_MEFIC_REIT/2024_Annual_filed2025-10-07_t15-48-52.pdf"
+    page: 28
+    quote: "On 23 October 2024, the fund sold the Pad 30 apartments in The Pad in Dubai in exchange for 63,852,000 preferred shares"
+  - event: "Sale of the commercial and administrative building in Jeddah (Alandalus / Tihama)"
+    type: disposal
+    date: "2025-07-24"
+    consideration: 40000000
+    revenue_contribution: "rental income FY2024 3,121,607; FY2025 2,482,779 (note 19)"
+    profit_contribution: "capital gain 1,560,410 (GAIN_DISP)"
+    pro_forma_revenue: null
+    period: "FY2025"
+    unit: "SAR"
+    source: "4346_MEFIC_REIT/2025_Annual_filed2026-04-05_t13-08-55.pdf"
+    page: 27
+    quote: "On 24 July 2025 the Fund sold the properties of a commercial and administrative building in Jeddah for an amount of SAR 40,000,000"
+  - event: "No acquisitions FY2022-9M2026 (no investing purchases in the cash flows; four properties at 30 Sep 2026)"
+    type: acquisition
+    status: "not found"
+    period: "FY2022-9M2026"
+    source: "4346_MEFIC_REIT/2025_Q3_filed2025-11-13.pdf"
+    page: 3
+    quote: "The fund did not acquire any properties during the relevant quarter"
+
+segments:
+  # One operating segment; rental income by property is disclosed and used below.
+  - {period: "FY2022", segment: "Commercial mall in Riyadh", basis: product, revenue: 29803711, profit: null, unit: "SAR", source: "4346_MEFIC_REIT/2023_Annual_filed2025-10-07_t15-46-01.pdf", page: 37}
+  - {period: "FY2022", segment: "Dhiyafa", basis: product, revenue: 14405236, profit: null, unit: "SAR", source: "4346_MEFIC_REIT/2023_Annual_filed2025-10-07_t15-46-01.pdf", page: 37}
+  - {period: "FY2022", segment: "Plaza 1 (commercial 5,618,354 + residential 4,806,993)", basis: product, revenue: 10425347, profit: null, unit: "SAR", source: "4346_MEFIC_REIT/2023_Annual_filed2025-10-07_t15-46-01.pdf", page: 37}
+  - {period: "FY2022", segment: "The Pad", basis: product, revenue: 4995183, profit: null, unit: "SAR", source: "4346_MEFIC_REIT/2023_Annual_filed2025-10-07_t15-46-01.pdf", page: 37}
+  - {period: "FY2022", segment: "Commercial and administrative building in Jeddah", basis: product, revenue: 3579371, profit: null, unit: "SAR", source: "4346_MEFIC_REIT/2023_Annual_filed2025-10-07_t15-46-01.pdf", page: 37}
+  - {period: "FY2023", segment: "Commercial mall in Riyadh", basis: product, revenue: 26593419, profit: null, unit: "SAR", source: "4346_MEFIC_REIT/2023_Annual_filed2025-10-07_t15-46-01.pdf", page: 37}
+  - {period: "FY2023", segment: "Dhiyafa", basis: product, revenue: 15218688, profit: null, unit: "SAR", source: "4346_MEFIC_REIT/2023_Annual_filed2025-10-07_t15-46-01.pdf", page: 37}
+  - {period: "FY2023", segment: "Plaza 1 (commercial 6,571,389 + residential 4,814,959)", basis: product, revenue: 11386348, profit: null, unit: "SAR", source: "4346_MEFIC_REIT/2023_Annual_filed2025-10-07_t15-46-01.pdf", page: 37}
+  - {period: "FY2023", segment: "The Pad", basis: product, revenue: 4013009, profit: null, unit: "SAR", source: "4346_MEFIC_REIT/2023_Annual_filed2025-10-07_t15-46-01.pdf", page: 37}
+  - {period: "FY2023", segment: "Commercial and administrative building in Jeddah", basis: product, revenue: 3312173, profit: null, unit: "SAR", source: "4346_MEFIC_REIT/2023_Annual_filed2025-10-07_t15-46-01.pdf", page: 37}
+  - {period: "FY2024", segment: "Commercial mall in Riyadh", basis: product, revenue: 29860256, profit: null, unit: "SAR", source: "4346_MEFIC_REIT/2025_Annual_filed2026-04-05_t13-08-55.pdf", page: 39}
+  - {period: "FY2024", segment: "Makkah hotels Drnef Ajyad 3,899,935 + Drnef Kudai 421,457 (hotel revenue, reopened under a management contract)", basis: product, revenue: 4321392, profit: null, unit: "SAR", source: "4346_MEFIC_REIT/2025_Annual_filed2026-04-05_t13-08-55.pdf", page: 39}
+  - {period: "FY2024", segment: "Dhiyafa", basis: product, revenue: 14533501, profit: null, unit: "SAR", source: "4346_MEFIC_REIT/2025_Annual_filed2026-04-05_t13-08-55.pdf", page: 39}
+  - {period: "FY2024", segment: "Plaza 1 (commercial 5,818,707 + residential 5,248,419)", basis: product, revenue: 11067126, profit: null, unit: "SAR", source: "4346_MEFIC_REIT/2025_Annual_filed2026-04-05_t13-08-55.pdf", page: 39}
+  - {period: "FY2024", segment: "The Pad", basis: product, revenue: 1609560, profit: null, unit: "SAR", source: "4346_MEFIC_REIT/2025_Annual_filed2026-04-05_t13-08-55.pdf", page: 39}
+  - {period: "FY2024", segment: "Commercial and administrative building in Jeddah", basis: product, revenue: 3121607, profit: null, unit: "SAR", source: "4346_MEFIC_REIT/2025_Annual_filed2026-04-05_t13-08-55.pdf", page: 39}
+  - {period: "FY2025", segment: "Commercial mall in Riyadh", basis: product, revenue: 30217874, profit: null, unit: "SAR", source: "4346_MEFIC_REIT/2025_Annual_filed2026-04-05_t13-08-55.pdf", page: 39}
+  - {period: "FY2025", segment: "Makkah hotels Drnef Ajyad 4,349,278 + Drnef Kudai 1,173,913", basis: product, revenue: 5523191, profit: null, unit: "SAR", source: "4346_MEFIC_REIT/2025_Annual_filed2026-04-05_t13-08-55.pdf", page: 39}
+  - {period: "FY2025", segment: "Dhiyafa", basis: product, revenue: 12254391, profit: null, unit: "SAR", source: "4346_MEFIC_REIT/2025_Annual_filed2026-04-05_t13-08-55.pdf", page: 39}
+  - {period: "FY2025", segment: "Plaza 1 (commercial 5,675,171 + residential 4,879,246)", basis: product, revenue: 10554417, profit: null, unit: "SAR", source: "4346_MEFIC_REIT/2025_Annual_filed2026-04-05_t13-08-55.pdf", page: 39}
+  - {period: "FY2025", segment: "Commercial and administrative building in Jeddah (sold 24 Jul 2025)", basis: product, revenue: 2482779, profit: null, unit: "SAR", source: "4346_MEFIC_REIT/2025_Annual_filed2026-04-05_t13-08-55.pdf", page: 39}
+
+revenue_drivers:
+  - {period: "FY2025", driver: "Rental and hotel revenue split: rental income 55,509,461 and hotel operations 5,523,191 (FY2024: 60,192,050 and 4,321,392)", value: 61032652, unit: "SAR", source: "4346_MEFIC_REIT/2025_Annual_filed2026-04-05_t13-08-55.pdf", page: 39, quote: "Revenue from hotel operations 5,523,191 4,321,392"}
+  - {period: "FY2023", driver: "Contract signed to manage and operate the two Makkah hotels, which earned no revenue in 2023", value: null, unit: "SAR", source: "4346_MEFIC_REIT/2023_Annual_filed2025-10-07_t15-46-01.pdf", page: 28, quote: "During the current year, a contract was signed to manage and operate the Drnef Ajyad and Drnef Kudai hotels"}
+
+one_offs:
+  - {period: "FY2022", item: "Other income from Al-Rukn Al-Mateen (unitholder of Al-Qannas Fund) 10,000,000 plus distributions 1,100,000", amount: 11100000, unit: "SAR", pnl_line: "Other income (note 19; inside FFO)", recurring: false, source: "4346_MEFIC_REIT/2023_Annual_filed2025-10-07_t15-46-01.pdf", page: 38, quote: "Al-Rukn Al-Mateen (Unitholder of Al-Qannas Fund) - 10,000,000"}
+  - {period: "FY2023", item: "Gain on remeasurement of a lease (variable payments); recurs each year (FY2023-FY2025), so not treated as a one-off", amount: 7409022, unit: "SAR", pnl_line: "Other income (inside FFO)", recurring: true, source: "4346_MEFIC_REIT/2023_Annual_filed2025-10-07_t15-46-01.pdf", page: 38, quote: "Remeasurement of lease (Note 10) 7,409,022 -"}
+  - {period: "FY2024", item: "Gain on remeasurement of lease contract (FY2025 comparative; FY2024 statements showed 2,991,851)", amount: 3398499, unit: "SAR", pnl_line: "Other income (inside FFO)", recurring: true, source: "4346_MEFIC_REIT/2025_Annual_filed2026-04-05_t13-08-55.pdf", page: 40, quote: "Remeasurement of lease contract (Note 11) 3,741,914 3,398,499"}
+  - {period: "FY2025", item: "Gain on remeasurement of lease contract (recurring; not a one-off)", amount: 3741914, unit: "SAR", pnl_line: "Other income (inside FFO)", recurring: true, source: "4346_MEFIC_REIT/2025_Annual_filed2026-04-05_t13-08-55.pdf", page: 40, quote: "Remeasurement of lease contract (Note 11) 3,741,914 3,398,499"}
+  - {period: "FY2025", item: "Write-off of balances no longer in use", amount: 314600, unit: "SAR", pnl_line: "Other income (inside FFO)", recurring: false, source: "4346_MEFIC_REIT/2025_Annual_filed2026-04-05_t13-08-55.pdf", page: 40, quote: "Write-off of Balances No Longer in Use 314,600 -"}
+  - {period: "FY2025", item: "Dividends from the preferred shares received for The Pad (first year; recurrence not stated, kept in FFO and not listed as a one-off)", amount: 3756000, unit: "SAR", pnl_line: "Other income", recurring: null, source: "4346_MEFIC_REIT/2025_Annual_filed2026-04-05_t13-08-55.pdf", page: 40, quote: "Dividends from Investments at Fair Value Through Profit or 3,756,000 -"}
+  - {period: "FY2024", item: "Gain on disposal of The Pad (GAIN_DISP)", amount: 4396106, unit: "SAR", pnl_line: "Other income in FY2024 statements; 'Gain on disposal of investment properties' in FY2025 statements", recurring: false, source: "4346_MEFIC_REIT/2024_Annual_filed2025-10-07_t15-48-52.pdf", page: 38, quote: "Disposal of Investment property (The Pad) 4,396,106 -"}
+  - {period: "FY2025", item: "Gain on disposal of the Jeddah building (GAIN_DISP)", amount: 1560410, unit: "SAR", pnl_line: "Gain on disposal of investment properties", recurring: false, source: "4346_MEFIC_REIT/2025_Annual_filed2026-04-05_t13-08-55.pdf", page: 9, quote: "Gain on disposal of investment properties 7 1,560,410 4,396,106"}
+
+restatements:
+  - {period_restated: "FY2022", item: "Borrowings: accrued financing costs moved into loans", from: 347222486, to: 353989605, unit: "SAR", reason: "Reclassification of comparative figures (FY2023 note 27)", source: "4346_MEFIC_REIT/2023_Annual_filed2025-10-07_t15-46-01.pdf", page: 46, quote: "Loans 13 )347,222,486( )6,767,119( )353,989,605("}
+  - {period_restated: "FY2024", item: "Hotel part of a dual-use property moved from investment properties to property and equipment: IP depreciation 5,948,399 to 3,693,325; IP impairment reversal 13,235,371 to 6,075,481", from: 754759819, to: 584493000, unit: "SAR", reason: "Correction of an error (FY2025 note 28); no effect on net assets", source: "4346_MEFIC_REIT/2025_Annual_filed2026-04-05_t13-08-55.pdf", page: 46, quote: "This reclassification constitutes a correction of an error in prior periods"}
+  - {period_restated: "FY2024", item: "Fair-value NAV recomputed from the full average valuation 899,588,625", from: 546185310, to: 579185311, unit: "SAR", reason: "FY2024 note 9 used 866,588,625 in the surplus calculation although its own valuation table totals 899,588,625", source: "4346_MEFIC_REIT/2024_Annual_filed2025-10-07_t15-48-52.pdf", page: 33, quote: "intangible assets based on the average of the two 866,588,625 951,777,738"}
+  - {period_restated: "FY2024", item: "Net income 8,115,892 to 8,117,894 (+2,002): the FY2024 total of operating expenses (32,355,293) did not equal its lines (32,353,891) and other expenses were re-analysed (16,869,602 to 16,869,002)", from: 8115892, to: 8117894, unit: "SAR", reason: "arithmetic correction in the FY2025 comparative; not described in note 28", source: "4346_MEFIC_REIT/2025_Annual_filed2026-04-05_t13-08-55.pdf", page: 9, quote: "Net income for the year 356,829 8,117,894"}
+
+significant_events:
+  - {date: "2024", event: "Loan refinanced with SAB: SAR 400m facility, SAIBOR + 2%; 347.5m drawn and 380.2m paid in 2024; loan due 1 Aug 2031 per Q3 2026 report", financial_effect: "DEBT 352.5m (FY2024), 311.7m (FY2025)", source: "4346_MEFIC_REIT/2024_Annual_filed2025-10-07_t15-48-52.pdf", page: 36, quote: "Amaar Real Estate Company (SPV) has secured Islamic financing facilities from SAB Bank totaling SAR 400,000,000"}
+  - {date: "2024-02-01", event: "Last distribution: SAR 0.08 per unit (SAR 5.9m) for 2023, approved 1 Feb 2024; none approved in 2025 or to 30 Sep 2026", financial_effect: "DIST 5.9m FY2024, nil FY2025 and 9M2026", source: "4346_MEFIC_REIT/2025_Annual_filed2026-04-05_t13-08-55.pdf", page: 41, quote: "The Fund’s Board of Directors approved no dividend distribution"}
+  - {date: "2025-10", event: "FY2023 and FY2024 audited statements filed in the archive in October 2025 (approved 27 Mar 2024 and, as printed, '27 march 2024' for FY2024, apparently 27 Mar 2025)", financial_effect: "none", source: "4346_MEFIC_REIT/2024_Annual_filed2025-10-07_t15-48-52.pdf", page: 46, quote: "approved by the Board of Directors on 27 Ramadhan 1446 H, corresponding to 27 march 2024."}
+  - {date: "2025", event: "Loans from and repayments to the Fund Manager (proceeds 9,207,476; payments 13,539,252); trade payables to the Fund Manager 14,208,022 at end-2025, outside DEBT", financial_effect: "not in borrowings", source: "4346_MEFIC_REIT/2025_Annual_filed2026-04-05_t13-08-55.pdf", page: 41, quote: "Middle East Financial Investment Company (14,208,022) (17,197,628)"}
+
+audit_opinion:
+  - {period: "FY2023", opinion: "unqualified", emphasis_of_matter: "none", source: "4346_MEFIC_REIT/2023_Annual_filed2025-10-07_t15-46-01.pdf", page: 3}
+  - {period: "FY2024", opinion: "unqualified", emphasis_of_matter: "none (audit report pages are images; read by OCR)", source: "4346_MEFIC_REIT/2024_Annual_filed2025-10-07_t15-48-52.pdf", page: 3}
+  - {period: "FY2025", opinion: "unqualified", emphasis_of_matter: "none", source: "4346_MEFIC_REIT/2025_Annual_filed2026-04-05_t13-08-55.pdf", page: 3}
+
+kpis_in_filings:
+  - {period: "FY2025", kpi: "Total occupancy rate (FY2023: 71%)", value: 80, unit: "%", source: "4346_MEFIC_REIT/2025_Annual_filed2026-04-05_t13-14-48.pdf", page: 4}
+  - {period: "FY2023", kpi: "Total occupancy rate", value: 71, unit: "%", source: "4346_MEFIC_REIT/2023_Annual_filed2025-06-16.pdf", page: 4}
+  - {period: "9M2026", kpi: "Occupancy 66%; mall 89%, Dhiyafa 58%, Ajyad hotel 43%, Kuddai hotel 0%; 4 properties; building area 110,790 sqm", value: 66, unit: "%", source: "4346_MEFIC_REIT/2026_Q3_filed2026-10-13.pdf", page: 3}
+  - {period: "FY2025", kpi: "Commercial mall in Riyadh: 187 stores in 21 buildings", value: 187, unit: "count", source: "4346_MEFIC_REIT/2025_Annual_filed2026-04-05_t13-08-55.pdf", page: 28}
+  - {period: "FY2025", kpi: "Plaza 1 leasable area", value: 12000, unit: "sqm", source: "4346_MEFIC_REIT/2025_Annual_filed2026-04-05_t13-08-55.pdf", page: 32}
+  - {period: "FY2024", kpi: "Drnef Ajyad 203 rooms and 11 suites; Drnef Kudai 75 rooms and 11 suites", value: null, unit: "count", source: "4346_MEFIC_REIT/2024_Annual_filed2025-10-07_t15-48-52.pdf", page: 29}
+
+special_extractions:
+  - {item: "9M fact-sheet figures used", note: "Net income Jan-Sep 8,734,146 (2025) and (9,527,138) (2026); book NAV 524,146,787 and 506,242,334; fund total assets 988,082,204 and 905,331,708; debt-to-asset 35.45% and 34.41%; properties book value and average fair value used to calculate NAV at fair value (2025_Q3 p.1, p.4; 2026_Q3 p.1, p.4). No revenue printed."}
+
+open_questions:
+  - "The FY2024 cash-flow statement has misaligned labels (e.g. lease finance cost shown against right-of-use depreciation); the FY2025 comparative is used."
+  - "FY2025 note 7 calls the 4,838,506 investment-property movement a reversal, but the accumulated-impairment table and the add-back show a charge (and the FY2024 wording is reversed the same way)."
+  - "The Q3 2025 report still lists the Jeddah building sold on 24 Jul 2025."
+  - "Lease remeasurement gains recur each year (7.4m, 3.4m, 3.7m); they are non-cash, kept inside FFO and not treated as one-offs."

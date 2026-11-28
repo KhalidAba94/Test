@@ -1,0 +1,419 @@
+# Evidence from Halwani Bros (archive 6001_HB). Facts only; page = physical PDF page (1-based).
+# All primary statements are image pages (annuals pp7-11, interims pp4-7), read by OCR and checked against printed subtotals.
+ticker: '6001'
+company: Halwani Bros. Co. (HB)
+perimeter_changes:
+- event: >-
+    Group unchanged FY2022-9M2026: parent plus wholly owned Halwani Brothers Egypt; two Cayman holding companies (Foodco, Halegpt) hold
+    Egypt shares and do not operate
+  type: new_subsidiary
+  date: FY2022-9M2026
+  consideration: null
+  revenue_contribution: null
+  profit_contribution: null
+  pro_forma_revenue: null
+  period: FY2022-9M2026
+  unit: SAR
+  source: 6001_HB/2025_Annual_filed2026-02-11.pdf
+  page: 13
+  quote: The two subsidiaries in Cayman Islands do not perform any operations
+  note: >-
+    Listed here only to document that the perimeter did not change; no acquisition, disposal or new operating subsidiary.
+- event: Acquisitions or disposals of businesses (IFRS 3 / IFRS 5)
+  type: acquisition
+  status: not found
+  period: FY2022-9M2026
+  source: 6001_HB/2026_Q3_filed2026-11-05.pdf
+  page: 11
+  quote: Foodco Limited* Cayman Islands 100% 100% Investment
+  note: >-
+    Subsidiary list identical in the FY2023, FY2025 annuals and 2026 Q3; no business-combination or discontinued-operation note in any
+    filing.
+segments:
+- period: FY2022
+  segment: Kingdom of Saudi Arabia
+  basis: geographic
+  revenue: 434775
+  profit: null
+  unit: SAR '000
+  source: 6001_HB/2023_Annual_filed2024-03-18.pdf
+  page: 35
+- period: FY2022
+  segment: Arab Republic of Egypt
+  basis: geographic
+  revenue: 589702
+  profit: 69975
+  unit: SAR '000
+  source: 6001_HB/2023_Annual_filed2024-03-18.pdf
+  page: 35
+  note: profit = Egypt segment profit after tax
+- period: FY2023 (restated)
+  segment: Kingdom of Saudi Arabia
+  basis: geographic
+  revenue: 354171
+  profit: null
+  unit: SAR '000
+  source: 6001_HB/2024_Annual_filed2025-03-04.pdf
+  page: 34
+- period: FY2023 (restated)
+  segment: Arab Republic of Egypt
+  basis: geographic
+  revenue: 528845
+  profit: null
+  unit: SAR '000
+  source: 6001_HB/2024_Annual_filed2025-03-04.pdf
+  page: 34
+- period: FY2023 (as first reported)
+  segment: Arab Republic of Egypt
+  basis: geographic
+  revenue: 526022
+  profit: 51682
+  unit: SAR '000
+  source: 6001_HB/2023_Annual_filed2024-03-18.pdf
+  page: 35
+  note: Saudi segment 363,318; group loss 98,011 after the Egypt profit of 51,682
+- period: FY2024
+  segment: Kingdom of Saudi Arabia
+  basis: geographic
+  revenue: 481314
+  profit: null
+  unit: SAR '000
+  source: 6001_HB/2025_Annual_filed2026-02-11.pdf
+  page: 32
+- period: FY2024
+  segment: Arab Republic of Egypt
+  basis: geographic
+  revenue: 489397
+  profit: 27344
+  unit: SAR '000
+  source: 6001_HB/2025_Annual_filed2026-02-11.pdf
+  page: 32
+- period: FY2025
+  segment: Kingdom of Saudi Arabia
+  basis: geographic
+  revenue: 466376
+  profit: null
+  unit: SAR '000
+  source: 6001_HB/2025_Annual_filed2026-02-11.pdf
+  page: 32
+- period: FY2025
+  segment: Arab Republic of Egypt
+  basis: geographic
+  revenue: 439301
+  profit: 16553
+  unit: SAR '000
+  source: 6001_HB/2025_Annual_filed2026-02-11.pdf
+  page: 32
+- period: 9M2025
+  segment: Kingdom of Saudi Arabia
+  basis: geographic
+  revenue: 355039
+  profit: null
+  unit: SAR '000
+  source: 6001_HB/2026_Q3_filed2026-11-05.pdf
+  page: 12
+- period: 9M2025
+  segment: Arab Republic of Egypt
+  basis: geographic
+  revenue: 329458
+  profit: 12109
+  unit: SAR '000
+  source: 6001_HB/2026_Q3_filed2026-11-05.pdf
+  page: 12
+- period: 9M2026
+  segment: Kingdom of Saudi Arabia
+  basis: geographic
+  revenue: 353881
+  profit: null
+  unit: SAR '000
+  source: 6001_HB/2026_Q3_filed2026-11-05.pdf
+  page: 12
+- period: 9M2026
+  segment: Arab Republic of Egypt
+  basis: geographic
+  revenue: 352131
+  profit: 10492
+  unit: SAR '000
+  source: 6001_HB/2026_Q3_filed2026-11-05.pdf
+  page: 12
+revenue_drivers:
+- period: FY2025
+  driver: 'Revenue by product: sesame 312,691 (FY2024 362,354), meat 373,116 (380,200), other 218,059 (226,502)'
+  value: null
+  unit: SAR '000
+  source: 6001_HB/2025_Annual_filed2026-02-11.pdf
+  page: 33
+  quote: Sesame products 245,985 66,706 - 312,691
+- period: FY2025
+  driver: 'Revenue by market: Saudi Arabia 418,925 (429,190), Egypt 392,782 (416,028), other markets 92,159 (123,838)'
+  value: 92159
+  unit: SAR '000
+  source: 6001_HB/2025_Annual_filed2026-02-11.pdf
+  page: 34
+  quote: Other markets 92,159 123,838
+- period: FY2025
+  driver: Egyptian subsidiary share of group revenue 49% (FY2024 51%); EGP is its functional currency
+  value: 49
+  unit: '%'
+  source: 6001_HB/2025_Annual_filed2026-02-11.pdf
+  page: 51
+  quote: >-
+    Approximately 49% of the Group’s revenue for the year ended 31 December 2025 represents sales from the subsidiary, Halwani Bros
+    - Egypt
+- period: 9M2026
+  driver: >-
+    Revenue by product 9M2026 (9M2025): sesame 219,354 (246,746), meat 321,594 (276,269), other 164,425 (159,770); exports 58,756 (78,474)
+  value: null
+  unit: SAR '000
+  source: 6001_HB/2026_Q3_filed2026-11-05.pdf
+  page: 13
+  quote: Meat products 34,007 287,587 - 321,594
+- period: FY2025
+  driver: 'Export support from the Export Development Fund of Egypt: EGP 58.3m = SAR 4.43m (FY2024 SAR 0.09m)'
+  value: 4434760
+  unit: SAR
+  source: 6001_HB/2025_Annual_filed2026-02-11.pdf
+  page: 35
+  quote: >-
+    the subsidiary received support from the Export Development Fund in the Arab Republic of Egypt amounting to EGP 58,314,435
+one_offs:
+- period: FY2022
+  item: Loss on foreign currency differences
+  amount: -5204004
+  unit: SAR
+  pnl_line: below profit from operations, above PBT
+  recurring: false
+  source: 6001_HB/2023_Annual_filed2024-03-18.pdf
+  page: 7
+  quote: Gain / (loss) on foreign currency differences 303,024 (5,204,004)
+- period: FY2022
+  item: Gain on disposal of assets available for sale
+  amount: 8512023
+  unit: SAR
+  pnl_line: Other income, net (note 7)
+  recurring: false
+  source: 6001_HB/2023_Annual_filed2024-03-18.pdf
+  page: 38
+  quote: Gain on disposal Assets available for sale - 8,512,023
+- period: FY2022
+  item: Gain on derivative instruments at fair value through profit or loss
+  amount: 326895
+  unit: SAR
+  pnl_line: below profit from operations, above PBT
+  recurring: false
+  source: 6001_HB/2023_Annual_filed2024-03-18.pdf
+  page: 7
+  quote: Gain on derivative instruments at fair value through statement 40,166 326,895
+- period: FY2023
+  item: Asset impairment (PP&E); already outside EBITDA
+  amount: -3745426
+  unit: SAR
+  pnl_line: Asset impairment
+  recurring: false
+  source: 6001_HB/2024_Annual_filed2025-03-04.pdf
+  page: 7
+  quote: (loss) asset impairment 16 - (3,745,426)
+- period: FY2024
+  item: Loss on foreign currency differences after the EGP float (restated)
+  amount: -27579764
+  unit: SAR
+  pnl_line: below profit from operations, above PBT
+  recurring: false
+  source: 6001_HB/2025_Annual_filed2026-02-11.pdf
+  page: 7
+  quote: (loss) on foreign currency differences (755,771) (27,579,764)
+- period: FY2024
+  item: Provisions no longer required (cash-flow add-back; P&L line not named)
+  amount: 13488411
+  unit: SAR
+  pnl_line: not named (we assume other income, net)
+  recurring: false
+  source: 6001_HB/2024_Annual_filed2025-03-04.pdf
+  page: 10
+  quote: Provisions no longer required (13,488,411) (3,100,874)
+  note: >-
+    Of which inventory provision released 1,847,200 (p48) and ECL released 653,495 (p51); provisions - credit balances fell from 9,502,802
+    to 611,008 (p55).
+- period: FY2025
+  item: Gain on disposal of property, plant and equipment
+  amount: 8823042
+  unit: SAR
+  pnl_line: Other income, net (note 7)
+  recurring: false
+  source: 6001_HB/2025_Annual_filed2026-02-11.pdf
+  page: 35
+  quote: Gain on disposal of property, plant, and equipment 8,823,042 222,418
+- period: FY2025
+  item: Export sales support income (Egypt Export Development Fund)
+  amount: 4434760
+  unit: SAR
+  pnl_line: Other income, net (note 7)
+  recurring: true
+  source: 6001_HB/2025_Annual_filed2026-02-11.pdf
+  page: 35
+  quote: Export sales support income (Note a) 4,434,760 86,913
+  note: 'Received every year (FY2022 1.38m, FY2023 0.94m, FY2024 0.09m): treated as recurring, not removed from EBITDA'
+- period: FY2025
+  item: Asset impairment; already outside EBITDA
+  amount: -2250779
+  unit: SAR
+  pnl_line: asset impairment (loss)
+  recurring: false
+  source: 6001_HB/2025_Annual_filed2026-02-11.pdf
+  page: 7
+  quote: asset impairment(loss) 16 (2,250,779)
+- period: 9M2026
+  item: 'Foreign currency differences, net (9M2025: -1,049,093)'
+  amount: -3112590
+  unit: SAR
+  pnl_line: below profit from operations, above PBT
+  recurring: false
+  source: 6001_HB/2026_Q3_filed2026-11-05.pdf
+  page: 4
+  quote: Foreign currency differences, net (543,374) 459,893 (3,112,590) (1,049,093)
+- period: 9M2026
+  item: Impairment loss on property, plant and equipment; already outside EBITDA
+  amount: -2637768
+  unit: SAR
+  pnl_line: Impairment loss on property, plant and equipment
+  recurring: false
+  source: 6001_HB/2026_Q3_filed2026-11-05.pdf
+  page: 4
+  quote: Impairment loss on property, plant and equipment (1,104,852) (449,983) (2,637,768) (449,983)
+restatements:
+- period_restated: FY2023
+  item: Revenue
+  from: 889046415
+  to: 882721622
+  unit: SAR
+  reason: 'Comparative figures reclassified (note 36): revenue, cost of sales, selling expenses and other income'
+  source: 6001_HB/2024_Annual_filed2025-03-04.pdf
+  page: 60
+  quote: Revenue from contract with customer 889,046,415 (6,324,793) 882,721,622
+- period_restated: FY2023
+  item: Net cash from operating activities
+  from: 34055117
+  to: 55182580
+  unit: SAR
+  reason: Finance cost paid moved from operating to financing activities (note 36)
+  source: 6001_HB/2024_Annual_filed2025-03-04.pdf
+  page: 60
+  quote: Net cash generated from operating activities 34,055,117 21,127,463 55,182,580
+- period_restated: FY2023
+  item: Trade receivables / payables gross-up (total assets 902.3m to 951.6m)
+  from: 107299334
+  to: 163076003
+  unit: SAR
+  reason: Receivables and payables reclassified (note 36)
+  source: 6001_HB/2024_Annual_filed2025-03-04.pdf
+  page: 60
+  quote: Trade receivables and other receivables 107,299,334 55,776,669 163,076,003
+- period_restated: FY2024
+  item: 'Income tax (and PBT): 2,985,520 moved from G&A to income tax; finance costs 1,395,914 moved to FX losses'
+  from: -12387308
+  to: -15372828
+  unit: SAR
+  reason: Comparative figures reclassified (note 32); net profit unchanged
+  source: 6001_HB/2025_Annual_filed2026-02-11.pdf
+  page: 55
+  quote: Income Tax (12,387,308) (2,985,520) (15,372,828)
+- period_restated: FY2022
+  item: Cost of revenue (small reclassification)
+  from: -753255765
+  to: -753561976
+  unit: SAR
+  reason: Comparative figures reclassified (note 37)
+  source: 6001_HB/2023_Annual_filed2024-03-18.pdf
+  page: 63
+  quote: Cost of Revenue (753,255,765) (306,211) (753,561,976)
+significant_events:
+- date: '2023'
+  event: Egyptian pound fell against the riyal; translation loss in other comprehensive income
+  financial_effect: FX translation OCI loss 27.4m in FY2023 (71.3m in FY2022, 62.7m in FY2024)
+  source: 6001_HB/2023_Annual_filed2024-03-18.pdf
+  page: 63
+  quote: the Egyptian pound recorded a decrease in the exchange rate against the Saudi riyal
+- date: '2024-03-06'
+  event: Central Bank of Egypt floated the Egyptian pound
+  financial_effect: FY2024 loss on foreign currency differences 27.6m (restated) and translation OCI loss 62.7m
+  source: 6001_HB/2023_Annual_filed2024-03-18.pdf
+  page: 63
+  quote: >-
+    the Central Bank of Egypt decided to allow the exchange rate of the Egyptian pound to be determined according to market forces
+- date: '2024'
+  event: Al Rajhi Bank converted part of working-capital facilities into a 65m medium-term murabaha to Sep 2028
+  financial_effect: Long-term murabaha 44.7m at end-2025
+  source: 6001_HB/2025_Annual_filed2026-02-11.pdf
+  page: 48
+  quote: >-
+    reclassify part of the value of existing bank facilities used to finance existing working capital into medium-term financing in
+    the amount of 65 million
+- date: '2024-06-25'
+  event: >-
+    Statutory reserve of 106.1m transferred to retained earnings after the articles were amended under the new Companies Law
+  financial_effect: no effect on total equity
+  source: 6001_HB/2024_Annual_filed2025-03-04.pdf
+  page: 52
+  quote: the requirement to maintain the statutory reserve is no longer applicable.
+- date: FY2025
+  event: Management going-concern assessment (no material uncertainty reported by the auditor)
+  financial_effect: null
+  source: 6001_HB/2025_Annual_filed2026-02-11.pdf
+  page: 12
+  quote: the financial statements were prepared based on a Going concern basis.
+audit_opinion:
+- period: FY2022
+  opinion: unmodified (BDO Dr. Mohamed Al-Amri & Co.)
+  emphasis_of_matter: none
+  source: 6001_HB/2022_Annual_filed2023-03-16.pdf
+  page: 3
+- period: FY2023
+  opinion: unmodified (BDO Dr. Mohamed Al-Amri & Co.)
+  emphasis_of_matter: none
+  source: 6001_HB/2023_Annual_filed2024-03-18.pdf
+  page: 3
+- period: FY2024
+  opinion: unmodified (BDO Dr. Mohamed Al-Amri & Co.)
+  emphasis_of_matter: none
+  source: 6001_HB/2024_Annual_filed2025-03-04.pdf
+  page: 3
+- period: FY2025
+  opinion: unmodified (BDO Dr. Mohamed Al-Amri & Co.)
+  emphasis_of_matter: none
+  source: 6001_HB/2025_Annual_filed2026-02-11.pdf
+  page: 3
+- period: 9M2026
+  opinion: review conclusion unmodified (BDO Dr. Mohamed Al-Amri & Co.)
+  emphasis_of_matter: none
+  source: 6001_HB/2026_Q3_filed2026-11-05.pdf
+  page: 3
+kpis_in_filings:
+- period: FY2023
+  kpi: Saudi branches (commercial registrations listed)
+  value: 13
+  unit: count
+  source: 6001_HB/2023_Annual_filed2024-03-18.pdf
+  page: 63
+- period: FY2022-9M2026
+  kpi: Volumes, prices, plant capacity or utilisation
+  value: null
+  unit: count
+  source: 6001_HB/2025_Annual_filed2026-02-11.pdf
+  page: null
+  status: not found
+special_extractions:
+- item: Stage A overrides
+  detail: >-
+    Borrowings (all Islamic murabaha and term loans), lease liabilities, D&A incl. right-of-use depreciation and PP&E impairments read
+    from the image statement pages (overrides_parts/6001.csv).
+open_questions:
+- 'FX translation effect on revenue is not determinable: no EGP revenue or average exchange rates are disclosed.'
+- >-
+  Saudi segment revenue rose 35.9% in FY2024 (354.2m to 481.3m) while Egypt fell 7.5%; the filings give no explanation of the Saudi
+  increase.
+- >-
+  The P&L line holding the FY2024 provisions written back (13.5m cash-flow add-back) is not named; we assume other income, net (12.0m
+  in FY2024).
+- >-
+  FY2022 operating cash flow is after finance cost paid (11.4m); from FY2023 (restated) finance cost paid is in financing, so FY2022
+  CFO is not on the same basis.

@@ -1,0 +1,238 @@
+ticker: '1830'
+headline: >-
+  Revenue rose every year from SAR 1,066m (FY2022) to SAR 1,614m (FY2025), 14.8% a year, but attributable profit peaked at SAR 457m
+  in FY2024, a year helped by a SAR 92.2m land-sale gain, and fell 33.3% to SAR 305m in FY2025; in 9M 2026 revenue grew only 4.0% to
+  SAR 1,231m and attributable profit fell 18.0% to SAR 185m as costs rose faster than revenue.
+lfl_basis:
+  definition_used: >-
+    Standard bridge on IFRS revenue from continuing operations. Leejam operates Fitness Time centres in Saudi Arabia and a few in the
+    UAE. Small bolt-on deals changed the group: Altathir Al-Riyadiyeh (sports academies, June 2023, SAR 12m), Sports Hub (55%, June 2024,
+    SAR 2.2m) and Champs Sports in Dubai (60%, February 2024), which was classified at once as held for sale and is a discontinued operation,
+    so its revenue is outside reported revenue. Altathir's revenue is not disclosed, so organic growth is not determinable for FY2023
+    and FY2024; for FY2025 and 9M 2026 the perimeter effect is nil or immaterial and organic growth equals reported growth. The statements
+    give no centre count, openings or same-centre revenue, so like-for-like growth is not determinable in any period.
+  perimeter_changes:
+  - event: Altathir Al-Riyadiyeh Company acquired (100%, SAR 12m)
+    date: '2023-06-14'
+    effect: revenue contribution not disclosed (not determinable)
+    source: 1830_LEEJAM_SPORTS/2024_Annual_filed2025-02-16.pdf p.33
+  - event: Champs Sports and Fitness Club LLC, Dubai (60%, SAR 8.16m), held for sale and shown as a discontinued operation
+    date: '2024-02-01'
+    effect: outside revenue; profit from discontinued operations SAR 2.2m (FY2024), SAR 0.08m (FY2025)
+    source: 1830_LEEJAM_SPORTS/2024_Annual_filed2025-02-16.pdf p.31, p.34; 1830_LEEJAM_SPORTS/2025_Annual_filed2026-02-24.pdf p.7, p.53
+  - event: Sports Hub Sports Company acquired (55%, SAR 2.2m)
+    date: '2024-06-01'
+    effect: 'not adjusted: immaterial (0.17% of FY2023 revenue)'
+    source: 1830_LEEJAM_SPORTS/2024_Annual_filed2025-02-16.pdf p.31
+  - event: Remaining 49% of Padel X bought (SAR 2.2m); 45% of Altathir sold with control kept (SAR 9.06m)
+    date: 2026 (9M)
+    effect: ownership changes only; no revenue effect
+    source: 1830_LEEJAM_SPORTS/2026_Q3_filed2026-11-05.pdf p.10, p.19
+  capacity_changes:
+  - event: Two centres closed in areas expropriated for a government project (SAR 13.73m written off)
+    date: '2023'
+    effect: revenue effect not disclosed
+    source: 1830_LEEJAM_SPORTS/2024_Annual_filed2025-02-16.pdf p.39
+  - event: Centre openings (capex SAR 309m in FY2023, SAR 586m in FY2024, SAR 374m in FY2025)
+    date: FY2023-FY2025
+    effect: number of centres and their revenue not disclosed (not determinable)
+    source: 1830_LEEJAM_SPORTS/2025_Annual_filed2026-02-24.pdf p.11
+  fx_exposure: 'Saudi riyal and UAE dirham, both pegged to the US dollar: no translation effect. UAE revenue was SAR 48.5m in FY2025
+    (3.0% of revenue).'
+  price_volume_support: >-
+    Not determinable. The filings split revenue into subscriptions, personal training, rental and other, and by male, female and other
+    centres, but give no member numbers, prices or centre counts.
+  confidence: Medium (perimeter nil or immaterial from FY2025 with High confidence; FY2023-FY2024 perimeter and new capacity not determinable)
+price_volume:
+- period: FY2025 vs FY2024
+  text: >-
+    Revenue rose SAR 113m (+7.5%). Subscriptions rose 7.5% (SAR 1,269m to SAR 1,364m) and personal training 6.4% (SAR 195m to SAR 207m).
+    By segment, male centres grew 7.2% (SAR 1,093m to SAR 1,172m) and female centres 9.0% (SAR 389m to SAR 424m). Member numbers and
+    prices are not disclosed, so the split is not determinable.
+  basis: disclosed (revenue by service and segment); split not determinable
+  confidence: High for the amounts; the split is not determinable
+  source: 1830_LEEJAM_SPORTS/2025_Annual_filed2026-02-24.pdf p.32 (revenue by service), p.48 (segments)
+  refs:
+  - 1830-FY2025-REV
+  - 1830-FY2024-REV
+- period: 9M 2026 vs 9M 2025
+  text: >-
+    Revenue rose SAR 48m (+4.0%). Subscriptions rose 4.0% (SAR 996m to SAR 1,036m): female-centre subscriptions rose 15.9% (SAR 243m
+    to SAR 281m) while male-centre subscriptions were flat (+0.3%, SAR 748m to SAR 751m). Personal training fell 5.3% (SAR 156m to SAR
+    148m) and rental income rose 55.0% (SAR 18.9m to SAR 29.3m). Member numbers and prices are not disclosed.
+  basis: disclosed (revenue by service and segment); split not determinable
+  confidence: High for the amounts; the split is not determinable
+  source: 1830_LEEJAM_SPORTS/2026_Q3_filed2026-11-05.pdf p.16-17 (revenue), p.24 (segments)
+  refs:
+  - 1830-9M2026-REV
+  - 1830-9M2025-REV
+profit_and_margin:
+  drivers:
+  - period: FY2023
+    driver: >-
+      Revenue +24.4% to SAR 1,325m: subscriptions rose 23.7% (SAR 932m to SAR 1,153m) and personal training 43.4% (SAR 103m to SAR 148m).
+      Gross profit rose 34.8%, faster than revenue, so the gross margin improved to 44.1% (40.7%), and income on short-term Murabaha
+      deposits rose to SAR 13.7m (SAR 0.1m). Attributable profit +39.8% to SAR 356m. EBITDA margin 52.3% (FY2022: 53.2%); net margin
+      26.9%; ROE 35.6%.
+    source: 1830_LEEJAM_SPORTS/2024_Annual_filed2025-02-16.pdf p.7 (P&L); 1830_LEEJAM_SPORTS/2023_Annual_filed2024-03-26.pdf p.33 (revenue
+      by service)
+    refs:
+    - 1830-FY2023-REV
+    - 1830-FY2023-GP
+    - 1830-FY2023-NI_ATTR
+    - 1830-FY2023-EBITDA_C
+  - period: FY2024
+    driver: >-
+      Revenue +13.3% to SAR 1,501m: subscriptions +10.2% and personal training +31.4%; UAE revenue rose to SAR 46.6m (SAR 32.4m). Cost
+      of revenue rose 18.5%, so gross profit grew only 6.6% and the gross margin fell to 41.5%. A SAR 92.2m gain on disposals, mainly
+      a Riyadh land plot, plus lease gains of SAR 15.0m lifted attributable profit 28.3% to SAR 457m. EBITDA margin 56.3%, including
+      the land gain; net margin 30.4%; ROE 39.4%.
+    source: 1830_LEEJAM_SPORTS/2025_Annual_filed2026-02-24.pdf p.7 (P&L); 1830_LEEJAM_SPORTS/2024_Annual_filed2025-02-16.pdf p.34 (revenue),
+      p.39 (land sale), p.51 (segments)
+    refs:
+    - 1830-FY2024-REV
+    - 1830-FY2024-GP
+    - 1830-FY2024-NI_ATTR
+    - 1830-FY2024-EBITDA_C
+    - 1830-FY2024-OPINC
+  - period: FY2025
+    driver: >-
+      Revenue +7.5% to SAR 1,614m, but cost of revenue rose 13.8%: depreciation of property and equipment rose 14.6% (SAR 172m to SAR
+      197m) and of right-of-use assets 14.0%, so gross profit fell 1.3% and the gross margin to 38.1%. Advertising rose 39.1% (SAR 24.7m
+      to SAR 34.3m), finance cost 19.7% (SAR 91.5m to SAR 109.5m), Murabaha income fell to SAR 0.9m (SAR 8.2m) and there was no land
+      gain. Attributable profit -33.3% to SAR 305m. EBITDA margin 47.2%; net margin 18.9%; ROE 25.1%.
+    source: 1830_LEEJAM_SPORTS/2025_Annual_filed2026-02-24.pdf p.7 (P&L), p.48 (segment depreciation)
+    refs:
+    - 1830-FY2025-REV
+    - 1830-FY2025-GP
+    - 1830-FY2025-NI_ATTR
+    - 1830-FY2025-EBITDA_C
+    - 1830-FY2025-FIN_COST
+  - period: 9M2026
+    driver: >-
+      Revenue +4.0% to SAR 1,231m, while cost of revenue rose 9.0% (SAR 749m to SAR 817m), so gross profit fell 4.5% and the gross margin
+      fell to 33.7% (36.7%). Finance cost rose to SAR 92.6m (SAR 77.9m). A SAR 22.7m gain on disposals was offset by other expense of
+      SAR 9.6m, associate liquidation costs of SAR 4.3m and an impairment of SAR 2.5m (9M 2025: a reversal of SAR 11.5m). Attributable
+      profit -18.0% to SAR 185m. EBITDA margin 44.4% (46.4%); net margin 15.1% (19.1%); ROE 21.5% (annualised).
+    source: 1830_LEEJAM_SPORTS/2026_Q3_filed2026-11-05.pdf p.4 (P&L), p.16 (revenue)
+    refs:
+    - 1830-9M2026-REV
+    - 1830-9M2026-GP
+    - 1830-9M2026-NI_ATTR
+    - 1830-9M2026-EBITDA_C
+    - 1830-9M2025-NI_ATTR
+  - period: 9M2026
+    driver: >-
+      Cash flow improved: operating cash flow rose 14.5% to SAR 757m as advance payments for memberships (deferred revenue) rose to
+      SAR 740m from SAR 548m at end-2025, and capex halved to SAR 138m (SAR 281m), so free cash flow was SAR 619m (SAR 380m). Borrowings
+      rose to SAR 760m (end-2025: SAR 548m) while cash reached SAR 605m and treasury shares SAR 340m (SAR 161m).
+    source: 1830_LEEJAM_SPORTS/2026_Q3_filed2026-11-05.pdf p.6 (balance sheet), p.8-9 (cash flow)
+    refs:
+    - 1830-9M2026-CFO
+    - 1830-9M2026-CAPEX
+    - 1830-9M2026-FCF
+    - 1830-9M2026-DEBT
+    - 1830-9M2026-CASH
+  - period: FY2022-FY2025
+    driver: >-
+      Capex rose from SAR 179m (FY2022) to SAR 586m in FY2024 and SAR 374m in FY2025, so free cash flow fell from SAR 495m to SAR 195m
+      (FY2024) before recovering to SAR 399m. Net debt including lease liabilities rose from SAR 870m to SAR 1,862m.
+    source: 'cash-flow statements: 1830_LEEJAM_SPORTS/2023_Annual_filed2024-03-26.pdf p.11; 1830_LEEJAM_SPORTS/2024_Annual_filed2025-02-16.pdf
+      p.11; 1830_LEEJAM_SPORTS/2025_Annual_filed2026-02-24.pdf p.11'
+    refs:
+    - 1830-FY2022-CAPEX
+    - 1830-FY2024-CAPEX
+    - 1830-FY2025-CAPEX
+    - 1830-FY2024-FCF
+    - 1830-FY2025-FCF
+    - 1830-FY2025-NET_DEBT
+  one_offs:
+  - item: Gain on disposal of property and equipment, mainly a Riyadh land plot (book value SAR 58.58m, sold for SAR 150.37m)
+    period: FY2024
+    amount_sar_m: 92.2
+    line: Gain on disposal of property and equipment (below the company operating profit, inside our operating income)
+    source: 1830_LEEJAM_SPORTS/2025_Annual_filed2026-02-24.pdf p.7; 1830_LEEJAM_SPORTS/2024_Annual_filed2025-02-16.pdf p.39
+    tax_nci: Zakat effect not disclosed; the land was sold by the parent (no minority share), but without the zakat effect the after-tax
+      amount is not determinable, profit kept as reported
+  - item: Gain on disposal of property and equipment (proceeds SAR 58.9m)
+    period: 9M2026
+    amount_sar_m: 22.7
+    line: Gain / (loss) on disposal of property and equipment
+    source: 1830_LEEJAM_SPORTS/2026_Q3_filed2026-11-05.pdf p.4, p.8
+    tax_nci: 'Zakat effect and minority share not disclosed: not determinable, profit kept as reported'
+  - item: Liquidation expenses relating to investment in an associate
+    period: 9M2026
+    amount_sar_m: -4.3
+    line: Liquidation expenses relating to investment in an associate
+    source: 1830_LEEJAM_SPORTS/2026_Q3_filed2026-11-05.pdf p.4
+    tax_nci: Under 5% of attributable profit; zakat effect not disclosed, profit kept as reported
+developments:
+- date: '2023-06-14'
+  category: M&A
+  text: Acquired Altathir Al-Riyadiyeh Company (swimming and martial-arts academies) for SAR 12m.
+  source: 1830_LEEJAM_SPORTS/2024_Annual_filed2025-02-16.pdf p.33
+- date: '2023'
+  category: capacity
+  text: Closed two centres in areas expropriated for a government project and wrote off SAR 13.73m.
+  source: 1830_LEEJAM_SPORTS/2024_Annual_filed2025-02-16.pdf p.39
+- date: '2024-02-01'
+  category: M&A
+  text: Bought 60% of Champs Sports and Fitness Club in Dubai for SAR 8.16m; management decided in 2024 to sell it, so it is held for
+    sale and shown as a discontinued operation (still unsold at 30 Sep 2026).
+  source: 1830_LEEJAM_SPORTS/2024_Annual_filed2025-02-16.pdf p.31, p.34; 1830_LEEJAM_SPORTS/2026_Q3_filed2026-11-05.pdf p.10
+- date: '2024'
+  category: event
+  text: Sold a land plot in Riyadh for SAR 150.37m, a gain of SAR 91.79m.
+  source: 1830_LEEJAM_SPORTS/2024_Annual_filed2025-02-16.pdf p.39
+- date: '2024-06-01'
+  category: M&A
+  text: Bought 55% of Sports Hub Sports Company (sports events) for SAR 2.2m.
+  source: 1830_LEEJAM_SPORTS/2024_Annual_filed2025-02-16.pdf p.31
+- date: 2024-2026
+  category: financing
+  text: 'Bought back shares: treasury shares rose from SAR 22.6m (end-2024) to SAR 160.7m (end-2025) and SAR 340.0m (30 Sep 2026).'
+  source: 1830_LEEJAM_SPORTS/2025_Annual_filed2026-02-24.pdf p.9; 1830_LEEJAM_SPORTS/2026_Q3_filed2026-11-05.pdf p.6
+- date: '2025'
+  category: strategy
+  text: Set up Service Sport Company (maintenance of sports halls and equipment) with Service Support Group, later taken to 100% by
+    a share swap; also set up manpower and IT subsidiaries.
+  source: 1830_LEEJAM_SPORTS/2025_Annual_filed2026-02-24.pdf p.13-14
+- date: 2026 (9M)
+  category: M&A
+  text: Bought the remaining 49% of Padel X (SAR 2.2m), sold 45% of Altathir with control kept (SAR 9.06m) and liquidated its associate
+    (expenses SAR 4.29m).
+  source: 1830_LEEJAM_SPORTS/2026_Q3_filed2026-11-05.pdf p.4, p.10, p.19
+what_it_means:
+  improved: >-
+    Revenue grew every year, 14.8% a year from FY2022 to FY2025, and operating cash flow stayed between SAR 673m and SAR 781m; in 9M
+    2026 operating cash flow rose 14.5% and free cash flow reached SAR 619m as capex halved.
+  weakened: >-
+    Profitability fell after FY2024: EBITDA margin from 56.3% (FY2024) to 47.2% (FY2025) and 44.4% in 9M 2026 (46.4%), and attributable
+    profit fell 33.3% in FY2025 and 18.0% in 9M 2026. Borrowings rose to SAR 760m at 30 Sep 2026.
+  why: >-
+    Revenue growth slowed from 24.4% (FY2023) to 7.5% (FY2025) and 4.0% (9M 2026) while depreciation, staff and marketing costs kept
+    rising; FY2024 profit also included a SAR 92.2m land gain. In 9M 2026 male-centre subscriptions were flat while female-centre subscriptions
+    rose 15.9%.
+  uncertain: >-
+    The filings give no centre counts or same-centre revenue, so we cannot tell whether the slowdown comes from existing clubs or from
+    fewer openings; a SAR 9.6m other expense in 9M 2026 is not explained.
+confidence_overall: Medium
+data_notes:
+- 'Restatement (FY2023 annual, note 37): a SOCPA ruling (Nov 2023) required depreciation of land right-of-use assets during construction
+  to be expensed. FY2022 cost of revenue rose SAR 2.5m; PP&E and equity fell SAR 21.3m at 1 Jan 2022 and SAR 23.8m at 31 Dec 2022. FY2021
+  opening total assets and equity and FY2022 PBT, net profit, total assets and equity are shown as restated.'
+- 'FY2022 operating cash flow was re-presented in the FY2023 annual (SAR 669.2m to SAR 673.4m): the impairment provision on advances to
+  suppliers is added back in operations. CFO is after zakat and end-of-service benefits paid and before interest paid (finance cost
+  and lease interest paid are in financing).'
+- 'Corrected from the PDF statements: D&A for EBITDA includes depreciation of right-of-use assets; the XBRL omitted it for FY2022 and FY2023 (corrected
+  to SAR 232m and SAR 252m). FY2022 capex includes intangibles; FY2023 impairment add-back corrected to SAR 2.1m. All 9M 2026 figures
+  come from the PDF (no XBRL file for 2026 Q3).'
+- 'Capex basis break: from FY2024 the PP&E line includes advances to contractors (merged in the FY2025 annual); in FY2022-FY2023 advances
+  (SAR 5.4m and SAR 66.0m) are a separate line and are excluded, so FY2023 capex is not fully comparable.'
+- 'Champs Sports and Fitness Club (Dubai) is a discontinued operation held for sale from 2024: revenue and PBT are continuing operations;
+  net profit and attributable profit include the discontinued result (FY2024 SAR 2.2m; FY2025 SAR 0.08m; 9M 2026 SAR 0.07m; 9M 2025 -SAR
+  0.25m).'
+- 'Our operating income (PBT + finance cost - Murabaha income - share of associate) includes items the company shows below its operating
+  profit: disposal gains, lease gains, write-offs, impairments and other income. FY2024 company operating profit SAR 447.2m vs our SAR
+  555.3m (the difference is mainly the SAR 92.2m disposal gain).'
+- Murabaha deposit profit is treated as finance income. Lease interest is inside finance cost.

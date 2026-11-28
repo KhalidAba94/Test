@@ -1,0 +1,153 @@
+ticker: '4161'
+headline: Revenue grew from SAR 4,897m (FY2022) to SAR 6,348m (FY2025) and SAR 5,171m in 9M 2026 (+10.5%), increasingly through acquisitions (Zahrat Al Rawdah pharmacies alone added SAR 420m in 2025), while
+  attributable profit has stayed near SAR 270m since FY2023 and debt-funded deals took net debt including leases to SAR 3,749m.
+lfl_basis:
+  definition_used: Standard bridge on IFRS revenue (sale of goods and services). Perimeter = post-acquisition revenue of businesses bought in the current period, as disclosed in the IFRS 3 notes, plus the
+    months not owned in the prior period for earlier acquisitions. The current-period contributions are disclosed for every acquisition since 2024; the extra months of earlier deals (IATC and Ykone in 2023;
+    JTC and Barcode in 2025; Zahrat, Toy Triangle and smaller French deals in 2026) are not, so organic growth is not determinable for any comparison and growth excluding only the disclosed deals is the
+    closest measure. Store openings and same-store sales are not disclosed, so new capacity and like-for-like growth are not determinable.
+  perimeter_changes:
+  - event: IATC (62%) and Ykone S.A.S (France, up to 98.6%) acquired
+    date: 2022-07
+    effect: about five months in FY2022; FY2023 revenue effect not disclosed
+    source: 4161_BINDAWOOD/2022_Annual_filed2023-04-05.pdf p.64-65
+  - event: Barcode (India) and Jumairah Trading Company acquired
+    date: 2024-03 / 2024-07
+    effect: post-acquisition revenue SAR 24.24m and SAR 32.56m in FY2024 (disclosed)
+    source: 4161_BINDAWOOD/2024_Annual_filed2025-03-24.pdf p.67, p.69
+  - event: Zahrat Al Rawdah pharmacies (100%), Toy Triangle (51%), The Digital Prototype (51%), Alaska group (France)
+    date: '2025'
+    effect: post-acquisition revenue SAR 448.5m in FY2025, of which Zahrat SAR 419.84m (disclosed)
+    source: 4161_BINDAWOOD/2025_Annual_filed2026-03-18.pdf p.67-72
+  - event: Vaza Food (51%), Juust & Jubn dairy assets (Estonia), Wonder Bakery (UAE, 51%), No Border (Italy, 51%)
+    date: 2026 (9M)
+    effect: post-acquisition revenue SAR 119.6m in 9M 2026 (disclosed)
+    source: 4161_BINDAWOOD/2026_Q3_filed2026-11-16.pdf p.17, p.27, p.29, p.30
+  - event: Saudi Convenience Company, 50% joint venture (three convenience stores)
+    date: 2025-10
+    effect: equity-accounted; no revenue effect
+    source: 4161_BINDAWOOD/2025_Annual_filed2026-03-18.pdf p.53
+  capacity_changes:
+  - event: Store openings and closures
+    date: FY2022-9M2026
+    effect: not disclosed; not determinable
+    source: 4161_BINDAWOOD/2025_Annual_filed2026-03-18.pdf p.41
+  fx_exposure: Mostly riyal business (management states more than 90% of operations are in Saudi Arabia). Euro, Indian rupee and from 2026 dirham businesses are small; the translation effect is not disclosed
+    and is not determinable.
+  price_volume_support: 'Not determinable: the statements give revenue by goods and services only, with no store count, traffic, basket or same-store sales.'
+  confidence: Medium (acquired revenue disclosed with High confidence for the current period; prior-period months and new stores not determinable)
+price_volume:
+- period: FY2025 vs FY2024
+  text: Revenue rose SAR 670m. Acquisitions made in 2025 contributed SAR 449m, of which Zahrat Al Rawdah SAR 420m. Sale of goods rose 10.5% and services 32.1% (we calculate). Prices and volumes are not
+    disclosed.
+  basis: disclosed (acquisition notes and revenue note); split not determinable
+  confidence: High for the amounts
+  source: 4161_BINDAWOOD/2025_Annual_filed2026-03-18.pdf p.59 (revenue), p.67-72 (acquisitions)
+  refs:
+  - 4161-FY2025-REV
+  - 4161-FY2024-REV
+profit_and_margin:
+  drivers:
+  - period: FY2023
+    driver: Revenue rose 14.4%, with IATC and Ykone consolidated for a full year (their extra revenue is not disclosed), and the gross margin widened to 32.3% (29.3%). Attributable profit rose 133.1% to
+      SAR 277m even though FY2022 had included SAR 57.2m of COVID-19 rent concessions in other income; general and administration costs rose to SAR 266m (SAR 196m). Operating margin 6.5% (4.8%); net margin
+      4.9%.
+    source: 4161_BINDAWOOD/2024_Annual_filed2025-03-24.pdf p.8-9 (P&L); 4161_BINDAWOOD/2023_Annual_filed2024-04-02.pdf p.9, p.59 (note 25)
+    refs:
+    - 4161-FY2023-REV
+    - 4161-FY2023-GP
+    - 4161-FY2023-NI_ATTR
+    - 4161-FY2023-OPINC
+  - period: FY2024
+    driver: Revenue rose only 1.3%, and SAR 56.8m of that came from Barcode and Jumairah Trading Company, so growth excluding these deals was about 0.3% (we calculate). The gross margin rose to 33.4%, but
+      general and administration costs rose to SAR 327m (SAR 266m); attributable profit fell 1.6% to SAR 272m. Net margin 4.8%; ROE 19.5%.
+    source: 4161_BINDAWOOD/2025_Annual_filed2026-03-18.pdf p.9 (P&L); 4161_BINDAWOOD/2024_Annual_filed2025-03-24.pdf p.67, p.69 (acquisitions)
+    refs:
+    - 4161-FY2024-REV
+    - 4161-FY2024-NI_ATTR
+    - 4161-FY2024-GP
+  - period: FY2025
+    driver: Revenue rose 11.8% to SAR 6,348m; the 2025 acquisitions added SAR 449m (Zahrat Al Rawdah SAR 420m). Gross margin 34.1%. Selling and distribution costs rose 18.3% and finance cost rose to SAR
+      125m (SAR 93.0m) with SAR 16.9m of interest on new bank borrowings; other income rose to SAR 23.4m (breakdown not disclosed). Attributable profit fell 0.8% to SAR 270m. EBITDA margin 14.7%, net margin
+      4.3%, ROE 18.4%.
+    source: 4161_BINDAWOOD/2025_Annual_filed2026-03-18.pdf p.9 (P&L), p.13 (cash flow), p.67-72 (acquisitions)
+    refs:
+    - 4161-FY2025-REV
+    - 4161-FY2025-GP
+    - 4161-FY2025-FIN_COST
+    - 4161-FY2025-NI_ATTR
+    - 4161-FY2025-EBITDA_C
+  - period: 9M2026
+    driver: Revenue rose 10.5% to SAR 5,171m; 2026 acquisitions added SAR 119.6m, so growth excluding them was 8.0% (we calculate; it still includes Zahrat for January and Toy Triangle). Gross margin 33.9%
+      (33.8%). General and administration costs rose 20.1% and finance cost 26.5% to SAR 116m; the share of loss of the convenience-store joint venture was SAR 7.4m. Minorities took SAR 7.4m of profit (a
+      SAR 4.6m loss in 9M 2025), so attributable profit fell 3.4% to SAR 155m. Net margin 3.0%.
+    source: 4161_BINDAWOOD/2026_Q3_filed2026-11-16.pdf p.5-6 (P&L), p.17-30 (acquisitions)
+    refs:
+    - 4161-9M2026-REV
+    - 4161-9M2026-NI_ATTR
+    - 4161-9M2026-NI_NCI
+    - 4161-9M2026-SHARE_JV
+    - 4161-9M2026-FIN_COST
+  - period: FY2024-9M2026
+    driver: Acquisitions used SAR 208m of cash in FY2024, SAR 474m in FY2025 and SAR 955m in 9M 2026. Bank borrowings went from nil at end-2024 to SAR 1,264m at 30 Sep 2026, and net debt including SAR 2,869m
+      of lease liabilities reached SAR 3,749m, 4.0 times annualised EBITDA (we calculate).
+    source: 4161_BINDAWOOD/2025_Annual_filed2026-03-18.pdf p.13; 4161_BINDAWOOD/2026_Q3_filed2026-11-16.pdf p.4, p.9
+    refs:
+    - 4161-9M2026-DEBT
+    - 4161-9M2026-NET_DEBT
+    - 4161-9M2026-LEASE_LIAB
+  one_offs:
+  - item: COVID-19 related rent concessions (practical expedient) in other income
+    period: FY2022
+    amount_sar_m: 57.2
+    line: Other income (inside our operating income)
+    source: 4161_BINDAWOOD/2023_Annual_filed2024-04-02.pdf p.59 (note 25)
+    tax_nci: 'Zakat effect and minority share not disclosed: not determinable, profit kept as reported'
+developments:
+- date: 2022-07
+  category: M&A
+  text: Acquired 62% of International Applications Trading Company (IATC) for SAR 107.2m and 80.46% (later 98.6%) of Ykone S.A.S, a French influencer-marketing firm, for SAR 129.8m.
+  source: 4161_BINDAWOOD/2022_Annual_filed2023-04-05.pdf p.64-65
+- date: '2024-07-31'
+  category: M&A
+  text: Bought Jumairah Trading Company (luggage and consumer goods) from a board member for SAR 186.3m; it added SAR 32.6m of revenue in 2024.
+  source: 4161_BINDAWOOD/2024_Annual_filed2025-03-24.pdf p.69
+- date: 2025-02
+  category: M&A
+  text: Completed the SAR 452.5m acquisition of Zahrat Al Rawdah Pharmacies, financed partly by a bank facility; it contributed SAR 419.8m of revenue and SAR 41.0m of profit in 2025.
+  source: 4161_BINDAWOOD/2025_Annual_filed2026-03-18.pdf p.67
+- date: 2025-10
+  category: M&A
+  text: Acquired 51% of Toy Triangle (toy distribution) and started the Saudi Convenience Company joint venture with three convenience stores in Riyadh.
+  source: 4161_BINDAWOOD/2025_Annual_filed2026-03-18.pdf p.69, p.53
+- date: 2026-06 to 2026-08
+  category: M&A
+  text: Bought 51% of Vaza Food (SAR 217.9m valuation), 51% of Wonder Bakery in the UAE (SAR 118.0m), 51% of No Border in Italy, and dairy plants in Estonia out of bankruptcy for SAR 596.6m.
+  source: 4161_BINDAWOOD/2026_Q3_filed2026-11-16.pdf p.16-17, p.27, p.29, p.30
+- date: 2025-2026
+  category: financing
+  text: Bank borrowings rose from nil at end-2024 to SAR 316.6m at end-2025 and SAR 1,264.4m at 30 Sep 2026.
+  source: 4161_BINDAWOOD/2026_Q3_filed2026-11-16.pdf p.4
+what_it_means:
+  improved: Revenue grew 9.0% a year from FY2022 to FY2025 and 10.5% in 9M 2026, and the gross margin widened from 29.3% to 34.1% (FY2022 to FY2025), helped by higher-margin acquired businesses such as
+    pharmacies.
+  weakened: Attributable profit has not grown since FY2023 (SAR 277m to SAR 270m in FY2025, -3.4% in 9M 2026) as operating, finance and acquisition-related costs rose, and net debt including leases rose
+    from SAR 1,852m (end-2024) to SAR 3,749m.
+  why: 'Most growth since 2024 is bought: disclosed acquired revenue was SAR 56.8m in FY2024, SAR 448.5m in FY2025 and SAR 119.6m in 9M 2026, while growth excluding those deals was 0.3% in FY2024 and 3.9%
+    in FY2025 (we calculate).'
+  uncertain: The filings do not give store numbers, same-store sales or the revenue of earlier acquisitions for the months not owned in the prior period, so true like-for-like growth of the original supermarkets
+    is not determinable; the 2026 deals are recorded at provisional values.
+confidence_overall: Medium
+data_notes:
+- The 31 Dec 2022 balance sheet uses the FY2023 annual comparative, revised for the completed IATC and Ykone purchase price allocation (notes 8.2 and 31; total assets SAR 4,802.8m to SAR 4,841.5m).
+- FY2023 operating cash flow uses the FY2024 annual comparative (SAR 761.0m), re-presented from SAR 776.1m by moving term-deposit interest to investing; FY2023 finance income (SAR 15.1m) was split from
+  other income in the same re-presentation. In FY2022 finance income on deposits (SAR 7.9m) is inside other income.
+- 'Corrected from the PDF statements: FY2022 and FY2023 debt is nil (the XBRL had tagged current lease liabilities as debt; FY2023 annual p.8, FY2024 annual p.7), FY2022 lease liabilities include the
+  current portion (SAR 2,298m; FY2023 annual p.8), and the FY2022 impairment add-back is nil (the XBRL item was a receivable credit loss; FY2023 annual p.13).'
+- 'Net debt deducts term deposits with original maturities over 90 days: SAR 11.3m at end-2023 (FY2024 annual note 13, p.49), SAR 11.8m at end-2024 (FY2025 annual note 13, p.51) and SAR 2.9m at
+  30 Sep 2026 (2026 Q3 interim note 9, p.34).'
+- Compulsory convertible debentures at fair value (SAR 10.7m-11.9m) are not included in debt; put-option liabilities over minority stakes (e.g. SAR 30.9m for No Border) are also outside debt.
+- The cash-flow statement starts from profit after zakat; our operating income and EBITDA are built from profit before zakat and tax.
+- 'There is no XBRL file for the 2026 Q3 interim: all 9M 2026 figures were read from the PDF (text layer). The FY2022 annual is a fully scanned document; other primary statements are scanned images checked
+  by OCR.'
+- The 2025 and 2026 filings print the new Saudi riyal symbol; quotes show it as [SAR].

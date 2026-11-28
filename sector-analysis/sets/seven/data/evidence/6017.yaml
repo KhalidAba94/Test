@@ -1,0 +1,160 @@
+# Evidence extracted from Jahez International Company for Information Systems Technology filings (archive folder SEVEN_PLT/6017_JAHEZ).
+# Facts only; page = physical PDF page (1-based). Units: SAR (actual riyals) as presented.
+# The FY2025 AFS is fully scanned (64 pages; read from rendered images and OCR); FY2023 AFS statements (pp7-10) and most of the FY2022 AFS are scanned.
+ticker: "6017"
+company: "Jahez International Company for Information Systems Technology"
+
+perimeter_changes:
+  - event: "Acquisition of 100% of Marn Business Information Technology Company (POS software)"
+    type: acquisition
+    date: "2023-01-02"
+    consideration: 60000000
+    revenue_contribution: 1086884
+    profit_contribution: -1418145
+    pro_forma_revenue: null
+    period: "FY2023"
+    unit: "SAR"
+    source: "6017_JAHEZ/2023_Annual_filed2024-03-27.pdf"
+    page: 55
+    quote: "From the acquisition date 1,086,884 (1,418,145)"
+    note: "Goodwill 62,353,937 (p.55); 11,780,000 of it impaired in FY2025 (FY2025 AFS note 5.2, p.36)."
+  - event: "SOL Company for Trading: 35% acquired and consolidated under IFRS 3 (control) from 26 December 2023"
+    type: acquisition
+    date: "2023-12-26"
+    consideration: 5000000
+    revenue_contribution: null
+    profit_contribution: null
+    pro_forma_revenue: null
+    period: "FY2023-FY2024"
+    unit: "SAR"
+    source: "6017_JAHEZ/2023_Annual_filed2024-03-27.pdf"
+    page: 55
+    quote: "On 26 December 2023, the Group completed the process and legal formalities of the acquisition of 35% of the shares of SOL Company for Trading"
+    note: "Revenue contribution not disclosed in the FY2023 or FY2024 AFS (FY2024 AFS pp.59-60)."
+  - event: "Joint Preparation Company for Meals: remaining 40% bought (60% to 100%); already a consolidated subsidiary since 2020, accounted for as an equity transaction"
+    type: acquisition
+    date: "2024-02-04"
+    consideration: 4800000
+    revenue_contribution: 17664793
+    profit_contribution: -8077875
+    pro_forma_revenue: 18410795
+    period: "FY2024"
+    unit: "SAR"
+    source: "6017_JAHEZ/2024_Annual_filed2025-03-17.pdf"
+    page: 58
+    quote: "The transaction increased the share of Jahez Group from 60% to 100%."
+    note: "Same note (p.58) says the purchase 'was accounted for as an equity transaction with the owners'; the FY2023 AFS (p.13) lists the company as a 60% subsidiary at 31 Dec 2022 and 2023. The note also shows an IFRS 3-style table with revenue 'from the acquisition date' 17,664,793 (p.59; repeated in FY2025 AFS p.62). As the company was consolidated before and after, this is not a perimeter change for revenue."
+  - event: "Acquisition of 76.56% of Snoonu Corporation Holding LLC (Qatar delivery platform; also Oman)"
+    type: acquisition
+    date: "2025-10-06"
+    consideration: "cash 801,687,120 + 1,538,460 treasury shares (34,615,351) + 75,000,000 capital increase"
+    revenue_contribution: 227576370
+    profit_contribution: -3223962
+    pro_forma_revenue: 848516716
+    period: "FY2025"
+    unit: "SAR"
+    source: "6017_JAHEZ/2025_Annual_filed2026-04-07.pdf"
+    page: 63
+    quote: "From Acquisition Date (06 October 2025) 227,576,370 (3,223,962)"
+    note: "Scanned page (OCR and image). Goodwill 656,579,617; net cash outflow 725,894,842. Pro-forma line reads 'From Beginning of the Period (15 October 2024) 848,516,716 12,501,614' (period not clearly defined)."
+  - event: "Snoonu revenue in 9M 2026 (full nine months owned vs none in 9M 2025)"
+    type: acquisition
+    status: "not found"
+    period: "9M2026"
+    source: "6017_JAHEZ/2026_Q3_filed2026-11-17.pdf"
+    page: 35
+    quote: "Not disclosed separately; the 'Delivery platforms outside the Kingdom' segment (Bahrain, Kuwait, Snoonu Qatar and Oman) had net revenue 946,240,231 (9M 2025: 183,153,130)."
+  - event: "New subsidiaries (start-ups): Jahez for Information Technology (Egypt, 30 Jul 2023), Jahez Qatar (3 Aug 2023), Logi Kuwait for Consumer Orders Delivery (27 May 2025, operating from Q1 2026)"
+    type: new_subsidiary
+    date: "2023-2026"
+    consideration: null
+    revenue_contribution: null
+    profit_contribution: null
+    pro_forma_revenue: null
+    period: "FY2023-9M2026"
+    unit: "SAR"
+    source: "6017_JAHEZ/2026_Q3_filed2026-11-17.pdf"
+    page: 9
+    quote: "Logi Kuwait Company for Consumer Delivery Services was established on 27 May 2025 and started its operation during first quarter of 2026."
+  - event: "Equity-accounted investments bought in 2024 (Global Fintech 20.62%, GrubTech 11.24%)"
+    type: acquisition
+    date: "2024"
+    consideration: 103425814
+    revenue_contribution: null
+    profit_contribution: -2175043
+    pro_forma_revenue: null
+    period: "FY2024"
+    unit: "SAR"
+    source: "6017_JAHEZ/2024_Annual_filed2025-03-17.pdf"
+    page: 10
+    quote: "Purchase of equity-accounted investments 8 (103,425,814) --"
+    note: "No revenue effect."
+
+segments:
+  # Net revenue after customer promotions and cash back; profit = net segment profit after zakat.
+  - {period: "FY2023", segment: "Delivery platforms inside the Kingdom", basis: operating, revenue: 1717063537, profit: 258544893, unit: "SAR", source: "6017_JAHEZ/2024_Annual_filed2025-03-17.pdf", page: 51}
+  - {period: "FY2023", segment: "Delivery platforms outside the Kingdom", basis: operating, revenue: 48472746, profit: -97187756, unit: "SAR", source: "6017_JAHEZ/2024_Annual_filed2025-03-17.pdf", page: 51}
+  - {period: "FY2023", segment: "Logistics (inside the Kingdom)", basis: operating, revenue: 404126392, profit: -5990355, unit: "SAR", source: "6017_JAHEZ/2024_Annual_filed2025-03-17.pdf", page: 51}
+  - {period: "FY2023", segment: "Other activities", basis: operating, revenue: 14620347, profit: -36669173, unit: "SAR", source: "6017_JAHEZ/2024_Annual_filed2025-03-17.pdf", page: 51}
+  - {period: "FY2023", segment: "Eliminations", basis: operating, revenue: -399527739, profit: null, unit: "SAR", source: "6017_JAHEZ/2024_Annual_filed2025-03-17.pdf", page: 51}
+  - {period: "FY2024", segment: "Delivery platforms inside the Kingdom", basis: operating, revenue: 1927539766, profit: 288813675, unit: "SAR", source: "6017_JAHEZ/2024_Annual_filed2025-03-17.pdf", page: 50}
+  - {period: "FY2024", segment: "Delivery platforms outside the Kingdom", basis: operating, revenue: 211786574, profit: -59366548, unit: "SAR", source: "6017_JAHEZ/2024_Annual_filed2025-03-17.pdf", page: 50}
+  - {period: "FY2024", segment: "Logistics (inside the Kingdom)", basis: operating, revenue: 423049385, profit: -7774988, unit: "SAR", source: "6017_JAHEZ/2024_Annual_filed2025-03-17.pdf", page: 50}
+  - {period: "FY2024", segment: "Other activities", basis: operating, revenue: 72765911, profit: -37453994, unit: "SAR", source: "6017_JAHEZ/2024_Annual_filed2025-03-17.pdf", page: 50}
+  - {period: "FY2024", segment: "Eliminations", basis: operating, revenue: -416478901, profit: null, unit: "SAR", source: "6017_JAHEZ/2024_Annual_filed2025-03-17.pdf", page: 50}
+  - {period: "FY2025", segment: "Delivery platforms inside the Kingdom", basis: operating, revenue: 1760950886, profit: 214107333, unit: "SAR", source: "6017_JAHEZ/2025_Annual_filed2026-04-07.pdf", page: 53}
+  - {period: "FY2025", segment: "Delivery platforms outside the Kingdom (Bahrain, Kuwait, Snoonu from 6 Oct 2025)", basis: operating, revenue: 462441743, profit: -35631517, unit: "SAR", source: "6017_JAHEZ/2025_Annual_filed2026-04-07.pdf", page: 53}
+  - {period: "FY2025", segment: "Logistics (inside the Kingdom)", basis: operating, revenue: 428841691, profit: -25483793, unit: "SAR", source: "6017_JAHEZ/2025_Annual_filed2026-04-07.pdf", page: 53}
+  - {period: "FY2025", segment: "Other activities (incl. goodwill impairment 11,780,000)", basis: operating, revenue: 107954856, profit: -95046483, unit: "SAR", source: "6017_JAHEZ/2025_Annual_filed2026-04-07.pdf", page: 53}
+  - {period: "FY2025", segment: "Eliminations", basis: operating, revenue: -436549604, profit: null, unit: "SAR", source: "6017_JAHEZ/2025_Annual_filed2026-04-07.pdf", page: 53}
+  - {period: "9M2025", segment: "Delivery platforms inside the Kingdom", basis: operating, revenue: 1369911690, profit: 183664179, unit: "SAR", source: "6017_JAHEZ/2026_Q3_filed2026-11-17.pdf", page: 36}
+  - {period: "9M2025", segment: "Delivery platforms outside the Kingdom", basis: operating, revenue: 183153130, profit: -21521222, unit: "SAR", source: "6017_JAHEZ/2026_Q3_filed2026-11-17.pdf", page: 36}
+  - {period: "9M2025", segment: "Logistics (inside the Kingdom)", basis: operating, revenue: 322054465, profit: -17200927, unit: "SAR", source: "6017_JAHEZ/2026_Q3_filed2026-11-17.pdf", page: 36}
+  - {period: "9M2025", segment: "Other activities", basis: operating, revenue: 77908342, profit: -31342979, unit: "SAR", source: "6017_JAHEZ/2026_Q3_filed2026-11-17.pdf", page: 36}
+  - {period: "9M2026", segment: "Delivery platforms inside the Kingdom", basis: operating, revenue: 1232482054, profit: 75423397, unit: "SAR", source: "6017_JAHEZ/2026_Q3_filed2026-11-17.pdf", page: 35}
+  - {period: "9M2026", segment: "Delivery platforms outside the Kingdom (Bahrain, Kuwait, Snoonu Qatar and Oman)", basis: operating, revenue: 946240231, profit: -67501357, unit: "SAR", source: "6017_JAHEZ/2026_Q3_filed2026-11-17.pdf", page: 35}
+  - {period: "9M2026", segment: "Logistics (inside the Kingdom)", basis: operating, revenue: 336961649, profit: -19093766, unit: "SAR", source: "6017_JAHEZ/2026_Q3_filed2026-11-17.pdf", page: 35}
+  - {period: "9M2026", segment: "Other activities", basis: operating, revenue: 59190968, profit: -44554944, unit: "SAR", source: "6017_JAHEZ/2026_Q3_filed2026-11-17.pdf", page: 35}
+
+revenue_drivers:
+  - {period: "FY2025", driver: "Customer promotions and cash back deducted from external revenue (FY2024: 168,317,979)", value: 197975349, unit: "SAR", source: "6017_JAHEZ/2025_Annual_filed2026-04-07.pdf", page: 53, quote: "Customer promotions and cash back (163,194,022) (34,435,724) - - (345,603) - (197,975,349)"}
+  - {period: "9M2026", driver: "Customer promotions and cash back (9M2025: 155,358,112)", value: 179243920, unit: "SAR", source: "6017_JAHEZ/2026_Q3_filed2026-11-17.pdf", page: 35, quote: "Customer promotions and cash back (89,718,888) (89,135,869) -- (389,163) -- (179,243,920)"}
+  - {period: "FY2025", driver: "Advertising and publicity expense (FY2024: 110,061,479)", value: 151749482, unit: "SAR", source: "6017_JAHEZ/2025_Annual_filed2026-04-07.pdf", page: 52, quote: "Advertising and publicity 151,749,482 110,061,479"}
+
+one_offs:
+  - {period: "FY2022", item: "Unrealized gains on investments at FVTPL", amount: 1766705, unit: "SAR", pnl_line: "Below operating profit, above finance lines (inside our operating income)", recurring: false, source: "6017_JAHEZ/2023_Annual_filed2024-03-27.pdf", page: 8, quote: "Unrealized gains on investments at FVTPL 7 3,326,897 1,766,705"}
+  - {period: "FY2023", item: "Unrealized gains on investments at FVTPL", amount: 3326897, unit: "SAR", pnl_line: "Below operating profit, above finance lines", recurring: false, source: "6017_JAHEZ/2024_Annual_filed2025-03-17.pdf", page: 8, quote: "Unrealized (losses)/profits on investments at FVTPL 7 (6,108,755) 3,326,897"}
+  - {period: "FY2024", item: "Unrealized losses on investments at FVTPL", amount: -6108755, unit: "SAR", pnl_line: "Below operating profit, above finance lines", recurring: false, source: "6017_JAHEZ/2025_Annual_filed2026-04-07.pdf", page: 9, quote: "Unrealized losses on investments at FVTPL 7 (11,308,115) (6,108,755)"}
+  - {period: "FY2025", item: "Unrealized losses on investments at FVTPL", amount: -11308115, unit: "SAR", pnl_line: "Below operating profit, above finance lines", recurring: false, source: "6017_JAHEZ/2025_Annual_filed2026-04-07.pdf", page: 9, quote: "Unrealized losses on investments at FVTPL 7 (11,308,115) (6,108,755)"}
+  - {period: "FY2025", item: "Goodwill impairment (Marn) - impairment, already outside EBITDA", amount: -11780000, unit: "SAR", pnl_line: "Goodwill impairment (inside operating profit)", recurring: false, source: "6017_JAHEZ/2025_Annual_filed2026-04-07.pdf", page: 36, quote: "Balance as at 31 December 2025 11,780,000"}
+  - {period: "9M2025", item: "Unrealized gain on investments at FVTPL", amount: 902988, unit: "SAR", pnl_line: "Below operating profit, above finance lines", recurring: false, source: "6017_JAHEZ/2026_Q3_filed2026-11-17.pdf", page: 4, quote: "Unrealized gain on investments at FVTPL 5 128,738 6,144,807 128,738 902,988"}
+  - {period: "9M2026", item: "Unrealized gain on investments at FVTPL", amount: 128738, unit: "SAR", pnl_line: "Below operating profit, above finance lines", recurring: false, source: "6017_JAHEZ/2026_Q3_filed2026-11-17.pdf", page: 4, quote: "Unrealized gain on investments at FVTPL 5 128,738 6,144,807 128,738 902,988"}
+  - {period: "9M2026", item: "Trade receivables written off (non-cash) and higher ECL charge 9,841,871 (9M2025: 6,514,447) - ordinary provision, not removed", amount: 13082084, unit: "SAR", pnl_line: "Impairment on trade receivables", recurring: true, source: "6017_JAHEZ/2026_Q3_filed2026-11-17.pdf", page: 6, quote: "Trade receivables write-offs during the period 13,082,084 --"}
+
+restatements:
+  - {period_restated: "FY2022", item: "Trade receivables, trade payables and due to related parties (balance sheet reclassification)", from: "22,759,260 / 51,111,077 + 1,050,208", to: "22,776,390 / 52,161,285", unit: "SAR", reason: "Reclassification within current assets and liabilities in the FY2023 AFS comparative; totals unchanged", source: "6017_JAHEZ/2023_Annual_filed2024-03-27.pdf", page: 7, quote: "Trade payables 17 83,573,373 52,161,285"}
+  - {period_restated: "FY2024", item: "Finance cost add-back in the cash-flow statement", from: "n/a", to: "5,282,427 vs income-statement finance costs 4,522,259", unit: "SAR", reason: "Not a restatement: the FY2024 cash-flow add-back differs from the P&L line in both the FY2024 and FY2025 AFS", source: "6017_JAHEZ/2024_Annual_filed2025-03-17.pdf", page: 10, quote: "Finance costs 5,282,427 6,025,384"}
+
+significant_events:
+  - {date: "2022-01-05", event: "Shares listed on the Parallel Market (Nomu), code 9526", financial_effect: "IPO proceeds 749,093,534 in FY2022 financing cash flow (FY2023 AFS p.10)", source: "6017_JAHEZ/2024_Annual_filed2025-03-17.pdf", page: 12, quote: "the Company's shares were listed and started trading in the Parallel Market in the Kingdom of Saudi Arabia (Nomu) under code (9526)."}
+  - {date: "2024-12-10", event: "Transfer to the Main Market (TASI), code 6017", financial_effect: "none on the figures", source: "6017_JAHEZ/2024_Annual_filed2025-03-17.pdf", page: 12, quote: "the Company's shares were listed and started trading in the main market in the Kingdom of Saudi Arabia (“TASI”) under code (6017)."}
+  - {date: "2024", event: "Treasury shares bought back", financial_effect: "(91,152,345) in FY2024 financing cash flow", source: "6017_JAHEZ/2024_Annual_filed2025-03-17.pdf", page: 10, quote: "Treasury shares 14 (91,152,345) --"}
+  - {date: "2025", event: "Islamic facilities of 150,000,000 drawn", financial_effect: "borrowings 165,061,806 at 31 Dec 2025 (none at end-2024)", source: "6017_JAHEZ/2025_Annual_filed2026-04-07.pdf", page: 11, quote: "Proceeds from Islamic facilities 13 150,000,000 --"}
+
+audit_opinion:
+  - {period: "FY2022", opinion: "Unmodified (KPMG)", emphasis_of_matter: null, source: "6017_JAHEZ/2022_Annual_filed2023-03-22.pdf", page: 3}
+  - {period: "FY2023", opinion: "Unmodified (KPMG)", emphasis_of_matter: null, source: "6017_JAHEZ/2023_Annual_filed2024-03-27.pdf", page: 3}
+  - {period: "FY2024", opinion: "Unmodified (KPMG); key audit matter revenue recognition", emphasis_of_matter: null, source: "6017_JAHEZ/2024_Annual_filed2025-03-17.pdf", page: 3}
+  - {period: "FY2025", opinion: "Unmodified (KPMG); key audit matter revenue recognition (revenue SR 2.3bn)", emphasis_of_matter: null, source: "6017_JAHEZ/2025_Annual_filed2026-04-07.pdf", page: 3}
+  - {period: "9M2026", opinion: "Unmodified review conclusion (KPMG), IAS 34", emphasis_of_matter: null, source: "6017_JAHEZ/2026_Q3_filed2026-11-17.pdf", page: 2}
+
+kpis_in_filings:
+  - {period: "FY2022-9M2026", kpi: "Orders, gross merchandise value, active users, riders or restaurant partners", value: null, unit: "count", source: "6017_JAHEZ/2026_Q3_filed2026-11-17.pdf", page: 34, status: "not found"}
+
+special_extractions:
+  - {item: "Depreciation and amortization add-back (single cash-flow line, includes right-of-use depreciation)", detail: "FY2022 23,530,731; FY2023 51,970,559; FY2024 53,176,978; FY2025 89,374,837; 9M2025 49,821,956; 9M2026 140,104,524 (of which right-of-use 70,897,483, note 4 p.33).", unit: "SAR"}
+
+open_questions:
+  - "Joint Preparation Company for Meals: the FY2024 AFS (p.58-59) calls the February 2024 purchase of the remaining 40% an equity transaction, but also shows an acquisition table with revenue 'from the acquisition date'. We treat it as no perimeter change because the company was a consolidated 60% subsidiary in FY2022-FY2023 (FY2023 AFS p.13)."
+  - "Snoonu's 9M 2026 revenue is not disclosed, so the perimeter effect in 9M 2026 cannot be separated from growth in Bahrain and Kuwait."
+  - "SOL Company for Trading (35%, consolidated from 26 Dec 2023): its FY2024 revenue is not disclosed; the 'Other activities' segment rose from 14.6m to 72.8m in FY2024."

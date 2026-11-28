@@ -1,0 +1,339 @@
+# Evidence extracted from Al Dawaa Medical Services Company filings (archive: 4163_ALDAWAA). Facts only; page = physical PDF page (1-based).
+# Units: SAR (full riyals) as presented. FY2022 annual primary statements and the 2025 Q3 interim are scanned (read by OCR).
+ticker: '4163'
+company: Al Dawaa Medical Services Company
+perimeter_changes:
+- event: Acquired 33.33% of National Parcel Stations Network Company (associate, equity-accounted)
+  type: acquisition
+  date: '2025'
+  consideration: investment in equity-accounted investee SAR 14.9m (cash flow)
+  revenue_contribution: null
+  profit_contribution: null
+  pro_forma_revenue: null
+  period: FY2025
+  unit: SAR
+  source: 4163_ALDAWAA/2025_Annual_filed2026-05-11.pdf
+  page: 14
+  quote: the Group's has acquired 33.33% of the share capital of National Parcel Stations Network Company
+- event: Branch converted into a wholly owned subsidiary, Solutions Systems for Logistics Services Company (no change in perimeter)
+  type: new_subsidiary
+  date: '2025'
+  consideration: null
+  revenue_contribution: null
+  profit_contribution: null
+  pro_forma_revenue: null
+  period: FY2025
+  unit: SAR
+  source: 4163_ALDAWAA/2025_Annual_filed2026-05-11.pdf
+  page: 14
+  quote: the Group's Board of Directors approved the transformation of the branch with Commercial Registration No. 1122101682 into an independent entity
+- event: Modawaa and Rieaya Medical Company (49%, with Mouwasat) established as an associate; not yet operating
+  type: new_subsidiary
+  date: '2024'
+  consideration: null
+  revenue_contribution: null
+  profit_contribution: null
+  pro_forma_revenue: null
+  period: FY2024
+  unit: SAR
+  source: 4163_ALDAWAA/2025_Annual_filed2026-05-11.pdf
+  page: 14
+  quote: Modawaa is principally engaged in medical clinic activities and have not started its operations.
+- event: Foreign subsidiaries (Glanzzen, Al-Dawaa FZCO, Ronzac, Hollinz) held at cost as unconsolidated subsidiaries; not yet operating
+  type: new_subsidiary
+  date: FY2022-FY2025
+  consideration: null
+  revenue_contribution: null
+  profit_contribution: null
+  pro_forma_revenue: null
+  period: FY2025
+  unit: SAR
+  source: 4163_ALDAWAA/2025_Annual_filed2026-05-11.pdf
+  page: 14
+  quote: classified as investment in unconsolidated subsidiaries as these subsidiaries have not yet commenced operations.
+- event: Business combinations (IFRS 3)
+  type: acquisition
+  status: not found
+  period: FY2022-9M2026
+  source: 4163_ALDAWAA/2025_Annual_filed2026-05-11.pdf
+  page: null
+  quote: No business combination note in the FY2022-FY2025 annuals or the 2026 Q3 interim.
+segments:
+- period: FY2025
+  segment: Single operating segment (retailing) in the annual financial statements
+  basis: operating
+  revenue: 6736196458
+  profit: null
+  unit: SAR
+  source: 4163_ALDAWAA/2025_Annual_filed2026-05-11.pdf
+  page: 56
+  quote: The management's conclusion is that the Group has one operating segment, that of retailing.
+- period: FY2023
+  segment: Retail
+  basis: product
+  revenue: 5442960611
+  profit: null
+  unit: SAR
+  source: 4163_ALDAWAA/2024_Annual_filed2025-03-21.pdf
+  page: 43
+- period: FY2023
+  segment: Wholesale and others
+  basis: product
+  revenue: 298403455
+  profit: null
+  unit: SAR
+  source: 4163_ALDAWAA/2024_Annual_filed2025-03-21.pdf
+  page: 43
+- period: FY2024
+  segment: Retail
+  basis: product
+  revenue: 6081097718
+  profit: null
+  unit: SAR
+  source: 4163_ALDAWAA/2025_Annual_filed2026-05-11.pdf
+  page: 45
+- period: FY2024
+  segment: Wholesale and others (restated)
+  basis: product
+  revenue: 328221189
+  profit: null
+  unit: SAR
+  source: 4163_ALDAWAA/2025_Annual_filed2026-05-11.pdf
+  page: 45
+- period: FY2024
+  segment: Logistics services (restated)
+  basis: product
+  revenue: 45035071
+  profit: null
+  unit: SAR
+  source: 4163_ALDAWAA/2025_Annual_filed2026-05-11.pdf
+  page: 45
+- period: FY2025
+  segment: Retail
+  basis: product
+  revenue: 6262055293
+  profit: null
+  unit: SAR
+  source: 4163_ALDAWAA/2025_Annual_filed2026-05-11.pdf
+  page: 45
+- period: FY2025
+  segment: Wholesale and others
+  basis: product
+  revenue: 409732408
+  profit: null
+  unit: SAR
+  source: 4163_ALDAWAA/2025_Annual_filed2026-05-11.pdf
+  page: 45
+- period: FY2025
+  segment: Logistics services
+  basis: product
+  revenue: 64408757
+  profit: null
+  unit: SAR
+  source: 4163_ALDAWAA/2025_Annual_filed2026-05-11.pdf
+  page: 45
+- period: 9M2026
+  segment: Retail (operating segment; profit = segment profit before share of associates and zakat)
+  basis: operating
+  revenue: 4184485683
+  profit: 50596760
+  unit: SAR
+  source: 4163_ALDAWAA/2026_Q3_filed2026-11-11.pdf
+  page: 23
+- period: 9M2026
+  segment: Wholesale
+  basis: operating
+  revenue: 568859744
+  profit: 41820560
+  unit: SAR
+  source: 4163_ALDAWAA/2026_Q3_filed2026-11-11.pdf
+  page: 23
+- period: 9M2026
+  segment: Logistics (external revenue; total incl. inter-segment 203,204,502)
+  basis: operating
+  revenue: 60742974
+  profit: 20787190
+  unit: SAR
+  source: 4163_ALDAWAA/2026_Q3_filed2026-11-11.pdf
+  page: 23
+- period: 9M2025
+  segment: Retail
+  basis: operating
+  revenue: 4656802529
+  profit: 196565521
+  unit: SAR
+  source: 4163_ALDAWAA/2026_Q3_filed2026-11-11.pdf
+  page: 24
+- period: 9M2025
+  segment: Wholesale
+  basis: operating
+  revenue: 350496069
+  profit: 48307687
+  unit: SAR
+  source: 4163_ALDAWAA/2026_Q3_filed2026-11-11.pdf
+  page: 24
+- period: 9M2025
+  segment: Logistics (external revenue)
+  basis: operating
+  revenue: 45996934
+  profit: 25518439
+  unit: SAR
+  source: 4163_ALDAWAA/2026_Q3_filed2026-11-11.pdf
+  page: 24
+revenue_drivers:
+- period: FY2025
+  driver: 'Revenue reduced by a voluntary social-services contribution (CSR) of SAR 44.3m (FY2024: SAR 8.9m); cost of sales reduced by SAR 10.7m (FY2024: SAR 2.1m)'
+  value: 44.3
+  unit: SAR m
+  source: 4163_ALDAWAA/2025_Annual_filed2026-05-11.pdf
+  page: 45
+  quote: 'revenue was reduced by SR 44.3 million (2024: SR 8.9 million), with a corresponding reduction in cost of sales of SR 10.7 million'
+- period: FY2025
+  driver: 'Revenue from one customer (FY2024: SAR 1,663m)'
+  value: 1702
+  unit: SAR m
+  source: 4163_ALDAWAA/2025_Annual_filed2026-05-11.pdf
+  page: 56
+  quote: 'Revenue from one customer amounted to SR 1,702 million (2024: SR 1,663 million), arising from sales during the year.'
+- period: FY2025
+  driver: 'Revenue in the Kingdom of Bahrain (FY2024: 477,835)'
+  value: 1955704
+  unit: SAR
+  source: 4163_ALDAWAA/2025_Annual_filed2026-05-11.pdf
+  page: 45
+  quote: Kingdom of Bahrain 1,955,704 477,835
+- period: 9M2026
+  driver: 'Trade receivables from third parties rose (31 Dec 2025: 585,656,679)'
+  value: 1033081288
+  unit: SAR
+  source: 4163_ALDAWAA/2026_Q3_filed2026-11-11.pdf
+  page: 20
+  quote: Third parties 1,033,081,288 585,656,679
+- period: 9M2026
+  driver: 'Provision for expected credit losses (9M 2025: nil)'
+  value: 24440288
+  unit: SAR
+  source: 4163_ALDAWAA/2026_Q3_filed2026-11-11.pdf
+  page: 5
+  quote: Provision for expected credit losses 11 (12,940,288) (24,440,288)
+- period: FY2022-9M2026
+  driver: Pharmacy count, openings and like-for-like (same-store) sales
+  value: null
+  unit: count
+  status: not found
+  source: 4163_ALDAWAA/2025_Annual_filed2026-05-11.pdf
+  page: null
+  quote: Not disclosed in the annual or interim financial statements.
+one_offs:
+- period: FY2022
+  item: Fair value gain on swap derivatives (below operating profit, above profit before zakat; outside finance cost)
+  amount: 59265612
+  unit: SAR
+  pnl_line: Fair value gain on swap derivatives
+  recurring: false
+  source: 4163_ALDAWAA/2023_Annual_filed2024-03-21.pdf
+  page: 8
+  quote: Fair value gain on swap derivatives 59,265,612
+- period: FY2022-9M2026
+  item: 'Write-off of property and equipment: recurs every year (FY2023 5.8m, FY2024 3.5m, FY2025 7.9m, 9M 2026 7.8m); treated as recurring, not a one-off'
+  amount: 7852980
+  unit: SAR
+  pnl_line: Other expenses
+  recurring: true
+  source: 4163_ALDAWAA/2025_Annual_filed2026-05-11.pdf
+  page: 47
+  quote: Loss on property and equipment written off 7,852,980 3,474,560
+restatements:
+- period_restated: FY2024 and 1 Jan 2024
+  item: 'Prior-period errors (IAS 8): unrecorded import purchases, end-of-service benefit attribution, bonus accrual, capitalised Iqama fees, logistics revenue timing, reclassifications'
+  from: 370105462
+  to: 351408476
+  unit: SAR
+  reason: 'FY2025 annual note 34 (p50-56): FY2024 profit -18.7m, revenue +3.4m, finance cost +3.2m; equity at 1 Jan 2024 -103.0m (1,313.0m -> 1,210.0m) and at 31 Dec 2024 -126.6m.'
+  source: 4163_ALDAWAA/2025_Annual_filed2026-05-11.pdf
+  page: 50
+  quote: During the year, the group identified certain adjustments and reclassifications that have been corrected by restating each of the affected financial statement line items
+- period_restated: 9M2025
+  item: Comparative P&L not restated; equity restated through the opening balance
+  from: 1551382845
+  to: 1424772370
+  unit: SAR
+  reason: '2026 Q3 note 2.1: opening balances taken from the restated FY2025 annual; comparative P&L not restated (impact judged immaterial).'
+  source: 4163_ALDAWAA/2026_Q3_filed2026-11-11.pdf
+  page: 12
+  quote: have not been restated, as the impact of the prior-year errors is not material.
+- period_restated: FY2024
+  item: Operating cash flow (8,257,705 moved to investing; PP&E purchases 223,125,110 -> 231,382,815)
+  from: 683330305
+  to: 691588010
+  unit: SAR
+  reason: Re-presented in the FY2025 annual cash-flow statement; note 34 says the restatements did not change cash flows.
+  source: 4163_ALDAWAA/2025_Annual_filed2026-05-11.pdf
+  page: 11
+  quote: Purchases of property and equipment 6 (147,820,261) (231,382,815)
+significant_events:
+- date: '2022-03-14'
+  event: Listed on the Saudi Exchange (IPO) with a 30% free float
+  financial_effect: None on the company accounts (secondary offering not stated)
+  source: 4163_ALDAWAA/2025_Annual_filed2026-05-11.pdf
+  page: 13
+  quote: The Company is listed on Saudi Stock Exchange (Tadawul) since 14 March 2022 with a free float of 30%
+- date: 2025 (FY2025 annual approved 3 May 2026)
+  event: Prior-period error restatement of FY2024 and the 1 Jan 2024 balance sheet
+  financial_effect: FY2024 profit 370.1m -> 351.4m; equity 31 Dec 2024 1,456.5m -> 1,329.8m
+  source: 4163_ALDAWAA/2025_Annual_filed2026-05-11.pdf
+  page: 55
+  quote: Profit after zakat 370,105,462 - (10,788,099) (7,078,177) (4,248,443) 3,417,733 - 351,408,476
+- date: '2026'
+  event: Auditor changed from KPMG (FY2023-FY2025) to Ernst & Young (2026 interims)
+  financial_effect: none
+  source: 4163_ALDAWAA/2026_Q3_filed2026-11-11.pdf
+  page: 3
+  quote: The consolidated financial statements of the Group for the year ended 31 December 2025 were audited by another auditor who expressed an unmodified opinion
+- date: '2026-09-30'
+  event: 'Short-term borrowings rose to SAR 716.5m including a SAR 25.5m bank overdraft (31 Dec 2025: SAR 580.0m)'
+  financial_effect: Higher debt as receivables rose
+  source: 4163_ALDAWAA/2026_Q3_filed2026-11-11.pdf
+  page: 21
+  quote: Bank overdrafts 25,471,324 -
+audit_opinion:
+- period: FY2022
+  opinion: Unmodified (Ernst & Young; scanned report read by OCR); no emphasis of matter found
+  emphasis_of_matter: none
+  source: 4163_ALDAWAA/2022_Annual_filed2023-03-26.pdf
+  page: 3
+- period: FY2023
+  opinion: Unmodified (KPMG); no emphasis of matter found
+  emphasis_of_matter: none
+  source: 4163_ALDAWAA/2023_Annual_filed2024-03-21.pdf
+  page: 3
+- period: FY2024
+  opinion: Unmodified (KPMG); no emphasis of matter found
+  emphasis_of_matter: none
+  source: 4163_ALDAWAA/2024_Annual_filed2025-03-21.pdf
+  page: 3
+- period: FY2025
+  opinion: Unmodified (KPMG); no emphasis of matter found despite the note 34 restatement
+  emphasis_of_matter: none
+  source: 4163_ALDAWAA/2025_Annual_filed2026-05-11.pdf
+  page: 3
+- period: 9M2026
+  opinion: 'Review conclusion unmodified (Ernst & Young); Other Matter: FY2025 and 2025 interims reviewed or audited by another auditor'
+  emphasis_of_matter: none (other matter only)
+  source: 4163_ALDAWAA/2026_Q3_filed2026-11-11.pdf
+  page: 3
+kpis_in_filings:
+- period: FY2022-9M2026
+  kpi: Number of pharmacies, openings, like-for-like sales
+  value: null
+  unit: count
+  status: not found
+  source: 4163_ALDAWAA/2025_Annual_filed2026-05-11.pdf
+  page: null
+special_extractions:
+- item: 9M2025 total assets (5,229.4m) is the restated 30 Sep 2025 total from the 2026 Q3 XBRL only; the 2025 Q3 interim (scanned) printed 5,174,557,494 before the note 34 restatement.
+  source: 4163_ALDAWAA/2025_Q3_filed2025-11-09.pdf
+  page: 5
+open_questions:
+- Why retail segment revenue fell 10.1% in 9M 2026 while wholesale rose 62.3% is not explained in the interim notes; the identity of the customer giving SAR 1,702m of FY2025 revenue is not named.
+- Trade receivables nearly doubled to SAR 998m at 30 Sep 2026 and a SAR 24.4m expected credit loss was booked; the interim does not say which customers are behind it.

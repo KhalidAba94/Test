@@ -1,0 +1,454 @@
+ticker: '2285'
+company: Arabian Mills for Food Products Company (formerly The Second Milling Company)
+perimeter_changes:
+- event: Statutory merger with the former 100% parent (a holding company; the 2021 share register shows Food Security Holding Company as sole
+    shareholder) effective 30 Nov 2022, accounted for prospectively at book values; it brought goodwill of SAR 822.4m and acquisition loans (borrowings
+    SAR 1,747.9m at end-2022) but no operating revenue
+  type: acquisition
+  date: '2022-11-30'
+  consideration: null
+  revenue_contribution: null
+  profit_contribution: null
+  pro_forma_revenue: null
+  period: FY2022
+  unit: SAR m
+  source: 2285_ARABIAN_MILLS/2023_Annual_filed2024-10-07.pdf
+  page: 37
+  quote: the Company completed a statutory merger with its former Parent Company which resulted in the Company being the surviving entity
+- event: Subsidiaries, acquisitions or disposals FY2023-9M2026
+  type: acquisition
+  status: not found
+  period: FY2023-9M2026
+  unit: SAR m
+  source: 2285_ARABIAN_MILLS/2025_Annual_filed2026-03-26.pdf
+  page: 3
+  quote: ''
+  note: Stand-alone (not consolidated) statements in every period; no business-combination note.
+segments:
+- period: FY2023
+  segment: Riyadh
+  basis: geographic
+  revenue: 570.96
+  profit: null
+  unit: SAR m
+  source: 2285_ARABIAN_MILLS/2024_Annual_filed2025-03-24.pdf
+  page: 32
+- period: FY2023
+  segment: Jizan
+  basis: geographic
+  revenue: 142.55
+  profit: null
+  unit: SAR m
+  source: 2285_ARABIAN_MILLS/2024_Annual_filed2025-03-24.pdf
+  page: 32
+- period: FY2023
+  segment: Hail
+  basis: geographic
+  revenue: 148.57
+  profit: null
+  unit: SAR m
+  source: 2285_ARABIAN_MILLS/2024_Annual_filed2025-03-24.pdf
+  page: 32
+- period: FY2024
+  segment: Riyadh
+  basis: geographic
+  revenue: 593.46
+  profit: null
+  unit: SAR m
+  source: 2285_ARABIAN_MILLS/2025_Annual_filed2026-03-26.pdf
+  page: 24
+- period: FY2024
+  segment: Jizan
+  basis: geographic
+  revenue: 164.46
+  profit: null
+  unit: SAR m
+  source: 2285_ARABIAN_MILLS/2025_Annual_filed2026-03-26.pdf
+  page: 24
+- period: FY2024
+  segment: Hail
+  basis: geographic
+  revenue: 216.01
+  profit: null
+  unit: SAR m
+  source: 2285_ARABIAN_MILLS/2025_Annual_filed2026-03-26.pdf
+  page: 24
+- period: FY2025
+  segment: Riyadh
+  basis: geographic
+  revenue: 612.3
+  profit: null
+  unit: SAR m
+  source: 2285_ARABIAN_MILLS/2025_Annual_filed2026-03-26.pdf
+  page: 24
+- period: FY2025
+  segment: Jizan
+  basis: geographic
+  revenue: 192.24
+  profit: null
+  unit: SAR m
+  source: 2285_ARABIAN_MILLS/2025_Annual_filed2026-03-26.pdf
+  page: 24
+- period: FY2025
+  segment: Hail
+  basis: geographic
+  revenue: 193.12
+  profit: null
+  unit: SAR m
+  source: 2285_ARABIAN_MILLS/2025_Annual_filed2026-03-26.pdf
+  page: 24
+- period: 9M2025
+  segment: Riyadh
+  basis: geographic
+  revenue: 444.51
+  profit: null
+  unit: SAR m
+  source: 2285_ARABIAN_MILLS/2026_Q3_filed2026-11-08.pdf
+  page: 15
+- period: 9M2025
+  segment: Jizan
+  basis: geographic
+  revenue: 136.6
+  profit: null
+  unit: SAR m
+  source: 2285_ARABIAN_MILLS/2026_Q3_filed2026-11-08.pdf
+  page: 15
+- period: 9M2025
+  segment: Hail
+  basis: geographic
+  revenue: 143.6
+  profit: null
+  unit: SAR m
+  source: 2285_ARABIAN_MILLS/2026_Q3_filed2026-11-08.pdf
+  page: 15
+- period: 9M2026
+  segment: Riyadh
+  basis: geographic
+  revenue: 462.63
+  profit: null
+  unit: SAR m
+  source: 2285_ARABIAN_MILLS/2026_Q3_filed2026-11-08.pdf
+  page: 15
+- period: 9M2026
+  segment: Jizan
+  basis: geographic
+  revenue: 159.16
+  profit: null
+  unit: SAR m
+  source: 2285_ARABIAN_MILLS/2026_Q3_filed2026-11-08.pdf
+  page: 15
+- period: 9M2026
+  segment: Hail
+  basis: geographic
+  revenue: 133.24
+  profit: null
+  unit: SAR m
+  source: 2285_ARABIAN_MILLS/2026_Q3_filed2026-11-08.pdf
+  page: 15
+revenue_drivers:
+- period: FY2022
+  driver: 'Revenue by product: flour 491.0, bran 212.5, feed 200.3, less discounts 1.1 (FY2021: 391.6, 134.2, 115.0)'
+  value: 902.81
+  unit: SAR m
+  source: 2285_ARABIAN_MILLS/2022_Annual_filed2024-10-07.pdf
+  page: 36
+  quote: Flour 491,003,690 391,618,108
+- period: FY2023
+  driver: 'Revenue by product: flour 521.6, bran 220.6, feed 133.2, less discounts and promotion 13.3'
+  value: 862.08
+  unit: SAR m
+  source: 2285_ARABIAN_MILLS/2023_Annual_filed2024-10-07.pdf
+  page: 43
+  quote: Flour 521,552,331 491,003,690
+- period: FY2024
+  driver: 'Revenue by product (FY2024 annual): flour 547.0, bran 255.7, feed 193.2, less rebates 22.0'
+  value: 973.94
+  unit: SAR m
+  source: 2285_ARABIAN_MILLS/2024_Annual_filed2025-03-24.pdf
+  page: 47
+  quote: Flour 547,015,029 521,552,331
+- period: FY2025
+  driver: 'Revenue by product, net of rebates (FY2025 annual): flour 576.6 (534.6), feed 191.2 (184.5), bran 229.9 (254.9)'
+  value: 997.66
+  unit: SAR m
+  source: 2285_ARABIAN_MILLS/2025_Annual_filed2026-03-26.pdf
+  page: 42
+  quote: Flour 576,575,662 534,553,852
+- period: 9M2025
+  driver: 'Nine-month revenue by product: flour 415.4 (387.3), bran 169.6 (192.9), feed 139.8 (128.9); the 2026 Q3 interim gives no product split'
+  value: 724.71
+  unit: SAR m
+  source: 2285_ARABIAN_MILLS/2025_Q3_filed2025-11-11.pdf
+  page: 21
+  quote: Flour 140,894,264 134,945,620 415,371,137 387,300,177
+- period: FY2025
+  driver: 'Regulated prices: GFSA sets the selling price only of flour in bags of 45kg and above'
+  value: null
+  unit: SAR m
+  source: 2285_ARABIAN_MILLS/2025_Annual_filed2026-03-26.pdf
+  page: 13
+  quote: only the flour products weighing 45 KGs and above are determined by the GFSA.
+- period: FY2025
+  driver: Subsidised wheat from GFSA at SAR 180 per tonne, unchanged since 2017 (same wording in the 2026 Q3 interim)
+  value: 180
+  unit: SAR per tonne
+  source: 2285_ARABIAN_MILLS/2025_Annual_filed2026-03-26.pdf
+  page: 12
+  quote: SR 180 per metric ton since 2017
+- period: FY2025
+  driver: 'Sales to shareholder NADEC (including VAT): 41.7 (FY2024 shown as 20.9)'
+  value: 41.68
+  unit: SAR m
+  source: 2285_ARABIAN_MILLS/2025_Annual_filed2026-03-26.pdf
+  page: 47
+  quote: Sale of goods 41,675,797 20,904,655
+- period: FY2022-9M2026
+  driver: Volumes, capacity and prices
+  status: not found
+  value: null
+  unit: count
+  source: 2285_ARABIAN_MILLS/2025_Annual_filed2026-03-26.pdf
+  page: 42
+  quote: ''
+  note: No tonnes, capacity or price data in any statement in the archive.
+one_offs:
+- period: FY2023
+  item: Compensation paid to shareholder NADEC for terminating its exclusive distribution and marketing-service agreements
+  amount: 10.0
+  unit: SAR m
+  pnl_line: General and administration expenses
+  recurring: false
+  source: 2285_ARABIAN_MILLS/2023_Annual_filed2024-10-07.pdf
+  page: 44
+  quote: Contract cancellation charges with a related party 10,000,000 -
+- period: FY2023
+  item: Reversal of provision for slow-moving inventories (ordinary operating provision; not treated as a one-off)
+  amount: 13.22
+  unit: SAR m
+  pnl_line: Direct costs (cash-flow add-back)
+  recurring: false
+  source: 2285_ARABIAN_MILLS/2023_Annual_filed2024-10-07.pdf
+  page: 9
+  quote: Reversal of provision for slow moving inventories 10 (13,220,391)
+- period: FY2023
+  item: Write-off of intangible assets (in IMPAIR_CF, already outside EBITDA)
+  amount: 0.21
+  unit: SAR m
+  pnl_line: not named (cash-flow add-back)
+  recurring: false
+  source: 2285_ARABIAN_MILLS/2023_Annual_filed2024-10-07.pdf
+  page: 9
+  quote: Write-off of intangible assets 214,188
+- period: FY2024
+  item: Provision for a GFSA fine after an inspection on 16 Oct 2024 (Flour Mills Production Law)
+  amount: 5.61
+  unit: SAR m
+  pnl_line: General and administration expenses
+  recurring: false
+  source: 2285_ARABIAN_MILLS/2024_Annual_filed2025-03-24.pdf
+  page: 48
+  quote: Fines and penalties 5,605,621 680,055
+- period: FY2025
+  item: 'Net release of fines and penalties: GFSA revised its claim to SAR 3.10m and SAR 2.50m of the provision was reversed'
+  amount: 1.47
+  unit: SAR m
+  pnl_line: General and administrative expenses (credit)
+  recurring: false
+  source: 2285_ARABIAN_MILLS/2025_Annual_filed2026-03-26.pdf
+  page: 41
+  quote: received response from GFSA with a revised claim amounting to SR 3.10 million and accordingly the reversed the excess provision amounting
+    to SR 2.50 million
+- period: FY2025
+  item: 'Amortisation of loan transaction cost rose to SAR 12.4m (FY2024: SAR 1.6m) as SAR 174.5m of the term loan was repaid (finance cost, outside
+    operating income)'
+  amount: 12.45
+  unit: SAR m
+  pnl_line: Finance cost
+  recurring: false
+  source: 2285_ARABIAN_MILLS/2025_Annual_filed2026-03-26.pdf
+  page: 11
+  quote: Amortization of loan transaction cost 27 12,449,577 1,581,430
+restatements:
+- period_restated: FY2021 (1 Jan 2022) and FY2022
+  item: Lease liabilities +SAR 107.1m and right-of-use assets +SAR 107.1m; PP&E and equity -SAR 16.5m; FY2022 total assets SAR 2,672.6m to SAR
+    2,779.7m
+  from: 2672.62
+  to: 2779.74
+  unit: SAR m
+  reason: Restatement of prior-year financial statements, FY2023 annual note 32 (leases not remeasured after the 2021 milling licence; buildings
+    on leased land over-depreciated)
+  source: 2285_ARABIAN_MILLS/2023_Annual_filed2024-10-07.pdf
+  page: 50
+  quote: management of the Company has identified that they have not reassessed the value of lease liabilities after obtaining flour milling license
+    in 2021
+- period_restated: FY2023
+  item: Direct costs (gross profit SAR 415.5m to SAR 425.0m)
+  from: 446.57
+  to: 437.07
+  unit: SAR m
+  reason: 'Re-presented in the FY2024 annual (note 31): expenses allocated by cost centre in the new accounting system'
+  source: 2285_ARABIAN_MILLS/2024_Annual_filed2025-03-24.pdf
+  page: 54
+  quote: Direct costs 446,573,893 (9,498,925) 437,074,968
+- period_restated: FY2024
+  item: Cost of revenue (gross profit SAR 454.9m to SAR 450.7m); cash and operating cash flow +SAR 0.18m; total assets SAR 2,279.1m to SAR 2,279.2m
+  from: 519.0
+  to: 523.23
+  unit: SAR m
+  reason: Reclassification of comparative figures, FY2025 annual note 34 (auditor emphasis of matter)
+  source: 2285_ARABIAN_MILLS/2025_Annual_filed2026-03-26.pdf
+  page: 55
+  quote: Cost of revenue 518,997,498 4,236,406 523,233,904
+- period_restated: 9M2025
+  item: Cost of revenue +SAR 2.6m; bank charges of SAR 1.11m moved into finance costs; operating cash flow +SAR 1.11m
+  from: 386.0
+  to: 388.63
+  unit: SAR m
+  reason: Reclassification and comparative figures, 2026 Q3 interim note 26
+  source: 2285_ARABIAN_MILLS/2026_Q3_filed2026-11-08.pdf
+  page: 28
+  quote: Finance costs (46,282,897) (1,113,560) (47,396,457)
+- period_restated: FY2023
+  item: 'Sales to NADEC in the related-party note: SAR 22.78m (FY2023 annual) shown as SAR 26.19m ''inclusive of VAT'' in the FY2024 annual; no
+    effect on revenue'
+  from: 22.78
+  to: 26.19
+  unit: SAR m
+  reason: Related-party disclosure basis changed to VAT-inclusive (26.19 = 22.78 x 1.15)
+  source: 2285_ARABIAN_MILLS/2024_Annual_filed2025-03-24.pdf
+  page: 49
+  quote: Revenue (inclusive of VAT) 24,040,353 26,192,129
+- period_restated: FY2024
+  item: 'Sales to NADEC: SAR 24.04m ''inclusive of VAT'' (FY2024 annual) shown as SAR 20.90m ''(Including VAT)'' in the FY2025 annual, which equals
+    24.04 / 1.15; no effect on revenue'
+  from: 24.04
+  to: 20.9
+  unit: SAR m
+  reason: Related-party disclosure basis inconsistent between filings (VAT label)
+  source: 2285_ARABIAN_MILLS/2025_Annual_filed2026-03-26.pdf
+  page: 47
+  quote: Sale of goods 41,675,797 20,904,655
+significant_events:
+- date: '2022-12-21'
+  event: Olam International transferred its 10% stake to Abdulaziz Al-Ajlan Sons and NADEC; NADEC's stake rose to 15% (14.87%) in 2023
+  financial_effect: Income tax for the foreign shareholder ends after 2022 (FY2022 income tax SAR 3.3m)
+  source: 2285_ARABIAN_MILLS/2023_Annual_filed2024-10-07.pdf
+  page: 37
+  quote: Olam International Limited transferred its 10% shareholding to Abdulaziz Al-Ajlan Sons for Commercial and Real Estate Investment and
+    National Agriculture Development Company
+- date: '2023'
+  event: Shareholders agreed to end NADEC's exclusive distribution and marketing-service agreements for SAR 10m compensation
+  financial_effect: SAR 10.0m in FY2023 G&A
+  source: 2285_ARABIAN_MILLS/2022_Annual_filed2024-10-07.pdf
+  page: 42
+  quote: with a compensation payment of SR 10 million to NADEC in exchange for the termination of the following agreements
+- date: '2024-10-08'
+  event: Listed on the Saudi Exchange (30% offered by existing shareholders); NADEC's stake fell to 10.41%
+  financial_effect: IPO costs of SAR 13.6m paid on behalf of shareholders and reimbursed
+  source: 2285_ARABIAN_MILLS/2025_Annual_filed2026-03-26.pdf
+  page: 13
+  quote: ordinary shares began trading on Tadawul on 8 October 2024
+- date: '2024-12-12'
+  event: GFSA claim after an inspection on 16 Oct 2024; SAR 5.6m provided in FY2024, revised to SAR 3.10m in Oct 2025 and appealed
+  financial_effect: SAR 5.6m charge in FY2024; SAR 2.5m reversed in FY2025
+  source: 2285_ARABIAN_MILLS/2025_Annual_filed2026-03-26.pdf
+  page: 41
+  quote: Fines and penalties relate to the claim received from GFSA on 12 December 2024
+- date: 2023 to 2026
+  event: 'Deleveraging: borrowings fell from SAR 1,747.9m (end-2022) to SAR 630.3m (30 Sep 2026); term Murabaha facility SAR 699.0m gross at end-2025'
+  financial_effect: Finance costs fell from SAR 121.7m (FY2023) to SAR 70.4m (FY2025)
+  source: 2285_ARABIAN_MILLS/2025_Annual_filed2026-03-26.pdf
+  page: 36
+  quote: Term Murabaha facility 699,015,011 873,524,194
+- date: '2026-09-30'
+  event: Installation of a new flour mill at the Riyadh branch in progress (capital work in progress SAR 44.2m)
+  financial_effect: Capex SAR 55.8m in 9M 2026
+  source: 2285_ARABIAN_MILLS/2026_Q3_filed2026-11-08.pdf
+  page: 18
+  quote: Installation of new flour mill at Riyadh branch
+- date: '2026'
+  event: Dividend of SAR 51.32m (SAR 1 per share) for FY2025 paid in 2026 (FY2024 dividend SAR 30.3m paid in 2025)
+  financial_effect: Cash returned to shareholders
+  source: 2285_ARABIAN_MILLS/2026_Q1_filed2026-05-13.pdf
+  page: 17
+  quote: total amount of SR 51.32 million at SR 1 per share of the nominal capital
+audit_opinion:
+- period: FY2022
+  opinion: unmodified (image page, read by OCR)
+  emphasis_of_matter: null
+  source: 2285_ARABIAN_MILLS/2022_Annual_filed2024-10-07.pdf
+  page: 3
+- period: FY2023
+  opinion: unmodified
+  emphasis_of_matter: null
+  source: 2285_ARABIAN_MILLS/2023_Annual_filed2024-10-07.pdf
+  page: 3
+- period: FY2024
+  opinion: unmodified
+  emphasis_of_matter: null
+  source: 2285_ARABIAN_MILLS/2024_Annual_filed2025-03-24.pdf
+  page: 3
+- period: FY2025
+  opinion: unmodified
+  emphasis_of_matter: Comparative information for 2024 reclassified (note 34)
+  source: 2285_ARABIAN_MILLS/2025_Annual_filed2026-03-26.pdf
+  page: 5
+kpis_in_filings:
+- period: FY2017-9M2026
+  kpi: Subsidised wheat purchase price from GFSA
+  value: 180
+  unit: SAR per tonne
+  source: 2285_ARABIAN_MILLS/2025_Annual_filed2026-03-26.pdf
+  page: 12
+- period: FY2023
+  kpi: NADEC shareholding
+  value: 14.87
+  unit: '%'
+  source: 2285_ARABIAN_MILLS/2024_Annual_filed2025-03-24.pdf
+  page: 42
+- period: FY2024
+  kpi: NADEC shareholding after the IPO
+  value: 10.41
+  unit: '%'
+  source: 2285_ARABIAN_MILLS/2024_Annual_filed2025-03-24.pdf
+  page: 42
+- period: FY2025
+  kpi: Capital commitments on capital work in progress
+  value: 15.45
+  unit: SAR m
+  source: 2285_ARABIAN_MILLS/2025_Annual_filed2026-03-26.pdf
+  page: 31
+special_extractions:
+- item: Sales to shareholder NADEC (related-party note), SAR m
+  values_sar_m:
+    FY2022: 20.19
+    FY2023: 22.78
+    FY2023 (FY2024 annual, incl. VAT): 26.19
+    FY2024 (FY2024 annual, incl. VAT): 24.04
+    FY2024 (FY2025 annual): 20.9
+    FY2025: 41.68
+    9M2025: 27.97
+    9M2026: 25.09
+  source: 2285_ARABIAN_MILLS/2023_Annual_filed2024-10-07.pdf
+  page: 45
+  quote: Revenue 22,775,765 20,188,234
+  note: 'For cross-checks with NADEC (6010): the VAT basis of these amounts changes between filings (FY2024 annual p.49, FY2025 annual p.47, 2026
+    Q3 p.25).'
+- item: Accrued interest on loans shown separately and excluded from DEBT, SAR m
+  values_sar_m:
+    FY2022: 16.22
+    FY2023: 12.04
+    FY2024 (FY2024 annual): 2.15
+    9M2025: 14.98
+    9M2026: 10.39
+  source: 2285_ARABIAN_MILLS/2026_Q3_filed2026-11-08.pdf
+  page: 4
+  quote: Interest payable on long-term loans 10,387,636 --
+  note: FY2024 comparative in the FY2025 annual has no separate line (reclassified to payables, note 34).
+open_questions:
+- NADEC related-party sales are labelled 'including VAT' in both the FY2024 and FY2025 annuals but differ by a factor of 1.15 for 2024 (SAR 24.04m
+  vs SAR 20.90m); NADEC's own filings would show which basis is right.
+- The jump in loan-cost amortisation to SAR 12.4m in FY2025 is not explained in a note; we infer it follows the SAR 174.5m principal repayment.
+- The FY2023 rise in gross margin (49.3% vs 45.7%) coincided with a SAR 13.2m reversal of the slow-moving inventory provision; its P&L line is
+  not named, so its margin effect is not quantified.
+- Revenue by product is not given in the 2026 Q3 interim, so 9M 2026 mix is not determinable.

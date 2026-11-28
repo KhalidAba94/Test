@@ -1,0 +1,110 @@
+# Evidence extracted from Musharaka REIT Fund filings (archive: SEVEN_REIT/4335_MUSHARAKA_REIT). Facts only; page = physical PDF page (1-based).
+# Units: SAR (statements in Saudi Riyals). Statements and fund annual reports have text layers. No FY2022 annual and no interim financial
+# statements in the archive: 9M figures come from one-page quarterly statements, which give the quarter's rental income, the borrowing amount
+# and the financial highlights of the previous half-year only.
+ticker: "4335"
+company: "Musharaka REIT Fund (managed by Musharaka Capital Company)"
+
+perimeter_changes:
+  - event: "Owned investment properties added in 2022 (land 76.1m, buildings 177.4m, leasehold improvements 6.8m); the property is not named in the statements"
+    type: acquisition
+    date: "2022"
+    consideration: 260291493
+    revenue_contribution: null
+    profit_contribution: null
+    pro_forma_revenue: null
+    period: "FY2022"
+    unit: "SAR"
+    source: "4335_MUSHARAKA_REIT/2023_Annual_filed2024-04-01.pdf"
+    page: 20
+    quote: "Additions during the year 76,135,145 177,371,107 - 6,785,241 260,291,493"
+    note: "Revenue contribution for FY2022 and FY2023 not disclosed."
+  - event: "No acquisitions or disposals in 2023-2025: owned-property additions were improvements only (2023 SAR 2.4m, 2024 nil, 2025 SAR 1.0m); the same 13 properties appear in the 2023 and 2025 fund reports and in the Q3 2025 and Q3 2026 statements"
+    type: acquisition
+    status: "not found"
+    date: "2023-9M2026"
+    consideration: null
+    revenue_contribution: null
+    profit_contribution: null
+    pro_forma_revenue: null
+    period: "FY2023-9M2026"
+    unit: "SAR"
+    source: "4335_MUSHARAKA_REIT/2025_Annual_filed2026-03-31_t16-46-18.pdf"
+    page: 20
+    quote: "Additions - - 1,000,000 1,000,000"
+
+segments:
+  - {period: "FY2022-FY2025", segment: "No segment note; properties in Saudi Arabia except one warehouse in the UAE", basis: geographic, revenue: null, profit: null, unit: "SAR", source: "4335_MUSHARAKA_REIT/2025_Annual_filed2026-03-31_t16-46-18.pdf", page: 21}
+
+revenue_drivers:
+  - {period: "FY2025", driver: "Finance income on finance leases (lessor; 10 to 20-year leases at 4.95%) is part of 'Total income': FY2025 10,183,942, FY2024 10,742,288, FY2023 11,165,201, FY2022 11,596,685; it declines as the receivable amortises", value: 10183942, unit: "SAR", source: "4335_MUSHARAKA_REIT/2025_Annual_filed2026-03-31_t16-46-18.pdf", page: 19, quote: "Finance income on investment in finance leases receivable (Note 12) 10,183,942 10,742,288"}
+  - {period: "FY2025", driver: "Net investment in finance leases SAR 189.8m (2024: 200.8m); gross receivable SAR 272.5m", value: 189847804, unit: "SAR", source: "4335_MUSHARAKA_REIT/2025_Annual_filed2026-03-31_t16-46-18.pdf", page: 24, quote: "The Fund has lease agreements for its investment properties in the Kingdom of Saudi Arabia. The lease tenure ranges from ten"}
+  - {period: "FY2023", driver: "Verdun Tower (Riyadh offices) annual net income SAR 22.6m, occupancy 96% (fund report)", value: 22600326, unit: "SAR", source: "4335_MUSHARAKA_REIT/2023_Annual_filed2024-03-31.pdf", page: 16, quote: "SAR 22,600,326"}
+  - {period: "FY2024", driver: "Verdun Tower annual net income SAR 23.3m, occupancy 73% (fund report)", value: 23345958, unit: "SAR", source: "4335_MUSHARAKA_REIT/2024_Annual_filed2025-03-24.pdf", page: 16, quote: "SAR 23,345,958"}
+  - {period: "FY2025", driver: "Verdun Tower annual income SAR 17.3m, occupancy 82% (fund report)", value: 17338546, unit: "SAR", source: "4335_MUSHARAKA_REIT/2025_Annual_filed2026-03-31_t16-46-52.pdf", page: 16, quote: "SAR 17,338,546"}
+  - {period: "FY2025", driver: "Pearl Residential Complex (Al-Khobar) annual income SAR 12.0m, occupancy 64% (2024: SAR 14.1m, 72%; 2023: SAR 14.1m, 88%)", value: 12014817, unit: "SAR", source: "4335_MUSHARAKA_REIT/2025_Annual_filed2026-03-31_t16-46-52.pdf", page: 5, quote: "Annual Income: SAR 12,014,817"}
+  - {period: "FY2025", driver: "Rental revenue SAR 86.97m (2024: SAR 95.36m)", value: 86972655, unit: "SAR", source: "4335_MUSHARAKA_REIT/2025_Annual_filed2026-03-31_t16-46-18.pdf", page: 19, quote: "During the year ended 31 December 2025, the Fund has earned revenue of Saudi Riyals 86.97 million (2024: Saudi Riyals"}
+
+one_offs:
+  - {period: "FY2022", item: "Zakat reversal after ZATCA ruled that investment funds do not pay zakat (inside net profit and FFO)", amount: 1959473, unit: "SAR", pnl_line: "Zakat reversal", recurring: false, source: "4335_MUSHARAKA_REIT/2023_Annual_filed2024-04-01.pdf", page: 7, quote: "Zakat reversal 10 - 1,959,473"}
+  - {period: "FY2023", item: "Unamortised loan arrangement fee written off on the repayment of SAR 320.7m of Al Rajhi loans (inside finance costs and FFO)", amount: -1904464, unit: "SAR", pnl_line: "Finance costs (arrangement fee written-off)", recurring: false, source: "4335_MUSHARAKA_REIT/2023_Annual_filed2024-04-01.pdf", page: 19, quote: "Arrangement fee written-off 9.2 1,904,464 -"}
+  - {period: "FY2023", item: "Reversal of impairment loss on investment properties (excluded from FFO)", amount: 14995195, unit: "SAR", pnl_line: "Reversal of impairment loss on investment properties", recurring: false, source: "4335_MUSHARAKA_REIT/2023_Annual_filed2024-04-01.pdf", page: 7, quote: "Reversal of impairment loss on investment properties 11 14,995,195 (8,439,546)"}
+  - {period: "FY2025", item: "Impairment loss on investment properties (excluded from FFO)", amount: -91948843, unit: "SAR", pnl_line: "Impairment loss on investment properties", recurring: false, source: "4335_MUSHARAKA_REIT/2025_Annual_filed2026-03-31_t16-46-18.pdf", page: 21, quote: "Based on the results of the independent valuations, the Fund has recorded an impairment"}
+
+restatements:
+  - period_restated: "FY2024"
+    item: "Borrowings: accrued finance costs of 14,698,684 moved from accrued expenses into borrowings"
+    from: 663630864
+    to: 678329548
+    unit: "SAR"
+    reason: "Comparative amounts reclassified (note 26); no effect on net income"
+    source: "4335_MUSHARAKA_REIT/2025_Annual_filed2026-03-31_t16-46-18.pdf"
+    page: 26
+    quote: "Accrued finance costs 8,842,388 14,698,684"
+
+significant_events:
+  - date: "2023"
+    event: "New SAR 1bn facility with Bank Al Jazira; SAR 320.7m of Al Rajhi loans repaid from it (proceeds and repayment both SAR 320.7m)"
+    financial_effect: "Arrangement fee of SAR 1.9m written off"
+    source: "4335_MUSHARAKA_REIT/2025_Annual_filed2026-03-31_t16-46-18.pdf"
+    page: 26
+    quote: "During 2023, the Fund entered into another Sharia-compliant bank facility, with Bank Al Jazira, for a long-term loan with an"
+  - date: "2025-12-31"
+    event: "Breach of a covenant on the Bank Al Jazira loan; no waiver obtained; the bank may demand immediate repayment; the loan is still presented per the facility terms"
+    financial_effect: "Borrowings of SAR 674m shown as non-current; maturity analysis shows SAR 668.6m due in two to five years"
+    source: "4335_MUSHARAKA_REIT/2025_Annual_filed2026-03-31_t16-46-18.pdf"
+    page: 26
+    quote: "The Fund breached one of the loan"
+  - date: "2023"
+    event: "ZATCA resolution: investment funds do not pay zakat; unitholders are responsible"
+    financial_effect: "No zakat charge from FY2023; FY2022 reversal SAR 2.0m"
+    source: "4335_MUSHARAKA_REIT/2023_Annual_filed2024-04-01.pdf"
+    page: 19
+    quote: "stated that investment funds are not required to pay"
+
+audit_opinion:
+  - {period: "FY2023", opinion: "unmodified (RSM Allied Accountants)", emphasis_of_matter: "none", source: "4335_MUSHARAKA_REIT/2023_Annual_filed2024-04-01.pdf", page: 3}
+  - {period: "FY2024", opinion: "unmodified (RSM Allied Accountants)", emphasis_of_matter: "none", source: "4335_MUSHARAKA_REIT/2024_Annual_filed2025-03-23.pdf", page: 3}
+  - {period: "FY2025", opinion: "unmodified (RSM Allied Accountants); no emphasis of matter or going-concern paragraph despite the covenant breach", emphasis_of_matter: "none", source: "4335_MUSHARAKA_REIT/2025_Annual_filed2026-03-31_t16-46-18.pdf", page: 3}
+
+kpis_in_filings:
+  - {period: "FY2025", kpi: "Leasable area: Al Orouba 11,082 sq m; Kharj Plaza 9,404 sq m; Al Jubail Plaza 15,537 sq m (fund report property pages)", value: null, unit: "sq m", source: "4335_MUSHARAKA_REIT/2025_Annual_filed2026-03-31_t16-46-52.pdf", page: 9}
+  - {period: "9M2025", kpi: "Occupancy 30 Sep 2025: Verdun Tower 58%, Pearl 68%, Sea Shore 46%, Ajzala 92%, Hotel Apartments Dhahran 80%; Q3 rental income 23,293,516", value: null, unit: "%", source: "4335_MUSHARAKA_REIT/2025_Q3_filed2025-11-03.pdf", page: 1}
+  - {period: "9M2026", kpi: "Occupancy 30 Sep 2026: Verdun Tower 89%, Pearl 72%, Sea Shore 38%, Ajzala 82%, Hotel Apartments Dhahran 65%; Q3 rental income 25,145,779; borrowing amount 677,027,968", value: null, unit: "%", source: "4335_MUSHARAKA_REIT/2026_Q3_filed2026-10-15.pdf", page: 1}
+
+special_extractions:
+  - item: "Quarterly rental income (quarterly statements)"
+    detail: "2025: Q1 26,254,465; Q2 25,672,213; Q3 23,293,516; Q4 23,772,703 (year 98,992,897 vs audited total income 97,156,597). 2026: Q1 23,394,403; Q2 25,694,590; Q3 25,145,779."
+    source: "4335_MUSHARAKA_REIT/2026_Q3_filed2026-10-15.pdf"
+    page: 1
+    quote: "Quarterly rental Income 25,145,779"
+  - item: "Borrowing amount basis in quarterly statements"
+    detail: "Q4 2025 statement 665,126,295 = loans 668,556,977 less unamortised costs 3,430,683 (no accrued finance cost); Q1 2026 673,280,868 is close to the audited FY2025 borrowings of 673,968,682 that include accrued finance costs, so the basis changed in 2026."
+    source: "4335_MUSHARAKA_REIT/2025_Q4_filed2026-01-14.pdf"
+    page: 1
+    quote: "Borrowing Amount 665,126,295"
+
+open_questions:
+  - "Which property the SAR 260.3m of 2022 additions relates to and what revenue it added in FY2023 (not disclosed in the archive)."
+  - "How the covenant breach at 31 Dec 2025 was resolved; the 2026 quarterly statements report no fundamental changes and still show the loan due date of 9 Aug 2029."
+  - "The fund reports' per-property 'annual income' mixes net and gross measures and does not reconcile to the audited revenue."
