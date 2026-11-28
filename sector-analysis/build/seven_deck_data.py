@@ -80,6 +80,29 @@ def adjusted(t, c, top):
     return {"v": None, "basis": ("Not measurable: " + ", ".join(txt[w] for w in why) + " not disclosed") if why else "Not measurable"}
 
 
+def lfl9(t, c, top):
+    """Like-for-like Jan-Sep 2026 vs Jan-Sep 2025: reported growth less every quantified effect (acquisitions, disposals,
+    basis changes, hyperinflation). n.d. when a deal or basis change is not quantified. Currency and hyperinflation
+    effects that are not disclosed are not removed (they are noted)."""
+    comp = "9M2026/9M2025"
+    rep, prior = c["growth"].get(top, {}).get(comp), sv(c, top, "9M2025")
+    if not isinstance(rep, float) or not prior:
+        return {"v": None, "basis": ""}
+    rows = [r for r in A[(t, comp)] if r["bridge_step"] != "new_capacity"]
+    nd_deal = sorted({r["bridge_step"] for r in rows if r["bridge_step"] in ("perimeter", "accounting_other") and r["basis"] == "not determinable"})
+    nd_fx = sorted({r["bridge_step"] for r in rows if r["bridge_step"] in ("fx", "hyperinflation") and r["basis"] == "not determinable"})
+    txt = {"perimeter": "acquisition or disposal", "accounting_other": "basis change", "fx": "currency", "hyperinflation": "hyperinflation"}
+    fxnote = ("; " + " and ".join(txt[x] for x in nd_fx) + " effects not disclosed, not removed") if nd_fx else ""
+    if nd_deal:
+        return {"v": None, "basis": "n.d.: " + " and ".join(txt[x] for x in nd_deal) + " not quantified" + fxnote}
+    amt = sum(float(r["amount_sar_m"]) for r in rows if r["amount_sar_m"] not in ("", None))
+    if abs(amt) < 1e-9:
+        return {"v": rep, "basis": "No deals or basis changes" + fxnote, "same": True}
+    named = [r for r in rows if r["amount_sar_m"] not in ("", None) and abs(float(r["amount_sar_m"])) > 1e-9]
+    lab = {"6016": "SHOVEL removed", "6010": "AlRaie removed", "4150": "Land sales removed", "6014": "Five Guys removed"}.get(t, "Quantified deals removed")
+    return {"v": rep - amt / prior, "basis": lab + fxnote}
+
+
 GROUP_LABEL = {"Entertainment": "Entertainment and leisure", "Media": "Media", "FnB": "F&B operators", "Platform": "Delivery platform",
                "Malls": "Mall operators", "REITs": "Retail REITs", "Retailers": "Retailers", "Supporting": "Supporting consumer goods"}
 
@@ -108,7 +131,7 @@ for g, S in ds.items():
         row = {"name": c["name"].split(" (")[0] if t not in ("4170",) else "TECO (Shams)", "ticker": t,
                "sub": f"FY2025 revenue SAR {sv(c, top, 'FY2025'):,.0f}m" if sv(c, top, "FY2025") is not None else "",
                "cells": [growth_cell(c, top, cu, pr) for cu, pr in PAIRS], "cagr": c["growth"][top].get("CAGR_2022_2025"),
-               "adj": adjusted(t, c, top),
+               "adj": adjusted(t, c, top), "lfl9": lfl9(t, c, top),
                "margin": {p: ra.get("FFO_M" if reit else "EBITDA_M_U", {}).get(p) for p in ("FY2025", "9M2025", "9M2026")},
                "lev": ra.get("LTV" if reit else "ND_EBITDA", {}).get("FY2025"),
                "payout": ra.get("PAYOUT", {}).get("FY2025") if reit else None,
@@ -209,12 +232,38 @@ def undisclosed(t, comp):
     return any(r["bridge_step"] in ("perimeter", "accounting_other") and r["basis"] == "not determinable" for r in A[(t, comp)])
 
 
-def flow26(c, m, top):
-    a, b, f = sv(c, m, "9M2026"), sv(c, m, "9M2025"), sv(c, m, "FY2025")
+# Oct-Dec 2025 already contains businesses bought in Oct 2025, so their effect on Jan-Sep growth must not be applied again.
+# Material cases (deal revenue over 5% of the Oct-Dec 2025 base): Jahez (Snoonu, from 6 Oct 2025; SAR 227.6m of a SAR 698m
+# quarter; 2026 revenue not disclosed -> Oct-Dec held at the 2025 level) and Burgerizzr (SHOVEL, from 27 Oct 2025; its
+# Jan-Sep 2026 revenue is disclosed -> grown at the rate without SHOVEL).
+Q4FIX = {"6017": ("hold", "Snoonu (from 6 Oct 2025) is already in Oct-Dec 2025 and its 2026 revenue is not disclosed: Oct-Dec 2026 held at the 2025 level"),
+         "6016": ("excl", "SHOVEL (from 27 Oct 2025) is already in Oct-Dec 2025: Oct-Dec 2026 grown at the Jan-Sep rate without SHOVEL")}
+
+
+FIX_ON = [True]
+
+
+def q4factor(c, top, t=None, fix=True):
     r26, r25 = sv(c, top, "9M2026"), sv(c, top, "9M2025")
-    if None in (a, b, f, r26, r25) or not r25:
+    if not r26 or not r25:
         return None
-    return a + (f - b) * r26 / r25
+    if fix and FIX_ON[0] and t in Q4FIX:
+        if Q4FIX[t][0] == "hold":
+            return 1.0
+        a = sum(float(r["amount_sar_m"]) for r in A[(t, "9M2026/9M2025")] if r["bridge_step"] == "perimeter" and r["amount_sar_m"] not in ("", None))
+        return (r26 - a) / r25
+    return r26 / r25
+
+
+def flow26(c, m, top, t=None, fix=True, flat=False):
+    """2026E = Jan-Sep 2026 actual + Oct-Dec 2025 x Oct-Dec factor (the Jan-Sep 2026 revenue growth, corrected as above).
+    The same factor scales revenue, EBITDA and profit, so the Oct-Dec margin is held at its 2025 level. flat=True holds
+    Oct-Dec at the 2025 level (sensitivity)."""
+    a, b, f = sv(c, m, "9M2026"), sv(c, m, "9M2025"), sv(c, m, "FY2025")
+    k = q4factor(c, top, t, fix)
+    if None in (a, b, f, k):
+        return None
+    return a + (f - b) * (1.0 if flat else k)
 
 
 def series(g, t):
@@ -223,9 +272,13 @@ def series(g, t):
     for p in ("FY2022", "FY2023", "FY2024", "FY2025"):
         if (t, p) in SHORT:
             v[p] = None
-    v["2026E"] = flow26(c, top, top)
+    v["2026E"] = flow26(c, top, top, t)
     am = {y: amt_ident(t, CMP[y]) for y in ("FY2023", "FY2024", "FY2025")}
-    am["2026E"] = (v["FY2025"] * amt_ident(t, CMP["2026E"]) / v["9M2025"]) if v["2026E"] and v["FY2025"] and v["9M2025"] else 0.0
+    # identified deal revenue in 2026E: Jan-Sep amount plus its Oct-Dec share where the deal is new in 2026 (not in the Oct-Dec 2025 base)
+    am["2026E"] = 0.0
+    if v["2026E"] and v["FY2025"] and v["9M2025"]:
+        a9 = amt_ident(t, CMP["2026E"])
+        am["2026E"] = a9 if t in Q4FIX else v["FY2025"] * a9 / v["9M2025"]
     am["9M"] = amt_ident(t, CMP["2026E"])
     return v, am
 
@@ -270,7 +323,7 @@ def chain(mem):
 
 
 v4 = {"groups": {}, "companies": {}, "method": {
-    "2026E": "Jan-Sep 2026 actual + Oct-Dec 2025 grown at the company's Jan-Sep 2026 revenue growth (our estimate).",
+    "2026E": "Jan-Sep 2026 actual + Oct-Dec 2025 grown at the company's Jan-Sep 2026 revenue growth (our estimate); Jahez and Burgerizzr corrected for deals already in Oct-Dec 2025.",
     "lfl": "Reported growth less the acquisitions, disposals, hyperinflation and basis changes that the filings quantify; "
            "n.d. where companies with undisclosed deals hold over half of the revenue, flagged where they hold over a quarter."}}
 GROUPS = list(ds.keys())
@@ -286,29 +339,51 @@ for g in GROUPS:
         n = YEARS.index(e) - YEARS.index(b) if b and e else 0
         v4["companies"][t] = {"cagr": (v[e] / v[b]) ** (1 / n) - 1 if n > 0 else None, "base": b, "end": e, "rev26e": v.get("2026E")}
 # counts and aggregates, FY2022 -> 2026
-rv = [0, 0]; pr = [0, 0]; E = [0.0] * 4; N = [0.0] * 4
+rv = [0, 0]; pr = [0, 0]; E = [0.0] * 4; N = [0.0] * 4; PT = []; EA = [0.0] * 8; nEA = 0
 for g in GROUPS:
     S = ds[g]; top = S["config"]["top_line"]
     for t in S["tickers"]:
         c = S["companies"][t]
         if (t, "FY2022") in SHORT:
             continue
-        r22, r26 = sv(c, top, "FY2022"), flow26(c, top, top)
+        r22, r26 = sv(c, top, "FY2022"), flow26(c, top, top, t)
         if r22 and r26:
             rv[1] += 1; rv[0] += r26 > r22
-        n22, n26 = sv(c, "NI_ATTR", "FY2022"), flow26(c, "NI_ATTR", top)
+        n22, n26 = sv(c, "NI_ATTR", "FY2022"), flow26(c, "NI_ATTR", top, t)
         if n22 is not None and n26 is not None:
             pr[1] += 1; pr[0] += n26 > n22
+            n26f = flow26(c, "NI_ATTR", top, t, flat=True)
+            PT.append({"ticker": t, "group": g, "name": c["name"].split(" (")[0], "fy22": n22, "m26": sv(c, "NI_ATTR", "9M2026"),
+                       "q4e": n26 - sv(c, "NI_ATTR", "9M2026"), "e26": n26, "e26_flat": n26f, "higher": n26 > n22, "higher_flat": n26f > n22,
+                       "close": abs(n26 - n22) <= 0.1 * abs(n22) if n22 else False})
         if S["config"].get("template") == "reit":
             continue
         e22, e9, r9 = sv(c, "EBITDA_U", "FY2022"), sv(c, "EBITDA_U", "9M2026"), sv(c, top, "9M2026")
         if None not in (e22, r22, e9, r9):
             E[0] += e22; E[1] += r22; E[2] += e9; E[3] += r9
+        e25, r25f, e26, r26e = sv(c, "EBITDA_U", "FY2025"), sv(c, top, "FY2025"), flow26(c, "EBITDA_U", top, t), flow26(c, top, top, t)
+        if None not in (e22, r22, e9, r9, e25, r25f, e26, r26e):
+            nEA += 1
+            for i, x in enumerate((e22, r22, e25, r25f, e9, r9, e26, r26e)):
+                EA[i] += x
         nd22, nd9, ec22, ec9 = sv(c, "NET_DEBT", "FY2022"), sv(c, "NET_DEBT", "9M2026"), sv(c, "EBITDA_C", "FY2022"), sv(c, "EBITDA_C", "9M2026")
         if None not in (nd22, nd9, ec22, ec9):
             N[0] += nd22; N[1] += ec22; N[2] += nd9; N[3] += ec9 * 12 / 9
 v4["six"] = {"rev_up": rv[0], "rev_n": rv[1], "ni_up": pr[0], "ni_n": pr[1],
              "margin22": E[0] / E[1], "margin9m26": E[2] / E[3], "lev22": N[0] / N[1], "lev9m26": N[2] / N[3]}
+PT.sort(key=lambda x: (x["group"], -x["fy22"]))
+v4["profit_table"] = PT
+v4["six"]["ni_up_flat"] = sum(1 for x in PT if x["higher_flat"])
+v4["six"]["ni_close"] = [x["name"] for x in PT if x["close"]]
+v4["margin_all"] = {"n": nEA, "FY2022": EA[0] / EA[1], "FY2025": EA[2] / EA[3], "9M2026": EA[4] / EA[5], "2026E": EA[6] / EA[7]}
+# what the Oct-Dec correction changes (sensitivity shown on the method slide)
+def tot26(mem, fix):
+    return sum((flow26(ds[g]["companies"][t], ds[g]["config"]["top_line"], ds[g]["config"]["top_line"], t, fix) or 0) for g, t in mem)
+v4["q4fix"] = {t: {"note": Q4FIX[t][1]} for t in Q4FIX}
+for g0, t0 in (("Platform", "6017"), ("FnB", "6016")):
+    c0 = ds[g0]["companies"][t0]
+    v4["q4fix"][t0].update({"rev26_fixed": flow26(c0, "REV", "REV", t0, True), "rev26_unfixed": flow26(c0, "REV", "REV", t0, False),
+                            "fy22": sv(c0, "REV", "FY2022"), "fy25": sv(c0, "REV", "FY2025"), "q4_25": sv(c0, "REV", "FY2025") - sv(c0, "REV", "9M2025")})
 # group margins and leverage, first full year -> Jan-Sep 2026 / 30 Sep 2026 (from the workbook's group ratios)
 gm = {}
 for g in GROUPS:
@@ -320,6 +395,43 @@ for g in GROUPS:
         return next(((p, num(ra.get(k, {}).get(p, {}).get("v"))) for p in ("9M2026", "FY2025") if num(ra.get(k, {}).get(p, {}).get("v")) is not None), (None, None))
     gm[g] = {"m_from": first(mk), "m_to": last(mk), "l_from": first(lk), "l_to": last(lk), "kind": "FFO/LTV" if reit else "EBITDA/ND"}
 v4["group_ratios"] = gm
+mt = {}
+for g in GROUPS:
+    S = ds[g]; top = S["config"]["top_line"]; reit = S["config"].get("template") == "reit"
+    ra = S["sector"]["ratios_all"]["FFO_M" if reit else "EBITDA_M_U"]
+    base = next((p for p in ("FY2022", "FY2023", "FY2024") if num(ra.get(p, {}).get("v")) is not None), None)
+    e = r = 0.0
+    if not reit:
+        for t in S["tickers"]:
+            cc = S["companies"][t]
+            x, y = flow26(cc, "EBITDA_U", top, t), flow26(cc, top, top, t)
+            if x is not None and y:
+                e += x; r += y
+    row = {"base": base, "m_base": num(ra[base]["v"]), "FY2025": num(ra.get("FY2025", {}).get("v")), "9M2026": num(ra.get("9M2026", {}).get("v")),
+           "2026E": (e / r) if r else None, "reit": reit}
+    for k in ("FY2025", "9M2026", "2026E"):
+        row["lower_" + k] = (row[k] < row["m_base"]) if row[k] is not None else None
+    mt[g] = row
+v4["margin_table"] = mt
+FIX_ON[0] = False
+for g0 in ("Platform", "FnB", "ALL"):
+    mem0 = [(g0, t) for t in ds[g0]["tickers"]] if g0 != "ALL" else [(gg, t) for gg in GROUPS for t in ds[gg]["tickers"]]
+    v4["groups"][g0]["cagr_unfixed"] = chain(mem0)["cagr"]
+FIX_ON[0] = True
+# excluded from the profit comparison, with the reason
+inpt = {x["ticker"] for x in v4["profit_table"]}
+excl = []
+for g0 in GROUPS:
+    for t0 in ds[g0]["tickers"]:
+        if t0 in inpt:
+            continue
+        c0 = ds[g0]["companies"][t0]
+        why = "short FY2022" if (t0, "FY2022") in SHORT else ("no FY2022 figures" if sv(c0, "NI_ATTR", "FY2022") is None else "no Jan-Sep 2026 profit")
+        excl.append({"name": c0["name"].split(" (")[0], "why": why})
+v4["profit_excluded"] = excl
+sup26 = sum((flow26(ds["Supporting"]["companies"][t], ds["Supporting"]["config"]["top_line"], ds["Supporting"]["config"]["top_line"], t) or 0) for t in ds["Supporting"]["tickers"])
+v4["q4fix_other"] = {"supporting_rev26e": sup26}
+v4["six"]["margin_lower_by"] = {k: sum(1 for g in GROUPS if (mt[g]["lower_" + k] if mt[g]["lower_" + k] is not None else (mt[g]["lower_FY2025"] if mt[g]["reit"] else False))) for k in ("FY2025", "9M2026", "2026E")}
 v4["six"]["margin_lower_groups"] = sum(1 for g in GROUPS if gm[g]["m_to"][1] is not None and gm[g]["m_from"][1] is not None and gm[g]["m_to"][1] < gm[g]["m_from"][1])
 data["v4"] = v4
 json.dump(data, open(out, "w"), indent=1, default=lambda o: None)

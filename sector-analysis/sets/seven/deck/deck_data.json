@@ -73,6 +73,11 @@
       "label": "9M",
       "basis": "No acquisitions, FX or accounting effects"
      },
+     "lfl9": {
+      "v": 0.04044670701072883,
+      "basis": "No deals or basis changes",
+      "same": true
+     },
      "margin": {
       "FY2025": 0.47181167514913464,
       "9M2025": 0.4642365795366321,
@@ -119,6 +124,10 @@
       "v": null,
       "basis": "Not measurable"
      },
+     "lfl9": {
+      "v": null,
+      "basis": ""
+     },
      "margin": {
       "FY2025": "n.m.",
       "9M2025": "n.m.",
@@ -164,6 +173,10 @@
      "adj": {
       "v": null,
       "basis": "Not measurable: acquisitions not disclosed"
+     },
+     "lfl9": {
+      "v": null,
+      "basis": "n.d.: acquisition or disposal not quantified"
      },
      "margin": {
       "FY2025": 0.1521647356095156,
@@ -212,6 +225,11 @@
       "label": "9M",
       "basis": "No acquisitions, FX or accounting effects"
      },
+     "lfl9": {
+      "v": 0.1719747190081733,
+      "basis": "No deals or basis changes",
+      "same": true
+     },
      "margin": {
       "FY2025": 0.4146300622742459,
       "9M2025": 0.4121827467157874,
@@ -258,6 +276,11 @@
       "v": "= reported",
       "label": "9M",
       "basis": "No acquisitions, FX or accounting effects"
+     },
+     "lfl9": {
+      "v": 0.10576491376551811,
+      "basis": "No deals or basis changes",
+      "same": true
      },
      "margin": {
       "FY2025": 0.5150099909738866,
@@ -311,6 +334,11 @@
      "adj": {
       "v": null,
       "basis": "Not measurable: currency, hyperinflation not disclosed"
+     },
+     "lfl9": {
+      "v": -0.22838864108683055,
+      "basis": "No deals or basis changes; currency and hyperinflation effects not disclosed, not removed",
+      "same": true
      },
      "margin": {
       "FY2025": 0.0643649832883993,
@@ -401,6 +429,10 @@
       "v": null,
       "basis": "Not measurable: currency, hyperinflation, acquisitions not disclosed"
      },
+     "lfl9": {
+      "v": null,
+      "basis": "n.d.: acquisition or disposal not quantified; currency and hyperinflation effects not disclosed, not removed"
+     },
      "margin": {
       "FY2025": 0.2373038850397384,
       "9M2025": 0.22441472264181134,
@@ -447,6 +479,11 @@
       "v": "= reported",
       "label": "9M",
       "basis": "No acquisitions, FX or accounting effects"
+     },
+     "lfl9": {
+      "v": -0.04131621508130201,
+      "basis": "No deals or basis changes",
+      "same": true
      },
      "margin": {
       "FY2025": 0.1497567621094264,
@@ -497,6 +534,10 @@
       "basis": "Excl. Five Guys (Makkah/Taif not split)",
       "amt": 46.928
      },
+     "lfl9": {
+      "v": null,
+      "basis": "n.d.: acquisition or disposal not quantified; currency effects not disclosed, not removed"
+     },
      "margin": {
       "FY2025": 0.19003966702987637,
       "9M2025": 0.1821859119718136,
@@ -546,6 +587,10 @@
       "basis": "Excl. SHOVEL caf\u00e9 chain",
       "amt": 55.672
      },
+     "lfl9": {
+      "v": 0.06065374277043767,
+      "basis": "SHOVEL removed"
+     },
      "margin": {
       "FY2025": 0.11355000720240249,
       "9M2025": 0.1067877629114548,
@@ -592,6 +637,11 @@
       "v": "= reported",
       "label": "9M",
       "basis": "No acquisitions, FX or accounting effects"
+     },
+     "lfl9": {
+      "v": -0.6743845686333594,
+      "basis": "No deals or basis changes",
+      "same": true
      },
      "margin": {
       "FY2025": -0.15175999085275513,
@@ -648,6 +698,10 @@
       "label": "FY25",
       "basis": "Excl. Snoonu (bought Oct 2025)",
       "amt": 227.576
+     },
+     "lfl9": {
+      "v": null,
+      "basis": "n.d.: acquisition or disposal not quantified"
      },
      "margin": {
       "FY2025": 0.06479341159446585,
@@ -738,6 +792,10 @@
       "v": null,
       "basis": "Not measurable: acquisitions not disclosed"
      },
+     "lfl9": {
+      "v": null,
+      "basis": "n.d.: acquisition or disposal not quantified"
+     },
      "margin": {
       "FY2025": 0.557948636374204,
       "9M2025": 0.5655145703298055,
@@ -784,6 +842,11 @@
       "v": "= reported",
       "label": "9M",
       "basis": "No acquisitions, FX or accounting effects"
+     },
+     "lfl9": {
+      "v": 0.24411214690457106,
+      "basis": "No deals or basis changes",
+      "same": true
      },
      "margin": {
       "FY2025": 0.44429044150212804,
@@ -833,6 +896,10 @@
       "label": "9M",
       "basis": "Excl. land sales",
       "amt": -63.19809
+     },
+     "lfl9": {
+      "v": 0.026642956966694192,
+      "basis": "Land sales removed"
      },
      "margin": {
       "FY2025": 0.37381739023705396,
@@ -923,6 +990,10 @@
       "v": null,
       "basis": "Not measurable: accounting not disclosed"
      },
+     "lfl9": {
+      "v": null,
+      "basis": "n.d.: basis change not quantified"
+     },
      "margin": {
       "FY2025": 0.2531072871921307,
       "9M2025": 0.2773377008400256,
@@ -968,6 +1039,10 @@
      "adj": {
       "v": null,
       "basis": "Not measurable: accounting, acquisitions not disclosed"
+     },
+     "lfl9": {
+      "v": null,
+      "basis": "n.d.: basis change and acquisition or disposal not quantified"
      },
      "margin": {
       "FY2025": 0.2414340699160276,
@@ -1015,6 +1090,10 @@
       "v": null,
       "basis": "Not measurable: accounting, acquisitions not disclosed"
      },
+     "lfl9": {
+      "v": null,
+      "basis": "n.d.: basis change and acquisition or disposal not quantified"
+     },
      "margin": {
       "FY2025": 0.40707126507800134,
       "9M2025": null,
@@ -1060,6 +1139,10 @@
      "adj": {
       "v": null,
       "basis": "Not measurable: accounting not disclosed"
+     },
+     "lfl9": {
+      "v": null,
+      "basis": "n.d.: basis change not quantified"
      },
      "margin": {
       "FY2025": 0.1369704004762538,
@@ -1107,6 +1190,10 @@
       "v": null,
       "basis": "Not measurable"
      },
+     "lfl9": {
+      "v": null,
+      "basis": ""
+     },
      "margin": {
       "FY2025": 0.5283039706032906,
       "9M2025": null,
@@ -1152,6 +1239,10 @@
      "adj": {
       "v": null,
       "basis": "Not measurable: acquisitions not disclosed"
+     },
+     "lfl9": {
+      "v": null,
+      "basis": ""
      },
      "margin": {
       "FY2025": 0.4204331504369149,
@@ -1199,6 +1290,10 @@
       "v": null,
       "basis": "Not measurable"
      },
+     "lfl9": {
+      "v": null,
+      "basis": ""
+     },
      "margin": {
       "FY2025": 0.31395278041713676,
       "9M2025": null,
@@ -1244,6 +1339,10 @@
      "adj": {
       "v": null,
       "basis": "Not measurable: acquisitions not disclosed"
+     },
+     "lfl9": {
+      "v": null,
+      "basis": ""
      },
      "margin": {
       "FY2025": 0.4007623329230393,
@@ -1334,6 +1433,11 @@
       "v": null,
       "basis": "Not measurable: currency not disclosed"
      },
+     "lfl9": {
+      "v": -0.032730962510689965,
+      "basis": "No deals or basis changes; currency effects not disclosed, not removed",
+      "same": true
+     },
      "margin": {
       "FY2025": 0.07392470075879286,
       "9M2025": 0.06752025472737402,
@@ -1383,6 +1487,10 @@
       "basis": "Excl. disclosed acquisitions",
       "amt": 448.51
      },
+     "lfl9": {
+      "v": null,
+      "basis": "n.d.: acquisition or disposal not quantified; currency effects not disclosed, not removed"
+     },
      "margin": {
       "FY2025": 0.14734264334994246,
       "9M2025": 0.13758698993403987,
@@ -1396,7 +1504,7 @@
       155.47385
      ],
      "rev25": 6347.9586,
-     "line": "Growth increasingly bought (Zahrat Al Rawdah added SAR 420m in 2025); profit flat near SAR 270m"
+     "line": "Growth increasingly bought: 2025 acquisitions added SAR 448.5m of revenue (Zahrat Al Rawdah SAR 419.8m); profit flat near SAR 270m"
     },
     {
      "name": "Jarir Marketing",
@@ -1431,6 +1539,11 @@
       "label": "FY24",
       "basis": "Same revenue basis (agent sales net)",
       "amt": -211.658
+     },
+     "lfl9": {
+      "v": 0.09738744116653808,
+      "basis": "No deals or basis changes; currency effects not disclosed, not removed",
+      "same": true
      },
      "margin": {
       "FY2025": 0.11449903050139315,
@@ -1479,6 +1592,11 @@
       "label": "9M",
       "basis": "No acquisitions, FX or accounting effects"
      },
+     "lfl9": {
+      "v": 0.054497387977129774,
+      "basis": "No deals or basis changes",
+      "same": true
+     },
      "margin": {
       "FY2025": 0.1068246998602627,
       "9M2025": 0.09876656243084625,
@@ -1525,6 +1643,11 @@
       "v": "= reported",
       "label": "9M",
       "basis": "No acquisitions, FX or accounting effects"
+     },
+     "lfl9": {
+      "v": 0.07039401085153041,
+      "basis": "No deals or basis changes",
+      "same": true
      },
      "margin": {
       "FY2025": 0.16853206912314903,
@@ -1575,6 +1698,10 @@
       "basis": "Before the CSR deduction from revenue",
       "amt": -35.4
      },
+     "lfl9": {
+      "v": null,
+      "basis": "n.d.: basis change not quantified"
+     },
      "margin": {
       "FY2025": 0.13091041658300795,
       "9M2025": 0.1322744755377951,
@@ -1620,6 +1747,10 @@
      "adj": {
       "v": null,
       "basis": "Not measurable: currency, acquisitions not disclosed"
+     },
+     "lfl9": {
+      "v": null,
+      "basis": "n.d.: acquisition or disposal not quantified; currency effects not disclosed, not removed"
      },
      "margin": {
       "FY2025": 0.09690321661668976,
@@ -1668,6 +1799,11 @@
       "label": "9M",
       "basis": "No acquisitions, FX or accounting effects"
      },
+     "lfl9": {
+      "v": -0.11298361288575232,
+      "basis": "No deals or basis changes",
+      "same": true
+     },
      "margin": {
       "FY2025": 0.13028525456456314,
       "9M2025": 0.13862536926444236,
@@ -1714,6 +1850,11 @@
       "v": "= reported",
       "label": "9M",
       "basis": "No acquisitions, FX or accounting effects"
+     },
+     "lfl9": {
+      "v": 0.05908107439317134,
+      "basis": "No deals or basis changes",
+      "same": true
      },
      "margin": {
       "FY2025": 0.1814304379831181,
@@ -1762,6 +1903,11 @@
       "label": "9M",
       "basis": "No acquisitions, FX or accounting effects"
      },
+     "lfl9": {
+      "v": -0.034321150766847164,
+      "basis": "No deals or basis changes",
+      "same": true
+     },
      "margin": {
       "FY2025": 0.028589078679372465,
       "9M2025": 0.061641860522060866,
@@ -1807,6 +1953,11 @@
      "adj": {
       "v": null,
       "basis": "Not measurable: currency not disclosed"
+     },
+     "lfl9": {
+      "v": 0.2930546367834257,
+      "basis": "No deals or basis changes; currency effects not disclosed, not removed",
+      "same": true
      },
      "margin": {
       "FY2025": 0.013819394292143837,
@@ -1897,6 +2048,10 @@
       "v": null,
       "basis": "Not measurable: currency, acquisitions not disclosed"
      },
+     "lfl9": {
+      "v": null,
+      "basis": "n.d.: acquisition or disposal not quantified; currency effects not disclosed, not removed"
+     },
      "margin": {
       "FY2025": 0.2487599749030994,
       "9M2025": 0.2530196276019923,
@@ -1943,6 +2098,11 @@
       "v": null,
       "basis": "Not measurable: currency not disclosed"
      },
+     "lfl9": {
+      "v": 0.031033176409716257,
+      "basis": "No deals or basis changes; currency effects not disclosed, not removed",
+      "same": true
+     },
      "margin": {
       "FY2025": 0.08851088182674219,
       "9M2025": 0.09138378526966343,
@@ -1988,6 +2148,11 @@
      "adj": {
       "v": null,
       "basis": "Not measurable: currency not disclosed"
+     },
+     "lfl9": {
+      "v": -0.06559613140622622,
+      "basis": "No deals or basis changes; currency effects not disclosed, not removed",
+      "same": true
      },
      "margin": {
       "FY2025": 0.170623124624925,
@@ -2038,6 +2203,10 @@
       "basis": "Excl. AlRaie (from May 2026)",
       "amt": 9.6
      },
+     "lfl9": {
+      "v": 0.0033149200484016185,
+      "basis": "AlRaie removed; currency effects not disclosed, not removed"
+     },
      "margin": {
       "FY2025": 0.1922393075410407,
       "9M2025": 0.20037855431459803,
@@ -2083,6 +2252,11 @@
      "adj": {
       "v": null,
       "basis": "Not measurable: currency not disclosed"
+     },
+     "lfl9": {
+      "v": 0.033082581010458245,
+      "basis": "No deals or basis changes; currency effects not disclosed, not removed",
+      "same": true
      },
      "margin": {
       "FY2025": 0.12795762578445005,
@@ -2130,6 +2304,11 @@
       "v": null,
       "basis": "Not measurable: currency not disclosed"
      },
+     "lfl9": {
+      "v": 0.18424556624305954,
+      "basis": "No deals or basis changes; currency effects not disclosed, not removed",
+      "same": true
+     },
      "margin": {
       "FY2025": 0.11599655192543501,
       "9M2025": 0.12413962959451606,
@@ -2176,6 +2355,11 @@
       "v": "= reported",
       "label": "9M",
       "basis": "No acquisitions, FX or accounting effects"
+     },
+     "lfl9": {
+      "v": 0.2107562829694034,
+      "basis": "No deals or basis changes",
+      "same": true
      },
      "margin": {
       "FY2025": 0.1694956540717034,
@@ -2226,6 +2410,11 @@
       "basis": "Same revenue basis (reclassification)",
       "amt": 34.8
      },
+     "lfl9": {
+      "v": 0.2722063484785684,
+      "basis": "No deals or basis changes",
+      "same": true
+     },
      "margin": {
       "FY2025": 0.029957216470581968,
       "9M2025": 0.07119257976766993,
@@ -2275,6 +2464,10 @@
       "basis": "Excl. Al-Kenan (bought Dec 2025)",
       "amt": 2.36
      },
+     "lfl9": {
+      "v": null,
+      "basis": "n.d.: acquisition or disposal not quantified"
+     },
      "margin": {
       "FY2025": 0.35657006693004867,
       "9M2025": 0.3641762031015768,
@@ -2321,6 +2514,11 @@
       "v": "= reported",
       "label": "9M",
       "basis": "No acquisitions, FX or accounting effects"
+     },
+     "lfl9": {
+      "v": 0.171976570083197,
+      "basis": "No deals or basis changes",
+      "same": true
      },
      "margin": {
       "FY2025": 0.3059225558405504,
@@ -2369,6 +2567,11 @@
       "label": "9M",
       "basis": "No acquisitions, FX or accounting effects"
      },
+     "lfl9": {
+      "v": 0.0418387525287669,
+      "basis": "No deals or basis changes",
+      "same": true
+     },
      "margin": {
       "FY2025": 0.38986298112920836,
       "9M2025": 0.39342322573042576,
@@ -2416,6 +2619,11 @@
       "label": "9M",
       "basis": "No acquisitions, FX or accounting effects"
      },
+     "lfl9": {
+      "v": 0.12565710416744413,
+      "basis": "No deals or basis changes",
+      "same": true
+     },
      "margin": {
       "FY2025": 0.4060128778377056,
       "9M2025": 0.39898578153572206,
@@ -2461,6 +2669,11 @@
      "adj": {
       "v": null,
       "basis": "Not measurable: currency not disclosed"
+     },
+     "lfl9": {
+      "v": 0.11433174288966907,
+      "basis": "No deals or basis changes; currency effects not disclosed, not removed",
+      "same": true
      },
      "margin": {
       "FY2025": 0.34203186001804076,
@@ -3090,10 +3303,10 @@
       "und_share": 0.8688334828106847
      },
      "2026E": {
-      "rep": 0.11450143752887865,
+      "rep": 0.11259172383562066,
       "lfl": null,
       "flag": "n.d.",
-      "und_share": 0.8838905700002236
+      "und_share": 0.8854077284409243
      },
      "9M": {
       "rep": 0.11592113074393962,
@@ -3109,11 +3322,12 @@
      "FY2023": 100.21,
      "FY2024": 91.93,
      "FY2025": 102.3,
-     "2026E": 114.02
+     "2026E": 113.82
     },
-    "cagr": 0.03333600395987668,
+    "cagr": 0.03289306033804751,
     "cagr_lfl": null,
-    "lfl_flag": "n.d."
+    "lfl_flag": "n.d.",
+    "cagr_unfixed": 0.03333600395987668
    },
    "Platform": {
     "steps": {
@@ -3136,7 +3350,7 @@
       "und_share": 0.0
      },
      "2026E": {
-      "rep": 0.37527526248012255,
+      "rep": 0.26265333832320636,
       "lfl": null,
       "flag": "n.d.",
       "und_share": 1.0
@@ -3155,11 +3369,12 @@
      "FY2023": 111.37,
      "FY2024": 138.45,
      "FY2025": 145.0,
-     "2026E": 199.42
+     "2026E": 183.09
     },
-    "cagr": 0.1883425900010638,
+    "cagr": 0.16322917833175143,
     "cagr_lfl": null,
-    "lfl_flag": "n.d."
+    "lfl_flag": "n.d.",
+    "cagr_unfixed": 0.1883425900010638
    },
    "Malls": {
     "steps": {
@@ -3272,7 +3487,7 @@
       "rep": 0.05124263347392399,
       "lfl": 0.04870960565321503,
       "flag": "\u2021",
-      "und_share": 0.2801226689789275
+      "und_share": 0.28012266897892757
      },
      "9M": {
       "rep": 0.051137644680616656,
@@ -3361,10 +3576,10 @@
       "und_share": 0.4935683271646344
      },
      "2026E": {
-      "rep": 0.0571173856182825,
-      "lfl": 0.05556683620499592,
+      "rep": 0.0552787287220482,
+      "lfl": 0.05387528580807932,
       "flag": "\u2021",
-      "und_share": 0.38446118542093877
+      "und_share": 0.383528106642595
      },
      "9M": {
       "rep": 0.05696063834307363,
@@ -3380,11 +3595,12 @@
      "FY2023": 101.19,
      "FY2024": 104.88,
      "FY2025": 114.0,
-     "2026E": 120.51
+     "2026E": 120.3
     },
-    "cagr": 0.04773819615822239,
-    "cagr_lfl": 0.0464035899985582,
-    "lfl_flag": "\u2021"
+    "cagr": 0.04728231281413575,
+    "cagr_lfl": 0.045984121275310486,
+    "lfl_flag": "\u2021",
+    "cagr_unfixed": 0.04773819615822239
    }
   },
   "companies": {
@@ -3416,7 +3632,7 @@
     "cagr": 1.0836763807020766,
     "base": "FY2022",
     "end": "2026E",
-    "rev26e": 248.68984640060629
+    "rev26e": 248.6898464006063
    },
    "4072": {
     "cagr": -0.004384767544589607,
@@ -3443,22 +3659,22 @@
     "rev26e": 1118.5608859858794
    },
    "6016": {
-    "cagr": 0.16865865792334778,
+    "cagr": 0.15415724141933929,
     "base": "FY2022",
     "end": "2026E",
-    "rev26e": 467.14061444751854
+    "rev26e": 444.38237661889264
    },
    "6012": {
-    "cagr": -0.30496228338997966,
+    "cagr": -0.30496228338997955,
     "base": "FY2022",
     "end": "2026E",
-    "rev26e": 37.14629046539506
+    "rev26e": 37.14629046539507
    },
    "6017": {
-    "cagr": 0.1883425900010638,
+    "cagr": 0.16322917833175143,
     "base": "FY2022",
     "end": "2026E",
-    "rev26e": 3195.644060799207
+    "rev26e": 2933.951298
    },
    "4321": {
     "cagr": 0.011575950323287065,
@@ -3482,7 +3698,7 @@
     "cagr": 0.07005116651921472,
     "base": "FY2022",
     "end": "2026E",
-    "rev26e": 242.7009748652931
+    "rev26e": 242.70097486529306
    },
    "4336": {
     "cagr": 0.07251036585698456,
@@ -3536,13 +3752,13 @@
     "cagr": 0.09406186257364024,
     "base": "FY2022",
     "end": "2026E",
-    "rev26e": 7016.168878760926
+    "rev26e": 7016.168878760927
    },
    "4190": {
-    "cagr": 0.07348944047188777,
+    "cagr": 0.07348944047188755,
     "base": "FY2022",
     "end": "2026E",
-    "rev26e": 12471.976169136205
+    "rev26e": 12471.976169136204
    },
    "4003": {
     "cagr": 0.06818208916326296,
@@ -3572,7 +3788,7 @@
     "cagr": -0.044702056536823465,
     "base": "FY2022",
     "end": "2026E",
-    "rev26e": 946.5409522961302
+    "rev26e": 946.5409522961301
    },
    "4192": {
     "cagr": 0.021160173151593353,
@@ -3629,10 +3845,10 @@
     "rev26e": 3142.372990935643
    },
    "2282": {
-    "cagr": -0.055390667041836594,
+    "cagr": -0.055390667041836705,
     "base": "FY2022",
     "end": "2026E",
-    "rev26e": 226.34495439534342
+    "rev26e": 226.3449543953434
    },
    "2287": {
     "cagr": 0.16066957016132832,
@@ -3644,7 +3860,7 @@
     "cagr": 0.11078352339353947,
     "base": "FY2022",
     "end": "2026E",
-    "rev26e": 1390.9050370156945
+    "rev26e": 1390.9050370156942
    },
    "2284": {
     "cagr": 0.05826026174424448,
@@ -3672,7 +3888,7 @@
    }
   },
   "method": {
-   "2026E": "Jan-Sep 2026 actual + Oct-Dec 2025 grown at the company's Jan-Sep 2026 revenue growth (our estimate).",
+   "2026E": "Jan-Sep 2026 actual + Oct-Dec 2025 grown at the company's Jan-Sep 2026 revenue growth (our estimate); Jahez and Burgerizzr corrected for deals already in Oct-Dec 2025.",
    "lfl": "Reported growth less the acquisitions, disposals, hyperinflation and basis changes that the filings quantify; n.d. where companies with undisclosed deals hold over half of the revenue, flagged where they hold over a quarter."
   },
   "six": {
@@ -3684,7 +3900,504 @@
    "margin9m26": 0.15306299083275304,
    "lev22": 1.9461144466132188,
    "lev9m26": 1.8847840595333378,
+   "ni_up_flat": 17,
+   "ni_close": [
+    "Leejam Sports",
+    "Baan",
+    "Nahdi Medical",
+    "United Electronics",
+    "Savola Group",
+    "Arabian Mills",
+    "Modern Mills"
+   ],
+   "margin_lower_by": {
+    "FY2025": 4,
+    "9M2026": 4,
+    "2026E": 6
+   },
    "margin_lower_groups": 4
+  },
+  "profit_table": [
+   {
+    "ticker": "1830",
+    "group": "Entertainment",
+    "name": "Leejam Sports",
+    "fy22": 254.7583,
+    "m26": 185.422196,
+    "q4e": 81.97169785651099,
+    "e26": 267.393893856511,
+    "e26_flat": 264.20729600000004,
+    "higher": true,
+    "higher_flat": true,
+    "close": true
+   },
+   {
+    "ticker": "6018",
+    "group": "Entertainment",
+    "name": "Sport Clubs",
+    "fy22": 22.682826,
+    "m26": 40.8867,
+    "q4e": 17.083406689094538,
+    "e26": 57.970106689094536,
+    "e26_flat": 55.4633,
+    "higher": true,
+    "higher_flat": true,
+    "close": false
+   },
+   {
+    "ticker": "4170",
+    "group": "Entertainment",
+    "name": "TECO",
+    "fy22": -7.2329,
+    "m26": -10.1372,
+    "q4e": -8.536758949127368,
+    "e26": -18.673958949127368,
+    "e26_flat": -18.2168,
+    "higher": false,
+    "higher_flat": false,
+    "close": false
+   },
+   {
+    "ticker": "6022",
+    "group": "Entertainment",
+    "name": "Armah Sports",
+    "fy22": -25.2425,
+    "m26": 39.4383,
+    "q4e": 19.130396467091728,
+    "e26": 58.568696467091726,
+    "e26_flat": 56.7389,
+    "higher": true,
+    "higher_flat": true,
+    "close": false
+   },
+   {
+    "ticker": "1820",
+    "group": "Entertainment",
+    "name": "Baan",
+    "fy22": -81.488,
+    "m26": 60.869,
+    "q4e": -145.48992070194325,
+    "e26": -84.62092070194325,
+    "e26_flat": -100.54299999999998,
+    "higher": false,
+    "higher_flat": false,
+    "close": true
+   },
+   {
+    "ticker": "6015",
+    "group": "FnB",
+    "name": "Americana Restaurants",
+    "fy22": 972.0975,
+    "m26": 814.3988,
+    "q4e": 354.4783500054233,
+    "e26": 1168.8771500054233,
+    "e26_flat": 1128.3975,
+    "higher": true,
+    "higher_flat": true,
+    "close": false
+   },
+   {
+    "ticker": "6014",
+    "group": "FnB",
+    "name": "Alamar Foods",
+    "fy22": 115.5559,
+    "m26": 38.776524,
+    "q4e": 20.68571179358282,
+    "e26": 59.46223579358282,
+    "e26_flat": 56.269037000000004,
+    "higher": false,
+    "higher_flat": false,
+    "close": false
+   },
+   {
+    "ticker": "6002",
+    "group": "FnB",
+    "name": "Herfy Food Services",
+    "fy22": 3.5461,
+    "m26": 2.0744,
+    "q4e": -11.174609933769325,
+    "e26": -9.100209933769325,
+    "e26_flat": -9.581799999999998,
+    "higher": false,
+    "higher_flat": false,
+    "close": false
+   },
+   {
+    "ticker": "6016",
+    "group": "FnB",
+    "name": "Burgerizzr",
+    "fy22": 2.696972,
+    "m26": 14.53005,
+    "q4e": 4.672296408815484,
+    "e26": 19.202346408815483,
+    "e26_flat": 18.93516,
+    "higher": true,
+    "higher_flat": true,
+    "close": false
+   },
+   {
+    "ticker": "6012",
+    "group": "FnB",
+    "name": "Raydan Food",
+    "fy22": -24.621384,
+    "m26": -39.679029,
+    "q4e": -11.81211460688445,
+    "e26": -51.49114360688445,
+    "e26_flat": -75.955303,
+    "higher": false,
+    "higher_flat": false,
+    "close": false
+   },
+   {
+    "ticker": "4150",
+    "group": "Malls",
+    "name": "ARDCO",
+    "fy22": 300.356265,
+    "m26": 146.531128,
+    "q4e": 36.690187203351655,
+    "e26": 183.22131520335165,
+    "e26_flat": 191.11389799999998,
+    "higher": false,
+    "higher_flat": false,
+    "close": false
+   },
+   {
+    "ticker": "4320",
+    "group": "Malls",
+    "name": "Alandalus Property",
+    "fy22": 66.7739,
+    "m26": 27.2287,
+    "q4e": -9.808580166195636,
+    "e26": 17.420119833804364,
+    "e26_flat": 19.344700000000003,
+    "higher": false,
+    "higher_flat": false,
+    "close": false
+   },
+   {
+    "ticker": "6017",
+    "group": "Platform",
+    "name": "Jahez International",
+    "fy22": 58.977,
+    "m26": -28.477986,
+    "q4e": -48.5731,
+    "e26": -77.051086,
+    "e26_flat": -77.051086,
+    "higher": false,
+    "higher_flat": false,
+    "close": false
+   },
+   {
+    "ticker": "4338",
+    "group": "REITs",
+    "name": "Alahli REIT 1",
+    "fy22": 66.117,
+    "m26": 48.221449,
+    "q4e": 0.5648196949563129,
+    "e26": 48.78626869495631,
+    "e26_flat": 48.679249,
+    "higher": false,
+    "higher_flat": false,
+    "close": false
+   },
+   {
+    "ticker": "4001",
+    "group": "Retailers",
+    "name": "Abdullah Al Othaim Markets",
+    "fy22": 1079.51,
+    "m26": -92.725842,
+    "q4e": 111.34717525058193,
+    "e26": 18.621333250581927,
+    "e26_flat": 22.38915800000001,
+    "higher": false,
+    "higher_flat": false,
+    "close": false
+   },
+   {
+    "ticker": "4190",
+    "group": "Retailers",
+    "name": "Jarir Marketing",
+    "fy22": 969.761,
+    "m26": 863.016,
+    "q4e": 339.9837979226876,
+    "e26": 1202.9997979226875,
+    "e26_flat": 1172.828,
+    "higher": true,
+    "higher_flat": true,
+    "close": false
+   },
+   {
+    "ticker": "4164",
+    "group": "Retailers",
+    "name": "Nahdi Medical",
+    "fy22": 887.8118,
+    "m26": 622.682,
+    "q4e": 188.3055340588196,
+    "e26": 810.9875340588196,
+    "e26_flat": 798.6037,
+    "higher": false,
+    "higher_flat": false,
+    "close": true
+   },
+   {
+    "ticker": "4003",
+    "group": "Retailers",
+    "name": "United Electronics",
+    "fy22": 440.174,
+    "m26": 302.025,
+    "q4e": 170.41837736837192,
+    "e26": 472.4433773683719,
+    "e26_flat": 463.63599999999997,
+    "higher": true,
+    "higher_flat": true,
+    "close": true
+   },
+   {
+    "ticker": "4163",
+    "group": "Retailers",
+    "name": "Aldawaa Medical Services",
+    "fy22": 305.4486,
+    "m26": 100.1776,
+    "q4e": 58.06358042292992,
+    "e26": 158.24118042292992,
+    "e26_flat": 161.12629999999996,
+    "higher": false,
+    "higher_flat": false,
+    "close": false
+   },
+   {
+    "ticker": "4192",
+    "group": "Retailers",
+    "name": "Alsaif Stores",
+    "fy22": 129.7657,
+    "m26": 42.1911,
+    "q4e": 8.980266154102011,
+    "e26": 51.17136615410201,
+    "e26_flat": 50.670399999999994,
+    "higher": false,
+    "higher_flat": false,
+    "close": false
+   },
+   {
+    "ticker": "4161",
+    "group": "Retailers",
+    "name": "BinDawood Holding",
+    "fy22": 118.6548,
+    "m26": 155.47385,
+    "q4e": 120.37538630997548,
+    "e26": 275.8492363099755,
+    "e26_flat": 264.38485,
+    "higher": true,
+    "higher_flat": true,
+    "close": false
+   },
+   {
+    "ticker": "4011",
+    "group": "Retailers",
+    "name": "Lazurde",
+    "fy22": 34.1619,
+    "m26": 0.1966,
+    "q4e": -32.81268376847989,
+    "e26": -32.616083768479896,
+    "e26_flat": -25.1795,
+    "higher": false,
+    "higher_flat": false,
+    "close": false
+   },
+   {
+    "ticker": "4193",
+    "group": "Retailers",
+    "name": "Nice One Beauty",
+    "fy22": 16.731623,
+    "m26": -9.4964,
+    "q4e": -24.892013993028208,
+    "e26": -34.38841399302821,
+    "e26_flat": -35.2731,
+    "higher": false,
+    "higher_flat": false,
+    "close": false
+   },
+   {
+    "ticker": "4008",
+    "group": "Retailers",
+    "name": "SACO",
+    "fy22": -142.501,
+    "m26": -15.4928,
+    "q4e": -3.484555175139606,
+    "e26": -18.977355175139607,
+    "e26_flat": -19.4212,
+    "higher": true,
+    "higher_flat": true,
+    "close": false
+   },
+   {
+    "ticker": "2280",
+    "group": "Supporting",
+    "name": "Almarai",
+    "fy22": 1759.812,
+    "m26": 1985.668,
+    "q4e": 509.78331072872857,
+    "e26": 2495.4513107287285,
+    "e26_flat": 2450.4619999999995,
+    "higher": true,
+    "higher_flat": true,
+    "close": false
+   },
+   {
+    "ticker": "2050",
+    "group": "Supporting",
+    "name": "Savola Group",
+    "fy22": 742.752,
+    "m26": 529.553,
+    "q4e": 200.06373961689417,
+    "e26": 729.6167396168942,
+    "e26_flat": 723.595,
+    "higher": false,
+    "higher_flat": false,
+    "close": true
+   },
+   {
+    "ticker": "2285",
+    "group": "Supporting",
+    "name": "Arabian Mills",
+    "fy22": 255.269366,
+    "m26": 208.5294,
+    "q4e": 59.32625755624758,
+    "e26": 267.8556575562476,
+    "e26_flat": 265.4732,
+    "higher": true,
+    "higher_flat": true,
+    "close": true
+   },
+   {
+    "ticker": "2284",
+    "group": "Supporting",
+    "name": "Modern Mills",
+    "fy22": 233.009125,
+    "m26": 181.623616,
+    "q4e": 61.337093161330756,
+    "e26": 242.96070916133075,
+    "e26_flat": 233.960066,
+    "higher": true,
+    "higher_flat": true,
+    "close": true
+   },
+   {
+    "ticker": "2283",
+    "group": "Supporting",
+    "name": "First Milling",
+    "fy22": 217.4807,
+    "m26": 230.831487,
+    "q4e": 90.65293878110114,
+    "e26": 321.48442578110115,
+    "e26_flat": 305.546965,
+    "higher": true,
+    "higher_flat": true,
+    "close": false
+   },
+   {
+    "ticker": "2281",
+    "group": "Supporting",
+    "name": "Tanmiah Food",
+    "fy22": 186.8099,
+    "m26": 23.188799,
+    "q4e": -26.566417636643802,
+    "e26": -3.3776186366438026,
+    "e26_flat": 0.7555990000000001,
+    "higher": false,
+    "higher_flat": false,
+    "close": false
+   },
+   {
+    "ticker": "2286",
+    "group": "Supporting",
+    "name": "Fourth Milling",
+    "fy22": 163.041428,
+    "m26": 159.7618,
+    "q4e": 69.70901775261899,
+    "e26": 229.47081775261898,
+    "e26_flat": 221.6892,
+    "higher": true,
+    "higher_flat": true,
+    "close": false
+   },
+   {
+    "ticker": "4165",
+    "group": "Supporting",
+    "name": "Almajed Oud",
+    "fy22": 125.346716,
+    "m26": 182.2048,
+    "q4e": 47.10023980893769,
+    "e26": 229.3050398089377,
+    "e26_flat": 224.47250000000003,
+    "higher": true,
+    "higher_flat": true,
+    "close": false
+   },
+   {
+    "ticker": "6010",
+    "group": "Supporting",
+    "name": "NADEC",
+    "fy22": 95.4917,
+    "m26": 188.6636,
+    "q4e": 64.43549977779386,
+    "e26": 253.09909977779387,
+    "e26_flat": 252.6582,
+    "higher": true,
+    "higher_flat": true,
+    "close": false
+   },
+   {
+    "ticker": "2282",
+    "group": "Supporting",
+    "name": "Naqi Water",
+    "fy22": 48.7071,
+    "m26": 17.9865,
+    "q4e": -17.658275008967262,
+    "e26": 0.3282249910327373,
+    "e26_flat": 3.402000000000001,
+    "higher": false,
+    "higher_flat": false,
+    "close": false
+   },
+   {
+    "ticker": "6001",
+    "group": "Supporting",
+    "name": "Halwani Bros",
+    "fy22": 2.9174,
+    "m26": 33.6671,
+    "q4e": 16.168672167136577,
+    "e26": 49.835772167136575,
+    "e26_flat": 49.318,
+    "higher": true,
+    "higher_flat": true,
+    "close": false
+   }
+  ],
+  "margin_all": {
+   "n": 34,
+   "FY2022": 0.154356572289298,
+   "FY2025": 0.15770238161851255,
+   "9M2026": 0.15306299083275304,
+   "2026E": 0.15438351404625722
+  },
+  "q4fix": {
+   "6017": {
+    "note": "Snoonu (from 6 Oct 2025) is already in Oct-Dec 2025 and its 2026 revenue is not disclosed: Oct-Dec 2026 held at the 2025 level",
+    "rev26_fixed": 2933.951298,
+    "rev26_unfixed": 3195.644060799207,
+    "fy22": 1602.4768,
+    "fy25": 2323.6396,
+    "q4_25": 697.3354999999999
+   },
+   "6016": {
+    "note": "SHOVEL (from 27 Oct 2025) is already in Oct-Dec 2025: Oct-Dec 2026 grown at the Jan-Sep rate without SHOVEL",
+    "rev26_fixed": 444.38237661889264,
+    "rev26_unfixed": 467.14061444751854,
+    "fy22": 250.436084,
+    "fy25": 366.481879,
+    "q4_25": 106.34268099999997
+   }
   },
   "group_ratios": {
    "Entertainment": {
@@ -3839,6 +4552,149 @@
     ],
     "kind": "EBITDA/ND"
    }
+  },
+  "margin_table": {
+   "Entertainment": {
+    "base": "FY2022",
+    "m_base": 0.4116033999086126,
+    "FY2025": 0.389890996277185,
+    "9M2026": 0.3976922402318169,
+    "2026E": 0.387336590805377,
+    "reit": false,
+    "lower_FY2025": true,
+    "lower_9M2026": true,
+    "lower_2026E": true
+   },
+   "Media": {
+    "base": "FY2024",
+    "m_base": 0.056483301174609604,
+    "FY2025": 0.0643649832883993,
+    "9M2026": 0.0749899303660354,
+    "2026E": 0.03791125854768159,
+    "reit": false,
+    "lower_FY2025": false,
+    "lower_9M2026": false,
+    "lower_2026E": true
+   },
+   "FnB": {
+    "base": "FY2022",
+    "m_base": 0.21576918400986284,
+    "FY2025": 0.2180693270016618,
+    "9M2026": 0.23437776282454495,
+    "2026E": 0.2387097961672849,
+    "reit": false,
+    "lower_FY2025": false,
+    "lower_9M2026": false,
+    "lower_2026E": false
+   },
+   "Platform": {
+    "base": "FY2022",
+    "m_base": 0.05463444525374721,
+    "FY2025": 0.06479341159446585,
+    "9M2026": 0.042784062906811325,
+    "2026E": 0.035716168182966204,
+    "reit": false,
+    "lower_FY2025": false,
+    "lower_9M2026": true,
+    "lower_2026E": true
+   },
+   "Malls": {
+    "base": "FY2023",
+    "m_base": 0.5634938788541707,
+    "FY2025": 0.5243758337038371,
+    "9M2026": 0.5812808435860761,
+    "2026E": 0.5633638595596087,
+    "reit": false,
+    "lower_FY2025": true,
+    "lower_9M2026": false,
+    "lower_2026E": true
+   },
+   "REITs": {
+    "base": "FY2022",
+    "m_base": 0.4716239494022491,
+    "FY2025": 0.36432910517653655,
+    "9M2026": null,
+    "2026E": null,
+    "reit": true,
+    "lower_FY2025": true,
+    "lower_9M2026": null,
+    "lower_2026E": null
+   },
+   "Retailers": {
+    "base": "FY2022",
+    "m_base": 0.12135015187118152,
+    "FY2025": 0.11390385886304479,
+    "9M2026": 0.10338086684211095,
+    "2026E": 0.10730047599696747,
+    "reit": false,
+    "lower_FY2025": true,
+    "lower_9M2026": true,
+    "lower_2026E": true
+   },
+   "Supporting": {
+    "base": "FY2022",
+    "m_base": 0.1597590491593225,
+    "FY2025": 0.17376054596071167,
+    "9M2026": 0.1733214539856606,
+    "2026E": 0.17023357186429477,
+    "reit": false,
+    "lower_FY2025": false,
+    "lower_9M2026": false,
+    "lower_2026E": false
+   }
+  },
+  "profit_excluded": [
+   {
+    "name": "MBC Group",
+    "why": "no FY2022 figures"
+   },
+   {
+    "name": "Cenomi Centers",
+    "why": "short FY2022"
+   },
+   {
+    "name": "Mulkia REIT",
+    "why": "no Jan-Sep 2026 profit"
+   },
+   {
+    "name": "Alinma Retail REIT",
+    "why": "no Jan-Sep 2026 profit"
+   },
+   {
+    "name": "Musharaka REIT",
+    "why": "no Jan-Sep 2026 profit"
+   },
+   {
+    "name": "Bonyan REIT",
+    "why": "no Jan-Sep 2026 profit"
+   },
+   {
+    "name": "SEDCO Capital REIT",
+    "why": "no Jan-Sep 2026 profit"
+   },
+   {
+    "name": "Derayah REIT",
+    "why": "no Jan-Sep 2026 profit"
+   },
+   {
+    "name": "MEFIC REIT",
+    "why": "no Jan-Sep 2026 profit"
+   },
+   {
+    "name": "Cenomi Retail",
+    "why": "short FY2022"
+   },
+   {
+    "name": "SADAFCO",
+    "why": "short FY2022"
+   },
+   {
+    "name": "Entaj",
+    "why": "no FY2022 figures"
+   }
+  ],
+  "q4fix_other": {
+   "supporting_rev26e": 69096.39371672717
   }
  }
 }
