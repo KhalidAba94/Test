@@ -1,4 +1,4 @@
-// SEVEN priority companies: executive deck (v2), in the house style of the "KSA Budget FY2027 Overview" deck:
+// SEVEN priority companies: executive deck (v4, after the 28 Nov 2026 review), in the house style of the "KSA Budget FY2027 Overview" deck:
 // navy cover and section dividers with gold numbers, Georgia italic action titles, Calibri body, light-grey cards,
 // navy-header tables, a running footer and a source line on every content slide.
 // Storyline follows the user's revised deck (27 Nov 2026); evidence tables are rebuilt natively in the appendix.
@@ -28,6 +28,29 @@ pres.layout = "LAYOUT_WIDE";
 pres.theme = { headFontFace: THEME.headFontFace, bodyFontFace: THEME.bodyFontFace };
 pres.title = "SEVEN priority companies: performance 2022 to 2026";
 pres.author = "Sector analysis";
+
+// "9M" is written out: every text, table cell, chart label and note passes through T()
+function T(x) {
+  if (typeof x !== "string") return x;
+  return x.replace(/9M 2026 vs 9M 2025/g, "Jan–Sep 2026 vs Jan–Sep 2025").replace(/9M-26 vs 9M-25/g, "Jan–Sep 2026 vs 2025")
+          .replace(/9M ?(20\d\d)/g, "Jan–Sep $1").replace(/\b9M\b/g, "Jan–Sep");
+}
+function TT(v) {
+  if (typeof v === "string") return T(v);
+  if (Array.isArray(v)) return v.map(TT);
+  if (v && typeof v === "object" && "text" in v) return Object.assign({}, v, { text: TT(v.text) });
+  return v;
+}
+const _addSlide = pres.addSlide.bind(pres);
+pres.addSlide = (o) => {
+  const sl = _addSlide(o);
+  const at = sl.addText.bind(sl), ab = sl.addTable.bind(sl), ac = sl.addChart.bind(sl), an = sl.addNotes.bind(sl);
+  sl.addText = (t, opt) => at(TT(t), opt);
+  sl.addTable = (rows, opt) => ab(rows.map((r) => r.map(TT)), opt);
+  sl.addChart = (type, data, opt) => ac(type, Array.isArray(data) ? data.map((d) => Object.assign({}, d, { name: T(d.name), labels: (d.labels || []).map(T) })) : data, opt);
+  sl.addNotes = (t) => an(T(t));
+  return sl;
+};
 
 // ------------------------------------------------------------------ layouts
 pres.defineSlideMaster({
@@ -64,6 +87,8 @@ const tone = (v) => (typeof v !== "number" ? "n" : v > 0.02 ? "p" : v < -0.02 ? 
 const TONE = { p: [K.steel, K.posF], m: [K.goldD, K.negF], n: [K.ink, K.white] };
 const OV = Object.fromEntries(D.overview.map((o) => [o.group, o]));
 const C = D.counts;
+const V = D.v4, VG = D.v4.groups, SIX = D.v4.six;
+const yr = (p) => (p === "2026E" ? "2026E" : p.replace("FY20", "FY"));
 
 function content(title, section) {
   const s = pres.addSlide({ masterName: "CONTENT", sectionTitle: section });
@@ -169,165 +194,149 @@ pres.addSection({ title: "Summary" });
   const s = pres.addSlide({ masterName: "COVER", sectionTitle: "Summary" });
   s.addText("SEVEN PRIORITY COMPANIES  ·  2022 TO 2026", { x: 0.6, y: 1.0, w: 8, h: 0.3, fontSize: 11, bold: true, color: K.gold, charSpacing: 1, margin: 0, isTextBox: true });
   s.addText("Revenue has grown since 2022; profit is not following everywhere", { placeholder: "title" });
-  s.addText("How 47 Saudi-listed competitors, partners, tenants and comparators performed from FY2022 to 9M 2026, and what it means for SEVEN", { placeholder: "body" });
-  s.addText("November 2026  |  Company filings to 9M 2026 and fund fact sheets  |  Figures as of 27 November 2026", { x: 0.6, y: 4.95, w: 8.5, h: 0.3, fontSize: 10, color: K.pale, margin: 0, isTextBox: true });
+  s.addText("How 47 Tadawul-listed companies in consumer, leisure, food, retail and retail-property businesses performed from 2022 to 2026", { placeholder: "body" });
+  s.addText("November 2026  |  Company filings to September 2026 and fund fact sheets  |  Figures as of 27 November 2026", { x: 0.6, y: 4.95, w: 8.5, h: 0.3, fontSize: 10, color: K.pale, margin: 0, isTextBox: true });
   s.addText("Entertainment and leisure · media · F&B · delivery · malls · retail REITs · retailers · supporting consumer goods", { x: 0.6, y: 6.55, w: 9, h: 0.3, fontSize: 10, color: K.foot, margin: 0, isTextBox: true });
   s.addNotes("Built from the reviewed workbook SEVEN_Priority_Companies.xlsx (27 November 2026). Every company figure in this deck is in that workbook with its filing and page.");
 }
 
 // ================================================================== 2. executive summary (one page: exercise | sectors | outcomes)
 {
-  const s = content("Executive summary: we benchmarked 47 listed companies in eight groups; revenue keeps growing, but profit is not following everywhere", "Summary");
-  const y0 = 1.42, h0 = 4.78;
+  const s = content("Executive summary: we benchmarked 47 Tadawul-listed companies in eight groups; revenue keeps growing, but profit is not following everywhere", "Summary");
+  const y0 = 1.42, h0 = 5.2;
   const P = [[0.45, 3.55], [4.15, 4.2], [8.5, 4.35]];
   P.forEach(([x, w]) => box(s, x, y0, w, h0));
-  // panel 1: the exercise
   iconHead(s, P[0][0] + 0.2, y0 + 0.18, ICON.exercise, "The exercise", P[0][1] - 0.4);
-  const ex = [["Why. ", "Benchmark the listed companies that are SEVEN's competitors, potential partners and tenants, or comparators."],
-              ["What. ", "47 Saudi-listed companies in eight groups. Revenue growth (reported and adjusted), attributable profit, EBITDA margin excluding one-offs, and net debt (REITs: FFO and loan to value)."],
-              ["When. ", "FY2022 to FY2025, each year against the year before; 9M 2026 against 9M 2025."],
-              ["How. ", "Audited and reviewed filings from the Saudi Exchange archive (REIT 9M from fact sheets). Every figure is traced to its filing page in a reviewed workbook."]];
+  const ex = [["Why. ", "Benchmark how 47 Tadawul-listed companies in consumer, leisure, food, retail and retail-property businesses have performed since 2022."],
+              ["What. ", "Revenue growth (reported and like-for-like), attributable profit, EBITDA margin excluding one-offs, and net debt (REITs: FFO and loan to value)."],
+              ["When. ", "Each full year from FY2022 to FY2025 against the year before; January–September 2026 against January–September 2025; and 2026E, our estimate for the full year 2026."],
+              ["How. ", "Audited and reviewed filings from the Saudi Exchange archive (REIT January–September figures from fact sheets). Every reported figure is traced to its filing page in a reviewed workbook."]];
   s.addText(ex.flatMap(([h, t], i) => [{ text: h, options: { bold: true, color: K.navy } }, { text: t, options: { breakLine: i < ex.length - 1 } }]),
     { x: P[0][0] + 0.22, y: y0 + 0.82, w: P[0][1] - 0.44, h: h0 - 0.95, fontSize: 12, color: K.ink, valign: "top", margin: 0, paraSpaceAfter: 10, isTextBox: true });
-  // panel 2: benchmarked groups with example companies
   iconHead(s, P[1][0] + 0.2, y0 + 0.18, ICON.groups, "What we benchmarked", P[1][1] - 0.4);
   const EX = { Entertainment: "Leejam Sports, Sport Clubs, Armah, Baan", Media: "MBC Group", FnB: "Americana, Herfy, Alamar, Burgerizzr",
                Platform: "Jahez", Malls: "Cenomi Centers, Alandalus, ARDCO", REITs: "Bonyan, SEDCO Capital, Alahli REIT 1",
                Retailers: "Jarir, Othaim, Nahdi, eXtra, BinDawood", Supporting: "Savola, Almarai, NADEC, SADAFCO, four flour mills" };
-  s.addText(D.overview.flatMap((o, i) => [{ text: `${o.label} `, options: { bold: true, color: K.navy } }, { text: `(${o.n}; SAR ${(o.rev25 / 1000).toFixed(1)}bn): `, options: { color: K.muted } },
+  s.addText(D.overview.flatMap((o, i) => [{ text: `${o.label} `, options: { bold: true, color: K.navy } }, { text: `(${o.n} ${o.n > 1 ? "companies" : "company"}): `, options: { color: K.muted } },
                                           { text: EX[o.group], options: { color: K.ink, breakLine: i < D.overview.length - 1 } }]),
     { x: P[1][0] + 0.22, y: y0 + 0.82, w: P[1][1] - 0.44, h: h0 - 0.95, fontSize: 12, valign: "top", margin: 0, paraSpaceAfter: 9, isTextBox: true });
-  // panel 3: key outcomes
   iconHead(s, P[2][0] + 0.2, y0 + 0.18, ICON.outcomes, "Key outcomes", P[2][1] - 0.4);
-  const OUT = [["Growth since 2022. ", "Revenue grew in all six groups with a full 2022 base; fastest: delivery +13.2% and leisure +11.4% a year."],
-               ["Still growing in 2026. ", `9M revenue rose at ${C.rev_up} of ${C.rev_n} companies; only Media fell (MBC −22.8%).`],
-               ["Profit is not following. ", `Profit rose at only ${C.ni_up} of ${C.ni_n}, and only 16 of 38 grew both revenue and profit; retailers −19.6%, malls −18.5%, while leisure and F&B gained.`],
-               ["Margins slip ", "in five of seven groups in 9M 2026."],
-               ["Some growth is bought. ", "Jahez FY2025 +4.7% is −5.5% without Snoonu; BinDawood +11.8% is +3.9% without acquisitions."],
-               ["Debt is high in places. ", `Malls ${mult(OV.Malls.lev25)} net debt/EBITDA; retailers ${mult(OV.Retailers.lev22)} to ${mult(OV.Retailers.lev25)}; REIT loan to value ${pctP(OV.REITs.lev25, 0)}.`]];
+  const lowM = SIX.margin_lower_groups;
+  const OUT = [["Growth since 2022. ", `Revenue grew ${pct(VG.ALL.cagr)} a year from FY2022 to 2026E; seven of eight groups grew, fastest delivery (${pct(VG.Platform.cagr)}, with Snoonu) and leisure (${pct(VG.Entertainment.cagr)}). Media is slightly below its FY2024 level.`],
+               ["Still growing in 2026. ", `Revenue rose at ${C.rev_up} of ${C.rev_n} companies in Jan–Sep 2026 against Jan–Sep 2025; only media fell (MBC −22.8%).`],
+               ["Profit is not following. ", `Attributable profit rose at only ${C.ni_up} of ${C.ni_n} companies (Jan–Sep 2026 vs 2025); ${SIX.ni_up} of ${SIX.ni_n} are above FY2022 on the 2026 estimate.`],
+               ["Margins slip. ", `EBITDA margin fell in five of the seven groups with 2026 figures (Jan–Sep 2026 vs 2025); since 2022 it is lower in ${lowM === 4 ? "four" : lowM} of eight.`],
+               ["Some growth is bought. ", "FY2025 vs FY2024: Jahez +4.7% is −5.5% without Snoonu; BinDawood +11.8% is +3.9% without acquisitions."],
+               ["Debt is rising in places. ", `Net debt/EBITDA is about ${mult(SIX.lev9m26)} overall, as in FY2022, but retailers rose from ${mult(V.group_ratios.Retailers.l_from[1])} to ${mult(V.group_ratios.Retailers.l_to[1])} (Sep 2026) and malls stand at ${mult(V.group_ratios.Malls.l_to[1])}; REIT loan to value ${pctP(OV.REITs.lev22, 0)} to ${pctP(OV.REITs.lev25, 0)}.`]];
   s.addText(OUT.flatMap(([h, t], i) => [{ text: `${i + 1}  `, options: { bold: true, color: K.gold } }, { text: h, options: { bold: true, color: K.navy } },
                                         { text: t, options: { color: K.ink, breakLine: i < OUT.length - 1 } }]),
-    { x: P[2][0] + 0.22, y: y0 + 0.82, w: P[2][1] - 0.44, h: h0 - 0.95, fontSize: 12, valign: "top", margin: 0, paraSpaceAfter: 8, isTextBox: true });
-  navyBar(s, 6.3, "So what for SEVEN (our judgment): favour partners and tenants that turn growth into profit with modest debt; stress-test the leveraged ones.", 0.42);
-  s.addText("Growth on a matched sample; 9M counts cover companies with both 9M periods. Source: SEVEN priority companies workbook (reviewed 27 Nov 2026).", { x: 0.45, y: 6.78, w: 12.4, h: 0.2, fontSize: 8.5, color: K.muted, margin: 0, isTextBox: true });
+    { x: P[2][0] + 0.22, y: y0 + 0.82, w: P[2][1] - 0.44, h: h0 - 0.95, fontSize: 11.5, valign: "top", margin: 0, paraSpaceAfter: 7, isTextBox: true });
+  s.addText("2026E = Jan–Sep 2026 actual + Oct–Dec 2025 grown at each company's Jan–Sep 2026 revenue growth (our estimate). Growth on matched samples. Source: SEVEN priority companies workbook (reviewed 27 Nov 2026).", { x: 0.45, y: 6.72, w: 12.4, h: 0.26, fontSize: 8.5, color: K.muted, margin: 0, isTextBox: true });
 }
 
-// ================================================================== 3. six numbers
+// ================================================================== 3. six numbers, 2022 to 2026
 {
-  const s = content("Key outcomes in six numbers", "Summary");
-  const rev = D.overview.reduce((a, o) => a + o.rev25, 0) / 1000;
-  const W = 4.0, H = 2.25, X = [0.45, 4.65, 8.85], Y = [1.35, 3.8];
-  kpi(s, X[0], Y[0], W, H, `SAR ${Math.round(rev)}bn`, "Combined revenue, FY2025", "47 companies in eight groups; a sum, not consolidated. Herfy and Alahli REIT 1 (about SAR 1.3bn) also sit inside Savola and Alandalus.");
-  kpi(s, X[1], Y[0], W, H, `${C.rev_up} of ${C.rev_n}`, "Grew revenue in 9M 2026", "vs 9M 2025; six of seven groups with a comparable 9M grew. Fastest: delivery +37.5% (with Snoonu), F&B +11.6%.");
-  kpi(s, X[2], Y[0], W, H, `${C.ni_up} of ${C.ni_n}`, "Grew attributable profit", "in 9M 2026. MBC and Jahez moved from profit to loss; retailers' profit fell 19.6% on 5.1% more revenue.", K.gold);
-  kpi(s, X[0], Y[1], W, H, "5 of 7", "Groups lost EBITDA margin", `in 9M 2026 (excluding one-offs). Margins rose at ${C.m_up} of ${C.m_n} companies.`, K.gold);
-  kpi(s, X[1], Y[1], W, H, mult(OV.Retailers.lev25), "Retailers' net debt / EBITDA", `FY2025, up from ${mult(OV.Retailers.lev22)} in FY2022. Malls ${mult(OV.Malls.lev25)}; supporting goods down to ${mult(OV.Supporting.lev25)}.`);
-  kpi(s, X[2], Y[1], W, H, pctP(OV.REITs.lev25, 0), "Retail REIT loan to value", `FY2025, up from ${pctP(OV.REITs.lev22, 0)} in FY2022, as funds bought property with debt.`);
-  source(s, "Source: SEVEN priority companies workbook (27 Nov 2026). Group totals are sums of companies; growth on a matched sample. Net debt = borrowings + leases − cash − short-term bank deposits.");
+  const s = content("Key outcomes in six numbers: 2022 to 2026", "Summary");
+  const W = 4.0, H = 2.3, X = [0.45, 4.65, 8.85], Y = [1.35, 3.8];
+  const sh = Object.values(VG.ALL.steps).filter((x) => x.und_share != null).map((x) => x.und_share);
+  kpi(s, X[0], Y[0], W, H, pct(VG.ALL.cagr), "Revenue growth a year, FY2022 to 2026E", `All 47 companies, matched sample. Fastest: delivery ${pct(VG.Platform.cagr)} (with Snoonu) and leisure ${pct(VG.Entertainment.cagr)}; slowest: malls ${pct(VG.Malls.cagr)} (from FY2023) and media ${pct(VG.Media.cagr)} (from FY2024).`);
+  kpi(s, X[1], Y[0], W, H, pct(VG.ALL.cagr_lfl) + "‡", "Like-for-like growth a year, FY2022 to 2026E", `After removing the acquisitions, disposals and basis changes the filings quantify. ‡ Deals whose revenue is not disclosed (at companies with ${Math.round(Math.min(...sh) * 100)}% to ${Math.round(Math.max(...sh) * 100)}% of revenue each year) and currency effects remain in.`);
+  kpi(s, X[2], Y[0], W, H, `${SIX.rev_up} of ${SIX.rev_n}`, "Companies with higher revenue", "2026E against FY2022. Left out: REITs without Jan–Sep 2026 figures, and companies with a short or missing FY2022.");
+  kpi(s, X[0], Y[1], W, H, `${SIX.ni_up} of ${SIX.ni_n}`, "Companies with higher attributable profit", `2026E against FY2022. Jan–Sep 2026 against Jan–Sep 2025: ${C.ni_up} of ${C.ni_n}.`, K.gold);
+  kpi(s, X[1], Y[1], W, H, `${SIX.margin_lower_groups} of 8`, "Groups with a lower margin than in 2022", `EBITDA margin excluding one-offs, FY2022 against Jan–Sep 2026 (malls from FY2023, media from FY2024; REITs: FFO margin to FY2025). All operating companies: ${pctP(SIX.margin22)} to ${pctP(SIX.margin9m26)}.`, K.gold);
+  kpi(s, X[2], Y[1], W, H, mult(SIX.lev9m26), "Net debt / EBITDA, September 2026", `All operating companies; ${mult(SIX.lev22)} in FY2022. Retailers ${mult(V.group_ratios.Retailers.l_from[1])} to ${mult(V.group_ratios.Retailers.l_to[1])}; malls ${mult(V.group_ratios.Malls.l_to[1])}. REIT loan to value ${pctP(OV.REITs.lev22, 0)} to ${pctP(OV.REITs.lev25, 0)} (FY2025).`);
+  source(s, "2026E = Jan–Sep 2026 actual + Oct–Dec 2025 grown at each company's Jan–Sep 2026 revenue growth (our estimate; profit and EBITDA scaled the same way). Net debt at 30 Sep 2026 over Jan–Sep EBITDA annualised. Source: SEVEN priority companies workbook.");
 }
 
-// ================================================================== 4. the 47 companies
+// ================================================================== 4. the 47 companies, with revenue CAGR
 {
-  const s = content("The 47 companies benchmarked: eight groups, from SAR 1.2bn of revenue (REITs) to SAR 65bn (supporting goods)", "Summary");
-  s.addText("Companies in eight groups that are SEVEN's competitors, potential partners and tenants, or comparators; FY2025 revenue in SAR bn", { x: 0.45, y: 1.22, w: 12.4, h: 0.28, fontSize: 11.5, italic: true, color: K.muted, margin: 0, isTextBox: true });
-  const fmt = (v) => (v < 100 ? "<0.1" : (v / 1000).toFixed(1));
-  const rows = [[TH("Group", "left"), TH("Companies"), TH("Revenue FY2025 (SAR bn)"), TH("Companies, by FY2025 revenue (SAR bn)", "left")]];
+  const ordered = D.overview.slice().sort((a, b) => VG[b.group].cagr - VG[a.group].cagr);
+  const lo = ordered[ordered.length - 1], hi = ordered[0];
+  const s = content(`The 47 companies benchmarked: revenue growth from 2022 to 2026E ranges from ${pct(VG[lo.group].cagr)} a year (${lo.label.toLowerCase()}) to ${pct(VG[hi.group].cagr)} (${hi.label.toLowerCase().replace(" platform", "")})`, "Summary");
+  s.addText("Tadawul-listed companies in eight groups; revenue CAGR (compound annual growth) from FY2022 to 2026E unless marked; companies in order of FY2025 revenue", { x: 0.45, y: 1.26, w: 12.4, h: 0.26, fontSize: 11, italic: true, color: K.muted, margin: 0, isTextBox: true });
+  const span = (b, e) => (b === "FY2022" && e === "2026E" ? "" : `${yr(b)} to ${yr(e)}`);
+  const rows = [[TH("Group", "left"), TH("Companies"), TH("Revenue CAGR"), TH("Companies, revenue CAGR (in order of FY2025 revenue)", "left")]];
   for (const o of D.overview) {
+    const gv = VG[o.group];
     const list = D.groups[o.group].rows.slice().sort((a, b) => (b.rev25 || 0) - (a.rev25 || 0));
-    rows.push([TD(o.label, { bold: true, color: K.navy }), TD(String(o.n), { align: "center", bold: true }), TD((o.rev25 / 1000).toFixed(1), { align: "center", bold: true, color: K.steel }),
-      TD(list.flatMap((r, i) => [{ text: SHORT_NAME(r.name), options: { color: K.ink } }, { text: ` ${fmt(r.rev25)}` + (i < list.length - 1 ? "  ·  " : ""), options: { color: K.muted } }]), { fontSize: 10.5 })]);
+    rows.push([TD(o.label, { bold: true, color: K.navy }), TD(String(o.n), { align: "center", bold: true }),
+      TD([{ text: pct(gv.cagr), options: { bold: true, color: TONE[tone(gv.cagr)][0], breakLine: !!span(gv.base, gv.end) } }].concat(span(gv.base, gv.end) ? [{ text: span(gv.base, gv.end), options: { fontSize: 8, color: K.muted } }] : []), { align: "center", fill: { color: TONE[tone(gv.cagr)][1] } }),
+      TD(list.flatMap((r, i) => { const cv = V.companies[r.ticker]; const sp = cv ? span(cv.base, cv.end) : "";
+        return [{ text: SHORT_NAME(r.name) + " ", options: { color: K.ink } }, { text: cv && cv.cagr != null ? pct(cv.cagr) : "–", options: { color: cv && cv.cagr != null ? TONE[tone(cv.cagr)][0] : K.muted, bold: true } },
+                { text: (sp ? ` (${sp})` : "") + (i < list.length - 1 ? "  ·  " : ""), options: { color: K.muted, fontSize: 9 } }]; }), { fontSize: 10 })]);
   }
-  rows.push([TD("Total", { bold: true, fill: { color: K.total } }), TD("47", { align: "center", bold: true, fill: { color: K.total } }),
-    TD((D.overview.reduce((a, o) => a + o.rev25, 0) / 1000).toFixed(0), { align: "center", bold: true, fill: { color: K.total } }),
-    TD("A sum, not consolidated: Herfy and Alahli REIT 1 (about SAR 1.3bn) are also inside Savola and Alandalus.", { fill: { color: K.total }, color: K.muted, fontSize: 10 })]);
-  s.addTable(zebra(rows), { x: 0.45, y: 1.6, w: 12.4, colW: [2.35, 1.0, 1.25, 7.8], rowH: [0.45].concat(Array(9).fill(0.5)), border: { type: "solid", pt: 0.5, color: K.line }, fontFace: "Calibri", objectName: "company list" });
-  source(s, "Short company names. Source: SEVEN priority companies workbook (27 Nov 2026); company filings from the Saudi Exchange archive. Full legal names are in the workbook's company sheets.");
-}
-
-// ================================================================== 5. backdrop
-{
-  const s = content("The backdrop: GDP contracts in 2026, but consumer spending still grows, and is moving online", "Summary");
-  const cats = [["Clothing & footwear", 21], ["Food & beverages", 15], ["Hotels", 9], ["Restaurants & cafés", 9], ["Jewellery", 5], ["Electronics", 2], ["Culture & recreation", -3], ["Furniture", -13]];
-  chartTitle(s, 0.45, 1.35, 5.6, "Card (POS) spending by category, Sep 2026, % y/y (approx.)");
-  s.addChart(pres.charts.BAR, [{ name: "POS spending, % y/y", labels: cats.map((c) => c[0]), values: cats.map((c) => c[1]) }],
-    barOpts({ x: 0.45, y: 1.7, w: 5.6, h: 4.6, chartColors: [K.steel], invertedColors: [K.gold], showLegend: false, dataLabelFormatCode: '+0;−0', valAxisLabelFormatCode: "0",
-              valAxisMinVal: -15, valAxisMaxVal: 25, valAxisHidden: true, valGridLine: { style: "none" }, objectName: "POS by category chart" }));
-  const k = [["−2.1%", "Real GDP, 2026 (MoF est.)", "+10.9% budgeted for 2027, oil-led", K.gold],
-             ["+1.9%", "Real non-oil GDP, Q3 2026", "y/y; non-oil is a record 57.7% of GDP", K.navy],
-             ["SAR 138bn", "Consumer spending, Sep 2026", "+7% y/y; e-commerce +28%, POS +4%", K.navy],
-             ["+2.7%", "Real private consumption, H1", "y/y; MoF projects +4.2% in 2027", K.navy],
-             ["+34%", "Delivery orders", "to Q3 2026, y/y (Jadwa)", K.navy],
-             ["4.5%", "SAMA repo rate", "raised in Sep 2026; dearer debt", K.gold]];
-  k.forEach(([b, l, sub, col], i) => {
-    const x = 6.35 + (i % 2) * 3.27, y = 1.35 + Math.floor(i / 2) * 1.32, w = 3.12, h = 1.2;
-    box(s, x, y, w, h);
-    s.addText(b, { x: x + 0.2, y: y + 0.1, w: w - 0.4, h: 0.45, fontSize: 21, bold: true, color: col, margin: 0, isTextBox: true });
-    s.addText(l, { x: x + 0.2, y: y + 0.55, w: w - 0.4, h: 0.27, fontSize: 11, bold: true, color: K.ink, margin: 0, isTextBox: true });
-    s.addText(sub, { x: x + 0.2, y: y + 0.82, w: w - 0.4, h: 0.3, fontSize: 9.5, color: K.muted, margin: 0, isTextBox: true });
-  });
-  s.addText([{ text: "Read-across (our reading): ", options: { bold: true, color: K.navy } },
-             { text: "dining and apparel spending grows while recreation and furniture fall; market delivery orders rose 34% while Jahez's Saudi delivery revenue fell 10% in 9M (different measures); higher rates weigh most on the leveraged names in section 03.", options: { color: K.ink } }],
-    { x: 6.35, y: 5.35, w: 6.5, h: 1.05, fontSize: 11, valign: "top", margin: 0, isTextBox: true });
-  source(s, "Source: KSA Budget FY2027 Overview (Nov 2026), pp. 2, 13, 17, 18, 21, 22, citing MoF Budget Statement FY2027, SAMA, GASTAT and Jadwa Investment (Saudi Chartbook, Nov 2026). POS category growth is approximate (±1 pp), read from Jadwa's chart. Jahez: company filings.");
+  rows.push([TD("All 47 companies", { bold: true, fill: { color: K.total } }), TD("47", { align: "center", bold: true, fill: { color: K.total } }),
+    TD(pct(VG.ALL.cagr), { align: "center", bold: true, color: K.steel, fill: { color: K.total } }),
+    TD("Matched sample: each year compares only the companies with figures in both years; group totals are sums, not consolidated.", { fill: { color: K.total }, color: K.muted, fontSize: 10 })]);
+  s.addTable(zebra(rows), { x: 0.45, y: 1.6, w: 12.4, colW: [2.2, 0.95, 1.15, 8.1], rowH: [0.45].concat(Array(9).fill(0.5)), border: { type: "solid", pt: 0.5, color: K.line }, fontFace: "Calibri", objectName: "company list" });
+  source(s, "2026E = Jan–Sep 2026 actual + Oct–Dec 2025 grown at the Jan–Sep 2026 rate (our estimate). Other start years where FY2022 is a short year or missing; REITs without Jan–Sep 2026 figures end at FY2025. Source: SEVEN priority companies workbook.");
 }
 
 // ================================================================== section 01
-divider("01", "Growth since 2022", "How did revenue move from 2022 to 2025? It grew in all six groups with a full 2022 base, at very different speeds.", "01 Growth since 2022");
+divider("01", "Growth since 2022", "How did revenue move from 2022 to 2026? It grew in seven of eight groups, at very different speeds.", "01 Growth since 2022");
+const LFLtxt = (x) => (x == null ? "" : x.flag === "n.d." ? "LFL n.d." : x.flag === "n.a." || x.lfl == null ? "" : `LFL ${pct(x.lfl)}${x.flag}`);
 {
-  const s = content("Revenue grew from 2022 to 2025 in all six groups with a full base, at very different speeds", "01 Growth since 2022");
-  const SER = [["Delivery (Jahez)", "Platform", K.navy], ["Entertainment and leisure", "Entertainment", K.steel], ["Retailers", "Retailers", K.gold],
-               ["Retail REITs", "REITs", "6F8FB8"], ["Supporting goods", "Supporting", K.steelL], ["F&B operators", "FnB", "8C5A1E"]];
-  const idx = SER.map(([n, g]) => { const r = D.groups[g].total || D.groups[g].rows[0]; let v = 100; const out = [100]; for (let i = 0; i < 3; i++) { v *= 1 + r.cells[i].v; out.push(+v.toFixed(1)); } return out; });
-  chartTitle(s, 0.45, 1.35, 7.7, "Revenue index, FY2022 = 100 (yearly matched growth, chained)");
-  s.addChart(pres.charts.LINE, SER.map(([n], i) => ({ name: n, labels: ["FY2022", "FY2023", "FY2024", "FY2025"], values: idx[i] })), {
-    x: 0.45, y: 1.7, w: 7.7, h: 4.75, chartColors: SER.map((x) => x[2]), lineSize: 2.25, lineDataSymbol: "circle", lineDataSymbolSize: 6,
+  const s = content("Revenue grew from 2022 to 2026E in seven of eight groups, at very different speeds", "01 Growth since 2022");
+  const CATS = ["FY2022", "FY2023", "FY2024", "FY2025", "2026E"];
+  const SER = [["All 47 companies", "ALL", K.navy], ["Delivery (Jahez)", "Platform", K.steel], ["Entertainment and leisure", "Entertainment", "6F8FB8"],
+               ["Retailers", "Retailers", K.gold], ["Supporting goods", "Supporting", K.steelL], ["F&B operators", "FnB", "8C5A1E"]];
+  chartTitle(s, 0.45, 1.35, 7.5, "Revenue index, FY2022 = 100 (matched growth each year, chained; 2026E estimated)");
+  s.addChart(pres.charts.LINE, SER.map(([n, g]) => ({ name: n, labels: CATS.map((c) => (c === "2026E" ? "2026E" : c)), values: CATS.map((c) => VG[g].idx[c]) })), {
+    x: 0.45, y: 1.7, w: 7.5, h: 4.8, chartColors: SER.map((x) => x[2]), lineSize: 2.25, lineDataSymbol: "circle", lineDataSymbolSize: 6,
     catAxisLabelFontSize: 10.5, catAxisLabelFontFace: "+mn-lt", catAxisLabelColor: K.ink, valAxisLabelFontSize: 9.5, valAxisLabelFontFace: "+mn-lt", valAxisLabelColor: K.muted,
-    valAxisMinVal: 80, valAxisMaxVal: 150, valAxisMajorUnit: 10, valGridLine: { color: "E5E7EB", size: 0.5 }, catGridLine: { style: "none" },
+    valAxisMinVal: 80, valAxisMaxVal: 210, valAxisMajorUnit: 20, valGridLine: { color: "E5E7EB", size: 0.5 }, catGridLine: { style: "none" },
     showLegend: true, legendPos: "b", legendFontSize: 10, legendFontFace: "+mn-lt", legendColor: K.ink, objectName: "revenue index chart" });
-  // right panel: end points and CAGR
-  const rows = [[TH("Group", "left"), TH("FY2025 index"), TH("CAGR 2022–25")]];
-  SER.forEach(([n, g, col], i) => rows.push([
-    { text: [{ text: "■ ", options: { color: col, fontSize: 12 } }, { text: n, options: { color: K.ink } }], options: { fontSize: 10.5, valign: "middle", margin: CM } },
-    TD(idx[i][3].toFixed(1), { align: "center", bold: true }), gCell(OV[g].cagr, null, null)]));
-  s.addTable(zebra(rows), { x: 8.45, y: 1.4, w: 4.4, colW: [2.2, 1.05, 1.15], rowH: 0.36, border: { type: "solid", pt: 0.5, color: K.line }, fontFace: "Calibri", objectName: "index end points" });
-  card(s, 8.45, 4.15, 4.4, 2.3, "What the filings show", [
-    "Delivery +45%, helped by Snoonu in FY2025.",
-    "Leisure +38%, led by gyms; yearly growth slows from +16.8% to +6.6%.",
-    "Retailers +6% to +8% every year.",
-    "REITs mostly in FY2025 (+10.0%), bought with debt.",
-    "F&B fell 8.3% in FY2024, then recovered.",
-  ], { fs: 11 });
-  source(s, "Constructed index, not a fixed cohort: each year's matched-sample group growth, chained from 100; end points agree with the 2022–25 CAGRs within rounding. Malls (FY2022 nine-month year at Cenomi Centers) and Media (short year) have no clean 2022 base. Source: SEVEN priority companies workbook.");
+  const order = ["ALL", "Platform", "Entertainment", "Retailers", "REITs", "Supporting", "FnB", "Malls", "Media"];
+  const lab = Object.fromEntries(D.overview.map((o) => [o.group, o.label])); lab.ALL = "All 47 companies";
+  const rows = [[TH("Group", "left"), TH("Revenue CAGR"), TH("Like-for-like"), TH("Period")]];
+  for (const g of order) {
+    const x = VG[g];
+    rows.push([TD(lab[g], { bold: g === "ALL", color: g === "ALL" ? K.navy : K.ink, fontSize: 10 }), gCell(x.cagr, null, null, { fs: 10 }),
+      x.cagr_lfl == null ? TD("n.d.", { align: "center", color: K.muted, fontSize: 10 }) : TD(pct(x.cagr_lfl) + x.lfl_flag, { align: "center", bold: true, fontSize: 10, color: K.steel }),
+      TD(`${yr(x.base)}–${yr(x.end)}`, { align: "center", color: K.muted, fontSize: 9.5 })]);
+  }
+  s.addTable(zebra(rows), { x: 8.2, y: 1.4, w: 4.65, colW: [1.9, 0.95, 0.95, 0.85], rowH: [0.42].concat(Array(9).fill(0.33)), border: { type: "solid", pt: 0.5, color: K.line }, fontFace: "Calibri", objectName: "CAGR table" });
+  card(s, 8.2, 4.95, 4.65, 1.55, "How 2026E is estimated", ["Jan–Sep 2026 actual + Oct–Dec 2025 grown at the company's Jan–Sep 2026 rate. Our estimate, not a company forecast."], { fs: 10.5 });
+  source(s, "Like-for-like (LFL): growth after removing acquisitions, disposals and basis changes the filings quantify; n.d. where companies with undisclosed deals hold over half of the revenue in a year; ‡ over a quarter. REITs (no 2026E), malls and media are in the table only. Source: SEVEN priority companies workbook.");
 }
 {
-  const s = content("Growth by group: yearly revenue growth 2022 to 2025, and the matched 9M 2026", "01 Growth since 2022");
-  const READ = { Entertainment: "Growth slowing each year; gyms keep adding", Media: "FY2025 jump, then 9M 2026 falls back", FnB: "Flat 2022 to 2025; 2025 and 2026 recovery",
-                 Platform: "Strongest since 2022; 2026 helped by Snoonu", Malls: "Flat: +3.3% then +0.3%; FY2022 n.a.", REITs: "Revenue accelerating, bought with debt",
-                 Retailers: "Steady growth, slowing in 2026", Supporting: "FY2023 dip, then recovery" };
-  const rows = [[TH("Group", "left"), TH("FY2023 vs FY2022"), TH("FY2024 vs FY2023"), TH("FY2025 vs FY2024"), TH("CAGR 2022–25"), TH("9M 2026 vs 9M 2025"), TH("Read across 2022 to 2026", "left")]];
-  for (const o of D.overview) {
-    const r = D.groups[o.group].total || D.groups[o.group].rows[0];
-    rows.push([TD([{ text: o.label, options: { bold: true, color: K.navy } }, { text: `  (${o.n})`, options: { color: K.muted } }]),
-      gCell(r.cells[0].v), gCell(r.cells[1].v), gCell(r.cells[2].v), gCell(o.cagr), gCell(r.cells[3].v), TD(READ[o.group])]);
+  const s = content("Growth by group: each year since 2022, January–September 2026, and the trend to 2026E, reported and like-for-like", "01 Growth since 2022");
+  const READ = { Entertainment: "Growth slowing each year; gyms keep adding", Media: "FY2025 jump, then 2026 falls back", FnB: "Flat to 2024; recovery in 2025 and 2026",
+                 Platform: "Fastest since 2022; Snoonu from Oct 2025", Malls: "Flat since 2023", REITs: "Accelerating to 2025, bought with debt",
+                 Retailers: "Steady, +5% to +8% a year", Supporting: "2023 dip, then recovery", ALL: "About +5% a year since 2022" };
+  const sub = (x) => ({ text: LFLtxt(x) || " ", options: { fontSize: 8.5, color: K.muted } });
+  const cellL = (v, x) => { const c = gCell(v); c.text = [c.text[0], sub(x)]; c.text[0] = { text: c.text[0].text, options: Object.assign({}, c.text[0].options, { breakLine: true }) }; return c; };
+  const rows = [[TH("Group", "left"), TH("FY2023 vs FY2022"), TH("FY2024 vs FY2023"), TH("FY2025 vs FY2024"), TH("Jan–Sep 2026 vs Jan–Sep 2025"), TH("CAGR to 2026E"), TH("Read across 2022 to 2026", "left")]];
+  for (const o of D.overview.concat([{ group: "ALL", label: "All 47 companies", n: 47 }])) {
+    const r = o.group === "ALL" ? null : (D.groups[o.group].total || D.groups[o.group].rows[0]);
+    const st = VG[o.group].steps, x = VG[o.group];
+    const rep = (i, key) => (r ? r.cells[i].v : st[key].rep);
+    const cg = gCell(x.cagr); cg.text = [{ text: cg.text[0].text, options: Object.assign({}, cg.text[0].options, { breakLine: true }) },
+      { text: (x.cagr_lfl == null ? "LFL n.d." : `LFL ${pct(x.cagr_lfl)}${x.lfl_flag}`) + (x.base === "FY2022" && x.end === "2026E" ? "" : ` · ${yr(x.base)}–${yr(x.end)}`), options: { fontSize: 8, color: K.muted } }];
+    const tot = o.group === "ALL";
+    const row = [TD([{ text: o.label, options: { bold: true, color: K.navy } }, { text: `  (${o.n})`, options: { color: K.muted } }], tot ? { fill: { color: K.total } } : {}),
+      cellL(rep(0, "FY2023"), st.FY2023), cellL(rep(1, "FY2024"), st.FY2024), cellL(rep(2, "FY2025"), st.FY2025), cellL(rep(3, "9M"), st["9M"]), cg, TD(READ[o.group], tot ? { fill: { color: K.total }, bold: true } : {})];
+    rows.push(row);
   }
-  s.addTable(zebra(rows), { x: 0.45, y: 1.45, w: 12.4, colW: [2.75, 1.25, 1.25, 1.25, 1.15, 1.35, 3.4], rowH: [0.55].concat(Array(8).fill(0.5)), border: { type: "solid", pt: 0.5, color: K.line }, fontFace: "Calibri", objectName: "growth by group table" });
-  legend(s, 6.15, false);
-  source(s, "Growth vs the year before; 9M 2026 vs 9M 2025 only. Totals are sums of companies on a matched sample. n.a.: under 75% of group revenue covered (malls FY2022, REIT 9M). n.m.: short year or base under SAR 10m (MBC FY2023). Source: SEVEN priority companies workbook.");
+  s.addTable(zebra(rows), { x: 0.45, y: 1.45, w: 12.4, colW: [2.55, 1.2, 1.2, 1.2, 1.45, 1.35, 3.45], rowH: [0.5].concat(Array(9).fill(0.455)), border: { type: "solid", pt: 0.5, color: K.line }, fontFace: "Calibri", objectName: "growth by group table" });
+  legend(s, 6.33, false);
+  source(s, "Reported growth vs the year before (matched sample); n.a.: under 75% of group revenue covered; n.m.: short year. LFL: after acquisitions, disposals and basis changes the filings quantify; n.d. where companies with undisclosed deals hold over half of the revenue, ‡ over a quarter; currency effects not removed; no company reports same-store sales.");
 }
 
 // ================================================================== section 02
-divider("02", "2026 so far", "Is growth continuing in 2026, and is it turning into profit? Revenue rose in six of seven groups; profit and margins split.", "02 2026 so far");
+divider("02", "2026 so far", "Is growth continuing in 2026, and is it turning into profit? January–September 2026 against the same months of 2025.", "02 2026 so far");
 {
-  const s = content("Matched 9M 2026: revenue rose in every group with a comparable profit figure; profit fell in three of five", "02 2026 so far");
+  const s = content("Jan–Sep 2026 vs 2025: revenue rose in every group shown, while attributable profit fell in three of five", "02 2026 so far");
+  s.addText([{ text: "Attributable profit: ", options: { bold: true, color: K.navy } }, { text: "net profit attributable to the company's shareholders, after minority interests, as reported (one-off items included).", options: { color: K.ink } }], { x: 0.45, y: 1.3, w: 12.4, h: 0.28, fontSize: 11.5, margin: 0, isTextBox: true });
   const ov = D.overview.filter((o) => typeof o.g9 === "number" && typeof o.ni9 === "number");
-  chartTitle(s, 0.45, 1.35, 7.9, "Revenue and attributable profit, 9M 2026 vs 9M 2025, %");
+  chartTitle(s, 0.45, 1.68, 7.9, "Revenue and attributable profit, 9M 2026 vs 9M 2025, %");
   s.addChart(pres.charts.BAR, [
     { name: "Revenue", labels: ov.map((o) => o.label), values: ov.map((o) => +(o.g9 * 100).toFixed(1)) },
     { name: "Attributable profit", labels: ov.map((o) => o.label), values: ov.map((o) => +(o.ni9 * 100).toFixed(1)) },
-  ], barOpts({ x: 0.45, y: 1.7, w: 7.9, h: 4.75, chartColors: [K.steel, K.gold], dataLabelFormatCode: '+0.0"%";−0.0"%"', valAxisLabelFormatCode: '0"%"', valAxisMinVal: -40, valAxisMaxVal: 100, objectName: "revenue vs profit chart" }));
-  card(s, 8.65, 1.4, 4.2, 1.6, "Growth is broad", [`9M revenue rose at ${C.rev_up} of ${C.rev_n} companies; fastest: delivery +37.5% (with Snoonu), F&B +11.6%; malls flat (+0.9%).`], { fs: 11.5 });
-  card(s, 8.65, 3.12, 4.2, 1.6, "Profit is not", [`Attributable profit rose at ${C.ni_up} of ${C.ni_n}. Retailers −19.6% and supporting goods −8.8% despite higher revenue.`], { fs: 11.5 });
-  card(s, 8.65, 4.84, 4.2, 1.6, "Two groups turned to losses", ["MBC (SAR 575m fair-value loss on ACSC and Anghami) and Jahez moved from profit to loss, so their profit growth is n.m."], { fs: 11.5 });
+  ], barOpts({ x: 0.45, y: 2.0, w: 7.9, h: 4.5, chartColors: [K.steel, K.gold], dataLabelFormatCode: '+0.0"%";−0.0"%"', valAxisLabelFormatCode: '0"%"', valAxisMinVal: -40, valAxisMaxVal: 100, objectName: "revenue vs profit chart" }));
+  card(s, 8.65, 1.72, 4.2, 1.5, "Growth is broad", [`9M revenue rose at ${C.rev_up} of ${C.rev_n} companies; fastest: delivery +37.5% (with Snoonu), F&B +11.6%; malls flat (+0.9%).`], { fs: 11.5 });
+  card(s, 8.65, 3.34, 4.2, 1.5, "Profit is not", [`Attributable profit rose at ${C.ni_up} of ${C.ni_n}. Retailers −19.6% and supporting goods −8.8% despite higher revenue.`], { fs: 11.5 });
+  card(s, 8.65, 4.96, 4.2, 1.54, "Two groups turned to losses", ["MBC (SAR 575m fair-value loss on ACSC and Anghami) and Jahez moved from profit to loss, so their profit growth is n.m."], { fs: 11.5 });
   source(s, "Group totals are sums of companies (not consolidated), matched sample. Media and Delivery are not plotted (profit turned to a loss); REIT 9M figures are n.a. (fact sheets cover too few funds). F&B profit growth is led by Americana (+60%). Source: SEVEN priority companies workbook.");
 }
 {
@@ -362,53 +371,8 @@ divider("02", "2026 so far", "Is growth continuing in 2026, and is it turning in
   source(s, "9M 2025 vs 9M 2026. Raydan (margin −16.4% to −53.7% as it winds down) is left out of the lists. Cenomi Centers' SAR 250m insurance claim (9M 2025) is excluded as a one-off; with it, malls' 9M margin would have fallen. Source: SEVEN priority companies workbook.");
 }
 
-// ================================================================== section 03
-divider("03", "Quality of growth and balance sheets", "How much growth is bought, one-off or price-driven, and which balance sheets are thin?", "03 Quality and balance sheets");
 {
-  const s = content("For several companies, headline growth is bought, one-off, price-driven or a change of basis", "03 Quality and balance sheets");
-  const SHORT = { "6017": "Jahez FY25: excl. Snoonu", "4161": "BinDawood FY25: excl. acquisitions", "6016": "Burgerizzr 9M: excl. SHOVEL", "6014": "Alamar 9M: excl. Five Guys",
-                  "4150": "ARDCO 9M: excl. land sales", "4190": "Jarir FY24: same basis", "2287": "Entaj FY24: same basis" };
-  const ORDER = ["6017", "4161", "6016", "6014", "4150", "4190", "2287"];
-  const P = ORDER.map((t) => D.pairs.find((p) => p.ticker === t));
-  chartTitle(s, 0.45, 1.35, 7.2, "Reported vs adjusted revenue growth, same period, %");
-  s.addChart(pres.charts.BAR, [
-    { name: "Reported", labels: P.map((p) => SHORT[p.ticker]), values: P.map((p) => +(p.reported * 100).toFixed(1)) },
-    { name: "Adjusted", labels: P.map((p) => SHORT[p.ticker]), values: P.map((p) => +(p.adjusted * 100).toFixed(1)) },
-  ], barOpts({ x: 0.45, y: 1.7, w: 7.2, h: 4.75, chartColors: [K.steelL, K.steel], dataLabelFormatCode: '+0.0;−0.0', valAxisLabelFormatCode: "0", valAxisMinVal: -30, valAxisMaxVal: 40, objectName: "reported vs adjusted chart" }));
-  const rowsT = [["Bought", "Snoonu (Jahez), acquisitions (BinDawood), SHOVEL (Burgerizzr), Five Guys (Alamar)."],
-                 ["One-off or price", "ARDCO's land sales swing the headline; Lazurde 9M +29.3% rides the gold price (volumes not disclosed)."],
-                 ["Basis change", "Jarir and Entaj changed revenue bases; on one basis Jarir FY2024 is +2.2%."],
-                 ["Cannot be separated", "None of the 47 reports same-store sales, so growth from new stores cannot be isolated."],
-                 ["Real conversion", "Sport Clubs 9M revenue +17.2%, profit +54% at a steady 42% margin; Americana revenue +12.9%, profit +60%."]];
-  box(s, 7.95, 1.4, 4.9, 5.05);
-  s.addText(rowsT.flatMap(([h, t], i) => [{ text: h + ". ", options: { bold: true, color: i === 4 ? K.steel : K.navy } }, { text: t, options: { color: K.ink, breakLine: i < rowsT.length - 1 } }]),
-    { x: 8.17, y: 1.62, w: 4.46, h: 4.7, fontSize: 13, valign: "top", margin: 0, paraSpaceAfter: 12, isTextBox: true });
-  source(s, "Adjustments are disclosed amounts (acquired revenue, land sales) or calculated from restated comparatives (Jarir net agent sales, Entaj reclassification). Alamar's adjusted figure still includes the Makkah and Taif branches it bought (not split). Source: SEVEN priority companies workbook, Adjustments sheet.");
-}
-{
-  const s = content("Leverage is high in malls, parts of retail and a handful of companies; supporting goods deleveraged", "03 Quality and balance sheets");
-  const top = D.leverage.top.map((x) => ({ ...x, name: x.name.replace("Abdullah Al Othaim Markets", "Othaim Markets").replace(" Property", "") }));
-  chartTitle(s, 0.45, 1.35, 6.4, "Highest net debt / EBITDA, FY2025, x");
-  s.addChart(pres.charts.BAR, [{ name: "Net debt / EBITDA", labels: top.map((x) => x.name), values: top.map((x) => +x.v.toFixed(1)) }],
-    barOpts({ x: 0.45, y: 1.7, w: 6.4, h: 4.75, chartColors: [K.steel], showLegend: false, dataLabelFormatCode: '0.0"x"', valAxisLabelFormatCode: '0"x"', valAxisMinVal: 0, valAxisMaxVal: 50, objectName: "leverage chart" }));
-  card(s, 7.1, 1.4, 5.75, 2.75, "Where it is thin", [
-    `Malls ${mult(OV.Malls.lev25)} net debt/EBITDA (FY2025); REIT loan to value ${pctP(OV.REITs.lev22, 0)} to ${pctP(OV.REITs.lev25, 0)} (a different measure).`,
-    `Retailers ${mult(OV.Retailers.lev22)} (FY2022) to ${mult(OV.Retailers.lev25)} (FY2025).`,
-    "Lazurde: mostly gold borrowed from banks (SAR 1,932m), matched by gold stock; without it net debt is about nil.",
-    "Entaj's 15.1x includes biological fair-value gains in EBITDA; Cenomi Retail has negative equity.",
-  ], { fs: 11, hc: K.goldD });
-  card(s, 7.1, 4.3, 5.75, 2.15, "Where it holds", [
-    `Net cash at end-2025: ${D.leverage.netcash.map((x) => x.name.replace(" Beauty", "").replace(" Group", "")).join(", ")}.`,
-    `Supporting goods fell from ${mult(OV.Supporting.lev22)} to ${mult(OV.Supporting.lev25)}; F&B ${mult(OV.FnB.lev22)} to ${mult(OV.FnB.lev25)}. Americana 0.6x, Nahdi 0.7x, Jahez 0.2x.`,
-    "SAMA's repo rate rose to 4.5% in September 2026, which raises the cost of new and floating-rate borrowing.",
-  ], { fs: 11, hc: K.steel });
-  source(s, "Net debt = borrowings + leases − cash − short-term bank deposits. Americana's longer deposits (USD 117.8m) are not deducted. Source: SEVEN priority companies workbook; SAMA repo rate from KSA Budget FY2027 Overview (Nov 2026), p. 18.");
-}
-
-// ================================================================== section 04
-divider("04", "What it means for SEVEN", "Which companies turn growth into profit, our judgments for SEVEN, and what to watch through 2027.", "04 What it means for SEVEN");
-{
-  const s = content("Only 16 of 38 companies grew both revenue and profit in 9M 2026; 12 grew revenue but earned less", "04 What it means for SEVEN");
+  const s = content("Only 16 of 38 companies grew both revenue and profit in 9M 2026; 12 grew revenue but earned less", "02 2026 so far");
   const SHORTN = SHORT_NAME;
   const Q = { uu: [], ud: [], du: [], dd: [] };
   for (const [g, gd] of Object.entries(D.groups)) {
@@ -446,62 +410,78 @@ divider("04", "What it means for SEVEN", "Which companies turn growth into profi
   if (n !== 38) throw new Error("screen count changed: " + n);
   source(s, "9M 2026 vs 9M 2025, attributable profit. ▲ net debt / EBITDA of 5x or more (FY2025). 38 companies: REITs left out (9M from fact sheets; loan to value instead of EBITDA) and TECO (revenue base under SAR 10m). Baan's 9M profit rests on a SAR 69.5m JV sale gain and insurance income. Source: SEVEN priority companies workbook.");
 }
+
+// ================================================================== section 03
+divider("03", "Quality of growth and balance sheets", "How much growth is bought, one-off or price-driven, and which balance sheets are thin?", "03 Quality and balance sheets");
 {
-  const s = content("Our judgment: favour partners that convert growth into profit; test leveraged ones against stress", "04 What it means for SEVEN");
-  s.addText("Strategic judgments for discussion. The data supports the facts on earlier slides, not these conclusions on its own.", { x: 0.45, y: 1.22, w: 12.4, h: 0.3, fontSize: 12, italic: true, color: K.muted, margin: 0, isTextBox: true });
-  const J = [
-    ["Partners and tenants", "Prefer operators with growing profit and modest debt (gyms such as Sport Clubs; scaled F&B such as Americana). Treat leveraged, acquisition-led or loss-making names (Jahez, MBC, Entaj, Cenomi Retail) as higher risk.",
-     "9M 2026: Sport Clubs revenue +17.2%, profit +54%, net debt 3.1x EBITDA; Americana revenue +12.9%, profit +60%, 0.6x. Jahez and MBC turned to losses; Entaj 15.1x; Cenomi Retail has negative equity."],
-    ["Competitors' capacity to expand", "Leejam is slowing and Baan is shrinking, while Sport Clubs and Armah grow. Mall developers at 8x to 10x net debt/EBITDA and REITs at 43% loan to value (both FY2025) may have less room to fund new space.",
-     "9M revenue: Leejam +4.0%, Baan −9.9%, Sport Clubs +17.2%, Armah +10.6%. FY2025 net debt/EBITDA: Cenomi Centers 9.9x, Alandalus 8.0x; REIT loan to value 43%."],
-    ["Landlord and retail exposure", "Mall revenue is flat (+0.9%) and retailers' profit fell 19.6% on 5.1% more revenue. Test tenant covenants and rents for margin pressure.",
-     "9M 2026: malls' profit −18.5%; profit fell at 8 of 11 retailers; retailers' EBITDA margin 11.2% to 10.3%."],
-  ];
-  J.forEach(([h, t, e], i) => card(s, 0.45 + i * 4.2, 1.7, 4.0, 4.05, h, [
-    { text: t, options: { breakLine: true } }, { text: " ", options: { fontSize: 8, breakLine: true } },
-    { text: "Evidence  ", options: { bold: true, color: K.steel, fontSize: 11 } }, { text: e, options: { color: K.muted, fontSize: 11 } }], { num: i + 1, fs: 13 }));
-  navyBar(s, 5.97, "Proposed next step: test the partner and tenant view against SEVEN's own pipeline.", 0.5);
-  source(s, "Judgments are ours. Facts: 9M 2026 vs 9M 2025 and FY2025 balance sheets, SEVEN priority companies workbook.");
+  const s = content("For several companies, headline growth is bought, one-off, price-driven or a change of basis", "03 Quality and balance sheets");
+  const SHORT = { "6017": "Jahez, FY25 vs FY24: excl. Snoonu", "4161": "BinDawood, FY25 vs FY24: excl. deals", "6016": "Burgerizzr, Jan–Sep: excl. SHOVEL", "6014": "Alamar, Jan–Sep: excl. Five Guys",
+                  "4150": "ARDCO, Jan–Sep: excl. land sales", "4190": "Jarir, FY24 vs FY23: same basis", "2287": "Entaj, FY24 vs FY23: same basis" };
+  const ORDER = ["6017", "4161", "6016", "6014", "4150", "4190", "2287"];
+  const P = ORDER.map((t) => D.pairs.find((p) => p.ticker === t));
+  chartTitle(s, 0.45, 1.35, 7.2, "Reported vs adjusted revenue growth, % (FY = full year vs the year before; Jan–Sep = 2026 vs 2025)");
+  s.addChart(pres.charts.BAR, [
+    { name: "Reported", labels: P.map((p) => SHORT[p.ticker]), values: P.map((p) => +(p.reported * 100).toFixed(1)) },
+    { name: "Adjusted", labels: P.map((p) => SHORT[p.ticker]), values: P.map((p) => +(p.adjusted * 100).toFixed(1)) },
+  ], barOpts({ x: 0.45, y: 1.7, w: 7.2, h: 4.75, catAxisLabelFontSize: 10, chartColors: [K.steelL, K.steel], dataLabelFormatCode: '+0.0;−0.0', valAxisLabelFormatCode: "0", valAxisMinVal: -30, valAxisMaxVal: 40, objectName: "reported vs adjusted chart" }));
+  const rowsT = [["Bought", "Snoonu (Jahez), acquisitions (BinDawood), SHOVEL (Burgerizzr), Five Guys (Alamar)."],
+                 ["One-off or price", "ARDCO's land sales swing the headline; Lazurde 9M +29.3% rides the gold price (volumes not disclosed)."],
+                 ["Basis change", "Jarir and Entaj changed revenue bases; on one basis Jarir FY2024 is +2.2%."],
+                 ["Cannot be separated", "None of the 47 reports same-store sales, so growth from new stores cannot be isolated."],
+                 ["Real conversion", "Sport Clubs 9M revenue +17.2%, profit +54% at a steady 42% margin; Americana revenue +12.9%, profit +60%."]];
+  box(s, 7.95, 1.4, 4.9, 5.05);
+  s.addText(rowsT.flatMap(([h, t], i) => [{ text: h + ". ", options: { bold: true, color: i === 4 ? K.steel : K.navy } }, { text: t, options: { color: K.ink, breakLine: i < rowsT.length - 1 } }]),
+    { x: 8.17, y: 1.62, w: 4.46, h: 4.7, fontSize: 13, valign: "top", margin: 0, paraSpaceAfter: 12, isTextBox: true });
+  source(s, "Adjustments are disclosed amounts (acquired revenue, land sales) or calculated from restated comparatives (Jarir net agent sales, Entaj reclassification). Alamar's adjusted figure still includes the Makkah and Taif branches it bought (not split). Source: SEVEN priority companies workbook, Adjustments sheet.");
 }
 {
-  const s = content("What to watch through 2027: whether growth turns into profit, and what debt costs", "04 What it means for SEVEN");
-  const rows = [[TH("Indicator", "left"), TH("When", "left"), TH("Why it matters for SEVEN", "left")],
-    [TD("FY2026 results of the 47 companies", { bold: true, color: K.navy }), TD("February to April 2027"), TD("First full-year test of 2026: did Q4 convert revenue into profit?")],
-    [TD("Q4 profit conversion in retail and malls", { bold: true, color: K.navy }), TD("With FY2026 results"), TD("Retailers' 9M profit fell 19.6% on 5.1% more revenue; malls' profit fell 18.5%.")],
-    [TD("REIT leverage and payouts", { bold: true, color: K.navy }), TD("FY2026 statements; fund fact sheets"), TD("Loan to value is 43%; four funds paid out more than their FFO in FY2025.")],
-    [TD("Gyms and F&B: profit conversion", { bold: true, color: K.navy }), TD("Quarterly results"), TD("Sport Clubs and Americana converted in 9M; Leejam's and Armah's profit fell.")],
-    [TD("Consumer card spending by category", { bold: true, color: K.navy }), TD("Weekly and monthly (SAMA)"), TD("Demand signal for dining, leisure and retail tenants; recreation spending fell 3% in September.")],
-    [TD("Policy rates and borrowing costs", { bold: true, color: K.navy }), TD("SAMA decisions"), TD("Repo at 4.5%: matters most for malls (7.9x), Lazurde, Entaj, Cenomi Retail and Baan.")]];
-  s.addTable(zebra(rows), { x: 0.45, y: 1.45, w: 12.4, colW: [3.6, 2.9, 5.9], rowH: [0.5].concat(Array(6).fill(0.74)), border: { type: "solid", pt: 0.5, color: K.line }, fontFace: "Calibri", objectName: "watch list" });
-  source(s, "Payout above FFO in FY2025: Alahli REIT 1, Mulkia, Musharaka and Derayah. Sources: SEVEN priority companies workbook; KSA Budget FY2027 Overview (Nov 2026), pp. 18, 22, 31 for SAMA rates and card spending.");
+  const s = content("Leverage is high in malls, parts of retail and a handful of companies; supporting goods deleveraged", "03 Quality and balance sheets");
+  const top = D.leverage.top.map((x) => ({ ...x, name: x.name.replace("Abdullah Al Othaim Markets", "Othaim Markets").replace(" Property", "") }));
+  chartTitle(s, 0.45, 1.35, 6.4, "Highest net debt / EBITDA, FY2025, x");
+  s.addChart(pres.charts.BAR, [{ name: "Net debt / EBITDA", labels: top.map((x) => x.name), values: top.map((x) => +x.v.toFixed(1)) }],
+    barOpts({ x: 0.45, y: 1.7, w: 6.4, h: 4.75, chartColors: [K.steel], showLegend: false, dataLabelFormatCode: '0.0"x"', valAxisLabelFormatCode: '0"x"', valAxisMinVal: 0, valAxisMaxVal: 50, objectName: "leverage chart" }));
+  card(s, 7.1, 1.4, 5.75, 2.75, "Where it is thin", [
+    `Malls ${mult(OV.Malls.lev25)} net debt/EBITDA (FY2025); REIT loan to value ${pctP(OV.REITs.lev22, 0)} to ${pctP(OV.REITs.lev25, 0)} (a different measure).`,
+    `Retailers ${mult(OV.Retailers.lev22)} (FY2022) to ${mult(OV.Retailers.lev25)} (FY2025).`,
+    "Lazurde: mostly gold borrowed from banks (SAR 1,932m), matched by gold stock; without it net debt is about nil.",
+    "Entaj's 15.1x includes biological fair-value gains in EBITDA; Cenomi Retail has negative equity.",
+  ], { fs: 11, hc: K.goldD });
+  card(s, 7.1, 4.3, 5.75, 2.15, "Where it holds", [
+    `Net cash at end-2025: ${D.leverage.netcash.map((x) => x.name.replace(" Beauty", "").replace(" Group", "")).join(", ")}.`,
+    `Supporting goods fell from ${mult(OV.Supporting.lev22)} to ${mult(OV.Supporting.lev25)}; F&B ${mult(OV.FnB.lev22)} to ${mult(OV.FnB.lev25)}. Americana 0.6x, Nahdi 0.7x, Jahez 0.2x.`,
+    "SAMA's repo rate rose to 4.5% in September 2026, which raises the cost of new and floating-rate borrowing.",
+  ], { fs: 11, hc: K.steel });
+  source(s, "Net debt = borrowings + leases − cash − short-term bank deposits. Americana's longer deposits (USD 117.8m) are not deducted. Source: SEVEN priority companies workbook; SAMA repo rate from KSA Budget FY2027 Overview (Nov 2026), p. 18.");
 }
 
 // ================================================================== appendix
 divider("A", "Evidence: group tables and registers", "Every company and period behind the story, with key terms, one-offs and sources. Every figure and its filing page is in the workbook.", "Appendix");
 {
   const s = content("Reading the analysis: key terms", "Appendix");
-  const T = [["Matched sample", "Group growth uses only companies with figures in both periods; group totals are sums, not consolidated."],
-             ["Adjusted growth", "The same comparison after removing what the basis names (acquisitions, land sales, a change of revenue basis); '= reported' where the filings show no such effect."],
+  const TERMS = [["Matched sample", "Group growth uses only companies with figures in both periods; group totals are sums, not consolidated."],
+             ["Like-for-like (LFL)", "Growth after removing acquisitions, disposals, hyperinflation and basis changes that the filings quantify. Same-store growth is not available: no company reports it."],
+             ["2026E", "Our estimate for the full year 2026: Jan–Sep 2026 actual plus Oct–Dec 2025 grown at the company's Jan–Sep 2026 revenue growth."],
+             ["Attributable profit", "Net profit attributable to the company's shareholders (after minority interests), as reported, one-off items included."],
              ["EBITDA excluding one-offs", "Operating income + depreciation, amortisation and impairments − investment-property fair-value gains, with identified one-off gains and losses taken out."],
-             ["Net debt / EBITDA", "Borrowings + lease liabilities − cash − short-term bank deposits, over EBITDA. Negative = net cash."],
-             ["FFO and payout (REITs)", "FFO = net income + depreciation and impairment of real estate − gains on property disposals. Payout = distributions declared / FFO."],
-             ["Loan to value (REITs)", "Borrowings over total assets at book value; used for REITs instead of net debt / EBITDA."],
-             ["n.m. and n.a.", "n.m.: not meaningful (short year, base under SAR 10m, or a loss). n.a.: the companies reporting cover under 75% of group revenue."],
-             ["Short year", "A financial year under 12 months after a year-end change (SADAFCO, Cenomi Centers, Cenomi Retail, MBC), or SADAFCO's non-calendar FY2022; left out of group totals."]];
-  T.forEach(([h, t], i) => {
-    const x = 0.45 + (i % 2) * 6.28, y = 1.4 + Math.floor(i / 2) * 1.3, w = 6.12, h2 = 1.17;
+             ["Net debt / EBITDA", "Borrowings + lease liabilities − cash − short-term bank deposits, over EBITDA (Jan–Sep annualised). Negative = net cash."],
+             ["FFO, payout and loan to value (REITs)", "FFO = net income + real-estate depreciation and impairment − disposal gains; payout = distributions / FFO; loan to value = borrowings / total assets."],
+             ["Adjusted growth", "A company's growth after removing the named item (an acquisition, land sales, a change of revenue basis); '= reported' where the filings show none."],
+             ["n.m., n.a. and n.d.", "n.m.: not meaningful (short year, base under SAR 10m, or a loss). n.a.: under 75% of group revenue covered. n.d.: not disclosed."],
+             ["Short year", "A financial year under 12 months after a year-end change (SADAFCO, Cenomi Centers, Cenomi Retail, MBC), or SADAFCO's non-calendar FY2022."]];
+  TERMS.forEach(([h, t], i) => {
+    const x = 0.45 + (i % 2) * 6.28, y = 1.32 + Math.floor(i / 2) * 1.06, w = 6.12, h2 = 0.96;
     box(s, x, y, w, h2);
     s.addText([{ text: h, options: { bold: true, color: K.navy, breakLine: true } }, { text: t, options: { color: K.ink } }],
-      { x: x + 0.22, y: y + 0.12, w: w - 0.44, h: h2 - 0.2, fontSize: 11.5, valign: "top", margin: 0, isTextBox: true });
+      { x: x + 0.22, y: y + 0.1, w: w - 0.44, h: h2 - 0.16, fontSize: 11, valign: "top", margin: 0, isTextBox: true });
   });
   source(s, "Full definitions: workbook How_to_read and Definitions sheets.");
 }
 {
   const s = content("Eight groups at a glance: retail and food carry the revenue; malls and leisure the margins", "Appendix");
-  const rows = [[TH("Group", "left"), TH("Revenue FY2025 (SAR bn)"), TH("CAGR 2022–25"), TH("FY25 vs FY24"), TH("9M-26 vs 9M-25"), TH("Profit 9M y/y"), TH("Margin FY2025"), TH("Leverage FY2025"), TH("Largest (share)"), TH("What it means", "left")]];
+  const rows = [[TH("Group", "left"), TH("Revenue FY2025 (SAR bn)"), TH("CAGR to 2026E"), TH("FY25 vs FY24"), TH("9M-26 vs 9M-25"), TH("Profit 9M y/y"), TH("Margin FY2025"), TH("Leverage FY2025"), TH("Largest (share)"), TH("What it means", "left")]];
   for (const o of D.overview) {
     rows.push([TD([{ text: o.label, options: { bold: true, color: K.navy, breakLine: true } }, { text: `${o.n} ${o.n > 1 ? "companies" : "company"}`, options: { fontSize: 8.5, color: K.muted } }]),
-      TD((o.rev25 / 1000).toFixed(1), { align: "center", bold: true }), gCell(o.cagr), gCell(o.g25), gCell(o.g9), gCell(o.ni9),
+      TD((o.rev25 / 1000).toFixed(1), { align: "center", bold: true }), gCell(VG[o.group].cagr), gCell(o.g25), gCell(o.g9), gCell(o.ni9),
       TD([{ text: pctP(o.margin25), options: { bold: true, breakLine: true } }, { text: o.margin_kind === "FFO" ? "FFO" : "EBITDA", options: { fontSize: 8, color: K.muted } }], { align: "center" }),
       TD([{ text: o.lev_kind === "LTV" ? pctP(o.lev25) : mult(o.lev25), options: { bold: true, breakLine: true } }, { text: o.lev_kind === "LTV" ? "LTV" : "ND / EBITDA", options: { fontSize: 8, color: K.muted } }], { align: "center" }),
       TD([{ text: o.largest, options: { bold: true, breakLine: true } }, { text: `${pctP(o.share, 0)} of revenue`, options: { fontSize: 8, color: K.muted } }], { align: "center", fontSize: 10 }),
@@ -509,7 +489,7 @@ divider("A", "Evidence: group tables and registers", "Every company and period b
   }
   s.addTable(zebra(rows), { x: 0.45, y: 1.4, w: 12.4, colW: [1.85, 0.9, 0.85, 0.85, 0.9, 0.85, 1.05, 1.0, 1.25, 2.9], rowH: [0.55].concat(Array(8).fill(0.54)), border: { type: "solid", pt: 0.5, color: K.line }, fontFace: "Calibri", objectName: "group overview" });
   legend(s, 6.4, false);
-  source(s, "n.a.: Malls FY2022 and REIT 9M cover less than 75% of group revenue. n.m.: profit turned to a loss (Media, Delivery). Margin: EBITDA excluding identified one-offs (REITs: FFO margin). Source: SEVEN priority companies workbook.");
+  source(s, "CAGR to 2026E from FY2022 (malls from FY2023, media from FY2024; REITs to FY2025). n.a.: REIT 9M cover less than 75% of group revenue. n.m.: profit turned to a loss (Media, Delivery). Margin: EBITDA excluding identified one-offs (REITs: FFO margin). Source: SEVEN priority companies workbook.");
 }
 // group tables (native, editable)
 const GROUP_SLIDES = [
@@ -600,14 +580,14 @@ for (const G of GROUP_SLIDES) {
   const SRC = [["Company filings, Saudi Exchange archive", "Audited annual and reviewed interim statements, FY2021 to 9M 2026 (PDF; XBRL corrected from the PDFs)."],
                ["REIT fund fact sheets", "Unaudited; used only for REIT nine-month figures."],
                ["SEVEN priority companies workbook (27 Nov 2026)", "Every figure with its file and page; registers of adjustments, one-offs, restatements and cross-holdings."],
-               ["KSA Budget FY2027 Overview (Nov 2026)", "Macro and consumer backdrop, citing the MoF Budget Statement FY2027 (24 Nov 2026), SAMA, GASTAT and Jadwa Investment."],
+               ["KSA Budget FY2027 Overview (Nov 2026)", "SAMA repo rate (balance-sheet slide), citing SAMA."],
                ["BinDawood results announcement (via Mubasher)", "9M 2026 attributable profit down 3.4% (SAR 155.5m vs 161.0m); confirms five of six retailers on the Retailers (1 of 2) slide lost profit."]];
   s.addText(SRC.flatMap(([h, t], i) => [{ text: h, options: { bold: true, color: K.navy, breakLine: true } }, { text: t, options: { color: K.muted, fontSize: 10.5, breakLine: i < SRC.length - 1 } }]),
     { x: 0.45, y: 1.4, w: 6.0, h: 5.1, fontSize: 12, valign: "top", margin: 0, paraSpaceAfter: 10, isTextBox: true });
   card(s, 6.75, 1.4, 2.95, 5.05, "Checks", ["Analyst's own checks: 5,791 core figures compared with the PDFs; a 94-figure sample (93 confirmed). We did not re-perform these.",
        "Our review of 27 Nov 2026: 17,798 formulas recalculated without error; 65 of 65 FY2025 inputs found in the PDFs for five companies, plus targeted checks.", "Not a full audit of all 47 companies."], { fs: 10.5 });
   card(s, 9.9, 1.4, 2.95, 5.05, "Limits", ["9M 2026 is a partial year, compared only with 9M 2025.", "REIT 9M figures are n.a. (fact sheets cover too few funds).",
-       "No same-store sales or currency effects disclosed.", "Deposit restrictions and pledges not checked.", "Links between groups and SEVEN's results are our judgment."], { fs: 10.5 });
+       "No same-store sales or currency effects disclosed.", "Deposit restrictions and pledges not checked.", "2026E is our estimate, not a company forecast."], { fs: 10.5 });
   source(s, "Figures in SAR unless stated; Americana converted from USD at 3.75.");
 }
 

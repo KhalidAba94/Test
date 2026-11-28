@@ -1,4 +1,8 @@
-"""Collect every figure the SEVEN deck shows, from the confirmed dataset (no new numbers are made here).
+"""Collect every figure the SEVEN deck shows, from the confirmed dataset.
+
+The "v4" block adds derived views that are not in the workbook: a 2026 estimate (2026E = Jan-Sep 2026 actual +
+Oct-Dec 2025 grown at the company's Jan-Sep 2026 revenue growth), revenue CAGRs to 2026E, like-for-like growth
+after disclosed acquisitions, disposals and basis changes, and 2022-to-2026 aggregates. Method notes travel with the data.
 
 Usage: python seven_deck_data.py <root> <out_json>
 """
@@ -178,5 +182,145 @@ for g, S in ds.items():
             mv.append({"name": c["name"].split(" (")[0], "d": a9 - b9, "a": a9, "b": b9})
 mv.sort(key=lambda x: x["d"])
 data["margins"] = {"down": mv[:6], "up": mv[::-1][:5]}
+
+# ---------------------------------------------------------------- v4: consistent 2022 -> 2026 view (derived)
+import glob
+SHORT = set()
+for f in glob.glob(os.path.join(root, "data", "seven_*", "facts.csv")):
+    for r in csv.DictReader(open(f, encoding="utf-8")):
+        pm = str(r.get("period_months") or "").strip()
+        if r["period"].startswith("FY") and pm not in ("", "0", "0.0", "12", "12.0"):
+            SHORT.add((r["ticker"], r["period"]))
+for g0, S0 in ds.items():
+    for t0, c0 in S0["config"]["constituents"].items():
+        for p0 in (c0.get("exclude_from_totals") or {}):
+            SHORT.add((t0, p0))
+YEARS = ["FY2022", "FY2023", "FY2024", "FY2025", "2026E"]
+CMP = {"FY2023": "FY2023/FY2022", "FY2024": "FY2024/FY2023", "FY2025": "FY2025/FY2024", "2026E": "9M2026/9M2025"}
+
+
+def amt_ident(t, comp):
+    """revenue change from acquisitions, disposals, hyperinflation and basis changes that the filings quantify"""
+    return sum(float(r["amount_sar_m"]) for r in A[(t, comp)] if r["bridge_step"] != "new_capacity" and r["amount_sar_m"] not in ("", None))
+
+
+def undisclosed(t, comp):
+    """an acquisition, disposal or basis change whose revenue effect is not disclosed"""
+    return any(r["bridge_step"] in ("perimeter", "accounting_other") and r["basis"] == "not determinable" for r in A[(t, comp)])
+
+
+def flow26(c, m, top):
+    a, b, f = sv(c, m, "9M2026"), sv(c, m, "9M2025"), sv(c, m, "FY2025")
+    r26, r25 = sv(c, top, "9M2026"), sv(c, top, "9M2025")
+    if None in (a, b, f, r26, r25) or not r25:
+        return None
+    return a + (f - b) * r26 / r25
+
+
+def series(g, t):
+    S = ds[g]; c = S["companies"][t]; top = S["config"]["top_line"]
+    v = {p: sv(c, top, p) for p in ("FY2022", "FY2023", "FY2024", "FY2025", "9M2025", "9M2026")}
+    for p in ("FY2022", "FY2023", "FY2024", "FY2025"):
+        if (t, p) in SHORT:
+            v[p] = None
+    v["2026E"] = flow26(c, top, top)
+    am = {y: amt_ident(t, CMP[y]) for y in ("FY2023", "FY2024", "FY2025")}
+    am["2026E"] = (v["FY2025"] * amt_ident(t, CMP["2026E"]) / v["9M2025"]) if v["2026E"] and v["FY2025"] and v["9M2025"] else 0.0
+    am["9M"] = amt_ident(t, CMP["2026E"])
+    return v, am
+
+
+def step(mem, cur, pri, am_key=None):
+    """matched-sample growth (reported, like-for-like) with coverage and the revenue share with undisclosed deals"""
+    base = {t: (series(g, t)[0]["FY2025"] or 0) for g, t in mem}
+    tot = sum(base.values())
+    sc = sp = sa = cov = und = 0.0
+    for g, t in mem:
+        v, am = series(g, t)
+        if v[cur] is None or v[pri] is None:
+            continue
+        sc += v[cur]; sp += v[pri]; sa += am[am_key or cur]; cov += base[t]
+        if undisclosed(t, CMP["2026E" if cur in ("2026E", "9M2026") else cur]):
+            und += v[cur]
+    if not sp or not tot or cov / tot < 0.75:
+        return {"rep": None, "lfl": None, "flag": "n.a."}
+    share = und / sc
+    flag = "n.d." if share > 0.5 else ("‡" if share > 0.25 else "")
+    return {"rep": sc / sp - 1, "lfl": None if flag == "n.d." else (sc - sa) / sp - 1, "flag": flag, "und_share": share}
+
+
+def chain(mem):
+    st = {YEARS[i]: step(mem, YEARS[i], YEARS[i - 1]) for i in range(1, 5)}
+    st["9M"] = step(mem, "9M2026", "9M2025", am_key="9M")
+    start = next((i for i in range(1, 5) if st[YEARS[i]]["rep"] is not None), None)
+    idx, idx_l, r_, l_, lok, flags = {YEARS[start - 1]: 100.0}, {YEARS[start - 1]: 100.0}, 100.0, 100.0, True, set()
+    last = YEARS[start - 1]
+    for i in range(start, 5):
+        x = st[YEARS[i]]
+        if x["rep"] is None:
+            break
+        r_ *= 1 + x["rep"]; idx[YEARS[i]] = round(r_, 2); last = YEARS[i]
+        if x["lfl"] is None:
+            lok = False
+        else:
+            l_ *= 1 + x["lfl"]; idx_l[YEARS[i]] = round(l_, 2); flags.add(x["flag"])
+    b = YEARS[start - 1]; n = YEARS.index(last) - YEARS.index(b)
+    return {"steps": st, "base": b, "end": last, "idx": idx, "cagr": (r_ / 100) ** (1 / n) - 1,
+            "cagr_lfl": ((l_ / 100) ** (1 / n) - 1) if lok else None, "lfl_flag": "n.d." if not lok else ("‡" if "‡" in flags else "")}
+
+
+v4 = {"groups": {}, "companies": {}, "method": {
+    "2026E": "Jan-Sep 2026 actual + Oct-Dec 2025 grown at the company's Jan-Sep 2026 revenue growth (our estimate).",
+    "lfl": "Reported growth less the acquisitions, disposals, hyperinflation and basis changes that the filings quantify; "
+           "n.d. where companies with undisclosed deals hold over half of the revenue, flagged where they hold over a quarter."}}
+GROUPS = list(ds.keys())
+for g in GROUPS + ["ALL"]:
+    mem = [(g, t) for t in ds[g]["tickers"]] if g != "ALL" else [(gg, t) for gg in GROUPS for t in ds[gg]["tickers"]]
+    v4["groups"][g] = chain(mem)
+for g in GROUPS:
+    for t in ds[g]["tickers"]:
+        v, _ = series(g, t)
+        ys = [y for y in YEARS if v.get(y)]
+        b = next((y for y in YEARS[:4] if v.get(y)), None)
+        e = "2026E" if v.get("2026E") else ("FY2025" if v.get("FY2025") else None)
+        n = YEARS.index(e) - YEARS.index(b) if b and e else 0
+        v4["companies"][t] = {"cagr": (v[e] / v[b]) ** (1 / n) - 1 if n > 0 else None, "base": b, "end": e, "rev26e": v.get("2026E")}
+# counts and aggregates, FY2022 -> 2026
+rv = [0, 0]; pr = [0, 0]; E = [0.0] * 4; N = [0.0] * 4
+for g in GROUPS:
+    S = ds[g]; top = S["config"]["top_line"]
+    for t in S["tickers"]:
+        c = S["companies"][t]
+        if (t, "FY2022") in SHORT:
+            continue
+        r22, r26 = sv(c, top, "FY2022"), flow26(c, top, top)
+        if r22 and r26:
+            rv[1] += 1; rv[0] += r26 > r22
+        n22, n26 = sv(c, "NI_ATTR", "FY2022"), flow26(c, "NI_ATTR", top)
+        if n22 is not None and n26 is not None:
+            pr[1] += 1; pr[0] += n26 > n22
+        if S["config"].get("template") == "reit":
+            continue
+        e22, e9, r9 = sv(c, "EBITDA_U", "FY2022"), sv(c, "EBITDA_U", "9M2026"), sv(c, top, "9M2026")
+        if None not in (e22, r22, e9, r9):
+            E[0] += e22; E[1] += r22; E[2] += e9; E[3] += r9
+        nd22, nd9, ec22, ec9 = sv(c, "NET_DEBT", "FY2022"), sv(c, "NET_DEBT", "9M2026"), sv(c, "EBITDA_C", "FY2022"), sv(c, "EBITDA_C", "9M2026")
+        if None not in (nd22, nd9, ec22, ec9):
+            N[0] += nd22; N[1] += ec22; N[2] += nd9; N[3] += ec9 * 12 / 9
+v4["six"] = {"rev_up": rv[0], "rev_n": rv[1], "ni_up": pr[0], "ni_n": pr[1],
+             "margin22": E[0] / E[1], "margin9m26": E[2] / E[3], "lev22": N[0] / N[1], "lev9m26": N[2] / N[3]}
+# group margins and leverage, first full year -> Jan-Sep 2026 / 30 Sep 2026 (from the workbook's group ratios)
+gm = {}
+for g in GROUPS:
+    ra = ds[g]["sector"]["ratios_all"]; reit = ds[g]["config"].get("template") == "reit"
+    mk, lk = ("FFO_M", "LTV") if reit else ("EBITDA_M_U", "ND_EBITDA")
+    def first(k):
+        return next(((p, num(ra.get(k, {}).get(p, {}).get("v"))) for p in ("FY2022", "FY2023", "FY2024") if num(ra.get(k, {}).get(p, {}).get("v")) is not None), (None, None))
+    def last(k):
+        return next(((p, num(ra.get(k, {}).get(p, {}).get("v"))) for p in ("9M2026", "FY2025") if num(ra.get(k, {}).get(p, {}).get("v")) is not None), (None, None))
+    gm[g] = {"m_from": first(mk), "m_to": last(mk), "l_from": first(lk), "l_to": last(lk), "kind": "FFO/LTV" if reit else "EBITDA/ND"}
+v4["group_ratios"] = gm
+v4["six"]["margin_lower_groups"] = sum(1 for g in GROUPS if gm[g]["m_to"][1] is not None and gm[g]["m_from"][1] is not None and gm[g]["m_to"][1] < gm[g]["m_from"][1])
+data["v4"] = v4
 json.dump(data, open(out, "w"), indent=1, default=lambda o: None)
 print("deck data ->", out, dict(cnt), len(data["pairs"]), "pairs")
