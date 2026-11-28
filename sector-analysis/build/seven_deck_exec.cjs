@@ -140,6 +140,29 @@ function legend(s, y, withAdj = true) {
   });
 }
 
+const SHORT_NAME = (n) => n.replace("Abdullah Al Othaim Markets", "Othaim Markets").replace(" Restaurants", "").replace(" Food Services", "").replace(" International", "")
+  .replace(" Property", "").replace(" Holding", "").replace(" Marketing", "").replace(" Medical Services", "").replace(" Medical", "")
+  .replace("United Electronics", "eXtra").replace(" Stores", "").replace(" Beauty", "").replace(" Group", "").replace(" Sports", "")
+  .replace(" Foods", "").replace(" Food", "").replace(" Bros", "");
+async function makeIcons() {
+  const R = require("react"), RS = require("react-dom/server"), sharp = require("sharp"), fa = require("react-icons/fa6");
+  const out = {};
+  for (const [k, comp] of Object.entries({ exercise: fa.FaMagnifyingGlassChart, groups: fa.FaLayerGroup, outcomes: fa.FaChartLine })) {
+    const svg = RS.renderToStaticMarkup(R.createElement(comp, { color: "#FFFFFF", size: 256 }));
+    out[k] = "image/png;base64," + (await sharp(Buffer.from(svg)).png().toBuffer()).toString("base64");
+  }
+  return out;
+}
+function iconHead(s, x, y, icon, text, w) {
+  const d = 0.46;
+  s.addShape(pres.shapes.OVAL, { x, y, w: d, h: d, fill: { color: K.navy }, line: { color: K.navy }, objectName: "icon circle" });
+  s.addImage({ data: icon, x: x + 0.11, y: y + 0.11, w: 0.24, h: 0.24, altText: text + " icon" });
+  s.addText(text, { x: x + 0.58, y, w: w - 0.6, h: d, fontSize: 14, bold: true, color: K.navy, valign: "middle", margin: 0, isTextBox: true });
+}
+
+async function main() {
+const ICON = await makeIcons();
+
 // ================================================================== 1. cover
 pres.addSection({ title: "Summary" });
 {
@@ -152,26 +175,46 @@ pres.addSection({ title: "Summary" });
   s.addNotes("Built from the reviewed workbook SEVEN_Priority_Companies.xlsx (27 November 2026). Every company figure in this deck is in that workbook with its filing and page.");
 }
 
-// ================================================================== 2. executive summary
+// ================================================================== 2. executive summary (one page: exercise | sectors | outcomes)
 {
-  const s = content("Executive summary: revenue still grows, but profit, margins and balance sheets are diverging", "Summary");
-  const W = 4.0, H = 2.3, X = [0.45, 4.65, 8.85], Y = [1.45, 3.9];
-  const items = [
-    ["Growth since 2022", `Revenue grew in all six groups with a full 2022 base: delivery +13.2% a year, leisure +11.4%, retailers +6.8%, REITs +5.1%, supporting goods +2.3%, F&B +0.8%.`],
-    ["2026 still growing", `9M 2026 revenue rose at ${C.rev_up} of ${C.rev_n} companies and in six of seven groups with a comparable 9M. Only Media fell (MBC −22.8%).`],
-    ["Profit splits", `Attributable profit rose at only ${C.ni_up} of ${C.ni_n}. Leisure +24.8% and F&B +84.5% (Americana +60%); retailers −19.6%, malls −18.5%, supporting goods −8.8%.`],
-    ["Margins slip", "EBITDA margin (excluding one-offs) fell in five of seven groups in 9M 2026; only malls and F&B gained. Delivery fell from 8.7% to 4.3%."],
-    ["Some growth is bought", "Jahez FY2025 +4.7% is −5.5% without Snoonu; BinDawood +11.8% is +3.9% without acquisitions; Burgerizzr 9M +27.5% is +6.1% without SHOVEL."],
-    ["Debt is high in places", "Retailers 1.3x to 2.5x net debt/EBITDA (FY2022 to FY2025); malls 7.9x; REIT loan to value 33% to 43%. Outliers: Lazurde 48x (gold loans), Entaj 15x, Cenomi Retail 11x, Baan 10x."],
-  ];
-  items.forEach(([h, b], i) => card(s, X[i % 3], Y[Math.floor(i / 3)], W, H, h, b, { num: i + 1, fs: 13.5, hs: 15 }));
-  navyBar(s, 6.32, "So what for SEVEN (our judgment): favour partners and tenants that turn growth into profit with modest debt; stress-test the leveraged ones.", 0.42);
-  s.addText("9M 2026 vs 9M 2025 on a matched sample; counts cover companies with both 9M periods. Source: SEVEN priority companies workbook (27 Nov 2026).", { x: 0.45, y: 6.78, w: 12.4, h: 0.2, fontSize: 8.5, color: K.muted, margin: 0, isTextBox: true });
+  const s = content("Executive summary: we benchmarked 47 listed companies in eight groups; revenue keeps growing, but profit is not following everywhere", "Summary");
+  const y0 = 1.42, h0 = 4.78;
+  const P = [[0.45, 3.55], [4.15, 4.2], [8.5, 4.35]];
+  P.forEach(([x, w]) => box(s, x, y0, w, h0));
+  // panel 1: the exercise
+  iconHead(s, P[0][0] + 0.2, y0 + 0.18, ICON.exercise, "The exercise", P[0][1] - 0.4);
+  const ex = [["Why. ", "Benchmark the listed companies that are SEVEN's competitors, potential partners and tenants, or comparators."],
+              ["What. ", "47 Saudi-listed companies in eight groups. Revenue growth (reported and adjusted), attributable profit, EBITDA margin excluding one-offs, and net debt (REITs: FFO and loan to value)."],
+              ["When. ", "FY2022 to FY2025, each year against the year before; 9M 2026 against 9M 2025."],
+              ["How. ", "Audited and reviewed filings from the Saudi Exchange archive (REIT 9M from fact sheets). Every figure is traced to its filing page in a reviewed workbook."]];
+  s.addText(ex.flatMap(([h, t], i) => [{ text: h, options: { bold: true, color: K.navy } }, { text: t, options: { breakLine: i < ex.length - 1 } }]),
+    { x: P[0][0] + 0.22, y: y0 + 0.82, w: P[0][1] - 0.44, h: h0 - 0.95, fontSize: 12, color: K.ink, valign: "top", margin: 0, paraSpaceAfter: 10, isTextBox: true });
+  // panel 2: benchmarked groups with example companies
+  iconHead(s, P[1][0] + 0.2, y0 + 0.18, ICON.groups, "What we benchmarked", P[1][1] - 0.4);
+  const EX = { Entertainment: "Leejam Sports, Sport Clubs, Armah, Baan", Media: "MBC Group", FnB: "Americana, Herfy, Alamar, Burgerizzr",
+               Platform: "Jahez", Malls: "Cenomi Centers, Alandalus, ARDCO", REITs: "Bonyan, SEDCO Capital, Alahli REIT 1",
+               Retailers: "Jarir, Othaim, Nahdi, eXtra, BinDawood", Supporting: "Savola, Almarai, NADEC, SADAFCO, four flour mills" };
+  s.addText(D.overview.flatMap((o, i) => [{ text: `${o.label} `, options: { bold: true, color: K.navy } }, { text: `(${o.n}; SAR ${(o.rev25 / 1000).toFixed(1)}bn): `, options: { color: K.muted } },
+                                          { text: EX[o.group], options: { color: K.ink, breakLine: i < D.overview.length - 1 } }]),
+    { x: P[1][0] + 0.22, y: y0 + 0.82, w: P[1][1] - 0.44, h: h0 - 0.95, fontSize: 12, valign: "top", margin: 0, paraSpaceAfter: 9, isTextBox: true });
+  // panel 3: key outcomes
+  iconHead(s, P[2][0] + 0.2, y0 + 0.18, ICON.outcomes, "Key outcomes", P[2][1] - 0.4);
+  const OUT = [["Growth since 2022. ", "Revenue grew in all six groups with a full 2022 base; fastest: delivery +13.2% and leisure +11.4% a year."],
+               ["Still growing in 2026. ", `9M revenue rose at ${C.rev_up} of ${C.rev_n} companies; only Media fell (MBC −22.8%).`],
+               ["Profit is not following. ", `Profit rose at only ${C.ni_up} of ${C.ni_n}, and only 16 of 38 grew both revenue and profit; retailers −19.6%, malls −18.5%, while leisure and F&B gained.`],
+               ["Margins slip ", "in five of seven groups in 9M 2026."],
+               ["Some growth is bought. ", "Jahez FY2025 +4.7% is −5.5% without Snoonu; BinDawood +11.8% is +3.9% without acquisitions."],
+               ["Debt is high in places. ", `Malls ${mult(OV.Malls.lev25)} net debt/EBITDA; retailers ${mult(OV.Retailers.lev22)} to ${mult(OV.Retailers.lev25)}; REIT loan to value ${pctP(OV.REITs.lev25, 0)}.`]];
+  s.addText(OUT.flatMap(([h, t], i) => [{ text: `${i + 1}  `, options: { bold: true, color: K.gold } }, { text: h, options: { bold: true, color: K.navy } },
+                                        { text: t, options: { color: K.ink, breakLine: i < OUT.length - 1 } }]),
+    { x: P[2][0] + 0.22, y: y0 + 0.82, w: P[2][1] - 0.44, h: h0 - 0.95, fontSize: 12, valign: "top", margin: 0, paraSpaceAfter: 8, isTextBox: true });
+  navyBar(s, 6.3, "So what for SEVEN (our judgment): favour partners and tenants that turn growth into profit with modest debt; stress-test the leveraged ones.", 0.42);
+  s.addText("Growth on a matched sample; 9M counts cover companies with both 9M periods. Source: SEVEN priority companies workbook (reviewed 27 Nov 2026).", { x: 0.45, y: 6.78, w: 12.4, h: 0.2, fontSize: 8.5, color: K.muted, margin: 0, isTextBox: true });
 }
 
 // ================================================================== 3. six numbers
 {
-  const s = content("The 47 companies in six numbers", "Summary");
+  const s = content("Key outcomes in six numbers", "Summary");
   const rev = D.overview.reduce((a, o) => a + o.rev25, 0) / 1000;
   const W = 4.0, H = 2.25, X = [0.45, 4.65, 8.85], Y = [1.35, 3.8];
   kpi(s, X[0], Y[0], W, H, `SAR ${Math.round(rev)}bn`, "Combined revenue, FY2025", "47 companies in eight groups; a sum, not consolidated. Herfy and Alahli REIT 1 (about SAR 1.3bn) also sit inside Savola and Alandalus.");
@@ -183,29 +226,22 @@ pres.addSection({ title: "Summary" });
   source(s, "Source: SEVEN priority companies workbook (27 Nov 2026). Group totals are sums of companies; growth on a matched sample. Net debt = borrowings + leases − cash − short-term bank deposits.");
 }
 
-// ================================================================== 4. scope
+// ================================================================== 4. the 47 companies
 {
-  const s = content("Scope: 47 Saudi-listed companies in eight groups, compared year by year and on matched nine months", "Summary");
-  s.addText("Companies in eight groups that are SEVEN's competitors, potential partners and tenants, or comparators", { x: 0.45, y: 1.28, w: 7.6, h: 0.3, fontSize: 12, italic: true, color: K.muted, margin: 0, isTextBox: true });
-  const tw = 3.72, th = 1.12;
-  D.overview.forEach((o, i) => {
-    const x = 0.45 + (i % 2) * (tw + 0.16), y = 1.7 + Math.floor(i / 2) * (th + 0.13);
-    box(s, x, y, tw, th);
-    s.addText(o.label, { x: x + 0.2, y: y + 0.12, w: tw - 1.4, h: 0.3, fontSize: 13, bold: true, color: K.navy, margin: 0, isTextBox: true });
-    s.addText(`SAR ${(o.rev25 / 1000).toFixed(1)}bn`, { x: x + tw - 1.4, y: y + 0.12, w: 1.2, h: 0.3, fontSize: 13, bold: true, color: K.steel, align: "right", margin: 0, isTextBox: true });
-    s.addText([{ text: `${o.n} ${o.n > 1 ? "companies" : "company"} · largest: ${o.largest}${o.n > 1 ? ` (${pctP(o.share, 0)})` : ""}`, options: { breakLine: true } },
-               { text: o.line.split(";")[0], options: { color: K.muted } }],
-      { x: x + 0.2, y: y + 0.46, w: tw - 0.4, h: th - 0.52, fontSize: 10, color: K.ink, valign: "top", margin: 0, isTextBox: true });
-  });
-  card(s, 8.35, 1.28, 4.5, 5.25, "How to read the comparison", [
-    "History: FY2022 to FY2025, each year against the year before.",
-    "2026: 9M 2026 compared only with 9M 2025, never with a full year.",
-    "Growth is shown reported, and adjusted for acquisitions, land sales or basis changes where the filings allow.",
-    "Group totals are sums of companies, not consolidated; growth uses a matched sample.",
-    "n.a.: the companies reporting cover under 75% of group revenue. n.m.: short year, base under SAR 10m, or a loss.",
-    "Every figure and its filing page is in the workbook.",
-  ], { fs: 12 });
-  source(s, "Revenue: FY2025, SAR bn, sums of companies. Source: SEVEN priority companies workbook (27 Nov 2026); company filings from the Saudi Exchange archive; REIT 9M from fund fact sheets.");
+  const s = content("The 47 companies benchmarked: eight groups, from SAR 1.2bn of revenue (REITs) to SAR 65bn (supporting goods)", "Summary");
+  s.addText("Companies in eight groups that are SEVEN's competitors, potential partners and tenants, or comparators; FY2025 revenue in SAR bn", { x: 0.45, y: 1.22, w: 12.4, h: 0.28, fontSize: 11.5, italic: true, color: K.muted, margin: 0, isTextBox: true });
+  const fmt = (v) => (v < 100 ? "<0.1" : (v / 1000).toFixed(1));
+  const rows = [[TH("Group", "left"), TH("Companies"), TH("Revenue FY2025 (SAR bn)"), TH("Companies, by FY2025 revenue (SAR bn)", "left")]];
+  for (const o of D.overview) {
+    const list = D.groups[o.group].rows.slice().sort((a, b) => (b.rev25 || 0) - (a.rev25 || 0));
+    rows.push([TD(o.label, { bold: true, color: K.navy }), TD(String(o.n), { align: "center", bold: true }), TD((o.rev25 / 1000).toFixed(1), { align: "center", bold: true, color: K.steel }),
+      TD(list.flatMap((r, i) => [{ text: SHORT_NAME(r.name), options: { color: K.ink } }, { text: ` ${fmt(r.rev25)}` + (i < list.length - 1 ? "  ·  " : ""), options: { color: K.muted } }]), { fontSize: 10.5 })]);
+  }
+  rows.push([TD("Total", { bold: true, fill: { color: K.total } }), TD("47", { align: "center", bold: true, fill: { color: K.total } }),
+    TD((D.overview.reduce((a, o) => a + o.rev25, 0) / 1000).toFixed(0), { align: "center", bold: true, fill: { color: K.total } }),
+    TD("A sum, not consolidated: Herfy and Alahli REIT 1 (about SAR 1.3bn) are also inside Savola and Alandalus.", { fill: { color: K.total }, color: K.muted, fontSize: 10 })]);
+  s.addTable(zebra(rows), { x: 0.45, y: 1.6, w: 12.4, colW: [2.35, 1.0, 1.25, 7.8], rowH: [0.45].concat(Array(9).fill(0.5)), border: { type: "solid", pt: 0.5, color: K.line }, fontFace: "Calibri", objectName: "company list" });
+  source(s, "Short company names. Source: SEVEN priority companies workbook (27 Nov 2026); company filings from the Saudi Exchange archive. Full legal names are in the workbook's company sheets.");
 }
 
 // ================================================================== 5. backdrop
@@ -373,9 +409,7 @@ divider("03", "Quality of growth and balance sheets", "How much growth is bought
 divider("04", "What it means for SEVEN", "Which companies turn growth into profit, our judgments for SEVEN, and what to watch through 2027.", "04 What it means for SEVEN");
 {
   const s = content("Only 16 of 38 companies grew both revenue and profit in 9M 2026; 12 grew revenue but earned less", "04 What it means for SEVEN");
-  const SHORTN = (n) => n.replace("Abdullah Al Othaim Markets", "Othaim Markets").replace(" Restaurants", "").replace(" Food Services", "").replace(" International", "")
-                         .replace(" Property", "").replace(" Holding", "").replace(" Marketing", "").replace(" Medical Services", "").replace(" Medical", "")
-                         .replace("United Electronics", "eXtra").replace(" Stores", "").replace(" Beauty", "").replace(" Group", "").replace(" Sports", "").replace(" Foods", "").replace(" Food", "").replace(" Bros", "");
+  const SHORTN = SHORT_NAME;
   const Q = { uu: [], ud: [], du: [], dd: [] };
   for (const [g, gd] of Object.entries(D.groups)) {
     if (g === "REITs") continue;
@@ -577,4 +611,8 @@ for (const G of GROUP_SLIDES) {
   source(s, "Figures in SAR unless stated; Americana converted from USD at 3.75.");
 }
 
-pres.writeFile({ fileName: OUT }).then(async () => { await applyTheme(OUT, THEME); console.log("deck ->", OUT); });
+await pres.writeFile({ fileName: OUT });
+await applyTheme(OUT, THEME);
+console.log("deck ->", OUT);
+}
+main().catch((e) => { console.error(e); process.exit(1); });

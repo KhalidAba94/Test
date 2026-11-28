@@ -109,6 +109,7 @@ for g, S in ds.items():
                "lev": ra.get("LTV" if reit else "ND_EBITDA", {}).get("FY2025"),
                "payout": ra.get("PAYOUT", {}).get("FY2025") if reit else None,
                "ni25": sv(c, "NI_ATTR", "FY2025"), "ni9": [sv(c, "NI_ATTR", "9M2025"), sv(c, "NI_ATTR", "9M2026")],
+               "rev25": sv(c, top, "FY2025"),
                "line": lines["company"][t]}
         rows.append(row)
         g9 = c["growth"][top].get("9M2026/9M2025")
